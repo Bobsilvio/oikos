@@ -43,7 +43,7 @@ fi
 # panel_custom: !include (in quel caso appende una sezione separata).
 _oikos_panel_present() {
   grep -q "oikos-panel\.js" /config/configuration.yaml 2>/dev/null || \
-  grep -q "name:[[:space:]]*oikos[[:space:]]*$" /config/configuration.yaml 2>/dev/null
+  grep -q "name:[[:space:]]*oikos-panel[[:space:]]*$" /config/configuration.yaml 2>/dev/null
 }
 
 if [ -f /data/panel_registered ]; then
@@ -70,11 +70,13 @@ else
     # Rifiuta:  "  panel_custom:" (indentata) | "panel_custom: !include ..."
     awk '/^panel_custom:[[:space:]]*(#.*)?$/ && !done {
       print
-      print "  - name: oikos"
+      print "  - name: oikos-panel"
       print "    sidebar_title: Oikos"
-      print "    sidebar_icon: mdi:view-dashboard-variant"
+      print "    sidebar_icon: mdi:view-dashboard"
       print "    url_path: oikos"
-      print "    js_url: /local/oikos-panel.js"
+      print "    module_url: /local/oikos-panel.js"
+      print "    embed_iframe: false"
+      print "    require_admin: false"
       done=1; next
     }
     { print }' "$CFG" > "$TMP" && mv "$TMP" "$CFG" \
@@ -87,11 +89,13 @@ else
     {
       printf '\n# Aggiunto automaticamente da Oikos add-on\n'
       printf 'panel_custom:\n'
-      printf '  - name: oikos\n'
+      printf '  - name: oikos-panel\n'
       printf '    sidebar_title: Oikos\n'
-      printf '    sidebar_icon: mdi:view-dashboard-variant\n'
+      printf '    sidebar_icon: mdi:view-dashboard\n'
       printf '    url_path: oikos\n'
-      printf '    js_url: /local/oikos-panel.js\n'
+      printf '    module_url: /local/oikos-panel.js\n'
+      printf '    embed_iframe: false\n'
+      printf '    require_admin: false\n'
     } >> "$CFG" \
       && touch /data/panel_registered \
       && bashio::log.info "✅ Panel Oikos aggiunto a configuration.yaml" \
