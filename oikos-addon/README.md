@@ -30,7 +30,11 @@ Apre direttamente Home Assistant e aggiunge questo repo come sorgente add-on.
    ```
 4. Chiudi il dialog e ricarica la pagina
 5. Trovi **Oikos** nella lista add-on → **Installa**
-6. Avvia l'add-on → apri l'interfaccia dal pannello laterale di HA
+6. **Avvia** l'add-on
+7. ⚠️ **Riavvia Home Assistant** una volta — l'add-on aggiunge automaticamente la voce sidebar, ma HA deve essere riavviato per vederla
+8. Clicca **Oikos** nella sidebar → segui il wizard per attivare la licenza
+
+> **Nota:** il riavvio al passo 7 è l'unica operazione manuale richiesta. Dalla seconda volta in poi l'add-on si aggiorna senza riavvii.
 
 ---
 
