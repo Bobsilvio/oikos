@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Domande & Discussioni (ITA)
+    url: https://github.com/Bobsilvio/oikos/discussions/categories/italiano
+    about: Per domande di utilizzo, configurazione e supporto in italiano usa le Discussions.
+  - name: 💬 Questions & Discussions (ENG)
+    url: https://github.com/Bobsilvio/oikos/discussions/categories/english
+    about: For usage questions, configuration help and general support, use Discussions.

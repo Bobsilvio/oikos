@@ -1,0 +1,14 @@
+# Cache / OS
+.DS_Store
+Thumbs.db
+
+# Dipendenze (non devono essere committate)
+node_modules/
+oikos-addon/node_modules/
+
+# Log e secrets
+*.log
+.env
+.env.*
+*.pem
+*.key

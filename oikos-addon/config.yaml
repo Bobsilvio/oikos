@@ -1,0 +1,45 @@
+name: "Oikos"
+description: "Dashboard Home Assistant completamente personalizzabile \u2014 card, chip, distintivi e popup componibili"
+version: "2.0.0"
+slug: oikos_dashboard
+url: https://github.com/Bobsilvio/oikos
+
+# Architetture supportate
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+# Porta esposta nell'interfaccia HA
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: "Web UI Oikos"
+
+# Nessuna opzione configurabile \u2014 license server fisso, key gestita dal pannello in-app
+
+# Ingress: HA fa da proxy per le chiamate /api/* del panel_custom Lovelace.
+# `panel_title`/`panel_icon` sono volutamente ASSENTI: non vogliamo che HA
+# mostri una voce sidebar dell'addon. L'unica entry sidebar è il
+# panel_custom Lovelace `oikos` registrato in configuration.yaml.
+ingress: true
+ingress_port: 3000
+
+# Risorse
+map:
+  - share:rw
+  - config:rw
+
+# Permessi API Home Assistant
+# Necessario per accedere a ws://supervisor/core/websocket e http://supervisor/core/api/
+homeassistant_api: true
+
+# Logs
+init: false
+startup: application
+boot: auto
+apparmor: false
+
+# Build locale da sorgente (no GHCR richiesto)
