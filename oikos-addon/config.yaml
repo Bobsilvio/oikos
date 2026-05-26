@@ -12,10 +12,9 @@ arch:
   - armv7
   - i386
 
-# Porta esposta nell'interfaccia HA
-# null = configurabile dall'utente nella scheda "Rete" dell'addon in HA
+# Porta esposta nell'interfaccia HA — default 3000, modificabile da Impostazioni → Rete
 ports:
-  3000/tcp: null
+  3000/tcp: 3000
 ports_description:
   3000/tcp: "Web UI Oikos"
 
