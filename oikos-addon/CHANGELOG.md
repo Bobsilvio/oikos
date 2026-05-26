@@ -6,6 +6,25 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.3] - 2026-05-26
+
+### Added
+- **Addon — porta host configurabile** — `ports: 3000/tcp` ora ha default `3000` ma è modificabile dall'utente nella scheda **Rete** dell'addon in HA Supervisor. Utile se un altro addon occupa già la porta 3000.
+
+### Fixed
+- **iOS — Navbar sovrapposta alla status bar** — aggiunto `padding-top: env(safe-area-inset-top)` alla Navbar; il contenuto (orologio, chip, pulsanti) viene posizionato sotto il notch/dynamic island. La seconda riga chip mobile usa `top: calc(56px + env(safe-area-inset-top))`. Fix su tutti i dispositivi iPhone con HA Companion App.
+- **Irrigation card v1.6.6 — `callService` con oggetto invece di stringa** — `handleStart`, `handleStop`, `handleReset` in Card.jsx passavano un oggetto `{ entity_id: ... }` come terzo argomento (firma raw HA) invece della stringa entityId richiesta dall'SDK Oikos. Stessa correzione applicata ai 6 `useEffect` di sync in Settings.jsx e a `HaTimeRow`.
+- **Irrigation card — sensore temperatura errato in Settings** — al mount, sensori del package (es. `sensor.irrigatore_temperatura_prevista_domani`) venivano salvati come sensore "temperatura attuale" dell'utente. Aggiunto reset `PACKAGE_SENSORS` e auto-select corretto su `sensor.irrigatore_temperatura_corrente`.
+- **Irrigation card — `sensor.irrigatore_temperatura_corrente` restituiva 0** — il template YAML usava `| float(0)` quando l'entità meteo era vuota, mostrando `0°` invece di `—`. Fix: `this.state` come fallback per preservare l'ultimo valore noto.
+- **Irrigation card — fallback `tempDomani`/`pioggiaDomani` semanticamente errato** — il fallback usava `config.temperatureSensor` (sensore fisico) per la metrica "domani". Ora usa `sensor.irrigatore_temperatura_corrente` / `sensor.irrigatore_pioggia_corrente` (sensori del package).
+- **Card picker — anteprime PNG assenti** — le card premium installate prima del supporto preview non mostravano l'immagine di anteprima nel pannello `+card`. Fix: `prepare-addon.sh` copia le PNG in `public/card-previews/<id>.png`; il server usa quel percorso come fallback se `cards-store/<id>/preview.png` è assente.
+
+### Changed
+- **Irrigation card v1.6.6 — sensori temperatura/pioggia semplificati** — rimosso il picker "Sensore pioggia attuale"; `input_text.irrigatore_rain_sensor` viene impostato automaticamente a `sensor.irrigatore_pioggia_corrente` (sensore del package). Il picker "Sensore temperatura esterno" rimane con nuovo hint: se disponibile usa il sensore fisico, altrimenti usa la temperatura dal meteo.
+- **Irrigation card — label "Sensore temperatura attuale" → "Sensore temperatura esterno"** — chiarisce che il campo è per un sensore fisico opzionale, non per il sensore derivato dal meteo.
+
+---
+
 ## [1.1.0] - 2026-05-22
 
 ### Added
