@@ -6,6 +6,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.4] - 2026-05-26
+
+### Added
+- **Irrigation card v1.7.x — stepper durata manuale** — controllo `−` / `+` a fianco del tasto "Avvia manuale" per impostare i minuti prima dell'avvio; valore predefinito da `input_number.irrigatore_durata_irrigazione`. L'irrigazione parte tramite script HA (`script.irrigatore_acqua_e_orto`) con auto-stop server-side — funziona anche a browser chiuso.
+- **Irrigation card — storico sessioni 7 giorni** — pannello espandibile con lista sessioni (durata, ora inizio/fine) recuperate da `fetchHistory` sulle tre entità consuntivo. Sezione vuota se nessuna sessione nell'arco.
+
+### Fixed
+- **Irrigation card v1.7.3 — `Template rendered invalid service: unknown`** — HA valuta i template `service:` in tutti i branch di `choose:` prima di controllare le condizioni (eager evaluation); le guardie di condizione da sole non bastano. Aggiunto `continue_on_error: true` su tutti gli 11 service-call template in entrambi i file YAML (IT + EN). Lo script non abortisce più quando `input_text.irrigatore_push_service` o `irrigatore_telegram_service` è in stato `unknown`.
+- **Irrigation card — stato "in irrigazione" non visibile** — `isIrrigating` dipendeva solo dallo switch HA che resta `off` per qualche istante dopo l'avvio dello script. Aggiunto `scriptRunning = getState('script.irrigatore_acqua_e_orto') === 'on'` come fallback; la card mostra subito lo stato attivo.
+- **Irrigation card — `precipitation_probability` crash con open-meteo** — open-meteo non espone questo attributo nel forecast; accesso diretto causava `UndefinedError`. Fix: `fc.get('precipitation_probability', 100)` con default 100% in tutti i sensori template (3 occorrenze, IT + EN).
+- **Irrigation card — package bloccato a v1.6.2** — l'header `# oikos:package_version:` in entrambi i YAML non era aggiornato; `usePackageInstaller` usava quella versione per decidere se aggiornare il package. Allineato a ogni release.
+- **Store update checker — aggiornamenti premium non visibili** — `/api/store/manifest` richiede il cookie di sessione ingress ma `cardUpdateChecker.js` usava `fetch` plain → 401 silenzioso → array vuoto. Fix: `isAddonUrl()` rileva URL stesso-origin e usa `apiFetch`; URL esterni usano `fetch` plain per evitare CORS.
+
+### Changed
+- **Irrigation card v1.7.x — avvio manuale via script HA** — il tasto "Avvia manuale" non chiama più direttamente `switch.turn_on`; imposta `input_number.irrigatore_durata_irrigazione` e lancia `script.turn_on` su `script.irrigatore_acqua_e_orto`. L'auto-stop è server-side (delay HA), indipendente dal browser.
+
+---
+
 ## [2.0.3] - 2026-05-26
 
 ### Added
