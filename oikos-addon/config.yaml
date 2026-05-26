@@ -13,12 +13,11 @@ arch:
   - i386
 
 # Porta esposta nell'interfaccia HA
+# null = configurabile dall'utente nella scheda "Rete" dell'addon in HA
 ports:
-  3000/tcp: 3000
+  3000/tcp: null
 ports_description:
   3000/tcp: "Web UI Oikos"
-
-# Nessuna opzione configurabile \u2014 license server fisso, key gestita dal pannello in-app
 
 # Ingress: HA fa da proxy per le chiamate /api/* del panel_custom Lovelace.
 # `panel_title`/`panel_icon` sono volutamente ASSENTI: non vogliamo che HA
