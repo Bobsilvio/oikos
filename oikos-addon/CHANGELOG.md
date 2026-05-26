@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.6] - 2026-05-26
+
+### Fixed
+- **Dashboard — `LayoutGrid is not defined`** — `LayoutGrid` usato nel registry della card `card-panel` non era incluso nell'import da `lucide-react`; causava crash dell'intera dashboard al caricamento.
+
+---
+
 ## [2.0.4] - 2026-05-26
 
 ### Added
