@@ -137017,7 +137017,7 @@ window.__OIKOS_React = Lge;
 window.__OIKOS_Lucide = i0;
 window.__OIKOS_SDK__ = KWt;
 window.__OIKOS_PANEL_MODE__ = !0;
-window.__OIKOS_BUILD__ = "2.0.0+202605261243";
+window.__OIKOS_BUILD__ = "2.0.3+202605261245";
 if (typeof window < "u" && !window.__OIKOS_REJECTION_GUARD__) {
   window.__OIKOS_REJECTION_GUARD__ = !0;
   const t = /* @__PURE__ */ new Set([
