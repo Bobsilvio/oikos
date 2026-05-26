@@ -12,11 +12,13 @@ arch:
   - armv7
   - i386
 
-# Porta esposta nell'interfaccia HA — default 3000, modificabile da Impostazioni → Rete
+# Porta esposta nell'interfaccia HA
 ports:
   3000/tcp: 3000
 ports_description:
   3000/tcp: "Web UI Oikos"
+
+# Nessuna opzione configurabile \u2014 license server fisso, key gestita dal pannello in-app
 
 # Ingress: HA fa da proxy per le chiamate /api/* del panel_custom Lovelace.
 # `panel_title`/`panel_icon` sono volutamente ASSENTI: non vogliamo che HA
