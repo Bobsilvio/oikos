@@ -6,7 +6,27 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [2.0.6] - 2026-05-26
+## [2.0.7] - 2026-05-28
+
+### Added
+- **Badge — popup sensori** — cliccando un badge con la lista `sensors` configurata si apre un modal con lo stato di tutti i sensori associati (`BadgeSensorsModal`).
+- **Badge — colorRules dinamico** — il colore del badge cambia automaticamente in base allo stato aggregato dei sensori (`all_off` / `mixed` / `all_on`); configurabile dall'editor con campo `allOffColor`, `anyOnColor`, `allOnColor`.
+
+### Fixed
+- **Navbar — iOS notch/Dynamic Island** — aggiunto `padding-top: env(safe-area-inset-top)` alla Navbar; la seconda riga chip usa `top: calc(56px + env(safe-area-inset-top))`. Fix completo per iPhone con HA Companion App.
+- **useGraphicsQuality — crash WebGL renderer detection** — corretto accesso a `UNMASKED_RENDERER_WEBGL` tramite `ext` object; fallback a `gl.RENDERER` se l'estensione non è disponibile.
+- **Vite — chunk filename con caratteri speciali** — `chunkFileNames` ora sanitizza il nome del chunk (`replace(/[^a-zA-Z0-9_-]/g, '_')`) per evitare errori di deploy con path non validi.
+
+---
+
+## [2.0.6] - 2026-05-27
+
+### Changed
+- **Layout — autoScale in modalità modifica** — il ridimensionamento proporzionale delle card affiancate (`cardCols > 1`) ora è attivo anche in modalità modifica; prima avveniva solo all'uscita dall'edit mode. Il clipping è gestito da un wrapper interno così la toolbar della card non viene tagliata.
+
+---
+
+## [2.0.5] - 2026-05-26
 
 ### Fixed
 - **Dashboard — `LayoutGrid is not defined`** — `LayoutGrid` usato nel registry della card `card-panel` non era incluso nell'import da `lucide-react`; causava crash dell'intera dashboard al caricamento.
