@@ -6,6 +6,35 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.2.0] - 2026-06-01
+
+### Added
+- **Store — chip & badge packages** — chips and badges can now be published and installed as store packages (`manifest.type: "chip" | "badge"`). They appear and install directly in their own **Chips** / **Badges** tabs (community packages route to the right tab), and show up in the add-chip / add-badge pickers once installed. The **Card** tab now lists cards only.
+- **Waste Collection (Raccolta Differenziata)** — new **premium card** showing today's and tomorrow's waste plus the whole week, with reminder notifications (push / Alexa / Google) repeated within a time window. Includes a built-in **badge** (today/tomorrow waste) and **chip** (next collection, shown only when it's today or tomorrow). Auto-installs the HA package `oikos_raccolta_differenziata` with configurable sources and per-day waste type.
+
+---
+
+## [2.1.0] - 2026-05-31
+
+### Added
+- **Themes** — fully custom color themes (complete palette). Theme library with one-tap switch, import from `.json` file, paste JSON, and an inline color-picker editor with live preview. Ships 7 Material Design presets (Indigo, Teal, Orange, Magenta, Purple, Cyan, Green) plus a **Liquid Glass** style (floating detached sidebar, glass cards, gradient background). New themeable tokens `--overlay-scrim` and `--knob`. Custom themes sync across devices.
+- **Side navigation bar** — option to move the navigation bar to the side (left) on iPad/PC (≥900px); toggle in nav settings. Stays at the bottom on phones.
+- **System card** — host/Supervisor performance monitor: CPU, RAM and disk usage (threshold-colored bars), temperature, uptime (from `last_boot`), and available updates auto-detected from `update.*` entities. Configurable entities.
+- **Entity Cleanup card** — remove `unavailable`/orphaned entities, or filter the registry by text (e.g. "fridge"), with select-all and bulk removal via `config/entity_registry/remove`. **Automatic backup** of removed entities to `/config/oikos/backups/` before deletion (server endpoint `POST /api/oikos/backup`, with client-download fallback). Shows which entities could not be removed and why.
+- **Badges — open a card on click** — new `popupCardId` option opens a popup-panel card on tap (same mechanism as chips).
+- **Layout — copy a card to another page** — new toolbar action in edit mode copies a card (with its configuration) to any other page.
+
+### Changed
+- **Theme-aware components** — all first-party cards, chips and badges now use theme CSS variables instead of hardcoded colors, so they follow custom themes (Vacuum, Appliance, badges, chips, popups, scrims, toggle knobs).
+
+### Fixed
+- **Theme persistence** — the active theme no longer reverts to default after a re-sync (active id read/written as JSON for the server round-trip + 60s guard so a locally-changed key is not overwritten by a stale server value from the 30s poll).
+- **Liquid Glass — card popups** — popups opened by cards were trapped inside the card; removed the `backdrop-filter` on card cells that created a containing block for `position: fixed` descendants.
+- **Appliance popup** — restored the icon ring and accent colors (per-appliance accent kept as a hex value).
+- **Lights badge** — the "N on" label no longer wraps onto two lines and gets clipped in the badge bar.
+
+---
+
 ## [2.0.7] - 2026-05-28
 
 ### Added

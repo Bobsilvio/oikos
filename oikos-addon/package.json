@@ -1,6 +1,6 @@
 {
   "name": "oikos",
-  "version": "2.0.7",
+  "version": "2.2.0",
   "type": "module",
   "scripts": {
     "build": "vite build",
