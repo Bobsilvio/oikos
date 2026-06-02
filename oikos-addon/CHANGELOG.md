@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.2.1] - 2026-06-02
+
+### Added
+- **VisioneViva (premium card)** — movie & TV catalog powered by TMDB. Poster grid (in theaters, upcoming, popular, trending, top rated), search (movies/TV/people), genre/year/sort filters. Detail sheet with synopsis, ratings, cast (actor drill-down to their other works), seasons & episodes, recommendations, where-to-watch streaming providers, image gallery, certification, saga/collection and YouTube trailers. Two layouts (**Modern** and **Cinema** — large poster over a backdrop with the film's title logo), full-screen poster lightbox, configurable cover count and size, optional trailer auto-play, and a TTL response cache (memory + localStorage) to avoid refetching. Bundled shared TMDB key with per-install override.
+
+---
+
 ## [2.2.0] - 2026-06-01
 
 ### Added
