@@ -6,6 +6,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.3.0] - 2026-06-04
+
+### Added
+- **Full 5-language support** — Italian, English, French, Spanish, German across the whole dashboard (all 12 namespaces) and **every built-in card, its settings and the card names** (Instant Status, Live Energy, Energy Flow, Image Energy Flow, Today, Forecast, Weather, Room, Batteries, Bill, System, Entity List/Cleanup, Person, Car, Tesla, Smart Card editor, HA Card, HTML Card, Card/Popup Panel, Thermostat, Vacuum settings, …). Community/premium store cards ship the 5 languages too (Vacuum, Light Control, Air Quality, Alexa, Bill, Waste Collection, Irrigation, Zigbee Watchdog, Mailbox, Wallbox, Appliance, VisioneViva). ~2.700 dashboard strings + per-card strings translated.
+
+### Changed
+- **Store update check** is now throttled (every 6 h or on manual refresh ⟳) with a persistent result cache, instead of running on every page open / card install. Installing a card removes it from the update list locally without a network re-check.
+- **Weather card** — forecast sensors (`sm_fv_*`) are taken from the package automatically; settings now only ask for the weather entity.
+
+### Fixed
+- **Automatic popups** (custom/community) not appearing — popups now resolve from the merged card registry (built-in + plugin), not only the static one.
+- **Store "update available" badges flickering** — the manifest fetch falls back to the last cached value when the premium proxy flakes, and concurrent checks are de-duplicated.
+- **Irrigation (Orto) card crash** — a temporal-dead-zone (`switchOk` used before declaration) that the obfuscator exposed in Firefox.
+- **Popup HA-condition trigger** — the Entity ID field now uses the entity picker instead of free text.
+- Removed the deprecated `WEBGL_debug_renderer_info` console warning (uses `gl.RENDERER` first).
+
+---
+
 ## [2.2.1] - 2026-06-02
 
 ### Added
