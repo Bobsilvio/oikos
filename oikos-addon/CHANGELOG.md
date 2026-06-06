@@ -6,6 +6,49 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.1] - 2026-06-06
+
+### Changed
+- **Default language is now English** (`fallbackLng: en`) and browser-language auto-detection was removed from the picker order — a fresh install starts in English instead of inheriting the browser locale. A manually chosen language is still remembered in `localStorage`.
+- **Setup wizard now starts with a language step**: the very first screen lets you pick the language (IT/EN/FR/ES/DE); the choice applies live so the rest of the wizard runs in the selected language.
+
+---
+
+## [2.5.0] - 2026-06-06
+
+### Added
+- **Four new premium store cards**: *Media Player* (artwork, transport, seek, volume, source), *Alarm* (alarm_control_panel: arm Home/Night/Away, disarm, PIN keypad), *Calendar* (upcoming events from `calendar.*` via `calendar.get_events`, day grouping, multi-calendar colors), *Covers* (shutters/garage/curtains with a **Modern** layout: animated window figure, drag-to-set position, dynamic light, type-aware figures, tilt for venetian blinds, grid + scroll).
+- **System card**: added a **1h** range to the CPU/RAM trend charts (1h / 6h / 24h / 3d).
+- **Doors & Windows badge** is now **configurable** (gear in the popup): turn auto-detect on/off, exclude unwanted sensors, add extra ones — no longer fixed auto-only.
+- **Privacy policy** page (`docs/privacy/`), bilingual IT/EN, hostable on GitHub Pages.
+- **Climatizzatore** (community card): optional home-humidity sensor override.
+
+### Changed
+- **License instance binding hardened**: the addon binds the license once to the real `ha-<uuid>` (bind-once; provisional random IDs get upgraded, a bound ID is never silently changed), and falls back to reading `core.uuid` from disk when the supervisor API isn't ready at boot. The client always sends the stable instance ID, never a per-browser hostname. → reliable "one license per HA install".
+
+### Fixed
+- **Store: installing a card emptied the others** — the community/premium stub list is now rebuilt from the last-known-good source cache (cards are preserved even when a fetch flakes), so installing one card no longer makes the rest disappear until a manual refresh.
+
+---
+
+## [2.4.0] - 2026-06-06
+
+### Added
+- **System card — CPU/RAM trend charts**: area charts over time with a 6h / 24h / 3d range selector, read from the configured CPU/RAM sensors via history. Toggle in card settings.
+- **Doors & Windows chip + badge**: auto-detect door/window/garage opening sensors (by `device_class`). The chip shows how many are open; the badge opens a popup listing **which** ones (open first, tap → native more-info). 5 languages.
+- **Two premium security cards** in the store: *Cameras* (single or multi viewer — one large main feed + clickable thumbnails, near-live snapshots, fullscreen, mobile arrow switcher, native HA stream on tap) and *Doors & Windows* (open/closed overview with auto-detect or manual sensors, elapsed time, "all closed" summary). 5 languages.
+
+### Changed
+- **Appliance card — Modern layout**: uniform figure height across all appliance types; animated progress ring + digital timer on the washer figure; larger figures; Statistics button moved inside the panel; figure centered and stacked on mobile.
+
+### Fixed
+- **Premium store HTTP 429**: the update checker no longer fires one premium-manifest request per installed card on a forced refresh — identical requests within a run are coalesced, so the aggregated premium manifest is fetched once. No more request burst to the license server.
+- **License price stuck at €9,99**: Settings → License now reads the real plan price from the server (free → "Free", unreachable → hidden) instead of a hardcoded value.
+- **Appliance program states untranslated**: raw phase-sensor states (e.g. `running`, `rinse`) are now localized via a `programs` map (~30 common washer/dryer/dishwasher states, 5 languages); the Modern progress ring is also larger and no longer cramped.
+- **Irrigation popup button** "OK, got it" → "Close" (5 languages).
+
+---
+
 ## [2.3.0] - 2026-06-04
 
 ### Added
