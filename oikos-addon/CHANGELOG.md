@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.2] - 2026-06-07
+
+### Fixed
+- **Language switch to French/Spanish/German didn't apply** (e.g. in the wizard it stayed English). All five languages are now bundled directly instead of lazy-loading FR/ES/DE over HTTP, so switching to any language always works — no runtime fetch dependency.
+
+---
+
 ## [2.5.1] - 2026-06-06
 
 ### Changed
