@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.5] - 2026-06-08
+
+### Added
+- **Card changelog in the store**: opening a card in the store now shows a "What's new" section with its version history. Entries newer than the installed version are highlighted, so before updating you can see exactly what changed. Card authors document changes in a per-card `CHANGELOG.md`, embedded into the store manifest at build time.
+
+---
+
 ## [2.5.4] - 2026-06-08
 
 ### Added
