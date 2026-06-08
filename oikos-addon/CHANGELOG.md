@@ -6,10 +6,18 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.6] - 2026-06-08
+
+### Fixed
+- **Card changelog now shows on the installed-card detail**: the "What's new" section was only wired into the community-card detail; for installed cards (premium included) the store uses the main detail panel, so the changelog didn't appear. It now renders there too, reading the changelog from the resolved remote manifest when an update is available.
+
+---
+
 ## [2.5.5] - 2026-06-08
 
 ### Added
 - **Card changelog in the store**: opening a card in the store now shows a "What's new" section with its version history. Entries newer than the installed version are highlighted, so before updating you can see exactly what changed. Card authors document changes in a per-card `CHANGELOG.md`, embedded into the store manifest at build time.
+- **Home Assistant panel settings** (Settings → Home Assistant panel): a toggle to open Oikos on startup (sets it as HA's default dashboard via `frontend: default_panel`, since a custom panel can't be picked in the HA profile selector) and a picker to change the sidebar icon (e.g. a house). Both edit `configuration.yaml` with a backup and prompt for an HA restart.
 
 ---
 
