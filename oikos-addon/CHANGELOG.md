@@ -6,6 +6,28 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.4] - 2026-06-08
+
+### Added
+- **Support ticket when your email isn't verified**: if login fails because the address was never confirmed (some providers such as Hotmail/Live/Outlook often don't deliver the verification email), the login screen now offers a form to open a support ticket directly — no login required.
+- **Microsoft email warning at sign-up**: registering with a `@hotmail`, `@live`, `@outlook` or `@msn` address now shows a notice that the verification email may not arrive, in all 5 languages.
+
+### Changed
+- **License check decoupled from the website**: the dashboard re-validates the license at most once every 24 hours instead of on every refresh, and keeps working from its local cache when the license server is unreachable. The add-on no longer blocks if the site is temporarily down.
+
+### Fixed
+- **Offline license validation restored**: signed offline tokens (EC P-256) are issued and verified again, so the dashboard can confirm its license without contacting the server for up to 48 hours. The feature was inactive because the signing key had been lost — a new key pair has been generated.
+
+---
+
+## [2.5.3] - 2026-06-07
+
+### Changed
+- **Settings — "Mobile" section**: *Single column on mobile* and *Auto-scale on mobile* are grouped into one dedicated **Mobile** section instead of two separate cards.
+- **Weather animated background — clouds redesigned**: clouds are now one continuous soft shape (SVG "goo"/metaball filter) instead of visibly joined circles, with a vertical gradient for volume and a soft shadow. Each cloud has a unique procedural shape, an irregular (non-flat) lumpy bottom, and clouds are distributed in clusters — some grouped, some separate. Overcast conditions clump the clouds into a denser mass.
+
+---
+
 ## [2.5.2] - 2026-06-07
 
 ### Fixed
