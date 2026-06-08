@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.5.7] - 2026-06-08
+
+### Fixed
+- **Hide HA sidebar on Home Assistant 2026.6+**: the sidebar toggle only hid the icons, leaving the ~56px bar, because HA replaced the old material drawer (`.mdc-drawer`) with a new layout (`div.sidebar-shell` / `div.app-content`). The toggle now detects the new structure and collapses the whole bar; older HA versions keep the previous behavior.
+
+---
+
 ## [2.5.6] - 2026-06-08
 
 ### Fixed
