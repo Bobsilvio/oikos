@@ -1,14 +1,23 @@
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
-# Installa Node.js 20
+# Node.js dal repo della base alpine (pinnata in build.json, no :latest →
+# versione Node nota; server.js richiede Node ≥18 per fetch/top-level await)
 RUN apk add --no-cache nodejs npm
 
 WORKDIR /app
 
 # ── 1. Dipendenze di produzione ───────────────────────────────────────────────
-COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev
+# package.json + package-lock.json generati da prepare-addon.sh: il lock fissa
+# l'intero albero (4 radici + ~66 transitive) → con il lock presente npm install
+# è deterministico (installa quanto bloccato). NON usiamo `npm ci`: è troppo
+# severo — fallisce al minimo disallineamento package.json↔lock (es. differenze
+# tra l'npm che ha generato il lock e quello di alpine), bloccando il build
+# dell'addon. `npm install` rispetta il lock ma non va in crash.
+# L'install avviene online al build (una volta a install/aggiornamento — HA è
+# comunque online in quel momento).
+COPY package.json package-lock.json ./
+RUN npm install --omit=dev --no-audit --no-fund && npm cache clean --force
 
 # ── 2. Panel_custom bundle: loader + bundle versionato + manifest ──────────
 # run.sh installa questi file in /config/www/ a ogni avvio così l'utente non

@@ -6,6 +6,84 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.9] - 2026-06-11
+
+### Fixed
+- **"Open Oikos on startup" now writes to the correct setting**: the previous version stored the preference under the wrong user-data key, so Home Assistant never read it back and the toggle had no effect. It now updates the same per-user `core` setting the HA profile dashboard selector uses (verified against real HA storage), merged without touching your other preferences.
+
+## [2.6.8] - 2026-06-11
+
+### Fixed
+- **Add-on build no longer risks failing on `npm ci`**: the image build now uses `npm install` (with the shipped lockfile kept for deterministic versions) instead of `npm ci`. `npm ci` hard-fails on any package.json↔lockfile mismatch — including differences between the npm that generated the lock and the one in the Alpine base — which could break the add-on build on some setups. `npm install` honors the lockfile but doesn't crash.
+
+## [2.6.7] - 2026-06-11
+
+### Fixed
+- **Backup restore now actually restores background images** (they were silently lost): the image-restore request used a wildcard `image/*` content-type the server couldn't parse, so every uploaded background dropped on import. Fixed the content-type on both sides; cards that fail to reinstall (or when the backend is unreachable) are now reported instead of silently swallowed.
+- **"Open Oikos on startup" cleanup no longer risks an invalid `configuration.yaml`**: removing the legacy `default_panel` line could orphan other keys under `frontend:` (e.g. `themes:`) when a blank line sat between them — exactly the kind of invalid config that blocks an HA restart. The cleanup is now line-based and leaves a non-empty `frontend:` block intact.
+- Backup seal memory limit lowered to 64 MB to avoid OOM on low-RAM HA OS devices.
+
+## [2.6.6] - 2026-06-11
+
+### Changed
+- **Reproducible add-on dependency builds**: the add-on now ships a `package-lock.json` and installs with `npm ci`, so the entire dependency tree (the 4 direct packages plus their ~66 transitive ones) is frozen to exact versions — previously only the 4 direct packages were pinned and the rest were re-resolved on every build. Installs are also slightly faster and stricter.
+
+## [2.6.5] - 2026-06-11
+
+### Fixed
+- **"Open Oikos on startup" now actually works**: recent HA versions resolve the default dashboard from the *per-user* setting stored server-side (`userData.default_panel`) before looking at the browser's localStorage — so if you had ever picked a dashboard from your HA profile, the toggle was silently ignored. The toggle now writes the per-user setting via WebSocket (applies to your user on **all devices**, no restart) with localStorage kept as fallback for older HA versions.
+
+### Changed
+- **Backups are now encrypted**: the exported file (`.oikosbackup`) contains your license key and full configuration, so it is sealed with AES-256-GCM by the add-on — it can't be opened with a regular unzip, and a tampered/corrupted file is detected and rejected on import. Old `.zip`/`.json` backups can still be imported.
+- **Add-on build installs dependencies online again** (vendored `node_modules` removed): versions stay pinned exactly, the Alpine base image stays pinned at 3.21.
+
+## [2.6.4] - 2026-06-11
+
+### Added
+- **One-click uninstall** (Settings → Uninstall): removes everything Oikos installed on Home Assistant — dashboards and settings, installed cards, uploaded images, YAML packages, the sidebar entry in `configuration.yaml` and the browser data — with a double confirmation. Other custom panels in `configuration.yaml` are left untouched, and a timestamped backup of the file is kept. The license is not affected: reinstalling on the same HA restores it. After the cleanup, just uninstall the add-on from the Supervisor and restart HA.
+
+## [2.6.3] - 2026-06-11
+
+### Changed
+- **Offline, reproducible add-on builds (HA OS)**: the Supervisor builds the add-on image directly on your device — previously this ran `npm install` at build time, which could fail with flaky DNS/registry and produced non-deterministic images. Dependencies (pure-JS, no native binaries) are now shipped pre-vendored with the add-on and the Alpine base image is pinned (3.21, Node 22) instead of `:latest`. Installs and updates are faster, work offline, and behave identically on every architecture, Raspberry Pi included.
+
+## [2.6.2] - 2026-06-10
+
+### Changed
+- **Full 1:1 backup**: Settings → Backup now exports a ZIP containing the whole configuration, the uploaded background images and the list of cards installed from the store. On restore everything comes back exactly as it was: images are written back under their original names and cards are reinstalled automatically. **License-aware**: premium cards are reinstalled only if the subscription is still active — if the license has meanwhile dropped to trial/expired they are skipped and reported (their layout configuration is kept, so re-subscribing and reinstalling restores them in place). Old `.json` backups can still be imported.
+
+## [2.6.1] - 2026-06-10
+
+### Fixed
+- **"Open Oikos on startup" no longer breaks Home Assistant restarts**: the toggle used to write `frontend: default_panel` into `configuration.yaml`, an option recent HA versions reject as invalid — blocking every restart until the line was removed by hand. The preference is now stored in the HA frontend itself (same per-device mechanism as the profile dashboard selector): it takes effect immediately, needs no restart, and the add-on automatically cleans up the invalid line left by previous versions on next boot.
+
+## [2.6.0] - 2026-06-10
+
+### Security
+- **Add-on no longer exposes port 3000 on the host network.** The dashboard talks to the add-on exclusively through the HA ingress proxy, but the published port also exposed — without any authentication — the Supervisor-authenticated WebSocket proxy, HA service calls, all entity states, and the license key to anyone on the LAN. The port mapping has been removed and, as defense in depth, the server now rejects API and WebSocket requests that don't come from the HA ingress network (developer override: `OIKOS_ALLOW_DIRECT=1`).
+- **Rate limiting on login/registration**: the add-on no longer forwards credential brute-force attempts to the license server (max 10 requests per minute per client).
+
+### Added
+- **Health check + Supervisor watchdog**: new `/api/health` endpoint and `watchdog` entry in the add-on config — if the server hangs, the Supervisor restarts the add-on automatically.
+- **Backup management**: entity-registry snapshots can now be downloaded and deleted via API, with automatic rotation (the 20 most recent are kept).
+- **Multilingual add-on status page**: the page shown when opening the add-on URL directly is now served in EN/IT/FR/DE/ES based on the browser language.
+
+### Changed
+- **Server errors are now translatable**: every user-facing error from the add-on carries a machine code (e.g. `premium_required`, `zip_too_big`) that the dashboard translates into the 5 supported languages. Previously the raw Italian text from the server was shown to all users.
+- **Much smaller Docker image**: the add-on image now installs only the four runtime dependencies the server needs, instead of the entire dashboard frontend stack — significantly faster installs and updates, especially on ARM boards.
+- **`configuration.yaml` backups are timestamped** (last 5 kept). The previous single `.oikos.bak` file was overwritten on every change, so two consecutive edits lost the original.
+
+### Fixed
+- **Card translations now self-heal**: if i18n files couldn't be downloaded when a card was installed (e.g. HA was offline), the add-on retries on the next boot instead of giving up forever.
+- **Shared realtime stream protection**: WS subscription commands are rejected on the generic command endpoint — a subscription opened by one browser would have leaked its events to every connected client.
+- **Unique upload filenames**: concurrent image uploads could overwrite each other (timestamp-only names); a random suffix is now added.
+- **License-expired responses now include CORS headers**, so the dashboard shows the real message instead of a network error.
+
+### Removed
+- Unused `share:rw` permission (smaller attack surface), dead code in the server and start script.
+
+---
+
 ## [2.5.7] - 2026-06-08
 
 ### Fixed

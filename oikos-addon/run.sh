@@ -1,8 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-# License server fisso (nessuna opzione utente)
-LICENSE_SERVER_URL="https://homeoikos.com"
-
 bashio::log.info "Avvio Oikos..."
 
 # SUPERVISOR_TOKEN: iniettato dal Supervisor HA. Su versioni precedenti si chiamava HASSIO_TOKEN.
@@ -137,9 +134,6 @@ if [ -d /app/card-previews ] && [ -d /config/www ]; then
 fi
 
 
-# Questa variabile viene letta da server.js e iniettata nell'index.html
-# come window.__OIKOS_ENV__ → useLicense.js la legge a runtime
-export LICENSE_SERVER_URL="${LICENSE_SERVER_URL}"
 export PORT=3000
 
 # Avvia il server Express
