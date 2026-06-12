@@ -6,6 +6,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.11] - 2026-06-12
+
+### Fixed
+- **Card translations now update correctly after a card update**: new i18n keys added by an updated card (e.g. a new state label) showed up as the raw key (like `subtitle.charging`) until a full page reload, because the translation registrar skipped a namespace already loaded in the session. It now always merges/overwrites, so updated card translations apply immediately.
+
+## [2.6.10] - 2026-06-11
+
+### Fixed
+- **iPad: the bottom navbar could be dragged up, revealing a black gap below it.** iOS rubber-band overscroll on the scrollable content was chaining up to the Home Assistant page body, lifting the whole panel. Overscroll chaining is now contained on the scroll container and on `<body>`, so the layout stays anchored.
+
 ## [2.6.9] - 2026-06-11
 
 ### Fixed
