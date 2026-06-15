@@ -45,14 +45,27 @@ if (typeof window !== 'undefined' && !window.__OIKOS_REJECTION_GUARD__) {
 }
 
 let _bundlePromise = null
+
+const _PANEL_MSGS = {
+  it: { title: 'Oikos: impossibile caricare la dashboard', hint: 'Controlla che l\'addon Oikos sia in esecuzione, poi ricarica la pagina.' },
+  en: { title: 'Oikos: failed to load dashboard', hint: 'Make sure the Oikos add-on is running, then reload the page.' },
+  de: { title: 'Oikos: Dashboard konnte nicht geladen werden', hint: 'Stelle sicher, dass das Oikos-Add-on läuft, und lade die Seite neu.' },
+  es: { title: 'Oikos: no se pudo cargar el panel', hint: 'Asegúrate de que el add-on Oikos esté en ejecución y recarga la página.' },
+  fr: { title: 'Oikos: impossible de charger le tableau de bord', hint: 'Vérifiez que l\'add-on Oikos est en cours d\'exécution, puis rechargez la page.' },
+}
+function _panelMsg() {
+  var lang = (navigator.language || 'en').split('-')[0].toLowerCase()
+  return _PANEL_MSGS[lang] || _PANEL_MSGS.en
+}
+
 async function loadBundle() {
   if (_bundlePromise) return _bundlePromise
   _bundlePromise = (async () => {
     const res = await fetch('/local/oikos/manifest.json?_=' + Date.now(), { cache: 'no-store' })
-    if (!res.ok) throw new Error('manifest.json non trovato — l\'addon Oikos non è stato avviato?')
+    if (!res.ok) throw new Error('manifest.json not found — is the Oikos add-on running?')
     const { bundle } = await res.json()
     if (typeof bundle !== 'string' || !bundle.endsWith('.js')) {
-      throw new Error('manifest.json malformato (atteso { "bundle": "...js" })')
+      throw new Error('manifest.json malformed (expected { "bundle": "...js" })')
     }
     await import('/local/oikos/' + bundle)
   })()
@@ -97,10 +110,11 @@ class OikosPanel extends HTMLElement {
       this._forward()
     } catch (e) {
       console.error('[oikos-panel] load failed:', e)
+      var _msg = _panelMsg()
       this.innerHTML = `<div style="padding:24px;font:14px system-ui;color:#dc2626">
-        <strong>Oikos: impossibile caricare la dashboard</strong><br>
+        <strong>${_msg.title}</strong><br>
         <small>${e.message}</small><br><br>
-        <small>Controlla che l'addon Oikos sia in esecuzione, poi ricarica la pagina.</small>
+        <small>${_msg.hint}</small>
       </div>`
     }
   }
