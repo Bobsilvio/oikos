@@ -149,10 +149,10 @@ Clicca il badge **"Add to Home Assistant"** in cima alla pagina — si apre dire
 
 **Metodo 2 — Manuale**
 
-1. **Impostazioni → Add-on → Add-on Store**
+1. **Impostazioni → Applicazioni → Store applicazioni**
 2. Menu **⋮ → Repositories** → incolla `https://github.com/Bobsilvio/oikos`
 3. Chiudi, ricarica → cerca **Oikos** → **Installa**
-4. Avvia l'add-on e segui il wizard di configurazione iniziale
+4. Avvia l'applicazione e segui il wizard di configurazione iniziale
 
 **Requisiti:** Home Assistant OS / Supervised / Container · HA 2024.1+ · `amd64`, `aarch64`, `armv7`, `armhf`, `i386` · ~200 MB RAM
 
