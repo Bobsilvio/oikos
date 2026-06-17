@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.12] - 2026-06-17
+
+### Added
+- **"Invert grid sign" option** (Settings → Energy flow): some inverters/meters (e.g. Sofar/Solarman) report grid power with the opposite sign to Oikos' convention, so the flow showed "drawing from grid" while the system was actually exporting (and vice versa). Enabling the option flips the sign across the Hero, Live boxes and Energy flow cards.
+
 ## [2.6.11] - 2026-06-12
 
 ### Fixed

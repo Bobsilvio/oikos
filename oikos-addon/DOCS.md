@@ -10,7 +10,7 @@ Dashboard completamente personalizzabile per Home Assistant: card, chip, distint
 
 ### 🚀 Primo avvio
 
-1. **Installa** l'applicazione e clicca **Avvia**
+1. **Installa** l'add-on e clicca **Avvia**
 2. Al primo avvio Oikos aggiunge automaticamente la voce **Oikos** nella barra laterale
 3. **Riavvia Home Assistant** una sola volta per vedere la voce in sidebar
 4. Clicca su **Oikos** nella sidebar → segui la procedura guidata per attivare la licenza
@@ -48,7 +48,7 @@ A fully composable Home Assistant dashboard: cards, chips, badges and popups —
 
 ### 🚀 First launch
 
-1. **Install** the application and click **Start**
+1. **Install** the add-on and click **Start**
 2. On first launch Oikos automatically adds an **Oikos** entry to the HA sidebar
 3. **Restart Home Assistant** once to see the sidebar entry
 4. Click **Oikos** in the sidebar → follow the setup wizard to activate your license
