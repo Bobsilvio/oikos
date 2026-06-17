@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.13] - 2026-06-17
+
+### Added
+- **"Invert battery sign" option** (Settings → Energy flow): companion to the grid-sign option. Some inverters (e.g. Sofar/Solarman) report battery power with the opposite sign, so charge/discharge appeared swapped in the flow. Enabling it flips the battery sign across the Hero, Live boxes and Energy flow cards.
+
 ## [2.6.12] - 2026-06-17
 
 ### Added
