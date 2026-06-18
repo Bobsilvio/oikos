@@ -6,6 +6,34 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.18] - 2026-06-18
+
+### Fixed
+- **Solar/FV cards are now hidden inside Card Panels and popups too** when the photovoltaic feature is turned off in Settings — previously the filter applied only to top-level cards and the Store.
+- **No more console warning when no weather entity is configured**: the forecast fetch fails benignly and falls back to the entity attribute; the warning is now only logged for real errors.
+
+## [2.6.17] - 2026-06-18
+
+### Fixed
+- **Registration page showed wrong trial/price** (stuck at the 15-day / €9.99 defaults): the page couldn't read `/api/public/settings` and `/api/public/plans` because the license gate blocked them before activation. They're now public, so the page shows the real values (e.g. 40-day trial) and the plan's actual price with its real period (e.g. **€9.99/year**, no longer divided into a misleading monthly figure).
+- **HA connection form hidden in panel mode** (add-on and Docker): the host/WebSocket/token form is only relevant when running Oikos as a standalone web app outside Home Assistant. In panel mode the connection is automatic via `hass`, so the form is hidden to avoid confusion (it could show a stale host).
+
+## [2.6.16] - 2026-06-18
+
+### Fixed
+- **Login screen now follows the Home Assistant language.** It defaulted to English regardless of your HA language; it now switches to HA's language (it/en/fr/es/de) as soon as HA is available, unless you picked a language manually.
+- **Login footer showed a raw i18n error** ("key 'support (en)' returned an object instead of string"): the support contact line referenced an object key. Added a dedicated `needHelp` string in all 5 languages.
+
+## [2.6.15] - 2026-06-18
+
+### Fixed
+- **Store: premium cards weren't recognizable on mobile.** The "Premium" badge only showed in the desktop layout, so on phones (compact list) premium cards looked identical to free ones. Premium cards now show a "PRO" mini-badge next to the name in the compact list too.
+
+## [2.6.14] - 2026-06-18
+
+### Fixed
+- **Chip editor: Save button cut off on mobile.** The editor panel (92dvh, centered) overflowed below the browser bar, so the Save button was unreachable. On phones (≤720px) it's now a bottom sheet (anchored to the bottom, 94dvh) with safe-area padding, so Save/Cancel are always reachable.
+
 ## [2.6.13] - 2026-06-17
 
 ### Added
