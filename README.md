@@ -154,6 +154,26 @@ Clicca il badge **"Add to Home Assistant"** in cima alla pagina — si apre dire
 3. Chiudi, ricarica → cerca **Oikos** → **Installa**
 4. Avvia l'applicazione e segui il wizard di configurazione iniziale
 
+**Metodo 3 — Docker (HA Container)**
+
+Per chi usa HA in Docker puro (senza applicazioni). Oikos gira come container separato che condivide il `/config` di HA:
+
+```yaml
+services:
+  oikos:
+    image: ghcr.io/bobsilvio/oikos:standalone
+    container_name: oikos
+    restart: unless-stopped
+    ports: ["3564:3564"]
+    volumes:
+      - /percorso/al/config/homeassistant:/config   # lo STESSO /config di HA
+    environment:
+      OIKOS_STANDALONE: "1"
+      OIKOS_HA_URL: "http://192.168.1.50:8123"        # IP locale del tuo HA
+```
+
+`docker compose up -d` → **riavvia HA una volta** (Oikos aggiunge da solo la voce in sidebar e il ponte di accesso remoto) → apri **Oikos**. Funziona anche da remoto (Nabu Casa).
+
 **Requisiti:** Home Assistant OS / Supervised / Container · HA 2024.1+ · `amd64`, `aarch64`, `armv7`, `armhf`, `i386` · ~200 MB RAM
 
 ---
@@ -298,6 +318,26 @@ Click the **"Add to Home Assistant"** badge at the top — opens HA directly wit
 2. Menu **⋮ → Repositories** → paste `https://github.com/Bobsilvio/oikos`
 3. Close, reload → find **Oikos** → **Install**
 4. Start the add-on and follow the setup wizard
+
+**Method 3 — Docker (HA Container)**
+
+For pure-Docker HA (no add-ons). Oikos runs as a separate container sharing HA's `/config`:
+
+```yaml
+services:
+  oikos:
+    image: ghcr.io/bobsilvio/oikos:standalone
+    container_name: oikos
+    restart: unless-stopped
+    ports: ["3564:3564"]
+    volumes:
+      - /path/to/config/homeassistant:/config   # the SAME /config as HA
+    environment:
+      OIKOS_STANDALONE: "1"
+      OIKOS_HA_URL: "http://192.168.1.50:8123"    # your HA local IP
+```
+
+`docker compose up -d` → **restart HA once** (Oikos adds the sidebar entry and the remote-access bridge itself) → open **Oikos**. Works remotely too (Nabu Casa).
 
 **Requirements:** Home Assistant OS / Supervised / Container · HA 2024.1+ · `amd64`, `aarch64`, `armv7`, `armhf`, `i386` · ~200 MB RAM
 
