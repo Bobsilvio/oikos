@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.23] - 2026-06-19
+
+### Fixed
+- **Docker standalone — Store premium and several features failed with a false "License key not configured"**: many backend calls (Store premium manifest, installed-cards and plugins lists, settings sync, image upload, backup, login) used a plain `fetch` without the HA auth token, so the HA bridge rejected them with `401` — which the Store mis-reported as "License key not configured". All backend calls now go through `apiFetch` (Bearer). In standalone, installed/community card JS is loaded via fetch+Blob (a direct dynamic `import()` can't carry the token). `apiFetch` now attaches the HA token only to backend (relative) URLs — never to external URLs (token-leak guard).
+
 ## [2.6.22] - 2026-06-19
 
 ### Added
