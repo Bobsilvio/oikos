@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.27] - 2026-06-19
+
+### Fixed
+- **Solar cards hidden in the "Add card" picker too**: with photovoltaic off, the editor's card picker no longer lists cards that require the solar feature (e.g. Energy Flow on Image), consistent with the dashboard and the Store.
+
 ## [2.6.26] - 2026-06-19
 
 ### Fixed
