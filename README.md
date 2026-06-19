@@ -15,6 +15,10 @@
 
 [![Add to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FBobsilvio%2Foikos)
 
+[![Docker](https://img.shields.io/badge/🐳%20Docker-HA%20Container-2496ED?style=for-the-badge)](#-installazione)
+
+🐳 **Disponibile anche per Docker / HA Container** — vedi [Installazione → Metodo 3](#-installazione) · [English](#-installation) · [`docker-compose.example.yml`](docker-compose.example.yml)
+
 [🇮🇹 Italiano](#-italiano) · [🇬🇧 English](#-english)
 
 </div>
