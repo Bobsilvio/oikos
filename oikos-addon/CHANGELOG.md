@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.25] - 2026-06-19
+
+### Changed
+- **Store card layout — consistent**: title and version are always on top, the preview/logo (or placeholder) always below. Previously the image sat above the text when present and the layout shifted when it was missing.
+
 ## [2.6.24] - 2026-06-19
 
 ### Fixed
