@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.28] - 2026-06-19
+
+### Fixed
+- **Subscription/billing CORS error**: the panel was calling a development license-server URL baked into the build, which failed CORS. Production builds now target `https://homeoikos.com` (`.env.production`), and the license-server reflects the request Origin so billing/plans work from any Home Assistant address (LAN IP, Nabu Casa, reverse proxy) — not just `homeoikos.com`.
+
 ## [2.6.27] - 2026-06-19
 
 ### Fixed
