@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.30] - 2026-06-19
+
+### Fixed
+- **Docker standalone — premium card install fixed**: the install request (`/api/cards/install`) and the premium manifest refresh used a plain `fetch` (no auth token) → the HA bridge returned `401`/`404` (`__premium__/manifest.json`). Both now go through `apiFetch` (Bearer) and the premium manifest is resolved via the backend store proxy.
+
+### Added
+- **App version shown in Licenza & Abbonamento**: the License panel now displays the running Oikos version.
+
 ## [2.6.29] - 2026-06-19
 
 ### Changed
