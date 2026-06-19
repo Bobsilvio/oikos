@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.26] - 2026-06-19
+
+### Fixed
+- **Solar cards hidden in the Community store too**: with photovoltaic turned off, community/premium store sources no longer list cards that require the solar feature (e.g. Tigo Panels) — consistent with built-in cards, chips and badges. The source card count reflects the filtered list.
+
 ## [2.6.25] - 2026-06-19
 
 ### Changed
