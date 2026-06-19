@@ -2494,7 +2494,8 @@ const int = /* @__PURE__ */ xt(c), ant = /* @__PURE__ */ cW({
   panel_block_missing: "Oikos panel_custom-Block nicht gefunden — sidebar_icon manuell ändern",
   ha_not_ready: "Home Assistant ist nicht bereit, versuche es in wenigen Sekunden erneut",
   direct_access_forbidden: "Direkter Zugriff nicht erlaubt — öffne Oikos über die Home-Assistant-Seitenleiste",
-  rate_limited: "Zu viele Versuche, bitte in einer Minute erneut versuchen"
+  rate_limited: "Zu viele Versuche, bitte in einer Minute erneut versuchen",
+  email_provider_unsupported: "Hotmail/Outlook/Live-Adressen werden derzeit nicht unterstützt. Bitte eine andere verwenden (z. B. Gmail)."
 }, V2e = "Füge zuerst `packages: !include_dir_named packages` zu deiner configuration.yaml hinzu und starte Home Assistant neu, dann installiere das Paket.", _2e = "packages-Zeile zu configuration.yaml hinzugefügt. Starte Home Assistant neu und installiere dann das Paket.", q2e = "configuration.yaml kann nicht sicher bearbeitet werden (unklare Struktur). Füge die Zeile manuell hinzu und starte HA neu.", U2e = "Remote-Brücke nicht erreichbar. Stelle sicher, dass Home Assistant und Oikos im selben Docker-Netzwerk sind, oder setze OIKOS_INTERNAL_URL.", X2e = "Neue Version verfügbar", pnt = {
   save: X0e,
   cancel: G0e,
@@ -6103,7 +6104,8 @@ Durch Version {{incoming}} ersetzen?`,
   panel_block_missing: "Oikos panel_custom block not found — edit sidebar_icon manually",
   ha_not_ready: "Home Assistant is not ready, try again in a few seconds",
   direct_access_forbidden: "Direct access not allowed — open Oikos from the Home Assistant sidebar",
-  rate_limited: "Too many attempts, try again in a minute"
+  rate_limited: "Too many attempts, try again in a minute",
+  email_provider_unsupported: "Hotmail/Outlook/Live emails are not supported right now. Please use another address (e.g. Gmail)."
 }, J5e = "First add `packages: !include_dir_named packages` to your configuration.yaml and restart Home Assistant, then install the package.", ewe = "packages line added to configuration.yaml. Restart Home Assistant, then install the package.", twe = "Cannot safely edit configuration.yaml (unclear structure). Add the line manually and restart HA.", nwe = "Remote bridge unreachable. Make sure Home Assistant and Oikos are on the same docker network, or set OIKOS_INTERNAL_URL.", rwe = "New version available", Rnt = {
   save: r5e,
   cancel: i5e,
@@ -9712,7 +9714,8 @@ Replace with version {{incoming}}?`,
   panel_block_missing: "Bloque panel_custom de Oikos no encontrado — edita sidebar_icon manualmente",
   ha_not_ready: "Home Assistant no está listo, inténtalo de nuevo en unos segundos",
   direct_access_forbidden: "Acceso directo no permitido — abre Oikos desde la barra lateral de Home Assistant",
-  rate_limited: "Demasiados intentos, inténtalo de nuevo en un minuto"
+  rate_limited: "Demasiados intentos, inténtalo de nuevo en un minuto",
+  email_provider_unsupported: "Los correos Hotmail/Outlook/Live no se admiten por ahora. Usa otra dirección (p. ej. Gmail)."
 }, d8e = "Primero añade `packages: !include_dir_named packages` a tu configuration.yaml y reinicia Home Assistant, luego instala el package.", u8e = "Línea packages añadida a configuration.yaml. Reinicia Home Assistant y luego instala el package.", p8e = "No puedo editar configuration.yaml con seguridad (estructura poco clara). Añade la línea a mano y reinicia HA.", h8e = "Puente remoto inalcanzable. Asegúrate de que Home Assistant y Oikos estén en la misma red docker, o define OIKOS_INTERNAL_URL.", f8e = "Nueva versión disponible", irt = {
   save: f3e,
   cancel: g3e,
@@ -13321,7 +13324,8 @@ La entrada de Oikos desaparecerá de la barra lateral tras el reinicio.`
   panel_block_missing: "Bloc panel_custom Oikos introuvable — modifiez sidebar_icon manuellement",
   ha_not_ready: "Home Assistant n’est pas prêt, réessayez dans quelques secondes",
   direct_access_forbidden: "Accès direct non autorisé — ouvrez Oikos depuis la barre latérale de Home Assistant",
-  rate_limited: "Trop de tentatives, réessayez dans une minute"
+  rate_limited: "Trop de tentatives, réessayez dans une minute",
+  email_provider_unsupported: "Les e-mails Hotmail/Outlook/Live ne sont pas pris en charge actuellement. Utilisez une autre adresse (ex. Gmail)."
 }, bEe = "Ajoutez d’abord `packages: !include_dir_named packages` à votre configuration.yaml et redémarrez Home Assistant, puis installez le package.", xEe = "Ligne packages ajoutée à configuration.yaml. Redémarrez Home Assistant, puis installez le package.", AEe = "Impossible de modifier configuration.yaml en toute sécurité (structure peu claire). Ajoutez la ligne à la main et redémarrez HA.", kEe = "Pont distant injoignable. Vérifiez que Home Assistant et Oikos sont sur le même réseau docker, ou définissez OIKOS_INTERNAL_URL.", wEe = "Nouvelle version disponible", Prt = {
   save: wIe,
   cancel: OIe,
@@ -16930,7 +16934,8 @@ Remplacer par la version {{incoming}} ?`,
   panel_block_missing: "Blocco panel_custom Oikos non trovato — modifica sidebar_icon manualmente",
   ha_not_ready: "Home Assistant non è pronto, riprova tra qualche secondo",
   direct_access_forbidden: "Accesso diretto non consentito — apri Oikos dalla sidebar di Home Assistant",
-  rate_limited: "Troppi tentativi, riprova tra un minuto"
+  rate_limited: "Troppi tentativi, riprova tra un minuto",
+  email_provider_unsupported: "Le email Hotmail/Outlook/Live non sono al momento supportate. Usa un altro indirizzo (es. Gmail)."
 }, PBe = "Aggiungi prima `packages: !include_dir_named packages` al tuo configuration.yaml e riavvia Home Assistant, poi installa il package.", MBe = "Riga packages aggiunta a configuration.yaml. Riavvia Home Assistant, poi installa il package.", IBe = "Non posso modificare configuration.yaml in sicurezza (struttura non chiara). Aggiungi la riga a mano e riavvia HA.", EBe = "Ponte remoto non raggiungibile. Verifica che Home Assistant e Oikos siano sulla stessa rete docker, oppure imposta OIKOS_INTERNAL_URL.", TBe = "Nuova versione disponibile", Krt = {
   save: Tze,
   cancel: Lze,
@@ -156410,7 +156415,7 @@ window.__OIKOS_React = _1e;
 window.__OIKOS_Lucide = L1;
 window.__OIKOS_SDK__ = mpn;
 window.__OIKOS_PANEL_MODE__ = !0;
-window.__OIKOS_BUILD__ = "2.6.28+202606191114";
+window.__OIKOS_BUILD__ = "2.6.29+202606191132";
 if (typeof window < "u" && !window.__OIKOS_REJECTION_GUARD__) {
   window.__OIKOS_REJECTION_GUARD__ = !0;
   const n = /* @__PURE__ */ new Set([

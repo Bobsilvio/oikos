@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.29] - 2026-06-19
+
+### Changed
+- **Microsoft email addresses temporarily blocked at registration** (Hotmail/Outlook/Live/MSN): delivery to these providers is currently unreliable, so the verification email never arrives. Registration with those domains is rejected with a clear message (use another address, e.g. Gmail). Applies to both the website and the in-app/add-on registration (enforced on the license server).
+
 ## [2.6.28] - 2026-06-19
 
 ### Fixed
