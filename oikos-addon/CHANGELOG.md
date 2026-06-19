@@ -6,6 +6,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.21] - 2026-06-19
+
+### Fixed
+- **Docker standalone — all panel API calls now carry the HA auth token**: the standalone authentication added in 2.6.20 returned `401` for any call not made through `apiFetch` (settings, uninstall, package install/check, store, card install). In the add-on these worked thanks to the ingress cookie; in Docker they failed. Notably, uninstall showed `[object Object]` and removed nothing — now fixed.
+- **`oikos_proxy` bridge no longer crashes on setup**: it read its backend file synchronously inside the event loop, which recent Home Assistant (Python 3.14) blocks, so the integration failed to load ("integration not found"). The file is now read in an executor.
+- **Uninstall also removes the bridge**: cleanup now deletes the `oikos_proxy` custom component and its `configuration.yaml` line.
+
+### Added
+- **Image Flow card — selectable battery SOC**: the battery state-of-charge (%) entity can now be picked directly in the card settings. If no SOC entity is configured (card or global), the battery node shows kW instead of a misleading "0%".
+
 ## [2.6.20] - 2026-06-18
 
 ### Added
