@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.24] - 2026-06-19
+
+### Fixed
+- **Docker standalone — Store premium previews/logos now load**: preview and logo images served by the backend (`/api/store/file`) are loaded through the HA bridge, but an `<img src>` can't send the auth token, so they returned `401` and stayed blank. They are now fetched with the token (`apiFetch`) and shown as blob URLs. Add-on and external images are unaffected (direct `<img>`).
+
 ## [2.6.23] - 2026-06-19
 
 ### Fixed
