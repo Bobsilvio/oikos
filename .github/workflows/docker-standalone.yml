@@ -47,6 +47,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/bobsilvio/oikos:standalone
+            ghcr.io/bobsilvio/oikos:latest
             ghcr.io/bobsilvio/oikos:${{ github.ref_name }}
 
       # First run: the package is created private. Try to make it public so
