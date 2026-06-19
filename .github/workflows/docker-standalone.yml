@@ -1,0 +1,63 @@
+# Docker standalone image — runs IN the PUBLIC repo (Bobsilvio/oikos).
+# prepare-addon.sh copies this file to .github/workflows/ of oikos-public and
+# pushes the tag docker-v* there. The build uses ./oikos-addon, which in the
+# public repo is ALREADY obfuscated (panel build:dist + server.js obfuscator) —
+# no re-build, no source from the private repo.
+#
+# The image is published to ghcr.io/bobsilvio/oikos:standalone. Because this
+# workflow lives in the public repo, the package is linked to it; a best-effort
+# step also flips its visibility to public on the first run.
+name: Docker standalone image
+
+on:
+  push:
+    tags:
+      - 'docker-v*'
+  workflow_dispatch:
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout (public repo, obfuscated addon)
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build & push (multi-arch)
+        uses: docker/build-push-action@v6
+        with:
+          context: ./oikos-addon
+          file: ./oikos-addon/Dockerfile.standalone
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/bobsilvio/oikos:standalone
+            ghcr.io/bobsilvio/oikos:${{ github.ref_name }}
+
+      # First run: the package is created private. Try to make it public so
+      # clients pull without login. Best effort: ignored if already public or if
+      # the token can't change it (then flip it once in the package settings UI).
+      - name: Make package public (best effort)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method PUT \
+            -H "Accept: application/vnd.github+json" \
+            "/user/packages/container/oikos/visibility" \
+            -f visibility=public || true

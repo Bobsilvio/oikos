@@ -16,9 +16,9 @@ if [ -d /config ]; then
   find /config/www/oikos -maxdepth 1 -name 'oikos-panel.*.js' -delete 2>/dev/null || true
   cp /app/panel/oikos-panel.*.js /config/www/oikos/ 2>/dev/null || true
   cp /app/panel/manifest.json    /config/www/oikos/manifest.json 2>/dev/null || true
-  echo "[oikos] pannello copiato in /config/www/oikos/"
+  echo "[oikos] panel copied to /config/www/oikos/"
 else
-  echo "[oikos] ATTENZIONE: /config non montato — monta il config di HA come volume"
+  echo "[oikos] WARNING: /config not mounted — mount HA's config as a volume"
 fi
 
 exec node server.js

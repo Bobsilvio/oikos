@@ -1,31 +1,29 @@
-"""Oikos Proxy — ponte HTTP tra il frontend HA e il backend Oikos standalone.
+"""Oikos Proxy — HTTP bridge between the HA frontend and the Oikos standalone backend.
 
-Perché esiste
+Why this exists
+---------------
+In Docker standalone mode the Oikos panel (JavaScript) runs in the BROWSER and must
+call the Oikos backend (port 3564). When the user accesses Home Assistant remotely
+(Nabu Casa, reverse proxy) the browser can only reach HA, not the backend port, so
+those calls fail.
+
+This integration registers a view inside HA at ``/api/oikos/<path>`` that forwards
+requests to the backend. Because it is served by HA itself, it is reachable wherever
+HA is — Nabu Casa included — exactly like ingress does for the add-on.
+
+Security
+--------
+The view requires Home Assistant authentication (``requires_auth = True``): only
+logged-in HA users can use it. The ``Authorization`` header is forwarded to the
+backend, which re-validates it (defense in depth).
+
+Configuration
 -------------
-In modalità Docker standalone il pannello Oikos (JavaScript) gira nel BROWSER e
-deve chiamare il backend Oikos (porta 3000). Quando l'utente accede a Home
-Assistant da remoto (Nabu Casa, reverse proxy) il browser raggiunge SOLO HA, non
-la porta del backend → le chiamate falliscono.
-
-Questa integrazione registra una view dentro HA a ``/api/oikos/<path>`` che inoltra
-le richieste al backend. Essendo servita da HA stesso, è raggiungibile ovunque lo
-sia HA — Nabu Casa compresa — esattamente come l'ingress fa per l'add-on.
-
-Sicurezza
----------
-La view richiede l'autenticazione di Home Assistant (``requires_auth = True``):
-solo utenti HA loggati possono usarla. L'header ``Authorization`` viene inoltrato
-al backend, che lo rivalida (difesa in profondità). Così il backend non ha più
-bisogno di esporre la porta 3000 sull'host: basta che HA lo raggiunga sulla rete
-Docker interna (default ``http://oikos:3000``).
-
-Configurazione
---------------
-L'indirizzo del backend viene risolto, in ordine:
+The backend address is resolved, in order:
   1. ``oikos_proxy: { url: ... }`` in configuration.yaml
-  2. file ``backend.txt`` nella cartella dell'integrazione (scritto dall'installer)
-  3. variabile d'ambiente ``OIKOS_BACKEND_URL``
-  4. default ``http://oikos:3000``
+  2. the ``backend.txt`` file in the integration folder (written by the installer)
+  3. the ``OIKOS_BACKEND_URL`` environment variable
+  4. default ``http://oikos:3564``
 """
 from __future__ import annotations
 
@@ -44,10 +42,10 @@ _LOGGER = logging.getLogger(__name__)
 DOMAIN = "oikos_proxy"
 DEFAULT_BACKEND = "http://oikos:3564"
 
-# Header che non vanno inoltrati così come sono (gestiti dal layer HTTP).
+# Headers not forwarded as-is (handled by the HTTP layer).
 _REQ_STRIP = {"host", "content-length", "connection", "keep-alive",
               "proxy-authorization", "transfer-encoding", "upgrade"}
-_RESP_STRIP = _REQ_STRIP | {"content-encoding"}  # aiohttp decomprime → l'header mentirebbe
+_RESP_STRIP = _REQ_STRIP | {"content-encoding"}  # aiohttp decompresses → header would lie
 
 
 def _resolve_backend(hass: HomeAssistant, config: ConfigType) -> str:
@@ -68,12 +66,12 @@ def _resolve_backend(hass: HomeAssistant, config: ConfigType) -> str:
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     backend = _resolve_backend(hass, config)
     hass.http.register_view(OikosProxyView(backend))
-    _LOGGER.info("Oikos Proxy attivo: /api/oikos/* → %s", backend)
+    _LOGGER.info("Oikos Proxy active: /api/oikos/* → %s", backend)
     return True
 
 
 class OikosProxyView(HomeAssistantView):
-    """Inoltra /api/oikos/<path> al backend Oikos standalone."""
+    """Forwards /api/oikos/<path> to the Oikos standalone backend."""
 
     url = "/api/oikos/{path:.*}"
     name = "api:oikos"
@@ -103,7 +101,7 @@ class OikosProxyView(HomeAssistantView):
                        if k.lower() not in _RESP_STRIP}
                 return web.Response(status=upstream.status, body=payload, headers=out)
         except (ClientError, OSError) as err:
-            _LOGGER.warning("Oikos backend non raggiungibile (%s): %s", target, err)
+            _LOGGER.warning("Oikos backend unreachable (%s): %s", target, err)
             return web.json_response(
                 {"error": f"Oikos backend unreachable: {err}",
                  "code": "backend_unreachable"},
