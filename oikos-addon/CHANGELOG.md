@@ -6,6 +6,23 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.20] - 2026-06-18
+
+### Added
+- **Docker standalone auto-setup + remote access (Nabu Casa)**: the Docker container now configures itself on first boot — it writes both the `panel_custom` entry and the `oikos_proxy` bridge into `configuration.yaml` (with backup), so the only manual step is one Home Assistant restart. The `oikos_proxy` bridge is a small HA custom component that routes `/api/oikos/*` → the Oikos backend from inside HA; because it is served by HA itself, Oikos works wherever HA is reachable — **Nabu Casa and reverse proxies included** — like the add-on's ingress. The proxy view requires HA authentication. HA reaches the backend at the same host as `OIKOS_HA_URL` on port 3564 by default (works for the common case of HA and Oikos in separate containers); override with `OIKOS_INTERNAL_URL`, or point it at `http://oikos:3564` if they share a docker network. After boot Oikos verifies the bridge and shows a warning banner if HA can't reach the backend. The standalone container listens on port **3564** (the HAOS add-on is unaffected — internal 3564 too now).
+
+### Security
+- **Standalone (Docker) API authentication**: the backend port is exposed directly in Docker mode (no HA ingress isolation). It now requires the logged-in user's Home Assistant token (`Authorization: Bearer`) on every `/api/*` call, validated against HA. Only authenticated HA users can reach the API — the same access level as the ingress-isolated add-on. This closes an unauthenticated read of `GET /api/config` (which returns the license key). Requires `OIKOS_HA_URL` in the compose file; without it the API is fail-closed (denied).
+- **WebSocket proxy disabled in standalone**: the `/ws-proxy` admin channel (which authenticates to HA with the Supervisor token) is now explicitly refused in Docker mode as defense-in-depth — the panel talks to the HA frontend WebSocket directly and never needs the proxy.
+
+## [2.6.19] - 2026-06-18
+
+### Added
+- **"Add it automatically" for the packages include**: cards that need an HA package now offer a one-click button to insert `packages: !include_dir_named packages` into `configuration.yaml` (with a timestamped backup). If the file structure is unclear (commented/inline `homeassistant:`, an existing `packages:` with a different value) it does **not** touch the file and tells you to add the line manually.
+
+### Fixed
+- **Package install is blocked until the include is present**: previously the package YAML could be written even without `packages: !include_dir_named packages`, so HA never loaded it and the entities never appeared (leading users to recreate the sensors by hand). The install is now disabled with a clear, copyable hint until the include is added.
+
 ## [2.6.18] - 2026-06-18
 
 ### Fixed

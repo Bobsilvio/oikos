@@ -36,6 +36,43 @@ Apre direttamente Home Assistant e aggiunge questo repo come sorgente add-on.
 
 > **Nota:** il riavvio al passo 7 è l'unica operazione manuale richiesta. Dalla seconda volta in poi l'add-on si aggiorna senza riavvii.
 
+### Metodo 3 — Docker (Home Assistant Container)
+
+Per chi usa **HA in Docker puro** (senza Supervisor, dove gli add-on non esistono).
+Oikos gira come container separato che condivide il `/config` di HA.
+
+```yaml
+services:
+  oikos:
+    image: ghcr.io/bobsilvio/oikos:standalone
+    container_name: oikos
+    restart: unless-stopped
+    ports:
+      - "3564:3564"
+    volumes:
+      - /percorso/al/config/homeassistant:/config   # STESSO /config di HA
+    environment:
+      OIKOS_STANDALONE: "1"
+      OIKOS_HA_URL: "http://192.168.1.50:8123"        # IP locale del tuo HA
+```
+
+1. Adatta `volumes:` (il vero `/config` di HA) e `OIKOS_HA_URL` (IP del tuo HA).
+2. `docker compose up -d` — al primo avvio Oikos aggiunge da solo a
+   `configuration.yaml` la voce sidebar (`panel_custom`) **e** il ponte di
+   accesso remoto (`oikos_proxy`).
+3. ⚠️ **Riavvia Home Assistant** una volta → carica pannello e ponte.
+4. Apri **Oikos** nella sidebar → wizard → licenza.
+
+**Accesso da remoto (Nabu Casa, fuori casa):** funziona da subito grazie al ponte
+`oikos_proxy` (instrada le chiamate dentro HA) — niente reverse proxy da
+configurare.
+
+> `OIKOS_HA_URL` è obbligatorio (sicurezza: valida il token HA). Da quell'IP Oikos
+> deriva anche come HA raggiunge il backend (`host:3564`), quindi nel caso comune
+> (HA e Oikos in container separati) **non serve toccare le reti docker**. Se li
+> metti sulla stessa rete docker, imposta invece `OIKOS_INTERNAL_URL: "http://oikos:3564"`
+> e puoi togliere `ports:`.
+
 ---
 
 ## Cosa fa Oikos
@@ -140,7 +177,7 @@ Le card community premium si installano dallo **Store → Community** di Oikos c
 
 ## Requisiti
 
-- Home Assistant OS, Supervised, o Container (con Supervisor)
+- Home Assistant OS o Supervised (add-on), oppure HA Container/Docker (Metodo 3)
 - Architettura: `amd64`, `aarch64`, `armv7`, `armhf`, `i386`
 - RAM libera: ~200 MB
 

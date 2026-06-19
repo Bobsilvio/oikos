@@ -1,0 +1,35 @@
+# Oikos — immagine standalone per Home Assistant Container (Docker puro).
+# Niente Supervisor, niente bashio: gira come container a sé, con /config di HA
+# montato. Stesso server.js dell'addon, avviato con OIKOS_STANDALONE=1.
+#
+# Build (dalla cartella oikos-addon/, popolata da prepare-addon.sh):
+#   docker build -f Dockerfile.standalone -t oikos-standalone .
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Dipendenze di produzione (stesso package.json/lock dell'addon)
+COPY package.json package-lock.json ./
+RUN npm install --omit=dev --no-audit --no-fund && npm cache clean --force
+
+# Pannello (loader + bundle versionato + manifest + chunk) e preview
+COPY panel/ ./panel/
+COPY card-previews/ ./card-previews/
+
+# Server Express (stesso file dell'addon)
+COPY server.js ./
+# Custom component HA "oikos_proxy" — l'installer lo copia in /config quando
+# l'utente abilita la connessione remota dal wizard (ponte browser→HA→backend).
+COPY custom_components/ ./custom_components/
+RUN mkdir -p uploads plugins
+
+# Entrypoint standalone: copia il pannello in /config/www/oikos poi avvia il server
+COPY entrypoint-standalone.sh /entrypoint-standalone.sh
+RUN chmod +x /entrypoint-standalone.sh
+
+# Porta standalone NON generica (evita collisioni con altri servizi su 3000).
+# L'addon HAOS resta su 3000 (ingress interno); qui esponiamo 3564.
+ENV OIKOS_STANDALONE=1
+ENV PORT=3564
+EXPOSE 3564
+CMD ["/entrypoint-standalone.sh"]

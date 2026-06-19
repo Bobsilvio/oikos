@@ -134,7 +134,7 @@ if [ -d /app/card-previews ] && [ -d /config/www ]; then
 fi
 
 
-export PORT=3000
+export PORT=3564
 
 # Avvia il server Express
 exec node /app/server.js

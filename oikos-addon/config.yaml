@@ -1,6 +1,6 @@
 name: "Oikos"
 description: "Dashboard Home Assistant completamente personalizzabile \u2014 card, chip, distintivi e popup componibili"
-version: "2.6.18"
+version: "2.6.20"
 slug: oikos_dashboard
 url: https://github.com/Bobsilvio/oikos
 
@@ -13,7 +13,7 @@ arch:
   - i386
 
 # Nessuna porta host pubblicata: il panel comunica SOLO via HA ingress
-# (discovery.json → /api/hassio_ingress/...). Esporre 3000 sulla LAN darebbe
+# (discovery.json → /api/hassio_ingress/...). Esporre 3564 sulla LAN darebbe
 # accesso senza autenticazione alle API e al proxy WebSocket del Supervisor.
 
 # Nessuna opzione configurabile \u2014 license server fisso, key gestita dal pannello in-app
@@ -23,10 +23,10 @@ arch:
 # mostri una voce sidebar dell'addon. L'unica entry sidebar è il
 # panel_custom Lovelace `oikos` registrato in configuration.yaml.
 ingress: true
-ingress_port: 3000
+ingress_port: 3564
 
 # Watchdog: il Supervisor riavvia l'addon se l'healthcheck non risponde
-watchdog: "http://[HOST]:[PORT:3000]/api/health"
+watchdog: "http://[HOST]:[PORT:3564]/api/health"
 
 # Risorse — solo /config: serve per packages, www e oikos-config.json.
 # (/share non è mai usato dal server)
