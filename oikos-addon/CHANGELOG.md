@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.22] - 2026-06-19
+
+### Added
+- **Image Flow card — "Invert grid sign" and "Invert battery sign"**: the same two options already in the Energy Flow card, now per-card in the Image Flow settings. For inverters/meters that report the opposite sign (e.g. Sofar/Solarman), so the flow direction (import/export, charge/discharge) is correct.
+
 ## [2.6.21] - 2026-06-19
 
 ### Fixed
