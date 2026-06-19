@@ -64,7 +64,8 @@ def _resolve_backend(hass: HomeAssistant, config: ConfigType) -> str:
 
 
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
-    backend = _resolve_backend(hass, config)
+    # _resolve_backend reads a file → run it in the executor, never block the loop.
+    backend = await hass.async_add_executor_job(_resolve_backend, hass, config)
     hass.http.register_view(OikosProxyView(backend))
     _LOGGER.info("Oikos Proxy active: /api/oikos/* → %s", backend)
     return True
