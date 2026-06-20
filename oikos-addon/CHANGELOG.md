@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.34] - 2026-06-20
+
+### Fixed
+- The "animated weather background" setting now stays off after reopening the app (it was reverting on iOS).
+
 ## [2.6.33] - 2026-06-20
 
 ### Changed
