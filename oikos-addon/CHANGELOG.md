@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.37] - 2026-06-20
+
+### Changed
+- HACS cards: removed the manual enable step (in Settings and the setup wizard). All detected HACS cards are now available in the card picker right away.
+
 ## [2.6.36] - 2026-06-20
 
 ### Fixed
