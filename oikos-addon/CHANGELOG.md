@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.36] - 2026-06-20
+
+### Fixed
+- Badge popups (lights, openings, shutters, vacuum and custom badges) now open above the cards instead of behind them (iOS).
+
+### Added
+- Panel/popup container cards: each card you add inside can now be configured directly, with a settings button next to it.
+
 ## [2.6.35] - 2026-06-20
 
 ### Fixed
