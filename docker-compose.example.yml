@@ -1,0 +1,26 @@
+# Oikos standalone — Home Assistant Container (Docker).
+# Mount the SAME /config as HA. On first start Oikos adds to configuration.yaml
+# both the sidebar panel (panel_custom) and the remote-access bridge (oikos_proxy):
+# you only need to RESTART HA once, then open Oikos from the sidebar.
+# Works remotely too (Nabu Casa): the bridge routes /api/oikos/ inside HA.
+
+services:
+  oikos:
+    image: ghcr.io/bobsilvio/oikos:standalone
+    # local build: comment image: and use
+    # build: { context: ./oikos-addon, dockerfile: Dockerfile.standalone }
+    container_name: oikos
+    restart: unless-stopped
+    ports:
+      - "3564:3564"                                  # HA reaches the backend via host:3564
+    volumes:
+      - /path/to/config/homeassistant:/config        # the SAME /config as HA
+    environment:
+      OIKOS_STANDALONE: "1"
+      OIKOS_HA_URL: "http://192.168.1.50:8123"        # required · your HA local IP
+      # OIKOS_INTERNAL_URL: "http://192.168.1.50:3564" # only if auto-detection is wrong
+      # HA_TOKEN: "..."                                # fingerprint fallback
+
+# By default HA reaches the backend at host:3564 (derived from OIKOS_HA_URL) — no
+# network setup needed. ALTERNATIVELY, if you put HA and Oikos on the SAME docker
+# network, set OIKOS_INTERNAL_URL: "http://oikos:3564" and you can drop `ports:`.
