@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.35] - 2026-06-20
+
+### Fixed
+- The required `packages:` line is now added to configuration.yaml automatically at startup (with the folder), so card packages load without any manual step.
+
+### Changed
+- Animated weather background and graphics quality are now remembered **per device** (phone vs computer) and survive app restarts.
+
 ## [2.6.34] - 2026-06-20
 
 ### Fixed
