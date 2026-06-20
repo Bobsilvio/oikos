@@ -6,6 +6,12 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.32] - 2026-06-20
+
+### Fixed
+- Installing a card's package now works in Docker mode (the request no longer fails after a while).
+- Icon picker no longer fails to open on some cards (fixed a broken lazy-loaded module).
+
 ## [2.6.31] - 2026-06-20
 
 ### Fixed
