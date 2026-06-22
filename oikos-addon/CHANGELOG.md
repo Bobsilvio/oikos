@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.39] - 2026-06-20
+
+### Fixed
+- Badge/chip popups (lights, openings, shutters, vacuum, custom badges) rendered unstyled — white, full-width, no labels — after the previous update. They now open correctly themed, above the cards.
+
 ## [2.6.38] - 2026-06-20
 
 ### Changed
