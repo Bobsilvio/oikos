@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.40] - 2026-06-20
+
+### Added
+- Diagnostics: Settings → Diagnostics lets you download a technical report (versions, environment, installed cards/packages, recent errors, connectivity) or send it to support, which returns a short code to paste into your ticket. No sensitive data, license key masked.
+
 ## [2.6.39] - 2026-06-20
 
 ### Fixed
