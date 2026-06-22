@@ -6,6 +6,12 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.38] - 2026-06-20
+
+### Changed
+- Package cards: after a package update, the card settings now clearly show that Home Assistant needs a restart to apply the new features (before you only saw it in the notifications).
+- Premium cards now require an active subscription to load.
+
 ## [2.6.37] - 2026-06-20
 
 ### Changed
