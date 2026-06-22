@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.41] - 2026-06-20
+
+### Fixed
+- HACS cards: all of them now show up in the card picker. Some setups only listed 2-3 because their resources weren't all loaded — they're now preloaded in parallel at startup.
+
+### Added
+- Support tickets from the panel: Settings → Diagnostics → "Open a ticket". The diagnostics report is attached automatically, no need to go to the website.
+
 ## [2.6.40] - 2026-06-20
 
 ### Added
