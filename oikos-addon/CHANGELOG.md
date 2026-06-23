@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.42] - 2026-06-20
+
+### Added
+- Support tickets are now fully interactive from the panel: Settings → My tickets lets you read replies and reply, without going to the website.
+
 ## [2.6.41] - 2026-06-20
 
 ### Fixed
