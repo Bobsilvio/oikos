@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.45] - 2026-06-20
+
+### Changed
+- The diagnostics report (download / send to support) moved to the Support page too, next to tickets — no longer in Settings.
+
 ## [2.6.44] - 2026-06-20
 
 ### Added
