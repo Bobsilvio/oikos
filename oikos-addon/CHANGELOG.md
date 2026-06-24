@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.43] - 2026-06-20
+
+### Changed
+- Support tickets moved to their own "Support" page in the three-dots menu (open a ticket + read/reply), instead of being inside Settings.
+
 ## [2.6.42] - 2026-06-20
 
 ### Added
