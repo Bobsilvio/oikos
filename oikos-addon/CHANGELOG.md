@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.44] - 2026-06-20
+
+### Added
+- Login security: after 3 failed attempts the account is locked and can only be recovered via "Forgot password" (a temporary password is emailed, which must be changed at first login). Works from both the add-on and the website. The website account page now also lets you change your password.
+
 ## [2.6.43] - 2026-06-20
 
 ### Changed
