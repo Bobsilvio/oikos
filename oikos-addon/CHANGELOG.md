@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.47] - 2026-06-25
+
+### Changed
+- When opening a support ticket, the diagnostics are no longer attached automatically: a new optional checkbox "Include diagnostics" lets you decide whether to share versions, errors and system status.
+
+### Fixed
+- The "Open ticket" button now shows a clear hint when it's greyed out (subject and message too short), so it's obvious what's missing instead of looking broken.
+- Internal: clearer support reports (license state and de-duplicated repeated errors) to speed up troubleshooting.
+
 ## [2.6.46] - 2026-06-20
 
 ### Fixed
