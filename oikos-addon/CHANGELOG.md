@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.46] - 2026-06-20
+
+### Fixed
+- The "update available" banner now also appears on computers kept open for a long time: the version is re-checked periodically and when you return to the tab, not only at first load.
+
 ## [2.6.45] - 2026-06-20
 
 ### Changed
