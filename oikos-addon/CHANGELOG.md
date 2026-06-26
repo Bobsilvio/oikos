@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.48] - 2026-06-26
+
+### Fixed
+- Configuring a card placed inside a Card Panel / Popup Panel now opens its settings correctly: before, the editor came up blank (white on white, no controls visible) because it lost the theme styles.
+
 ## [2.6.47] - 2026-06-25
 
 ### Changed
