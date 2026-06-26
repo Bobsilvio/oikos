@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.49] - 2026-06-26
+
+### Fixed
+- Graphics quality (High / Medium / Low) now actually takes effect: before, switching it changed almost nothing. Medium removes blur and flattens shadows/transitions; Low turns off animations, blur and shadows for the smoothest experience on slower devices.
+
 ## [2.6.48] - 2026-06-26
 
 ### Fixed
