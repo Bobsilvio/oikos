@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.50] - 2026-06-26
+
+### Added
+- **Multiple PV plants (multi-inverter)**: you can now define several solar plants in Settings → Solar plants (name, kWp, photo, and entities for production, battery and grid). The energy cards show the **combined production** automatically; the Image Flow card lets you choose per card between aggregated total or a per-plant breakdown. If you have a single inverter, nothing changes.
+
 ## [2.6.49] - 2026-06-26
 
 ### Fixed
