@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.52] - 2026-07-03
+
+### Changed
+- Licensing reliability improvements.
+
 ## [2.6.51] - 2026-07-02
 
 ### Added
