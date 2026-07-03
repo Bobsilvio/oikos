@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.51] - 2026-07-02
+
+### Added
+- The "update available" banner now shows both versions (e.g. "2.6.50 → 2.6.51"), not just a generic notice.
+
+### Fixed
+- Home Assistant's built-in cards (entities, glance, picture-elements, gauge, markdown, etc.) can now be used inside the "Native HA card" card — before they showed "unsupported type". Only custom (HACS) cards worked previously.
+
 ## [2.6.50] - 2026-06-26
 
 ### Added
