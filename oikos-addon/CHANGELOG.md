@@ -6,6 +6,17 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.53] - 2026-07-09
+
+### Added
+- Screensaver editor: optional grid overlay and snap-to-align ("magnet") with visual alignment guides against other widgets and screen edges/center.
+- Screensaver editor: preview now uses the real aspect ratio of your device, with presets (16:9, 4:3, 9:16). Devices that run the screensaver register their resolution automatically and appear in the list — edit on your PC, preview exactly what the tablet will show.
+- Screensaver editor: widgets can be dragged from anywhere on their body, clicked to select, nudged with arrow keys (Shift = larger steps) and removed with Del.
+
+### Fixed
+- Screensaver: widgets and cards are no longer cut off at screen edges — layouts saved on a different device are clamped into view and oversized cards scale down automatically.
+- Screensaver editor: cards in the preview now render at the real device width, so their layout matches what you actually see on screen.
+
 ## [2.6.52] - 2026-07-03
 
 ### Changed
