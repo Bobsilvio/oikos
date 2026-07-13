@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.54] - 2026-07-13
+
+### Added
+- Screensaver: cards you already configured on your dashboards (including "Card YAML") can now be added as widgets with their own settings — the "Add card" menu has a new "From dashboard" group. Before, cards always appeared with default settings, so YAML cards showed up empty.
+
+### Fixed
+- Screensaver: cards are now always rendered with the dark theme inside the screensaver (and its editor preview) — with the light theme they appeared white and unreadable over the background.
+- Screensaver editor: dropdown menus were unreadable (white on white) on some devices — options now use explicit theme colors.
+
 ## [2.6.53] - 2026-07-09
 
 ### Added
