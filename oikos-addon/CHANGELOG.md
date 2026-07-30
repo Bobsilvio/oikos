@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.57] - 2026-07-30
+
+### Fixed
+- Third and final localisation sweep, this time covering the parts a keyword search misses — single words. Colour names in the badge and chip editors, the built-in theme names, the history panel ("Last 24 hours", "History unavailable"), the popup condition editor (Label, Value, Operator, Days, Minute), the screensaver menu (Style, Background, Automatic activation), the chip panel, the Store buttons (Install, Reinstall, Installing, Preview, Loading) and the shutters badge are all translated now.
+- Theme import and backup restore errors ("Invalid JSON", "Corrupt or invalid backup", …) now appear in your language instead of Italian.
+- Cards now translate text shown outside the interface too: appliance names in the setup wizard and the notifications sent by the appliance, mailbox and irrigation cards. The Bolletta card had around 50 untranslated labels across its settings and summary tabs — those are done as well.
+
+Thanks once more to @jannickhome, who kept looking after the first two passes.
+
 ## [2.6.56] - 2026-07-30
 
 ### Fixed
