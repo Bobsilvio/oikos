@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.56] - 2026-07-30
+
+### Fixed
+- Another sweep through the interface for anyone not using Italian: the sensor labels in the card settings (solar production, grid power, state of charge and all the others) are now translated, along with the shutters badge, the entity picker, the dashboard picker, the chip panel, the popup settings, several Store buttons and tooltips, and the empty messages that appear when there is nothing to show yet.
+- The three tutorial steps (edit mode, organise the sections, add card) are now translated as well, including their tips.
+- Reset descriptions in Settings now appear in your language.
+
+Thanks again to @jannickhome, whose second report drove this pass.
+
 ## [2.6.55] - 2026-07-30
 
 ### Fixed
