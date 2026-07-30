@@ -6,6 +6,18 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.55] - 2026-07-30
+
+### Fixed
+- If you use Oikos in a language other than Italian, several parts of the interface were still showing Italian. Dates and times now use your language everywhere: weekdays and month names in the clock and on the screensaver, the days in the solar forecast, and the timestamps on notifications, sensors and cards.
+- Numbers are formatted according to your language too, instead of always following the Italian style.
+- The weather description under the production forecast (Sunny, Cloudy, Rain…) is now translated. It also covers a few weather conditions that previously showed a raw English code, such as clear night and hail.
+- The top bar is fully translated: the Home Assistant menu button, the connection indicator, refresh, the bell and the whole notifications panel — including "Card updates" and "Alerts".
+- Various buttons that a screen reader would read out in Italian are now translated as well (switch dashboard, manage pages, show/hide the Home Assistant sidebar, solar toggle).
+- The "Forgot password?" and "Change password" screens appear in German, Spanish and French instead of falling back to English.
+
+Thanks to @jannickhome for the detailed report.
+
 ## [2.6.54] - 2026-07-13
 
 ### Added
