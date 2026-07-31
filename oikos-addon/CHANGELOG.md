@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.58] - 2026-07-31
+
+### Changed
+- When a Home Assistant has already used its free trial, the dashboard now explains it instead of showing a generic "licence not valid" error. The screen states that the trial is tied to the system rather than to the account — so signing up with another email address does not reset it — and that the same applies to installations restored from a backup or cloned from another machine. A purchase button is offered right there.
+
 ## [2.6.57] - 2026-07-30
 
 ### Fixed
