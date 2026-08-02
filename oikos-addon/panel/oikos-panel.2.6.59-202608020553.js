@@ -20507,22 +20507,22 @@ class hF extends xW {
     const y = (g == null ? void 0 : g.usedKey) || c, v = (g == null ? void 0 : g.exactUsedKey) || c, b = ["[object Number]", "[object Function]", "[object RegExp]"], x = a.joinArrays !== void 0 ? a.joinArrays : this.options.joinArrays, A = !this.i18nFormat || this.i18nFormat.handleAsObject, k = a.count !== void 0 && !ot(a.count), S = hF.hasDefaultValue(a), C = k ? this.pluralResolver.getSuffix(h, a.count, a) : "", j = a.ordinal && k ? this.pluralResolver.getSuffix(h, a.count, {
       ordinal: !1
     }) : "", P = k && !a.ordinal && a.count === 0, E = P && a[`defaultValue${this.options.pluralSeparator}zero`] || a[`defaultValue${C}`] || a[`defaultValue${j}`] || a.defaultValue;
-    let L = m;
-    A && !m && S && (L = E);
-    const T = qV(L), I = Object.prototype.toString.apply(L);
-    if (A && L && T && !b.includes(I) && !(ot(x) && Array.isArray(L))) {
+    let T = m;
+    A && !m && S && (T = E);
+    const L = qV(T), I = Object.prototype.toString.apply(T);
+    if (A && T && L && !b.includes(I) && !(ot(x) && Array.isArray(T))) {
       if (!a.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
-        const z = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(y, L, {
+        const z = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(y, T, {
           ...a,
           ns: d
         }) : `key '${c} (${this.language})' returned an object instead of string.`;
         return o ? (g.res = z, g.usedParams = this.getUsedParamsDetails(a), g) : z;
       }
       if (s) {
-        const z = Array.isArray(L), M = z ? [] : {}, R = z ? v : y;
-        for (const F in L)
-          if (Object.prototype.hasOwnProperty.call(L, F)) {
+        const z = Array.isArray(T), M = z ? [] : {}, R = z ? v : y;
+        for (const F in T)
+          if (Object.prototype.hasOwnProperty.call(T, F)) {
             const H = `${R}${s}${F}`;
             S && !m ? M[F] = this.translate(H, {
               ...a,
@@ -20533,7 +20533,7 @@ class hF extends xW {
               ...a,
               joinArrays: !1,
               ns: d
-            }), M[F] === H && (M[F] = L[F]);
+            }), M[F] === H && (M[F] = T[F]);
           }
         m = M;
       }
@@ -20641,8 +20641,8 @@ class hF extends xW {
             f && (j = this.pluralResolver.getSuffix(A, r.count, r));
             const P = `${this.options.pluralSeparator}zero`, E = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
             if (f && (r.ordinal && j.startsWith(E) && k.push(p + j.replace(E, this.options.pluralSeparator)), k.push(p + j), g && k.push(p + P)), m) {
-              const L = `${p}${this.options.contextSeparator || "_"}${r.context}`;
-              k.push(L), f && (r.ordinal && j.startsWith(E) && k.push(L + j.replace(E, this.options.pluralSeparator)), k.push(L + j), g && k.push(L + P));
+              const T = `${p}${this.options.contextSeparator || "_"}${r.context}`;
+              k.push(T), f && (r.ordinal && j.startsWith(E) && k.push(T + j.replace(E, this.options.pluralSeparator)), k.push(T + j), g && k.push(T + P));
             }
           }
           let S;
@@ -21488,21 +21488,21 @@ class lv extends xW {
     };
   }
 }
-const He = lv.createInstance();
-He.createInstance;
-He.dir;
-He.init;
-He.loadResources;
-He.reloadResources;
-He.use;
-He.changeLanguage;
-He.getFixedT;
-He.t;
-He.exists;
-He.setDefaultNamespace;
-He.hasLoadedNamespace;
-He.loadNamespaces;
-He.loadLanguages;
+const Re = lv.createInstance();
+Re.createInstance;
+Re.dir;
+Re.init;
+Re.loadResources;
+Re.reloadResources;
+Re.use;
+Re.changeLanguage;
+Re.getFixedT;
+Re.t;
+Re.exists;
+Re.setDefaultNamespace;
+Re.hasLoadedNamespace;
+Re.loadNamespaces;
+Re.loadLanguages;
 var alt = {
   area: !0,
   base: !0,
@@ -21785,25 +21785,25 @@ const ylt = (n) => {
     }, C ? void 0 : A))) : k.push(...O.Children.map([x], (j) => {
       var E;
       if (j.type === O.Fragment || ((E = j.props) == null ? void 0 : E.i18nIsDynamicList) !== void 0) {
-        const L = {
+        const T = {
           key: S
         };
-        return j && j.props && Object.keys(j.props).forEach((T) => {
-          T === "children" || T === "i18nIsDynamicList" || (L[T] = j.props[T]);
-        }), O.createElement(j.type, L, C ? null : A);
+        return j && j.props && Object.keys(j.props).forEach((L) => {
+          L === "children" || L === "i18nIsDynamicList" || (T[L] = j.props[L]);
+        }), O.createElement(j.type, T, C ? null : A);
       }
       const P = {
         key: S
       };
-      return j && j.props && Object.keys(j.props).forEach((L) => {
-        L === "ref" || L === "children" || (P[L] = j.props[L]);
+      return j && j.props && Object.keys(j.props).forEach((T) => {
+        T === "ref" || T === "children" || (P[T] = j.props[T]);
       }), O.cloneElement(j, P, C ? null : A);
     }));
   }, v = (x, A, k) => {
     const S = wc(x), C = wc(A), j = {};
-    return C.reduce((P, E, L) => {
+    return C.reduce((P, E, T) => {
       var I, z;
-      const T = ((z = (I = E.children) == null ? void 0 : I[0]) == null ? void 0 : z.content) && i.services.interpolator.interpolate(E.children[0].content, g, i.language);
+      const L = ((z = (I = E.children) == null ? void 0 : I[0]) == null ? void 0 : z.content) && i.services.interpolator.interpolate(E.children[0].content, g, i.language);
       if (E.type === "tag") {
         let M = S[parseInt(E.name, 10)];
         !M && e && (M = e[E.name]), k.length === 1 && !M && (M = k[0][E.name]), M || (M = {});
@@ -21822,18 +21822,18 @@ const ylt = (n) => {
           P.push(V);
         } else if (l5(F) || N) {
           const V = m(F, E, k);
-          y(F, V, P, L);
+          y(F, V, P, T);
         } else if ($) {
           const V = v(S, E.children, k);
-          y(F, V, P, L);
+          y(F, V, P, T);
         } else if (Number.isNaN(parseFloat(E.name)))
           if (_) {
             const V = m(F, E, k);
-            y(F, V, P, L, E.voidElement);
+            y(F, V, P, T, E.voidElement);
           } else if (a.transSupportBasicHtmlNodes && c.indexOf(E.name) > -1)
             if (E.voidElement)
               P.push(O.createElement(E.name, {
-                key: `${E.name}-${L}`
+                key: `${E.name}-${T}`
               }));
             else {
               const V = j[E.name] || 0;
@@ -21851,7 +21851,7 @@ const ylt = (n) => {
               }
               const Z = Q ? wc(F2(Q)) : S, re = v(Z, E.children, k);
               P.push(O.createElement(E.name, {
-                key: `${E.name}-${L}`
+                key: `${E.name}-${T}`
               }, re));
             }
           else if (E.voidElement)
@@ -21861,14 +21861,14 @@ const ylt = (n) => {
             P.push(`<${E.name}>${V}</${E.name}>`);
           }
         else if (ul(F) && !H) {
-          const V = E.children[0] ? T : null;
+          const V = E.children[0] ? L : null;
           V && P.push(V);
         } else
-          y(F, T, P, L, E.children.length !== 1 || !T);
+          y(F, L, P, T, E.children.length !== 1 || !L);
       } else if (E.type === "text") {
         const M = a.transWrapTextNodes, R = typeof a.unescape == "function" ? a.unescape : BJ().unescape, F = s ? R(i.services.interpolator.interpolate(E.content, g, i.language)) : i.services.interpolator.interpolate(E.content, g, i.language);
         M ? P.push(O.createElement(M, {
-          key: `${E.name}-${L}`
+          key: `${E.name}-${T}`
         }, F)) : P.push(F);
       }
       return P;
@@ -21941,15 +21941,15 @@ function jlt({
     ...d
   } : d, j = lX(n, v, m, i), P = c || (A == null ? void 0 : A.defaultValue) || j || v.transEmptyNodeValue || (typeof i == "function" ? Cf(i) : i), {
     hashTransKey: E
-  } = v, L = i || (E ? E(j || P) : j || P);
+  } = v, T = i || (E ? E(j || P) : j || P);
   (U = (Q = m.options) == null ? void 0 : Q.interpolation) != null && U.defaultVariables ? s = S && Object.keys(S).length > 0 ? {
     ...S,
     ...m.options.interpolation.defaultVariables
   } : {
     ...m.options.interpolation.defaultVariables
   } : s = S;
-  const T = xlt(n);
-  T && typeof T.count == "number" && e === void 0 && (e = T.count);
+  const L = xlt(n);
+  L && typeof L.count == "number" && e === void 0 && (e = L.count);
   const I = s || e !== void 0 && !((re = (Z = m.options) == null ? void 0 : Z.interpolation) != null && re.alwaysFormat) || !n ? A.interpolation : {
     interpolation: {
       ...A.interpolation,
@@ -21965,8 +21965,8 @@ function jlt({
     defaultValue: P,
     ns: b
   };
-  let M = L ? y(L, z) : P;
-  M === L && P && (M = P);
+  let M = T ? y(T, z) : P;
+  M === T && P && (M = P);
   const R = Olt(C, M, m, i);
   let F = R || n, H = null;
   Clt(R) && (H = R, F = n);
@@ -22091,8 +22091,8 @@ const Qlt = (n, e) => {
   t: Qlt,
   ready: !1
 }, $lt = () => () => {
-}, ee = (n, e = {}) => {
-  var E, L, T;
+}, Y = (n, e = {}) => {
+  var E, T, L;
   const {
     i18n: r
   } = e, {
@@ -22111,7 +22111,7 @@ const Qlt = (n, e) => {
     useSuspense: c,
     keyPrefix: d
   } = s, u = n || a || ((E = o == null ? void 0 : o.options) == null ? void 0 : E.defaultNS), p = Xi(u) ? [u] : u || ["translation"], h = O.useMemo(() => p, p);
-  (T = (L = o == null ? void 0 : o.reportNamespaces) == null ? void 0 : L.addUsedNamespaces) == null || T.call(L, h);
+  (L = (T = o == null ? void 0 : o.reportNamespaces) == null ? void 0 : T.addUsedNamespaces) == null || L.call(T, h);
   const f = O.useRef(0), g = O.useCallback((I) => {
     if (!o) return $lt;
     const {
@@ -22496,7 +22496,7 @@ for (const n in ZV) {
   const r = e[1], i = e[2];
   c5[r] || (c5[r] = {}), c5[r][i] = ZV[n].default ?? ZV[n];
 }
-He.use(CWe).use(Plt).init({
+Re.use(CWe).use(Plt).init({
   resources: c5,
   supportedLngs: ["it", "en", "fr", "es", "de"],
   fallbackLng: "en",
@@ -49378,7 +49378,7 @@ var Lb = {}, MWe = { exports: {} }, Ea = {}, IWe = { exports: {} }, EWe = {};
     m = !1, y && (y = !1, b(P), P = -1), g = !0;
     var _ = f;
     try {
-      for (A($), h = r(d); h !== null && (!(h.expirationTime > $) || N && !T()); ) {
+      for (A($), h = r(d); h !== null && (!(h.expirationTime > $) || N && !L()); ) {
         var V = h.callback;
         if (typeof V == "function") {
           h.callback = null, f = h.priorityLevel;
@@ -49397,14 +49397,14 @@ var Lb = {}, MWe = { exports: {} }, Ea = {}, IWe = { exports: {} }, EWe = {};
       h = null, f = _, g = !1;
     }
   }
-  var C = !1, j = null, P = -1, E = 5, L = -1;
-  function T() {
-    return !(n.unstable_now() - L < E);
+  var C = !1, j = null, P = -1, E = 5, T = -1;
+  function L() {
+    return !(n.unstable_now() - T < E);
   }
   function I() {
     if (j !== null) {
       var N = n.unstable_now();
-      L = N;
+      T = N;
       var $ = !0;
       try {
         $ = j(!0, N);
@@ -49499,7 +49499,7 @@ var Lb = {}, MWe = { exports: {} }, Ea = {}, IWe = { exports: {} }, EWe = {};
         Q = 5e3;
     }
     return Q = _ + Q, N = { id: p++, callback: $, priorityLevel: N, startTime: _, expirationTime: Q, sortIndex: -1 }, _ > V ? (N.sortIndex = _, e(u, N), r(d) === null && N === r(u) && (y ? (b(P), P = -1) : y = !0, H(k, _ - V))) : (N.sortIndex = Q, e(d, N), m || g || (m = !0, F(S))), N;
-  }, n.unstable_shouldYield = T, n.unstable_wrapCallback = function(N) {
+  }, n.unstable_shouldYield = L, n.unstable_wrapCallback = function(N) {
     var $ = f;
     return function() {
       var _ = f;
@@ -51648,12 +51648,12 @@ function E$e(n) {
   function m(b, x, A, k) {
     for (var S = null, C = null, j = x, P = x = 0, E = null; j !== null && P < A.length; P++) {
       j.index > P ? (E = j, j = null) : E = j.sibling;
-      var L = f(b, j, A[P], k);
-      if (L === null) {
+      var T = f(b, j, A[P], k);
+      if (T === null) {
         j === null && (j = E);
         break;
       }
-      n && j && L.alternate === null && e(b, j), x = o(L, x, P), C === null ? S = L : C.sibling = L, C = L, j = E;
+      n && j && T.alternate === null && e(b, j), x = o(T, x, P), C === null ? S = T : C.sibling = T, C = T, j = E;
     }
     if (P === A.length) return r(b, j), fn && qh(b, P), S;
     if (j === null) {
@@ -51661,32 +51661,32 @@ function E$e(n) {
       return fn && qh(b, P), S;
     }
     for (j = i(b, j); P < A.length; P++) E = g(j, b, P, A[P], k), E !== null && (n && E.alternate !== null && j.delete(E.key === null ? P : E.key), x = o(E, x, P), C === null ? S = E : C.sibling = E, C = E);
-    return n && j.forEach(function(T) {
-      return e(b, T);
+    return n && j.forEach(function(L) {
+      return e(b, L);
     }), fn && qh(b, P), S;
   }
   function y(b, x, A, k) {
     var S = U0(A);
     if (typeof S != "function") throw Error(je(150));
     if (A = S.call(A), A == null) throw Error(je(151));
-    for (var C = S = null, j = x, P = x = 0, E = null, L = A.next(); j !== null && !L.done; P++, L = A.next()) {
+    for (var C = S = null, j = x, P = x = 0, E = null, T = A.next(); j !== null && !T.done; P++, T = A.next()) {
       j.index > P ? (E = j, j = null) : E = j.sibling;
-      var T = f(b, j, L.value, k);
-      if (T === null) {
+      var L = f(b, j, T.value, k);
+      if (L === null) {
         j === null && (j = E);
         break;
       }
-      n && j && T.alternate === null && e(b, j), x = o(T, x, P), C === null ? S = T : C.sibling = T, C = T, j = E;
+      n && j && L.alternate === null && e(b, j), x = o(L, x, P), C === null ? S = L : C.sibling = L, C = L, j = E;
     }
-    if (L.done) return r(
+    if (T.done) return r(
       b,
       j
     ), fn && qh(b, P), S;
     if (j === null) {
-      for (; !L.done; P++, L = A.next()) L = h(b, L.value, k), L !== null && (x = o(L, x, P), C === null ? S = L : C.sibling = L, C = L);
+      for (; !T.done; P++, T = A.next()) T = h(b, T.value, k), T !== null && (x = o(T, x, P), C === null ? S = T : C.sibling = T, C = T);
       return fn && qh(b, P), S;
     }
-    for (j = i(b, j); !L.done; P++, L = A.next()) L = g(j, b, P, L.value, k), L !== null && (n && L.alternate !== null && j.delete(L.key === null ? P : L.key), x = o(L, x, P), C === null ? S = L : C.sibling = L, C = L);
+    for (j = i(b, j); !T.done; P++, T = A.next()) T = g(j, b, P, T.value, k), T !== null && (n && T.alternate !== null && j.delete(T.key === null ? P : T.key), x = o(T, x, P), C === null ? S = T : C.sibling = T, C = T);
     return n && j.forEach(function(I) {
       return e(b, I);
     }), fn && qh(b, P), S;
@@ -57723,8 +57723,8 @@ function MG({ keyframes: n, velocity: e = 0, power: r = 0.8, timeConstant: i = 3
   const v = h + y, b = s === void 0 ? v : s(v);
   b !== v && (y = b - h);
   const x = (P) => -y * Math.exp(-P / i), A = (P) => b + x(P), k = (P) => {
-    const E = x(P), L = A(P);
-    f.done = Math.abs(E) <= u, f.value = f.done ? b : L;
+    const E = x(P), T = A(P);
+    f.done = Math.abs(E) <= u, f.value = f.done ? b : T;
   };
   let S, C;
   const j = (P) => {
@@ -57906,8 +57906,8 @@ class t$ extends eqe {
     let A = this.currentTime, k = o;
     if (g) {
       const P = Math.min(this.currentTime, p) / h;
-      let E = Math.floor(P), L = P % 1;
-      !L && P >= 1 && (L = 1), L === 1 && E--, E = Math.min(E, g + 1), !!(E % 2) && (m === "reverse" ? (L = 1 - L, y && (L -= y / h)) : m === "mirror" && (k = s)), A = io(0, 1, L) * h;
+      let E = Math.floor(P), T = P % 1;
+      !T && P >= 1 && (T = 1), T === 1 && E--, E = Math.min(E, g + 1), !!(E % 2) && (m === "reverse" ? (T = 1 - T, y && (T -= y / h)) : m === "mirror" && (k = s)), A = io(0, 1, T) * h;
     }
     const S = x ? { done: !1, value: d[0] } : k.next(A);
     c && (S.value = c(S.value));
@@ -58366,25 +58366,25 @@ function nft(n) {
       let P = j || // If we're making this variant active, we want to always make it active
       b === d && x.isActive && !C && k || // If we removed a higher-priority variant (i is in reverse order)
       v > m && k, E = !1;
-      const L = Array.isArray(A) ? A : [A];
-      let T = L.reduce(a(b), {});
-      S === !1 && (T = {});
+      const T = Array.isArray(A) ? A : [A];
+      let L = T.reduce(a(b), {});
+      S === !1 && (L = {});
       const { prevResolvedValues: I = {} } = x, z = {
         ...I,
-        ...T
+        ...L
       }, M = (H) => {
         P = !0, f.has(H) && (E = !0, f.delete(H)), x.needsAnimating[H] = !0;
         const N = n.getValue(H);
         N && (N.liveStyle = !1);
       };
       for (const H in z) {
-        const N = T[H], $ = I[H];
+        const N = L[H], $ = I[H];
         if (g.hasOwnProperty(H))
           continue;
         let _ = !1;
         vG(N) && vG($) ? _ = !I_e(N, $) : _ = N !== $, _ ? N != null ? M(H) : f.add(H) : N !== void 0 && f.has(H) ? M(H) : x.protectedKeys[H] = !0;
       }
-      x.prevProp = A, x.prevResolvedValues = T, x.isActive && (g = { ...g, ...T }), i && n.blockInitialAnimation && (P = !1), P && (!(C && j) || E) && h.push(...L.map((H) => ({
+      x.prevProp = A, x.prevResolvedValues = L, x.isActive && (g = { ...g, ...L }), i && n.blockInitialAnimation && (P = !1), P && (!(C && j) || E) && h.push(...T.map((H) => ({
         animation: H,
         options: { type: b }
       })));
@@ -60912,9 +60912,9 @@ function bmt(n, { defaultTransition: e = {}, ...r } = {}, i, a) {
     b.at !== void 0 && (h = Qse(h, b.at, p, u));
     let x = 0;
     const A = (k, S, C, j = 0, P = 0) => {
-      const E = xmt(k), { delay: L = 0, times: T = Ate(E), type: I = "keyframes", repeat: z, repeatType: M, repeatDelay: R = 0, ...F } = S;
+      const E = xmt(k), { delay: T = 0, times: L = Ate(E), type: I = "keyframes", repeat: z, repeatType: M, repeatDelay: R = 0, ...F } = S;
       let { ease: H = e.ease || "easeOut", duration: N } = S;
-      const $ = typeof L == "function" ? L(j, P) : L, _ = E.length, V = FA(I) ? I : a == null ? void 0 : a[I];
+      const $ = typeof T == "function" ? T(j, P) : T, _ = E.length, V = FA(I) ? I : a == null ? void 0 : a[I];
       if (_ <= 2 && V) {
         let re = 100;
         if (_ === 2 && wmt(E)) {
@@ -60928,22 +60928,22 @@ function bmt(n, { defaultTransition: e = {}, ...r } = {}, i, a) {
       }
       N ?? (N = o);
       const Q = h + $;
-      T.length === 1 && T[0] === 0 && (T[1] = 1);
-      const U = T.length - E.length;
-      if (U > 0 && sqe(T, U), E.length === 1 && E.unshift(null), z) {
+      L.length === 1 && L[0] === 0 && (L[1] = 1);
+      const U = L.length - E.length;
+      if (U > 0 && sqe(L, U), E.length === 1 && E.unshift(null), z) {
         N = hmt(N, z);
-        const re = [...E], fe = [...T];
+        const re = [...E], fe = [...L];
         H = Array.isArray(H) ? [...H] : [H];
         const ae = [...H];
         for (let pe = 0; pe < z; pe++) {
           E.push(...re);
           for (let ce = 0; ce < re.length; ce++)
-            T.push(fe[ce] + (pe + 1)), H.push(ce === 0 ? "linear" : eUe(ae, ce - 1));
+            L.push(fe[ce] + (pe + 1)), H.push(ce === 0 ? "linear" : eUe(ae, ce - 1));
         }
-        mmt(T, z);
+        mmt(L, z);
       }
       const Z = Q + N;
-      gmt(C, E, H, T, Q, Z), x = Math.max($ + N, x), f = Math.max(Z, f);
+      gmt(C, E, H, L, Q, Z), x = Math.max($ + N, x), f = Math.max(Z, f);
     };
     if (gn(y)) {
       const k = Wse(y, c);
@@ -61683,12 +61683,12 @@ const A1t = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty(
   useWillChange: cmt,
   visualElementStore: dg,
   wrap: Mte
-}, Symbol.toStringTag, { value: "Module" })), Zl = () => (He == null ? void 0 : He.language) || void 0, ft = (n, e = 0) => {
+}, Symbol.toStringTag, { value: "Module" })), Zl = () => (Re == null ? void 0 : Re.language) || void 0, ft = (n, e = 0) => {
   const r = parseFloat(n);
   return isNaN(r) ? "—" : r.toLocaleString(Zl(), { minimumFractionDigits: e, maximumFractionDigits: e });
-}, _f = (n) => ft(n) + " W", Gse = (n) => ft(n) + "%", k1t = (n, e, r) => Math.min(Math.max(n, e), r), hf = (n, e) => k1t(Math.abs(n) / Math.max(e, 1) * 100, 0, 100), $A = (n) => n ? He.t(`weather.${n}`, { ns: "common", defaultValue: n }) : "—";
+}, _f = (n) => ft(n) + " W", Gse = (n) => ft(n) + "%", k1t = (n, e, r) => Math.min(Math.max(n, e), r), hf = (n, e) => k1t(Math.abs(n) / Math.max(e, 1) * 100, 0, 100), $A = (n) => n ? Re.t(`weather.${n}`, { ns: "common", defaultValue: n }) : "—";
 function w1t({ dark: n, fv: e, rete: r, soc: i, batP: a, selfConsumption: o }) {
-  const { t: s } = ee("cards"), c = e > 100 && r <= 50, d = r > 100, u = n ? {
+  const { t: s } = Y("cards"), c = e > 100 && r <= 50, d = r > 100, u = n ? {
     sole: { bg: "rgba(245,158,11,.10)", border: "rgba(245,158,11,.2)", titleColor: "#fef3c7", tagColor: "rgba(251,191,36,.6)", glowBg: "#f59e0b" },
     rete: { bg: "rgba(139,92,246,.10)", border: "rgba(139,92,246,.2)", titleColor: "#ede9fe", tagColor: "rgba(167,139,250,.6)", glowBg: "#8b5cf6" },
     batt: { bg: "rgba(16,185,129,.10)", border: "rgba(16,185,129,.2)", titleColor: "#d1fae5", tagColor: "rgba(52,211,153,.6)", glowBg: "#10b981" }
@@ -61780,7 +61780,7 @@ function _k({ dark: n, color: e, label: r, value: i, unit: a, subUnit: o, sub: s
   );
 }
 function S1t({ dark: n, fv: e, rete: r, soc: i, bKwh: a, casa: o, batP: s }) {
-  const { t: c } = ee("cards"), d = O.useRef(null), [u, p] = O.useState(4);
+  const { t: c } = Y("cards"), d = O.useRef(null), [u, p] = O.useState(4);
   O.useEffect(() => {
     const f = d.current;
     if (!f) return;
@@ -62107,7 +62107,7 @@ function s2({ dark: n, icon: e, label: r, value: i, unit: a, badge: o, color: s,
   ] });
 }
 function B1t({ dark: n, fv: e, rete: r, soc: i, casa: a, batP: o, carP: s, fetchHistory: c, connected: d }) {
-  const { t: u } = ee("cards"), p = Tt(), h = !!p.carPower, f = h ? E1t : M1t, g = h ? I1t : P1t, { charts: m, ready: y, fetchErr: v } = O1t(
+  const { t: u } = Y("cards"), p = Tt(), h = !!p.carPower, f = h ? E1t : M1t, g = h ? I1t : P1t, { charts: m, ready: y, fetchErr: v } = O1t(
     [
       p.solarPower,
       p.gridPower,
@@ -62152,17 +62152,17 @@ function B1t({ dark: n, fv: e, rete: r, soc: i, casa: a, batP: o, carP: s, fetch
       }, children: y ? v ? `⚠ ${u("flow.historyUnavailable")}` : `↻ ${u("flow.lastHour")}` : `…${u("flow.loading")}` })
     ] }),
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: ty, alignItems: "stretch" }, children: [
-      /* @__PURE__ */ l.jsx("svg", { width: X2, height: g, style: { flexShrink: 0, overflow: "visible" }, children: L1t(f, E, b, k, S, x, A, a, C, r, P, j).map((L) => /* @__PURE__ */ l.jsx(
+      /* @__PURE__ */ l.jsx("svg", { width: X2, height: g, style: { flexShrink: 0, overflow: "visible" }, children: L1t(f, E, b, k, S, x, A, a, C, r, P, j).map((T) => /* @__PURE__ */ l.jsx(
         z1t,
         {
-          srcY: L.srcY,
-          dstY: L.dstY,
-          xDepth: L.xDepth,
-          color: L.color,
-          active: L.active,
-          dur: j1t(L.watts)
+          srcY: T.srcY,
+          dstY: T.dstY,
+          xDepth: T.xDepth,
+          color: T.color,
+          active: T.active,
+          dur: j1t(T.watts)
         },
-        L.label
+        T.label
       )) }),
       /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, display: "flex", flexDirection: "column", gap: ty }, children: [
         /* @__PURE__ */ l.jsx(
@@ -62286,7 +62286,7 @@ function qk({ dark: n, icon: e, label: r, value: i, color: a, barPct: o, delay: 
   );
 }
 function R1t({ dark: n, prod: e, cons: r, prel: i, ced: a }) {
-  const { t: o } = ee("cards"), s = Math.max(e, r, i, a, 0.01), c = n ? { bg: "rgba(59,130,246,.06)", border: "rgba(59,130,246,.2)" } : { bg: "linear-gradient(160deg,#f5faff,#eaf4ff)", border: "rgba(59,130,246,.2)" };
+  const { t: o } = Y("cards"), s = Math.max(e, r, i, a, 0.01), c = n ? { bg: "rgba(59,130,246,.06)", border: "rgba(59,130,246,.2)" } : { bg: "linear-gradient(160deg,#f5faff,#eaf4ff)", border: "rgba(59,130,246,.2)" };
   return /* @__PURE__ */ l.jsxs("div", { style: {
     background: c.bg,
     border: `1px solid ${c.border}`,
@@ -62336,34 +62336,34 @@ function D1t(n) {
   return new Date(n).toLocaleDateString(Zl(), { weekday: "short", day: "numeric", month: "short" });
 }
 function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
-  const { t: i } = ee("cards"), { fetchWeatherForecast: a, weatherEntityId: o, getAttr: s } = Oe(), c = o || Tt().weatherEntity, [d, u] = O.useState(null), [p, h] = O.useState([]), [f, g] = O.useState(!1), [m, y] = O.useState(!0);
+  const { t: i } = Y("cards"), { fetchWeatherForecast: a, weatherEntityId: o, getAttr: s } = Oe(), c = o || Tt().weatherEntity, [d, u] = O.useState(null), [p, h] = O.useState([]), [f, g] = O.useState(!1), [m, y] = O.useState(!0);
   O.useEffect(() => {
     if (!c) {
       y(!1);
       return;
     }
-    let L = !1;
+    let T = !1;
     return (async () => {
       try {
-        let T = [];
+        let L = [];
         if (c.startsWith("sensor.")) {
           const I = s(c, "forecast");
-          Array.isArray(I) && (T = I);
+          Array.isArray(I) && (L = I);
         } else {
           if (!a) return;
           const I = await a(c, "daily");
-          T = n_e(I, c);
+          L = n_e(I, c);
         }
-        if (!L && T.length > 0) {
-          const I = t_e(T), z = I ? (I.datetime || "").slice(0, 10) : "", M = T.filter((R) => (R.datetime || "").slice(0, 10) > z).slice(0, 4);
+        if (!T && L.length > 0) {
+          const I = t_e(L), z = I ? (I.datetime || "").slice(0, 10) : "", M = L.filter((R) => (R.datetime || "").slice(0, 10) > z).slice(0, 4);
           u(I), h(M);
         }
       } catch {
       } finally {
-        L || y(!1);
+        T || y(!1);
       }
     })(), () => {
-      L = !0;
+      T = !0;
     };
   }, [c, a, s]);
   const v = d ? {
@@ -62429,7 +62429,7 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
             /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: "var(--text-muted)", marginTop: 3 }, children: i("forecast.coeffApplied", { pct: S }) })
           ] })
         ] }),
-        /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8, marginBottom: 14 }, children: E.map(({ label: L, value: T, Icon: I }, z) => /* @__PURE__ */ l.jsxs("div", { style: {
+        /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8, marginBottom: 14 }, children: E.map(({ label: T, value: L, Icon: I }, z) => /* @__PURE__ */ l.jsxs("div", { style: {
           background: n ? "rgba(245,158,11,.08)" : "rgba(245,158,11,.07)",
           border: "1px solid rgba(245,158,11,.18)",
           borderRadius: 10,
@@ -62437,8 +62437,8 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
           textAlign: "center"
         }, children: [
           /* @__PURE__ */ l.jsx("div", { style: { display: "flex", justifyContent: "center", color: n ? "#fbbf24" : "#d97706" }, children: /* @__PURE__ */ l.jsx(I, { size: 16, strokeWidth: 2 }) }),
-          /* @__PURE__ */ l.jsx("div", { style: { fontSize: 16, fontWeight: 800, color: n ? "#fef3c7" : "#78350f", marginTop: 6 }, children: T }),
-          /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: n ? "rgba(251,191,36,.7)" : "#b45309", marginTop: 3, textTransform: "uppercase", letterSpacing: ".6px" }, children: L })
+          /* @__PURE__ */ l.jsx("div", { style: { fontSize: 16, fontWeight: 800, color: n ? "#fef3c7" : "#78350f", marginTop: 6 }, children: L }),
+          /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: n ? "rgba(251,191,36,.7)" : "#b45309", marginTop: 3, textTransform: "uppercase", letterSpacing: ".6px" }, children: T })
         ] }, z)) }),
         /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", justifyContent: "space-between", fontSize: 11, color: n ? "rgba(251,191,36,.7)" : "#b45309", marginBottom: 5 }, children: [
           /* @__PURE__ */ l.jsx("span", { children: i("forecast.efficiency") }),
@@ -62460,7 +62460,7 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
           /* @__PURE__ */ l.jsxs(
             "button",
             {
-              onClick: () => g((L) => !L),
+              onClick: () => g((T) => !T),
               style: {
                 display: "flex",
                 alignItems: "center",
@@ -62485,14 +62485,14 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
               exit: { opacity: 0, height: 0 },
               transition: { duration: 0.22 },
               style: { overflow: "hidden", marginTop: 10, display: "flex", flexDirection: "column", gap: 6 },
-              children: p.map((L, T) => {
-                const I = L.condition || "cloudy", z = L.uv_index ?? 0, M = L.temperature ?? L.templow ?? 20, R = L.precipitation ?? L.native_precipitation ?? 0, F = L.precipitation_probability ?? null, H = L.humidity ?? 50, N = YVe(L), $ = JVe(I, z, M, R, H), _ = e_e($, N, e, r), V = Zse[I] || "☁️", Q = $ >= 0.8 ? n ? "#34d399" : "#15803d" : $ >= 0.5 ? n ? "#fbbf24" : "#b45309" : n ? "#f87171" : "#b91c1c", U = R > 0 ? ft(R, 1) + "mm" : F != null ? Math.round(F) + "%" : "0mm";
+              children: p.map((T, L) => {
+                const I = T.condition || "cloudy", z = T.uv_index ?? 0, M = T.temperature ?? T.templow ?? 20, R = T.precipitation ?? T.native_precipitation ?? 0, F = T.precipitation_probability ?? null, H = T.humidity ?? 50, N = YVe(T), $ = JVe(I, z, M, R, H), _ = e_e($, N, e, r), V = Zse[I] || "☁️", Q = $ >= 0.8 ? n ? "#34d399" : "#15803d" : $ >= 0.5 ? n ? "#fbbf24" : "#b45309" : n ? "#f87171" : "#b91c1c", U = R > 0 ? ft(R, 1) + "mm" : F != null ? Math.round(F) + "%" : "0mm";
                 return /* @__PURE__ */ l.jsxs(
                   se.div,
                   {
                     initial: { opacity: 0, y: 4 },
                     animate: { opacity: 1, y: 0 },
-                    transition: { delay: T * 0.05 },
+                    transition: { delay: L * 0.05 },
                     style: {
                       padding: "8px 10px",
                       borderRadius: 10,
@@ -62504,7 +62504,7 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
                     children: [
                       /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 6 }, children: [
                         /* @__PURE__ */ l.jsx("span", { style: { fontSize: 15, lineHeight: 1, flexShrink: 0 }, children: V }),
-                        /* @__PURE__ */ l.jsx("span", { style: { fontWeight: 700, textTransform: "capitalize", fontSize: 11, color: n ? "rgba(255,255,255,.85)" : "#78350f" }, children: D1t(L.datetime) }),
+                        /* @__PURE__ */ l.jsx("span", { style: { fontWeight: 700, textTransform: "capitalize", fontSize: 11, color: n ? "rgba(255,255,255,.85)" : "#78350f" }, children: D1t(T.datetime) }),
                         /* @__PURE__ */ l.jsx("span", { style: { flex: 1 } }),
                         /* @__PURE__ */ l.jsxs("span", { style: { fontWeight: 800, fontSize: 13, color: Q, whiteSpace: "nowrap" }, children: [
                           ft(_, 1),
@@ -62528,7 +62528,7 @@ function H1t({ dark: n, piccoKwp: e = 9, inverterKw: r = 6 }) {
                       ] })
                     ]
                   },
-                  L.datetime
+                  T.datetime
                 );
               })
             }
@@ -62962,7 +62962,7 @@ function G1t({ dark: n, size: e = 28 }) {
   ] });
 }
 function Z1t({ dark: n, data: e, onClose: r }) {
-  const { t: i, i18n: a } = ee("cards"), o = Array.isArray(e) ? e.slice(0, 7) : [], s = o.flatMap((u) => [u.temperature, u.templow].filter((p) => p != null)), c = s.length ? Math.min(...s) : 0, d = s.length ? Math.max(...s) : 1;
+  const { t: i, i18n: a } = Y("cards"), o = Array.isArray(e) ? e.slice(0, 7) : [], s = o.flatMap((u) => [u.temperature, u.templow].filter((p) => p != null)), c = s.length ? Math.min(...s) : 0, d = s.length ? Math.max(...s) : 1;
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
       se.div,
@@ -63071,7 +63071,7 @@ function Z1t({ dark: n, data: e, onClose: r }) {
   ] });
 }
 function K1t({ dark: n, ico: e, cond: r, tmax: i, uv: a, piog: o, ore: s, wind: c, stima: d, fascia: u, coeff: p, weatherEntityId: h, fetchWeatherForecast: f }) {
-  const { t: g, i18n: m } = ee("cards"), [y, v] = O.useState(!1), [b, x] = O.useState(null), [A, k] = O.useState(!1), S = async () => {
+  const { t: g, i18n: m } = Y("cards"), [y, v] = O.useState(!1), [b, x] = O.useState(null), [A, k] = O.useState(!1), S = async () => {
     var I;
     if (v(!0), !b && !(!f || !h)) {
       k(!0);
@@ -63088,7 +63088,7 @@ function K1t({ dark: n, ico: e, cond: r, tmax: i, uv: a, piog: o, ore: s, wind: 
         k(!1);
       }
     }
-  }, C = dUe[r] ?? X1t, j = n ? C.dark : C.light, P = Jse[u] ?? Jse.bassa, E = Math.round((p ?? 0) * 100), L = $A(r), T = (/* @__PURE__ */ new Date()).toLocaleDateString(m.language, {
+  }, C = dUe[r] ?? X1t, j = n ? C.dark : C.light, P = Jse[u] ?? Jse.bassa, E = Math.round((p ?? 0) * 100), T = $A(r), L = (/* @__PURE__ */ new Date()).toLocaleDateString(m.language, {
     weekday: "long",
     day: "numeric",
     month: "long"
@@ -63140,7 +63140,7 @@ function K1t({ dark: n, ico: e, cond: r, tmax: i, uv: a, piog: o, ore: s, wind: 
               color: j.sub,
               opacity: 0.7,
               textTransform: "capitalize"
-            }, children: T })
+            }, children: L })
           ] }),
           /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "flex-end", gap: 16, marginBottom: 20 }, children: [
             /* @__PURE__ */ l.jsx(
@@ -63193,7 +63193,7 @@ function K1t({ dark: n, ico: e, cond: r, tmax: i, uv: a, piog: o, ore: s, wind: 
                       fontWeight: 700,
                       color: j.text,
                       marginTop: 2
-                    }, children: L }),
+                    }, children: T }),
                     /* @__PURE__ */ l.jsx("div", { style: {
                       fontSize: 11,
                       color: j.sub,
@@ -63569,7 +63569,7 @@ function Gk({ icon: n, label: e, value: r, t: i }) {
 }
 function eyt({ day: n, index: e, t: r, dark: i, onClick: a, globalMin: o, globalMax: s }) {
   var C, j;
-  const { t: c, i18n: d } = ee("cards"), u = new Date(n.datetime), p = e === 0 ? c("weather-forecast.today") : u.toLocaleDateString(d.language, { weekday: "short" }), h = n.temperature != null ? Math.round(n.temperature) : null, f = n.templow != null ? Math.round(n.templow) : null, g = n.precipitation != null ? `${n.precipitation.toFixed(1)}mm` : null, m = n.precipitation_probability != null ? `${Math.round(n.precipitation_probability)}%` : null, y = g ?? m ?? "—", v = n.precipitation > 0 || n.precipitation_probability > 20, b = e === 0, x = s > o ? s - o : 1, A = ((f ?? o) - o) / x * 100, k = Math.max(((h ?? f ?? o) - (f ?? o)) / x * 100, 8), S = (C = n.condition) != null && C.includes("rain") || (j = n.condition) != null && j.includes("thunder") ? "linear-gradient(180deg,#60a5fa,#3b82f6)" : n.condition === "sunny" || n.condition === "partlycloudy" ? "linear-gradient(180deg,#fbbf24,#f59e0b)" : "linear-gradient(180deg,#94a3b8,#64748b)";
+  const { t: c, i18n: d } = Y("cards"), u = new Date(n.datetime), p = e === 0 ? c("weather-forecast.today") : u.toLocaleDateString(d.language, { weekday: "short" }), h = n.temperature != null ? Math.round(n.temperature) : null, f = n.templow != null ? Math.round(n.templow) : null, g = n.precipitation != null ? `${n.precipitation.toFixed(1)}mm` : null, m = n.precipitation_probability != null ? `${Math.round(n.precipitation_probability)}%` : null, y = g ?? m ?? "—", v = n.precipitation > 0 || n.precipitation_probability > 20, b = e === 0, x = s > o ? s - o : 1, A = ((f ?? o) - o) / x * 100, k = Math.max(((h ?? f ?? o) - (f ?? o)) / x * 100, 8), S = (C = n.condition) != null && C.includes("rain") || (j = n.condition) != null && j.includes("thunder") ? "linear-gradient(180deg,#60a5fa,#3b82f6)" : n.condition === "sunny" || n.condition === "partlycloudy" ? "linear-gradient(180deg,#fbbf24,#f59e0b)" : "linear-gradient(180deg,#94a3b8,#64748b)";
   return /* @__PURE__ */ l.jsxs(
     se.button,
     {
@@ -63610,7 +63610,7 @@ function eyt({ day: n, index: e, t: r, dark: i, onClick: a, globalMin: o, global
 }
 function tyt({ h: n, dark: e, accent: r, isNow: i, dayMin: a, dayMax: o }) {
   var b, x;
-  const { i18n: s } = ee("cards"), d = new Date(n.datetime).toLocaleTimeString(s.language, { hour: "2-digit", minute: "2-digit" }), u = n.temperature != null ? Math.round(n.temperature) : null, p = n.precipitation != null ? `${n.precipitation.toFixed(1)}mm` : n.precipitation_probability != null ? `${Math.round(n.precipitation_probability)}%` : "—", h = n.precipitation > 0 || n.precipitation_probability > 20, f = n.wind_speed != null ? `${Math.round(n.wind_speed)}km/h` : "—", g = pUe(n.wind_bearing), m = o > a ? o - a : 1, y = u != null ? Math.max(0, Math.min(100, (u - a) / m * 100)) : 0, v = (b = n.condition) != null && b.includes("rain") || (x = n.condition) != null && x.includes("thunder") ? "linear-gradient(90deg,#3b82f6,#60a5fa)" : n.condition === "sunny" || n.condition === "partlycloudy" ? "linear-gradient(90deg,#f59e0b,#fbbf24)" : "linear-gradient(90deg,#64748b,#94a3b8)";
+  const { i18n: s } = Y("cards"), d = new Date(n.datetime).toLocaleTimeString(s.language, { hour: "2-digit", minute: "2-digit" }), u = n.temperature != null ? Math.round(n.temperature) : null, p = n.precipitation != null ? `${n.precipitation.toFixed(1)}mm` : n.precipitation_probability != null ? `${Math.round(n.precipitation_probability)}%` : "—", h = n.precipitation > 0 || n.precipitation_probability > 20, f = n.wind_speed != null ? `${Math.round(n.wind_speed)}km/h` : "—", g = pUe(n.wind_bearing), m = o > a ? o - a : 1, y = u != null ? Math.max(0, Math.min(100, (u - a) / m * 100)) : 0, v = (b = n.condition) != null && b.includes("rain") || (x = n.condition) != null && x.includes("thunder") ? "linear-gradient(90deg,#3b82f6,#60a5fa)" : n.condition === "sunny" || n.condition === "partlycloudy" ? "linear-gradient(90deg,#f59e0b,#fbbf24)" : "linear-gradient(90deg,#64748b,#94a3b8)";
   return /* @__PURE__ */ l.jsxs(
     se.div,
     {
@@ -63646,7 +63646,7 @@ function tyt({ h: n, dark: e, accent: r, isNow: i, dayMin: a, dayMax: o }) {
   );
 }
 function nyt({ day: n, hourly: e, loading: r, dark: i, onClose: a }) {
-  const { t: o, i18n: s } = ee("cards"), c = Lte[n.condition] ?? uUe, d = i ? c.dark : c.light, u = new Date(n.datetime), p = hUe(u, /* @__PURE__ */ new Date()), h = p ? o("weather-forecast.today") : u.toLocaleDateString(s.language, { weekday: "long", day: "numeric", month: "long" }), f = n.temperature != null ? Math.round(n.temperature) : null, g = n.templow != null ? Math.round(n.templow) : null, m = $A(n.condition), y = (/* @__PURE__ */ new Date()).getHours();
+  const { t: o, i18n: s } = Y("cards"), c = Lte[n.condition] ?? uUe, d = i ? c.dark : c.light, u = new Date(n.datetime), p = hUe(u, /* @__PURE__ */ new Date()), h = p ? o("weather-forecast.today") : u.toLocaleDateString(s.language, { weekday: "long", day: "numeric", month: "long" }), f = n.temperature != null ? Math.round(n.temperature) : null, g = n.templow != null ? Math.round(n.templow) : null, m = $A(n.condition), y = (/* @__PURE__ */ new Date()).getHours();
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
       se.div,
@@ -63751,7 +63751,7 @@ function nyt({ day: n, hourly: e, loading: r, dark: i, onClose: a }) {
   ] });
 }
 function ryt() {
-  const { t: n, i18n: e } = ee("cards"), { dark: r, weatherEntityId: i, getAttr: a, getState: o, fetchWeatherForecast: s } = Oe(), [c, d] = Pt("weather-forecast", { cityName: "", forecastCollapsed: !1 }), u = c.forecastCollapsed ?? !1, p = () => d((F) => ({ ...F, forecastCollapsed: !F.forecastCollapsed })), [h, f] = O.useState([]), [g, m] = O.useState(null), [y, v] = O.useState(null), [b, x] = O.useState(!1);
+  const { t: n, i18n: e } = Y("cards"), { dark: r, weatherEntityId: i, getAttr: a, getState: o, fetchWeatherForecast: s } = Oe(), [c, d] = Pt("weather-forecast", { cityName: "", forecastCollapsed: !1 }), u = c.forecastCollapsed ?? !1, p = () => d((F) => ({ ...F, forecastCollapsed: !F.forecastCollapsed })), [h, f] = O.useState([]), [g, m] = O.useState(null), [y, v] = O.useState(null), [b, x] = O.useState(!1);
   O.useEffect(() => {
     if (!s || !i) return;
     let F = !1;
@@ -63793,7 +63793,7 @@ function ryt() {
         x(!1);
       }
     }
-  }, k = g && y ? y.filter((F) => hUe(F.datetime, g.datetime)) : [], S = o(i) || "", C = a(i, "temperature"), j = a(i, "humidity"), P = a(i, "pressure"), E = a(i, "wind_speed"), L = a(i, "wind_bearing"), T = c.cityName || a(i, "friendly_name") || n("weather-forecast.defaultCityName"), I = $A(S), z = Lte[S] ?? uUe, M = r ? z.dark : z.light, R = (/* @__PURE__ */ new Date()).toLocaleDateString(e.language, { weekday: "long", day: "numeric", month: "long" });
+  }, k = g && y ? y.filter((F) => hUe(F.datetime, g.datetime)) : [], S = o(i) || "", C = a(i, "temperature"), j = a(i, "humidity"), P = a(i, "pressure"), E = a(i, "wind_speed"), T = a(i, "wind_bearing"), L = c.cityName || a(i, "friendly_name") || n("weather-forecast.defaultCityName"), I = $A(S), z = Lte[S] ?? uUe, M = r ? z.dark : z.light, R = (/* @__PURE__ */ new Date()).toLocaleDateString(e.language, { weekday: "long", day: "numeric", month: "long" });
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs(
       se.div,
@@ -63813,7 +63813,7 @@ function ryt() {
                   animate: { opacity: 1, y: 0 },
                   transition: { duration: 0.4, delay: 0.05 },
                   style: { fontSize: 26, fontWeight: 900, letterSpacing: "-0.8px", color: M.text, lineHeight: 1 },
-                  children: T
+                  children: L
                 }
               ),
               /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 8, marginTop: 5 }, children: [
@@ -63845,7 +63845,7 @@ function ryt() {
               /* @__PURE__ */ l.jsx(Gk, { t: M, icon: bl, label: n("weather-forecast.humidity"), value: j != null ? `${Math.round(j)}%` : "—" }),
               /* @__PURE__ */ l.jsx(Gk, { t: M, icon: xl, label: n("weather-forecast.pressure"), value: P != null ? `${Math.round(P)}` : "—" }),
               /* @__PURE__ */ l.jsx(Gk, { t: M, icon: id, label: n("weather-forecast.wind"), value: E != null ? `${Math.round(E)}k/h` : "—" }),
-              /* @__PURE__ */ l.jsx(Gk, { t: M, icon: zv, label: n("weather-forecast.windDirection"), value: pUe(L) })
+              /* @__PURE__ */ l.jsx(Gk, { t: M, icon: zv, label: n("weather-forecast.windDirection"), value: pUe(T) })
             ] })
           ] }),
           /* @__PURE__ */ l.jsxs("div", { style: { background: r ? "rgba(0,0,0,.25)" : "rgba(255,255,255,.45)", backdropFilter: "blur(8px)", borderTop: `1px solid ${M.glow}`, position: "relative" }, children: [
@@ -64210,7 +64210,7 @@ function Pi({
   haStates: s,
   dark: c
 }) {
-  const { t: d } = ee("common"), [u, p] = O.useState(""), [h, f] = O.useState(""), [g, m] = O.useState(o || "all"), y = O.useRef(null), v = O.useRef(null), b = O.useCallback((C) => {
+  const { t: d } = Y("common"), [u, p] = O.useState(""), [h, f] = O.useState(""), [g, m] = O.useState(o || "all"), y = O.useRef(null), v = O.useRef(null), b = O.useCallback((C) => {
     p(C), clearTimeout(v.current), v.current = setTimeout(() => f(C), 150);
   }, []);
   O.useEffect(() => {
@@ -64231,25 +64231,25 @@ function Pi({
   }, [n, e]);
   const x = ["light", "switch"], { sortedIds: A, domains: k } = O.useMemo(() => {
     if (!s) return { sortedIds: [], domains: [] };
-    const C = Object.keys(s), j = new Set(C.map((L) => L.split(".")[0])), P = [o, ...x].filter(
-      (L, T, I) => L && j.has(L) && I.indexOf(L) === T
-    ), E = [...j].filter((L) => !P.includes(L)).sort((L, T) => L.localeCompare(T));
+    const C = Object.keys(s), j = new Set(C.map((T) => T.split(".")[0])), P = [o, ...x].filter(
+      (T, L, I) => T && j.has(T) && I.indexOf(T) === L
+    ), E = [...j].filter((T) => !P.includes(T)).sort((T, L) => T.localeCompare(L));
     return { sortedIds: C, domains: [...P, ...E] };
   }, [s, o]), S = O.useMemo(() => {
     const j = h.toLowerCase().trim().split(/\s+/).filter(Boolean);
     return A.filter((P) => {
-      var T, I;
+      var L, I;
       if (g !== "all" && !P.startsWith(g + ".")) return !1;
       if (j.length === 0) return !0;
-      const E = (((I = (T = s == null ? void 0 : s[P]) == null ? void 0 : T.attributes) == null ? void 0 : I.friendly_name) || "").toLowerCase(), L = P.toLowerCase() + " " + E;
-      return j.every((z) => L.includes(z));
+      const E = (((I = (L = s == null ? void 0 : s[P]) == null ? void 0 : L.attributes) == null ? void 0 : I.friendly_name) || "").toLowerCase(), T = P.toLowerCase() + " " + E;
+      return j.every((z) => T.includes(z));
     }).sort((P, E) => {
       var M, R, F, H;
       if (P === i) return -1;
       if (E === i) return 1;
-      const L = o && P.startsWith(o + "."), T = o && E.startsWith(o + ".");
-      if (L && !T) return -1;
-      if (!L && T) return 1;
+      const T = o && P.startsWith(o + "."), L = o && E.startsWith(o + ".");
+      if (T && !L) return -1;
+      if (!T && L) return 1;
       const I = ((R = (M = s == null ? void 0 : s[P]) == null ? void 0 : M.attributes) == null ? void 0 : R.friendly_name) || P, z = ((H = (F = s == null ? void 0 : s[E]) == null ? void 0 : F.attributes) == null ? void 0 : H.friendly_name) || E;
       return I.localeCompare(z, "it");
     });
@@ -64366,7 +64366,7 @@ function Pi({
             )
           ] }) }),
           k.length > 1 && (() => {
-            const C = ["all", ...k.filter((L) => ["light", "switch", o].includes(L))], j = k.filter((L) => !C.includes(L)), P = { all: Oa, light: Ca, switch: Wv }, E = { all: "Tutti", light: "Luci", switch: "Interruttori" };
+            const C = ["all", ...k.filter((T) => ["light", "switch", o].includes(T))], j = k.filter((T) => !C.includes(T)), P = { all: Oa, light: Ca, switch: Wv }, E = { all: "Tutti", light: "Luci", switch: "Interruttori" };
             return /* @__PURE__ */ l.jsxs("div", { style: {
               display: "flex",
               gap: 6,
@@ -64377,12 +64377,12 @@ function Pi({
               msOverflowStyle: "none",
               alignItems: "center"
             }, children: [
-              C.map((L) => {
-                const T = P[L], I = g === L;
+              C.map((T) => {
+                const L = P[T], I = g === T;
                 return /* @__PURE__ */ l.jsxs(
                   "button",
                   {
-                    onClick: () => m(L),
+                    onClick: () => m(T),
                     style: {
                       display: "inline-flex",
                       alignItems: "center",
@@ -64399,20 +64399,20 @@ function Pi({
                       transition: "all .1s"
                     },
                     children: [
-                      T && /* @__PURE__ */ l.jsx(T, { size: 13, strokeWidth: 2.2 }),
-                      E[L] ?? L
+                      L && /* @__PURE__ */ l.jsx(L, { size: 13, strokeWidth: 2.2 }),
+                      E[T] ?? T
                     ]
                   },
-                  L
+                  T
                 );
               }),
               j.length > 0 && /* @__PURE__ */ l.jsx("div", { style: { width: 1, height: 18, background: "var(--border-medium)", margin: "0 4px", flexShrink: 0 } }),
-              j.map((L) => {
-                const T = g === L;
+              j.map((T) => {
+                const L = g === T;
                 return /* @__PURE__ */ l.jsx(
                   "button",
                   {
-                    onClick: () => m(L),
+                    onClick: () => m(T),
                     style: {
                       padding: "3px 8px",
                       borderRadius: 5,
@@ -64420,14 +64420,14 @@ function Pi({
                       fontSize: 10,
                       fontWeight: 600,
                       whiteSpace: "nowrap",
-                      background: T ? "var(--amber-light)" : "var(--bg-secondary)",
-                      border: `1px solid ${T ? "var(--amber-border)" : "var(--border-medium)"}`,
-                      color: T ? "var(--amber)" : "var(--text-muted)",
+                      background: L ? "var(--amber-light)" : "var(--bg-secondary)",
+                      border: `1px solid ${L ? "var(--amber-border)" : "var(--border-medium)"}`,
+                      color: L ? "var(--amber)" : "var(--text-muted)",
                       transition: "all .1s"
                     },
-                    children: L
+                    children: T
                   },
-                  L
+                  T
                 );
               })
             ] });
@@ -64501,7 +64501,7 @@ function Pi({
   ) : null;
 }
 function myt({ dark: n, light: e, onRemove: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     alignItems: "center",
@@ -64562,7 +64562,7 @@ function myt({ dark: n, light: e, onRemove: r }) {
   ] });
 }
 function fUe({ dark: n }) {
-  const { t: e } = ee("cards"), { lightsConfig: r, setLightsConfig: i, haStates: a } = Oe(), [o, s] = O.useState(""), [c, d] = O.useState(""), [u, p] = O.useState(null), [h, f] = O.useState(!1), g = () => {
+  const { t: e } = Y("cards"), { lightsConfig: r, setLightsConfig: i, haStates: a } = Oe(), [o, s] = O.useState(""), [c, d] = O.useState(""), [u, p] = O.useState(null), [h, f] = O.useState(!1), g = () => {
     const v = o.trim();
     if (!v) {
       p(e("lights.settings.errRequired"));
@@ -64767,7 +64767,7 @@ function yyt({ on: n, loading: e, onChange: r }) {
   );
 }
 function vyt({ dark: n, light: e, state: r, onToggle: i }) {
-  const [a, o] = O.useState(!1), [s, c] = O.useState(null), { t: d } = ee("layout"), u = r === "on", p = r === null, h = async () => {
+  const [a, o] = O.useState(!1), [s, c] = O.useState(null), { t: d } = Y("layout"), u = r === "on", p = r === null, h = async () => {
     o(!0), c(null);
     try {
       await i(e, u);
@@ -64826,7 +64826,7 @@ function vyt({ dark: n, light: e, state: r, onToggle: i }) {
   );
 }
 function gUe({ dark: n, lightsConfig: e, getState: r, callService: i }) {
-  const { editMode: a } = Oe(), { t: o } = ee("layout"), [s, c] = O.useState(!1), [d, u] = O.useState(!1);
+  const { editMode: a } = Oe(), { t: o } = Y("layout"), [s, c] = O.useState(!1), [d, u] = O.useState(!1);
   O.useEffect(() => {
     s || window.dispatchEvent(new CustomEvent("oikos-lights-panel-closed"));
   }, [s]);
@@ -66575,7 +66575,7 @@ function IUe(n) {
   xle.add(n);
 }
 function KF({ config: n, hass: e, dark: r }) {
-  const { t: i } = ee("cards"), a = O.useRef(null), o = O.useRef(null), s = (n == null ? void 0 : n.type) ?? "", c = (n == null ? void 0 : n.cards) ?? [], { type: d, cards: u, ...p } = n ?? {}, h = s === "vertical-stack" || s === "horizontal-stack", f = s === "grid", g = h || f ? null : SUe(s);
+  const { t: i } = Y("cards"), a = O.useRef(null), o = O.useRef(null), s = (n == null ? void 0 : n.type) ?? "", c = (n == null ? void 0 : n.cards) ?? [], { type: d, cards: u, ...p } = n ?? {}, h = s === "vertical-stack" || s === "horizontal-stack", f = s === "grid", g = h || f ? null : SUe(s);
   if (O.useEffect(() => {
     if (h || f || !g || !a.current) return;
     const m = !!customElements.get(g), y = bs.get(g) ?? "", v = !s.startsWith("custom:"), b = typeof window.loadCardHelpers == "function" && !window.__OIKOS_HELPERS_STUB__, A = m ? Promise.resolve() : v ? b ? (async () => {
@@ -66662,7 +66662,7 @@ function KF({ config: n, hass: e, dark: r }) {
 }
 function EUe({ cardId: n }) {
   var x, A, k;
-  const { t: e } = ee("cards"), r = O.useRef(null), i = O.useRef(null), a = O.useRef(null), o = O.useRef(null), s = O.useRef(null), c = O.useRef(null), d = Pg();
+  const { t: e } = Y("cards"), r = O.useRef(null), i = O.useRef(null), a = O.useRef(null), o = O.useRef(null), s = O.useRef(null), c = O.useRef(null), d = Pg();
   c.current = d;
   const { dark: u } = Oe(), [p] = Pt(n, { type: "", scriptUrl: "", cardConfig: "{}" }), [h, f] = O.useState(null), { type: g, scriptUrl: m, cardConfig: y } = p, v = g === "vertical-stack" || g === "horizontal-stack", b = g === "grid";
   if (O.useEffect(() => {
@@ -66677,7 +66677,7 @@ function EUe({ cardId: n }) {
       return;
     }
     f(null);
-    const C = !!customElements.get(S), j = m || bs.get(S) || "", P = !g.startsWith("custom:"), E = typeof window.loadCardHelpers == "function" && !window.__OIKOS_HELPERS_STUB__, L = () => new Promise((z, M) => {
+    const C = !!customElements.get(S), j = m || bs.get(S) || "", P = !g.startsWith("custom:"), E = typeof window.loadCardHelpers == "function" && !window.__OIKOS_HELPERS_STUB__, T = () => new Promise((z, M) => {
       let R = !1;
       const F = setTimeout(() => {
         R || (R = !0, M(new Error(e("haCard.cardNotFound"))));
@@ -66700,8 +66700,8 @@ function EUe({ cardId: n }) {
         }
       } catch {
       }
-      await L();
-    })() : Promise.reject(new Error(e("haCard.builtinNeedsHa"))) : j ? Mg(j) : L()).then(() => {
+      await T();
+    })() : Promise.reject(new Error(e("haCard.builtinNeedsHa"))) : j ? Mg(j) : T()).then(() => {
       var N, $, _, V;
       if (!r.current) return;
       IUe(S);
@@ -66816,7 +66816,7 @@ function EUe({ cardId: n }) {
       e("haCard.addCardsIn"),
       " ",
       /* @__PURE__ */ l.jsx("code", { children: "cards:" })
-    ] }) : C.map((E, L) => /* @__PURE__ */ l.jsx(KF, { config: E, hass: d, dark: u }, L)) });
+    ] }) : C.map((E, T) => /* @__PURE__ */ l.jsx(KF, { config: E, hass: d, dark: u }, T)) });
   }
   return h ? /* @__PURE__ */ l.jsxs("div", { style: {
     padding: 16,
@@ -76979,10 +76979,10 @@ function Lxt(n, e, r) {
     return P;
   }
   function A(S, C, j) {
-    let P = 1e9, E = -1e9, L = [];
-    function T(M, R, F, H, N) {
+    let P = 1e9, E = -1e9, T = [];
+    function L(M, R, F, H, N) {
       let $ = n.coordsAtPos(M, M == j.to ? -2 : 2), _ = n.coordsAtPos(F, F == j.from ? 2 : -2);
-      !$ || !_ || (P = Math.min($.top, _.top, P), E = Math.max($.bottom, _.bottom, E), N == qt.LTR ? L.push(o && R ? h : $.left, o && H ? f : _.right) : L.push(!o && H ? h : _.left, !o && R ? f : $.right));
+      !$ || !_ || (P = Math.min($.top, _.top, P), E = Math.max($.bottom, _.bottom, E), N == qt.LTR ? T.push(o && R ? h : $.left, o && H ? f : _.right) : T.push(!o && H ? h : _.left, !o && R ? f : $.right));
     }
     let I = S ?? j.from, z = C ?? j.to;
     for (let M of n.visibleRanges)
@@ -76993,12 +76993,12 @@ function Lxt(n, e, r) {
             let $ = N.from + H.from, _ = N.to + H.from;
             if ($ >= F)
               break;
-            _ > R && T(Math.max($, R), S == null && $ <= I, Math.min(_, F), C == null && _ >= z, N.dir);
+            _ > R && L(Math.max($, R), S == null && $ <= I, Math.min(_, F), C == null && _ >= z, N.dir);
           }
           if (R = H.to + 1, R >= F)
             break;
         }
-    return L.length == 0 && T(I, S == null, z, C == null, n.textDirection), { top: P, bottom: E, horizontal: L };
+    return T.length == 0 && L(I, S == null, z, C == null, n.textDirection), { top: P, bottom: E, horizontal: T };
   }
   function k(S, C) {
     let j = c.top + (C ? S.top : S.bottom);
@@ -79587,22 +79587,22 @@ function cne(n) {
 function NAt(n) {
   var e;
   let { buffer: r, nodeSet: i, maxBufferLength: a = jGe, reused: o = [], minRepeatType: s = i.types.length } = n, c = Array.isArray(r) ? new lne(r, r.length) : r, d = i.types, u = 0, p = 0;
-  function h(S, C, j, P, E, L) {
-    let { id: T, start: I, end: z, size: M } = c, R = p, F = u;
+  function h(S, C, j, P, E, T) {
+    let { id: L, start: I, end: z, size: M } = c, R = p, F = u;
     if (M < 0)
       if (c.next(), M == -1) {
-        let V = o[T];
+        let V = o[L];
         j.push(V), P.push(I - S);
         return;
       } else if (M == -3) {
-        u = T;
+        u = L;
         return;
       } else if (M == -4) {
-        p = T;
+        p = L;
         return;
       } else
         throw new RangeError(`Unrecognized record size: ${M}`);
-    let H = d[T], N, $, _ = I - S;
+    let H = d[L], N, $, _ = I - S;
     if (z - I <= a && ($ = v(c.pos - C, E))) {
       let V = new Uint16Array($.size - $.skip), Q = c.pos - $.size, U = V.length;
       for (; c.pos > Q; )
@@ -79611,9 +79611,9 @@ function NAt(n) {
     } else {
       let V = c.pos - M;
       c.next();
-      let Q = [], U = [], Z = T >= s ? T : -1, re = 0, fe = z;
+      let Q = [], U = [], Z = L >= s ? L : -1, re = 0, fe = z;
       for (; c.pos > V; )
-        Z >= 0 && c.id == Z && c.size >= 0 ? (c.end <= fe - a && (m(Q, U, I, re, c.end, fe, Z, R, F), re = Q.length, fe = c.end), c.next()) : L > 2500 ? f(I, V, Q, U) : h(I, V, Q, U, Z, L + 1);
+        Z >= 0 && c.id == Z && c.size >= 0 ? (c.end <= fe - a && (m(Q, U, I, re, c.end, fe, Z, R, F), re = Q.length, fe = c.end), c.next()) : T > 2500 ? f(I, V, Q, U) : h(I, V, Q, U, Z, T + 1);
       if (Z >= 0 && re > 0 && re < Q.length && m(Q, U, I, re, I, fe, Z, R, F), Q.reverse(), U.reverse(), Z > -1 && re > 0) {
         let ae = g(H, F);
         N = dne(H, Q, U, 0, Q.length, 0, z - I, ae, ae);
@@ -79623,19 +79623,19 @@ function NAt(n) {
     j.push(N), P.push(_);
   }
   function f(S, C, j, P) {
-    let E = [], L = 0, T = -1;
+    let E = [], T = 0, L = -1;
     for (; c.pos > C; ) {
       let { id: I, start: z, end: M, size: R } = c;
       if (R > 4)
         c.next();
       else {
-        if (T > -1 && z < T)
+        if (L > -1 && z < L)
           break;
-        T < 0 && (T = M - a), E.push(I, z, M), L++, c.next();
+        L < 0 && (L = M - a), E.push(I, z, M), T++, c.next();
       }
     }
-    if (L) {
-      let I = new Uint16Array(L * 4), z = E[E.length - 2];
+    if (T) {
+      let I = new Uint16Array(T * 4), z = E[E.length - 2];
       for (let M = E.length - 3, R = 0; M >= 0; M -= 3)
         I[R++] = E[M], I[R++] = E[M + 1] - z, I[R++] = E[M + 2] - z, I[R++] = R;
       j.push(new jd(I, E[2] - z, i)), P.push(z - S);
@@ -79643,42 +79643,42 @@ function NAt(n) {
   }
   function g(S, C) {
     return (j, P, E) => {
-      let L = 0, T = j.length - 1, I, z;
-      if (T >= 0 && (I = j[T]) instanceof yn) {
-        if (!T && I.type == S && I.length == E)
+      let T = 0, L = j.length - 1, I, z;
+      if (L >= 0 && (I = j[L]) instanceof yn) {
+        if (!L && I.type == S && I.length == E)
           return I;
-        (z = I.prop(mt.lookAhead)) && (L = P[T] + I.length + z);
+        (z = I.prop(mt.lookAhead)) && (T = P[L] + I.length + z);
       }
-      return y(S, j, P, E, L, C);
+      return y(S, j, P, E, T, C);
     };
   }
-  function m(S, C, j, P, E, L, T, I, z) {
+  function m(S, C, j, P, E, T, L, I, z) {
     let M = [], R = [];
     for (; S.length > P; )
       M.push(S.pop()), R.push(C.pop() + j - E);
-    S.push(y(i.types[T], M, R, L - E, I - L, z)), C.push(E - j);
+    S.push(y(i.types[L], M, R, T - E, I - T, z)), C.push(E - j);
   }
-  function y(S, C, j, P, E, L, T) {
-    if (L) {
-      let I = [mt.contextHash, L];
-      T = T ? [I].concat(T) : [I];
+  function y(S, C, j, P, E, T, L) {
+    if (T) {
+      let I = [mt.contextHash, T];
+      L = L ? [I].concat(L) : [I];
     }
     if (E > 25) {
       let I = [mt.lookAhead, E];
-      T = T ? [I].concat(T) : [I];
+      L = L ? [I].concat(L) : [I];
     }
-    return new yn(S, C, j, P, T);
+    return new yn(S, C, j, P, L);
   }
   function v(S, C) {
-    let j = c.fork(), P = 0, E = 0, L = 0, T = j.end - a, I = { size: 0, start: 0, skip: 0 };
+    let j = c.fork(), P = 0, E = 0, T = 0, L = j.end - a, I = { size: 0, start: 0, skip: 0 };
     e: for (let z = j.pos - S; j.pos > z; ) {
       let M = j.size;
       if (j.id == C && M >= 0) {
-        I.size = P, I.start = E, I.skip = L, L += 4, P += 4, j.next();
+        I.size = P, I.start = E, I.skip = T, T += 4, P += 4, j.next();
         continue;
       }
       let R = j.pos - M;
-      if (M < 0 || R < z || j.start < T)
+      if (M < 0 || R < z || j.start < L)
         break;
       let F = j.id >= s ? 4 : 0, H = j.start;
       for (j.next(); j.pos > R; ) {
@@ -79690,21 +79690,21 @@ function NAt(n) {
         else j.id >= s && (F += 4);
         j.next();
       }
-      E = H, P += M, L += F;
+      E = H, P += M, T += F;
     }
-    return (C < 0 || P == S) && (I.size = P, I.start = E, I.skip = L), I.size > 4 ? I : void 0;
+    return (C < 0 || P == S) && (I.size = P, I.start = E, I.skip = T), I.size > 4 ? I : void 0;
   }
   function b(S, C, j) {
-    let { id: P, start: E, end: L, size: T } = c;
-    if (c.next(), T >= 0 && P < s) {
+    let { id: P, start: E, end: T, size: L } = c;
+    if (c.next(), L >= 0 && P < s) {
       let I = j;
-      if (T > 4) {
-        let z = c.pos - (T - 4);
+      if (L > 4) {
+        let z = c.pos - (L - 4);
         for (; c.pos > z; )
           j = b(S, C, j);
       }
-      C[--j] = I, C[--j] = L - S, C[--j] = E - S, C[--j] = P;
-    } else T == -3 ? u = P : T == -4 && (p = P);
+      C[--j] = I, C[--j] = T - S, C[--j] = E - S, C[--j] = P;
+    } else L == -3 ? u = P : L == -4 && (p = P);
     return j;
   }
   let x = [], A = [];
@@ -85702,7 +85702,7 @@ function aOt(n) {
     basicSetup: k = !0,
     root: S,
     initialState: C
-  } = n, [j, P] = O.useState(), [E, L] = O.useState(), [T, I] = O.useState(), z = O.useState(() => ({
+  } = n, [j, P] = O.useState(), [E, T] = O.useState(), [L, I] = O.useState(), z = O.useState(() => ({
     current: null
   }))[0], M = O.useState(() => ({
     current: null
@@ -85742,7 +85742,7 @@ function aOt(n) {
     basicSetup: k
   }), N = [F, R, ...H];
   return s && typeof s == "function" && N.push(Me.updateListener.of(s)), N = N.concat(c), O.useLayoutEffect(() => {
-    if (j && !T) {
+    if (j && !L) {
       var $ = {
         doc: e,
         selection: r,
@@ -85754,16 +85754,16 @@ function aOt(n) {
           parent: j,
           root: S
         });
-        L(V), o && o(V, _);
+        T(V), o && o(V, _);
       }
     }
     return () => {
-      E && (I(void 0), L(void 0));
+      E && (I(void 0), T(void 0));
     };
-  }, [j, T]), O.useEffect(() => {
+  }, [j, L]), O.useEffect(() => {
     n.container && P(n.container);
   }, [n.container]), O.useEffect(() => () => {
-    E && (E.destroy(), L(void 0)), z.current && (z.current.cancel(), z.current = null);
+    E && (E.destroy(), T(void 0)), z.current && (z.current.cancel(), z.current = null);
   }, [E]), O.useEffect(() => {
     d && E && E.focus();
   }, [d, E]), O.useEffect(() => {
@@ -85788,10 +85788,10 @@ function aOt(n) {
       }
     }
   }, [e, E]), {
-    state: T,
+    state: L,
     setState: I,
     view: E,
-    setView: L,
+    setView: T,
     container: j,
     setContainer: P
   };
@@ -85821,8 +85821,8 @@ var oOt = ["className", "value", "selection", "extensions", "onChange", "onStati
     readOnly: C,
     root: j,
     initialState: P
-  } = n, E = Svt(n, oOt), L = O.useRef(null), {
-    state: T,
+  } = n, E = Svt(n, oOt), T = O.useRef(null), {
+    state: L,
     view: I,
     container: z,
     setContainer: M
@@ -85851,12 +85851,12 @@ var oOt = ["className", "value", "selection", "extensions", "onChange", "onStati
     initialState: P
   });
   O.useImperativeHandle(e, () => ({
-    editor: L.current,
-    state: T,
+    editor: T.current,
+    state: L,
     view: I
-  }), [L, z, T, I]);
+  }), [T, z, L, I]);
   var R = O.useCallback((H) => {
-    L.current = H, M(H);
+    T.current = H, M(H);
   }, [M]);
   if (typeof i != "string")
     throw new Error("value must be typeof string but got " + typeof i);
@@ -89999,7 +89999,7 @@ function cue(n) {
   return { clean: e, kept: r };
 }
 function m3t({ cardType: n, scriptUrl: e, cardConfig: r, hass: i, onChange: a }) {
-  const { t: o } = ee("cards"), s = O.useRef(null), c = O.useRef(null), d = O.useRef(r);
+  const { t: o } = Y("cards"), s = O.useRef(null), c = O.useRef(null), d = O.useRef(r);
   d.current = r;
   const u = O.useRef(!1), p = O.useRef({}), [h, f] = O.useState("loading");
   return O.useEffect(() => {
@@ -90113,7 +90113,7 @@ function m3t({ cardType: n, scriptUrl: e, cardConfig: r, hass: i, onChange: a })
   ] });
 }
 function due({ elementName: n, cardConfig: e, type: r, hass: i, dark: a, scriptUrl: o }) {
-  const { t: s } = ee("cards"), c = O.useRef(null), d = O.useRef(null), u = O.useRef(e), p = O.useRef(r), h = O.useRef(i), f = O.useRef(null);
+  const { t: s } = Y("cards"), c = O.useRef(null), d = O.useRef(null), u = O.useRef(e), p = O.useRef(r), h = O.useRef(i), f = O.useRef(null);
   u.current = e, p.current = r, h.current = i;
   const [g, m] = O.useState(() => !!n && !!customElements.get(n));
   return O.useEffect(() => {
@@ -90218,7 +90218,7 @@ function due({ elementName: n, cardConfig: e, type: r, hass: i, dark: a, scriptU
 }
 function qKe({ cardId: n, dark: e, onClose: r, wide: i }) {
   var M, R, F, H;
-  const { t: a } = ee("cards"), [o, s] = Pt(n, { type: "", scriptUrl: "", cardConfig: "{}" }), c = Pg();
+  const { t: a } = Y("cards"), [o, s] = Pt(n, { type: "", scriptUrl: "", cardConfig: "{}" }), c = Pg();
   O.useEffect(() => {
     jUe(e), MUe(PUe(c == null ? void 0 : c.themes));
   }, [e, (M = c == null ? void 0 : c.themes) == null ? void 0 : M.theme, (R = c == null ? void 0 : c.themes) == null ? void 0 : R.darkMode, (F = c == null ? void 0 : c.themes) == null ? void 0 : F.themes]);
@@ -90275,7 +90275,7 @@ function qKe({ cardId: n, dark: e, onClose: r, wide: i }) {
       N = !0;
     };
   }, [o.type, o.scriptUrl, g]);
-  const [j, P] = O.useState("visual"), E = S ? j : "yaml", L = O.useCallback((N) => {
+  const [j, P] = O.useState("visual"), E = S ? j : "yaml", T = O.useCallback((N) => {
     const { type: $, ..._ } = N, V = $ ? { type: $, ..._ } : _;
     let Q = "";
     try {
@@ -90288,7 +90288,7 @@ function qKe({ cardId: n, dark: e, onClose: r, wide: i }) {
       cardConfig: JSON.stringify(_),
       yamlSource: Q
     }));
-  }, [s]), T = /* @__PURE__ */ l.jsxs("div", { style: {
+  }, [s]), L = /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     gap: 4,
     marginBottom: 12,
@@ -90339,7 +90339,7 @@ function qKe({ cardId: n, dark: e, onClose: r, wide: i }) {
         scriptUrl: o.scriptUrl || bs.get(g) || "",
         cardConfig: m && typeof m == "object" ? m : { type: o.type },
         hass: c,
-        onChange: L
+        onChange: T
       }
     ),
     o.type && /* @__PURE__ */ l.jsxs("div", { style: { ...xw, marginTop: 10 }, children: [
@@ -90452,7 +90452,7 @@ entity: light.salotto`
   ] });
   return /* @__PURE__ */ l.jsx("div", { style: { padding: "4px 0" }, children: i ? /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: 16, alignItems: "flex-start" }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { flex: "1 1 0", minWidth: 0 }, children: [
-      T,
+      L,
       E === "visual" ? I : z
     ] }),
     /* @__PURE__ */ l.jsxs("div", { style: { flex: "1 1 0", minWidth: 0, position: "sticky", top: 0 }, children: [
@@ -90490,7 +90490,7 @@ entity: light.salotto`
       }, children: a(g ? p ? "haCard.previewYamlInvalid" : "haCard.previewElementUnavailable" : "haCard.previewEnterType") })
     ] })
   ] }) : /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-    T,
+    L,
     E === "visual" ? I : z
   ] }) });
 }
@@ -90617,7 +90617,7 @@ function k3t(n, e, r) {
   Qs(n);
 }
 function w3t({ entityId: n, callService: e, dark: r, onClose: i, anchorRef: a }) {
-  const { t: o } = ee("cards"), s = (p) => {
+  const { t: o } = Y("cards"), s = (p) => {
     var h, f;
     (f = (h = e("cover", p, n)) == null ? void 0 : h.catch) == null || f.call(h, (g) => console.error("[RoomCard] cover:", g)), i();
   }, [c, d] = O.useState({ top: 0, left: 0 });
@@ -90768,42 +90768,42 @@ function S3t({ entityId: n, icon: e, label: r, getState: i, callService: a, acce
   ] });
 }
 function O3t({ cardId: n }) {
-  var x, A, k, S;
-  const { dark: e, getFloat: r, getState: i, callService: a, fetchHistory: o, connected: s, haStates: c } = Oe(), [d] = Pt(n, y3t), u = O.useId().replace(/:/g, ""), p = d.tempEntity ? r(d.tempEntity) : null, h = d.humidityEntity ? r(d.humidityEntity) : null, f = ((A = (x = c == null ? void 0 : c[d.tempEntity]) == null ? void 0 : x.attributes) == null ? void 0 : A.unit_of_measurement) ?? "°C", g = b3t(d.tempEntity, o, s), m = d.accentColor || "#22c55e";
-  if (!d.roomName && !d.tempEntity && (((k = d.badges) == null ? void 0 : k.length) ?? 0) === 0)
+  var A, k, S, C;
+  const { t: e } = Y("cards"), { dark: r, getFloat: i, getState: a, callService: o, fetchHistory: s, connected: c, haStates: d } = Oe(), [u] = Pt(n, y3t), p = O.useId().replace(/:/g, ""), h = u.tempEntity ? i(u.tempEntity) : null, f = u.humidityEntity ? i(u.humidityEntity) : null, g = ((k = (A = d == null ? void 0 : d[u.tempEntity]) == null ? void 0 : A.attributes) == null ? void 0 : k.unit_of_measurement) ?? "°C", m = b3t(u.tempEntity, s, c), y = u.accentColor || "#22c55e";
+  if (!u.roomName && !u.tempEntity && (((S = u.badges) == null ? void 0 : S.length) ?? 0) === 0)
     return /* @__PURE__ */ l.jsx("div", { style: {
       borderRadius: 24,
       minHeight: 120,
-      background: e ? "rgba(255,255,255,.03)" : "#f8fafc",
-      border: `1px dashed ${e ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
+      background: r ? "rgba(255,255,255,.03)" : "#f8fafc",
+      border: `1px dashed ${r ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       color: "var(--text-muted)",
       fontSize: 11
-    }, children: t("room.configureHint") });
-  const y = e ? "linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.02))" : "linear-gradient(135deg, rgba(0,0,0,.035), rgba(0,0,0,.015))", v = e ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.06)", b = () => {
-    d.tempEntity && Qs(d.tempEntity);
+    }, children: e("room.configureHint") });
+  const v = r ? "linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.02))" : "linear-gradient(135deg, rgba(0,0,0,.035), rgba(0,0,0,.015))", b = r ? "rgba(255,255,255,.08)" : "rgba(0,0,0,.06)", x = () => {
+    u.tempEntity && Qs(u.tempEntity);
   };
   return /* @__PURE__ */ l.jsxs(
     "div",
     {
-      onClick: b,
+      onClick: x,
       style: {
         position: "relative",
         overflow: "hidden",
         borderRadius: 24,
-        background: y,
-        border: `1px solid ${v}`,
+        background: v,
+        border: `1px solid ${b}`,
         backdropFilter: "blur(8px)",
-        boxShadow: e ? "0 6px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.02)" : "0 4px 18px rgba(0,0,0,.06)",
-        cursor: d.tempEntity ? "pointer" : "default",
+        boxShadow: r ? "0 6px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.02)" : "0 4px 18px rgba(0,0,0,.06)",
+        cursor: u.tempEntity ? "pointer" : "default",
         minHeight: 180,
         display: "flex",
         flexDirection: "column"
       },
       children: [
-        g.length > 1 && /* @__PURE__ */ l.jsx("div", { style: { position: "absolute", left: 0, right: 0, top: 36, height: "55%", opacity: 0.75 }, children: /* @__PURE__ */ l.jsx(v3t, { points: g, color: m, uid: u }) }),
+        m.length > 1 && /* @__PURE__ */ l.jsx("div", { style: { position: "absolute", left: 0, right: 0, top: 36, height: "55%", opacity: 0.75 }, children: /* @__PURE__ */ l.jsx(v3t, { points: m, color: y, uid: p }) }),
         /* @__PURE__ */ l.jsxs("div", { style: {
           position: "relative",
           zIndex: 1,
@@ -90815,28 +90815,28 @@ function O3t({ cardId: n }) {
           /* @__PURE__ */ l.jsx("div", { style: {
             fontSize: 15,
             fontWeight: 600,
-            color: e ? "rgba(255,255,255,.9)" : "rgba(0,0,0,.75)",
+            color: r ? "rgba(255,255,255,.9)" : "rgba(0,0,0,.75)",
             letterSpacing: "-.01em"
-          }, children: d.roomName || t("room.defaultName") }),
-          (p != null || h != null) && /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "baseline", gap: 6 }, children: [
-            p != null && /* @__PURE__ */ l.jsxs("span", { style: {
+          }, children: u.roomName || e("room.defaultName") }),
+          (h != null || f != null) && /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "baseline", gap: 6 }, children: [
+            h != null && /* @__PURE__ */ l.jsxs("span", { style: {
               fontSize: 28,
               fontWeight: 600,
               letterSpacing: "-.03em",
-              color: e ? "#fff" : "#0a0f1a",
-              fontVariantNumeric: "tabular-nums"
-            }, children: [
-              uue(p, 0),
-              /* @__PURE__ */ l.jsx("span", { style: { fontSize: 14, fontWeight: 500, opacity: 0.55 }, children: f })
-            ] }),
-            h != null && /* @__PURE__ */ l.jsxs("span", { style: {
-              fontSize: 13,
-              fontWeight: 500,
-              opacity: 0.55,
-              color: e ? "#fff" : "#0a0f1a",
+              color: r ? "#fff" : "#0a0f1a",
               fontVariantNumeric: "tabular-nums"
             }, children: [
               uue(h, 0),
+              /* @__PURE__ */ l.jsx("span", { style: { fontSize: 14, fontWeight: 500, opacity: 0.55 }, children: g })
+            ] }),
+            f != null && /* @__PURE__ */ l.jsxs("span", { style: {
+              fontSize: 13,
+              fontWeight: 500,
+              opacity: 0.55,
+              color: r ? "#fff" : "#0a0f1a",
+              fontVariantNumeric: "tabular-nums"
+            }, children: [
+              uue(f, 0),
               "%"
             ] })
           ] })
@@ -90858,30 +90858,30 @@ function O3t({ cardId: n }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            background: `linear-gradient(135deg, ${m}cc, ${m}80)`,
+            background: `linear-gradient(135deg, ${y}cc, ${y}80)`,
             color: "#0a0f1a",
-            boxShadow: `0 4px 18px ${m}40`,
+            boxShadow: `0 4px 18px ${y}40`,
             flexShrink: 0
-          }, children: /* @__PURE__ */ l.jsx(Ft, { name: d.icon || "home-variant", size: 30 }) }),
-          ((S = d.badges) == null ? void 0 : S.length) > 0 && /* @__PURE__ */ l.jsx("div", { style: {
+          }, children: /* @__PURE__ */ l.jsx(Ft, { name: u.icon || "home-variant", size: 30 }) }),
+          ((C = u.badges) == null ? void 0 : C.length) > 0 && /* @__PURE__ */ l.jsx("div", { style: {
             display: "flex",
             alignItems: "center",
             gap: 8,
             flexWrap: "wrap",
             justifyContent: "flex-end",
             alignSelf: "center"
-          }, children: d.badges.map((C, j) => C.entityId && /* @__PURE__ */ l.jsx(
+          }, children: u.badges.map((j, P) => j.entityId && /* @__PURE__ */ l.jsx(
             S3t,
             {
-              entityId: C.entityId,
-              icon: C.icon,
-              label: C.label,
-              getState: i,
-              callService: a,
-              accentColor: m,
-              dark: e
+              entityId: j.entityId,
+              icon: j.icon,
+              label: j.label,
+              getState: a,
+              callService: o,
+              accentColor: y,
+              dark: r
             },
-            `${C.entityId}-${j}`
+            `${j.entityId}-${P}`
           )) })
         ] })
       ]
@@ -90889,7 +90889,7 @@ function O3t({ cardId: n }) {
   );
 }
 function UKe({ label: n, sublabel: e, hint: r, value: i, icon: a, friendlyName: o, dark: s, onOpen: c }) {
-  const { t: d } = ee("cards"), [u, p] = O.useState(!1), h = !!i;
+  const { t: d } = Y("cards"), [u, p] = O.useState(!1), h = !!i;
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 5 }, children: [
     n && /* @__PURE__ */ l.jsxs("label", { style: { fontSize: 12, fontWeight: 600, color: "var(--text-primary)" }, children: [
       n,
@@ -90967,7 +90967,7 @@ function UKe({ label: n, sublabel: e, hint: r, value: i, icon: a, friendlyName: 
 }
 function ma({ entityKey: n, value: e, onChange: r, dark: i, label: a, autoSave: o }) {
   var v, b;
-  const [s, c] = O.useState(!1), { t: d } = ee("settings"), u = GVe[n] || {}, p = { ...u, label: d(`entityMeta.${n}`, { defaultValue: u.label || "" }) };
+  const [s, c] = O.useState(!1), { t: d } = Y("settings"), u = GVe[n] || {}, p = { ...u, label: d(`entityMeta.${n}`, { defaultValue: u.label || "" }) };
   let h = null, f = i;
   try {
     const x = Oe();
@@ -91283,7 +91283,7 @@ const j3t = [
   { labelKey: "colorGray", shades: ["#94a3b8", "#64748b", "#475569", "#334155", "#1e293b"] }
 ];
 function YKe({ value: n, onChange: e, colors: r = Fne }) {
-  const { t: i } = ee("cards"), [a, o] = O.useState(!1), s = n && !r.some((c) => {
+  const { t: i } = Y("cards"), [a, o] = O.useState(!1), s = n && !r.some((c) => {
     var d;
     return ((d = c.value) == null ? void 0 : d.toLowerCase()) === n.toLowerCase();
   });
@@ -91448,7 +91448,7 @@ function YKe({ value: n, onChange: e, colors: r = Fne }) {
   ] });
 }
 function JKe({ pkg: n, label: e, description: r, children: i }) {
-  const { t: a } = ee("cards"), o = e ?? a("settingsKit.packageHa"), s = n.installed, [c, d] = O.useState(!s), u = O.useRef(s);
+  const { t: a } = Y("cards"), o = e ?? a("settingsKit.packageHa"), s = n.installed, [c, d] = O.useState(!s), u = O.useRef(s);
   return O.useEffect(() => {
     !u.current && s && d(!1), u.current = s;
   }, [s]), /* @__PURE__ */ l.jsxs(Mt, { title: o, collapsible: !0, open: c, onToggle: d, children: [
@@ -91796,7 +91796,7 @@ function M3t({ name: n, selected: e, dark: r, onSelect: i }) {
   );
 }
 function Wd({ value: n, onChange: e, dark: r, size: i = 36 }) {
-  const { t: a } = ee("common"), [o, s] = O.useState(!1), [c, d] = O.useState(""), u = O.useRef(null), p = O.useRef(null), h = O.useRef(null), [f, g] = O.useState(null);
+  const { t: a } = Y("common"), [o, s] = O.useState(!1), [c, d] = O.useState(""), u = O.useRef(null), p = O.useRef(null), h = O.useRef(null), [f, g] = O.useState(null);
   O.useEffect(() => {
     let b = !1;
     return P3t().then((x) => {
@@ -91982,7 +91982,7 @@ const I3t = {
 };
 function E3t({ badge: n, index: e, onUpdate: r, onRemove: i, dark: a, haStates: o }) {
   var f, g;
-  const { t: s } = ee("cards"), [c, d] = O.useState(!1), u = n.entityId || "", p = n.icon || (u ? hd(u, o) : ""), h = u && ((g = (f = o == null ? void 0 : o[u]) == null ? void 0 : f.attributes) == null ? void 0 : g.friendly_name) || null;
+  const { t: s } = Y("cards"), [c, d] = O.useState(!1), u = n.entityId || "", p = n.icon || (u ? hd(u, o) : ""), h = u && ((g = (f = o == null ? void 0 : o[u]) == null ? void 0 : f.attributes) == null ? void 0 : g.friendly_name) || null;
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs("div", { style: {
       display: "flex",
@@ -92097,7 +92097,7 @@ function E3t({ badge: n, index: e, onUpdate: r, onRemove: i, dark: a, haStates: 
   ] });
 }
 function T3t({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r, haStates: i } = Oe(), [a, o] = Pt(n, I3t), s = (h, f) => o((g) => ({ ...g, [h]: f })), c = a.badges ?? [], d = (h, f) => o((g) => ({ ...g, badges: (g.badges ?? []).map((m, y) => y === h ? f : m) })), u = (h) => o((f) => ({ ...f, badges: (f.badges ?? []).filter((g, m) => m !== h) })), p = () => o((h) => ({ ...h, badges: [...h.badges ?? [], { entityId: "", icon: "" }] }));
+  const { t: e } = Y("cards"), { dark: r, haStates: i } = Oe(), [a, o] = Pt(n, I3t), s = (h, f) => o((g) => ({ ...g, [h]: f })), c = a.badges ?? [], d = (h, f) => o((g) => ({ ...g, badges: (g.badges ?? []).map((m, y) => y === h ? f : m) })), u = (h) => o((f) => ({ ...f, badges: (f.badges ?? []).filter((g, m) => m !== h) })), p = () => o((h) => ({ ...h, badges: [...h.badges ?? [], { entityId: "", icon: "" }] }));
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("room.general"), children: [
       /* @__PURE__ */ l.jsx(kt, { label: e("room.roomName"), children: /* @__PURE__ */ l.jsx(
@@ -92217,7 +92217,7 @@ function z3t() {
 }
 const fue = ["solarPower", "gridPower", "batterySoc", "housePower", "batteryPower", "carPower"];
 function B3t() {
-  const { t: n } = ee("cards"), [e, r] = O.useState(() => {
+  const { t: n } = Y("cards"), [e, r] = O.useState(() => {
     const p = Tt();
     return Object.fromEntries(fue.map((h) => [h, p[h] || ""]));
   }), [i, a] = O.useState(() => !!Tt().gridInvert), [o, s] = O.useState(() => !!Tt().batteryInvert), c = (p, h) => {
@@ -92275,21 +92275,21 @@ function R3t() {
   return /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 10 }, children: gue.map((i) => /* @__PURE__ */ l.jsx(ma, { entityKey: i, value: n[i], onChange: (a) => r(i, a), autoSave: !0 }, i)) });
 }
 function D3t() {
-  const [n, e] = O.useState(() => {
-    const o = Tt();
+  const { t: n } = Y("cards"), [e, r] = O.useState(() => {
+    const s = Tt();
     return {
-      weatherEntity: o.weatherEntity || "",
-      fvPiccoKwp: o.fvPiccoKwp || "9",
-      fvInverterKw: o.fvInverterKw || "6"
+      weatherEntity: s.weatherEntity || "",
+      fvPiccoKwp: s.fvPiccoKwp || "9",
+      fvInverterKw: s.fvInverterKw || "6"
     };
-  }), r = (o, s) => e((c) => ({ ...c, [o]: s })), i = () => {
-    S1({ ...Tt(), fvPiccoKwp: n.fvPiccoKwp, fvInverterKw: n.fvInverterKw });
-  }, a = (o, s, c, d) => /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 4 }, children: [
+  }), i = (s, c) => r((d) => ({ ...d, [s]: c })), a = () => {
+    S1({ ...Tt(), fvPiccoKwp: e.fvPiccoKwp, fvInverterKw: e.fvInverterKw });
+  }, o = (s, c, d, u) => /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 4 }, children: [
     /* @__PURE__ */ l.jsxs("label", { style: { fontSize: 11, fontWeight: 600, color: "var(--text-muted)", letterSpacing: ".3px" }, children: [
-      s,
+      c,
       /* @__PURE__ */ l.jsxs("span", { style: { opacity: 0.6, fontWeight: 400 }, children: [
         " · ",
-        c
+        d
       ] })
     ] }),
     /* @__PURE__ */ l.jsx(
@@ -92298,10 +92298,10 @@ function D3t() {
         type: "number",
         min: "0",
         step: "0.1",
-        value: n[o],
-        onChange: (u) => r(o, u.target.value),
-        onBlur: i,
-        placeholder: d,
+        value: e[s],
+        onChange: (p) => i(s, p.target.value),
+        onBlur: a,
+        placeholder: u,
         style: {
           background: "var(--bg-primary)",
           border: "1px solid var(--border-medium)",
@@ -92313,7 +92313,7 @@ function D3t() {
           width: "100%",
           transition: "border-color .15s"
         },
-        onFocus: (u) => u.target.style.borderColor = "var(--amber-border)"
+        onFocus: (p) => p.target.style.borderColor = "var(--amber-border)"
       }
     )
   ] });
@@ -92323,8 +92323,8 @@ function D3t() {
         ma,
         {
           entityKey: "weatherEntity",
-          value: n.weatherEntity,
-          onChange: (o) => r("weatherEntity", o),
+          value: e.weatherEntity,
+          onChange: (s) => i("weatherEntity", s),
           autoSave: !0
         }
       ),
@@ -92332,14 +92332,14 @@ function D3t() {
         "Usa ",
         /* @__PURE__ */ l.jsx("strong", { children: "sensor.*" }),
         " ",
-        t("forecast.orAttribute"),
+        n("forecast.orAttribute"),
         " ",
         /* @__PURE__ */ l.jsx("strong", { children: "weather.*" }),
         " per get_forecasts."
       ] })
     ] }),
-    a("fvPiccoKwp", "Potenza picco impianto FV", "kWp", "9"),
-    a("fvInverterKw", "Potenza max inverter", "kW", "6")
+    o("fvPiccoKwp", "Potenza picco impianto FV", "kWp", "9"),
+    o("fvInverterKw", "Potenza max inverter", "kW", "6")
   ] });
 }
 function oK(n, e) {
@@ -92350,7 +92350,7 @@ function zc(n, e = null) {
   const r = n == null ? void 0 : n.code, i = (n == null ? void 0 : n.message) || (n == null ? void 0 : n.error) || (typeof n == "string" ? n : "Error");
   if (!r) return i;
   const a = `apiErrors.${r}`;
-  return (e || ((c, d) => He.t(c, { ns: "common", ...d })))(a, { ns: "common", defaultValue: "", maxMb: n == null ? void 0 : n.maxMb, path: n == null ? void 0 : n.path }) || i;
+  return (e || ((c, d) => Re.t(c, { ns: "common", ...d })))(a, { ns: "common", defaultValue: "", maxMb: n == null ? void 0 : n.maxMb, path: n == null ? void 0 : n.path }) || i;
 }
 const Aw = /* @__PURE__ */ new Set();
 function H3t(n, e) {
@@ -92387,7 +92387,7 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
     } catch {
     }
     C(R || "?");
-  }, [k]), P = O.useMemo(() => H3t(e, i), [e, i]), E = O.useMemo(() => F3t(P), [P]), L = O.useCallback(async () => {
+  }, [k]), P = O.useMemo(() => H3t(e, i), [e, i]), E = O.useMemo(() => F3t(P), [P]), T = O.useCallback(async () => {
     if (n) {
       s(!0);
       try {
@@ -92407,19 +92407,19 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
           f(_.items || []);
         }
       } catch {
-        x({ type: "err", text: He.t("pkgAddonUnreachable", { ns: "common" }) });
+        x({ type: "err", text: Re.t("pkgAddonUnreachable", { ns: "common" }) });
       } finally {
         s(!1);
       }
     }
   }, [n, r]);
   O.useEffect(() => {
-    L();
-  }, [L]);
-  const T = O.useCallback(async ({ silent: R = !1 } = {}) => {
+    T();
+  }, [T]);
+  const L = O.useCallback(async ({ silent: R = !1 } = {}) => {
     if (n) {
       if (g && g.ok === !1) {
-        R || x({ type: "err", text: He.t("pkgNeedsInclude", { ns: "common" }) });
+        R || x({ type: "err", text: Re.t("pkgNeedsInclude", { ns: "common" }) });
         return;
       }
       R || x(null);
@@ -92434,26 +92434,26 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
         if (!H.ok) throw oK(N, H.status);
         d(!0), p(N.path), j(E), R || x({
           type: "ok",
-          text: He.t("pkgInstalled", { ns: "common", path: N.path })
-        }), L();
+          text: Re.t("pkgInstalled", { ns: "common", path: N.path })
+        }), T();
       } catch (F) {
         R || x({ type: "err", text: zc(F) });
       }
     }
-  }, [n, r, P, L, g]), I = O.useCallback(async ({ skipConfirm: R = !1 } = {}) => {
+  }, [n, r, P, T, g]), I = O.useCallback(async ({ skipConfirm: R = !1 } = {}) => {
     if (!n) return;
     const F = u || (r ? `/config/packages/${r}/${n}.yaml` : `/config/packages/${n}.yaml`);
-    if (!(!R && typeof confirm == "function" && !confirm(He.t("pkgRemoveFileConfirm", { ns: "common", file: F })))) {
+    if (!(!R && typeof confirm == "function" && !confirm(Re.t("pkgRemoveFileConfirm", { ns: "common", file: F })))) {
       x(null);
       try {
         const H = r ? `?subdir=${r}` : "", N = await Le(Te(`/api/package/${n}${H}`), { method: "DELETE" }), $ = await N.json();
         if (!N.ok) throw oK($, N.status);
-        d(!1), x({ type: "ok", text: He.t("pkgRemoved", { ns: "common" }) }), r && L();
+        d(!1), x({ type: "ok", text: Re.t("pkgRemoved", { ns: "common" }) }), r && T();
       } catch (H) {
         x({ type: "err", text: zc(H) });
       }
     }
-  }, [n, r, u, L]), z = c && E && y && N3t(E, y) > 0;
+  }, [n, r, u, T]), z = c && E && y && N3t(E, y) > 0;
   O.useEffect(() => {
     if (!z || o || !n || !E) return;
     const R = `oikos-pkg-auto-${n}${r ? `-${r}` : ""}-${E}`;
@@ -92465,8 +92465,8 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
           detail: {
             ts: Date.now(),
             source: `pkg-update-${n}`,
-            title: He.t("pkgUpdateAvailTitle", { ns: "common" }),
-            body: He.t("pkgUpdateAvailBody", { ns: "common", label: F, from: y, to: E }),
+            title: Re.t("pkgUpdateAvailTitle", { ns: "common" }),
+            body: Re.t("pkgUpdateAvailBody", { ns: "common", label: F, from: y, to: E }),
             icon: "RefreshCw"
           }
         }));
@@ -92490,10 +92490,10 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
             detail: {
               ts: Date.now(),
               source: `pkg-autoupdate-${n}`,
-              title: He.t("pkgUpdatedTitle", { ns: "common" }),
-              body: He.t("pkgUpdatedBody", { ns: "common", name: n, version: E }),
+              title: Re.t("pkgUpdatedTitle", { ns: "common" }),
+              body: Re.t("pkgUpdatedBody", { ns: "common", name: n, version: E }),
               icon: "RefreshCw",
-              actionLabel: He.t("pkgRestartHa", { ns: "common" }),
+              actionLabel: Re.t("pkgRestartHa", { ns: "common" }),
               actionType: "ha_restart"
             }
           }));
@@ -92509,11 +92509,11 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
     x(null);
     try {
       const F = await (await Le(Te("/api/package/enable-include"), { method: "POST" })).json().catch(() => ({}));
-      return F != null && F.ok ? (x({ type: "ok", text: He.t("pkgIncludeAdded", { ns: "common" }) }), L(), !0) : (x({ type: "err", text: He.t((F == null ? void 0 : F.reason) === "uncertain" ? "pkgIncludeUncertain" : "pkgNeedsInclude", { ns: "common" }) }), !1);
+      return F != null && F.ok ? (x({ type: "ok", text: Re.t("pkgIncludeAdded", { ns: "common" }) }), T(), !0) : (x({ type: "err", text: Re.t((F == null ? void 0 : F.reason) === "uncertain" ? "pkgIncludeUncertain" : "pkgNeedsInclude", { ns: "common" }) }), !1);
     } catch {
-      return x({ type: "err", text: He.t("pkgAddonUnreachable", { ns: "common" }) }), !1;
+      return x({ type: "err", text: Re.t("pkgAddonUnreachable", { ns: "common" }) }), !1;
     }
-  }, [L]);
+  }, [T]);
   return {
     checking: o,
     installed: c,
@@ -92525,9 +92525,9 @@ function Nne({ name: n, yaml: e, subdir: r, vars: i, autoUpdate: a = !0 } = {}) 
     installedVersion: y,
     updateAvailable: z,
     restartPending: S,
-    install: T,
+    install: L,
     uninstall: I,
-    refresh: L,
+    refresh: T,
     enableInclude: M
   };
 }
@@ -92862,7 +92862,7 @@ automation:
   "forecastWind"
 ];
 function W3t() {
-  const { t: n } = ee("cards"), { callService: e } = Oe(), [r, i] = O.useState(() => {
+  const { t: n } = Y("cards"), { callService: e } = Oe(), [r, i] = O.useState(() => {
     const d = Tt();
     return Object.fromEntries(Q3t.map((u) => [u, d[u] || ""]));
   }), a = Nne({
@@ -92911,7 +92911,7 @@ function W3t() {
 }
 const $3t = { cityName: "" };
 function V3t() {
-  const { t: n } = ee("cards"), { dark: e } = Oe(), [r, i] = Pt("weather-forecast", $3t), [a, o] = O.useState(() => Tt().weatherEntity || ""), s = {
+  const { t: n } = Y("cards"), { dark: e } = Oe(), [r, i] = Pt("weather-forecast", $3t), [a, o] = O.useState(() => Tt().weatherEntity || ""), s = {
     width: "100%",
     padding: "8px 10px",
     borderRadius: 8,
@@ -93123,8 +93123,8 @@ function Z3t(n, e, r, i, a) {
   return { d: `M ${c} ${d} C ${g} ${m} ${y} ${v} ${u} ${p}`, x1: c, y1: d, x2: u, y2: p, cp1x: g, cp1y: m, cp2x: y, cp2y: v, mode: "bezier" };
 }
 function K3t({ cardId: n } = {}) {
-  var De, qe, Ge, bn;
-  const e = n === "_ss_bg_card", { dark: r, editMode: i, getFloat: a, getAttr: o } = Oe(), { t: s } = ee("cards"), c = O.useCallback((de) => {
+  var He, qe, Ge, bn;
+  const e = n === "_ss_bg_card", { dark: r, editMode: i, getFloat: a, getAttr: o } = Oe(), { t: s } = Y("cards"), c = O.useCallback((de) => {
     if (!de) return 0;
     const Ae = a(de) || 0;
     return ((o == null ? void 0 : o(de, "unit_of_measurement")) || "").trim().toLowerCase() === "w" ? Ae / 1e3 : Ae;
@@ -93132,7 +93132,7 @@ function K3t({ cardId: n } = {}) {
     var Be, at;
     const Ae = (at = (Be = d.nodes) == null ? void 0 : Be[de]) == null ? void 0 : at.entity;
     return Ae || { solar: j.solarPower, inverter: j.solarPower, battery: j.batteryPower, grid: j.gridPower, house: j.housePower, ev: "" }[de] || "";
-  }, [d.nodes, j]), E = tYe(), L = d.plantsSource && d.plantsSource !== "manual" && E.length > 0 ? d.plantsSource : null, T = L ? E.map((de) => ({ name: de.name, kw: de.powerEntity ? c(de.powerEntity) : 0 })) : null, I = T ? T.reduce((de, Ae) => de + Ae.kw, 0) : null, z = I ?? c(P("solar")), M = c(P("battery")) * (d.batteryInvert ? -1 : 1), R = c(P("grid")) * (d.gridInvert ? -1 : 1), F = c(P("house")), H = c(P("ev")), N = d.batterySocEntity || j.batterySoc || "", $ = N && a(N) || 0, _ = (qe = (De = d.nodes) == null ? void 0 : De.inverter) == null ? void 0 : qe.entity, V = _ ? c(_) : Math.max(z, Math.abs(M), Math.abs(R), F, H), Q = {
+  }, [d.nodes, j]), E = tYe(), T = d.plantsSource && d.plantsSource !== "manual" && E.length > 0 ? d.plantsSource : null, L = T ? E.map((de) => ({ name: de.name, kw: de.powerEntity ? c(de.powerEntity) : 0 })) : null, I = L ? L.reduce((de, Ae) => de + Ae.kw, 0) : null, z = I ?? c(P("solar")), M = c(P("battery")) * (d.batteryInvert ? -1 : 1), R = c(P("grid")) * (d.gridInvert ? -1 : 1), F = c(P("house")), H = c(P("ev")), N = d.batterySocEntity || j.batterySoc || "", $ = N && a(N) || 0, _ = (qe = (He = d.nodes) == null ? void 0 : He.inverter) == null ? void 0 : qe.entity, V = _ ? c(_) : Math.max(z, Math.abs(M), Math.abs(R), F, H), Q = {
     "solar-inverter": z > 0.05,
     "inverter-house": F > 0.05,
     "inverter-battery": Math.abs(M) > 0.05,
@@ -93148,7 +93148,7 @@ function K3t({ cardId: n } = {}) {
       primary: z.toFixed(1),
       unit: "kW",
       active: z > 0.05,
-      sub: L === "both" && T && T.length > 1 ? T.map((de) => de.kw.toFixed(1)).join(" · ") + " kW" : void 0
+      sub: T === "both" && L && L.length > 1 ? L.map((de) => de.kw.toFixed(1)).join(" · ") + " kW" : void 0
     },
     inverter: { primary: V.toFixed(1), unit: "kW", active: V > 0.05 },
     battery: N ? { primary: $.toFixed(0), unit: "%", active: Math.abs(M) > 0.05, sub: (M >= 0 ? "+" : "") + M.toFixed(1) + " kW" } : { primary: M.toFixed(1), unit: "kW", active: Math.abs(M) > 0.05 },
@@ -93225,7 +93225,7 @@ function K3t({ cardId: n } = {}) {
         }
       };
     }), k([]), C(null));
-  }, [A, b, u]), Y = O.useCallback(() => {
+  }, [A, b, u]), J = O.useCallback(() => {
     k([]), C(null);
   }, []), K = O.useCallback(() => {
     k((de) => de.slice(0, -1));
@@ -93242,10 +93242,10 @@ function K3t({ cardId: n } = {}) {
   }, [b, y]), O.useEffect(() => {
     if (!y) return;
     const de = (Ae) => {
-      Ae.key === "Enter" ? (Ae.preventDefault(), B()) : Ae.key === "Escape" ? (Ae.preventDefault(), Y()) : Ae.key === "Backspace" && A.length > 0 && (Ae.preventDefault(), K());
+      Ae.key === "Enter" ? (Ae.preventDefault(), B()) : Ae.key === "Escape" ? (Ae.preventDefault(), J()) : Ae.key === "Backspace" && A.length > 0 && (Ae.preventDefault(), K());
     };
     return window.addEventListener("keydown", de), () => window.removeEventListener("keydown", de);
-  }, [y, A.length, B, Y, K]), O.useEffect(() => {
+  }, [y, A.length, B, J, K]), O.useEffect(() => {
     if (!h) return;
     const de = (et, Bt) => {
       var Wt;
@@ -93276,7 +93276,7 @@ function K3t({ cardId: n } = {}) {
       document.removeEventListener("mousemove", Ae), document.removeEventListener("mouseup", at), document.removeEventListener("touchmove", Be), document.removeEventListener("touchend", at);
     };
   }, [h, u]);
-  const { w: W, h: X } = g, ne = Math.max(0.5, Math.min(1, W / 900)), le = Math.round((d.nodeSize ?? 46) * ne), J = Object.fromEntries(
+  const { w: W, h: X } = g, ne = Math.max(0.5, Math.min(1, W / 900)), le = Math.round((d.nodeSize ?? 46) * ne), ee = Object.fromEntries(
     Object.keys(Va.nodes).map((de) => {
       var Ae;
       return [
@@ -93301,14 +93301,14 @@ function K3t({ cardId: n } = {}) {
     return mue[de] ? s(`imageflow.builtinNodeLabels.${de}`) : ((Ae = ge[de]) == null ? void 0 : Ae.label) || de;
   }, he = (de) => {
     var Be;
-    if (Va.nodes[de]) return ((Be = J[de]) == null ? void 0 : Be.enabled) !== !1;
+    if (Va.nodes[de]) return ((Be = ee[de]) == null ? void 0 : Be.enabled) !== !1;
     const Ae = ue.find((at) => at.id === de);
     return (Ae == null ? void 0 : Ae.enabled) !== !1;
   }, me = {
     ...Lx,
     ...Object.fromEntries(ue.map((de) => [de.id, { x: 50, y: 50 }])),
     ...d.positions || {}
-  }, Pe = [...kw, ...ye], Re = (de) => {
+  }, Pe = [...kw, ...ye], De = (de) => {
     if (!de.activeEntity) return !0;
     const Ae = c(de.activeEntity), Be = de.threshold ?? 0.05;
     return de.activeInvert ? Ae < -Be : Math.abs(Ae) > Be;
@@ -93404,7 +93404,7 @@ function K3t({ cardId: n } = {}) {
                 var Rie, Die, Hie, Fie;
                 const Ae = he(de.from), Be = he(de.to), at = (((Die = (Rie = d.flowControls) == null ? void 0 : Rie[de.id]) == null ? void 0 : Die.points) || []).length >= 2;
                 if (!i && (!Ae || !Be) && !at || y && A.length > 0) return null;
-                const et = at || Ae && Be, Bt = Q.hasOwnProperty(de.id), _e = et && (Bt ? Q[de.id] : Re(de)), { d: dt, x1: Qt, y1: Wt, x2: Rt, y2: Gt, cp1x: Zt, cp1y: Zr, cp2x: sn, cp2y: ui, mode: ur } = Z3t(de, me, d.flowControls, W, X), Kr = {
+                const et = at || Ae && Be, Bt = Q.hasOwnProperty(de.id), _e = et && (Bt ? Q[de.id] : De(de)), { d: dt, x1: Qt, y1: Wt, x2: Rt, y2: Gt, cp1x: Zt, cp1y: Zr, cp2x: sn, cp2y: ui, mode: ur } = Z3t(de, me, d.flowControls, W, X), Kr = {
                   "solar-inverter": z,
                   "inverter-house": F,
                   "inverter-battery": Math.abs(M),
@@ -93731,7 +93731,7 @@ function K3t({ cardId: n } = {}) {
             A.length > 0 && /* @__PURE__ */ l.jsx(
               "button",
               {
-                onClick: Y,
+                onClick: J,
                 title: s("imageflow.cancelDraw"),
                 style: {
                   display: "flex",
@@ -93827,7 +93827,7 @@ async function yue(n) {
   }
 }
 function vue({ label: n, icon: e, preview: r, loading: i, onFile: a, dark: o }) {
-  const { t: s } = ee("cards"), [c, d] = O.useState(!1), u = O.useRef(null), p = O.useCallback((h) => {
+  const { t: s } = Y("cards"), [c, d] = O.useState(!1), u = O.useRef(null), p = O.useCallback((h) => {
     h.preventDefault(), d(!1);
     const f = h.dataTransfer.files[0];
     f != null && f.type.startsWith("image/") && a(f);
@@ -93883,7 +93883,7 @@ function vue({ label: n, icon: e, preview: r, loading: i, onFile: a, dark: o }) 
   ] });
 }
 function e8t({ config: n, setConfig: e, onClose: r, dark: i }) {
-  const { t: a } = ee("cards"), [o, s] = O.useState(0), [c, d] = O.useState(() => Mm(n.imageUrl, "day")), [u, p] = O.useState(() => Mm(n.imageUrlNight, "night")), [h, f] = O.useState(!1), [g, m] = O.useState(!1), [y, v] = O.useState(!1), [b, x] = O.useState(n.aspectRatio || "16/9"), [A, k] = O.useState(() => {
+  const { t: a } = Y("cards"), [o, s] = O.useState(0), [c, d] = O.useState(() => Mm(n.imageUrl, "day")), [u, p] = O.useState(() => Mm(n.imageUrlNight, "night")), [h, f] = O.useState(!1), [g, m] = O.useState(!1), [y, v] = O.useState(!1), [b, x] = O.useState(n.aspectRatio || "16/9"), [A, k] = O.useState(() => {
     const I = Va.nodes, z = n.nodes || {};
     return Object.fromEntries(
       Object.keys(I).map((M) => {
@@ -93906,9 +93906,9 @@ function e8t({ config: n, setConfig: e, onClose: r, dark: i }) {
     o === 0 && e((I) => ({ ...I, aspectRatio: b })), o === 1 && e((I) => ({ ...I, nodes: A })), s((I) => I + 1);
   }, P = () => s((I) => I - 1), E = () => {
     e((I) => ({ ...I, nodes: A, aspectRatio: b })), r();
-  }, L = (I, z, M) => {
+  }, T = (I, z, M) => {
     k((R) => ({ ...R, [I]: { ...R[I] || {}, [z]: M } }));
-  }, T = o !== 0 || !!c;
+  }, L = o !== 0 || !!c;
   return /* @__PURE__ */ l.jsx(
     "div",
     {
@@ -93978,7 +93978,7 @@ function e8t({ config: n, setConfig: e, onClose: r, dark: i }) {
                     /* @__PURE__ */ l.jsx("div", { style: { fontSize: 13, fontWeight: 700, color: "var(--text-primary)" }, children: a(`imageflow.wizard.nodes.${I}.label`) }),
                     /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: "var(--text-muted)", marginTop: 1 }, children: a(`imageflow.wizard.nodes.${I}.desc`) })
                   ] }),
-                  /* @__PURE__ */ l.jsx("div", { onClick: () => L(I, "enabled", !M.enabled), style: { width: 40, height: 22, borderRadius: 99, cursor: "pointer", flexShrink: 0, background: M.enabled ? z.color : i ? "rgba(255,255,255,.12)" : "#d1d5db", position: "relative", transition: "background .2s" }, children: /* @__PURE__ */ l.jsx("div", { style: { position: "absolute", top: 3, left: M.enabled ? 21 : 3, width: 16, height: 16, borderRadius: "50%", background: "#fff", transition: "left .2s", boxShadow: "0 1px 3px rgba(0,0,0,.3)" } }) })
+                  /* @__PURE__ */ l.jsx("div", { onClick: () => T(I, "enabled", !M.enabled), style: { width: 40, height: 22, borderRadius: 99, cursor: "pointer", flexShrink: 0, background: M.enabled ? z.color : i ? "rgba(255,255,255,.12)" : "#d1d5db", position: "relative", transition: "background .2s" }, children: /* @__PURE__ */ l.jsx("div", { style: { position: "absolute", top: 3, left: M.enabled ? 21 : 3, width: 16, height: 16, borderRadius: "50%", background: "#fff", transition: "left .2s", boxShadow: "0 1px 3px rgba(0,0,0,.3)" } }) })
                 ] }),
                 M.enabled && /* @__PURE__ */ l.jsxs("div", { style: { marginTop: 9, paddingLeft: 44 }, children: [
                   /* @__PURE__ */ l.jsx(
@@ -93989,7 +93989,7 @@ function e8t({ config: n, setConfig: e, onClose: r, dark: i }) {
                       config: { entity: M.entity || "" },
                       setConfig: (H) => {
                         const N = H({ entity: M.entity || "" });
-                        L(I, "entity", N.entity);
+                        T(I, "entity", N.entity);
                       }
                     }
                   ),
@@ -94025,7 +94025,7 @@ function e8t({ config: n, setConfig: e, onClose: r, dark: i }) {
             " ",
             a("imageflow.wizard.back")
           ] }) }),
-          o < Fq.length - 1 ? /* @__PURE__ */ l.jsxs("button", { onClick: j, disabled: !T, style: { display: "flex", alignItems: "center", gap: 5, background: T ? i ? "#fbbf24" : "#d97706" : i ? "rgba(255,255,255,.08)" : "#e5e7eb", border: "none", borderRadius: 8, padding: "8px 20px", cursor: T ? "pointer" : "not-allowed", fontSize: 13, fontWeight: 700, color: T ? "#fff" : "var(--text-muted)", transition: "background .2s" }, children: [
+          o < Fq.length - 1 ? /* @__PURE__ */ l.jsxs("button", { onClick: j, disabled: !L, style: { display: "flex", alignItems: "center", gap: 5, background: L ? i ? "#fbbf24" : "#d97706" : i ? "rgba(255,255,255,.08)" : "#e5e7eb", border: "none", borderRadius: 8, padding: "8px 20px", cursor: L ? "pointer" : "not-allowed", fontSize: 13, fontWeight: 700, color: L ? "#fff" : "var(--text-muted)", transition: "background .2s" }, children: [
             a("imageflow.wizard.next"),
             " ",
             /* @__PURE__ */ l.jsx(ai, { size: 14 })
@@ -94057,7 +94057,7 @@ const Sw = {
   width: "100%"
 };
 function bue({ label: n, imageType: e, value: r, onChange: i, placeholder: a, accentVar: o, hint: s, inputStyle: c }) {
-  const { t: d } = ee("cards"), u = r === BN, p = u ? nYe(e) : "", h = () => {
+  const { t: d } = Y("cards"), u = r === BN, p = u ? nYe(e) : "", h = () => {
     ev(e, ""), i("");
   };
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 4 }, children: [
@@ -94090,7 +94090,7 @@ function bue({ label: n, imageType: e, value: r, onChange: i, placeholder: a, ac
   ] });
 }
 function t8t() {
-  const { t: n } = ee("cards"), [e, r] = Pt(rYe, Va), [i, a] = O.useState(!1), o = O1(), s = (d, u) => {
+  const { t: n } = Y("cards"), [e, r] = Pt(rYe, Va), [i, a] = O.useState(!1), o = O1(), s = (d, u) => {
     r((p) => {
       const h = JSON.parse(JSON.stringify(p)), f = d.split(".");
       let g = h;
@@ -94438,7 +94438,7 @@ function t8t() {
   ] });
 }
 function n8t({ config: n, setConfig: e }) {
-  const { t: r } = ee("cards"), [i, a] = O.useState(null), [o, s] = O.useState(null), c = n.customNodes || [], d = () => {
+  const { t: r } = Y("cards"), [i, a] = O.useState(null), [o, s] = O.useState(null), c = n.customNodes || [], d = () => {
     a("__new__"), s({ id: `custom-${Date.now()}`, label: "", icon: "help-circle", color: "#a855f7", entity: "", unit: "kW", enabled: !0 });
   }, u = (g) => {
     a(g.id), s({ ...g });
@@ -94498,7 +94498,7 @@ function n8t({ config: n, setConfig: e }) {
   ] });
 }
 function xue({ draft: n, setDraft: e, onSave: r, onCancel: i }) {
-  const { t: a } = ee("cards"), { t: o } = ee("common"), s = (c, d) => e((u) => ({ ...u, [c]: d }));
+  const { t: a } = Y("cards"), { t: o } = Y("common"), s = (c, d) => e((u) => ({ ...u, [c]: d }));
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     flexDirection: "column",
@@ -94571,7 +94571,7 @@ function xue({ draft: n, setDraft: e, onSave: r, onCancel: i }) {
   ] });
 }
 function r8t({ config: n, setConfig: e }) {
-  const { t: r } = ee("cards"), [i, a] = O.useState(null), [o, s] = O.useState(null), c = n.customFlows || [], u = [
+  const { t: r } = Y("cards"), [i, a] = O.useState(null), [o, s] = O.useState(null), c = n.customFlows || [], u = [
     ...Object.keys(Va.nodes).map((y) => ({ id: y, label: r(`imageflow.builtinNodeLabels.${y}`) })),
     ...(n.customNodes || []).map((y) => ({ id: y.id, label: y.label }))
   ], p = () => {
@@ -94644,7 +94644,7 @@ function r8t({ config: n, setConfig: e }) {
   ] });
 }
 function Aue({ draft: n, setDraft: e, onSave: r, onCancel: i, nodeOpts: a }) {
-  const { t: o } = ee("cards"), { t: s } = ee("common"), c = (d, u) => e((p) => ({ ...p, [d]: u }));
+  const { t: o } = Y("cards"), { t: s } = Y("common"), c = (d, u) => e((p) => ({ ...p, [d]: u }));
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     flexDirection: "column",
@@ -94711,7 +94711,7 @@ const i8t = [
   { id: "inverter-ev", defColor: "#22d3ee" }
 ];
 function a8t({ config: n, setConfig: e }) {
-  const { t: r } = ee("cards"), i = n.flowColors || {}, a = (c, d) => e((u) => ({ ...u, flowColors: { ...u.flowColors || {}, [c]: d } })), o = (c) => e((d) => {
+  const { t: r } = Y("cards"), i = n.flowColors || {}, a = (c, d) => e((u) => ({ ...u, flowColors: { ...u.flowColors || {}, [c]: d } })), o = (c) => e((d) => {
     const u = { ...d.flowColors || {} };
     return delete u[c], { ...d, flowColors: u };
   }), s = (c, d) => e((u) => ({ ...u, [c]: d }));
@@ -95351,7 +95351,7 @@ function y8t(n, e) {
     inactiveFill: y = "#334155"
   } = n, v = h ? (P = e == null ? void 0 : e.states) == null ? void 0 : P[h] : void 0, b = v ? parseFloat(v.state) : f, x = isNaN(b) ? f : HN(b, f, g), A = g > f ? (x - f) / (g - f) : 0, k = Math.floor(A * d), C = (c - s) / d, j = [];
   for (let E = 0; E < d; E++) {
-    const L = s + E * C + u / 2, T = s + (E + 1) * C - u / 2, I = o, z = o - p, M = Im(i, a, I, L), R = Im(i, a, I, T), F = Im(i, a, z, T), H = Im(i, a, z, L), N = T - L > 180 ? 1 : 0, $ = [
+    const T = s + E * C + u / 2, L = s + (E + 1) * C - u / 2, I = o, z = o - p, M = Im(i, a, I, T), R = Im(i, a, I, L), F = Im(i, a, z, L), H = Im(i, a, z, T), N = L - T > 180 ? 1 : 0, $ = [
       `M ${M.x} ${M.y}`,
       `A ${I} ${I} 0 ${N} 1 ${R.x} ${R.y}`,
       `L ${F.x} ${F.y}`,
@@ -95613,7 +95613,7 @@ function I8t(n, e, r, i, a, o, s, c) {
   if (n.length < 2) return null;
   const d = n.map((j) => j.rawValue), u = Math.min(...d), h = Math.max(...d) - u || 1, f = n[0].t, m = n[n.length - 1].t - f || 1, y = (j) => e + (j.t - f) / m * i, v = (j) => r + a - (j.rawValue - u) / h * a, b = (c.thresholds ?? []).slice().sort((j, P) => (j.value ?? 0) - (P.value ?? 0)), x = b.length >= 2 ? b.map((j) => j.fill ?? o) : ["rgba(16,185,129,0.2)", "rgba(234,179,8,0.2)", "rgba(249,115,22,0.25)"], A = x.length, k = [];
   for (let j = 0; j < A; j++) {
-    const P = r + a - (j + 1) / A * a, L = r + a - j / A * a - P;
+    const P = r + a - (j + 1) / A * a, T = r + a - j / A * a - P;
     k.push(
       /* @__PURE__ */ l.jsx(
         "rect",
@@ -95621,7 +95621,7 @@ function I8t(n, e, r, i, a, o, s, c) {
           x: e,
           y: P,
           width: i,
-          height: L,
+          height: T,
           fill: x[j],
           opacity: 0.3
         },
@@ -95631,8 +95631,8 @@ function I8t(n, e, r, i, a, o, s, c) {
   }
   let S = `M ${y(n[0])} ${v(n[0])}`;
   for (let j = 1; j < n.length; j++) {
-    const P = n[j - 1], E = n[j], L = (y(P) + y(E)) / 2;
-    S += ` C ${L} ${v(P)}, ${L} ${v(E)}, ${y(E)} ${v(E)}`;
+    const P = n[j - 1], E = n[j], T = (y(P) + y(E)) / 2;
+    S += ` C ${T} ${v(P)}, ${T} ${v(E)}, ${y(E)} ${v(E)}`;
   }
   const C = `${S} L ${y(n[n.length - 1])} ${r + a} L ${y(n[0])} ${r + a} Z`;
   return /* @__PURE__ */ l.jsxs("g", { children: [
@@ -95651,15 +95651,15 @@ function E8t(n, e, r, i, a, o, s, c) {
   const g = n.map((P) => P.rawValue), m = Math.min(...g), v = Math.max(...g) - m || 1, b = (P) => r + a - (P - m) / v * a, x = [], A = [], k = [];
   f.forEach((P, E) => {
     if (P.length === 0) return;
-    const L = e + E / (d - 1) * i, T = P.reduce((I, z) => I + z, 0) / P.length;
-    x.push({ x: L, y: b(T) }), A.push({ x: L, y: b(Math.min(...P)) }), k.push({ x: L, y: b(Math.max(...P)) });
+    const T = e + E / (d - 1) * i, L = P.reduce((I, z) => I + z, 0) / P.length;
+    x.push({ x: T, y: b(L) }), A.push({ x: T, y: b(Math.min(...P)) }), k.push({ x: T, y: b(Math.max(...P)) });
   });
   function S(P) {
     if (P.length < 2) return "";
     let E = `M ${P[0].x} ${P[0].y}`;
-    for (let L = 1; L < P.length; L++) {
-      const T = (P[L - 1].x + P[L].x) / 2;
-      E += ` C ${T} ${P[L - 1].y}, ${T} ${P[L].y}, ${P[L].x} ${P[L].y}`;
+    for (let T = 1; T < P.length; T++) {
+      const L = (P[T - 1].x + P[T].x) / 2;
+      E += ` C ${L} ${P[T - 1].y}, ${L} ${P[T].y}, ${P[T].x} ${P[T].y}`;
     }
     return E;
   }
@@ -95687,13 +95687,13 @@ function T8t(n, e) {
   }
   return n.map((S, C) => {
     const j = (S.rawValue - v) / x, P = C / A * 2 * Math.PI, E = (C + 1) / A * 2 * Math.PI - h;
-    let L, T;
-    f === "sunburst_inward" ? (L = d, T = d - j * (d - u)) : (L = u, T = u + j * (d - u)), f === "sunburst_inward" ? T = Math.max(u, T) : T = Math.max(L + 0.01, T);
-    const I = E - P > Math.PI ? 1 : 0, z = Cw(s, c, L, P), M = Cw(s, c, L, E), R = Cw(s, c, T, E), F = Cw(s, c, T, P), H = [
+    let T, L;
+    f === "sunburst_inward" ? (T = d, L = d - j * (d - u)) : (T = u, L = u + j * (d - u)), f === "sunburst_inward" ? L = Math.max(u, L) : L = Math.max(T + 0.01, L);
+    const I = E - P > Math.PI ? 1 : 0, z = Cw(s, c, T, P), M = Cw(s, c, T, E), R = Cw(s, c, L, E), F = Cw(s, c, L, P), H = [
       `M ${z.x.toFixed(3)} ${z.y.toFixed(3)}`,
-      `A ${L.toFixed(3)} ${L.toFixed(3)} 0 ${I} 1 ${M.x.toFixed(3)} ${M.y.toFixed(3)}`,
+      `A ${T.toFixed(3)} ${T.toFixed(3)} 0 ${I} 1 ${M.x.toFixed(3)} ${M.y.toFixed(3)}`,
       `L ${R.x.toFixed(3)} ${R.y.toFixed(3)}`,
-      `A ${T.toFixed(3)} ${T.toFixed(3)} 0 ${I} 0 ${F.x.toFixed(3)} ${F.y.toFixed(3)}`,
+      `A ${L.toFixed(3)} ${L.toFixed(3)} 0 ${I} 0 ${F.x.toFixed(3)} ${F.y.toFixed(3)}`,
       "Z"
     ].join(" ");
     return /* @__PURE__ */ l.jsx(
@@ -95738,12 +95738,12 @@ function R8t({ widget: n, hass: e }) {
     marginRight: P,
     // Feature 7 — real-time
     realTime: E
-  } = n, L = i + (j ?? 0), T = a + (S ?? 0), I = o - (j ?? 0) - (P ?? 0), z = s - (S ?? 0) - (C ?? 0), M = ((ge = n.rollingWindow) == null ? void 0 : ge.hours) ?? d ?? 24, R = ((we = n.rollingWindow) == null ? void 0 : we.binsPerHour) ?? 1, F = Math.round(M * R), [H, N] = O.useState([]), $ = O.useRef(!0);
+  } = n, T = i + (j ?? 0), L = a + (S ?? 0), I = o - (j ?? 0) - (P ?? 0), z = s - (S ?? 0) - (C ?? 0), M = ((ge = n.rollingWindow) == null ? void 0 : ge.hours) ?? d ?? 24, R = ((we = n.rollingWindow) == null ? void 0 : we.binsPerHour) ?? 1, F = Math.round(M * R), [H, N] = O.useState([]), $ = O.useRef(!0);
   O.useEffect(() => {
     if (!E && ($.current = !0, !(!c || !e)))
       return A8t(e, c, M).then((me) => {
         if ($.current) {
-          const Pe = me.map((Re) => ({ ...Re, rawValue: Re.v }));
+          const Pe = me.map((De) => ({ ...De, rawValue: De.v }));
           N(Pe);
         }
       }), () => {
@@ -95761,8 +95761,8 @@ function R8t({ widget: n, hass: e }) {
   let re;
   if (E) {
     const me = Date.now();
-    re = V.map((Pe, Re) => ({
-      t: me - (V.length - 1 - Re) * 2e3,
+    re = V.map((Pe, De) => ({
+      t: me - (V.length - 1 - De) * 2e3,
       v: Pe,
       rawValue: Pe
     }));
@@ -95775,21 +95775,21 @@ function R8t({ widget: n, hass: e }) {
     rawValue: me.rawValue * y
   })));
   function ae(me, Pe) {
-    return me.length <= Pe ? me : Array.from({ length: Pe }, (Re, Ie) => {
-      const De = Math.round(Ie / (Pe - 1) * (me.length - 1));
-      return me[Math.min(De, me.length - 1)];
+    return me.length <= Pe ? me : Array.from({ length: Pe }, (De, Ie) => {
+      const He = Math.round(Ie / (Pe - 1) * (me.length - 1));
+      return me[Math.min(He, me.length - 1)];
     });
   }
-  const pe = !E && n.rollingWindow && F > 0 ? ae(fe, F) : fe, ce = L8t.has(g) ? z8t : B8t, te = typeof m == "number" && m > 0 ? m : ce, oe = te > 0 ? w8t(pe, te) : pe, ie = oe.map((me) => me.rawValue), ke = v !== void 0 ? v : ie.length ? Math.min(...ie) : 0, B = b !== void 0 ? b : ie.length ? Math.max(...ie) : 1, Y = (me) => x ? Math.log1p(Math.max(0, me)) : me, K = Y(ke), D = Y(B), W = (me) => D > K ? (Y(me) - K) / (D - K) : 0, X = v !== void 0 || b !== void 0 || x;
+  const pe = !E && n.rollingWindow && F > 0 ? ae(fe, F) : fe, ce = L8t.has(g) ? z8t : B8t, te = typeof m == "number" && m > 0 ? m : ce, oe = te > 0 ? w8t(pe, te) : pe, ie = oe.map((me) => me.rawValue), ke = v !== void 0 ? v : ie.length ? Math.min(...ie) : 0, B = b !== void 0 ? b : ie.length ? Math.max(...ie) : 1, J = (me) => x ? Math.log1p(Math.max(0, me)) : me, K = J(ke), D = J(B), W = (me) => D > K ? (J(me) - K) / (D - K) : 0, X = v !== void 0 || b !== void 0 || x;
   X && oe.length > 0 && oe.map((me) => ({ ...me, v: W(me.rawValue) * z + 0 }));
-  const ne = X ? D8t(oe, L, T, I, z, f, W) : k8t(oe, L, T, I, z, f), le = ne && h !== "none" ? `${ne} L ${L + I} ${T + z} L ${L} ${T + z} Z` : "", J = A && oe.length > 0 ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+  const ne = X ? D8t(oe, T, L, I, z, f, W) : k8t(oe, T, L, I, z, f), le = ne && h !== "none" ? `${ne} L ${T + I} ${L + z} L ${T} ${L + z} Z` : "", ee = A && oe.length > 0 ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
       "line",
       {
-        x1: L,
-        y1: T + z * (1 - W(B)),
-        x2: L + I,
-        y2: T + z * (1 - W(B)),
+        x1: T,
+        y1: L + z * (1 - W(B)),
+        x2: T + I,
+        y2: L + z * (1 - W(B)),
         stroke: u,
         strokeWidth: 0.3,
         strokeDasharray: "2,2",
@@ -95799,10 +95799,10 @@ function R8t({ widget: n, hass: e }) {
     /* @__PURE__ */ l.jsx(
       "line",
       {
-        x1: L,
-        y1: T + z * (1 - W(ke)),
-        x2: L + I,
-        y2: T + z * (1 - W(ke)),
+        x1: T,
+        y1: L + z * (1 - W(ke)),
+        x2: T + I,
+        y2: L + z * (1 - W(ke)),
         stroke: u,
         strokeWidth: 0.3,
         strokeDasharray: "2,2",
@@ -95812,10 +95812,10 @@ function R8t({ widget: n, hass: e }) {
   ] }) : null, ue = k ? /* @__PURE__ */ l.jsx(
     "line",
     {
-      x1: L,
-      y1: T + z,
-      x2: L + I,
-      y2: T + z,
+      x1: T,
+      y1: L + z,
+      x2: T + I,
+      y2: L + z,
       stroke: u ?? "#64748b",
       strokeWidth: 0.2,
       opacity: 0.5
@@ -95823,51 +95823,51 @@ function R8t({ widget: n, hass: e }) {
   ) : null, ye = /* @__PURE__ */ l.jsx(
     "line",
     {
-      x1: L,
-      y1: T + z / 2,
-      x2: L + I,
-      y2: T + z / 2,
+      x1: T,
+      y1: L + z / 2,
+      x2: T + I,
+      y2: L + z / 2,
       stroke: u,
       strokeWidth: p,
       strokeOpacity: "0.3"
     }
   );
   return g === "bar" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : S8t(oe, L, T, I, z, u),
-    J,
+    oe.length === 0 ? ye : S8t(oe, T, L, I, z, u),
+    ee,
     ue
   ] }, r) : g === "dots" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : O8t(oe, L, T, I, z, u),
-    J,
+    oe.length === 0 ? ye : O8t(oe, T, L, I, z, u),
+    ee,
     ue
   ] }, r) : g === "equalizer" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : C8t(oe, L, T, I, z, u),
-    J,
+    oe.length === 0 ? ye : C8t(oe, T, L, I, z, u),
+    ee,
     ue
   ] }, r) : g === "graded" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : j8t(oe, L, T, I, z, u, n),
-    J,
+    oe.length === 0 ? ye : j8t(oe, T, L, I, z, u, n),
+    ee,
     ue
   ] }, r) : g === "audio" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : P8t(oe, L, T, I, z, u),
-    J,
+    oe.length === 0 ? ye : P8t(oe, T, L, I, z, u),
+    ee,
     ue
   ] }, r) : g === "barcode" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : M8t(oe, L, T, I, z, u, n),
-    J,
+    oe.length === 0 ? ye : M8t(oe, T, L, I, z, u, n),
+    ee,
     ue
   ] }, r) : g === "radial_barcode" ? /* @__PURE__ */ l.jsx("g", { children: oe.length === 0 ? ye : T8t(oe, n) }, r) : g === "area-graded" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : I8t(oe, L, T, I, z, u, p, n),
-    J,
+    oe.length === 0 ? ye : I8t(oe, T, L, I, z, u, p, n),
+    ee,
     ue
   ] }, r) : g === "line-minmax" ? /* @__PURE__ */ l.jsxs("g", { children: [
-    oe.length === 0 ? ye : E8t(oe, L, T, I, z, u, p),
-    J,
+    oe.length === 0 ? ye : E8t(oe, T, L, I, z, u, p),
+    ee,
     ue
   ] }, r) : /* @__PURE__ */ l.jsxs("g", { children: [
     le && /* @__PURE__ */ l.jsx("path", { d: le, fill: h, stroke: "none" }),
     ne ? /* @__PURE__ */ l.jsx("path", { d: ne, fill: "none", stroke: u, strokeWidth: p, strokeLinejoin: "round", strokeLinecap: "round" }) : ye,
-    J,
+    ee,
     ue
   ] }, r);
 }
@@ -95905,7 +95905,7 @@ function N8t({ widget: n, hass: e }) {
     activeFill: f = "#3b82f6",
     handleFill: g = "#fff",
     handleR: m = 3
-  } = n, y = c ? (F = e == null ? void 0 : e.states) == null ? void 0 : F[c] : void 0, v = y ? parseFloat(y.state) : d, b = isNaN(v) ? d : HN(v, d, u), [x, A] = O.useState(null), k = O.useRef(null), S = O.useRef(!1), C = x !== null ? x : b, j = u > d ? (C - d) / (u - d) : 0, P = i + j * o, E = j * o, L = O.useCallback((H) => {
+  } = n, y = c ? (F = e == null ? void 0 : e.states) == null ? void 0 : F[c] : void 0, v = y ? parseFloat(y.state) : d, b = isNaN(v) ? d : HN(v, d, u), [x, A] = O.useState(null), k = O.useRef(null), S = O.useRef(!1), C = x !== null ? x : b, j = u > d ? (C - d) / (u - d) : 0, P = i + j * o, E = j * o, T = O.useCallback((H) => {
     var Q;
     const N = (Q = k.current) == null ? void 0 : Q.ownerSVGElement;
     if (!N) return C;
@@ -95913,28 +95913,28 @@ function N8t({ widget: n, hass: e }) {
     $.x = H;
     const V = ($.matrixTransform(N.getScreenCTM().inverse()).x - i) / o * (u - d) + d;
     return F8t(HN(V, d, u), p);
-  }, [i, o, d, u, p, C]), T = O.useCallback((H) => {
+  }, [i, o, d, u, p, C]), L = O.useCallback((H) => {
     H.stopPropagation(), S.current = !0;
-    const N = L(H.clientX);
+    const N = T(H.clientX);
     A(N), H.currentTarget.setPointerCapture(H.pointerId);
-  }, [L]), I = O.useCallback((H) => {
+  }, [T]), I = O.useCallback((H) => {
     if (!S.current) return;
-    const N = L(H.clientX);
+    const N = T(H.clientX);
     A(N);
-  }, [L]), z = O.useCallback((H) => {
+  }, [T]), z = O.useCallback((H) => {
     if (!S.current) return;
     S.current = !1;
-    const N = L(H.clientX);
+    const N = T(H.clientX);
     if (A(null), !c || !e) return;
     const $ = c.split(".")[0];
     e.callService($, "set_value", { entity_id: c, value: N });
-  }, [L, c, e]), M = s / 2, R = a + s / 2;
+  }, [T, c, e]), M = s / 2, R = a + s / 2;
   return /* @__PURE__ */ l.jsxs(
     "g",
     {
       ref: k,
       style: { cursor: "ew-resize" },
-      onPointerDown: T,
+      onPointerDown: L,
       onPointerMove: I,
       onPointerUp: z,
       children: [
@@ -95977,7 +95977,7 @@ function $8t(n, e) {
     // inverte direzione di riempimento
   } = n, v = d ? (j = e == null ? void 0 : e.states) == null ? void 0 : j[d] : void 0, b = v ? parseFloat(v.state) : u, x = isNaN(b) ? u : W8t(b, u, p), A = p > u ? (x - u) / (p - u) : 0, k = Math.round(A * o), S = 2 * s + c, C = [];
   for (let P = 0; P < o; P++) {
-    const E = o - 1 - P, L = y ? o - 1 - E < k : E < k, T = o > 1 ? E / (o - 1) : 1, I = L ? nk(h, f, T) : g, z = m === "horizontal" ? i + P * S + s : i + s, M = m === "horizontal" ? a + s : a + P * S + s;
+    const E = o - 1 - P, T = y ? o - 1 - E < k : E < k, L = o > 1 ? E / (o - 1) : 1, I = T ? nk(h, f, L) : g, z = m === "horizontal" ? i + P * S + s : i + s, M = m === "horizontal" ? a + s : a + P * S + s;
     C.push(
       /* @__PURE__ */ l.jsx(
         "circle",
@@ -96087,7 +96087,7 @@ function q8t(n, e) {
           fill: "rgba(148,163,184,0.5)",
           textAnchor: "middle",
           dominantBaseline: "central",
-          children: t("common:ui.image")
+          children: Re.t("ui.image", { ns: "common" })
         }
       )
     ] }, r);
@@ -96109,7 +96109,7 @@ function q8t(n, e) {
   ] }, r);
 }
 function U8t(n, e) {
-  var L;
+  var T;
   const {
     id: r,
     x: i = 0,
@@ -96128,11 +96128,11 @@ function U8t(n, e) {
     valueFontSize: v = 4,
     valueColor: b = "#ffffff",
     opacity: x = 1
-  } = n, A = d ? (L = e == null ? void 0 : e.states) == null ? void 0 : L[d] : void 0, k = A ? parseFloat(A.state) : u, S = isNaN(k) ? u : Math.max(u, Math.min(p, k)), C = p > u ? (S - u) / (p - u) : 0;
+  } = n, A = d ? (T = e == null ? void 0 : e.states) == null ? void 0 : T[d] : void 0, k = A ? parseFloat(A.state) : u, S = isNaN(k) ? u : Math.max(u, Math.min(p, k)), C = p > u ? (S - u) / (p - u) : 0;
   let j = g;
   if (m.length >= 2) {
-    const T = O$(S, m);
-    T && (j = T);
+    const L = O$(S, m);
+    L && (j = L);
   }
   const P = `pr-${r}`, E = h === "horizontal" ? /* @__PURE__ */ l.jsx("rect", { x: i, y: a, width: o * C, height: s }) : /* @__PURE__ */ l.jsx("rect", { x: i, y: a + s * (1 - C), width: o, height: s * C });
   return /* @__PURE__ */ l.jsxs("g", { opacity: x, children: [
@@ -96504,7 +96504,7 @@ const ujt = {
   color: "#94a3b8"
 };
 function $ne({ rangeKey: n, batteries: e, offlineBatteries: r, thresholds: i, onClose: a }) {
-  const { dark: o, openMoreInfo: s } = Oe(), { t: c } = ee("cards");
+  const { dark: o, openMoreInfo: s } = Oe(), { t: c } = Y("cards");
   if (!n) return null;
   const d = n === "offline", u = d ? ujt : zx[n], p = c(d ? "batteries.range.offline" : `batteries.range.${n}`), h = d ? (r ?? []).slice().sort((y, v) => (y.name ?? "").localeCompare(v.name ?? "")) : e.filter((y) => y.range === n).sort((y, v) => (y.pct ?? 999) - (v.pct ?? 999)), f = o ? "#0e111a" : "#ffffff", g = o ? "rgba(255,255,255,.92)" : "#0f172a", m = o ? "rgba(255,255,255,.5)" : "#64748b";
   return an.createPortal(
@@ -96762,7 +96762,7 @@ function Zo({ icon: n, value: e, label: r, color: i = "muted", ariaLabel: a }) {
   );
 }
 function pjt() {
-  const { t: n } = ee("chips"), { fv: e = 0 } = Oe(), r = e > 4e3 ? "amber" : e > 1e3 ? "green" : e > 100 ? "blue" : "muted";
+  const { t: n } = Y("chips"), { fv: e = 0 } = Oe(), r = e > 4e3 ? "amber" : e > 1e3 ? "green" : e > 100 ? "blue" : "muted";
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96775,7 +96775,7 @@ function pjt() {
   );
 }
 function hjt() {
-  const { t: n } = ee("chips"), { rete: e = 0 } = Oe(), r = e < 0 ? "green" : e > 500 ? "red" : "muted";
+  const { t: n } = Y("chips"), { rete: e = 0 } = Oe(), r = e < 0 ? "green" : e > 500 ? "red" : "muted";
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96788,7 +96788,7 @@ function hjt() {
   );
 }
 function fjt() {
-  const { t: n } = ee("chips"), { soc: e = 0 } = Oe(), r = e > 60 ? "green" : e > 25 ? "amber" : "red", i = e > 60 ? wi : e > 25 ? Wm : Qm;
+  const { t: n } = Y("chips"), { soc: e = 0 } = Oe(), r = e > 60 ? "green" : e > 25 ? "amber" : "red", i = e > 60 ? wi : e > 25 ? Wm : Qm;
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96801,7 +96801,7 @@ function fjt() {
   );
 }
 function gjt() {
-  const { t: n } = ee("chips"), { tmax: e = 0, cond: r = "" } = Oe();
+  const { t: n } = Y("chips"), { tmax: e = 0, cond: r = "" } = Oe();
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96813,7 +96813,7 @@ function gjt() {
   );
 }
 function mjt() {
-  const { t: n } = ee("chips"), { zigbeeOffline: e = "0" } = Oe(), r = parseInt(e) || 0;
+  const { t: n } = Y("chips"), { zigbeeOffline: e = "0" } = Oe(), r = parseInt(e) || 0;
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96826,7 +96826,7 @@ function mjt() {
   );
 }
 function yjt() {
-  const { t: n } = ee("chips"), { casa: e = 0 } = Oe(), r = e > 3e3 ? "red" : e > 1e3 ? "amber" : "muted";
+  const { t: n } = Y("chips"), { casa: e = 0 } = Oe(), r = e > 3e3 ? "red" : e > 1e3 ? "amber" : "muted";
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96839,7 +96839,7 @@ function yjt() {
   );
 }
 function vjt() {
-  const { t: n } = ee("chips"), { self: e = 0 } = Oe(), r = e > 70 ? "green" : e > 40 ? "amber" : "muted";
+  const { t: n } = Y("chips"), { self: e = 0 } = Oe(), r = e > 70 ? "green" : e > 40 ? "amber" : "muted";
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96852,7 +96852,7 @@ function vjt() {
   );
 }
 function bjt() {
-  const { t: n } = ee("chips"), { piog: e = 0 } = Oe(), r = e > 10 || e > 2 ? "blue" : "muted";
+  const { t: n } = Y("chips"), { piog: e = 0 } = Oe(), r = e > 10 || e > 2 ? "blue" : "muted";
   return /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -96865,7 +96865,7 @@ function bjt() {
   );
 }
 function xjt() {
-  const { t: n } = ee("cards"), { haStates: e } = Oe(), r = C$(), [i, a] = O.useState(null), o = Qne(r, e), s = Wne(o), c = s.critico, d = s.basso;
+  const { t: n } = Y("cards"), { haStates: e } = Oe(), r = C$(), [i, a] = O.useState(null), o = Qne(r, e), s = Wne(o), c = s.critico, d = s.basso;
   return c === 0 && d === 0 || c === 0 ? null : /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs(
       "button",
@@ -96926,7 +96926,7 @@ function xjt() {
   ] });
 }
 function Ajt() {
-  const { t: n } = ee("cards"), { haStates: e } = Oe(), r = C$(), [i, a] = O.useState(null), o = Qne(r, e), s = Wne(o);
+  const { t: n } = Y("cards"), { haStates: e } = Oe(), r = C$(), [i, a] = O.useState(null), o = Qne(r, e), s = Wne(o);
   if (o.length === 0) return null;
   const d = [
     { key: "critico", count: s.critico },
@@ -96993,7 +96993,7 @@ function Ajt() {
 }
 function kjt() {
   var g, m, y, v;
-  const { t: n } = ee("chips"), { haStates: e } = Oe(), r = O.useMemo(() => {
+  const { t: n } = Y("chips"), { haStates: e } = Oe(), r = O.useMemo(() => {
     try {
       const b = localStorage.getItem("oikos-card-cfg-vacuum");
       return b ? JSON.parse(b) : {};
@@ -97019,7 +97019,7 @@ function kjt() {
   );
 }
 function wjt() {
-  const { t: n } = ee("layout"), { getState: e, getAttr: r } = Oe(), i = uYe();
+  const { t: n } = Y("layout"), { getState: e, getAttr: r } = Oe(), i = uYe();
   let a, o;
   if (i === "oggi") {
     if (a = e("sensor.oikos_raccolta_oggi"), R1(a)) return null;
@@ -97046,7 +97046,7 @@ function wjt() {
   );
 }
 function Sjt() {
-  const { t: n } = ee("cards"), { haStates: e } = Oe(), r = dYe(e).filter((i) => i.open).length;
+  const { t: n } = Y("cards"), { haStates: e } = Oe(), r = dYe(e).filter((i) => i.open).length;
   return r === 0 ? null : /* @__PURE__ */ l.jsx(
     Zo,
     {
@@ -97177,7 +97177,7 @@ function Vne({ size: n = 16, color: e = "currentColor", pct: r = 50 }) {
   ] });
 }
 function yYe(n, e, r) {
-  return n === "opening" ? { label: "Apertura…", color: r ? "#34d399" : "#059669", pulse: !0 } : n === "closing" ? { label: "Chiusura…", color: r ? "#f87171" : "#dc2626", pulse: !0 } : e === 100 ? { label: t("cards:shutters.open"), color: r ? "#34d399" : "#059669", pulse: !1 } : e === 0 ? { label: t("cards:shutters.closed"), color: r ? "#94a3b8" : "#64748b", pulse: !1 } : { label: `${e ?? "—"}%`, color: r ? "#fbbf24" : "#d97706", pulse: !1 };
+  return n === "opening" ? { label: "Apertura…", color: r ? "#34d399" : "#059669", pulse: !0 } : n === "closing" ? { label: "Chiusura…", color: r ? "#f87171" : "#dc2626", pulse: !0 } : e === 100 ? { label: Re.t("shutters.open", { ns: "cards" }), color: r ? "#34d399" : "#059669", pulse: !1 } : e === 0 ? { label: Re.t("shutters.closed", { ns: "cards" }), color: r ? "#94a3b8" : "#64748b", pulse: !1 } : { label: `${e ?? "—"}%`, color: r ? "#fbbf24" : "#d97706", pulse: !1 };
 }
 function Ojt({ position: n, dark: e, accent: r, onChange: i, onCommit: a }) {
   const o = n ?? 0, s = (c) => a(Number(c.target.value));
@@ -97280,7 +97280,7 @@ function im(n) {
   return Array.isArray(n) ? n.map((e) => typeof e == "string" ? { id: e, name: "" } : e) : [];
 }
 function jjt({ dark: n, entities: e, config: r, setConfig: i, getState: a, getAttr: o, callService: s, onClose: c }) {
-  const { editMode: d, haStates: u } = Oe(), { t: p } = ee("common"), [h, f] = O.useState(e.length === 0), g = () => e.forEach(({ id: k }) => s("cover", "open_cover", k).catch(() => {
+  const { editMode: d, haStates: u } = Oe(), { t: p } = Y("common"), [h, f] = O.useState(e.length === 0), g = () => e.forEach(({ id: k }) => s("cover", "open_cover", k).catch(() => {
   })), m = () => e.forEach(({ id: k }) => s("cover", "close_cover", k).catch(() => {
   })), [y, v] = O.useState(!1), b = (k) => {
     v(!1), !im(r.entities).some((C) => C.id === k) && i((C) => ({ ...C, entities: [...im(C.entities), { id: k, name: "" }] }));
@@ -97522,7 +97522,7 @@ function jjt({ dark: n, entities: e, config: r, setConfig: i, getState: a, getAt
   ] });
 }
 function Pjt() {
-  const { t: n } = ee("common"), { dark: e, getState: r, getAttr: i, callService: a } = Oe(), [o, s] = Pt("badge-shutters", { entities: [] }), [c, d] = O.useState(!1), u = im(o.entities), p = u[0], h = p == null ? void 0 : p.id, f = h ? i(h, "current_position") ?? null : null, g = h ? r(h) : null, m = (p == null ? void 0 : p.name) || (h ? i(h, "friendly_name") : null) || n("badges:shutters.title"), { label: y, color: v, pulse: b } = h ? yYe(g, f, e) : { label: n("badges:shutters.title"), color: "var(--text-muted)", pulse: !1 }, x = u.filter((k) => (i(k.id, "current_position") ?? 0) > 0).length, A = u.length > 1 ? x > 0 ? `${x} ${x === 1 ? "aperta" : "aperte"}` : "chiuse" : h ? `${m} · ${y}` : n("badges:shutters.title");
+  const { t: n } = Y("common"), { dark: e, getState: r, getAttr: i, callService: a } = Oe(), [o, s] = Pt("badge-shutters", { entities: [] }), [c, d] = O.useState(!1), u = im(o.entities), p = u[0], h = p == null ? void 0 : p.id, f = h ? i(h, "current_position") ?? null : null, g = h ? r(h) : null, m = (p == null ? void 0 : p.name) || (h ? i(h, "friendly_name") : null) || n("badges:shutters.title"), { label: y, color: v, pulse: b } = h ? yYe(g, f, e) : { label: n("badges:shutters.title"), color: "var(--text-muted)", pulse: !1 }, x = u.filter((k) => (i(k.id, "current_position") ?? 0) > 0).length, A = u.length > 1 ? x > 0 ? `${x} ${x === 1 ? "aperta" : "aperte"}` : "chiuse" : h ? `${m} · ${y}` : n("badges:shutters.title");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs(
       "button",
@@ -97590,8 +97590,8 @@ function vYe({ size: n = 14, color: e = "currentColor" }) {
   ] });
 }
 function Ejt({ onClose: n, dark: e, cfg: r, callService: i, haStates: a }) {
-  var L, T, I, z, M;
-  const o = r.vacuumEntity || "vacuum.ambrogio_2", s = r.cleaningModeEntity || "", c = ((T = (L = a == null ? void 0 : a[s]) == null ? void 0 : L.attributes) == null ? void 0 : T.options) || [], d = c.find((R) => /vacuum/i.test(R) && !/mop/i.test(R)) || "Vacuum", u = c.find((R) => /vacuum.*mop|mop.*vacuum/i.test(R)) || "Vacuum & Mop", p = r.stateEntity || "sensor.ambrogio_state", h = (M = ((I = a == null ? void 0 : a[o]) == null ? void 0 : I.state) || ((z = a == null ? void 0 : a[p]) == null ? void 0 : z.state)) == null ? void 0 : M.toLowerCase(), f = h === "cleaning", g = h === "paused", y = f || g || h === "returning", v = "var(--bg-panel)", b = "var(--text-primary)", x = "var(--text-muted)", A = "var(--border)", k = "var(--amber)", S = (R) => {
+  var T, L, I, z, M;
+  const o = r.vacuumEntity || "vacuum.ambrogio_2", s = r.cleaningModeEntity || "", c = ((L = (T = a == null ? void 0 : a[s]) == null ? void 0 : T.attributes) == null ? void 0 : L.options) || [], d = c.find((R) => /vacuum/i.test(R) && !/mop/i.test(R)) || "Vacuum", u = c.find((R) => /vacuum.*mop|mop.*vacuum/i.test(R)) || "Vacuum & Mop", p = r.stateEntity || "sensor.ambrogio_state", h = (M = ((I = a == null ? void 0 : a[o]) == null ? void 0 : I.state) || ((z = a == null ? void 0 : a[p]) == null ? void 0 : z.state)) == null ? void 0 : M.toLowerCase(), f = h === "cleaning", g = h === "paused", y = f || g || h === "returning", v = "var(--bg-panel)", b = "var(--text-primary)", x = "var(--text-muted)", A = "var(--border)", k = "var(--amber)", S = (R) => {
     i("vacuum", R, o), n();
   }, C = (R) => {
     s ? (i("select", "select_option", s, { option: R }), setTimeout(() => i("vacuum", "start", o), 500)) : i("vacuum", "start", o), n();
@@ -97754,7 +97754,7 @@ function Tjt() {
 }
 const Ljt = "sensor.oikos_raccolta_oggi", zjt = "sensor.oikos_raccolta_domani";
 function Bjt() {
-  const { t: n } = ee("layout"), { getState: e } = Oe(), r = uYe(), i = e(Ljt), a = e(zjt);
+  const { t: n } = Y("layout"), { getState: e } = Oe(), r = uYe(), i = e(Ljt), a = e(zjt);
   let o, s;
   r === "oggi" ? (o = i, s = n("raccolta.today")) : r === "domani" ? (o = a, s = n("raccolta.tomorrow")) : (o = i, s = n("raccolta.today"), R1(i) && !R1(a) && (o = a, s = n("raccolta.tomorrow")));
   const c = R1(o), d = pYe(o), u = c ? "var(--text-muted)" : d.color;
@@ -97849,7 +97849,7 @@ function zue({ it: n, dark: e, t: r, onRemove: i }) {
   );
 }
 function Djt({ items: n, openCount: e, config: r, setConfig: i, onClose: a }) {
-  const { dark: o, haStates: s = {} } = Oe(), { t: c } = ee("badges"), [d, u] = O.useState(n.length === 0), [p, h] = O.useState(!1), f = { ...of, ...r }, g = (f.exclude || []).map((b) => bYe(b, s)), m = (b) => {
+  const { dark: o, haStates: s = {} } = Oe(), { t: c } = Y("badges"), [d, u] = O.useState(n.length === 0), [p, h] = O.useState(!1), f = { ...of, ...r }, g = (f.exclude || []).map((b) => bYe(b, s)), m = (b) => {
     i((x) => {
       const A = { ...of, ...x };
       return (A.extra || []).includes(b) ? { ...A, extra: A.extra.filter((S) => S !== b) } : { ...A, exclude: [.../* @__PURE__ */ new Set([...A.exclude || [], b])] };
@@ -98011,7 +98011,7 @@ function Djt({ items: n, openCount: e, config: r, setConfig: i, onClose: a }) {
   ] });
 }
 function Hjt() {
-  const { haStates: n } = Oe(), [e, r] = Pt("badge-openings", of), { t: i } = ee("badges"), [a, o] = O.useState(!1), s = Rjt(n, { ...of, ...e }), c = s.filter((p) => p.open).length, d = c > 0, u = d ? { bg: "rgba(239,68,68,.12)", border: "rgba(239,68,68,.25)", text: "#f87171" } : { bg: "rgba(16,185,129,.12)", border: "rgba(16,185,129,.25)", text: "#34d399" };
+  const { haStates: n } = Oe(), [e, r] = Pt("badge-openings", of), { t: i } = Y("badges"), [a, o] = O.useState(!1), s = Rjt(n, { ...of, ...e }), c = s.filter((p) => p.open).length, d = c > 0, u = d ? { bg: "rgba(239,68,68,.12)", border: "rgba(239,68,68,.25)", text: "#f87171" } : { bg: "rgba(16,185,129,.12)", border: "rgba(16,185,129,.25)", text: "#34d399" };
   return s.length === 0 && (e == null ? void 0 : e.auto) === !1 ? null : /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs("button", { onClick: () => o(!0), style: {
       display: "flex",
@@ -98163,11 +98163,11 @@ const Wl = {
 };
 function $jt(n, e) {
   Object.entries(e).forEach(([r, i]) => {
-    He.addResourceBundle(r, n, i, !0, !0);
+    Re.addResourceBundle(r, n, i, !0, !0);
   });
 }
 function Vjt(n, e, r = {}) {
-  return He.t(e, { ns: n, ...r });
+  return Re.t(e, { ns: n, ...r });
 }
 const Fn = {}, uK = /* @__PURE__ */ new Set(), pK = /* @__PURE__ */ new Set();
 function FN(n) {
@@ -98177,12 +98177,12 @@ function FN(n) {
 async function NN(n, e) {
   var i;
   if (!n || !e) return;
-  const r = (((i = He.options) == null ? void 0 : i.supportedLngs) ?? []).filter((a) => a !== "cimode");
+  const r = (((i = Re.options) == null ? void 0 : i.supportedLngs) ?? []).filter((a) => a !== "cimode");
   await Promise.all(
-    r.filter((a) => !He.hasResourceBundle(a, n)).map(async (a) => {
+    r.filter((a) => !Re.hasResourceBundle(a, n)).map(async (a) => {
       try {
         const o = await Le(`${e}i18n/${a}.json`);
-        o.ok && o.status !== 204 && He.addResourceBundle(a, n, await o.json(), !0, !1);
+        o.ok && o.status !== 204 && Re.addResourceBundle(a, n, await o.json(), !0, !1);
       } catch {
       }
     })
@@ -98857,7 +98857,7 @@ const Jjt = {
   rectex: "rectex"
 };
 function t6t({ onAdd: n }) {
-  const { t: e } = ee("cards"), r = Object.fromEntries(
+  const { t: e } = Y("cards"), r = Object.fromEntries(
     Object.entries(Jjt).map(([i, a]) => {
       const o = e6t[i];
       return [i, {
@@ -99058,84 +99058,84 @@ function r6t({ widgets: n, selectedId: e, onSelect: r, onDragStart: i, onResizeS
 }
 function i6t({ config: n, selectedId: e, onSelect: r, onWidgetsChange: i, previewDark: a }) {
   var P, E;
-  const { t: o } = ee("cards"), s = O.useRef(null), c = O.useRef(null), d = O.useRef(null), [, u] = O.useState(0), [p, h] = O.useState(1), [f, g] = sYe(n.aspectRatio ?? "2/1");
+  const { t: o } = Y("cards"), s = O.useRef(null), c = O.useRef(null), d = O.useRef(null), [, u] = O.useState(0), [p, h] = O.useState(1), [f, g] = sYe(n.aspectRatio ?? "2/1");
   O.useEffect(() => {
     h(1);
   }, [n.aspectRatio]), O.useEffect(() => {
-    const L = c.current;
-    if (!L) return;
-    const T = (I) => {
+    const T = c.current;
+    if (!T) return;
+    const L = (I) => {
       if (!(I.ctrlKey || I.metaKey)) return;
       I.preventDefault();
       const z = I.deltaY > 0 ? 0.9 : 1.1;
       h((M) => Math.max(Nq, Math.min(Qq, M * z)));
     };
-    return L.addEventListener("wheel", T, { passive: !1 }), () => L.removeEventListener("wheel", T);
+    return T.addEventListener("wheel", L, { passive: !1 }), () => T.removeEventListener("wheel", L);
   }, []);
   const m = O.useCallback(() => {
-    var L;
-    return ((L = s.current) == null ? void 0 : L.getBoundingClientRect()) ?? null;
+    var T;
+    return ((T = s.current) == null ? void 0 : T.getBoundingClientRect()) ?? null;
   }, []);
-  function y(L, T) {
-    i(n.widgets.map((I) => I.id === L ? T(I) : I));
+  function y(T, L) {
+    i(n.widgets.map((I) => I.id === T ? L(I) : I));
   }
-  function v(L, T) {
+  function v(T, L) {
     var $;
     const I = m();
     if (!I) return;
-    const [z, M] = $q(L.clientX, L.clientY, I, f, g), R = T.type === "circle" || T.type === "segmented-arc" || T.type === "horseshoe", F = T.type === "line";
+    const [z, M] = $q(T.clientX, T.clientY, I, f, g), R = L.type === "circle" || L.type === "segmented-arc" || L.type === "horseshoe", F = L.type === "line";
     let H, N;
-    R ? (H = T.cx, N = T.cy) : F ? (H = T.x1, N = T.y1) : (H = T.x, N = T.y), d.current = {
+    R ? (H = L.cx, N = L.cy) : F ? (H = L.x1, N = L.y1) : (H = L.x, N = L.y), d.current = {
       type: "drag",
-      widgetId: T.id,
-      widgetType: T.type,
+      widgetId: L.id,
+      widgetType: L.type,
       startVx: z,
       startVy: M,
       startX: H,
       startY: N,
-      origWidget: { ...T }
-    }, ($ = s.current) == null || $.setPointerCapture(L.pointerId);
+      origWidget: { ...L }
+    }, ($ = s.current) == null || $.setPointerCapture(T.pointerId);
   }
-  function b(L, T, I) {
+  function b(T, L, I) {
     var H;
     const z = m();
     if (!z) return;
-    const [M, R] = $q(L.clientX, L.clientY, z, f, g), F = kYe(T);
+    const [M, R] = $q(T.clientX, T.clientY, z, f, g), F = kYe(L);
     d.current = {
       type: "resize",
-      widgetId: T.id,
-      widgetType: T.type,
+      widgetId: L.id,
+      widgetType: L.type,
       corner: I,
       startVx: M,
       startVy: R,
       origBounds: { ...F },
-      origWidget: { ...T }
-    }, (H = s.current) == null || H.setPointerCapture(L.pointerId);
+      origWidget: { ...L }
+    }, (H = s.current) == null || H.setPointerCapture(T.pointerId);
   }
-  function x(L) {
-    const T = d.current;
-    if (!T) return;
+  function x(T) {
+    const L = d.current;
+    if (!L) return;
     const I = m();
     if (!I) return;
-    const [z, M] = $q(L.clientX, L.clientY, I, f, g), R = z - T.startVx, F = M - T.startVy;
-    T.type === "drag" && y(T.widgetId, (H) => H.type === "circle" || H.type === "segmented-arc" || H.type === "horseshoe" ? { ...H, cx: pt(T.startX + R), cy: pt(T.startY + F) } : H.type === "line" ? {
+    const [z, M] = $q(T.clientX, T.clientY, I, f, g), R = z - L.startVx, F = M - L.startVy;
+    L.type === "drag" && y(L.widgetId, (H) => H.type === "circle" || H.type === "segmented-arc" || H.type === "horseshoe" ? { ...H, cx: pt(L.startX + R), cy: pt(L.startY + F) } : H.type === "line" ? {
       ...H,
-      x1: pt(T.startX + R),
-      y1: pt(T.startY + F),
-      x2: pt(T.origWidget.x2 + R),
-      y2: pt(T.origWidget.y2 + F)
-    } : { ...H, x: pt(T.startX + R), y: pt(T.startY + F) }), T.type === "resize" && y(T.widgetId, (H) => {
-      const N = T.origBounds, $ = T.origWidget;
+      x1: pt(L.startX + R),
+      y1: pt(L.startY + F),
+      x2: pt(L.origWidget.x2 + R),
+      y2: pt(L.origWidget.y2 + F)
+    } : { ...H, x: pt(L.startX + R), y: pt(L.startY + F) }), L.type === "resize" && y(L.widgetId, (H) => {
+      const N = L.origBounds, $ = L.origWidget;
       if (H.type === "rect") {
         let { x: _, y: V, width: Q, height: U } = N;
-        return T.corner === "br" ? (Q = Math.max(0.5, pt(N.width + R)), U = Math.max(0.5, pt(N.height + F))) : T.corner === "bl" ? (_ = pt(N.x + R), Q = Math.max(0.5, pt(N.width - R)), U = Math.max(0.5, pt(N.height + F))) : T.corner === "tr" ? (V = pt(N.y + F), Q = Math.max(0.5, pt(N.width + R)), U = Math.max(0.5, pt(N.height - F))) : T.corner === "tl" && (_ = pt(N.x + R), V = pt(N.y + F), Q = Math.max(0.5, pt(N.width - R)), U = Math.max(0.5, pt(N.height - F))), { ...H, x: _, y: V, width: Q, height: U };
+        return L.corner === "br" ? (Q = Math.max(0.5, pt(N.width + R)), U = Math.max(0.5, pt(N.height + F))) : L.corner === "bl" ? (_ = pt(N.x + R), Q = Math.max(0.5, pt(N.width - R)), U = Math.max(0.5, pt(N.height + F))) : L.corner === "tr" ? (V = pt(N.y + F), Q = Math.max(0.5, pt(N.width + R)), U = Math.max(0.5, pt(N.height - F))) : L.corner === "tl" && (_ = pt(N.x + R), V = pt(N.y + F), Q = Math.max(0.5, pt(N.width - R)), U = Math.max(0.5, pt(N.height - F))), { ...H, x: _, y: V, width: Q, height: U };
       }
       if (H.type === "circle") {
-        const _ = T.corner === "tl" || T.corner === "bl" ? -1 : 1, V = T.corner === "tl" || T.corner === "tr" ? -1 : 1, Q = (R * _ + F * V) / 2, U = Math.max(0.5, pt($.r + Q));
+        const _ = L.corner === "tl" || L.corner === "bl" ? -1 : 1, V = L.corner === "tl" || L.corner === "tr" ? -1 : 1, Q = (R * _ + F * V) / 2, U = Math.max(0.5, pt($.r + Q));
         return { ...H, r: U };
       }
       if (H.type === "text" || H.type === "entity-state" || H.type === "entity-icon") {
-        const _ = T.corner === "tl" || T.corner === "bl" ? -1 : 1, V = T.corner === "tl" || T.corner === "tr" ? -1 : 1, Q = N.width > 0 ? (N.width + R * _) / N.width : 1, U = N.height > 0 ? (N.height + F * V) / N.height : 1, Z = Math.max(0.1, (Q + U) / 2);
+        const _ = L.corner === "tl" || L.corner === "bl" ? -1 : 1, V = L.corner === "tl" || L.corner === "tr" ? -1 : 1, Q = N.width > 0 ? (N.width + R * _) / N.width : 1, U = N.height > 0 ? (N.height + F * V) / N.height : 1, Z = Math.max(0.1, (Q + U) / 2);
         if (H.type === "entity-icon") {
           const fe = Math.max(1, pt(($.size ?? 10) * Z));
           return { ...H, size: fe };
@@ -99144,16 +99144,16 @@ function i6t({ config: n, selectedId: e, onSelect: r, onWidgetsChange: i, previe
         return { ...H, fontSize: re };
       }
       if (H.type === "segmented-arc" || H.type === "horseshoe") {
-        const _ = T.corner === "tl" || T.corner === "bl" ? -1 : 1, V = T.corner === "tl" || T.corner === "tr" ? -1 : 1, Q = (R * _ + F * V) / 2, U = Math.max(1, pt(($.radius ?? 10) + Q));
+        const _ = L.corner === "tl" || L.corner === "bl" ? -1 : 1, V = L.corner === "tl" || L.corner === "tr" ? -1 : 1, Q = (R * _ + F * V) / 2, U = Math.max(1, pt(($.radius ?? 10) + Q));
         return { ...H, radius: U };
       }
       if (H.type === "sparkline" || H.type === "range-slider" || H.type === "rectex" || H.type === "progress-rect" || H.type === "image") {
         let { x: _, y: V, width: Q, height: U } = N;
-        return T.corner === "br" ? (Q = Math.max(1, pt(N.width + R)), U = Math.max(1, pt(N.height + F))) : T.corner === "bl" ? (_ = pt(N.x + R), Q = Math.max(1, pt(N.width - R)), U = Math.max(1, pt(N.height + F))) : T.corner === "tr" ? (V = pt(N.y + F), Q = Math.max(1, pt(N.width + R)), U = Math.max(1, pt(N.height - F))) : T.corner === "tl" && (_ = pt(N.x + R), V = pt(N.y + F), Q = Math.max(1, pt(N.width - R)), U = Math.max(1, pt(N.height - F))), { ...H, x: _, y: V, width: Q, height: U };
+        return L.corner === "br" ? (Q = Math.max(1, pt(N.width + R)), U = Math.max(1, pt(N.height + F))) : L.corner === "bl" ? (_ = pt(N.x + R), Q = Math.max(1, pt(N.width - R)), U = Math.max(1, pt(N.height + F))) : L.corner === "tr" ? (V = pt(N.y + F), Q = Math.max(1, pt(N.width + R)), U = Math.max(1, pt(N.height - F))) : L.corner === "tl" && (_ = pt(N.x + R), V = pt(N.y + F), Q = Math.max(1, pt(N.width - R)), U = Math.max(1, pt(N.height - F))), { ...H, x: _, y: V, width: Q, height: U };
       }
       if (H.type === "line") {
-        const _ = T.origWidget;
-        return T.corner === "tl" || T.corner === "bl" ? { ...H, x1: pt(_.x1 + R), y1: pt(_.y1 + F) } : { ...H, x2: pt(_.x2 + R), y2: pt(_.y2 + F) };
+        const _ = L.origWidget;
+        return L.corner === "tl" || L.corner === "bl" ? { ...H, x1: pt(_.x1 + R), y1: pt(_.y1 + F) } : { ...H, x2: pt(_.x2 + R), y2: pt(_.y2 + F) };
       }
       return H;
     });
@@ -99161,10 +99161,10 @@ function i6t({ config: n, selectedId: e, onSelect: r, onWidgetsChange: i, previe
   function A() {
     d.current = null;
   }
-  const k = () => h((L) => Math.max(Nq, +(L * 0.9).toFixed(2))), S = () => h((L) => Math.min(Qq, +(L * 1.1).toFixed(2))), C = () => h(1), j = (L, T, I, z = !1) => /* @__PURE__ */ l.jsx(
+  const k = () => h((T) => Math.max(Nq, +(T * 0.9).toFixed(2))), S = () => h((T) => Math.min(Qq, +(T * 1.1).toFixed(2))), C = () => h(1), j = (T, L, I, z = !1) => /* @__PURE__ */ l.jsx(
     "button",
     {
-      onClick: L,
+      onClick: T,
       disabled: z,
       title: I,
       style: {
@@ -99179,7 +99179,7 @@ function i6t({ config: n, selectedId: e, onSelect: r, onWidgetsChange: i, previe
         color: z ? "rgba(148,163,184,.3)" : "#cbd5e1",
         cursor: z ? "not-allowed" : "pointer"
       },
-      children: /* @__PURE__ */ l.jsx(T, { size: 13 })
+      children: /* @__PURE__ */ l.jsx(L, { size: 13 })
     }
   );
   return /* @__PURE__ */ l.jsxs(
@@ -99227,8 +99227,8 @@ function i6t({ config: n, selectedId: e, onSelect: r, onWidgetsChange: i, previe
               },
               onPointerMove: x,
               onPointerUp: A,
-              onPointerDown: (L) => {
-                L.target === s.current && r(null);
+              onPointerDown: (T) => {
+                T.target === s.current && r(null);
               },
               children: /* @__PURE__ */ l.jsx(
                 r6t,
@@ -99361,7 +99361,7 @@ function l6t(n, e) {
   a.href = i, a.download = n, document.body.appendChild(a), a.click(), a.remove(), setTimeout(() => URL.revokeObjectURL(i), 500);
 }
 function c6t({ entry: n, onLoad: e, onDelete: r, onPickForPopup: i, pickMode: a }) {
-  const { t: o } = ee("cards"), [s, c] = O.useState(!1);
+  const { t: o } = Y("cards"), [s, c] = O.useState(!1);
   function d() {
     const u = { ...n };
     delete u._libId, delete u._savedAt, navigator.clipboard.writeText(JSON.stringify(u, null, 2)).then(() => {
@@ -99502,7 +99502,7 @@ function c6t({ entry: n, onLoad: e, onDelete: r, onPickForPopup: i, pickMode: a 
   );
 }
 function wYe({ currentConfig: n, onLoad: e, onPickForPopup: r, pickMode: i = !1, onClose: a }) {
-  const { t: o } = ee("cards"), s = o6t(), [c, d] = O.useState(() => s.readAll()), [u, p] = O.useState(!1), [h, f] = O.useState("");
+  const { t: o } = Y("cards"), s = o6t(), [c, d] = O.useState(() => s.readAll()), [u, p] = O.useState(!1), [h, f] = O.useState("");
   function g() {
     d(s.readAll());
   }
@@ -99828,7 +99828,7 @@ const p6t = [
   { hex: "#161b22", labelKey: "smartCard.colors.bgSecondaryDark" }
 ];
 function Ds({ label: n, value: e, onChange: r }) {
-  const { t: i } = ee("cards"), a = e === "none" || e === "" || e == null;
+  const { t: i } = Y("cards"), a = e === "none" || e === "" || e == null;
   function o(c) {
     return !c || !c.startsWith("#") ? "" : c.toLowerCase();
   }
@@ -99983,7 +99983,7 @@ function gK(n, e) {
   ] });
 }
 function h6t({ value: n, entityOptions: e, onSelect: r, onClose: i }) {
-  const { t: a } = ee("cards"), [o, s] = O.useState(""), [c, d] = O.useState("all"), u = O.useRef(null);
+  const { t: a } = Y("cards"), [o, s] = O.useState(""), [c, d] = O.useState("all"), u = O.useRef(null);
   O.useEffect(() => {
     var g;
     (g = u.current) == null || g.focus();
@@ -100134,7 +100134,7 @@ function h6t({ value: n, entityOptions: e, onSelect: r, onClose: i }) {
   );
 }
 function na({ label: n, value: e, onChange: r, entityOptions: i, placeholder: a }) {
-  const { t: o } = ee("cards"), [s, c] = O.useState(!1), d = i == null ? void 0 : i.find((u) => u.value === e);
+  const { t: o } = Y("cards"), [s, c] = O.useState(!1), d = i == null ? void 0 : i.find((u) => u.value === e);
   return /* @__PURE__ */ l.jsxs(A0, { label: n, children: [
     /* @__PURE__ */ l.jsx(
       "button",
@@ -100184,7 +100184,7 @@ function na({ label: n, value: e, onChange: r, entityOptions: i, placeholder: a 
 }
 const Que = Object.keys(Zf).sort();
 function qne({ label: n, value: e, onChange: r, placeholder: i }) {
-  const { t: a } = ee("cards"), [o, s] = O.useState(!1), [c, d] = O.useState(""), u = O.useRef(null), p = e && Zf[e] ? Zf[e] : null, h = O.useMemo(() => {
+  const { t: a } = Y("cards"), [o, s] = O.useState(!1), [c, d] = O.useState(""), u = O.useRef(null), p = e && Zf[e] ? Zf[e] : null, h = O.useMemo(() => {
     const f = c.trim().toLowerCase();
     return f ? Que.filter((g) => g.toLowerCase().includes(f)) : Que;
   }, [c]);
@@ -100402,7 +100402,7 @@ function y2({ Icon: n, onClick: e, title: r, active: i, danger: a }) {
   );
 }
 function m6t({ widgets: n, selectedId: e, onSelect: r, onChange: i, onDelete: a }) {
-  const { t: o } = ee("cards");
+  const { t: o } = Y("cards");
   function s(u, p) {
     i(n.map((h) => h.id === u ? { ...h, ...p } : h));
   }
@@ -100587,7 +100587,7 @@ function Une({
   dark: r,
   placeholder: i = "Seleziona popup…"
 }) {
-  const { t: a } = ee("cards"), [o, s] = O.useState(!1), [c, d] = O.useState([]), u = O.useRef(null);
+  const { t: a } = Y("cards"), [o, s] = O.useState(!1), [c, d] = O.useState([]), u = O.useRef(null);
   function p() {
     d(v6t()), s(!0);
   }
@@ -100803,7 +100803,7 @@ function $r({ label: n, obj: e, prop: r, onChange: i, ...a }) {
   );
 }
 function A6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards"), a = n.rotation ?? 0;
+  const { t: i } = Y("cards"), a = n.rotation ?? 0;
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(Wr, { label: "ID", value: n.id, onChange: () => {
     }, readOnly: !0 }),
@@ -100836,7 +100836,7 @@ function A6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function k6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards");
+  const { t: r } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (i) => e("x", i), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (i) => e("y", i), step: 0.1 }),
@@ -100851,7 +100851,7 @@ function k6t({ widget: n, onChange: e }) {
   ] });
 }
 function w6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards");
+  const { t: r } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: r("smartCard.props.centerX"), value: n.cx, onChange: (i) => e("cx", i), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: r("smartCard.props.centerY"), value: n.cy, onChange: (i) => e("cy", i), step: 0.1 }),
@@ -100864,7 +100864,7 @@ function w6t({ widget: n, onChange: e }) {
   ] });
 }
 function S6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards");
+  const { t: r } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (i) => e("x", i), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (i) => e("y", i), step: 0.1 }),
@@ -100875,7 +100875,7 @@ function S6t({ widget: n, onChange: e }) {
   ] });
 }
 function O6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (a) => e("y", a), step: 0.1 }),
@@ -100891,7 +100891,7 @@ function O6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function C6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (a) => e("y", a), step: 0.1 }),
@@ -100904,7 +100904,7 @@ function C6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function j6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerXShort"), value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerYShort"), value: n.y, onChange: (a) => e("y", a), step: 0.1 }),
@@ -100914,7 +100914,7 @@ function j6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function P6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerX"), value: n.cx, onChange: (a) => e("cx", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerY"), value: n.cy, onChange: (a) => e("cy", a), step: 0.1 }),
@@ -100942,7 +100942,7 @@ function P6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function M6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerX"), value: n.cx, onChange: (a) => e("cx", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: i("smartCard.props.centerY"), value: n.cy, onChange: (a) => e("cy", a), step: 0.1 }),
@@ -100969,7 +100969,7 @@ function M6t({ widget: n, onChange: e, entityOptions: r }) {
 }
 function I6t({ widget: n, onChange: e, entityOptions: r }) {
   var a, o;
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (s) => e("x", s), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (s) => e("y", s), step: 0.1 }),
@@ -101029,7 +101029,7 @@ function I6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function E6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (a) => e("y", a), step: 0.1 }),
@@ -101051,7 +101051,7 @@ function E6t({ widget: n, onChange: e, entityOptions: r }) {
 }
 const T6t = [">", ">=", "<", "<=", "==", "!="], L6t = ["xMidYMid meet", "xMidYMid slice", "none"];
 function z6t({ conditions: n = [], onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   function a() {
     e([...n, { op: ">=", value: 0, url: "" }]);
   }
@@ -101123,7 +101123,7 @@ function z6t({ conditions: n = [], onChange: e, entityOptions: r }) {
   ] });
 }
 function B6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }, children: [
       /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x ?? 5, onChange: (a) => e("x", a), step: 0.1 }),
@@ -101169,7 +101169,7 @@ function B6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function R6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards");
+  const { t: r } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }, children: [
       /* @__PURE__ */ l.jsx(ve, { label: "X1", value: n.x1 ?? 10, onChange: (i) => e("x1", i), step: 0.1 }),
@@ -101186,7 +101186,7 @@ function R6t({ widget: n, onChange: e }) {
   ] });
 }
 function D6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }, children: [
       /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
@@ -101238,7 +101238,7 @@ const $ue = {
   "Mono arancione": "smartCard.colorScale.monoOrange"
 };
 function F6t({ currentMin: n, currentMax: e, onGenerate: r }) {
-  const { t: i } = ee("cards"), [a, o] = O.useState(!1), [s, c] = O.useState(n ?? 0), [d, u] = O.useState(e ?? 100), [p, h] = O.useState(4), [f, g] = O.useState("Verde → Rosso"), [m, y] = O.useState(!1), v = H6t(f, p);
+  const { t: i } = Y("cards"), [a, o] = O.useState(!1), [s, c] = O.useState(n ?? 0), [d, u] = O.useState(e ?? 100), [p, h] = O.useState(4), [f, g] = O.useState("Verde → Rosso"), [m, y] = O.useState(!1), v = H6t(f, p);
   function b() {
     if (d <= s || p < 2) return;
     const x = (d - s) / (p - 1), A = v.map((k, S) => ({
@@ -101330,7 +101330,7 @@ function F6t({ currentMin: n, currentMax: e, onGenerate: r }) {
   );
 }
 function N6t({ widget: n = {}, onChange: e, onWidgetChange: r, entityOptions: i, widgetEntity: a }) {
-  const { t: o } = ee("cards"), s = n.thresholds ?? [], c = !!n.gradientMode, [d, u] = O.useState(!1);
+  const { t: o } = Y("cards"), s = n.thresholds ?? [], c = !!n.gradientMode, [d, u] = O.useState(!1);
   function p() {
     e([...s, { entity: "", op: ">=", value: 0, fill: "#10b981" }]);
   }
@@ -101497,7 +101497,7 @@ function N6t({ widget: n = {}, onChange: e, onWidgetChange: r, entityOptions: i,
   ] });
 }
 function Q6t({ container: n, actions: e, onContainerChange: r, onActionsChange: i, entityOptions: a }) {
-  const { t: o } = ee("cards"), s = (e == null ? void 0 : e.tap) ?? {};
+  const { t: o } = Y("cards"), s = (e == null ? void 0 : e.tap) ?? {};
   function c(d, u) {
     i({ ...e, tap: { ...s, [d]: u } });
   }
@@ -101530,7 +101530,7 @@ function Q6t({ container: n, actions: e, onContainerChange: r, onActionsChange: 
   ] });
 }
 function Vue({ editingDark: n }) {
-  const { t: e } = ee("cards");
+  const { t: e } = Y("cards");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     alignItems: "center",
@@ -101553,7 +101553,7 @@ function Vue({ editingDark: n }) {
   ] });
 }
 function W6t({ widget: n, onChange: e, entityOptions: r, onCreateSmartCard: i }) {
-  const { t: a } = ee("cards"), { pluginsLoaded: o } = Oe(), s = n.action ?? null, c = !!s, [d, u] = O.useState(!1);
+  const { t: a } = Y("cards"), { pluginsLoaded: o } = Oe(), s = n.action ?? null, c = !!s, [d, u] = O.useState(!1);
   O.useMemo(() => {
     const m = _n();
     return Object.values(m).filter((y) => !y.popupOnly && !y.badgeOnly).map((y) => ({ value: y.id, label: y.name }));
@@ -101779,7 +101779,7 @@ function W6t({ widget: n, onChange: e, entityOptions: r, onCreateSmartCard: i })
 }
 const CYe = ["none", "spin", "pulse", "blink", "fade", "bounce", "ping"], $6t = ["linear", "ease", "ease-in", "ease-out", "ease-in-out"];
 function V6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards"), i = n.anim ?? null, a = !!i;
+  const { t: r } = Y("cards"), i = n.anim ?? null, a = !!i;
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(qn, { title: r("smartCard.anim.divider") }),
     /* @__PURE__ */ l.jsxs("label", { style: {
@@ -101846,7 +101846,7 @@ function V6t({ widget: n, onChange: e }) {
   ] });
 }
 function _6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards"), a = n.animConditions ?? [];
+  const { t: i } = Y("cards"), a = n.animConditions ?? [];
   function o() {
     e("animConditions", [...a, { entity: "", op: "==", value: "on", preset: "pulse", duration: 2, easing: "linear", delay: 0 }]);
   }
@@ -101944,7 +101944,7 @@ function _6t({ widget: n, onChange: e, entityOptions: r }) {
 }
 const q6t = ["fill", "stroke", "activeFill", "inactiveFill", "trackFill", "valueFill"];
 function U6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards"), i = n.colorstops ?? [], a = n.colorstopProps ?? ["fill"];
+  const { t: r } = Y("cards"), i = n.colorstops ?? [], a = n.colorstopProps ?? ["fill"];
   function o() {
     const d = i[i.length - 1];
     e("colorstops", [...i, { value: d ? d.value + 50 : 0, color: "#10b981" }]);
@@ -102043,7 +102043,7 @@ function U6t({ widget: n, onChange: e }) {
   ] });
 }
 function X6t({ widget: n, onChange: e }) {
-  const { t: r } = ee("cards");
+  const { t: r } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (i) => e("x", i), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (i) => e("y", i), step: 0.1 }),
@@ -102063,7 +102063,7 @@ function X6t({ widget: n, onChange: e }) {
   ] });
 }
 function G6t({ widget: n, onChange: e, entityOptions: r }) {
-  const { t: i } = ee("cards");
+  const { t: i } = Y("cards");
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(ve, { label: "X", value: n.x, onChange: (a) => e("x", a), step: 0.1 }),
     /* @__PURE__ */ l.jsx(ve, { label: "Y", value: n.y, onChange: (a) => e("y", a), step: 0.1 }),
@@ -102090,7 +102090,7 @@ function G6t({ widget: n, onChange: e, entityOptions: r }) {
   ] });
 }
 function Z6t({ selectedId: n, widgets: e, container: r, actions: i, dualTheme: a, editingDark: o, onWidgetChange: s, onContainerChange: c, onActionsChange: d, onDeleteSelected: u, onSelect: p, onDeleteWidget: h, onCreateSmartCard: f }) {
-  const { t: g } = ee("cards"), m = Pg(), y = d6t(m), v = n ? e.find((S) => S.id === n) : null;
+  const { t: g } = Y("cards"), m = Pg(), y = d6t(m), v = n ? e.find((S) => S.id === n) : null;
   function b(S, C) {
     s(e.map((j) => j.id === n ? { ...j, [S]: C } : j));
   }
@@ -102499,7 +102499,7 @@ function Pw({ k: n, label: e }) {
   ] });
 }
 function ePt({ config: n, previewDark: e, onPreviewChange: r, onDualChange: i }) {
-  const { t: a } = ee("cards");
+  const { t: a } = Y("cards");
   return n.dualTheme ? /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     alignItems: "center",
@@ -102616,7 +102616,7 @@ function ePt({ config: n, previewDark: e, onPreviewChange: r, onDualChange: i })
   );
 }
 function tPt({ config: n, previewDark: e, onPreviewChange: r, onDualChange: i, onNameChange: a, onRatioChange: o, onSave: s, onCancel: c, onOpenJson: d, onExport: u, onOpenLibrary: p, isDirty: h, justSaved: f }) {
-  const { t: g } = ee("cards");
+  const { t: g } = Y("cards");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     height: 60,
     flexShrink: 0,
@@ -102899,7 +102899,7 @@ function tPt({ config: n, previewDark: e, onPreviewChange: r, onDualChange: i, o
   ] });
 }
 function jYe({ initialJson: n, onSave: e, onClose: r }) {
-  const { t: i } = ee("cards"), [a, o] = O.useState(() => {
+  const { t: i } = Y("cards"), [a, o] = O.useState(() => {
     try {
       return JSON.parse(n);
     } catch {
@@ -102915,10 +102915,10 @@ function jYe({ initialJson: n, onSave: e, onClose: r }) {
   function E(U) {
     P({ ...a, widgets: U });
   }
-  function L(U) {
+  function T(U) {
     P({ ...a, container: U });
   }
-  function T(U) {
+  function L(U) {
     P({ ...a, actions: U });
   }
   function I(U) {
@@ -103047,8 +103047,8 @@ function jYe({ initialJson: n, onSave: e, onClose: r }) {
                 dualTheme: !!a.dualTheme,
                 editingDark: p,
                 onWidgetChange: E,
-                onContainerChange: L,
-                onActionsChange: T,
+                onContainerChange: T,
+                onActionsChange: L,
                 onDeleteSelected: R,
                 onSelect: c,
                 onDeleteWidget: F,
@@ -103122,7 +103122,7 @@ function jYe({ initialJson: n, onSave: e, onClose: r }) {
   ] });
 }
 function nPt({ initial: n, onApply: e, onClose: r }) {
-  const { t: i } = ee("cards"), [a, o] = O.useState(n), [s, c] = O.useState([]);
+  const { t: i } = Y("cards"), [a, o] = O.useState(n), [s, c] = O.useState([]);
   function d() {
     const p = e(a);
     c(p);
@@ -103275,7 +103275,7 @@ function que(n, e) {
   a.href = i, a.download = n, document.body.appendChild(a), a.click(), a.remove(), setTimeout(() => URL.revokeObjectURL(i), 500);
 }
 function rPt({ config: n, onClose: e }) {
-  const { t: r } = ee("cards"), i = _ue(n.name), [a, o] = O.useState({
+  const { t: r } = Y("cards"), i = _ue(n.name), [a, o] = O.useState({
     id: i,
     name: n.name ?? r("smartCard.export.defaultName"),
     version: "1.0.0",
@@ -103553,7 +103553,7 @@ function PYe({ cardId: n, onClose: e }) {
 }
 const aPt = { url: "", content: "", height: 280, title: "", icon: "" };
 function oPt({ cardId: n = "html-card" }) {
-  const { t: e } = ee("cards"), {
+  const { t: e } = Y("cards"), {
     dark: r,
     connected: i,
     editMode: a,
@@ -103607,14 +103607,14 @@ function oPt({ cardId: n = "html-card" }) {
           if (!S) break;
           const j = /* @__PURE__ */ new Date(), P = new Date(j.getTime() - C * 3600 * 1e3);
           d([S], P.toISOString(), j.toISOString()).then((E) => {
-            const L = E == null ? void 0 : E[S];
-            return Array.isArray(L) ? L.map((T) => ({
-              x: typeof T.lu == "number" ? T.lu * 1e3 : Date.parse(T.lu ?? T.last_changed),
-              y: parseFloat(T.s ?? T.state)
-            })).filter((T) => isFinite(T.x) && isFinite(T.y)) : [];
+            const T = E == null ? void 0 : E[S];
+            return Array.isArray(T) ? T.map((L) => ({
+              x: typeof L.lu == "number" ? L.lu * 1e3 : Date.parse(L.lu ?? L.last_changed),
+              y: parseFloat(L.s ?? L.state)
+            })).filter((L) => isFinite(L.x) && isFinite(L.y)) : [];
           }).then((E) => {
-            var L, T;
-            (T = (L = f.current) == null ? void 0 : L.contentWindow) == null || T.postMessage(
+            var T, L;
+            (L = (T = f.current) == null ? void 0 : T.contentWindow) == null || L.postMessage(
               { type: "history-update", entityId: S, data: E },
               "*"
             );
@@ -103966,7 +103966,7 @@ function yPt({ value: n, onChange: e, dark: r }) {
   }) });
 }
 function vPt({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r } = Oe(), [i, a] = Pt(n, hPt), o = gPt(i.content), [s, c] = O.useState({}), d = {
+  const { t: e } = Y("cards"), { dark: r } = Oe(), [i, a] = Pt(n, hPt), o = gPt(i.content), [s, c] = O.useState({}), d = {
     width: "100%",
     background: r ? "rgba(255,255,255,.04)" : "#fff",
     border: `1px solid ${r ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
@@ -104093,7 +104093,7 @@ function vPt({ cardId: n }) {
   ] });
 }
 function bPt({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r, haStates: i } = Oe(), a = C$(), [o, s] = O.useState(null), c = !n, d = O.useMemo(() => c ? [
+  const { t: e } = Y("cards"), { dark: r, haStates: i } = Oe(), a = C$(), [o, s] = O.useState(null), c = !n, d = O.useMemo(() => c ? [
     { id: "sensor.fake_1", name: "iPhone", pct: 78, range: "medio", available: !0 },
     { id: "sensor.fake_2", name: "Tesla", pct: 12, range: "critico", available: !0 },
     { id: "sensor.fake_3", name: "Cancello", pct: 64, range: "medio", available: !0 },
@@ -104211,7 +104211,7 @@ function bPt({ cardId: n }) {
   ] });
 }
 function xPt({ rangeKey: n, count: e, thresholds: r, dark: i, onClick: a, animated: o }) {
-  const { t: s } = ee("cards"), c = zx[n], d = s(`batteries.range.${n}`), u = e > 0, p = n === "critico" && u, h = `${c.fill * 100}%`;
+  const { t: s } = Y("cards"), c = zx[n], d = s(`batteries.range.${n}`), u = e > 0, p = n === "critico" && u, h = `${c.fill * 100}%`;
   return /* @__PURE__ */ l.jsxs(
     se.button,
     {
@@ -104299,7 +104299,7 @@ function xPt({ rangeKey: n, count: e, thresholds: r, dark: i, onClick: a, animat
   );
 }
 function APt({ dark: n }) {
-  const { t: e } = ee("cards");
+  const { t: e } = Y("cards");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     padding: "24px 12px",
     textAlign: "center",
@@ -104313,7 +104313,7 @@ function APt({ dark: n }) {
   ] });
 }
 function kPt({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r, haStates: i } = Oe(), a = C$(), [o, s] = O.useState(!1), c = (y) => qg((v) => ({ ...v, ...y })), d = (y) => qg((v) => ({
+  const { t: e } = Y("cards"), { dark: r, haStates: i } = Oe(), a = C$(), [o, s] = O.useState(!1), c = (y) => qg((v) => ({ ...v, ...y })), d = (y) => qg((v) => ({
     ...v,
     thresholds: { ...v.thresholds, ...y }
   })), u = (y) => {
@@ -104710,7 +104710,7 @@ function Uue({ label: n, icon: e, onClick: r, variant: i, disabled: a }) {
   );
 }
 function CPt({ cardId: n }) {
-  const { t: e } = ee("cards");
+  const { t: e } = Y("cards");
   O.useId();
   const { dark: r, getFloat: i, getState: a, callService: o } = Oe(), [s] = Pt(n, wPt), {
     label: c = "Auto",
@@ -104810,7 +104810,7 @@ const jPt = {
   wallboxSwitch: ""
 };
 function PPt({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r } = Oe(), [i, a] = Pt(n, jPt);
+  const { t: e } = Y("cards"), { dark: r } = Oe(), [i, a] = Pt(n, jPt);
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("carCard.sectionEntities"), children: [
       /* @__PURE__ */ l.jsx(
@@ -105013,7 +105013,7 @@ function IPt({ cfg: n, haStates: e, dark: r, cardColor: i, displayMode: a }) {
   ] });
 }
 function EPt({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r, haStates: i } = Oe(), [a] = Pt(n, MPt), { title: o, cardColor: s, displayMode: c, entities: d = [] } = a, u = s ? M$(s) : null;
+  const { t: e } = Y("cards"), { dark: r, haStates: i } = Oe(), [a] = Pt(n, MPt), { title: o, cardColor: s, displayMode: c, entities: d = [] } = a, u = s ? M$(s) : null;
   return /* @__PURE__ */ l.jsxs("div", { style: {
     background: u ? u.bg : r ? "rgba(255,255,255,.03)" : "#fff",
     border: `1px solid ${u ? u.border : r ? "rgba(255,255,255,.08)" : "#e8edf3"}`,
@@ -105091,14 +105091,14 @@ const TPt = {
 ];
 function RPt({ cardId: n }) {
   var P;
-  const { t: e } = ee("cards"), { dark: r, haStates: i = {} } = Oe(), [a, o] = Pt(n, TPt), [s, c] = O.useState(null), [d, u] = O.useState(null), { entities: p = [], cardColor: h, displayMode: f, title: g } = a, m = zPt.map((E) => ({ value: E, label: e(`entityList.format.${E}`) })), y = BPt.map((E) => ({ value: E, label: e(`entityList.displayModeOpt.${E}`) })), v = (E) => o((L) => ({ ...L, entities: E(L.entities ?? []) })), b = (E, L, T) => v((I) => I.map((z, M) => M === E ? { ...z, [L]: T } : z)), x = () => {
+  const { t: e } = Y("cards"), { dark: r, haStates: i = {} } = Oe(), [a, o] = Pt(n, TPt), [s, c] = O.useState(null), [d, u] = O.useState(null), { entities: p = [], cardColor: h, displayMode: f, title: g } = a, m = zPt.map((E) => ({ value: E, label: e(`entityList.format.${E}`) })), y = BPt.map((E) => ({ value: E, label: e(`entityList.displayModeOpt.${E}`) })), v = (E) => o((T) => ({ ...T, entities: E(T.entities ?? []) })), b = (E, T, L) => v((I) => I.map((z, M) => M === E ? { ...z, [T]: L } : z)), x = () => {
     v((E) => [...E, { ...LPt }]), u(p.length);
-  }, A = (E) => v((L) => L.filter((T, I) => I !== E)), k = (E) => v((L) => {
-    const T = [...L];
-    return [T[E - 1], T[E]] = [T[E], T[E - 1]], T;
-  }), S = (E) => v((L) => {
-    const T = [...L];
-    return [T[E], T[E + 1]] = [T[E + 1], T[E]], T;
+  }, A = (E) => v((T) => T.filter((L, I) => I !== E)), k = (E) => v((T) => {
+    const L = [...T];
+    return [L[E - 1], L[E]] = [L[E], L[E - 1]], L;
+  }), S = (E) => v((T) => {
+    const L = [...T];
+    return [L[E], L[E + 1]] = [L[E + 1], L[E]], L;
   }), C = r ? "rgba(255,255,255,.45)" : "#64748b", j = r ? "rgba(255,255,255,.9)" : "#0f172a";
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("entityList.sectionEntities"), badge: p.length, collapsible: !0, defaultOpen: !0, children: [
@@ -105137,9 +105137,9 @@ function RPt({ cardId: n }) {
         e("entityList.emptyList"),
         /* @__PURE__ */ l.jsx("br", {}),
         /* @__PURE__ */ l.jsx("span", { style: { fontSize: 11 }, children: e("entityList.emptyListHint") })
-      ] }) : /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: p.map((E, L) => {
+      ] }) : /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: p.map((E, T) => {
         var F, H;
-        const T = E.id ? i[E.id] : null, I = (F = T == null ? void 0 : T.attributes) == null ? void 0 : F.friendly_name, z = d === L, M = E.color || h, R = M ? M$(M) : null;
+        const L = E.id ? i[E.id] : null, I = (F = L == null ? void 0 : L.attributes) == null ? void 0 : F.friendly_name, z = d === T, M = E.color || h, R = M ? M$(M) : null;
         return /* @__PURE__ */ l.jsxs("div", { style: {
           border: `1px solid ${r ? "rgba(255,255,255,.07)" : "#f1f5f9"}`,
           borderRadius: 10,
@@ -105182,11 +105182,11 @@ function RPt({ cardId: n }) {
               }, children: E.id })
             ] }),
             /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: 2, flexShrink: 0 }, children: [
-              /* @__PURE__ */ l.jsx(Ew, { onClick: () => k(L), disabled: L === 0, children: /* @__PURE__ */ l.jsx(lr, { size: 12 }) }),
-              /* @__PURE__ */ l.jsx(Ew, { onClick: () => S(L), disabled: L === p.length - 1, children: /* @__PURE__ */ l.jsx(on, { size: 12 }) }),
-              /* @__PURE__ */ l.jsx(Ew, { onClick: () => u(z ? null : L), active: z, children: /* @__PURE__ */ l.jsx(rd, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Ew, { onClick: () => k(T), disabled: T === 0, children: /* @__PURE__ */ l.jsx(lr, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Ew, { onClick: () => S(T), disabled: T === p.length - 1, children: /* @__PURE__ */ l.jsx(on, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Ew, { onClick: () => u(z ? null : T), active: z, children: /* @__PURE__ */ l.jsx(rd, { size: 12 }) }),
               /* @__PURE__ */ l.jsx(Ew, { danger: !0, onClick: () => {
-                A(L), d === L && u(null);
+                A(T), d === T && u(null);
               }, children: /* @__PURE__ */ l.jsx(ct, { size: 12 }) })
             ] })
           ] }),
@@ -105197,7 +105197,7 @@ function RPt({ cardId: n }) {
             flexDirection: "column",
             gap: 10
           }, children: [
-            /* @__PURE__ */ l.jsx(kt, { label: e("entityList.fieldEntity"), children: /* @__PURE__ */ l.jsxs("button", { onClick: () => c(L), style: {
+            /* @__PURE__ */ l.jsx(kt, { label: e("entityList.fieldEntity"), children: /* @__PURE__ */ l.jsxs("button", { onClick: () => c(T), style: {
               display: "flex",
               alignItems: "center",
               gap: 8,
@@ -105220,12 +105220,12 @@ function RPt({ cardId: n }) {
               /* @__PURE__ */ l.jsx("span", { style: { fontSize: 10, color: "var(--amber)", fontWeight: 700 }, children: E.id ? e("entityField.change") : e("entityField.choose") })
             ] }) }),
             /* @__PURE__ */ l.jsxs("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }, children: [
-              /* @__PURE__ */ l.jsx(kt, { label: e("entityList.icon"), children: /* @__PURE__ */ l.jsx(Wd, { value: E.icon, onChange: (N) => b(L, "icon", N), dark: r }) }),
+              /* @__PURE__ */ l.jsx(kt, { label: e("entityList.icon"), children: /* @__PURE__ */ l.jsx(Wd, { value: E.icon, onChange: (N) => b(T, "icon", N), dark: r }) }),
               /* @__PURE__ */ l.jsx(kt, { label: e("entityList.customLabel"), children: /* @__PURE__ */ l.jsx(
                 "input",
                 {
                   value: E.label ?? "",
-                  onChange: (N) => b(L, "label", N.target.value),
+                  onChange: (N) => b(T, "label", N.target.value),
                   placeholder: I || e("entityList.customLabelPh"),
                   style: Tw
                 }
@@ -105236,7 +105236,7 @@ function RPt({ cardId: n }) {
                 "select",
                 {
                   value: E.format ?? "auto",
-                  onChange: (N) => b(L, "format", N.target.value),
+                  onChange: (N) => b(T, "format", N.target.value),
                   style: Tw,
                   children: m.map((N) => /* @__PURE__ */ l.jsx("option", { value: N.value, children: N.label }, N.value))
                 }
@@ -105248,7 +105248,7 @@ function RPt({ cardId: n }) {
                   min: 0,
                   max: 4,
                   value: E.decimals ?? 1,
-                  onChange: (N) => b(L, "decimals", parseInt(N.target.value)),
+                  onChange: (N) => b(T, "decimals", parseInt(N.target.value)),
                   style: Tw
                 }
               ) }),
@@ -105256,7 +105256,7 @@ function RPt({ cardId: n }) {
                 "input",
                 {
                   value: E.unit ?? "",
-                  onChange: (N) => b(L, "unit", N.target.value),
+                  onChange: (N) => b(T, "unit", N.target.value),
                   placeholder: "°C",
                   style: Tw
                 }
@@ -105266,7 +105266,7 @@ function RPt({ cardId: n }) {
               /* @__PURE__ */ l.jsx(
                 "button",
                 {
-                  onClick: () => b(L, "color", ""),
+                  onClick: () => b(T, "color", ""),
                   title: e("entityList.inheritFromCard"),
                   style: {
                     width: 28,
@@ -105288,7 +105288,7 @@ function RPt({ cardId: n }) {
                 return /* @__PURE__ */ l.jsx(
                   "button",
                   {
-                    onClick: () => b(L, "color", N),
+                    onClick: () => b(T, "color", N),
                     title: N,
                     style: {
                       width: 28,
@@ -105311,7 +105311,7 @@ function RPt({ cardId: n }) {
                 {
                   type: "color",
                   value: (H = E.color) != null && H.startsWith("#") ? E.color : "#6366f1",
-                  onChange: (N) => b(L, "color", N.target.value),
+                  onChange: (N) => b(T, "color", N.target.value),
                   style: {
                     width: 28,
                     height: 28,
@@ -105325,16 +105325,16 @@ function RPt({ cardId: n }) {
               )
             ] }) })
           ] })
-        ] }, L);
+        ] }, T);
       }) })
     ] }),
     /* @__PURE__ */ l.jsxs(Mt, { title: e("entityList.sectionAppearance"), collapsible: !0, defaultOpen: !1, children: [
-      /* @__PURE__ */ l.jsx(kt, { label: e("entityList.cardTitle"), children: /* @__PURE__ */ l.jsx(vg, { value: g, onChange: (E) => o((L) => ({ ...L, title: E })), placeholder: e("entityList.cardTitlePh") }) }),
+      /* @__PURE__ */ l.jsx(kt, { label: e("entityList.cardTitle"), children: /* @__PURE__ */ l.jsx(vg, { value: g, onChange: (E) => o((T) => ({ ...T, title: E })), placeholder: e("entityList.cardTitlePh") }) }),
       /* @__PURE__ */ l.jsx(kt, { label: e("entityList.displayMode"), children: /* @__PURE__ */ l.jsx(
         KKe,
         {
           value: f || "full",
-          onChange: (E) => o((L) => ({ ...L, displayMode: E })),
+          onChange: (E) => o((T) => ({ ...T, displayMode: E })),
           options: y
         }
       ) }),
@@ -105360,11 +105360,11 @@ function RPt({ cardId: n }) {
           }
         ),
         Gue.map((E) => {
-          const L = h === E;
+          const T = h === E;
           return /* @__PURE__ */ l.jsx(
             "button",
             {
-              onClick: () => o((T) => ({ ...T, cardColor: E })),
+              onClick: () => o((L) => ({ ...L, cardColor: E })),
               title: E,
               style: {
                 width: 28,
@@ -105372,10 +105372,10 @@ function RPt({ cardId: n }) {
                 borderRadius: "50%",
                 cursor: "pointer",
                 background: E,
-                border: L ? "2px solid var(--amber)" : "2px solid transparent",
-                boxShadow: L ? "0 0 0 2px rgba(251,191,36,.3)" : "none",
+                border: T ? "2px solid var(--amber)" : "2px solid transparent",
+                boxShadow: T ? "0 0 0 2px rgba(251,191,36,.3)" : "none",
                 padding: 0,
-                transform: L ? "scale(1.15)" : "scale(1)",
+                transform: T ? "scale(1.15)" : "scale(1)",
                 transition: "transform .12s"
               }
             },
@@ -105387,7 +105387,7 @@ function RPt({ cardId: n }) {
           {
             type: "color",
             value: h != null && h.startsWith("#") ? h : "#6366f1",
-            onChange: (E) => o((L) => ({ ...L, cardColor: E.target.value })),
+            onChange: (E) => o((T) => ({ ...T, cardColor: E.target.value })),
             style: {
               width: 28,
               height: 28,
@@ -108730,14 +108730,14 @@ var XJe = function(e) {
     margin: 0
   }, u), C = !tt(y), j = C ? y : "", P = Je("recharts-default-tooltip", g), E = Je("recharts-tooltip-label", m);
   C && v && p !== void 0 && p !== null && (j = v(y, p));
-  var L = x ? {
+  var T = x ? {
     role: "status",
     "aria-live": "assertive"
   } : {};
   return /* @__PURE__ */ q.createElement("div", NK({
     className: P,
     style: k
-  }, L), /* @__PURE__ */ q.createElement("p", {
+  }, T), /* @__PURE__ */ q.createElement("p", {
     className: E,
     style: S
   }, /* @__PURE__ */ q.isValidElement(j) ? j : "".concat(j)), A());
@@ -109409,8 +109409,8 @@ var tet = /* @__PURE__ */ O.forwardRef(function(n, e) {
   var j = O.useState({
     containerWidth: a.width,
     containerHeight: a.height
-  }), P = PNt(j, 2), E = P[0], L = P[1], T = O.useCallback(function(z, M) {
-    L(function(R) {
+  }), P = PNt(j, 2), E = P[0], T = P[1], L = O.useCallback(function(z, M) {
+    T(function(R) {
       var F = Math.round(z), H = Math.round(M);
       return R.containerWidth === F && R.containerHeight === H ? R : {
         containerWidth: F,
@@ -109421,17 +109421,17 @@ var tet = /* @__PURE__ */ O.forwardRef(function(n, e) {
   O.useEffect(function() {
     var z = function($) {
       var _, V = $[0].contentRect, Q = V.width, U = V.height;
-      T(Q, U), (_ = C.current) === null || _ === void 0 || _.call(C, Q, U);
+      L(Q, U), (_ = C.current) === null || _ === void 0 || _.call(C, Q, U);
     };
     y > 0 && (z = eet(z, y, {
       trailing: !0,
       leading: !1
     }));
     var M = new ResizeObserver(z), R = S.current.getBoundingClientRect(), F = R.width, H = R.height;
-    return T(F, H), M.observe(S.current), function() {
+    return L(F, H), M.observe(S.current), function() {
       M.disconnect();
     };
-  }, [T, y]);
+  }, [L, y]);
   var I = O.useMemo(function() {
     var z = E.containerWidth, M = E.containerHeight;
     if (z < 0 || M < 0)
@@ -109870,9 +109870,9 @@ var iet = /[ \f\n\r\t\v\u2028\u2029]+/, aet = function(e) {
     }).wordsWithComputedWidth, N = f(H), $ = N.length > s || m(N).width > Number(a);
     return [$, N];
   }, b = 0, x = h.length - 1, A = 0, k; b <= x && A <= h.length - 1; ) {
-    var S = Math.floor((b + x) / 2), C = S - 1, j = v(C), P = ghe(j, 2), E = P[0], L = P[1], T = v(S), I = ghe(T, 1), z = I[0];
+    var S = Math.floor((b + x) / 2), C = S - 1, j = v(C), P = ghe(j, 2), E = P[0], T = P[1], L = v(S), I = ghe(L, 1), z = I[0];
     if (!E && !z && (b = S + 1), E && z && (x = S - 1), !E && z) {
-      k = L;
+      k = T;
       break;
     }
     A++;
@@ -109917,7 +109917,7 @@ var iet = /[ \f\n\r\t\v\u2028\u2029]+/, aet = function(e) {
   }, [x.breakAll, x.children, x.maxLines, h, x.style, x.width]), k = x.dx, S = x.dy, C = x.angle, j = x.className, P = x.breakAll, E = fhe(x, nQt);
   if (!sr(i) || !sr(o))
     return null;
-  var L = i + (Ce(k) ? k : 0), T = o + (Ce(S) ? S : 0), I;
+  var T = i + (Ce(k) ? k : 0), L = o + (Ce(S) ? S : 0), I;
   switch (y) {
     case "start":
       I = rU("calc(".concat(u, ")"));
@@ -109934,9 +109934,9 @@ var iet = /[ \f\n\r\t\v\u2028\u2029]+/, aet = function(e) {
     var M = A[0].width, R = x.width;
     z.push("scale(".concat((Ce(R) ? R / M : 1) / M, ")"));
   }
-  return C && z.push("rotate(".concat(C, ", ").concat(L, ", ").concat(T, ")")), z.length && (E.transform = z.join(" ")), /* @__PURE__ */ q.createElement("text", _K({}, ze(E, !0), {
-    x: L,
-    y: T,
+  return C && z.push("rotate(".concat(C, ", ").concat(T, ", ").concat(L, ")")), z.length && (E.transform = z.join(" ")), /* @__PURE__ */ q.createElement("text", _K({}, ze(E, !0), {
+    x: T,
+    y: L,
     className: Je("recharts-text", j),
     textAnchor: g,
     fill: b.includes("url") ? vhe : b
@@ -109946,7 +109946,7 @@ var iet = /[ \f\n\r\t\v\u2028\u2029]+/, aet = function(e) {
       // duplicate words will cause duplicate keys
       // eslint-disable-next-line react/no-array-index-key
       /* @__PURE__ */ q.createElement("tspan", {
-        x: L,
+        x: T,
         dy: H === 0 ? I : c,
         key: "".concat(N, "-").concat(H)
       }, N)
@@ -110808,16 +110808,16 @@ function iWt(n) {
     h = Xx(h);
     var g = h.fill, m = h.align, y = h.sign, v = h.symbol, b = h.zero, x = h.width, A = h.comma, k = h.precision, S = h.trim, C = h.type;
     C === "n" ? (A = !0, C = "g") : zhe[C] || (k === void 0 && (k = 12), S = !0, C = "g"), (b || g === "0" && m === "=") && (b = !0, g = "0", m = "=");
-    var j = (f && f.prefix !== void 0 ? f.prefix : "") + (v === "$" ? r : v === "#" && /[boxX]/.test(C) ? "0" + C.toLowerCase() : ""), P = (v === "$" ? i : /[%p]/.test(C) ? s : "") + (f && f.suffix !== void 0 ? f.suffix : ""), E = zhe[C], L = /[defgprs%]/.test(C);
+    var j = (f && f.prefix !== void 0 ? f.prefix : "") + (v === "$" ? r : v === "#" && /[boxX]/.test(C) ? "0" + C.toLowerCase() : ""), P = (v === "$" ? i : /[%p]/.test(C) ? s : "") + (f && f.suffix !== void 0 ? f.suffix : ""), E = zhe[C], T = /[defgprs%]/.test(C);
     k = k === void 0 ? 6 : /[gprs]/.test(C) ? Math.max(1, Math.min(21, k)) : Math.max(0, Math.min(20, k));
-    function T(I) {
+    function L(I) {
       var z = j, M = P, R, F, H;
       if (C === "c")
         M = E(I) + M, I = "";
       else {
         I = +I;
         var N = I < 0 || 1 / I < 0;
-        if (I = isNaN(I) ? d : E(Math.abs(I), k), S && (I = nWt(I)), N && +I == 0 && y !== "+" && (N = !1), z = (N ? y === "(" ? y : c : y === "-" || y === "(" ? "" : y) + z, M = (C === "s" && !isNaN(I) && cQ !== void 0 ? Dhe[8 + cQ / 3] : "") + M + (N && y === "(" ? ")" : ""), L) {
+        if (I = isNaN(I) ? d : E(Math.abs(I), k), S && (I = nWt(I)), N && +I == 0 && y !== "+" && (N = !1), z = (N ? y === "(" ? y : c : y === "-" || y === "(" ? "" : y) + z, M = (C === "s" && !isNaN(I) && cQ !== void 0 ? Dhe[8 + cQ / 3] : "") + M + (N && y === "(" ? ")" : ""), T) {
           for (R = -1, F = I.length; ++R < F; )
             if (H = I.charCodeAt(R), 48 > H || H > 57) {
               M = (H === 46 ? a + I.slice(R + 1) : I.slice(R)) + M, I = I.slice(0, R);
@@ -110843,9 +110843,9 @@ function iWt(n) {
       }
       return o(I);
     }
-    return T.toString = function() {
+    return L.toString = function() {
       return h + "";
-    }, T;
+    }, L;
   }
   function p(h, f) {
     var g = Math.max(-8, Math.min(8, Math.floor(wy(f) / 3))) * 3, m = Math.pow(10, -g), y = u((h = Xx(h), h.type = "f", h), { suffix: Dhe[8 + g / 3] });
@@ -111452,8 +111452,8 @@ function IWt(n) {
     Z: M$t,
     "%": Jhe
   }, S = {
-    a: L,
-    A: T,
+    a: T,
+    A: L,
     b: I,
     B: z,
     c: M,
@@ -111488,28 +111488,28 @@ function IWt(n) {
   A.x = C(r, A), A.X = C(i, A), A.c = C(e, A), k.x = C(r, k), k.X = C(i, k), k.c = C(e, k);
   function C(ce, te) {
     return function(oe) {
-      var ie = [], ke = -1, B = 0, Y = ce.length, K, D, W;
-      for (oe instanceof Date || (oe = /* @__PURE__ */ new Date(+oe)); ++ke < Y; )
+      var ie = [], ke = -1, B = 0, J = ce.length, K, D, W;
+      for (oe instanceof Date || (oe = /* @__PURE__ */ new Date(+oe)); ++ke < J; )
         ce.charCodeAt(ke) === 37 && (ie.push(ce.slice(B, ke)), (D = qhe[K = ce.charAt(++ke)]) != null ? K = ce.charAt(++ke) : D = K === "e" ? " " : "0", (W = te[K]) && (K = W(oe, D)), ie.push(K), B = ke + 1);
       return ie.push(ce.slice(B, ke)), ie.join("");
     };
   }
   function j(ce, te) {
     return function(oe) {
-      var ie = A2(1900, void 0, 1), ke = P(ie, ce, oe += "", 0), B, Y;
+      var ie = A2(1900, void 0, 1), ke = P(ie, ce, oe += "", 0), B, J;
       if (ke != oe.length) return null;
       if ("Q" in ie) return new Date(ie.Q);
       if ("s" in ie) return new Date(ie.s * 1e3 + ("L" in ie ? ie.L : 0));
       if (te && !("Z" in ie) && (ie.Z = 0), "p" in ie && (ie.H = ie.H % 12 + ie.p * 12), ie.m === void 0 && (ie.m = "q" in ie ? ie.q : 0), "V" in ie) {
         if (ie.V < 1 || ie.V > 53) return null;
-        "w" in ie || (ie.w = 1), "Z" in ie ? (B = dU(A2(ie.y, 0, 1)), Y = B.getUTCDay(), B = Y > 4 || Y === 0 ? pQ.ceil(B) : pQ(B), B = oV.offset(B, (ie.V - 1) * 7), ie.y = B.getUTCFullYear(), ie.m = B.getUTCMonth(), ie.d = B.getUTCDate() + (ie.w + 6) % 7) : (B = cU(A2(ie.y, 0, 1)), Y = B.getDay(), B = Y > 4 || Y === 0 ? uQ.ceil(B) : uQ(B), B = lk.offset(B, (ie.V - 1) * 7), ie.y = B.getFullYear(), ie.m = B.getMonth(), ie.d = B.getDate() + (ie.w + 6) % 7);
-      } else ("W" in ie || "U" in ie) && ("w" in ie || (ie.w = "u" in ie ? ie.u % 7 : "W" in ie ? 1 : 0), Y = "Z" in ie ? dU(A2(ie.y, 0, 1)).getUTCDay() : cU(A2(ie.y, 0, 1)).getDay(), ie.m = 0, ie.d = "W" in ie ? (ie.w + 6) % 7 + ie.W * 7 - (Y + 5) % 7 : ie.w + ie.U * 7 - (Y + 6) % 7);
+        "w" in ie || (ie.w = 1), "Z" in ie ? (B = dU(A2(ie.y, 0, 1)), J = B.getUTCDay(), B = J > 4 || J === 0 ? pQ.ceil(B) : pQ(B), B = oV.offset(B, (ie.V - 1) * 7), ie.y = B.getUTCFullYear(), ie.m = B.getUTCMonth(), ie.d = B.getUTCDate() + (ie.w + 6) % 7) : (B = cU(A2(ie.y, 0, 1)), J = B.getDay(), B = J > 4 || J === 0 ? uQ.ceil(B) : uQ(B), B = lk.offset(B, (ie.V - 1) * 7), ie.y = B.getFullYear(), ie.m = B.getMonth(), ie.d = B.getDate() + (ie.w + 6) % 7);
+      } else ("W" in ie || "U" in ie) && ("w" in ie || (ie.w = "u" in ie ? ie.u % 7 : "W" in ie ? 1 : 0), J = "Z" in ie ? dU(A2(ie.y, 0, 1)).getUTCDay() : cU(A2(ie.y, 0, 1)).getDay(), ie.m = 0, ie.d = "W" in ie ? (ie.w + 6) % 7 + ie.W * 7 - (J + 5) % 7 : ie.w + ie.U * 7 - (J + 6) % 7);
       return "Z" in ie ? (ie.H += ie.Z / 100 | 0, ie.M += ie.Z % 100, dU(ie)) : cU(ie);
     };
   }
   function P(ce, te, oe, ie) {
-    for (var ke = 0, B = te.length, Y = oe.length, K, D; ke < B; ) {
-      if (ie >= Y) return -1;
+    for (var ke = 0, B = te.length, J = oe.length, K, D; ke < B; ) {
+      if (ie >= J) return -1;
       if (K = te.charCodeAt(ke++), K === 37) {
         if (K = te.charAt(ke++), D = S[K in qhe ? te.charAt(ke++) : K], !D || (ie = D(ce, oe, ie)) < 0) return -1;
       } else if (K != oe.charCodeAt(ie++))
@@ -111521,11 +111521,11 @@ function IWt(n) {
     var ie = u.exec(te.slice(oe));
     return ie ? (ce.p = p.get(ie[0].toLowerCase()), oe + ie[0].length) : -1;
   }
-  function L(ce, te, oe) {
+  function T(ce, te, oe) {
     var ie = g.exec(te.slice(oe));
     return ie ? (ce.w = m.get(ie[0].toLowerCase()), oe + ie[0].length) : -1;
   }
-  function T(ce, te, oe) {
+  function L(ce, te, oe) {
     var ie = h.exec(te.slice(oe));
     return ie ? (ce.w = f.get(ie[0].toLowerCase()), oe + ie[0].length) : -1;
   }
@@ -112351,19 +112351,19 @@ var jl = /* @__PURE__ */ function() {
     for (; !i[0] && i.length > 1; ) i.shift();
   }
   return function(i, a, o, s) {
-    var c, d, u, p, h, f, g, m, y, v, b, x, A, k, S, C, j, P, E = i.constructor, L = i.s == a.s ? 1 : -1, T = i.d, I = a.d;
+    var c, d, u, p, h, f, g, m, y, v, b, x, A, k, S, C, j, P, E = i.constructor, T = i.s == a.s ? 1 : -1, L = i.d, I = a.d;
     if (!i.s) return new E(i);
     if (!a.s) throw Error(ao + "Division by zero");
-    for (d = i.e - a.e, j = I.length, S = T.length, g = new E(L), m = g.d = [], u = 0; I[u] == (T[u] || 0); ) ++u;
-    if (I[u] > (T[u] || 0) && --d, o == null ? x = o = E.precision : s ? x = o + (Xn(i) - Xn(a)) + 1 : x = o, x < 0) return new E(0);
+    for (d = i.e - a.e, j = I.length, S = L.length, g = new E(T), m = g.d = [], u = 0; I[u] == (L[u] || 0); ) ++u;
+    if (I[u] > (L[u] || 0) && --d, o == null ? x = o = E.precision : s ? x = o + (Xn(i) - Xn(a)) + 1 : x = o, x < 0) return new E(0);
     if (x = x / dn + 2 | 0, u = 0, j == 1)
       for (p = 0, I = I[0], x++; (u < S || p) && x--; u++)
-        A = p * hr + (T[u] || 0), m[u] = A / I | 0, p = A % I | 0;
+        A = p * hr + (L[u] || 0), m[u] = A / I | 0, p = A % I | 0;
     else {
-      for (p = hr / (I[0] + 1) | 0, p > 1 && (I = n(I, p), T = n(T, p), j = I.length, S = T.length), k = j, y = T.slice(0, j), v = y.length; v < j; ) y[v++] = 0;
+      for (p = hr / (I[0] + 1) | 0, p > 1 && (I = n(I, p), L = n(L, p), j = I.length, S = L.length), k = j, y = L.slice(0, j), v = y.length; v < j; ) y[v++] = 0;
       P = I.slice(), P.unshift(0), C = I[0], I[1] >= hr / 2 && ++C;
       do
-        p = 0, c = e(I, y, j, v), c < 0 ? (b = y[0], j != v && (b = b * hr + (y[1] || 0)), p = b / C | 0, p > 1 ? (p >= hr && (p = hr - 1), h = n(I, p), f = h.length, v = y.length, c = e(h, y, f, v), c == 1 && (p--, r(h, j < f ? P : I, f))) : (p == 0 && (c = p = 1), h = I.slice()), f = h.length, f < v && h.unshift(0), r(y, h, v), c == -1 && (v = y.length, c = e(I, y, j, v), c < 1 && (p++, r(y, j < v ? P : I, v))), v = y.length) : c === 0 && (p++, y = [0]), m[u++] = p, c && y[0] ? y[v++] = T[k] || 0 : (y = [T[k]], v = 1);
+        p = 0, c = e(I, y, j, v), c < 0 ? (b = y[0], j != v && (b = b * hr + (y[1] || 0)), p = b / C | 0, p > 1 ? (p >= hr && (p = hr - 1), h = n(I, p), f = h.length, v = y.length, c = e(h, y, f, v), c == 1 && (p--, r(h, j < f ? P : I, f))) : (p == 0 && (c = p = 1), h = I.slice()), f = h.length, f < v && h.unshift(0), r(y, h, v), c == -1 && (v = y.length, c = e(I, y, j, v), c < 1 && (p++, r(y, j < v ? P : I, v))), v = y.length) : c === 0 && (p++, y = [0]), m[u++] = p, c && y[0] ? y[v++] = L[k] || 0 : (y = [L[k]], v = 1);
       while ((k++ < S || y[0] !== void 0) && x--);
     }
     return m[0] || m.shift(), g.e = d, Xt(g, s ? o + Xn(g) + 1 : o);
@@ -112956,20 +112956,20 @@ var zg = /* @__PURE__ */ function(n) {
         } else
           C = j = k;
         if (o === "vertical") {
-          var E = p.scale, L = x + a, T = L + s, I = L - s, z = E(A - C), M = E(A + j);
+          var E = p.scale, T = x + a, L = T + s, I = T - s, z = E(A - C), M = E(A + j);
           S.push({
             x1: M,
-            y1: T,
+            y1: L,
             x2: M,
             y2: I
           }), S.push({
             x1: z,
-            y1: L,
+            y1: T,
             x2: M,
-            y2: L
+            y2: T
           }), S.push({
             x1: z,
-            y1: T,
+            y1: L,
             x2: z,
             y2: I
           });
@@ -113798,15 +113798,15 @@ var vQ = Math.PI / 180, E_t = function(e) {
       var C = S, j = C_t(C, 2);
       d = j[0], u = j[1];
     }
-    var P = ltt(x, o), E = P.realScaleType, L = P.scale;
-    L.domain(A).range(S), ctt(L);
-    var T = ptt(L, Js(Js({}, x), {}, {
+    var P = ltt(x, o), E = P.realScaleType, T = P.scale;
+    T.domain(A).range(S), ctt(T);
+    var L = ptt(T, Js(Js({}, x), {}, {
       realScaleType: E
-    })), I = Js(Js(Js({}, x), T), {}, {
+    })), I = Js(Js(Js({}, x), L), {}, {
       range: S,
       radius: m,
       realScaleType: E,
-      scale: L,
+      scale: T,
       cx: p,
       cy: h,
       innerRadius: g,
@@ -114575,7 +114575,7 @@ var kqt = function(e, r) {
       isExternal: !0,
       cornerRadius: s,
       cornerIsExternal: d
-    }), j = C.circleTangency, P = C.lineTangency, E = C.theta, L = Ww({
+    }), j = C.circleTangency, P = C.lineTangency, E = C.theta, T = Ww({
       cx: r,
       cy: i,
       radius: a,
@@ -114584,11 +114584,11 @@ var kqt = function(e, r) {
       isExternal: !0,
       cornerRadius: s,
       cornerIsExternal: d
-    }), T = L.circleTangency, I = L.lineTangency, z = L.theta, M = d ? Math.abs(u - p) : Math.abs(u - p) - E - z;
+    }), L = T.circleTangency, I = T.lineTangency, z = T.theta, M = d ? Math.abs(u - p) : Math.abs(u - p) - E - z;
     if (M < 0 && s === 0)
       return "".concat(S, "L").concat(r, ",").concat(i, "Z");
     S += "L".concat(I.x, ",").concat(I.y, `
-      A`).concat(s, ",").concat(s, ",0,0,").concat(+(h < 0), ",").concat(T.x, ",").concat(T.y, `
+      A`).concat(s, ",").concat(s, ",0,0,").concat(+(h < 0), ",").concat(L.x, ",").concat(L.y, `
       A`).concat(a, ",").concat(a, ",0,").concat(+(M > 180), ",").concat(+(h > 0), ",").concat(j.x, ",").concat(j.y, `
       A`).concat(s, ",").concat(s, ",0,0,").concat(+(h < 0), ",").concat(P.x, ",").concat(P.y, "Z");
   } else
@@ -115818,10 +115818,10 @@ var qr = /* @__PURE__ */ function(n) {
             duration: x,
             easing: k
           }), x]);
-        var L = Bfe(E, x, k), T = po(po(po({}, P.style), S), {}, {
-          transition: L
+        var T = Bfe(E, x, k), L = po(po(po({}, P.style), S), {}, {
+          transition: T
         });
-        return [].concat(fU(y), [T, x, j]).filter(IUt);
+        return [].concat(fU(y), [L, x, j]).filter(IUt);
       };
       return this.manager.start([d].concat(fU(s.reduce(g, [p, Math.max(f, c)])), [a.onAnimationEnd]));
     }
@@ -117555,7 +117555,7 @@ var ec = /* @__PURE__ */ function(n) {
             });
             v.push(P), x = P.endAngle;
           } else {
-            var E = A.endAngle, L = A.startAngle, T = ht(0, E - L), I = T(y), z = en(en({}, A), {}, {
+            var E = A.endAngle, T = A.startAngle, L = ht(0, E - T), I = L(y), z = en(en({}, A), {}, {
               startAngle: x + C,
               endAngle: x + I + C
             });
@@ -117733,17 +117733,17 @@ _a(ec, "getComposedData", function(n) {
   var x = a.filter(function(P) {
     return vt(P, b, 0) !== 0;
   }).length, A = (v >= 360 ? x : x - 1) * d, k = v - x * g - A, S = a.reduce(function(P, E) {
-    var L = vt(E, b, 0);
-    return P + (Ce(L) ? L : 0);
+    var T = vt(E, b, 0);
+    return P + (Ce(T) ? T : 0);
   }, 0), C;
   if (S > 0) {
     var j;
     C = a.map(function(P, E) {
-      var L = vt(P, b, 0), T = vt(P, p, E), I = (Ce(L) ? L : 0) / S, z;
-      E ? z = j.endAngle + kr(y) * d * (L !== 0 ? 1 : 0) : z = s;
-      var M = z + kr(y) * ((L !== 0 ? g : 0) + I * k), R = (z + M) / 2, F = (m.innerRadius + m.outerRadius) / 2, H = [{
-        name: T,
-        value: L,
+      var T = vt(P, b, 0), L = vt(P, p, E), I = (Ce(T) ? T : 0) / S, z;
+      E ? z = j.endAngle + kr(y) * d * (T !== 0 ? 1 : 0) : z = s;
+      var M = z + kr(y) * ((T !== 0 ? g : 0) + I * k), R = (z + M) / 2, F = (m.innerRadius + m.outerRadius) / 2, H = [{
+        name: L,
+        value: T,
         payload: P,
         dataKey: b,
         type: f
@@ -117751,7 +117751,7 @@ _a(ec, "getComposedData", function(n) {
       return j = en(en(en({
         percent: I,
         cornerRadius: o,
-        name: T,
+        name: L,
         tooltipPayload: H,
         midAngle: R,
         middleRadius: F,
@@ -118457,17 +118457,17 @@ tg(uk, "getComposedData", function(n) {
     return null;
   var m = o.cx, y = o.cy, v = r.layout, b = e.props, x = b.children, A = b.minPointSize, k = v === "radial" ? o : i, S = u ? k.scale.domain() : null, C = htt({
     numericAxis: k
-  }), j = Vr(x, Eg), P = c.map(function(E, L) {
-    var T, I, z, M, R, F;
-    if (u ? T = utt(u[f + L], S) : (T = vt(E, d), Array.isArray(T) || (T = [C, T])), v === "radial") {
+  }), j = Vr(x, Eg), P = c.map(function(E, T) {
+    var L, I, z, M, R, F;
+    if (u ? L = utt(u[f + T], S) : (L = vt(E, d), Array.isArray(L) || (L = [C, L])), v === "radial") {
       I = mQ({
         axis: i,
         ticks: a,
         bandSize: h,
         offset: g.offset,
         entry: E,
-        index: L
-      }), R = o.scale(T[1]), M = o.scale(T[0]), z = I + g.size;
+        index: T
+      }), R = o.scale(L[1]), M = o.scale(L[0]), z = I + g.size;
       var H = R - M;
       if (Math.abs(A) > 0 && Math.abs(H) < Math.abs(A)) {
         var N = kr(H || A) * (Math.abs(A) - Math.abs(H));
@@ -118484,13 +118484,13 @@ tg(uk, "getComposedData", function(n) {
         }
       };
     } else {
-      I = i.scale(T[0]), z = i.scale(T[1]), M = mQ({
+      I = i.scale(L[0]), z = i.scale(L[1]), M = mQ({
         axis: o,
         ticks: s,
         bandSize: h,
         offset: g.offset,
         entry: E,
-        index: L
+        index: T
       }), R = M + g.size;
       var $ = z - I;
       if (Math.abs(A) > 0 && Math.abs($) < Math.abs(A)) {
@@ -118500,14 +118500,14 @@ tg(uk, "getComposedData", function(n) {
     }
     return pr(pr(pr(pr({}, E), F), {}, {
       payload: E,
-      value: u ? T : T[1],
+      value: u ? L : L[1],
       cx: m,
       cy: y,
       innerRadius: I,
       outerRadius: z,
       startAngle: M,
       endAngle: R
-    }, j && j[L] && j[L].props), {}, {
+    }, j && j[T] && j[T].props), {}, {
       tooltipPayload: [Ure(e, E)],
       tooltipPosition: Ct(m, y, (I + z) / 2, (M + R) / 2)
     });
@@ -119441,9 +119441,9 @@ var Ud = /* @__PURE__ */ function(n) {
               height: P
             });
           }
-          var E = ht(0, v.width), L = E(m);
+          var E = ht(0, v.width), T = E(m);
           return Nn(Nn({}, v), {}, {
-            width: L
+            width: T
           });
         });
         return /* @__PURE__ */ q.createElement(Ve, null, i.renderRectanglesStatically(y));
@@ -119567,19 +119567,19 @@ Rc(Ud, "getComposedData", function(n) {
     return null;
   var m = e.layout, y = r.type.defaultProps, v = y !== void 0 ? Nn(Nn({}, y), r.props) : r.props, b = v.dataKey, x = v.children, A = v.minPointSize, k = m === "horizontal" ? s : o, S = u ? k.scale.domain() : null, C = htt({
     numericAxis: k
-  }), j = Vr(x, Eg), P = h.map(function(E, L) {
-    var T, I, z, M, R, F;
-    u ? T = utt(u[p + L], S) : (T = vt(E, b), Array.isArray(T) || (T = [C, T]));
-    var H = aYt(A, tnt.defaultProps.minPointSize)(T[1], L);
+  }), j = Vr(x, Eg), P = h.map(function(E, T) {
+    var L, I, z, M, R, F;
+    u ? L = utt(u[p + T], S) : (L = vt(E, b), Array.isArray(L) || (L = [C, L]));
+    var H = aYt(A, tnt.defaultProps.minPointSize)(L[1], T);
     if (m === "horizontal") {
-      var N, $ = [s.scale(T[0]), s.scale(T[1])], _ = $[0], V = $[1];
+      var N, $ = [s.scale(L[0]), s.scale(L[1])], _ = $[0], V = $[1];
       I = mQ({
         axis: o,
         ticks: c,
         bandSize: a,
         offset: g.offset,
         entry: E,
-        index: L
+        index: T
       }), z = (N = V ?? _) !== null && N !== void 0 ? N : void 0, M = g.size;
       var Q = _ - V;
       if (R = Number.isNaN(Q) ? 0 : Q, F = {
@@ -119592,14 +119592,14 @@ Rc(Ud, "getComposedData", function(n) {
         z -= U, R += U;
       }
     } else {
-      var Z = [o.scale(T[0]), o.scale(T[1])], re = Z[0], fe = Z[1];
+      var Z = [o.scale(L[0]), o.scale(L[1])], re = Z[0], fe = Z[1];
       if (I = re, z = mQ({
         axis: s,
         ticks: d,
         bandSize: a,
         offset: g.offset,
         entry: E,
-        index: L
+        index: T
       }), M = fe - re, R = g.size, F = {
         x: o.x,
         y: z,
@@ -119615,10 +119615,10 @@ Rc(Ud, "getComposedData", function(n) {
       y: z,
       width: M,
       height: R,
-      value: u ? T : T[1],
+      value: u ? L : L[1],
       payload: E,
       background: F
-    }, j && j[L] && j[L].props), {}, {
+    }, j && j[T] && j[T].props), {}, {
       tooltipPayload: [Ure(r, E)],
       tooltipPosition: {
         x: I + M / 2,
@@ -119702,7 +119702,7 @@ var pk = function(e, r, i, a, o) {
     bottomMirror: c - i.bottom
   }, f = !!Rn(u, Ud);
   return p.reduce(function(g, m) {
-    var y = r[m], v = y.orientation, b = y.domain, x = y.padding, A = x === void 0 ? {} : x, k = y.mirror, S = y.reversed, C = "".concat(v).concat(k ? "Mirror" : ""), j, P, E, L, T;
+    var y = r[m], v = y.orientation, b = y.domain, x = y.padding, A = x === void 0 ? {} : x, k = y.mirror, S = y.reversed, C = "".concat(v).concat(k ? "Mirror" : ""), j, P, E, T, L;
     if (y.type === "number" && (y.padding === "gap" || y.padding === "no-gap")) {
       var I = b[1] - b[0], z = 1 / 0, M = y.categoricalDomain.sort(mTt);
       if (M.forEach(function(Z, re) {
@@ -119721,16 +119721,16 @@ var pk = function(e, r, i, a, o) {
     var Q = ptt(_, yo(yo({}, y), {}, {
       realScaleType: V
     }));
-    a === "xAxis" ? (T = v === "top" && !k || v === "bottom" && k, E = i.left, L = h[C] - T * y.height) : a === "yAxis" && (T = v === "left" && !k || v === "right" && k, E = h[C] - T * y.width, L = i.top);
+    a === "xAxis" ? (L = v === "top" && !k || v === "bottom" && k, E = i.left, T = h[C] - L * y.height) : a === "yAxis" && (L = v === "left" && !k || v === "right" && k, E = h[C] - L * y.width, T = i.top);
     var U = yo(yo(yo({}, y), Q), {}, {
       realScaleType: V,
       x: E,
-      y: L,
+      y: T,
       scale: _,
       width: a === "xAxis" ? i.width : y.width,
       height: a === "yAxis" ? i.height : y.height
     });
-    return U.bandSize = yQ(U, Q), !y.hide && a === "xAxis" ? h[C] += (T ? -1 : 1) * U.height : y.hide || (h[C] += (T ? -1 : 1) * U.width), yo(yo({}, g), {}, xV({}, m, U));
+    return U.bandSize = yQ(U, Q), !y.hide && a === "xAxis" ? h[C] += (L ? -1 : 1) * U.height : y.hide || (h[C] += (L ? -1 : 1) * U.width), yo(yo({}, g), {}, xV({}, m, U));
   }, {});
 }, ant = function(e, r) {
   var i = e.x, a = e.y, o = r.x, s = r.y;
@@ -120141,7 +120141,7 @@ function lJt(n) {
   }), m = sr(e), y = sr(r), v = i && i.length === 2, b = sJt(g, m, y, v, f, n.position, p.orientation, h.orientation, n);
   if (!b)
     return null;
-  var x = tJt(b, 2), A = x[0], k = A.x, S = A.y, C = x[1], j = C.x, P = C.y, E = Fs(n, "hidden") ? "url(#".concat(u, ")") : void 0, L = Tge(Tge({
+  var x = tJt(b, 2), A = x[0], k = A.x, S = A.y, C = x[1], j = C.x, P = C.y, E = Fs(n, "hidden") ? "url(#".concat(u, ")") : void 0, T = Tge(Tge({
     clipPath: E
   }, ze(n, !0)), {}, {
     x1: k,
@@ -120151,7 +120151,7 @@ function lJt(n) {
   });
   return /* @__PURE__ */ q.createElement(Ve, {
     className: Je("recharts-reference-line", c)
-  }, oJt(s, L), ir.renderCallByParent(n, bYt({
+  }, oJt(s, T), ir.renderCallByParent(n, bYt({
     x1: k,
     y1: S,
     x2: j,
@@ -121327,15 +121327,15 @@ function Snt(n) {
     to(Array.isArray(E), "horizontalCoordinatesGenerator should return Array but instead it returned [".concat(Sg(E), "]")), Array.isArray(E) && (C = E);
   }
   if ((!j || !j.length) && We(k)) {
-    var L = b && b.length, T = k({
+    var T = b && b.length, L = k({
       xAxis: x ? ii(ii({}, x), {}, {
-        ticks: L ? b : x.ticks
+        ticks: T ? b : x.ticks
       }) : void 0,
       width: c,
       height: d,
       offset: u
-    }, L ? !0 : y);
-    to(Array.isArray(T), "verticalCoordinatesGenerator should return Array but instead it returned [".concat(Sg(T), "]")), Array.isArray(T) && (j = T);
+    }, T ? !0 : y);
+    to(Array.isArray(L), "verticalCoordinatesGenerator should return Array but instead it returned [".concat(Sg(L), "]")), Array.isArray(L) && (j = L);
   }
   return /* @__PURE__ */ q.createElement("g", {
     className: "recharts-cartesian-grid"
@@ -121708,16 +121708,16 @@ var D0 = /* @__PURE__ */ function(n) {
           });
           return o.renderCurveStatically(j, i, a);
         }
-        var P = ht(0, A), E = P(S), L;
+        var P = ht(0, A), E = P(S), T;
         if (d) {
-          var T = "".concat(d).split(/[,\s]+/gim).map(function(I) {
+          var L = "".concat(d).split(/[,\s]+/gim).map(function(I) {
             return parseFloat(I);
           });
-          L = o.getStrokeDasharray(E, A, T);
+          T = o.getStrokeDasharray(E, A, L);
         } else
-          L = o.generateSimpleStrokeDasharray(A, E);
+          T = o.generateSimpleStrokeDasharray(A, E);
         return o.renderCurveStatically(c, i, a, {
-          strokeDasharray: L
+          strokeDasharray: T
         });
       });
     }
@@ -121736,7 +121736,7 @@ var D0 = /* @__PURE__ */ function(n) {
       var b = this.state.isAnimationFinished, x = c.length === 1, A = Je("recharts-line", d), k = u && u.allowDataOverflow, S = p && p.allowDataOverflow, C = k || S, j = tt(v) ? this.id : v, P = (i = ze(s, !1)) !== null && i !== void 0 ? i : {
         r: 3,
         strokeWidth: 2
-      }, E = P.r, L = E === void 0 ? 3 : E, T = P.strokeWidth, I = T === void 0 ? 2 : T, z = qYe(s) ? s : {}, M = z.clipDot, R = M === void 0 ? !0 : M, F = L * 2 + I;
+      }, E = P.r, T = E === void 0 ? 3 : E, L = P.strokeWidth, I = L === void 0 ? 2 : L, z = qYe(s) ? s : {}, M = z.clipDot, R = M === void 0 ? !0 : M, F = T * 2 + I;
       return /* @__PURE__ */ q.createElement(Ve, {
         className: A
       }, k || S ? /* @__PURE__ */ q.createElement("defs", null, /* @__PURE__ */ q.createElement("clipPath", {
@@ -122112,9 +122112,9 @@ var qs = /* @__PURE__ */ function(n) {
         var x = b.t;
         if (y) {
           var A = y.length / c.length, k = c.map(function(P, E) {
-            var L = Math.floor(E * A);
-            if (y[L]) {
-              var T = y[L], I = ht(T.x, P.x), z = ht(T.y, P.y);
+            var T = Math.floor(E * A);
+            if (y[T]) {
+              var L = y[T], I = ht(L.x, P.x), z = ht(L.y, P.y);
               return cc(cc({}, P), {}, {
                 x: I(x),
                 y: z(x)
@@ -122130,9 +122130,9 @@ var qs = /* @__PURE__ */ function(n) {
             S = j(x);
           } else
             S = d.map(function(P, E) {
-              var L = Math.floor(E * A);
-              if (v[L]) {
-                var T = v[L], I = ht(T.x, P.x), z = ht(T.y, P.y);
+              var T = Math.floor(E * A);
+              if (v[T]) {
+                var L = v[T], I = ht(L.x, P.x), z = ht(L.y, P.y);
                 return cc(cc({}, P), {}, {
                   x: I(x),
                   y: z(x)
@@ -122164,7 +122164,7 @@ var qs = /* @__PURE__ */ function(n) {
       var b = this.state.isAnimationFinished, x = c.length === 1, A = Je("recharts-area", d), k = h && h.allowDataOverflow, S = f && f.allowDataOverflow, C = k || S, j = tt(v) ? this.id : v, P = (i = ze(s, !1)) !== null && i !== void 0 ? i : {
         r: 3,
         strokeWidth: 2
-      }, E = P.r, L = E === void 0 ? 3 : E, T = P.strokeWidth, I = T === void 0 ? 2 : T, z = qYe(s) ? s : {}, M = z.clipDot, R = M === void 0 ? !0 : M, F = L * 2 + I;
+      }, E = P.r, T = E === void 0 ? 3 : E, L = P.strokeWidth, I = L === void 0 ? 2 : L, z = qYe(s) ? s : {}, M = z.clipDot, R = M === void 0 ? !0 : M, F = T * 2 + I;
       return /* @__PURE__ */ q.createElement(Ve, {
         className: A
       }, k || S ? /* @__PURE__ */ q.createElement("defs", null, /* @__PURE__ */ q.createElement("clipPath", {
@@ -122763,25 +122763,25 @@ Dc(F0, "getComposedData", function(n) {
       entry: A,
       index: k,
       dataKey: h
-    }), L = jy({
+    }), T = jy({
       axis: r,
       ticks: c,
       bandSize: b,
       entry: A,
       index: k,
       dataKey: f
-    }), T = j !== "-" ? i.scale(j) : y, I = Math.sqrt(Math.max(T, 0) / Math.PI);
+    }), L = j !== "-" ? i.scale(j) : y, I = Math.sqrt(Math.max(L, 0) / Math.PI);
     return Na(Na({}, A), {}, {
       cx: E,
-      cy: L,
+      cy: T,
       x: E - I,
-      y: L - I,
+      y: T - I,
       xAxis: e,
       yAxis: r,
       zAxis: i,
       width: 2 * I,
       height: 2 * I,
-      size: T,
+      size: L,
       node: {
         x: S,
         y: C,
@@ -122790,7 +122790,7 @@ Dc(F0, "getComposedData", function(n) {
       tooltipPayload: P,
       tooltipPosition: {
         x: E,
-        y: L
+        y: T
       },
       payload: A
     }, p && p[k] && p[k].props);
@@ -123721,22 +123721,22 @@ var JY = function(e, r, i, a) {
     var v, b = y.type.defaultProps !== void 0 ? be(be({}, y.type.defaultProps), y.props) : y.props, x = b.type, A = b.dataKey, k = b.allowDataOverflow, S = b.allowDuplicatedCategory, C = b.scale, j = b.ticks, P = b.includeHidden, E = b[s];
     if (m[E])
       return m;
-    var L = SV(e.data, {
+    var T = SV(e.data, {
       graphicalItems: a.filter(function(Q) {
         var U, Z = s in Q.props ? Q.props[s] : (U = Q.type.defaultProps) === null || U === void 0 ? void 0 : U[s];
         return Z === E;
       }),
       dataStartIndex: d,
       dataEndIndex: u
-    }), T = L.length, I, z, M;
-    Stn(b.domain, k, x) && (I = oY(b.domain, null, k), g && (x === "number" || C !== "auto") && (M = bb(L, A, "category")));
+    }), L = T.length, I, z, M;
+    Stn(b.domain, k, x) && (I = oY(b.domain, null, k), g && (x === "number" || C !== "auto") && (M = bb(T, A, "category")));
     var R = Gnt(x);
     if (!I || I.length === 0) {
       var F, H = (F = b.domain) !== null && F !== void 0 ? F : R;
       if (A) {
-        if (I = bb(L, A, x), x === "category" && g) {
+        if (I = bb(T, A, x), x === "category" && g) {
           var N = fTt(I);
-          S && N ? (z = I, I = zQ(0, T)) : S || (I = hfe(H, I, y).reduce(function(Q, U) {
+          S && N ? (z = I, I = zQ(0, L)) : S || (I = hfe(H, I, y).reduce(function(Q, U) {
             return Q.indexOf(U) >= 0 ? Q : [].concat(Xy(Q), [U]);
           }, []));
         } else if (x === "category")
@@ -123746,14 +123746,14 @@ var JY = function(e, r, i, a) {
             return Q.indexOf(U) >= 0 || U === "" || tt(U) ? Q : [].concat(Xy(Q), [U]);
           }, []);
         else if (x === "number") {
-          var $ = m_t(L, a.filter(function(Q) {
+          var $ = m_t(T, a.filter(function(Q) {
             var U, Z, re = s in Q.props ? Q.props[s] : (U = Q.type.defaultProps) === null || U === void 0 ? void 0 : U[s], fe = "hide" in Q.props ? Q.props.hide : (Z = Q.type.defaultProps) === null || Z === void 0 ? void 0 : Z.hide;
             return re === E && (P || !fe);
           }), A, o, p);
           $ && (I = $);
         }
-        g && (x === "number" || C !== "auto") && (M = bb(L, A, "category"));
-      } else g ? I = zQ(0, T) : c && c[E] && c[E].hasStack && x === "number" ? I = f === "expand" ? [0, 1] : ftt(c[E].stackGroups, d, u) : I = att(L, a.filter(function(Q) {
+        g && (x === "number" || C !== "auto") && (M = bb(T, A, "category"));
+      } else g ? I = zQ(0, L) : c && c[E] && c[E].hasStack && x === "number" ? I = f === "expand" ? [0, 1] : ftt(c[E].stackGroups, d, u) : I = att(T, a.filter(function(Q) {
         var U = s in Q.props ? Q.props[s] : Q.type.defaultProps[s], Z = "hide" in Q.props ? Q.props.hide : Q.type.defaultProps.hide;
         return U === E && (P || !Z);
       }), x, p, !0);
@@ -123788,8 +123788,8 @@ var JY = function(e, r, i, a) {
       y++;
       var S;
       return m ? S = zQ(0, g) : c && c[A] && c[A].hasStack ? (S = ftt(c[A].stackGroups, d, u), S = ZY(h, S, A, o)) : (S = oY(k, att(f, i.filter(function(C) {
-        var j, P, E = s in C.props ? C.props[s] : (j = C.type.defaultProps) === null || j === void 0 ? void 0 : j[s], L = "hide" in C.props ? C.props.hide : (P = C.type.defaultProps) === null || P === void 0 ? void 0 : P.hide;
-        return E === A && !L;
+        var j, P, E = s in C.props ? C.props[s] : (j = C.type.defaultProps) === null || j === void 0 ? void 0 : j[s], T = "hide" in C.props ? C.props.hide : (P = C.type.defaultProps) === null || P === void 0 ? void 0 : P.hide;
+        return E === A && !T;
       }), "number", p), a.defaultProps.allowDataOverflow), S = ZY(h, S, A, o)), be(be({}, v), {}, rt({}, A, be(be({
         axisType: o
       }, a.defaultProps), {}, {
@@ -123893,18 +123893,18 @@ var JY = function(e, r, i, a) {
     return e[r].height;
 }, rc = function(e) {
   var r = e.chartName, i = e.GraphicalChild, a = e.defaultTooltipEventType, o = a === void 0 ? "axis" : a, s = e.validateTooltipEventTypes, c = s === void 0 ? ["axis"] : s, d = e.axisComponents, u = e.legendContent, p = e.formatAxisMap, h = e.defaultProps, f = function(b, x) {
-    var A = x.graphicalItems, k = x.stackGroups, S = x.offset, C = x.updateId, j = x.dataStartIndex, P = x.dataEndIndex, E = b.barSize, L = b.layout, T = b.barGap, I = b.barCategoryGap, z = b.maxBarSize, M = rme(L), R = M.numericAxisName, F = M.cateAxisName, H = nnn(A), N = [];
+    var A = x.graphicalItems, k = x.stackGroups, S = x.offset, C = x.updateId, j = x.dataStartIndex, P = x.dataEndIndex, E = b.barSize, T = b.layout, L = b.barGap, I = b.barCategoryGap, z = b.maxBarSize, M = rme(T), R = M.numericAxisName, F = M.cateAxisName, H = nnn(A), N = [];
     return A.forEach(function($, _) {
       var V = SV(b.data, {
         graphicalItems: [$],
         dataStartIndex: j,
         dataEndIndex: P
-      }), Q = $.type.defaultProps !== void 0 ? be(be({}, $.type.defaultProps), $.props) : $.props, U = Q.dataKey, Z = Q.maxBarSize, re = Q["".concat(R, "Id")], fe = Q["".concat(F, "Id")], ae = {}, pe = d.reduce(function(le, J) {
-        var ue = x["".concat(J.axisType, "Map")], ye = Q["".concat(J.axisType, "Id")];
-        ue && ue[ye] || J.axisType === "zAxis" || kg();
+      }), Q = $.type.defaultProps !== void 0 ? be(be({}, $.type.defaultProps), $.props) : $.props, U = Q.dataKey, Z = Q.maxBarSize, re = Q["".concat(R, "Id")], fe = Q["".concat(F, "Id")], ae = {}, pe = d.reduce(function(le, ee) {
+        var ue = x["".concat(ee.axisType, "Map")], ye = Q["".concat(ee.axisType, "Id")];
+        ue && ue[ye] || ee.axisType === "zAxis" || kg();
         var ge = ue[ye];
-        return be(be({}, le), {}, rt(rt({}, J.axisType, ge), "".concat(J.axisType, "Ticks"), ml(ge)));
-      }, ae), ce = pe[F], te = pe["".concat(F, "Ticks")], oe = k && k[re] && k[re].hasStack && k_t($, k[re].stackGroups), ie = Cl($.type).indexOf("Bar") >= 0, ke = yQ(ce, te), B = [], Y = H && p_t({
+        return be(be({}, le), {}, rt(rt({}, ee.axisType, ge), "".concat(ee.axisType, "Ticks"), ml(ge)));
+      }, ae), ce = pe[F], te = pe["".concat(F, "Ticks")], oe = k && k[re] && k[re].hasStack && k_t($, k[re].stackGroups), ie = Cl($.type).indexOf("Bar") >= 0, ke = yQ(ce, te), B = [], J = H && p_t({
         barSize: E,
         stackGroups: k,
         totalSize: inn(pe, F)
@@ -123912,10 +123912,10 @@ var JY = function(e, r, i, a) {
       if (ie) {
         var K, D, W = tt(Z) ? z : Z, X = (K = (D = yQ(ce, te, !0)) !== null && D !== void 0 ? D : W) !== null && K !== void 0 ? K : 0;
         B = h_t({
-          barGap: T,
+          barGap: L,
           barCategoryGap: I,
           bandSize: X !== ke ? X : ke,
-          sizeList: Y[fe],
+          sizeList: J[fe],
           maxBarSize: W
         }), X !== ke && (B = B.map(function(le) {
           return be(be({}, le), {}, {
@@ -123936,7 +123936,7 @@ var JY = function(e, r, i, a) {
           barPosition: B,
           offset: S,
           stackedData: oe,
-          layout: L,
+          layout: T,
           dataStartIndex: j,
           dataEndIndex: P
         }))), {}, rt(rt(rt({
@@ -123952,7 +123952,7 @@ var JY = function(e, r, i, a) {
       props: A
     }))
       return null;
-    var j = A.children, P = A.layout, E = A.stackOffset, L = A.data, T = A.reverseStackOrder, I = rme(P), z = I.numericAxisName, M = I.cateAxisName, R = Vr(j, i), F = A_t(L, R, "".concat(z, "Id"), "".concat(M, "Id"), E, T), H = d.reduce(function(Q, U) {
+    var j = A.children, P = A.layout, E = A.stackOffset, T = A.data, L = A.reverseStackOrder, I = rme(P), z = I.numericAxisName, M = I.cateAxisName, R = Vr(j, i), F = A_t(T, R, "".concat(z, "Id"), "".concat(M, "Id"), E, L), H = d.reduce(function(Q, U) {
       var Z = "".concat(U.axisType, "Map");
       return be(be({}, Q), {}, rt({}, Z, enn(A, be(be({}, U), {}, {
         graphicalItems: R,
@@ -123986,14 +123986,14 @@ var JY = function(e, r, i, a) {
       var A, k, S;
       return Dtn(this, b), S = Ntn(this, b, [x]), rt(S, "eventEmitterSymbol", Symbol("rechartsEventEmitter")), rt(S, "accessibilityManager", new wtn()), rt(S, "handleLegendBBoxUpdate", function(C) {
         if (C) {
-          var j = S.state, P = j.dataStartIndex, E = j.dataEndIndex, L = j.updateId;
+          var j = S.state, P = j.dataStartIndex, E = j.dataEndIndex, T = j.updateId;
           S.setState(be({
             legendBBox: C
           }, g({
             props: S.props,
             dataStartIndex: P,
             dataEndIndex: E,
-            updateId: L
+            updateId: T
           }, be(be({}, S.state), {}, {
             legendBBox: C
           }))));
@@ -124073,8 +124073,8 @@ var JY = function(e, r, i, a) {
       }), rt(S, "handleOuterEvent", function(C) {
         var j = OTt(C), P = Ar(S.props, "".concat(j));
         if (j && We(P)) {
-          var E, L;
-          /.*touch.*/i.test(j) ? L = S.getMouseInfo(C.changedTouches[0]) : L = S.getMouseInfo(C), P((E = L) !== null && E !== void 0 ? E : {}, C);
+          var E, T;
+          /.*touch.*/i.test(j) ? T = S.getMouseInfo(C.changedTouches[0]) : T = S.getMouseInfo(C), P((E = T) !== null && E !== void 0 ? E : {}, C);
         }
       }), rt(S, "handleClick", function(C) {
         var j = S.getMouseInfo(C);
@@ -124119,16 +124119,16 @@ var JY = function(e, r, i, a) {
       }), rt(S, "triggerSyncEvent", function(C) {
         S.props.syncId !== void 0 && bU.emit(xU, S.props.syncId, C, S.eventEmitterSymbol);
       }), rt(S, "applySyncEvent", function(C) {
-        var j = S.props, P = j.layout, E = j.syncMethod, L = S.state.updateId, T = C.dataStartIndex, I = C.dataEndIndex;
+        var j = S.props, P = j.layout, E = j.syncMethod, T = S.state.updateId, L = C.dataStartIndex, I = C.dataEndIndex;
         if (C.dataStartIndex !== void 0 || C.dataEndIndex !== void 0)
           S.setState(be({
-            dataStartIndex: T,
+            dataStartIndex: L,
             dataEndIndex: I
           }, g({
             props: S.props,
-            dataStartIndex: T,
+            dataStartIndex: L,
             dataEndIndex: I,
-            updateId: L
+            updateId: T
           }, S.state)));
         else if (C.activeTooltipIndex !== void 0) {
           var z = C.chartX, M = C.chartY, R = C.activeTooltipIndex, F = S.state, H = F.offset, N = F.tooltipTicks;
@@ -124160,11 +124160,11 @@ var JY = function(e, r, i, a) {
         } else
           S.setState(C);
       }), rt(S, "renderCursor", function(C) {
-        var j, P = S.state, E = P.isTooltipActive, L = P.activeCoordinate, T = P.activePayload, I = P.offset, z = P.activeTooltipIndex, M = P.tooltipAxisBandSize, R = S.getTooltipEventType(), F = (j = C.props.active) !== null && j !== void 0 ? j : E, H = S.props.layout, N = C.key || "_recharts-cursor";
+        var j, P = S.state, E = P.isTooltipActive, T = P.activeCoordinate, L = P.activePayload, I = P.offset, z = P.activeTooltipIndex, M = P.tooltipAxisBandSize, R = S.getTooltipEventType(), F = (j = C.props.active) !== null && j !== void 0 ? j : E, H = S.props.layout, N = C.key || "_recharts-cursor";
         return /* @__PURE__ */ q.createElement(Itn, {
           key: N,
-          activeCoordinate: L,
-          activePayload: T,
+          activeCoordinate: T,
+          activePayload: L,
           activeTooltipIndex: z,
           chartName: r,
           element: C,
@@ -124175,19 +124175,19 @@ var JY = function(e, r, i, a) {
           tooltipEventType: R
         });
       }), rt(S, "renderPolarAxis", function(C, j, P) {
-        var E = Ar(C, "type.axisType"), L = Ar(S.state, "".concat(E, "Map")), T = C.type.defaultProps, I = T !== void 0 ? be(be({}, T), C.props) : C.props, z = L && L[I["".concat(E, "Id")]];
+        var E = Ar(C, "type.axisType"), T = Ar(S.state, "".concat(E, "Map")), L = C.type.defaultProps, I = L !== void 0 ? be(be({}, L), C.props) : C.props, z = T && T[I["".concat(E, "Id")]];
         return /* @__PURE__ */ O.cloneElement(C, be(be({}, z), {}, {
           className: Je(E, z.className),
           key: C.key || "".concat(j, "-").concat(P),
           ticks: ml(z, !0)
         }));
       }), rt(S, "renderPolarGrid", function(C) {
-        var j = C.props, P = j.radialLines, E = j.polarAngles, L = j.polarRadius, T = S.state, I = T.radiusAxisMap, z = T.angleAxisMap, M = Pc(I), R = Pc(z), F = R.cx, H = R.cy, N = R.innerRadius, $ = R.outerRadius;
+        var j = C.props, P = j.radialLines, E = j.polarAngles, T = j.polarRadius, L = S.state, I = L.radiusAxisMap, z = L.angleAxisMap, M = Pc(I), R = Pc(z), F = R.cx, H = R.cy, N = R.innerRadius, $ = R.outerRadius;
         return /* @__PURE__ */ O.cloneElement(C, {
           polarAngles: Array.isArray(E) ? E : ml(R, !0).map(function(_) {
             return _.coordinate;
           }),
-          polarRadius: Array.isArray(L) ? L : ml(M, !0).map(function(_) {
+          polarRadius: Array.isArray(T) ? T : ml(M, !0).map(function(_) {
             return _.coordinate;
           }),
           cx: F,
@@ -124198,7 +124198,7 @@ var JY = function(e, r, i, a) {
           radialLines: P
         });
       }), rt(S, "renderLegend", function() {
-        var C = S.state.formattedGraphicalItems, j = S.props, P = j.children, E = j.width, L = j.height, T = S.props.margin || {}, I = E - (T.left || 0) - (T.right || 0), z = rtt({
+        var C = S.state.formattedGraphicalItems, j = S.props, P = j.children, E = j.width, T = j.height, L = S.props.margin || {}, I = E - (L.left || 0) - (L.right || 0), z = rtt({
           children: P,
           formattedGraphicalItems: C,
           legendWidth: I,
@@ -124209,16 +124209,16 @@ var JY = function(e, r, i, a) {
         var M = z.item, R = Jge(z, Etn);
         return /* @__PURE__ */ O.cloneElement(M, be(be({}, R), {}, {
           chartWidth: E,
-          chartHeight: L,
-          margin: T,
+          chartHeight: T,
+          margin: L,
           onBBoxUpdate: S.handleLegendBBoxUpdate
         }));
       }), rt(S, "renderTooltip", function() {
-        var C, j = S.props, P = j.children, E = j.accessibilityLayer, L = Rn(P, tr);
-        if (!L)
+        var C, j = S.props, P = j.children, E = j.accessibilityLayer, T = Rn(P, tr);
+        if (!T)
           return null;
-        var T = S.state, I = T.isTooltipActive, z = T.activeCoordinate, M = T.activePayload, R = T.activeLabel, F = T.offset, H = (C = L.props.active) !== null && C !== void 0 ? C : I;
-        return /* @__PURE__ */ O.cloneElement(L, {
+        var L = S.state, I = L.isTooltipActive, z = L.activeCoordinate, M = L.activePayload, R = L.activeLabel, F = L.offset, H = (C = T.props.active) !== null && C !== void 0 ? C : I;
+        return /* @__PURE__ */ O.cloneElement(T, {
           viewBox: be(be({}, F), {}, {
             x: F.left,
             y: F.top
@@ -124230,14 +124230,14 @@ var JY = function(e, r, i, a) {
           accessibilityLayer: E
         });
       }), rt(S, "renderBrush", function(C) {
-        var j = S.props, P = j.margin, E = j.data, L = S.state, T = L.offset, I = L.dataStartIndex, z = L.dataEndIndex, M = L.updateId;
+        var j = S.props, P = j.margin, E = j.data, T = S.state, L = T.offset, I = T.dataStartIndex, z = T.dataEndIndex, M = T.updateId;
         return /* @__PURE__ */ O.cloneElement(C, {
           key: C.key || "_recharts-brush",
           onChange: Qw(S.handleBrushChange, C.props.onChange),
           data: E,
-          x: Ce(C.props.x) ? C.props.x : T.left,
-          y: Ce(C.props.y) ? C.props.y : T.top + T.height + T.brushBottom - (P.bottom || 0),
-          width: Ce(C.props.width) ? C.props.width : T.width,
+          x: Ce(C.props.x) ? C.props.x : L.left,
+          y: Ce(C.props.y) ? C.props.y : L.top + L.height + L.brushBottom - (P.bottom || 0),
+          width: Ce(C.props.width) ? C.props.width : L.width,
           startIndex: I,
           endIndex: z,
           updateId: "brush-".concat(M)
@@ -124245,7 +124245,7 @@ var JY = function(e, r, i, a) {
       }), rt(S, "renderReferenceElement", function(C, j, P) {
         if (!C)
           return null;
-        var E = S, L = E.clipPathId, T = S.state, I = T.xAxisMap, z = T.yAxisMap, M = T.offset, R = C.type.defaultProps || {}, F = C.props, H = F.xAxisId, N = H === void 0 ? R.xAxisId : H, $ = F.yAxisId, _ = $ === void 0 ? R.yAxisId : $;
+        var E = S, T = E.clipPathId, L = S.state, I = L.xAxisMap, z = L.yAxisMap, M = L.offset, R = C.type.defaultProps || {}, F = C.props, H = F.xAxisId, N = H === void 0 ? R.xAxisId : H, $ = F.yAxisId, _ = $ === void 0 ? R.yAxisId : $;
         return /* @__PURE__ */ O.cloneElement(C, {
           key: C.key || "".concat(j, "-").concat(P),
           xAxis: I[N],
@@ -124256,11 +124256,11 @@ var JY = function(e, r, i, a) {
             width: M.width,
             height: M.height
           },
-          clipPathId: L
+          clipPathId: T
         });
       }), rt(S, "renderActivePoints", function(C) {
-        var j = C.item, P = C.activePoint, E = C.basePoint, L = C.childIndex, T = C.isRange, I = [], z = j.props.key, M = j.item.type.defaultProps !== void 0 ? be(be({}, j.item.type.defaultProps), j.item.props) : j.item.props, R = M.activeDot, F = M.dataKey, H = be(be({
-          index: L,
+        var j = C.item, P = C.activePoint, E = C.basePoint, T = C.childIndex, L = C.isRange, I = [], z = j.props.key, M = j.item.type.defaultProps !== void 0 ? be(be({}, j.item.type.defaultProps), j.item.props) : j.item.props, R = M.activeDot, F = M.dataKey, H = be(be({
+          index: T,
           dataKey: F,
           cx: P.x,
           cy: P.y,
@@ -124271,24 +124271,24 @@ var JY = function(e, r, i, a) {
           payload: P.payload,
           value: P.value
         }, ze(R, !1)), WN(R));
-        return I.push(b.renderActiveDot(R, H, "".concat(z, "-activePoint-").concat(L))), E ? I.push(b.renderActiveDot(R, be(be({}, H), {}, {
+        return I.push(b.renderActiveDot(R, H, "".concat(z, "-activePoint-").concat(T))), E ? I.push(b.renderActiveDot(R, be(be({}, H), {}, {
           cx: E.x,
           cy: E.y
-        }), "".concat(z, "-basePoint-").concat(L))) : T && I.push(null), I;
+        }), "".concat(z, "-basePoint-").concat(T))) : L && I.push(null), I;
       }), rt(S, "renderGraphicChild", function(C, j, P) {
         var E = S.filterFormatItem(C, j, P);
         if (!E)
           return null;
-        var L = S.getTooltipEventType(), T = S.state, I = T.isTooltipActive, z = T.tooltipAxis, M = T.activeTooltipIndex, R = T.activeLabel, F = S.props.children, H = Rn(F, tr), N = E.props, $ = N.points, _ = N.isRange, V = N.baseLine, Q = E.item.type.defaultProps !== void 0 ? be(be({}, E.item.type.defaultProps), E.item.props) : E.item.props, U = Q.activeDot, Z = Q.hide, re = Q.activeBar, fe = Q.activeShape, ae = !!(!Z && I && H && (U || re || fe)), pe = {};
-        L !== "axis" && H && H.props.trigger === "click" ? pe = {
+        var T = S.getTooltipEventType(), L = S.state, I = L.isTooltipActive, z = L.tooltipAxis, M = L.activeTooltipIndex, R = L.activeLabel, F = S.props.children, H = Rn(F, tr), N = E.props, $ = N.points, _ = N.isRange, V = N.baseLine, Q = E.item.type.defaultProps !== void 0 ? be(be({}, E.item.type.defaultProps), E.item.props) : E.item.props, U = Q.activeDot, Z = Q.hide, re = Q.activeBar, fe = Q.activeShape, ae = !!(!Z && I && H && (U || re || fe)), pe = {};
+        T !== "axis" && H && H.props.trigger === "click" ? pe = {
           onClick: Qw(S.handleItemMouseEnter, C.props.onClick)
-        } : L !== "axis" && (pe = {
+        } : T !== "axis" && (pe = {
           onMouseLeave: Qw(S.handleItemMouseLeave, C.props.onMouseLeave),
           onMouseEnter: Qw(S.handleItemMouseEnter, C.props.onMouseEnter)
         });
         var ce = /* @__PURE__ */ O.cloneElement(C, be(be({}, E.props), pe));
-        function te(J) {
-          return typeof z.dataKey == "function" ? z.dataKey(J.payload) : null;
+        function te(ee) {
+          return typeof z.dataKey == "function" ? z.dataKey(ee.payload) : null;
         }
         if (ae)
           if (M >= 0) {
@@ -124313,7 +124313,7 @@ var JY = function(e, r, i, a) {
                 isRange: _
               })));
           } else {
-            var Y, K = (Y = S.getItemByXY(S.state.activeCoordinate)) !== null && Y !== void 0 ? Y : {
+            var J, K = (J = S.getItemByXY(S.state.activeCoordinate)) !== null && J !== void 0 ? J : {
               graphicalItem: ce
             }, D = K.graphicalItem, W = D.item, X = W === void 0 ? C : W, ne = D.childIndex, le = be(be(be({}, E.props), pe), {}, {
               activeIndex: ne
@@ -124414,7 +124414,7 @@ var JY = function(e, r, i, a) {
         if (P) {
           var E = P.props.defaultIndex;
           if (!(typeof E != "number" || E < 0 || E > this.state.tooltipTicks.length - 1)) {
-            var L = this.state.tooltipTicks[E] && this.state.tooltipTicks[E].value, T = JY(this.state, S, E, L), I = this.state.tooltipTicks[E].coordinate, z = (this.state.offset.top + C) / 2, M = j === "horizontal", R = M ? {
+            var T = this.state.tooltipTicks[E] && this.state.tooltipTicks[E].value, L = JY(this.state, S, E, T), I = this.state.tooltipTicks[E].coordinate, z = (this.state.offset.top + C) / 2, M = j === "horizontal", R = M ? {
               x: I,
               y: z
             } : {
@@ -124424,12 +124424,12 @@ var JY = function(e, r, i, a) {
               var $ = N.item;
               return $.type.name === "Scatter";
             });
-            F && (R = be(be({}, R), F.props.points[E].tooltipPosition), T = F.props.points[E].tooltipPayload);
+            F && (R = be(be({}, R), F.props.points[E].tooltipPosition), L = F.props.points[E].tooltipPayload);
             var H = {
               activeTooltipIndex: E,
               isTooltipActive: !0,
-              activeLabel: L,
-              activePayload: T,
+              activeLabel: T,
+              activePayload: L,
               activeCoordinate: R
             };
             this.setState(H), this.renderCursor(P), this.accessibilityManager.setIndex(E);
@@ -124492,9 +124492,9 @@ var JY = function(e, r, i, a) {
         }, P = S.width / k.offsetWidth || 1, E = this.inRange(j.chartX, j.chartY, P);
         if (!E)
           return null;
-        var L = this.state, T = L.xAxisMap, I = L.yAxisMap, z = this.getTooltipEventType(), M = tme(this.state, this.props.data, this.props.layout, E);
-        if (z !== "axis" && T && I) {
-          var R = Pc(T).scale, F = Pc(I).scale, H = R && R.invert ? R.invert(j.chartX) : null, N = F && F.invert ? F.invert(j.chartY) : null;
+        var T = this.state, L = T.xAxisMap, I = T.yAxisMap, z = this.getTooltipEventType(), M = tme(this.state, this.props.data, this.props.layout, E);
+        if (z !== "axis" && L && I) {
+          var R = Pc(L).scale, F = Pc(I).scale, H = R && R.invert ? R.invert(j.chartX) : null, N = F && F.invert ? F.invert(j.chartY) : null;
           return be(be({}, j), {}, {
             xValue: H,
             yValue: N
@@ -124507,13 +124507,13 @@ var JY = function(e, r, i, a) {
       value: function(A, k) {
         var S = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 1, C = this.props.layout, j = A / S, P = k / S;
         if (C === "horizontal" || C === "vertical") {
-          var E = this.state.offset, L = j >= E.left && j <= E.left + E.width && P >= E.top && P <= E.top + E.height;
-          return L ? {
+          var E = this.state.offset, T = j >= E.left && j <= E.left + E.width && P >= E.top && P <= E.top + E.height;
+          return T ? {
             x: j,
             y: P
           } : null;
         }
-        var T = this.state, I = T.angleAxisMap, z = T.radiusAxisMap;
+        var L = this.state, I = L.angleAxisMap, z = L.radiusAxisMap;
         if (I && z) {
           var M = Pc(I);
           return mfe({
@@ -124611,9 +124611,9 @@ var JY = function(e, r, i, a) {
         var k = this.state, S = k.formattedGraphicalItems, C = k.activeItem;
         if (S && S.length)
           for (var j = 0, P = S.length; j < P; j++) {
-            var E = S[j], L = E.props, T = E.item, I = T.type.defaultProps !== void 0 ? be(be({}, T.type.defaultProps), T.props) : T.props, z = Cl(T.type);
+            var E = S[j], T = E.props, L = E.item, I = L.type.defaultProps !== void 0 ? be(be({}, L.type.defaultProps), L.props) : L.props, z = Cl(L.type);
             if (z === "Bar") {
-              var M = (L.data || []).find(function(N) {
+              var M = (T.data || []).find(function(N) {
                 return kXt(A, N);
               });
               if (M)
@@ -124622,7 +124622,7 @@ var JY = function(e, r, i, a) {
                   payload: M
                 };
             } else if (z === "RadialBar") {
-              var R = (L.data || []).find(function(N) {
+              var R = (T.data || []).find(function(N) {
                 return mfe(A, N);
               });
               if (R)
@@ -124652,8 +124652,8 @@ var JY = function(e, r, i, a) {
         var A = this;
         if (!$N(this))
           return null;
-        var k = this.props, S = k.children, C = k.className, j = k.width, P = k.height, E = k.style, L = k.compact, T = k.title, I = k.desc, z = Jge(k, Ttn), M = ze(z, !1);
-        if (L)
+        var k = this.props, S = k.children, C = k.className, j = k.width, P = k.height, E = k.style, T = k.compact, L = k.title, I = k.desc, z = Jge(k, Ttn), M = ze(z, !1);
+        if (T)
           return /* @__PURE__ */ q.createElement(Ige, {
             state: this.state,
             width: this.props.width,
@@ -124662,7 +124662,7 @@ var JY = function(e, r, i, a) {
           }, /* @__PURE__ */ q.createElement(xg, Rm({}, M, {
             width: j,
             height: P,
-            title: T,
+            title: L,
             desc: I
           }), this.renderClipPath(), dpe(S, this.renderMap)));
         if (this.props.accessibilityLayer) {
@@ -124694,7 +124694,7 @@ var JY = function(e, r, i, a) {
         }), /* @__PURE__ */ q.createElement(xg, Rm({}, M, {
           width: j,
           height: P,
-          title: T,
+          title: L,
           desc: I,
           style: Gtn
         }), this.renderClipPath(), dpe(S, this.renderMap)), this.renderLegend(), this.renderTooltip()));
@@ -124715,7 +124715,7 @@ var JY = function(e, r, i, a) {
     reverseStackOrder: !1,
     syncMethod: "index"
   }, h)), rt(m, "getDerivedStateFromProps", function(v, b) {
-    var x = v.dataKey, A = v.data, k = v.children, S = v.width, C = v.height, j = v.layout, P = v.stackOffset, E = v.margin, L = b.dataStartIndex, T = b.dataEndIndex;
+    var x = v.dataKey, A = v.data, k = v.children, S = v.width, C = v.height, j = v.layout, P = v.stackOffset, E = v.margin, T = b.dataStartIndex, L = b.dataEndIndex;
     if (b.updateId === void 0) {
       var I = nme(v);
       return be(be(be({}, I), {}, {
@@ -124761,7 +124761,7 @@ var JY = function(e, r, i, a) {
       });
     }
     if (!kK(k, b.prevChildren)) {
-      var H, N, $, _, V = Rn(k, wg), Q = V && (H = (N = V.props) === null || N === void 0 ? void 0 : N.startIndex) !== null && H !== void 0 ? H : L, U = V && ($ = (_ = V.props) === null || _ === void 0 ? void 0 : _.endIndex) !== null && $ !== void 0 ? $ : T, Z = Q !== L || U !== T, re = !tt(A), fe = re && !Z ? b.updateId : b.updateId + 1;
+      var H, N, $, _, V = Rn(k, wg), Q = V && (H = (N = V.props) === null || N === void 0 ? void 0 : N.startIndex) !== null && H !== void 0 ? H : T, U = V && ($ = (_ = V.props) === null || _ === void 0 ? void 0 : _.endIndex) !== null && $ !== void 0 ? $ : L, Z = Q !== T || U !== L, re = !tt(A), fe = re && !Z ? b.updateId : b.updateId + 1;
       return be(be({
         updateId: fe
       }, g(be(be({
@@ -125418,7 +125418,7 @@ var kA = "value", kU = function n(e) {
         onAnimationStart: this.handleAnimationStart,
         onAnimationEnd: this.handleAnimationEnd
       }, function(P) {
-        var E = P.x, L = P.y, T = P.width, I = P.height;
+        var E = P.x, T = P.y, L = P.width, I = P.height;
         return /* @__PURE__ */ q.createElement(qr, {
           from: "translate(".concat(C, "px, ").concat(C, "px)"),
           to: "translate(0, 0)",
@@ -125431,10 +125431,10 @@ var kA = "value", kU = function n(e) {
           return S > 2 && !v ? null : s.constructor.renderContentItem(i, Jt(Jt({}, a), {}, {
             isAnimationActive: d,
             isUpdateAnimationActive: !f,
-            width: T,
+            width: L,
             height: I,
             x: E,
-            y: L
+            y: T
           }), g, y);
         }()));
       }) : /* @__PURE__ */ q.createElement(Ve, j, this.constructor.renderContentItem(i, Jt(Jt({}, a), {}, {
@@ -126003,7 +126003,7 @@ var Ion = {
         className: "recharts-sankey-links",
         key: "recharts-sankey-links"
       }, i.map(function(f, g) {
-        var m = f.sy, y = f.ty, v = f.dy, b = a[f.source], x = a[f.target], A = b.x + b.dx + h, k = x.x + h, S = Eon(A, k), C = S(c), j = S(1 - c), P = b.y + m + v / 2 + p, E = x.y + y + v / 2 + p, L = Sn({
+        var m = f.sy, y = f.ty, v = f.dy, b = a[f.source], x = a[f.target], A = b.x + b.dx + h, k = x.x + h, S = Eon(A, k), C = S(c), j = S(1 - c), P = b.y + m + v / 2 + p, E = x.y + y + v / 2 + p, T = Sn({
           sourceX: A,
           targetX: k,
           sourceY: P,
@@ -126018,14 +126018,14 @@ var Ion = {
             source: b,
             target: x
           })
-        }, ze(d, !1)), T = {
-          onMouseEnter: o.handleMouseEnter.bind(o, L, "link"),
-          onMouseLeave: o.handleMouseLeave.bind(o, L, "link"),
-          onClick: o.handleClick.bind(o, L, "link")
+        }, ze(d, !1)), L = {
+          onMouseEnter: o.handleMouseEnter.bind(o, T, "link"),
+          onMouseLeave: o.handleMouseLeave.bind(o, T, "link"),
+          onClick: o.handleClick.bind(o, T, "link")
         };
         return /* @__PURE__ */ q.createElement(Ve, lf({
           key: "link-".concat(f.source, "-").concat(f.target, "-").concat(f.value)
-        }, T), o.constructor.renderLinkItem(d, L));
+        }, L), o.constructor.renderLinkItem(d, T));
       }));
     }
   }, {
@@ -126336,7 +126336,7 @@ function crt(n) {
   return 1 + Math.max.apply(Math, Jon(e));
 }
 var isn = function(e) {
-  var r = e.className, i = e.data, a = e.children, o = e.width, s = e.height, c = e.padding, d = c === void 0 ? 2 : c, u = e.dataKey, p = u === void 0 ? "value" : u, h = e.ringPadding, f = h === void 0 ? 2 : h, g = e.innerRadius, m = g === void 0 ? 50 : g, y = e.fill, v = y === void 0 ? "#333" : y, b = e.stroke, x = b === void 0 ? "#FFF" : b, A = e.textOptions, k = A === void 0 ? rsn : A, S = e.outerRadius, C = S === void 0 ? Math.min(o, s) / 2 : S, j = e.cx, P = j === void 0 ? o / 2 : j, E = e.cy, L = E === void 0 ? s / 2 : E, T = e.startAngle, I = T === void 0 ? 0 : T, z = e.endAngle, M = z === void 0 ? 360 : z, R = e.onClick, F = e.onMouseEnter, H = e.onMouseLeave, N = O.useState(!1), $ = xme(N, 2), _ = $[0], V = $[1], Q = O.useState(null), U = xme(Q, 2), Z = U[0], re = U[1], fe = Gx([0, i[p]], [0, M]), ae = crt(i), pe = (C - m) / ae, ce = [], te = /* @__PURE__ */ new Map([]);
+  var r = e.className, i = e.data, a = e.children, o = e.width, s = e.height, c = e.padding, d = c === void 0 ? 2 : c, u = e.dataKey, p = u === void 0 ? "value" : u, h = e.ringPadding, f = h === void 0 ? 2 : h, g = e.innerRadius, m = g === void 0 ? 50 : g, y = e.fill, v = y === void 0 ? "#333" : y, b = e.stroke, x = b === void 0 ? "#FFF" : b, A = e.textOptions, k = A === void 0 ? rsn : A, S = e.outerRadius, C = S === void 0 ? Math.min(o, s) / 2 : S, j = e.cx, P = j === void 0 ? o / 2 : j, E = e.cy, T = E === void 0 ? s / 2 : E, L = e.startAngle, I = L === void 0 ? 0 : L, z = e.endAngle, M = z === void 0 ? 360 : z, R = e.onClick, F = e.onMouseEnter, H = e.onMouseLeave, N = O.useState(!1), $ = xme(N, 2), _ = $[0], V = $[1], Q = O.useState(null), U = xme(Q, 2), Z = U[0], re = U[1], fe = Gx([0, i[p]], [0, M]), ae = crt(i), pe = (C - m) / ae, ce = [], te = /* @__PURE__ */ new Map([]);
   function oe(D, W) {
     F && F(D, W), re(D), V(!0);
   }
@@ -126347,9 +126347,9 @@ var isn = function(e) {
     R && R(D);
   }
   function B(D, W) {
-    var X = W.radius, ne = W.innerR, le = W.initialAngle, J = W.childColor, ue = le;
+    var X = W.radius, ne = W.innerR, le = W.initialAngle, ee = W.childColor, ue = le;
     D && D.forEach(function(ye) {
-      var ge, we, he = fe(ye[p]), me = ue, Pe = (ge = (we = ye == null ? void 0 : ye.fill) !== null && we !== void 0 ? we : J) !== null && ge !== void 0 ? ge : v, Re = Ct(0, 0, ne + X / 2, -(me + he - he / 2)), Ie = Re.x, De = Re.y;
+      var ge, we, he = fe(ye[p]), me = ue, Pe = (ge = (we = ye == null ? void 0 : ye.fill) !== null && we !== void 0 ? we : ee) !== null && ge !== void 0 ? ge : v, De = Ct(0, 0, ne + X / 2, -(me + he - he / 2)), Ie = De.x, He = De.y;
       ue += he, ce.push(
         // TODO: Missing key warning. Can we use `key={d.name}`?
         /* @__PURE__ */ q.createElement("g", {
@@ -126373,15 +126373,15 @@ var isn = function(e) {
           innerRadius: ne,
           outerRadius: ne + X,
           cx: P,
-          cy: L
+          cy: T
         }), /* @__PURE__ */ q.createElement($l, nJ({}, k, {
           alignmentBaseline: "middle",
           textAnchor: "middle",
           x: Ie + P,
-          y: L - De
+          y: T - He
         }), ye[p]))
       );
-      var qe = Ct(P, L, ne + X / 2, me), Ge = qe.x, bn = qe.y;
+      var qe = Ct(P, T, ne + X / 2, me), Ge = qe.x, bn = qe.y;
       return te.set(ye.name, {
         x: Ge,
         y: bn
@@ -126398,7 +126398,7 @@ var isn = function(e) {
     innerR: m,
     initialAngle: I
   });
-  var Y = Je("recharts-sunburst", r);
+  var J = Je("recharts-sunburst", r);
   function K() {
     var D = Rn([a], tr);
     if (!D || !Z) return null;
@@ -126427,7 +126427,7 @@ var isn = function(e) {
     width: o,
     height: s
   }, a, /* @__PURE__ */ q.createElement(Ve, {
-    className: Y
+    className: J
   }, ce)), K());
 };
 function SA(n) {
@@ -126730,13 +126730,13 @@ var Xd = /* @__PURE__ */ function(n) {
               height: C(g)
             });
           }
-          var j = ht(y.x + y.upperWidth / 2, y.x), P = ht(y.y + y.height / 2, y.y), E = ht(0, y.upperWidth), L = ht(0, y.lowerWidth), T = ht(0, y.height);
+          var j = ht(y.x + y.upperWidth / 2, y.x), P = ht(y.y + y.height / 2, y.y), E = ht(0, y.upperWidth), T = ht(0, y.lowerWidth), L = ht(0, y.height);
           return Jn(Jn({}, y), {}, {
             x: j(g),
             y: P(g),
             upperWidth: E(g),
-            lowerWidth: L(g),
-            height: T(g)
+            lowerWidth: T(g),
+            height: L(g)
           });
         });
         return /* @__PURE__ */ q.createElement(Ve, null, i.renderTrapezoidsStatically(m));
@@ -126815,19 +126815,19 @@ Il(Xd, "getComposedData", function(n) {
     width: r.width,
     height: r.height
   }, S = i.map(function(C, j) {
-    var P = vt(C, o, 0), E = vt(C, s, j), L = P, T;
+    var P = vt(C, o, 0), E = vt(C, s, j), T = P, L;
     if (j !== x - 1) {
-      if (T = vt(i[j + 1], o, 0), T instanceof Array) {
-        var I = T, z = kme(I, 1);
-        T = z[0];
+      if (L = vt(i[j + 1], o, 0), L instanceof Array) {
+        var I = L, z = kme(I, 1);
+        L = z[0];
       }
     } else if (P instanceof Array && P.length === 2) {
       var M = kme(P, 2);
-      L = M[0], T = M[1];
-    } else d === "rectangle" ? T = L : T = 0;
-    var R = (b - L) * m / (2 * b) + h + 25 + y, F = A * j + p + v, H = L / b * m, N = T / b * m, $ = [{
+      T = M[0], L = M[1];
+    } else d === "rectangle" ? L = T : L = 0;
+    var R = (b - T) * m / (2 * b) + h + 25 + y, F = A * j + p + v, H = T / b * m, N = L / b * m, $ = [{
       name: E,
-      value: L,
+      value: T,
       payload: C,
       dataKey: o,
       type: c
@@ -126843,7 +126843,7 @@ Il(Xd, "getComposedData", function(n) {
       lowerWidth: N,
       height: A,
       name: E,
-      val: L,
+      val: T,
       tooltipPayload: $,
       tooltipPosition: _
     }, nrt(C, "width")), {}, {
@@ -127063,7 +127063,7 @@ function Pme({ icon: n, label: e, value: r, color: i = "var(--text-primary)" }) 
   ] });
 }
 function Psn({ cardId: n }) {
-  const { t: e } = ee("cards"), { haStates: r, getFloat: i, getState: a, connected: o, fetchHistory: s } = Oe(), [c] = Pt(n || "system", prt), d = !n, [u, p] = O.useState(c.chartHours || 24), h = c.showChart !== !1, f = Cme(c.cpuEntity, u, s, o, d, 34), g = Cme(c.ramEntity, u, s, o, d, 58), m = (j) => {
+  const { t: e } = Y("cards"), { haStates: r, getFloat: i, getState: a, connected: o, fetchHistory: s } = Oe(), [c] = Pt(n || "system", prt), d = !n, [u, p] = O.useState(c.chartHours || 24), h = c.showChart !== !1, f = Cme(c.cpuEntity, u, s, o, d, 34), g = Cme(c.ramEntity, u, s, o, d, 58), m = (j) => {
     if (d) return null;
     const P = j ? i(j) : null;
     return P === null || Number.isNaN(P) ? null : P;
@@ -127073,8 +127073,8 @@ function Psn({ cardId: n }) {
     if (!j || j === "unavailable" || j === "unknown") return null;
     const P = Date.parse(j);
     if (Number.isNaN(P)) return null;
-    const E = Math.max(0, Math.floor((Date.now() - P) / 6e4)), L = Math.floor(E / 1440), T = Math.floor(E % 1440 / 60), I = E % 60;
-    return L > 0 ? e("system.uptimeVal", { d: L, h: T }) : T > 0 ? e("system.uptimeValH", { h: T, m: I }) : e("system.uptimeValM", { m: I });
+    const E = Math.max(0, Math.floor((Date.now() - P) / 6e4)), T = Math.floor(E / 1440), L = Math.floor(E % 1440 / 60), I = E % 60;
+    return T > 0 ? e("system.uptimeVal", { d: T, h: L }) : L > 0 ? e("system.uptimeValH", { h: L, m: I }) : e("system.uptimeValM", { m: I });
   }, [d, c.uptimeEntity, r, e]), v = O.useMemo(() => d ? [{ id: "update.home_assistant_core_update", name: "Home Assistant Core" }] : !c.autoUpdates || !r ? [] : Object.entries(r).filter(([j, P]) => j.startsWith("update.") && (P == null ? void 0 : P.state) === "on").map(([j, P]) => {
     var E;
     return { id: j, name: ((E = P.attributes) == null ? void 0 : E.friendly_name) || j.replace("update.", "").replace(/_/g, " ") };
@@ -127152,7 +127152,7 @@ function Psn({ cardId: n }) {
   ] });
 }
 function Msn({ cardId: n }) {
-  const { t: e } = ee("cards"), [r, i] = Pt(n || "system", prt);
+  const { t: e } = Y("cards"), [r, i] = Pt(n || "system", prt);
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("system.sectionEntities"), subtitle: e("system.sectionEntitiesHint"), children: [
       /* @__PURE__ */ l.jsx(bt, { label: e("system.cpu"), field: "cpuEntity", config: r, setConfig: i, filterDomain: "sensor" }),
@@ -127198,66 +127198,66 @@ function Isn(n) {
 }
 function Esn({ cardId: n }) {
   var ke;
-  const { t: e } = ee("cards"), { haStates: r, sendWsCommand: i, openMoreInfo: a } = Oe(), o = !n, [s, c] = O.useState("unavailable"), [d, u] = O.useState(""), [p, h] = O.useState(!0), [f, g] = O.useState("all"), [m, y] = O.useState("all"), [v, b] = O.useState("name"), [x, A] = O.useState(() => /* @__PURE__ */ new Set()), [k, S] = O.useState(!1), [C, j] = O.useState(!1), [P, E] = O.useState(null), [L, T] = O.useState(!0), [I, z] = O.useState(null), [M, R] = O.useState(!1), F = O.useMemo(() => o ? Mme : r ? Object.entries(r).map(([B, Y]) => {
+  const { t: e } = Y("cards"), { haStates: r, sendWsCommand: i, openMoreInfo: a } = Oe(), o = !n, [s, c] = O.useState("unavailable"), [d, u] = O.useState(""), [p, h] = O.useState(!0), [f, g] = O.useState("all"), [m, y] = O.useState("all"), [v, b] = O.useState("name"), [x, A] = O.useState(() => /* @__PURE__ */ new Set()), [k, S] = O.useState(!1), [C, j] = O.useState(!1), [P, E] = O.useState(null), [T, L] = O.useState(!0), [I, z] = O.useState(null), [M, R] = O.useState(!1), F = O.useMemo(() => o ? Mme : r ? Object.entries(r).map(([B, J]) => {
     var K;
     return {
       id: B,
-      name: ((K = Y == null ? void 0 : Y.attributes) == null ? void 0 : K.friendly_name) || B,
-      state: Y == null ? void 0 : Y.state,
+      name: ((K = J == null ? void 0 : J.attributes) == null ? void 0 : K.friendly_name) || B,
+      state: J == null ? void 0 : J.state,
       domain: B.split(".")[0],
-      since: (Y == null ? void 0 : Y.last_changed) || (Y == null ? void 0 : Y.last_updated) || null
+      since: (J == null ? void 0 : J.last_changed) || (J == null ? void 0 : J.last_updated) || null
     };
   }) : [], [o, r]), H = O.useMemo(() => {
-    let B = 0, Y = 0;
+    let B = 0, J = 0;
     return F.forEach((K) => {
-      K.state === "unavailable" ? B++ : K.state === "unknown" && Y++;
-    }), { unavail: B, unknown: Y };
+      K.state === "unavailable" ? B++ : K.state === "unknown" && J++;
+    }), { unavail: B, unknown: J };
   }, [F]), N = O.useMemo(() => {
     if (o) return Mme;
     let B = F;
     if (s === "search") {
-      const Y = d.trim().toLowerCase();
-      if (Y.length < 2) return [];
-      B = B.filter((K) => K.id.toLowerCase().includes(Y) || K.name.toLowerCase().includes(Y));
+      const J = d.trim().toLowerCase();
+      if (J.length < 2) return [];
+      B = B.filter((K) => K.id.toLowerCase().includes(J) || K.name.toLowerCase().includes(J));
     }
-    return p && (B = B.filter((Y) => Y.state === "unavailable")), B;
+    return p && (B = B.filter((J) => J.state === "unavailable")), B;
   }, [o, F, s, d, p]), $ = O.useMemo(() => {
     const B = /* @__PURE__ */ new Set();
-    return N.forEach((Y) => {
-      const K = Ime(Y.since);
+    return N.forEach((J) => {
+      const K = Ime(J.since);
       K && B.add(K);
-    }), [...B].sort((Y, K) => K - Y);
+    }), [...B].sort((J, K) => K - J);
   }, [N]), _ = O.useMemo(() => {
     const B = /* @__PURE__ */ new Set();
-    return N.forEach((Y) => B.add(Y.domain)), [...B].sort();
+    return N.forEach((J) => B.add(J.domain)), [...B].sort();
   }, [N]), V = O.useMemo(() => {
     let B = N;
-    return f !== "all" && (B = B.filter((Y) => String(Ime(Y.since)) === f)), m !== "all" && (B = B.filter((Y) => Y.domain === m)), B = B.slice(), v === "old" ? B.sort((Y, K) => (Date.parse(Y.since) || 1 / 0) - (Date.parse(K.since) || 1 / 0)) : v === "recent" ? B.sort((Y, K) => (Date.parse(K.since) || -1 / 0) - (Date.parse(Y.since) || -1 / 0)) : B.sort((Y, K) => Y.id.localeCompare(K.id)), B;
-  }, [N, f, m, v]), Q = O.useMemo(() => V.map((B) => B.id), [V]), U = Q.length > 0 && Q.every((B) => x.has(B)), Z = (B) => A((Y) => {
-    const K = new Set(Y);
+    return f !== "all" && (B = B.filter((J) => String(Ime(J.since)) === f)), m !== "all" && (B = B.filter((J) => J.domain === m)), B = B.slice(), v === "old" ? B.sort((J, K) => (Date.parse(J.since) || 1 / 0) - (Date.parse(K.since) || 1 / 0)) : v === "recent" ? B.sort((J, K) => (Date.parse(K.since) || -1 / 0) - (Date.parse(J.since) || -1 / 0)) : B.sort((J, K) => J.id.localeCompare(K.id)), B;
+  }, [N, f, m, v]), Q = O.useMemo(() => V.map((B) => B.id), [V]), U = Q.length > 0 && Q.every((B) => x.has(B)), Z = (B) => A((J) => {
+    const K = new Set(J);
     return K.has(B) ? K.delete(B) : K.add(B), K;
   }), re = () => A((B) => {
     if (U) {
-      const Y = new Set(B);
-      return Q.forEach((K) => Y.delete(K)), Y;
+      const J = new Set(B);
+      return Q.forEach((K) => J.delete(K)), J;
     }
     return /* @__PURE__ */ new Set([...B, ...Q]);
   }), fe = Q.filter((B) => x.has(B)), ae = async () => {
     const B = fe.map((D) => {
       const W = (r == null ? void 0 : r[D]) || {};
       return { entity_id: D, state: W.state, attributes: W.attributes || {}, last_changed: W.last_changed };
-    }), Y = { exportedAt: (/* @__PURE__ */ new Date()).toISOString(), count: B.length, entities: B }, K = Te("/api/oikos/backup");
+    }), J = { exportedAt: (/* @__PURE__ */ new Date()).toISOString(), count: B.length, entities: B }, K = Te("/api/oikos/backup");
     if (K)
       try {
         if ((await Le(K, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: "entity-cleanup", data: Y })
+          body: JSON.stringify({ name: "entity-cleanup", data: J })
         })).ok) return "server";
       } catch {
       }
     try {
-      const D = new Blob([JSON.stringify(Y, null, 2)], { type: "application/json" }), W = document.createElement("a");
+      const D = new Blob([JSON.stringify(J, null, 2)], { type: "application/json" }), W = document.createElement("a");
       return W.href = URL.createObjectURL(D), W.download = `oikos-entity-backup-${Date.now()}.json`, W.click(), URL.revokeObjectURL(W.href), "download";
     } catch {
       return null;
@@ -127265,27 +127265,27 @@ function Esn({ cardId: n }) {
   }, pe = async () => {
     S(!1), j(!0);
     let B = null;
-    L && fe.length && (B = await ae());
-    let Y = 0;
+    T && fe.length && (B = await ae());
+    let J = 0;
     const K = [];
     for (const D of fe)
       try {
-        await i({ type: "config/entity_registry/remove", entity_id: D }), Y++;
+        await i({ type: "config/entity_registry/remove", entity_id: D }), J++;
       } catch {
         K.push(D);
       }
-    j(!1), A(/* @__PURE__ */ new Set()), E({ ok: Y, fail: K.length, failIds: K, backup: B }), setTimeout(() => E((D) => D && D.fail ? D : null), 6e3);
+    j(!1), A(/* @__PURE__ */ new Set()), E({ ok: J, fail: K.length, failIds: K, backup: B }), setTimeout(() => E((D) => D && D.fail ? D : null), 6e3);
   }, ce = async () => {
     j(!0);
     let B = 0;
-    const Y = [];
+    const J = [];
     for (const K of fe)
       try {
         await i({ type: "config/entity_registry/update_entity", entity_id: K, disabled_by: "user" }), B++;
       } catch {
-        Y.push(K);
+        J.push(K);
       }
-    j(!1), A(/* @__PURE__ */ new Set()), E({ ok: B, fail: Y.length, failIds: Y, disabled: !0 }), setTimeout(() => E((K) => K && K.fail ? K : null), 6e3);
+    j(!1), A(/* @__PURE__ */ new Set()), E({ ok: B, fail: J.length, failIds: J, disabled: !0 }), setTimeout(() => E((K) => K && K.fail ? K : null), 6e3);
   }, te = async () => {
     const B = Te("/api/oikos/backup");
     if (!B) {
@@ -127304,7 +127304,7 @@ function Esn({ cardId: n }) {
   }, [M]);
   const oe = (B) => {
     c(B), A(/* @__PURE__ */ new Set()), E(null);
-  }, ie = (B, Y) => /* @__PURE__ */ l.jsx("button", { onClick: () => oe(B), style: {
+  }, ie = (B, J) => /* @__PURE__ */ l.jsx("button", { onClick: () => oe(B), style: {
     flex: 1,
     padding: "8px 0",
     borderRadius: 9,
@@ -127316,7 +127316,7 @@ function Esn({ cardId: n }) {
     color: s === B ? "var(--amber)" : "var(--text-muted)",
     boxShadow: s === B ? "0 1px 4px rgba(0,0,0,.08)" : "none",
     transition: "all .15s"
-  }, children: Y });
+  }, children: J });
   return /* @__PURE__ */ l.jsxs("div", { style: { background: "var(--bg-card)", borderRadius: 18, border: "1px solid var(--border)", padding: 16, display: "flex", flexDirection: "column", gap: 12, position: "relative" }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 10 }, children: [
       /* @__PURE__ */ l.jsx("div", { style: { width: 34, height: 34, borderRadius: 10, background: "var(--red-light)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }, children: /* @__PURE__ */ l.jsx(Zm, { size: 18, color: "var(--red)", strokeWidth: 2 }) }),
@@ -127399,7 +127399,7 @@ function Esn({ cardId: n }) {
     ] }),
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 2, maxHeight: 280, overflowY: "auto", margin: "0 -4px", padding: "0 4px" }, children: [
       V.length === 0 ? /* @__PURE__ */ l.jsx("div", { style: { padding: "20px 8px", textAlign: "center", fontSize: 13, color: "var(--text-muted)" }, children: s === "search" && d.trim().length < 2 ? e("cleanup.typeToSearch") : e("cleanup.empty") }) : V.slice(0, 400).map((B) => {
-        const Y = x.has(B.id);
+        const J = x.has(B.id);
         return /* @__PURE__ */ l.jsxs("button", { onClick: () => Z(B.id), style: {
           display: "flex",
           alignItems: "center",
@@ -127410,10 +127410,10 @@ function Esn({ cardId: n }) {
           cursor: "pointer",
           textAlign: "left",
           width: "100%",
-          background: Y ? "var(--amber-light)" : "transparent",
+          background: J ? "var(--amber-light)" : "transparent",
           transition: "background .12s"
         }, children: [
-          Y ? /* @__PURE__ */ l.jsx(ko, { size: 16, color: "var(--amber)", style: { flexShrink: 0 } }) : /* @__PURE__ */ l.jsx(jo, { size: 16, color: "var(--text-muted)", style: { flexShrink: 0 } }),
+          J ? /* @__PURE__ */ l.jsx(ko, { size: 16, color: "var(--amber)", style: { flexShrink: 0 } }) : /* @__PURE__ */ l.jsx(jo, { size: 16, color: "var(--text-muted)", style: { flexShrink: 0 } }),
           /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, minWidth: 0 }, children: [
             /* @__PURE__ */ l.jsx("div", { style: { fontSize: 13, fontWeight: 600, color: "var(--text-primary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }, children: B.name }),
             /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: "var(--text-muted)", fontFamily: "monospace", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }, children: B.id })
@@ -127452,8 +127452,8 @@ function Esn({ cardId: n }) {
       }),
       V.length > 400 && /* @__PURE__ */ l.jsx("div", { style: { padding: "8px", textAlign: "center", fontSize: 11, color: "var(--text-muted)" }, children: e("cleanup.truncated", { n: V.length - 400 }) })
     ] }),
-    /* @__PURE__ */ l.jsxs("button", { onClick: () => T((B) => !B), style: { display: "flex", alignItems: "center", gap: 8, background: "transparent", border: "none", cursor: "pointer", padding: 0, textAlign: "left" }, children: [
-      L ? /* @__PURE__ */ l.jsx(ko, { size: 15, color: "var(--green)" }) : /* @__PURE__ */ l.jsx(jo, { size: 15, color: "var(--text-muted)" }),
+    /* @__PURE__ */ l.jsxs("button", { onClick: () => L((B) => !B), style: { display: "flex", alignItems: "center", gap: 8, background: "transparent", border: "none", cursor: "pointer", padding: 0, textAlign: "left" }, children: [
+      T ? /* @__PURE__ */ l.jsx(ko, { size: 15, color: "var(--green)" }) : /* @__PURE__ */ l.jsx(jo, { size: 15, color: "var(--text-muted)" }),
       /* @__PURE__ */ l.jsx(nd, { size: 13, color: "var(--text-muted)" }),
       /* @__PURE__ */ l.jsx("span", { style: { fontSize: 12, color: "var(--text-secondary)", fontWeight: 600 }, children: e("cleanup.backupToggle") })
     ] }),
@@ -127673,7 +127673,7 @@ function ru({ label: n, color: e, icon: r, small: i }) {
   ] });
 }
 function Lsn({ fl: n, fr: e, rl: r, rr: i, dark: a }) {
-  const { t: o } = ee("cards");
+  const { t: o } = Y("cards");
   if (!n && !e && !r && !i) return null;
   const s = (u) => u != null ? `${Math.round(Number(u))}` : "—", c = (u) => {
     if (u == null) return a ? "rgba(255,255,255,.3)" : "#94a3b8";
@@ -127711,7 +127711,7 @@ function Lsn({ fl: n, fr: e, rl: r, rr: i, dark: a }) {
   ] });
 }
 function zsn({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r, getFloat: i, getState: a, callService: o } = Oe(), [s] = Pt(n, hrt), [c, d] = O.useState(!1), u = (pe) => pe ? a(pe) : null, p = (pe) => pe ? i(pe) : null, h = p(s.batteryEntity), f = p(s.rangeEntity), g = p(s.chargerPowerEntity), m = p(s.energyAddedEntity), y = p(s.chargeLimitEntity), v = p(s.tempOutEntity), b = p(s.tempInEntity), x = u(s.onlineEntity) === "on", A = u(s.asleepEntity) === "on", k = u(s.chargingEntity) === "on" || (g ?? 0) > 0.1, S = u(s.doorsEntity) === "locked", C = u(s.sentryEntity) === "on", j = u(s.locationEntity), P = u(s.shiftStateEntity), E = u(s.chargeCompleteEntity), L = u(s.frunkEntity) === "open", T = u(s.trunkEntity) === "open", I = p(s.tpmsFLEntity), z = p(s.tpmsFREntity), M = p(s.tpmsRLEntity), R = p(s.tpmsRREntity), F = h == null ? r ? "#475569" : "#cbd5e1" : k ? "#38bdf8" : h < 20 ? "#f87171" : h < 40 ? "#fbbf24" : jU, H = k ? `⚡ ${e("tesla.statusCharging")}` : A ? `💤 ${e("tesla.statusStandby")}` : x ? j === "home" ? `🏠 ${e("tesla.statusHome")}` : `📍 ${e("tesla.statusAway")}` : `⚫ ${e("tesla.statusOffline")}`, N = k ? "#38bdf8" : A ? r ? "#64748b" : "#94a3b8" : x ? "#34d399" : r ? "#475569" : "#94a3b8", $ = (pe) => pe != null ? `${Math.round(pe)} km` : "—", _ = (pe) => pe != null ? `${pe.toFixed(1)} kW` : "—", V = (pe) => pe != null ? `${pe.toFixed(1)} kWh` : "—", Q = (pe) => pe != null ? `${Math.round(pe)}°` : "—", Z = ((pe) => {
+  const { t: e } = Y("cards"), { dark: r, getFloat: i, getState: a, callService: o } = Oe(), [s] = Pt(n, hrt), [c, d] = O.useState(!1), u = (pe) => pe ? a(pe) : null, p = (pe) => pe ? i(pe) : null, h = p(s.batteryEntity), f = p(s.rangeEntity), g = p(s.chargerPowerEntity), m = p(s.energyAddedEntity), y = p(s.chargeLimitEntity), v = p(s.tempOutEntity), b = p(s.tempInEntity), x = u(s.onlineEntity) === "on", A = u(s.asleepEntity) === "on", k = u(s.chargingEntity) === "on" || (g ?? 0) > 0.1, S = u(s.doorsEntity) === "locked", C = u(s.sentryEntity) === "on", j = u(s.locationEntity), P = u(s.shiftStateEntity), E = u(s.chargeCompleteEntity), T = u(s.frunkEntity) === "open", L = u(s.trunkEntity) === "open", I = p(s.tpmsFLEntity), z = p(s.tpmsFREntity), M = p(s.tpmsRLEntity), R = p(s.tpmsRREntity), F = h == null ? r ? "#475569" : "#cbd5e1" : k ? "#38bdf8" : h < 20 ? "#f87171" : h < 40 ? "#fbbf24" : jU, H = k ? `⚡ ${e("tesla.statusCharging")}` : A ? `💤 ${e("tesla.statusStandby")}` : x ? j === "home" ? `🏠 ${e("tesla.statusHome")}` : `📍 ${e("tesla.statusAway")}` : `⚫ ${e("tesla.statusOffline")}`, N = k ? "#38bdf8" : A ? r ? "#64748b" : "#94a3b8" : x ? "#34d399" : r ? "#475569" : "#94a3b8", $ = (pe) => pe != null ? `${Math.round(pe)} km` : "—", _ = (pe) => pe != null ? `${pe.toFixed(1)} kW` : "—", V = (pe) => pe != null ? `${pe.toFixed(1)} kWh` : "—", Q = (pe) => pe != null ? `${Math.round(pe)}°` : "—", Z = ((pe) => {
     if (!pe || pe === "unknown" || pe === "unavailable") return null;
     try {
       const ce = new Date(pe);
@@ -127908,8 +127908,8 @@ function zsn({ cardId: n }) {
         }
       ),
       C && /* @__PURE__ */ l.jsx(ru, { label: e("tesla.sentry"), color: "#f59e0b", icon: "shield-check", small: !0 }),
-      L && /* @__PURE__ */ l.jsx(ru, { label: e("tesla.frunk"), color: "#f87171", icon: "car-door", small: !0 }),
-      T && /* @__PURE__ */ l.jsx(ru, { label: e("tesla.trunk"), color: "#f87171", icon: "car-back", small: !0 })
+      T && /* @__PURE__ */ l.jsx(ru, { label: e("tesla.frunk"), color: "#f87171", icon: "car-door", small: !0 }),
+      L && /* @__PURE__ */ l.jsx(ru, { label: e("tesla.trunk"), color: "#f87171", icon: "car-back", small: !0 })
     ] }),
     (I || z || M || R) && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
       /* @__PURE__ */ l.jsxs(
@@ -127942,7 +127942,7 @@ function zsn({ cardId: n }) {
   ] });
 }
 function Bsn({ cardId: n }) {
-  const { t: e } = ee("cards"), { dark: r } = Oe(), [i, a] = Pt(n, hrt);
+  const { t: e } = Y("cards"), { dark: r } = Oe(), [i, a] = Pt(n, hrt);
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("tesla.settings.sectionBattery"), children: [
       /* @__PURE__ */ l.jsx(
@@ -128335,7 +128335,7 @@ function Rsn({ cfg: n, haStates: e, dark: r, maxW: i, showBars: a, onTap: o, t: 
   );
 }
 function Dsn({ cardId: n }) {
-  const { dark: e, haStates: r, openMoreInfo: i } = Oe(), [a] = Pt(n, frt), { t: o } = ee("cards"), {
+  const { dark: e, haStates: r, openMoreInfo: i } = Oe(), [a] = Pt(n, frt), { t: o } = Y("cards"), {
     title: s = o("appliances.title"),
     showTotal: c = !0,
     showBars: d = !0,
@@ -128462,14 +128462,14 @@ const Hsn = {
 };
 function Fsn({ cardId: n }) {
   var P;
-  const { dark: e, haStates: r = {} } = Oe(), [i, a] = Pt(n, frt), [o, s] = O.useState(null), [c, d] = O.useState(null), { t: u } = ee("cards"), { appliances: p = [], title: h, showTotal: f, showBars: g, maxW: m, sortByPower: y } = i, v = (E) => a((L) => ({ ...L, appliances: E(L.appliances ?? []) })), b = (E, L, T) => v((I) => I.map((z, M) => M === E ? { ...z, [L]: T } : z)), x = () => {
+  const { dark: e, haStates: r = {} } = Oe(), [i, a] = Pt(n, frt), [o, s] = O.useState(null), [c, d] = O.useState(null), { t: u } = Y("cards"), { appliances: p = [], title: h, showTotal: f, showBars: g, maxW: m, sortByPower: y } = i, v = (E) => a((T) => ({ ...T, appliances: E(T.appliances ?? []) })), b = (E, T, L) => v((I) => I.map((z, M) => M === E ? { ...z, [T]: L } : z)), x = () => {
     v((E) => [...E, { ...Hsn, id: Date.now().toString() }]), d(p.length);
-  }, A = (E) => v((L) => L.filter((T, I) => I !== E)), k = (E) => v((L) => {
-    const T = [...L];
-    return [T[E - 1], T[E]] = [T[E], T[E - 1]], T;
-  }), S = (E) => v((L) => {
-    const T = [...L];
-    return [T[E], T[E + 1]] = [T[E + 1], T[E]], T;
+  }, A = (E) => v((T) => T.filter((L, I) => I !== E)), k = (E) => v((T) => {
+    const L = [...T];
+    return [L[E - 1], L[E]] = [L[E], L[E - 1]], L;
+  }), S = (E) => v((T) => {
+    const L = [...T];
+    return [L[E], L[E + 1]] = [L[E + 1], L[E]], L;
   }), C = e ? "rgba(255,255,255,.45)" : "#64748b", j = e ? "rgba(255,255,255,.9)" : "#0f172a";
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: u("appliances.settings.sectionTitle"), badge: p.length, collapsible: !0, defaultOpen: !0, children: [
@@ -128501,8 +128501,8 @@ function Fsn({ cardId: n }) {
         u("appliances.settings.emptyList"),
         /* @__PURE__ */ l.jsx("br", {}),
         /* @__PURE__ */ l.jsx("span", { style: { fontSize: 11 }, children: u("appliances.settings.emptyListHint") })
-      ] }) : /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: p.map((E, L) => {
-        const T = c === L, I = E.powerEntity ? r[E.powerEntity] : null, z = I ? parseFloat(I.state) || 0 : null;
+      ] }) : /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: p.map((E, T) => {
+        const L = c === T, I = E.powerEntity ? r[E.powerEntity] : null, z = I ? parseFloat(I.state) || 0 : null;
         return /* @__PURE__ */ l.jsxs("div", { style: {
           border: `1px solid ${e ? "rgba(255,255,255,.07)" : "#f1f5f9"}`,
           borderRadius: 10,
@@ -128548,22 +128548,22 @@ function Fsn({ cardId: n }) {
               ] })
             ] }),
             /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: 2, flexShrink: 0 }, children: [
-              /* @__PURE__ */ l.jsx(Uw, { onClick: () => k(L), disabled: L === 0, children: /* @__PURE__ */ l.jsx(lr, { size: 12 }) }),
-              /* @__PURE__ */ l.jsx(Uw, { onClick: () => S(L), disabled: L === p.length - 1, children: /* @__PURE__ */ l.jsx(on, { size: 12 }) }),
-              /* @__PURE__ */ l.jsx(Uw, { onClick: () => d(T ? null : L), active: T, children: /* @__PURE__ */ l.jsx(rd, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Uw, { onClick: () => k(T), disabled: T === 0, children: /* @__PURE__ */ l.jsx(lr, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Uw, { onClick: () => S(T), disabled: T === p.length - 1, children: /* @__PURE__ */ l.jsx(on, { size: 12 }) }),
+              /* @__PURE__ */ l.jsx(Uw, { onClick: () => d(L ? null : T), active: L, children: /* @__PURE__ */ l.jsx(rd, { size: 12 }) }),
               /* @__PURE__ */ l.jsx(Uw, { danger: !0, onClick: () => {
-                A(L), c === L && d(null);
+                A(T), c === T && d(null);
               }, children: /* @__PURE__ */ l.jsx(ct, { size: 12 }) })
             ] })
           ] }),
-          T && /* @__PURE__ */ l.jsxs("div", { style: {
+          L && /* @__PURE__ */ l.jsxs("div", { style: {
             padding: "12px",
             borderTop: `1px solid ${e ? "rgba(255,255,255,.06)" : "#f1f5f9"}`,
             display: "flex",
             flexDirection: "column",
             gap: 10
           }, children: [
-            /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.powerSensorLabel"), children: /* @__PURE__ */ l.jsxs("button", { onClick: () => s(L), style: {
+            /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.powerSensorLabel"), children: /* @__PURE__ */ l.jsxs("button", { onClick: () => s(T), style: {
               display: "flex",
               alignItems: "center",
               gap: 8,
@@ -128590,7 +128590,7 @@ function Fsn({ cardId: n }) {
                 "input",
                 {
                   value: E.name ?? "",
-                  onChange: (M) => b(L, "name", M.target.value),
+                  onChange: (M) => b(T, "name", M.target.value),
                   placeholder: u("appliances.settings.namePlaceholder"),
                   style: Nsn
                 }
@@ -128599,13 +128599,13 @@ function Fsn({ cardId: n }) {
                 Wd,
                 {
                   value: E.icon,
-                  onChange: (M) => b(L, "icon", M),
+                  onChange: (M) => b(T, "icon", M),
                   dark: e
                 }
               ) })
             ] })
           ] })
-        ] }, L);
+        ] }, T);
       }) })
     ] }),
     /* @__PURE__ */ l.jsxs(Mt, { title: u("appliances.settings.sectionAspect"), collapsible: !0, defaultOpen: !1, children: [
@@ -128613,7 +128613,7 @@ function Fsn({ cardId: n }) {
         vg,
         {
           value: h ?? u("appliances.title"),
-          onChange: (E) => a((L) => ({ ...L, title: E })),
+          onChange: (E) => a((T) => ({ ...T, title: E })),
           placeholder: u("appliances.title")
         }
       ) }),
@@ -128621,35 +128621,35 @@ function Fsn({ cardId: n }) {
         Lc,
         {
           value: f ?? !0,
-          onChange: (E) => a((L) => ({ ...L, showTotal: E }))
+          onChange: (E) => a((T) => ({ ...T, showTotal: E }))
         }
       ) }),
       /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.showBarsLabel"), hint: u("appliances.settings.showBarsHint"), children: /* @__PURE__ */ l.jsx(
         Lc,
         {
           value: g ?? !0,
-          onChange: (E) => a((L) => ({ ...L, showBars: E }))
+          onChange: (E) => a((T) => ({ ...T, showBars: E }))
         }
       ) }),
       /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.sortByPowerLabel"), hint: u("appliances.settings.sortByPowerHint"), children: /* @__PURE__ */ l.jsx(
         Lc,
         {
           value: y ?? !1,
-          onChange: (E) => a((L) => ({ ...L, sortByPower: E }))
+          onChange: (E) => a((T) => ({ ...T, sortByPower: E }))
         }
       ) }),
       /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.onlyActiveLabel"), hint: u("appliances.settings.onlyActiveHint"), children: /* @__PURE__ */ l.jsx(
         Lc,
         {
           value: i.onlyActive ?? !1,
-          onChange: (E) => a((L) => ({ ...L, onlyActive: E }))
+          onChange: (E) => a((T) => ({ ...T, onlyActive: E }))
         }
       ) }),
       /* @__PURE__ */ l.jsx(kt, { label: u("appliances.settings.maxWLabel"), hint: u("appliances.settings.maxWHint"), children: /* @__PURE__ */ l.jsx(
         ZKe,
         {
           value: m ?? 3e3,
-          onChange: (E) => a((L) => ({ ...L, maxW: E })),
+          onChange: (E) => a((T) => ({ ...T, maxW: E })),
           min: 500,
           max: 2e4,
           step: 500
@@ -128722,7 +128722,7 @@ const Nsn = {
 };
 function $sn({ cardId: n }) {
   var d;
-  const { dark: e, openPopup: r } = Oe(), { t: i } = ee("cards"), [a] = Pt(n, Qsn), o = Wsn[a.direction] ?? va, s = ((d = a.childCards) == null ? void 0 : d.length) ?? 0, c = { bottom: i("popupPanel.dirFromBottom"), left: i("popupPanel.dirFromLeft"), right: i("popupPanel.dirFromRight") }[a.direction] ?? "";
+  const { dark: e, openPopup: r } = Oe(), { t: i } = Y("cards"), [a] = Pt(n, Qsn), o = Wsn[a.direction] ?? va, s = ((d = a.childCards) == null ? void 0 : d.length) ?? 0, c = { bottom: i("popupPanel.dirFromBottom"), left: i("popupPanel.dirFromLeft"), right: i("popupPanel.dirFromRight") }[a.direction] ?? "";
   return /* @__PURE__ */ l.jsxs(
     "button",
     {
@@ -128980,7 +128980,7 @@ function Usn() {
 }
 const EU = 520;
 function Xsn({ dark: n, paneWidth: e, children: r }) {
-  const { t: i } = ee("layout"), a = O.useRef(null), o = O.useRef(null), [s, c] = O.useState(1), [d, u] = O.useState(0), p = e < EU + 40;
+  const { t: i } = Y("layout"), a = O.useRef(null), o = O.useRef(null), [s, c] = O.useState(1), [d, u] = O.useState(0), p = e < EU + 40;
   return O.useEffect(() => {
     const h = a.current, f = o.current;
     if (!h || !f) return;
@@ -129037,7 +129037,7 @@ function Xsn({ dark: n, paneWidth: e, children: r }) {
   ] });
 }
 function Gsn({ dark: n, onDrag: e }) {
-  const { t: r } = ee("layout"), i = O.useRef(!1);
+  const { t: r } = Y("layout"), i = O.useRef(!1);
   return O.useEffect(() => {
     const a = (s) => {
       i.current && e(s.clientX);
@@ -129097,7 +129097,7 @@ const Bme = () => {
   }
 };
 function pie({ dark: n, cardId: e, instanceId: r, visible: i, onClose: a }) {
-  const { t: o } = ee("layout"), s = Wo(e), c = s == null ? void 0 : s.settingsComponent, d = s == null ? void 0 : s.component, u = r ?? e, p = Ksn(), h = !!(s != null && s.hacs || (s == null ? void 0 : s.id) === "ha-card"), f = !!d && p && !h, g = O.useRef(null);
+  const { t: o } = Y("layout"), s = Wo(e), c = s == null ? void 0 : s.settingsComponent, d = s == null ? void 0 : s.component, u = r ?? e, p = Ksn(), h = !!(s != null && s.hacs || (s == null ? void 0 : s.id) === "ha-card"), f = !!d && p && !h, g = O.useRef(null);
   O.useEffect(() => {
     if (!i) {
       g.current = null;
@@ -129282,7 +129282,7 @@ const Ysn = {
   childCards: []
 };
 function Jsn({ dark: n, onPick: e, onClose: r }) {
-  const { t: i } = ee("cards"), [a, o] = O.useState(""), s = Object.values(_n()).filter(
+  const { t: i } = Y("cards"), [a, o] = O.useState(""), s = Object.values(_n()).filter(
     (d) => !d.badgeOnly && d.id !== "popup-panel"
   ), c = a.trim() ? s.filter(
     (d) => {
@@ -129462,7 +129462,7 @@ function TU({ label: n, hint: e, checked: r, onChange: i }) {
 }
 function nln({ cardId: n }) {
   var g;
-  const { t: e } = ee("cards"), [r, i] = Pt(n, Ysn), [a, o] = O.useState(!1), [s, c] = O.useState(null), { dark: d } = Oe(), u = (m, y) => i((v) => ({ ...v, [m]: y })), p = (m) => {
+  const { t: e } = Y("cards"), [r, i] = Pt(n, Ysn), [a, o] = O.useState(!1), [s, c] = O.useState(null), { dark: d } = Oe(), u = (m, y) => i((v) => ({ ...v, [m]: y })), p = (m) => {
     const y = {
       id: `${n}-child-${zd().slice(0, 8)}`,
       cardId: m
@@ -129792,7 +129792,7 @@ function aln(n) {
   return n === "bottom" ? { initial: { y: "100%" }, animate: { y: 0 }, exit: { y: "100%" }, transition: e } : n === "left" ? { initial: { x: "-100%" }, animate: { x: 0 }, exit: { x: "-100%" }, transition: e } : { initial: { x: "100%" }, animate: { x: 0 }, exit: { x: "100%" }, transition: e };
 }
 function oln({ cfg: n, dark: e, open: r, onClose: i }) {
-  const { t: a } = ee("cards"), o = _n(), s = n.popupDirection ?? "bottom", c = n.popupSize ?? 65, d = s === "bottom", u = aln(s), p = e ? "rgba(255,255,255,.07)" : "#e8edf2", h = e ? "#0d1117" : "#ffffff", f = O.useRef(null), [g, m] = O.useState(0), y = (x) => {
+  const { t: a } = Y("cards"), o = _n(), s = n.popupDirection ?? "bottom", c = n.popupSize ?? 65, d = s === "bottom", u = aln(s), p = e ? "rgba(255,255,255,.07)" : "#e8edf2", h = e ? "#0d1117" : "#ffffff", f = O.useRef(null), [g, m] = O.useState(0), y = (x) => {
     f.current = x.touches[0].clientY;
   }, v = (x) => {
     if (f.current === null) return;
@@ -129882,7 +129882,7 @@ function oln({ cfg: n, dark: e, open: r, onClose: i }) {
 }
 function sln({ cardId: n }) {
   var f, g;
-  const { t: e } = ee("cards"), { dark: r } = Oe(), [i] = Pt(n, krt), [a, o] = O.useState(!1), s = _n(), c = Math.max(1, Math.min(4, i.columns ?? 2)), d = r ? "rgba(255,255,255,.07)" : "#e8edf2", u = r ? "rgba(255,255,255,.02)" : "#fafafa", p = ((f = i.innerCards) == null ? void 0 : f.length) > 0, h = i.popupEnabled && ((g = i.popupCards) == null ? void 0 : g.length) > 0;
+  const { t: e } = Y("cards"), { dark: r } = Oe(), [i] = Pt(n, krt), [a, o] = O.useState(!1), s = _n(), c = Math.max(1, Math.min(4, i.columns ?? 2)), d = r ? "rgba(255,255,255,.07)" : "#e8edf2", u = r ? "rgba(255,255,255,.02)" : "#fafafa", p = ((f = i.innerCards) == null ? void 0 : f.length) > 0, h = i.popupEnabled && ((g = i.popupCards) == null ? void 0 : g.length) > 0;
   return /* @__PURE__ */ l.jsxs("div", { style: {
     width: "100%",
     borderRadius: 14,
@@ -129941,7 +129941,7 @@ function sln({ cardId: n }) {
   ] });
 }
 function lln({ dark: n, exclude: e, onPick: r, onClose: i }) {
-  const { t: a } = ee("cards"), [o, s] = O.useState(""), c = Object.values(_n()).filter((u) => !u.badgeOnly && !(e != null && e.includes(u.id))), d = o.trim() ? c.filter((u) => {
+  const { t: a } = Y("cards"), [o, s] = O.useState(""), c = Object.values(_n()).filter((u) => !u.badgeOnly && !(e != null && e.includes(u.id))), d = o.trim() ? c.filter((u) => {
     var p;
     return u.name.toLowerCase().includes(o.toLowerCase()) || ((p = u.category) == null ? void 0 : p.toLowerCase().includes(o.toLowerCase()));
   }) : c;
@@ -130033,7 +130033,7 @@ function Dme({ label: n, hint: e, checked: r, onChange: i }) {
   ] });
 }
 function Hme({ title: n, items: e, pickerExclude: r, dark: i, onAdd: a, onRemove: o }) {
-  const { t: s } = ee("cards"), [c, d] = O.useState(!1), [u, p] = O.useState(null), h = _n();
+  const { t: s } = Y("cards"), [c, d] = O.useState(!1), [u, p] = O.useState(null), h = _n();
   return /* @__PURE__ */ l.jsxs(Mt, { title: n, badge: e.length || null, children: [
     e.length === 0 ? /* @__PURE__ */ l.jsx("div", { style: { fontSize: 12, color: "var(--text-muted)", textAlign: "center", padding: "14px 0 8px" }, children: s("cardPanel.noCardAdded") }) : /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 6, marginBottom: 10 }, children: e.map((f) => {
       const g = h[f.cardId], m = g == null ? void 0 : g.icon;
@@ -130115,7 +130115,7 @@ const cln = [
   { id: "right", labelKey: "cardPanel.dirRight", Icon: ed }
 ];
 function dln({ cardId: n }) {
-  const { t: e } = ee("cards"), [r, i] = Pt(n, krt), { dark: a } = Oe(), o = (p, h) => i((f) => ({ ...f, [p]: h })), s = (p) => o("innerCards", [...r.innerCards ?? [], { id: `${n}-in-${zd().slice(0, 8)}`, cardId: p }]), c = (p) => o("innerCards", (r.innerCards ?? []).filter((h) => h.id !== p)), d = (p) => o("popupCards", [...r.popupCards ?? [], { id: `${n}-pop-${zd().slice(0, 8)}`, cardId: p }]), u = (p) => o("popupCards", (r.popupCards ?? []).filter((h) => h.id !== p));
+  const { t: e } = Y("cards"), [r, i] = Pt(n, krt), { dark: a } = Oe(), o = (p, h) => i((f) => ({ ...f, [p]: h })), s = (p) => o("innerCards", [...r.innerCards ?? [], { id: `${n}-in-${zd().slice(0, 8)}`, cardId: p }]), c = (p) => o("innerCards", (r.innerCards ?? []).filter((h) => h.id !== p)), d = (p) => o("popupCards", [...r.popupCards ?? [], { id: `${n}-pop-${zd().slice(0, 8)}`, cardId: p }]), u = (p) => o("popupCards", (r.popupCards ?? []).filter((h) => h.id !== p));
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 18 }, children: [
     /* @__PURE__ */ l.jsxs(Mt, { title: e("cardPanel.general"), children: [
       /* @__PURE__ */ l.jsx(kt, { label: e("cardPanel.title"), children: /* @__PURE__ */ l.jsx(
@@ -130710,7 +130710,7 @@ function kln() {
 }
 const Fme = (n) => String(n).padStart(2, "0");
 function wrt({ now: n }) {
-  const { t: e } = ee("screensaver"), { t: r } = ee("common"), i = Fme(n.getHours()), a = Fme(n.getMinutes()), o = n.getSeconds() % 2 === 0;
+  const { t: e } = Y("screensaver"), { t: r } = Y("common"), i = Fme(n.getHours()), a = Fme(n.getMinutes()), o = n.getSeconds() % 2 === 0;
   return (
     // width: 100% per riempire il container query parent
     /* @__PURE__ */ l.jsxs("div", { style: { width: "100%", padding: "0 4%" }, children: [
@@ -130767,7 +130767,7 @@ function wrt({ now: n }) {
   );
 }
 function Srt({ fvW: n, batSoc: e, casaW: r, reteW: i }) {
-  const a = i < -80 ? "export" : i > 80 ? "import" : "idle", o = Math.abs(i), s = [
+  const { t: a } = Y("cards"), o = i < -80 ? "export" : i > 80 ? "import" : "idle", s = Math.abs(i), c = [
     {
       icon: "☀️",
       label: "Solare",
@@ -130793,12 +130793,12 @@ function Srt({ fvW: n, batSoc: e, casaW: r, reteW: i }) {
       glow: "rgba(249,115,22,0.2)"
     },
     {
-      icon: a === "import" ? "⬇️" : "⬆️",
-      label: a === "export" ? "Rete (cessione)" : a === "import" ? "Rete (prelievo)" : "Rete",
-      value: o >= 1e3 ? `${(o / 1e3).toFixed(1)} kW` : o > 0 ? `${Math.round(o)} W` : "—",
-      color: a === "import" ? "#ef4444" : a === "export" ? "#60a5fa" : "#64748b",
-      pct: Math.min(100, o / 40),
-      glow: a === "import" ? "rgba(239,68,68,0.15)" : "rgba(96,165,250,0.15)"
+      icon: o === "import" ? "⬇️" : "⬆️",
+      label: o === "export" ? "Rete (cessione)" : o === "import" ? "Rete (prelievo)" : "Rete",
+      value: s >= 1e3 ? `${(s / 1e3).toFixed(1)} kW` : s > 0 ? `${Math.round(s)} W` : "—",
+      color: o === "import" ? "#ef4444" : o === "export" ? "#60a5fa" : "#64748b",
+      pct: Math.min(100, s / 40),
+      glow: o === "import" ? "rgba(239,68,68,0.15)" : "rgba(96,165,250,0.15)"
     }
   ];
   return /* @__PURE__ */ l.jsxs("div", { style: {
@@ -130825,8 +130825,8 @@ function Srt({ fvW: n, batSoc: e, casaW: r, reteW: i }) {
       color: "rgba(255,255,255,0.25)",
       letterSpacing: ".2em",
       textTransform: "uppercase"
-    }, children: t("cards:screensaver.liveEnergy") }),
-    s.map((c) => /* @__PURE__ */ l.jsxs("div", { children: [
+    }, children: a("screensaver.liveEnergy") }),
+    c.map((d) => /* @__PURE__ */ l.jsxs("div", { children: [
       /* @__PURE__ */ l.jsxs("div", { style: {
         display: "flex",
         alignItems: "center",
@@ -130836,23 +130836,23 @@ function Srt({ fvW: n, batSoc: e, casaW: r, reteW: i }) {
         "                         ",
         /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: "2cqw" }, children: [
           "  ",
-          /* @__PURE__ */ l.jsx("span", { style: { fontSize: "4.5cqw" }, children: c.icon }),
+          /* @__PURE__ */ l.jsx("span", { style: { fontSize: "4.5cqw" }, children: d.icon }),
           "                ",
           /* @__PURE__ */ l.jsx("span", { style: {
             fontSize: "3.5cqw",
             fontWeight: 600,
             /* 345px → 12.1px */
             color: "rgba(255,255,255,0.45)"
-          }, children: c.label })
+          }, children: d.label })
         ] }),
         /* @__PURE__ */ l.jsx("span", { style: {
           fontSize: "4cqw",
           fontWeight: 800,
-          color: c.color,
+          color: d.color,
           /* 345px → 13.8px */
           fontVariantNumeric: "tabular-nums",
-          textShadow: `0 0 12px ${c.color}`
-        }, children: c.value })
+          textShadow: `0 0 12px ${d.color}`
+        }, children: d.value })
       ] }),
       /* @__PURE__ */ l.jsx("div", { style: {
         height: "1.2cqw",
@@ -130860,21 +130860,21 @@ function Srt({ fvW: n, batSoc: e, casaW: r, reteW: i }) {
         /* 345px → 4.1px */
         background: "rgba(255,255,255,0.06)",
         overflow: "hidden",
-        boxShadow: `inset 0 0 8px ${c.glow}`
+        boxShadow: `inset 0 0 8px ${d.glow}`
       }, children: /* @__PURE__ */ l.jsx(
         se.div,
         {
-          animate: { width: `${c.pct}%` },
+          animate: { width: `${d.pct}%` },
           transition: { duration: 1.2, ease: "easeOut" },
           style: {
             height: "100%",
             borderRadius: 99,
-            background: `linear-gradient(90deg, ${c.color}bb, ${c.color})`,
-            boxShadow: `0 0 8px ${c.color}`
+            background: `linear-gradient(90deg, ${d.color}bb, ${d.color})`,
+            boxShadow: `0 0 8px ${d.color}`
           }
         }
       ) })
-    ] }, c.label))
+    ] }, d.label))
   ] });
 }
 const Nme = {
@@ -130973,7 +130973,7 @@ function Sln(n, e) {
 }
 function Oln({ onDismiss: n, cfg: e = {} }) {
   var j;
-  const { t: r } = ee("screensaver"), { getFloat: i, getState: a } = Oe(), o = kln(), s = o.getHours(), c = Aln(s), d = xln[c], u = Tt(), p = i(u.solarPower), h = i(u.gridPower), f = u.batterySoc ? i(u.batterySoc) : null, g = i(u.housePower), m = u.outdoorTemp ? i(u.outdoorTemp) : null, y = u.weatherEntity ? a(u.weatherEntity) : null, v = c === "night" || c === "dusk", b = e.bgCard ? "" : v ? e.homeBgNight || e.homeBgDay || "" : e.homeBgDay || "", x = `linear-gradient(180deg, ${d.stops.map(
+  const { t: r } = Y("screensaver"), { getFloat: i, getState: a } = Oe(), o = kln(), s = o.getHours(), c = Aln(s), d = xln[c], u = Tt(), p = i(u.solarPower), h = i(u.gridPower), f = u.batterySoc ? i(u.batterySoc) : null, g = i(u.housePower), m = u.outdoorTemp ? i(u.outdoorTemp) : null, y = u.weatherEntity ? a(u.weatherEntity) : null, v = c === "night" || c === "dusk", b = e.bgCard ? "" : v ? e.homeBgNight || e.homeBgDay || "" : e.homeBgDay || "", x = `linear-gradient(180deg, ${d.stops.map(
     (P, E) => `${P} ${Math.round(E / (d.stops.length - 1) * 100)}%`
   ).join(", ")})`, A = e.homeBgFit || "cover", k = b ? {
     background: "#000",
@@ -131026,9 +131026,9 @@ function Oln({ onDismiss: n, cfg: e = {} }) {
         } }),
         S.map((P, E) => {
           var H, N;
-          const L = Sln(P, C);
-          if (!L) return null;
-          const T = P.w ?? ((H = Nme[P.type]) == null ? void 0 : H.w) ?? 24, I = P.h ?? ((N = Nme[P.type]) == null ? void 0 : N.h) ?? 35, z = Math.max(0, Math.min(100 - T, P.x)), M = P.type === "card" ? Math.max(0, Math.min(96, P.y)) : Math.max(0, Math.min(100 - I, P.y)), R = P.opacity ?? e.widgetOpacity ?? 100, F = P.blendMode ?? e.widgetBlendMode ?? "normal";
+          const T = Sln(P, C);
+          if (!T) return null;
+          const L = P.w ?? ((H = Nme[P.type]) == null ? void 0 : H.w) ?? 24, I = P.h ?? ((N = Nme[P.type]) == null ? void 0 : N.h) ?? 35, z = Math.max(0, Math.min(100 - L, P.x)), M = P.type === "card" ? Math.max(0, Math.min(96, P.y)) : Math.max(0, Math.min(100 - I, P.y)), R = P.opacity ?? e.widgetOpacity ?? 100, F = P.blendMode ?? e.widgetBlendMode ?? "normal";
           return /* @__PURE__ */ l.jsx(
             se.div,
             {
@@ -131039,7 +131039,7 @@ function Oln({ onDismiss: n, cfg: e = {} }) {
                 position: "absolute",
                 left: `${z}%`,
                 top: `${M}%`,
-                width: `${T}%`,
+                width: `${L}%`,
                 // Card: height auto → segue l'aspect-ratio naturale della card.
                 // Altri widget: h% esplicito.
                 height: P.type === "card" ? "auto" : `${I}%`,
@@ -131048,7 +131048,7 @@ function Oln({ onDismiss: n, cfg: e = {} }) {
                 // Container query: i widget figli usano cqw per scalare con il container
                 containerType: "inline-size"
               },
-              children: P.type === "card" ? /* @__PURE__ */ l.jsx(wln, { topPct: M, children: L }) : L
+              children: P.type === "card" ? /* @__PURE__ */ l.jsx(wln, { topPct: M, children: T }) : T
             },
             P.id
           );
@@ -131111,8 +131111,8 @@ const Pln = {
   "--border": "rgba(255,255,255,.08)"
 };
 function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
-  var Y, K;
-  const { t: a } = ee("screensaver"), o = {
+  var J, K;
+  const { t: a } = Y("screensaver"), o = {
     clock: "🕐 " + a("clock"),
     energy: "⚡ " + a("energyLive"),
     weather: "🌤️ " + a("weather")
@@ -131136,7 +131136,7 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
     } catch {
       return !0;
     }
-  }), [C, j] = O.useState("auto"), [P, E] = O.useState(null), [L, T] = O.useState(0), I = () => A((D) => {
+  }), [C, j] = O.useState("auto"), [P, E] = O.useState(null), [T, L] = O.useState(0), I = () => A((D) => {
     try {
       localStorage.setItem("oikos-ss-editor-grid", D ? "0" : "1");
     } catch {
@@ -131162,8 +131162,8 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
   O.useEffect(() => {
     const D = c.current;
     if (!D) return;
-    const W = new ResizeObserver(() => T(D.getBoundingClientRect().width));
-    return W.observe(D), T(D.getBoundingClientRect().width), () => W.disconnect();
+    const W = new ResizeObserver(() => L(D.getBoundingClientRect().width));
+    return W.observe(D), L(D.getBoundingClientRect().width), () => W.disconnect();
   }, []);
   const H = O.useCallback((D) => {
     const W = D(u.current.widgets ?? []);
@@ -131176,22 +131176,22 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
       y: (W - X.top) / X.height * 100
     } : { x: 0, y: 0 };
   }, []), $ = O.useCallback((D, W, X, ne, le) => {
-    var Pe, Re;
+    var Pe, De;
     if (!k) return { x: D, y: W, guides: null };
-    const J = (u.current.widgets ?? []).filter((Ie) => Ie.id !== le), ue = [0, 50, 100], ye = [0, 50, 100];
-    for (const Ie of J) {
-      const De = Ie.w ?? ((Pe = ac[Ie.type]) == null ? void 0 : Pe.w) ?? 24, qe = Ie.h ?? ((Re = ac[Ie.type]) == null ? void 0 : Re.h) ?? 35;
-      ue.push(Ie.x, Ie.x + De / 2, Ie.x + De), ye.push(Ie.y, Ie.y + qe / 2, Ie.y + qe);
+    const ee = (u.current.widgets ?? []).filter((Ie) => Ie.id !== le), ue = [0, 50, 100], ye = [0, 50, 100];
+    for (const Ie of ee) {
+      const He = Ie.w ?? ((Pe = ac[Ie.type]) == null ? void 0 : Pe.w) ?? 24, qe = Ie.h ?? ((De = ac[Ie.type]) == null ? void 0 : De.h) ?? 35;
+      ue.push(Ie.x, Ie.x + He / 2, Ie.x + He), ye.push(Ie.y, Ie.y + qe / 2, Ie.y + qe);
     }
     let ge = null, we = null;
     for (const Ie of ue)
-      for (const [De, qe] of [[D, 0], [D + X / 2, X / 2], [D + X, X]]) {
-        const Ge = Math.abs(De - Ie);
+      for (const [He, qe] of [[D, 0], [D + X / 2, X / 2], [D + X, X]]) {
+        const Ge = Math.abs(He - Ie);
         Ge < Vme && (!ge || Ge < ge.d) && (ge = { d: Ge, x: Ie - qe, line: Ie });
       }
     for (const Ie of ye)
-      for (const [De, qe] of [[W, 0], [W + ne / 2, ne / 2], [W + ne, ne]]) {
-        const Ge = Math.abs(De - Ie);
+      for (const [He, qe] of [[W, 0], [W + ne / 2, ne / 2], [W + ne, ne]]) {
+        const Ge = Math.abs(He - Ie);
         Ge < Vme && (!we || Ge < we.d) && (we = { d: Ge, y: Ie - qe, line: Ie });
       }
     const he = [], me = [];
@@ -131201,28 +131201,28 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
     if (!W) return;
     const X = N(D.clientX, D.clientY);
     if (W.type === "move") {
-      const ne = $(X.x - W.offX, X.y - W.offY, W.w, W.h, W.id), le = Math.max(0, Math.min(100 - W.w, ne.x)), J = Math.max(0, Math.min(100 - W.h, ne.y));
+      const ne = $(X.x - W.offX, X.y - W.offY, W.w, W.h, W.id), le = Math.max(0, Math.min(100 - W.w, ne.x)), ee = Math.max(0, Math.min(100 - W.h, ne.y));
       E(ne.guides), H((ue) => ue.map(
-        (ye) => ye.id === W.id ? { ...ye, x: parseFloat(le.toFixed(1)), y: parseFloat(J.toFixed(1)) } : ye
+        (ye) => ye.id === W.id ? { ...ye, x: parseFloat(le.toFixed(1)), y: parseFloat(ee.toFixed(1)) } : ye
       ));
       return;
     }
     if (W.type === "resize") {
-      const { startX: ne, startY: le, startW: J, startH: ue, startPct: ye, corner: ge, widgetType: we } = W, he = we === "card", me = X.x - ye.x, Pe = X.y - ye.y;
-      let Re = ne, Ie = le, De = J, qe = ue;
-      if (ge === "se" ? (De = Math.max(P2, J + me), he || (qe = Math.max(Xw, ue + Pe))) : ge === "sw" ? (De = Math.max(P2, J - me), Re = ne + (J - De), he || (qe = Math.max(Xw, ue + Pe))) : ge === "ne" ? (De = Math.max(P2, J + me), he || (qe = Math.max(Xw, ue - Pe), Ie = le + (ue - qe))) : ge === "nw" && (De = Math.max(P2, J - me), Re = ne + (J - De), he || (qe = Math.max(Xw, ue - Pe), Ie = le + (ue - qe))), k && x) {
-        if ((ge === "se" || ge === "ne") && (De = Math.round((Re + De) / oc) * oc - Re), ge === "sw" || ge === "nw") {
-          const Ge = Re + De;
-          Re = Math.round(Re / oc) * oc, De = Ge - Re;
+      const { startX: ne, startY: le, startW: ee, startH: ue, startPct: ye, corner: ge, widgetType: we } = W, he = we === "card", me = X.x - ye.x, Pe = X.y - ye.y;
+      let De = ne, Ie = le, He = ee, qe = ue;
+      if (ge === "se" ? (He = Math.max(P2, ee + me), he || (qe = Math.max(Xw, ue + Pe))) : ge === "sw" ? (He = Math.max(P2, ee - me), De = ne + (ee - He), he || (qe = Math.max(Xw, ue + Pe))) : ge === "ne" ? (He = Math.max(P2, ee + me), he || (qe = Math.max(Xw, ue - Pe), Ie = le + (ue - qe))) : ge === "nw" && (He = Math.max(P2, ee - me), De = ne + (ee - He), he || (qe = Math.max(Xw, ue - Pe), Ie = le + (ue - qe))), k && x) {
+        if ((ge === "se" || ge === "ne") && (He = Math.round((De + He) / oc) * oc - De), ge === "sw" || ge === "nw") {
+          const Ge = De + He;
+          De = Math.round(De / oc) * oc, He = Ge - De;
         }
-        De = Math.max(P2, De);
+        He = Math.max(P2, He);
       }
-      Re = Math.max(0, Math.min(100 - De, Re)), Ie = Math.max(0, Math.min(100 - qe, Ie)), H((Ge) => Ge.map(
+      De = Math.max(0, Math.min(100 - He, De)), Ie = Math.max(0, Math.min(100 - qe, Ie)), H((Ge) => Ge.map(
         (bn) => bn.id === W.id ? {
           ...bn,
-          x: parseFloat(Re.toFixed(1)),
+          x: parseFloat(De.toFixed(1)),
           y: parseFloat(Ie.toFixed(1)),
-          w: parseFloat(De.toFixed(1)),
+          w: parseFloat(He.toFixed(1)),
           h: parseFloat(qe.toFixed(1))
         } : bn
       ));
@@ -131252,8 +131252,8 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
       widgetType: W.type
     };
   }, [N]), Z = (D) => H((W) => W.filter((X) => X.id !== D)), re = (D, W = {}) => {
-    const X = ac[D] ?? ac.card, ne = Math.max(0, 50 - X.w / 2), le = Math.max(0, 50 - X.h / 2), J = jln();
-    H((ue) => [...ue, { id: J, type: D, x: ne, y: le, w: X.w, h: X.h, ...W }]), b(J);
+    const X = ac[D] ?? ac.card, ne = Math.max(0, 50 - X.w / 2), le = Math.max(0, 50 - X.h / 2), ee = jln();
+    H((ue) => [...ue, { id: ee, type: D, x: ne, y: le, w: X.w, h: X.h, ...W }]), b(ee);
   };
   O.useEffect(() => {
     if (!v) return;
@@ -131270,11 +131270,11 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
         return;
       }
       const ne = W.shiftKey ? 2 : 0.5;
-      let le = 0, J = 0;
+      let le = 0, ee = 0;
       if (W.key === "ArrowLeft") le = -ne;
       else if (W.key === "ArrowRight") le = ne;
-      else if (W.key === "ArrowUp") J = -ne;
-      else if (W.key === "ArrowDown") J = ne;
+      else if (W.key === "ArrowUp") ee = -ne;
+      else if (W.key === "ArrowDown") ee = ne;
       else return;
       W.preventDefault(), H((ye) => ye.map((ge) => {
         var me, Pe;
@@ -131283,7 +131283,7 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
         return {
           ...ge,
           x: parseFloat(Math.max(0, Math.min(100 - we, ge.x + le)).toFixed(1)),
-          y: parseFloat(Math.max(0, Math.min(100 - he, ge.y + J)).toFixed(1))
+          y: parseFloat(Math.max(0, Math.min(100 - he, ge.y + ee)).toFixed(1))
         };
       }));
     };
@@ -131637,8 +131637,8 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                       children: [
                         /* @__PURE__ */ l.jsx("span", { style: { width: 7, height: 7, borderRadius: "50%", background: W, flexShrink: 0 } }),
                         /* @__PURE__ */ l.jsx("span", { style: { flex: 1, fontSize: 10, fontWeight: 600, color: "var(--text-primary)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }, children: X }),
-                        /* @__PURE__ */ l.jsx("button", { onClick: (J) => {
-                          J.stopPropagation(), Z(D.id);
+                        /* @__PURE__ */ l.jsx("button", { onClick: (ee) => {
+                          ee.stopPropagation(), Z(D.id);
                         }, style: {
                           display: "flex",
                           alignItems: "center",
@@ -131716,13 +131716,13 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                   backgroundSize: `${$me}% ${$me}%`
                 } }),
                 s.map((D) => {
-                  var me, Pe, Re, Ie;
-                  const W = Qme[D.type] ?? "#60a5fa", X = D.type === "card" ? ((me = ti[D.cardId]) == null ? void 0 : me.name) ?? "Card" : o[D.type] ?? D.type, ne = D.w ?? ((Pe = ac[D.type]) == null ? void 0 : Pe.w) ?? 24, le = D.h ?? ((Re = ac[D.type]) == null ? void 0 : Re.h) ?? 35, J = D.type === "card" && D.cardId ? (Ie = ti[D.cardId]) == null ? void 0 : Ie.component : null, ue = { ...D, w: ne, h: le }, ye = D.type === "card", ge = v === D.id, we = D.opacity ?? n.widgetOpacity ?? 100, he = D.blendMode ?? n.widgetBlendMode ?? "normal";
+                  var me, Pe, De, Ie;
+                  const W = Qme[D.type] ?? "#60a5fa", X = D.type === "card" ? ((me = ti[D.cardId]) == null ? void 0 : me.name) ?? "Card" : o[D.type] ?? D.type, ne = D.w ?? ((Pe = ac[D.type]) == null ? void 0 : Pe.w) ?? 24, le = D.h ?? ((De = ac[D.type]) == null ? void 0 : De.h) ?? 35, ee = D.type === "card" && D.cardId ? (Ie = ti[D.cardId]) == null ? void 0 : Ie.component : null, ue = { ...D, w: ne, h: le }, ye = D.type === "card", ge = v === D.id, we = D.opacity ?? n.widgetOpacity ?? 100, he = D.blendMode ?? n.widgetBlendMode ?? "normal";
                   return /* @__PURE__ */ l.jsxs(
                     "div",
                     {
-                      onPointerDown: (De) => {
-                        b(D.id), Q(De, ue);
+                      onPointerDown: (He) => {
+                        b(D.id), Q(He, ue);
                       },
                       onPointerMove: _,
                       onPointerUp: V,
@@ -131757,13 +131757,13 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                           alignItems: "flex-start",
                           justifyContent: "center"
                         }, children: [
-                          J && // Rendering in scala reale: la card è renderizzata alla larghezza
+                          ee && // Rendering in scala reale: la card è renderizzata alla larghezza
                           // pixel che avrà sul device e poi scalata → layout fedele al live
-                          /* @__PURE__ */ l.jsx(Iln, { CardComp: J, widthPct: ne, deviceW: F, canvasW: L, renderId: D.srcId || "_ss_editor_preview" }),
+                          /* @__PURE__ */ l.jsx(Iln, { CardComp: ee, widthPct: ne, deviceW: F, canvasW: T, renderId: D.srcId || "_ss_editor_preview" }),
                           D.type === "clock" && /* @__PURE__ */ l.jsx(Eln, {}),
                           D.type === "energy" && /* @__PURE__ */ l.jsx(Lln, {}),
                           D.type === "weather" && /* @__PURE__ */ l.jsx(Tln, {}),
-                          !J && !["clock", "energy", "weather"].includes(D.type) && /* @__PURE__ */ l.jsx("div", { style: { width: "100%", height: "100%", background: `${W}18` } })
+                          !ee && !["clock", "energy", "weather"].includes(D.type) && /* @__PURE__ */ l.jsx("div", { style: { width: "100%", height: "100%", background: `${W}18` } })
                         ] }),
                         ge && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
                           /* @__PURE__ */ l.jsxs("div", { style: {
@@ -131785,9 +131785,9 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                             /* @__PURE__ */ l.jsx(
                               "button",
                               {
-                                onPointerDown: (De) => De.stopPropagation(),
-                                onClick: (De) => {
-                                  De.stopPropagation(), Z(D.id), b(null);
+                                onPointerDown: (He) => He.stopPropagation(),
+                                onClick: (He) => {
+                                  He.stopPropagation(), Z(D.id), b(null);
                                 },
                                 style: { width: 14, height: 14, borderRadius: "50%", background: "rgba(239,68,68,.9)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0, flexShrink: 0, pointerEvents: "auto" },
                                 children: /* @__PURE__ */ l.jsx(Xe, { size: 7, color: "#fff", strokeWidth: 3 })
@@ -131799,10 +131799,10 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                             { corner: "ne", top: 24, right: 2, cursor: "ne-resize", cardOnly: !1 },
                             { corner: "sw", bottom: 2, left: 2, cursor: "sw-resize", cardOnly: !0 },
                             { corner: "se", bottom: 2, right: 2, cursor: "se-resize", cardOnly: !0 }
-                          ].filter((De) => !ye || De.cardOnly).map(({ corner: De, cursor: qe, cardOnly: Ge, ...bn }) => /* @__PURE__ */ l.jsx(
+                          ].filter((He) => !ye || He.cardOnly).map(({ corner: He, cursor: qe, cardOnly: Ge, ...bn }) => /* @__PURE__ */ l.jsx(
                             "div",
                             {
-                              onPointerDown: (de) => U(de, ue, De),
+                              onPointerDown: (de) => U(de, ue, He),
                               onPointerMove: _,
                               onPointerUp: V,
                               style: {
@@ -131819,7 +131819,7 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                                 opacity: 0.9
                               }
                             },
-                            De
+                            He
                           ))
                         ] })
                       ]
@@ -131827,7 +131827,7 @@ function Mln({ cfg: n, onChange: e, onClose: r, dark: i }) {
                     D.id
                   );
                 }),
-                (Y = P == null ? void 0 : P.v) == null ? void 0 : Y.map((D) => /* @__PURE__ */ l.jsx("div", { style: {
+                (J = P == null ? void 0 : P.v) == null ? void 0 : J.map((D) => /* @__PURE__ */ l.jsx("div", { style: {
                   position: "absolute",
                   top: 0,
                   bottom: 0,
@@ -131903,7 +131903,7 @@ function Lln() {
   return /* @__PURE__ */ l.jsx(Srt, { fvW: r, batSoc: i, casaW: a, reteW: o });
 }
 function zln({ dark: n, onToggle: e, compact: r = !1 }) {
-  const { t: i } = ee("common"), a = r ? 28 : 36;
+  const { t: i } = Y("common"), a = r ? 28 : 36;
   return /* @__PURE__ */ l.jsx(
     se.button,
     {
@@ -132024,7 +132024,7 @@ const Qln = [
 }, Wln = { id: null, name: "Il mio chip", description: "", config: { ...Trt } };
 function Lrt({ initial: n, onClose: e }) {
   var S;
-  const { t: r } = ee("chips"), i = n ?? Wln, a = !i.id, [o, s] = O.useState({
+  const { t: r } = Y("chips"), i = n ?? Wln, a = !i.id, [o, s] = O.useState({
     ...i,
     id: i.id ?? Fln(),
     config: { ...Trt, ...i.config }
@@ -132459,7 +132459,7 @@ function Jln(n) {
 function Zme() {
   mie = null, window.dispatchEvent(new CustomEvent("oikos-tutorial-filter-changed"));
 }
-const Frt = (n) => (n == null ? void 0 : n.id) && He.t(`catalog.${n.id}.name`, { ns: "chips", defaultValue: "" }) || (n == null ? void 0 : n.name) || (n == null ? void 0 : n.id) || "", Nrt = (n) => (n == null ? void 0 : n.id) && He.t(`catalog.${n.id}.desc`, { ns: "chips", defaultValue: "" }) || (n == null ? void 0 : n.description) || "";
+const Frt = (n) => (n == null ? void 0 : n.id) && Re.t(`catalog.${n.id}.name`, { ns: "chips", defaultValue: "" }) || (n == null ? void 0 : n.name) || (n == null ? void 0 : n.id) || "", Nrt = (n) => (n == null ? void 0 : n.id) && Re.t(`catalog.${n.id}.desc`, { ns: "chips", defaultValue: "" }) || (n == null ? void 0 : n.description) || "";
 function ecn({ chip: n, entry: e, index: r, total: i, dark: a, onMoveUp: o, onMoveDown: s, onToggle: c, onRemove: d }) {
   if (!e) return null;
   const u = e.icon;
@@ -132556,7 +132556,7 @@ function ecn({ chip: n, entry: e, index: r, total: i, dark: a, onMoveUp: o, onMo
       "button",
       {
         onClick: d,
-        title: He.t("remove", { ns: "common" }),
+        title: Re.t("remove", { ns: "common" }),
         style: {
           display: "flex",
           alignItems: "center",
@@ -132576,63 +132576,63 @@ function ecn({ chip: n, entry: e, index: r, total: i, dark: a, onMoveUp: o, onMo
   ] });
 }
 function tcn({ dark: n }) {
-  const [e, r] = O.useState(CA), [i, a] = O.useState(!1), [, o] = O.useState(0), s = N0("fv");
+  const { t: e } = Y("chips"), [r, i] = O.useState(CA), [a, o] = O.useState(!1), [, s] = O.useState(0), c = N0("fv");
   O.useEffect(() => {
-    const y = () => r(CA());
-    return window.addEventListener("oikos-chips-updated", y), window.addEventListener("oikos-active-dashboard-changed", y), () => {
-      window.removeEventListener("oikos-chips-updated", y), window.removeEventListener("oikos-active-dashboard-changed", y);
+    const v = () => i(CA());
+    return window.addEventListener("oikos-chips-updated", v), window.addEventListener("oikos-active-dashboard-changed", v), () => {
+      window.removeEventListener("oikos-chips-updated", v), window.removeEventListener("oikos-active-dashboard-changed", v);
     };
   }, []), O.useEffect(() => {
-    const y = () => o((v) => v + 1);
-    return window.addEventListener("oikos-tutorial-filter-changed", y), () => window.removeEventListener("oikos-tutorial-filter-changed", y);
+    const v = () => s((b) => b + 1);
+    return window.addEventListener("oikos-tutorial-filter-changed", v), () => window.removeEventListener("oikos-tutorial-filter-changed", v);
   }, []);
-  const c = (y) => {
-    r(y), Prt(y);
-  }, d = (y) => {
-    if (y === 0) return;
-    const v = [...e];
-    [v[y - 1], v[y]] = [v[y], v[y - 1]], c(v);
-  }, u = (y) => {
-    if (y === e.length - 1) return;
-    const v = [...e];
-    [v[y], v[y + 1]] = [v[y + 1], v[y]], c(v);
-  }, p = (y) => {
-    const v = [...e];
-    v[y] = { ...v[y], enabled: !v[y].enabled }, c(v);
-  }, h = (y) => {
-    c(e.filter((v, b) => b !== y));
-  }, f = (y) => {
-    e.find((v) => v.id === y) || (c([...e, { id: y, enabled: !0 }]), Gme() && window.dispatchEvent(new CustomEvent("oikos-tutorial-chip-added")));
-  }, g = Gme(), m = Object.keys(qi).filter(
-    (y) => {
-      var v, b;
-      return !e.find((x) => x.id === y) && !((b = (v = qi[y]) == null ? void 0 : v.requires) != null && b.includes("fv") && !s) && (!g || g.includes(y));
+  const d = (v) => {
+    i(v), Prt(v);
+  }, u = (v) => {
+    if (v === 0) return;
+    const b = [...r];
+    [b[v - 1], b[v]] = [b[v], b[v - 1]], d(b);
+  }, p = (v) => {
+    if (v === r.length - 1) return;
+    const b = [...r];
+    [b[v], b[v + 1]] = [b[v + 1], b[v]], d(b);
+  }, h = (v) => {
+    const b = [...r];
+    b[v] = { ...b[v], enabled: !b[v].enabled }, d(b);
+  }, f = (v) => {
+    d(r.filter((b, x) => x !== v));
+  }, g = (v) => {
+    r.find((b) => b.id === v) || (d([...r, { id: v, enabled: !0 }]), Gme() && window.dispatchEvent(new CustomEvent("oikos-tutorial-chip-added")));
+  }, m = Gme(), y = Object.keys(qi).filter(
+    (v) => {
+      var b, x;
+      return !r.find((A) => A.id === v) && !((x = (b = qi[v]) == null ? void 0 : b.requires) != null && x.includes("fv") && !c) && (!m || m.includes(v));
     }
   );
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: [
-      /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".05em" }, children: t("sheet.activeOrder") }),
-      e.length === 0 && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "20px 0", color: "var(--text-muted)", fontSize: 12, fontStyle: "italic" }, children: t("sheet.empty") }),
-      e.map((y, v) => /* @__PURE__ */ l.jsx(
+      /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".05em" }, children: e("sheet.activeOrder") }),
+      r.length === 0 && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "20px 0", color: "var(--text-muted)", fontSize: 12, fontStyle: "italic" }, children: e("sheet.empty") }),
+      r.map((v, b) => /* @__PURE__ */ l.jsx(
         ecn,
         {
-          chip: y,
-          entry: qi[y.id],
-          index: v,
-          total: e.length,
+          chip: v,
+          entry: qi[v.id],
+          index: b,
+          total: r.length,
           dark: n,
-          onMoveUp: () => d(v),
-          onMoveDown: () => u(v),
-          onToggle: () => p(v),
-          onRemove: () => h(v)
+          onMoveUp: () => u(b),
+          onMoveDown: () => p(b),
+          onToggle: () => h(b),
+          onRemove: () => f(b)
         },
-        y.id
+        v.id
       ))
     ] }),
-    !g && /* @__PURE__ */ l.jsx("div", { style: { display: "flex", alignItems: "center", gap: 8, marginTop: 4 }, children: /* @__PURE__ */ l.jsxs(
+    !m && /* @__PURE__ */ l.jsx("div", { style: { display: "flex", alignItems: "center", gap: 8, marginTop: 4 }, children: /* @__PURE__ */ l.jsxs(
       "button",
       {
-        onClick: () => a(!0),
+        onClick: () => o(!0),
         style: {
           display: "flex",
           alignItems: "center",
@@ -132650,14 +132650,14 @@ function tcn({ dark: n }) {
         children: [
           /* @__PURE__ */ l.jsx(Pn, { size: 13 }),
           " ",
-          t("sheet.create")
+          e("sheet.create")
         ]
       }
     ) }),
-    m.length > 0 && /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: [
-      /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".05em" }, children: t("common:ui.available") }),
-      m.map((y) => {
-        const v = qi[y], b = v.icon;
+    y.length > 0 && /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 6 }, children: [
+      /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".05em" }, children: e("common:ui.available") }),
+      y.map((v) => {
+        const b = qi[v], x = b.icon;
         return /* @__PURE__ */ l.jsxs("div", { style: {
           display: "flex",
           alignItems: "center",
@@ -132677,15 +132677,15 @@ function tcn({ dark: n }) {
             justifyContent: "center",
             background: n ? "rgba(255,255,255,.04)" : "#f1f5f9",
             color: "var(--text-muted)"
-          }, children: /* @__PURE__ */ l.jsx(b, { size: 14, strokeWidth: 1.8 }) }),
+          }, children: /* @__PURE__ */ l.jsx(x, { size: 14, strokeWidth: 1.8 }) }),
           /* @__PURE__ */ l.jsxs("div", { style: { flex: 1 }, children: [
-            /* @__PURE__ */ l.jsx("div", { style: { fontSize: 13, fontWeight: 600, color: "var(--text-primary)" }, children: Frt(v) }),
-            /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: "var(--text-muted)" }, children: Nrt(v) })
+            /* @__PURE__ */ l.jsx("div", { style: { fontSize: 13, fontWeight: 600, color: "var(--text-primary)" }, children: Frt(b) }),
+            /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: "var(--text-muted)" }, children: Nrt(b) })
           ] }),
           /* @__PURE__ */ l.jsxs(
             "button",
             {
-              onClick: () => f(y),
+              onClick: () => g(v),
               style: {
                 display: "flex",
                 alignItems: "center",
@@ -132703,24 +132703,24 @@ function tcn({ dark: n }) {
               children: [
                 /* @__PURE__ */ l.jsx(it, { size: 11 }),
                 " ",
-                t("sheet.add")
+                e("sheet.add")
               ]
             }
           )
-        ] }, y);
+        ] }, v);
       })
     ] }),
-    i && /* @__PURE__ */ l.jsx(
+    a && /* @__PURE__ */ l.jsx(
       Lrt,
       {
         initial: null,
-        onClose: () => a(!1)
+        onClose: () => o(!1)
       }
     )
   ] });
 }
 function ncn({ dark: n, visible: e, onClose: r }) {
-  return ee("chips"), O.useEffect(() => {
+  return Y("chips"), O.useEffect(() => {
     e && window.dispatchEvent(new CustomEvent("oikos-chip-sheet-opened"));
   }, [e]), /* @__PURE__ */ l.jsx(ut, { children: e && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
@@ -132800,7 +132800,7 @@ function Kme({ name: n, size: e = 13 }) {
   return /* @__PURE__ */ l.jsx(r, { size: e, strokeWidth: 2 });
 }
 function rcn({ dark: n, onOpenSettings: e }) {
-  const { t: r } = ee("layout"), [i, a] = O.useState(!1), [o, s] = O.useState(nr), [c, d] = O.useState(Ma), u = O.useRef(null);
+  const { t: r } = Y("layout"), [i, a] = O.useState(!1), [o, s] = O.useState(nr), [c, d] = O.useState(Ma), u = O.useRef(null);
   if (O.useEffect(() => {
     const f = () => {
       s(nr()), d(Ma());
@@ -132952,12 +132952,12 @@ function icn() {
   return { ...n, date: i };
 }
 function acn({ dark: n, onToggle: e, connected: r, haError: i, onScreensaver: a, onOpenSettings: o }) {
-  const { h: s, m: c, date: d } = icn(), { t: u } = ee("layout"), { editMode: p, callService: h, sendWsCommand: f } = Oe(), [g, m] = O.useState(null), [y, v] = O.useState(() => window.innerWidth < 768);
+  const { h: s, m: c, date: d } = icn(), { t: u } = Y("layout"), { editMode: p, callService: h, sendWsCommand: f } = Oe(), [g, m] = O.useState(null), [y, v] = O.useState(() => window.innerWidth < 768);
   O.useEffect(() => {
     const ae = () => v(window.innerWidth < 768);
     return window.addEventListener("resize", ae), () => window.removeEventListener("resize", ae);
   }, []);
-  const [b, x] = O.useState(CA), [A, k] = O.useState(!1), [S, C] = O.useState([]), [j, P] = O.useState([]), [E, L] = O.useState(!1), T = O.useRef(null);
+  const [b, x] = O.useState(CA), [A, k] = O.useState(!1), [S, C] = O.useState([]), [j, P] = O.useState([]), [E, T] = O.useState(!1), L = O.useRef(null);
   O.useEffect(() => {
     const ae = (ce) => C(Array.isArray(ce.detail) ? ce.detail : []), pe = (ce) => {
       const te = ce.detail;
@@ -132969,7 +132969,7 @@ function acn({ dark: n, onToggle: e, connected: r, haError: i, onScreensaver: a,
   }, []), O.useEffect(() => {
     if (!E) return;
     const ae = (pe) => {
-      T.current && !bg(pe, T.current) && L(!1);
+      L.current && !bg(pe, L.current) && T(!1);
     };
     return document.addEventListener("mousedown", ae), () => document.removeEventListener("mousedown", ae);
   }, [E]);
@@ -133175,11 +133175,11 @@ ${u("nav.debugError")}: ${i ?? u("nav.debugNone")}`);
                 )
               }
             ),
-            /* @__PURE__ */ l.jsxs("div", { ref: T, style: { position: "relative", flexShrink: 0 }, children: [
+            /* @__PURE__ */ l.jsxs("div", { ref: L, style: { position: "relative", flexShrink: 0 }, children: [
               /* @__PURE__ */ l.jsxs(
                 "button",
                 {
-                  onClick: () => L((ae) => !ae),
+                  onClick: () => T((ae) => !ae),
                   "aria-label": u("nav.notifications"),
                   title: I ? u("nav.notifCount", { count: I }) : u("nav.noNotifications"),
                   style: {
@@ -133266,7 +133266,7 @@ ${u("nav.debugError")}: ${i ?? u("nav.debugNone")}`);
                         "button",
                         {
                           onClick: () => {
-                            L(!1), window.dispatchEvent(new CustomEvent("oikos-open-store-card", { detail: { id: ae.id } }));
+                            T(!1), window.dispatchEvent(new CustomEvent("oikos-open-store-card", { detail: { id: ae.id } }));
                           },
                           style: {
                             alignSelf: "flex-start",
@@ -133333,7 +133333,7 @@ ${u("nav.debugError")}: ${i ?? u("nav.debugNone")}`);
                                 } catch {
                                 }
                               }
-                              z(ae.id), L(!1);
+                              z(ae.id), T(!1);
                             },
                             style: {
                               marginTop: 6,
@@ -133818,7 +133818,7 @@ const oW = {
   Globe: Sa
 };
 function IV({ value: n, onChange: e, dark: r }) {
-  const { t: i } = ee("layout"), [a, o] = O.useState(!1), [s, c] = O.useState({ top: 0, left: 0, placement: "bottom" }), d = O.useRef(null), u = oW[n] || Fr, p = 222, h = 150;
+  const { t: i } = Y("layout"), [a, o] = O.useState(!1), [s, c] = O.useState({ top: 0, left: 0, placement: "bottom" }), d = O.useRef(null), u = oW[n] || Fr, p = 222, h = 150;
   return O.useLayoutEffect(() => {
     if (!a || !d.current) return;
     const f = d.current.getBoundingClientRect(), g = window.innerWidth, v = window.innerHeight - f.bottom < h + 12 && f.top > h + 12 ? "top" : "bottom", b = v === "bottom" ? f.bottom + 6 : f.top - h - 6;
@@ -133914,7 +133914,7 @@ function IV({ value: n, onChange: e, dark: r }) {
   ] });
 }
 function ucn({ page: n, index: e, total: r, onMove: i, onRename: a, onIconChange: o, onDelete: s, dark: c }) {
-  const { t: d } = ee("layout");
+  const { t: d } = Y("layout");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     alignItems: "center",
@@ -134025,7 +134025,7 @@ function ucn({ page: n, index: e, total: r, onMove: i, onRename: a, onIconChange
   ] });
 }
 function pcn({ dark: n }) {
-  const { t: e } = ee("layout"), [r, i] = O.useState(Jy), [a, o] = O.useState(!1), [s, c] = O.useState(""), [d, u] = O.useState("Star"), [p, h] = O.useState(!1), [f, g] = O.useState(dJ), m = (k) => {
+  const { t: e } = Y("layout"), [r, i] = O.useState(Jy), [a, o] = O.useState(!1), [s, c] = O.useState(""), [d, u] = O.useState("Star"), [p, h] = O.useState(!1), [f, g] = O.useState(dJ), m = (k) => {
     i(k), lJ(k), o(!0), setTimeout(() => o(!1), 1500);
   }, y = (k, S) => {
     const C = [...r], j = k + S;
@@ -134214,7 +134214,7 @@ function pcn({ dark: n }) {
   ] });
 }
 function hcn({ dark: n, editMode: e, activePage: r, onEdit: i, onStore: a, onSettings: o, onLicense: s, onSupport: c, onClose: d, side: u }) {
-  const p = O.useRef(null), { t: h } = ee("layout");
+  const p = O.useRef(null), { t: h } = Y("layout");
   O.useEffect(() => {
     const g = (m) => {
       p.current && !bg(m, p.current) && d();
@@ -134290,7 +134290,7 @@ function hcn({ dark: n, editMode: e, activePage: r, onEdit: i, onStore: a, onSet
 }
 const fcn = 76;
 function Yme({ dark: n, activePage: e, onPageChange: r, side: i = !1 }) {
-  const { editMode: a, setEditMode: o } = Oe(), { t: s } = ee("layout"), [c, d] = O.useState(Jy), [u, p] = O.useState(!1);
+  const { editMode: a, setEditMode: o } = Oe(), { t: s } = Y("layout"), [c, d] = O.useState(Jy), [u, p] = O.useState(!1);
   O.useEffect(() => {
     const f = () => d(Jy());
     return window.addEventListener("oikos-nav-updated", f), window.addEventListener("oikos-active-dashboard-changed", f), window.addEventListener("oikos-remote-config-refreshed", f), () => {
@@ -135481,31 +135481,31 @@ class kie {
           } = eit(y), j = qcn(y), P = {
             x: Math.min(v === St.Right ? j.right - j.width / 2 : j.right, Math.max(v === St.Right ? j.left : j.left + j.width / 2, h.x)),
             y: Math.min(v === St.Down ? j.bottom - j.height / 2 : j.bottom, Math.max(v === St.Down ? j.top : j.top + j.height / 2, h.y))
-          }, E = v === St.Right && !x || v === St.Left && !A, L = v === St.Down && !k || v === St.Up && !b;
+          }, E = v === St.Right && !x || v === St.Left && !A, T = v === St.Down && !k || v === St.Up && !b;
           if (E && P.x !== h.x) {
-            const T = y.scrollLeft + f.x, I = v === St.Right && T <= S.x || v === St.Left && T >= C.x;
+            const L = y.scrollLeft + f.x, I = v === St.Right && L <= S.x || v === St.Left && L >= C.x;
             if (I && !f.y) {
               y.scrollTo({
-                left: T,
+                left: L,
                 behavior: c
               });
               return;
             }
-            I ? g.x = y.scrollLeft - T : g.x = v === St.Right ? y.scrollLeft - S.x : y.scrollLeft - C.x, g.x && y.scrollBy({
+            I ? g.x = y.scrollLeft - L : g.x = v === St.Right ? y.scrollLeft - S.x : y.scrollLeft - C.x, g.x && y.scrollBy({
               left: -g.x,
               behavior: c
             });
             break;
-          } else if (L && P.y !== h.y) {
-            const T = y.scrollTop + f.y, I = v === St.Down && T <= S.y || v === St.Up && T >= C.y;
+          } else if (T && P.y !== h.y) {
+            const L = y.scrollTop + f.y, I = v === St.Down && L <= S.y || v === St.Up && L >= C.y;
             if (I && !f.x) {
               y.scrollTo({
-                top: T,
+                top: L,
                 behavior: c
               });
               return;
             }
-            I ? g.y = y.scrollTop - T : g.y = v === St.Down ? y.scrollTop - S.y : y.scrollTop - C.y, g.y && y.scrollBy({
+            I ? g.y = y.scrollTop - L : g.y = v === St.Down ? y.scrollTop - S.y : y.scrollTop - C.y, g.y && y.scrollBy({
               top: -g.y,
               behavior: c
             });
@@ -135846,12 +135846,12 @@ function idn(n) {
           continue;
         const {
           direction: E,
-          speed: L
+          speed: T
         } = _cn(C, P, x, e, f);
-        for (const T of ["x", "y"])
-          g[T][E[T]] || (L[T] = 0, E[T] = 0);
-        if (L.x > 0 || L.y > 0) {
-          y(), A.current = C, m(k, s), v.current = L, b.current = E;
+        for (const L of ["x", "y"])
+          g[L][E[L]] || (T[L] = 0, E[L] = 0);
+        if (T.x > 0 || T.y > 0) {
+          y(), A.current = C, m(k, s), v.current = T, b.current = E;
           return;
         }
       }
@@ -136563,9 +136563,9 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
       translate: E
     },
     droppable: {
-      containers: L
+      containers: T
     }
-  } = v, T = j != null ? P.get(j) : null, I = O.useRef({
+  } = v, L = j != null ? P.get(j) : null, I = O.useRef({
     initial: null,
     translated: null
   }), z = O.useMemo(() => {
@@ -136573,10 +136573,10 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
     return j != null ? {
       id: j,
       // It's possible for the active node to unmount while dragging
-      data: (_e = T == null ? void 0 : T.data) != null ? _e : kdn,
+      data: (_e = L == null ? void 0 : L.data) != null ? _e : kdn,
       rect: I
     } : null;
-  }, [j, T]), M = O.useRef(null), [R, F] = O.useState(null), [H, N] = O.useState(null), $ = jA(m, Object.values(m)), _ = vk("DndDescribedBy", s), V = O.useMemo(() => L.getEnabled(), [L]), Q = Mdn(f), {
+  }, [j, L]), M = O.useRef(null), [R, F] = O.useState(null), [H, N] = O.useState(null), $ = jA(m, Object.values(m)), _ = vk("DndDescribedBy", s), V = O.useMemo(() => T.getEnabled(), [T]), Q = Mdn(f), {
     droppableRects: U,
     measureDroppableContainers: Z,
     measuringScheduled: re
@@ -136601,13 +136601,13 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
     draggableNodes: P,
     draggingNode: null,
     draggingNodeRect: null,
-    droppableContainers: L,
+    droppableContainers: T,
     over: null,
     scrollableAncestors: [],
     scrollAdjustedTranslate: null
-  }), ke = L.getNodeFor((r = ie.current.over) == null ? void 0 : r.id), B = xdn({
+  }), ke = T.getNodeFor((r = ie.current.over) == null ? void 0 : r.id), B = xdn({
     measure: Q.dragOverlay.measure
-  }), Y = (i = B.nodeRef.current) != null ? i : fe, K = C ? (a = B.rect) != null ? a : te : null, D = !!(B.nodeRef.current && B.rect), W = hdn(D ? null : te), X = iit(Y ? ra(Y) : null), ne = fdn(C ? ke ?? fe : null), le = vdn(ne), J = Pdn(g, {
+  }), J = (i = B.nodeRef.current) != null ? i : fe, K = C ? (a = B.rect) != null ? a : te : null, D = !!(B.nodeRef.current && B.rect), W = hdn(D ? null : te), X = iit(J ? ra(J) : null), ne = fdn(C ? ke ?? fe : null), le = vdn(ne), ee = Pdn(g, {
     transform: {
       x: E.x - W.x,
       y: E.y - W.y,
@@ -136624,13 +136624,13 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
     scrollableAncestors: ne,
     scrollableAncestorRects: le,
     windowRect: X
-  }), ue = ae ? N1(ae, E) : null, ye = gdn(ne), ge = d1e(ye), we = d1e(ye, [te]), he = N1(J, ge), me = K ? Dcn(K, J) : null, Pe = z && me ? h({
+  }), ue = ae ? N1(ae, E) : null, ye = gdn(ne), ge = d1e(ye), we = d1e(ye, [te]), he = N1(ee, ge), me = K ? Dcn(K, ee) : null, Pe = z && me ? h({
     active: z,
     collisionRect: me,
     droppableRects: U,
     droppableContainers: V,
     pointerCoordinates: ue
-  }) : null, Re = Xrt(Pe, "id"), [Ie, De] = O.useState(null), qe = D ? J : N1(J, we), Ge = Bcn(qe, (o = Ie == null ? void 0 : Ie.rect) != null ? o : null, te), bn = O.useRef(null), de = O.useCallback(
+  }) : null, De = Xrt(Pe, "id"), [Ie, He] = O.useState(null), qe = D ? ee : N1(ee, we), Ge = Bcn(qe, (o = Ie == null ? void 0 : Ie.rect) != null ? o : null, te), bn = O.useRef(null), de = O.useCallback(
     (_e, dt) => {
       let {
         sensor: Qt,
@@ -136740,7 +136740,7 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
           M.current = null, an.unstable_batchedUpdates(() => {
             b({
               type: sn
-            }), S(kc.Uninitialized), De(null), F(null), N(null), bn.current = null;
+            }), S(kc.Uninitialized), He(null), F(null), N(null), bn.current = null;
             const Xs = sn === rr.DragEnd ? "onDragEnd" : "onDragCancel";
             if (ia) {
               const Se = $.current[Xs];
@@ -136817,7 +136817,7 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
         return;
       const {
         onDragOver: Gt
-      } = $.current, Zt = Wt.get(Re), Zr = Zt && Zt.rect.current ? {
+      } = $.current, Zt = Wt.get(De), Zr = Zt && Zt.rect.current ? {
         id: Zt.id,
         rect: Zt.rect.current,
         data: Zt.data,
@@ -136833,14 +136833,14 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
         over: Zr
       };
       an.unstable_batchedUpdates(() => {
-        De(Zr), Gt == null || Gt(sn), x({
+        He(Zr), Gt == null || Gt(sn), x({
           type: "onDragOver",
           event: sn
         });
       });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [Re]
+    [De]
   ), $s(() => {
     ie.current = {
       activatorEvent: H,
@@ -136850,9 +136850,9 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
       collisions: Pe,
       droppableRects: U,
       draggableNodes: P,
-      draggingNode: Y,
+      draggingNode: J,
       draggingNodeRect: K,
-      droppableContainers: L,
+      droppableContainers: T,
       over: Ie,
       scrollableAncestors: ne,
       scrollAdjustedTranslate: he
@@ -136860,7 +136860,7 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
       initial: K,
       translated: me
     };
-  }, [z, fe, Pe, me, P, Y, K, U, L, Ie, ne, he]), idn({
+  }, [z, fe, Pe, me, P, J, K, U, T, Ie, ne, he]), idn({
     ...pe,
     delta: E,
     draggingRect: me,
@@ -136877,7 +136877,7 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
     containerNodeRect: oe,
     dragOverlay: B,
     draggableNodes: P,
-    droppableContainers: L,
+    droppableContainers: T,
     droppableRects: U,
     over: Ie,
     measureDroppableContainers: Z,
@@ -136886,7 +136886,7 @@ const Edn = /* @__PURE__ */ O.memo(function(e) {
     measuringConfiguration: Q,
     measuringScheduled: re,
     windowRect: X
-  }), [z, fe, te, H, Pe, oe, B, P, L, U, Ie, Z, ne, le, Q, re, X]), et = O.useMemo(() => ({
+  }), [z, fe, te, H, Pe, oe, B, P, T, U, Ie, Z, ne, le, Q, re, X]), et = O.useMemo(() => ({
     activatorEvent: H,
     activators: Be,
     active: z,
@@ -137290,7 +137290,7 @@ function fit(n) {
     rect: j,
     node: P,
     isOver: E,
-    setNodeRef: L
+    setNodeRef: T
   } = sit({
     id: s,
     data: S,
@@ -137300,7 +137300,7 @@ function fit(n) {
       ...d
     }
   }), {
-    active: T,
+    active: L,
     activatorEvent: I,
     activeNodeRect: z,
     attributes: M,
@@ -137318,7 +137318,7 @@ function fit(n) {
       ...r
     },
     disabled: A.draggable
-  }), V = gcn(L, R), Q = !!T, U = Q && !m && Gw(f) && Gw(v), Z = !b && H, re = Z && U ? _ : null, ae = U ? re ?? (c ?? x)({
+  }), V = gcn(T, R), Q = !!L, U = Q && !m && Gw(f) && Gw(v), Z = !b && H, re = Z && U ? _ : null, ae = U ? re ?? (c ?? x)({
     rects: y,
     activeNodeRect: z,
     activeIndex: f,
@@ -137329,13 +137329,13 @@ function fit(n) {
     items: p,
     activeIndex: f,
     overIndex: v
-  }) : k, ce = T == null ? void 0 : T.id, te = O.useRef({
+  }) : k, ce = L == null ? void 0 : L.id, te = O.useRef({
     activeId: ce,
     items: p,
     newIndex: pe,
     containerId: h
   }), oe = p !== te.current.items, ie = e({
-    active: T,
+    active: L,
     containerId: h,
     isDragging: H,
     isSorting: Q,
@@ -137362,12 +137362,12 @@ function fit(n) {
       te.current.activeId = ce;
       return;
     }
-    const Y = setTimeout(() => {
+    const J = setTimeout(() => {
       te.current.activeId = ce;
     }, 50);
-    return () => clearTimeout(Y);
+    return () => clearTimeout(J);
   }, [ce]), {
-    active: T,
+    active: L,
     activeIndex: f,
     attributes: M,
     data: S,
@@ -137384,7 +137384,7 @@ function fit(n) {
     over: N,
     setNodeRef: V,
     setActivatorNodeRef: $,
-    setDroppableNodeRef: L,
+    setDroppableNodeRef: T,
     setDraggableNodeRef: R,
     transform: ke ?? ae,
     transition: B()
@@ -137536,27 +137536,27 @@ function Ydn({ dark: n, savedH: e, naturalH: r, onLive: i, onCommit: a }) {
   );
 }
 function Jdn({ card: n, cellId: e, rowId: r, dark: i, cardCols: a = 1, forceSingleCol: o = !1, mobileScale: s = !1, isMobile: c = !1, scaleEnabled: d = !0, onToggle: u, onRemove: p, onSettings: h, onResize: f, onDuplicate: g, onCopyToPage: m, copyPages: y = [], onToggleFullWidth: v }) {
-  const { t: b } = ee("layout"), { t: x } = ee("cards"), { editMode: A } = Oe(), [k, S] = O.useState(null), [C, j] = O.useState(null), [P, E] = O.useState(null), L = O.useRef(null), T = O.useRef(null), [I, z] = O.useState(!1), [M, R] = O.useState(!1), F = O.useRef(!1), { attributes: H, listeners: N, setNodeRef: $, transform: _, transition: V, isDragging: Q } = fit({ id: n.id, disabled: !A, data: { type: "card", cellId: e, rowId: r } }), U = O.useCallback((oe) => {
-    $(oe), T.current = oe;
+  const { t: b } = Y("layout"), { t: x } = Y("cards"), { editMode: A } = Oe(), [k, S] = O.useState(null), [C, j] = O.useState(null), [P, E] = O.useState(null), T = O.useRef(null), L = O.useRef(null), [I, z] = O.useState(!1), [M, R] = O.useState(!1), F = O.useRef(!1), { attributes: H, listeners: N, setNodeRef: $, transform: _, transition: V, isDragging: Q } = fit({ id: n.id, disabled: !A, data: { type: "card", cellId: e, rowId: r } }), U = O.useCallback((oe) => {
+    $(oe), L.current = oe;
   }, [$]), Z = Wo(n.cardId), re = (o || s) && a > 1 && P ? P * a : null, fe = re !== null && C === null;
   if (fe && (F.current = !0), O.useLayoutEffect(() => {
-    if (P !== null || !T.current) return;
-    const oe = Math.round(T.current.getBoundingClientRect().width);
+    if (P !== null || !L.current) return;
+    const oe = Math.round(L.current.getBoundingClientRect().width);
     oe > 0 && E(oe);
   }), O.useEffect(() => {
     F.current = !1, j(null);
   }, [s, o, A]), O.useEffect(() => {
-    const oe = T.current;
+    const oe = L.current;
     if (!oe) return;
     let ie = null;
     const ke = new ResizeObserver((B) => {
       var K;
-      const Y = Math.round((K = B[0]) == null ? void 0 : K.contentRect.width);
-      Y && (ie !== null && Math.abs(Y - ie) > 4 && (F.current = !1, j(null)), ie = Y, E(Y));
+      const J = Math.round((K = B[0]) == null ? void 0 : K.contentRect.width);
+      J && (ie !== null && Math.abs(J - ie) > 4 && (F.current = !1, j(null)), ie = J, E(J));
     });
     return ke.observe(oe), () => ke.disconnect();
   }, []), O.useLayoutEffect(() => {
-    !Z || C !== null || !L.current || P !== null && (re !== null && !F.current || j(L.current.offsetHeight));
+    !Z || C !== null || !T.current || P !== null && (re !== null && !F.current || j(T.current.offsetHeight));
   }), !Z) return null;
   const ae = Z.component, pe = Z.icon, ce = C !== null ? k ?? n.height ?? null : null, te = d && re && P && re > P + 4 ? P / re : 1;
   return /* @__PURE__ */ l.jsxs(
@@ -137703,7 +137703,7 @@ function Jdn({ card: n, cellId: e, rowId: r, dark: i, cardCols: a = 1, forceSing
         } : {}, children: /* @__PURE__ */ l.jsx(Td, { cardId: n.cardId, dark: i, children: /* @__PURE__ */ l.jsx(
           "div",
           {
-            ref: L,
+            ref: T,
             style: fe ? {
               // Probe: render a larghezza naturale (invisibile) per misurare naturalH
               width: `${re}px`,
@@ -137771,10 +137771,10 @@ function eun({
   onCycleCardCols: k,
   onToggleFullWidth: S
 }) {
-  const { t: C } = ee("layout"), j = N0("fv"), { setNodeRef: P, isOver: E } = sit({
+  const { t: C } = Y("layout"), j = N0("fv"), { setNodeRef: P, isOver: E } = sit({
     id: `cell-${n.id}`,
     data: { type: "cell", cellId: n.id, rowId: e.id }
-  }), L = r > 0, T = r < e.cells.length - 1;
+  }), T = r > 0, L = r < e.cells.length - 1;
   return /* @__PURE__ */ l.jsxs("div", { style: { flex: o ? "0 0 100%" : n.flex || 1, minWidth: 0, display: "flex", flexDirection: "column", gap: 10 }, children: [
     a && /* @__PURE__ */ l.jsxs("div", { style: {
       display: "flex",
@@ -137819,9 +137819,9 @@ function eun({
           "button",
           {
             onClick: () => A(e.id, n.id, -1),
-            disabled: !L,
+            disabled: !T,
             title: C("section.moveColLeft"),
-            style: { ...mi(L ? i ? "#60a5fa" : "#2563eb" : "rgba(0,0,0,.2)"), padding: "1px 3px" },
+            style: { ...mi(T ? i ? "#60a5fa" : "#2563eb" : "rgba(0,0,0,.2)"), padding: "1px 3px" },
             children: /* @__PURE__ */ l.jsx(If, { size: 12 })
           }
         ),
@@ -137829,9 +137829,9 @@ function eun({
           "button",
           {
             onClick: () => A(e.id, n.id, 1),
-            disabled: !T,
+            disabled: !L,
             title: C("section.moveColRight"),
-            style: { ...mi(T ? i ? "#60a5fa" : "#2563eb" : "rgba(0,0,0,.2)"), padding: "1px 3px" },
+            style: { ...mi(L ? i ? "#60a5fa" : "#2563eb" : "rgba(0,0,0,.2)"), padding: "1px 3px" },
             children: /* @__PURE__ */ l.jsx(ai, { size: 12 })
           }
         ),
@@ -137973,14 +137973,14 @@ function tun({
   onCycleCardCols: k,
   onToggleFullWidth: S
 }) {
-  const { t: C } = ee("layout"), { attributes: j, listeners: P, setNodeRef: E, transform: L, transition: T, isDragging: I } = fit({ id: n.id, disabled: !r, data: { type: "row" } });
+  const { t: C } = Y("layout"), { attributes: j, listeners: P, setNodeRef: E, transform: T, transition: L, isDragging: I } = fit({ id: n.id, disabled: !r, data: { type: "row" } });
   return /* @__PURE__ */ l.jsxs(
     "div",
     {
       ref: E,
       style: {
-        transform: e0.Transform.toString(L),
-        transition: T,
+        transform: e0.Transform.toString(T),
+        transition: L,
         opacity: I ? 0.4 : 1
       },
       children: [
@@ -138086,7 +138086,7 @@ function tun({
   );
 }
 function nun({ dark: n, onPick: e, onClose: r }) {
-  const { t: i } = ee("layout");
+  const { t: i } = Y("layout");
   return /* @__PURE__ */ l.jsx(Oie, { onClose: r, children: /* @__PURE__ */ l.jsx(mit, { dark: n, title: i("section.rowType"), onClose: r, children: /* @__PURE__ */ l.jsx("div", { style: { display: "flex", gap: 10 }, children: [1, 2, 3].map((a) => /* @__PURE__ */ l.jsxs(
     "button",
     {
@@ -138127,7 +138127,7 @@ function iun(n) {
   return Array.isArray(n == null ? void 0 : n.previews) && e.push(...n.previews), n != null && n.preview && e.push(n.preview), [...new Set(e.map(run).filter(Boolean))];
 }
 function aun({ selected: n, dark: e, Icon: r }) {
-  const { t: i } = ee("layout"), a = iun(n), [o, s] = O.useState(0);
+  const { t: i } = Y("layout"), a = iun(n), [o, s] = O.useState(0);
   if (a.length > 0) {
     const d = a[Math.min(o, a.length - 1)];
     return /* @__PURE__ */ l.jsxs("div", { children: [
@@ -138209,7 +138209,7 @@ function aun({ selected: n, dark: e, Icon: r }) {
   ] }) });
 }
 function h1e({ selected: n, dark: e, onPick: r, onClose: i }) {
-  const { t: a } = ee("layout"), { t: o } = ee("cards");
+  const { t: a } = Y("layout"), { t: o } = Y("cards");
   if (!n)
     return /* @__PURE__ */ l.jsx("div", { style: {
       flex: 1,
@@ -138281,7 +138281,7 @@ function h1e({ selected: n, dark: e, onPick: r, onClose: i }) {
   ] });
 }
 function oun({ dark: n, onPick: e, onClose: r }) {
-  const { t: i } = ee("layout"), { t: a } = ee("cards"), [, o] = O.useState(0), [s, c] = O.useState(""), [d, u] = O.useState("oikos"), [p, h] = O.useState(() => aF()), [f, g] = O.useState(() => {
+  const { t: i } = Y("layout"), { t: a } = Y("cards"), [, o] = O.useState(0), [s, c] = O.useState(""), [d, u] = O.useState("oikos"), [p, h] = O.useState(() => aF()), [f, g] = O.useState(() => {
     const M = aF();
     return (M == null ? void 0 : M.length) > 0 ? M[0] : null;
   }), m = O.useRef(null);
@@ -138311,7 +138311,7 @@ function oun({ dark: n, onPick: e, onClose: r }) {
   const P = ["Energia", "Meteo", "Casa", "Sistema", "HACS", "Smart Card", "Custom", "Esempio", "Plugin"], E = [
     ...P.filter((M) => j[M]),
     ...Object.keys(j).filter((M) => !P.includes(M))
-  ], L = f ? k.find((M) => M.id === f) : null, T = (M) => {
+  ], T = f ? k.find((M) => M.id === f) : null, L = (M) => {
     const R = M.icon;
     return /* @__PURE__ */ l.jsxs(
       "button",
@@ -138573,7 +138573,7 @@ function oun({ dark: n, onPick: e, onClose: r }) {
                   }, children: M }),
                   /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 2 }, children: j[M].map(I) })
                 ] }, M)) }),
-                /* @__PURE__ */ l.jsx(h1e, { selected: L, dark: n, onPick: e, onClose: r })
+                /* @__PURE__ */ l.jsx(h1e, { selected: T, dark: n, onPick: e, onClose: r })
               ] })
             ) : (
               /* HACS: griglia compatta */
@@ -138592,7 +138592,7 @@ function oun({ dark: n, onPick: e, onClose: r }) {
                   /* @__PURE__ */ l.jsx("br", {}),
                   i("layout:sections.installHacs")
                 ] }),
-                S ? C.length === 0 ? /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "32px 0", fontSize: 13, color: "var(--text-muted)" }, children: i("layout:sections.noCardFound") }) : /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: 8, marginTop: 8 }, children: C.map(T) }) : E.map((M) => /* @__PURE__ */ l.jsxs("div", { style: { marginBottom: 18 }, children: [
+                S ? C.length === 0 ? /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "32px 0", fontSize: 13, color: "var(--text-muted)" }, children: i("layout:sections.noCardFound") }) : /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: 8, marginTop: 8 }, children: C.map(L) }) : E.map((M) => /* @__PURE__ */ l.jsxs("div", { style: { marginBottom: 18 }, children: [
                   /* @__PURE__ */ l.jsx("div", { style: {
                     fontSize: 10,
                     fontWeight: 800,
@@ -138601,7 +138601,7 @@ function oun({ dark: n, onPick: e, onClose: r }) {
                     color: "var(--text-muted)",
                     margin: "12px 0 8px 2px"
                   }, children: M }),
-                  /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: 8 }, children: j[M].map(T) })
+                  /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: 8 }, children: j[M].map(L) })
                 ] }, M))
               ] })
             )
@@ -138665,7 +138665,7 @@ function mit({ dark: n, title: e, onClose: r, children: i }) {
   );
 }
 function sun({ rows: n, onRowsChange: e, pageId: r, dark: i, forceSingleCol: a = !1, mobileScale: o = !1, isMobile: s = !1, scaleEnabled: c = !0 }) {
-  const { t: d } = ee("layout"), { editMode: u, setEditMode: p } = Oe(), [h, f] = O.useState(null), [g, m] = O.useState(!1), [y, v] = O.useState(null), b = Mcn(
+  const { t: d } = Y("layout"), { editMode: u, setEditMode: p } = Oe(), [h, f] = O.useState(null), [g, m] = O.useState(!1), [y, v] = O.useState(null), b = Mcn(
     e1e(Sie, { activationConstraint: { distance: 8 } }),
     e1e(kie, { coordinateGetter: Zdn })
   ), x = O.useCallback(($) => {
@@ -138726,8 +138726,8 @@ function sun({ rows: n, onRowsChange: e, pageId: r, dark: i, forceSingleCol: a =
         if (!te) return;
         oe = oe.map((ie) => ie.id !== Z ? ie : Da(ie, re, (ke) => {
           if (fe) {
-            const B = ke.cards.findIndex((K) => K.id === fe), Y = [...ke.cards];
-            return Y.splice(B >= 0 ? B : Y.length, 0, te), { ...ke, cards: Y };
+            const B = ke.cards.findIndex((K) => K.id === fe), J = [...ke.cards];
+            return J.splice(B >= 0 ? B : J.length, 0, te), { ...ke, cards: J };
           }
           return { ...ke, cards: [...ke.cards, te] };
         })), e(oe);
@@ -138762,13 +138762,13 @@ function sun({ rows: n, onRowsChange: e, pageId: r, dark: i, forceSingleCol: a =
       $,
       (V) => Da(V, _, (Q) => ({ ...Q, flex: Q.flex % 3 + 1 }))
     ));
-  }, [n, e]), L = O.useCallback(($, _) => {
+  }, [n, e]), T = O.useCallback(($, _) => {
     e(da(
       n,
       $,
       (V) => Da(V, _, (Q) => ({ ...Q, cardCols: (Q.cardCols ?? 1) % 3 + 1 }))
     ));
-  }, [n, e]), T = O.useCallback(($, _, V) => {
+  }, [n, e]), L = O.useCallback(($, _, V) => {
     const Q = So(V);
     return e(da(
       n,
@@ -138907,7 +138907,7 @@ function sun({ rows: n, onRowsChange: e, pageId: r, dark: i, forceSingleCol: a =
                   onCopyToPage: H,
                   copyPages: F,
                   onAddCard: (_, V) => f({ rowId: _, cellId: V }),
-                  onCycleCardCols: L,
+                  onCycleCardCols: T,
                   onToggleFullWidth: R
                 },
                 $.id
@@ -138955,7 +138955,7 @@ function sun({ rows: n, onRowsChange: e, pageId: r, dark: i, forceSingleCol: a =
       {
         dark: i,
         onPick: ($) => {
-          const _ = T(h.rowId, h.cellId, $);
+          const _ = L(h.rowId, h.cellId, $);
           if (f(null), !aF()) {
             const V = Wo($);
             V != null && V.settingsComponent && v({ id: _.id, cardId: $ });
@@ -139025,7 +139025,7 @@ function dun({ dark: n }) {
   return /* @__PURE__ */ l.jsx(bk, { pageId: "dashboard", dark: n });
 }
 function uun() {
-  const { t: n } = ee("layout");
+  const { t: n } = Y("layout");
   return /* @__PURE__ */ l.jsxs(
     se.div,
     {
@@ -139052,7 +139052,7 @@ function pun({ dark: n }) {
   return /* @__PURE__ */ l.jsx(bk, { pageId: "statistics", dark: n, extraContent: /* @__PURE__ */ l.jsx(uun, {}) });
 }
 function hun() {
-  const { t: n } = ee("layout");
+  const { t: n } = Y("layout");
   return /* @__PURE__ */ l.jsxs(
     se.div,
     {
@@ -139361,7 +139361,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return v;
       }
       function s(g, m, y, v, b, x) {
-        var A, k, S = g.file, C = g.compression, j = x !== u.utf8encode, P = c.transformTo("string", x(S.name)), E = c.transformTo("string", u.utf8encode(S.name)), L = S.comment, T = c.transformTo("string", x(L)), I = c.transformTo("string", u.utf8encode(L)), z = E.length !== S.name.length, M = I.length !== L.length, R = "", F = "", H = "", N = S.dir, $ = S.date, _ = { crc32: 0, compressedSize: 0, uncompressedSize: 0 };
+        var A, k, S = g.file, C = g.compression, j = x !== u.utf8encode, P = c.transformTo("string", x(S.name)), E = c.transformTo("string", u.utf8encode(S.name)), T = S.comment, L = c.transformTo("string", x(T)), I = c.transformTo("string", u.utf8encode(T)), z = E.length !== S.name.length, M = I.length !== T.length, R = "", F = "", H = "", N = S.dir, $ = S.date, _ = { crc32: 0, compressedSize: 0, uncompressedSize: 0 };
         m && !y || (_.crc32 = g.crc32, _.compressedSize = g.compressedSize, _.uncompressedSize = g.uncompressedSize);
         var V = 0;
         m && (V |= 8), j || !z && !M || (V |= 2048);
@@ -139371,10 +139371,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           return re || (ae = fe ? 16893 : 33204), (65535 & ae) << 16;
         }(S.unixPermissions, N)) : (U = 20, Q |= function(re) {
           return 63 & (re || 0);
-        }(S.dosPermissions)), A = $.getUTCHours(), A <<= 6, A |= $.getUTCMinutes(), A <<= 5, A |= $.getUTCSeconds() / 2, k = $.getUTCFullYear() - 1980, k <<= 4, k |= $.getUTCMonth() + 1, k <<= 5, k |= $.getUTCDate(), z && (F = o(1, 1) + o(p(P), 4) + E, R += "up" + o(F.length, 2) + F), M && (H = o(1, 1) + o(p(T), 4) + I, R += "uc" + o(H.length, 2) + H);
+        }(S.dosPermissions)), A = $.getUTCHours(), A <<= 6, A |= $.getUTCMinutes(), A <<= 5, A |= $.getUTCSeconds() / 2, k = $.getUTCFullYear() - 1980, k <<= 4, k |= $.getUTCMonth() + 1, k <<= 5, k |= $.getUTCDate(), z && (F = o(1, 1) + o(p(P), 4) + E, R += "up" + o(F.length, 2) + F), M && (H = o(1, 1) + o(p(L), 4) + I, R += "uc" + o(H.length, 2) + H);
         var Z = "";
         return Z += `
-\0`, Z += o(V, 2), Z += C.magic, Z += o(A, 2), Z += o(k, 2), Z += o(_.crc32, 4), Z += o(_.compressedSize, 4), Z += o(_.uncompressedSize, 4), Z += o(P.length, 2), Z += o(R.length, 2), { fileRecord: h.LOCAL_FILE_HEADER + Z + P + R, dirRecord: h.CENTRAL_FILE_HEADER + o(U, 2) + Z + o(T.length, 2) + "\0\0\0\0" + o(Q, 4) + o(v, 4) + P + R + T };
+\0`, Z += o(V, 2), Z += C.magic, Z += o(A, 2), Z += o(k, 2), Z += o(_.crc32, 4), Z += o(_.compressedSize, 4), Z += o(_.uncompressedSize, 4), Z += o(P.length, 2), Z += o(R.length, 2), { fileRecord: h.LOCAL_FILE_HEADER + Z + P + R, dirRecord: h.CENTRAL_FILE_HEADER + o(U, 2) + Z + o(L.length, 2) + "\0\0\0\0" + o(Q, 4) + o(v, 4) + P + R + L };
       }
       var c = r("../utils"), d = r("../stream/GenericWorker"), u = r("../utf8"), p = r("../crc32"), h = r("../signature");
       function f(g, m, y, v) {
@@ -139543,13 +139543,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       } };
     }, {}], 15: [function(r, i, a) {
       function o(S, C, j) {
-        var P, E = c.getTypeOf(C), L = c.extend(j || {}, p);
-        L.date = L.date || /* @__PURE__ */ new Date(), L.compression !== null && (L.compression = L.compression.toUpperCase()), typeof L.unixPermissions == "string" && (L.unixPermissions = parseInt(L.unixPermissions, 8)), L.unixPermissions && 16384 & L.unixPermissions && (L.dir = !0), L.dosPermissions && 16 & L.dosPermissions && (L.dir = !0), L.dir && (S = b(S)), L.createFolders && (P = v(S)) && x.call(this, P, !0);
-        var T = E === "string" && L.binary === !1 && L.base64 === !1;
-        j && j.binary !== void 0 || (L.binary = !T), (C instanceof h && C.uncompressedSize === 0 || L.dir || !C || C.length === 0) && (L.base64 = !1, L.binary = !0, C = "", L.compression = "STORE", E = "string");
+        var P, E = c.getTypeOf(C), T = c.extend(j || {}, p);
+        T.date = T.date || /* @__PURE__ */ new Date(), T.compression !== null && (T.compression = T.compression.toUpperCase()), typeof T.unixPermissions == "string" && (T.unixPermissions = parseInt(T.unixPermissions, 8)), T.unixPermissions && 16384 & T.unixPermissions && (T.dir = !0), T.dosPermissions && 16 & T.dosPermissions && (T.dir = !0), T.dir && (S = b(S)), T.createFolders && (P = v(S)) && x.call(this, P, !0);
+        var L = E === "string" && T.binary === !1 && T.base64 === !1;
+        j && j.binary !== void 0 || (T.binary = !L), (C instanceof h && C.uncompressedSize === 0 || T.dir || !C || C.length === 0) && (T.base64 = !1, T.binary = !0, C = "", T.compression = "STORE", E = "string");
         var I = null;
-        I = C instanceof h || C instanceof d ? C : m.isNode && m.isStream(C) ? new y(S, C) : c.prepareContent(S, C, L.binary, L.optimizedBinaryString, L.base64);
-        var z = new f(S, I, L);
+        I = C instanceof h || C instanceof d ? C : m.isNode && m.isStream(C) ? new y(S, C) : c.prepareContent(S, C, T.binary, T.optimizedBinaryString, T.base64);
+        var z = new f(S, I, T);
         this.files[S] = z;
       }
       var s = r("./utf8"), c = r("./utils"), d = r("./stream/GenericWorker"), u = r("./stream/StreamHelper"), p = r("./defaults"), h = r("./compressedObject"), f = r("./zipObject"), g = r("./generate"), m = r("./nodejsUtils"), y = r("./nodejs/NodejsStreamInputAdapter"), v = function(S) {
@@ -139578,16 +139578,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         if (arguments.length !== 1) return S = this.root + S, o.call(this, S, C, j), this;
         if (A(S)) {
           var P = S;
-          return this.filter(function(L, T) {
-            return !T.dir && P.test(L);
+          return this.filter(function(T, L) {
+            return !L.dir && P.test(T);
           });
         }
         var E = this.files[this.root + S];
         return E && !E.dir ? E : null;
       }, folder: function(S) {
         if (!S) return this;
-        if (A(S)) return this.filter(function(E, L) {
-          return L.dir && S.test(E);
+        if (A(S)) return this.filter(function(E, T) {
+          return T.dir && S.test(E);
         });
         var C = this.root + S, j = x.call(this, C), P = this.clone();
         return P.root = j.name, P;
@@ -139595,8 +139595,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         S = this.root + S;
         var C = this.files[S];
         if (C || (S.slice(-1) !== "/" && (S += "/"), C = this.files[S]), C && !C.dir) delete this.files[S];
-        else for (var j = this.filter(function(E, L) {
-          return L.name.slice(0, S.length) === S;
+        else for (var j = this.filter(function(E, T) {
+          return T.name.slice(0, S.length) === S;
         }), P = 0; P < j.length; P++) delete this.files[j[P].name];
         return this;
       }, generate: function() {
@@ -139853,7 +139853,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                     return o.transformTo(j, P);
                 }
               }(k, function(j, P) {
-                var E, L = 0, T = null, I = 0;
+                var E, T = 0, L = null, I = 0;
                 for (E = 0; E < P.length; E++) I += P[E].length;
                 switch (j) {
                   case "string":
@@ -139861,8 +139861,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   case "array":
                     return Array.prototype.concat.apply([], P);
                   case "uint8array":
-                    for (T = new Uint8Array(I), E = 0; E < P.length; E++) T.set(P[E], L), L += P[E].length;
-                    return T;
+                    for (L = new Uint8Array(I), E = 0; E < P.length; E++) L.set(P[E], T), T += P[E].length;
+                    return L;
                   case "nodebuffer":
                     return Buffer.concat(P);
                   default:
@@ -140407,9 +140407,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         if (!A) return this.resolve([]);
         for (var S = new Array(A), C = 0, j = -1, P = new this(s); ++j < A; ) E(b[j], j);
         return P;
-        function E(L, T) {
-          x.resolve(L).then(function(I) {
-            S[T] = I, ++C !== A || k || (k = !0, c.resolve(P, S));
+        function E(T, L) {
+          x.resolve(T).then(function(I) {
+            S[L] = I, ++C !== A || k || (k = !0, c.resolve(P, S));
           }, function(I) {
             k || (k = !0, c.reject(P, I));
           });
@@ -140485,12 +140485,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return b.result;
       }
       g.prototype.push = function(y, v) {
-        var b, x, A, k, S, C, j = this.strm, P = this.options.chunkSize, E = this.options.dictionary, L = !1;
+        var b, x, A, k, S, C, j = this.strm, P = this.options.chunkSize, E = this.options.dictionary, T = !1;
         if (this.ended) return !1;
         x = v === ~~v ? v : v === !0 ? d.Z_FINISH : d.Z_NO_FLUSH, typeof y == "string" ? j.input = c.binstring2buf(y) : f.call(y) === "[object ArrayBuffer]" ? j.input = new Uint8Array(y) : j.input = y, j.next_in = 0, j.avail_in = j.input.length;
         do {
-          if (j.avail_out === 0 && (j.output = new s.Buf8(P), j.next_out = 0, j.avail_out = P), (b = o.inflate(j, d.Z_NO_FLUSH)) === d.Z_NEED_DICT && E && (C = typeof E == "string" ? c.string2buf(E) : f.call(E) === "[object ArrayBuffer]" ? new Uint8Array(E) : E, b = o.inflateSetDictionary(this.strm, C)), b === d.Z_BUF_ERROR && L === !0 && (b = d.Z_OK, L = !1), b !== d.Z_STREAM_END && b !== d.Z_OK) return this.onEnd(b), !(this.ended = !0);
-          j.next_out && (j.avail_out !== 0 && b !== d.Z_STREAM_END && (j.avail_in !== 0 || x !== d.Z_FINISH && x !== d.Z_SYNC_FLUSH) || (this.options.to === "string" ? (A = c.utf8border(j.output, j.next_out), k = j.next_out - A, S = c.buf2string(j.output, A), j.next_out = k, j.avail_out = P - k, k && s.arraySet(j.output, j.output, A, k, 0), this.onData(S)) : this.onData(s.shrinkBuf(j.output, j.next_out)))), j.avail_in === 0 && j.avail_out === 0 && (L = !0);
+          if (j.avail_out === 0 && (j.output = new s.Buf8(P), j.next_out = 0, j.avail_out = P), (b = o.inflate(j, d.Z_NO_FLUSH)) === d.Z_NEED_DICT && E && (C = typeof E == "string" ? c.string2buf(E) : f.call(E) === "[object ArrayBuffer]" ? new Uint8Array(E) : E, b = o.inflateSetDictionary(this.strm, C)), b === d.Z_BUF_ERROR && T === !0 && (b = d.Z_OK, T = !1), b !== d.Z_STREAM_END && b !== d.Z_OK) return this.onEnd(b), !(this.ended = !0);
+          j.next_out && (j.avail_out !== 0 && b !== d.Z_STREAM_END && (j.avail_in !== 0 || x !== d.Z_FINISH && x !== d.Z_SYNC_FLUSH) || (this.options.to === "string" ? (A = c.utf8border(j.output, j.next_out), k = j.next_out - A, S = c.buf2string(j.output, A), j.next_out = k, j.avail_out = P - k, k && s.arraySet(j.output, j.output, A, k, 0), this.onData(S)) : this.onData(s.shrinkBuf(j.output, j.next_out)))), j.avail_in === 0 && j.avail_out === 0 && (T = !0);
         } while ((0 < j.avail_in || j.avail_out === 0) && b !== d.Z_STREAM_END);
         return b === d.Z_STREAM_END && (x = d.Z_FINISH), x === d.Z_FINISH ? (b = o.inflateEnd(this.strm), this.onEnd(b), this.ended = !0, b === d.Z_OK) : x !== d.Z_SYNC_FLUSH || (this.onEnd(d.Z_OK), !(j.avail_out = 0));
       }, g.prototype.onData = function(y) {
@@ -140598,133 +140598,133 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return -1 ^ s;
       };
     }, {}], 46: [function(r, i, a) {
-      var o, s = r("../utils/common"), c = r("./trees"), d = r("./adler32"), u = r("./crc32"), p = r("./messages"), h = 0, f = 4, g = 0, m = -2, y = -1, v = 4, b = 2, x = 8, A = 9, k = 286, S = 30, C = 19, j = 2 * k + 1, P = 15, E = 3, L = 258, T = L + E + 1, I = 42, z = 113, M = 1, R = 2, F = 3, H = 4;
-      function N(B, Y) {
-        return B.msg = p[Y], Y;
+      var o, s = r("../utils/common"), c = r("./trees"), d = r("./adler32"), u = r("./crc32"), p = r("./messages"), h = 0, f = 4, g = 0, m = -2, y = -1, v = 4, b = 2, x = 8, A = 9, k = 286, S = 30, C = 19, j = 2 * k + 1, P = 15, E = 3, T = 258, L = T + E + 1, I = 42, z = 113, M = 1, R = 2, F = 3, H = 4;
+      function N(B, J) {
+        return B.msg = p[J], J;
       }
       function $(B) {
         return (B << 1) - (4 < B ? 9 : 0);
       }
       function _(B) {
-        for (var Y = B.length; 0 <= --Y; ) B[Y] = 0;
+        for (var J = B.length; 0 <= --J; ) B[J] = 0;
       }
       function V(B) {
-        var Y = B.state, K = Y.pending;
-        K > B.avail_out && (K = B.avail_out), K !== 0 && (s.arraySet(B.output, Y.pending_buf, Y.pending_out, K, B.next_out), B.next_out += K, Y.pending_out += K, B.total_out += K, B.avail_out -= K, Y.pending -= K, Y.pending === 0 && (Y.pending_out = 0));
+        var J = B.state, K = J.pending;
+        K > B.avail_out && (K = B.avail_out), K !== 0 && (s.arraySet(B.output, J.pending_buf, J.pending_out, K, B.next_out), B.next_out += K, J.pending_out += K, B.total_out += K, B.avail_out -= K, J.pending -= K, J.pending === 0 && (J.pending_out = 0));
       }
-      function Q(B, Y) {
-        c._tr_flush_block(B, 0 <= B.block_start ? B.block_start : -1, B.strstart - B.block_start, Y), B.block_start = B.strstart, V(B.strm);
+      function Q(B, J) {
+        c._tr_flush_block(B, 0 <= B.block_start ? B.block_start : -1, B.strstart - B.block_start, J), B.block_start = B.strstart, V(B.strm);
       }
-      function U(B, Y) {
-        B.pending_buf[B.pending++] = Y;
+      function U(B, J) {
+        B.pending_buf[B.pending++] = J;
       }
-      function Z(B, Y) {
-        B.pending_buf[B.pending++] = Y >>> 8 & 255, B.pending_buf[B.pending++] = 255 & Y;
+      function Z(B, J) {
+        B.pending_buf[B.pending++] = J >>> 8 & 255, B.pending_buf[B.pending++] = 255 & J;
       }
-      function re(B, Y) {
-        var K, D, W = B.max_chain_length, X = B.strstart, ne = B.prev_length, le = B.nice_match, J = B.strstart > B.w_size - T ? B.strstart - (B.w_size - T) : 0, ue = B.window, ye = B.w_mask, ge = B.prev, we = B.strstart + L, he = ue[X + ne - 1], me = ue[X + ne];
+      function re(B, J) {
+        var K, D, W = B.max_chain_length, X = B.strstart, ne = B.prev_length, le = B.nice_match, ee = B.strstart > B.w_size - L ? B.strstart - (B.w_size - L) : 0, ue = B.window, ye = B.w_mask, ge = B.prev, we = B.strstart + T, he = ue[X + ne - 1], me = ue[X + ne];
         B.prev_length >= B.good_match && (W >>= 2), le > B.lookahead && (le = B.lookahead);
         do
-          if (ue[(K = Y) + ne] === me && ue[K + ne - 1] === he && ue[K] === ue[X] && ue[++K] === ue[X + 1]) {
+          if (ue[(K = J) + ne] === me && ue[K + ne - 1] === he && ue[K] === ue[X] && ue[++K] === ue[X + 1]) {
             X += 2, K++;
             do
               ;
             while (ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && ue[++X] === ue[++K] && X < we);
-            if (D = L - (we - X), X = we - L, ne < D) {
-              if (B.match_start = Y, le <= (ne = D)) break;
+            if (D = T - (we - X), X = we - T, ne < D) {
+              if (B.match_start = J, le <= (ne = D)) break;
               he = ue[X + ne - 1], me = ue[X + ne];
             }
           }
-        while ((Y = ge[Y & ye]) > J && --W != 0);
+        while ((J = ge[J & ye]) > ee && --W != 0);
         return ne <= B.lookahead ? ne : B.lookahead;
       }
       function fe(B) {
-        var Y, K, D, W, X, ne, le, J, ue, ye, ge = B.w_size;
+        var J, K, D, W, X, ne, le, ee, ue, ye, ge = B.w_size;
         do {
-          if (W = B.window_size - B.lookahead - B.strstart, B.strstart >= ge + (ge - T)) {
-            for (s.arraySet(B.window, B.window, ge, ge, 0), B.match_start -= ge, B.strstart -= ge, B.block_start -= ge, Y = K = B.hash_size; D = B.head[--Y], B.head[Y] = ge <= D ? D - ge : 0, --K; ) ;
-            for (Y = K = ge; D = B.prev[--Y], B.prev[Y] = ge <= D ? D - ge : 0, --K; ) ;
+          if (W = B.window_size - B.lookahead - B.strstart, B.strstart >= ge + (ge - L)) {
+            for (s.arraySet(B.window, B.window, ge, ge, 0), B.match_start -= ge, B.strstart -= ge, B.block_start -= ge, J = K = B.hash_size; D = B.head[--J], B.head[J] = ge <= D ? D - ge : 0, --K; ) ;
+            for (J = K = ge; D = B.prev[--J], B.prev[J] = ge <= D ? D - ge : 0, --K; ) ;
             W += ge;
           }
           if (B.strm.avail_in === 0) break;
-          if (ne = B.strm, le = B.window, J = B.strstart + B.lookahead, ue = W, ye = void 0, ye = ne.avail_in, ue < ye && (ye = ue), K = ye === 0 ? 0 : (ne.avail_in -= ye, s.arraySet(le, ne.input, ne.next_in, ye, J), ne.state.wrap === 1 ? ne.adler = d(ne.adler, le, ye, J) : ne.state.wrap === 2 && (ne.adler = u(ne.adler, le, ye, J)), ne.next_in += ye, ne.total_in += ye, ye), B.lookahead += K, B.lookahead + B.insert >= E) for (X = B.strstart - B.insert, B.ins_h = B.window[X], B.ins_h = (B.ins_h << B.hash_shift ^ B.window[X + 1]) & B.hash_mask; B.insert && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[X + E - 1]) & B.hash_mask, B.prev[X & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = X, X++, B.insert--, !(B.lookahead + B.insert < E)); ) ;
-        } while (B.lookahead < T && B.strm.avail_in !== 0);
+          if (ne = B.strm, le = B.window, ee = B.strstart + B.lookahead, ue = W, ye = void 0, ye = ne.avail_in, ue < ye && (ye = ue), K = ye === 0 ? 0 : (ne.avail_in -= ye, s.arraySet(le, ne.input, ne.next_in, ye, ee), ne.state.wrap === 1 ? ne.adler = d(ne.adler, le, ye, ee) : ne.state.wrap === 2 && (ne.adler = u(ne.adler, le, ye, ee)), ne.next_in += ye, ne.total_in += ye, ye), B.lookahead += K, B.lookahead + B.insert >= E) for (X = B.strstart - B.insert, B.ins_h = B.window[X], B.ins_h = (B.ins_h << B.hash_shift ^ B.window[X + 1]) & B.hash_mask; B.insert && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[X + E - 1]) & B.hash_mask, B.prev[X & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = X, X++, B.insert--, !(B.lookahead + B.insert < E)); ) ;
+        } while (B.lookahead < L && B.strm.avail_in !== 0);
       }
-      function ae(B, Y) {
+      function ae(B, J) {
         for (var K, D; ; ) {
-          if (B.lookahead < T) {
-            if (fe(B), B.lookahead < T && Y === h) return M;
+          if (B.lookahead < L) {
+            if (fe(B), B.lookahead < L && J === h) return M;
             if (B.lookahead === 0) break;
           }
-          if (K = 0, B.lookahead >= E && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart), K !== 0 && B.strstart - K <= B.w_size - T && (B.match_length = re(B, K)), B.match_length >= E) if (D = c._tr_tally(B, B.strstart - B.match_start, B.match_length - E), B.lookahead -= B.match_length, B.match_length <= B.max_lazy_match && B.lookahead >= E) {
+          if (K = 0, B.lookahead >= E && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart), K !== 0 && B.strstart - K <= B.w_size - L && (B.match_length = re(B, K)), B.match_length >= E) if (D = c._tr_tally(B, B.strstart - B.match_start, B.match_length - E), B.lookahead -= B.match_length, B.match_length <= B.max_lazy_match && B.lookahead >= E) {
             for (B.match_length--; B.strstart++, B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart, --B.match_length != 0; ) ;
             B.strstart++;
           } else B.strstart += B.match_length, B.match_length = 0, B.ins_h = B.window[B.strstart], B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + 1]) & B.hash_mask;
           else D = c._tr_tally(B, 0, B.window[B.strstart]), B.lookahead--, B.strstart++;
           if (D && (Q(B, !1), B.strm.avail_out === 0)) return M;
         }
-        return B.insert = B.strstart < E - 1 ? B.strstart : E - 1, Y === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : B.last_lit && (Q(B, !1), B.strm.avail_out === 0) ? M : R;
+        return B.insert = B.strstart < E - 1 ? B.strstart : E - 1, J === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : B.last_lit && (Q(B, !1), B.strm.avail_out === 0) ? M : R;
       }
-      function pe(B, Y) {
+      function pe(B, J) {
         for (var K, D, W; ; ) {
-          if (B.lookahead < T) {
-            if (fe(B), B.lookahead < T && Y === h) return M;
+          if (B.lookahead < L) {
+            if (fe(B), B.lookahead < L && J === h) return M;
             if (B.lookahead === 0) break;
           }
-          if (K = 0, B.lookahead >= E && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart), B.prev_length = B.match_length, B.prev_match = B.match_start, B.match_length = E - 1, K !== 0 && B.prev_length < B.max_lazy_match && B.strstart - K <= B.w_size - T && (B.match_length = re(B, K), B.match_length <= 5 && (B.strategy === 1 || B.match_length === E && 4096 < B.strstart - B.match_start) && (B.match_length = E - 1)), B.prev_length >= E && B.match_length <= B.prev_length) {
+          if (K = 0, B.lookahead >= E && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart), B.prev_length = B.match_length, B.prev_match = B.match_start, B.match_length = E - 1, K !== 0 && B.prev_length < B.max_lazy_match && B.strstart - K <= B.w_size - L && (B.match_length = re(B, K), B.match_length <= 5 && (B.strategy === 1 || B.match_length === E && 4096 < B.strstart - B.match_start) && (B.match_length = E - 1)), B.prev_length >= E && B.match_length <= B.prev_length) {
             for (W = B.strstart + B.lookahead - E, D = c._tr_tally(B, B.strstart - 1 - B.prev_match, B.prev_length - E), B.lookahead -= B.prev_length - 1, B.prev_length -= 2; ++B.strstart <= W && (B.ins_h = (B.ins_h << B.hash_shift ^ B.window[B.strstart + E - 1]) & B.hash_mask, K = B.prev[B.strstart & B.w_mask] = B.head[B.ins_h], B.head[B.ins_h] = B.strstart), --B.prev_length != 0; ) ;
             if (B.match_available = 0, B.match_length = E - 1, B.strstart++, D && (Q(B, !1), B.strm.avail_out === 0)) return M;
           } else if (B.match_available) {
             if ((D = c._tr_tally(B, 0, B.window[B.strstart - 1])) && Q(B, !1), B.strstart++, B.lookahead--, B.strm.avail_out === 0) return M;
           } else B.match_available = 1, B.strstart++, B.lookahead--;
         }
-        return B.match_available && (D = c._tr_tally(B, 0, B.window[B.strstart - 1]), B.match_available = 0), B.insert = B.strstart < E - 1 ? B.strstart : E - 1, Y === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : B.last_lit && (Q(B, !1), B.strm.avail_out === 0) ? M : R;
+        return B.match_available && (D = c._tr_tally(B, 0, B.window[B.strstart - 1]), B.match_available = 0), B.insert = B.strstart < E - 1 ? B.strstart : E - 1, J === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : B.last_lit && (Q(B, !1), B.strm.avail_out === 0) ? M : R;
       }
-      function ce(B, Y, K, D, W) {
-        this.good_length = B, this.max_lazy = Y, this.nice_length = K, this.max_chain = D, this.func = W;
+      function ce(B, J, K, D, W) {
+        this.good_length = B, this.max_lazy = J, this.nice_length = K, this.max_chain = D, this.func = W;
       }
       function te() {
         this.strm = null, this.status = 0, this.pending_buf = null, this.pending_buf_size = 0, this.pending_out = 0, this.pending = 0, this.wrap = 0, this.gzhead = null, this.gzindex = 0, this.method = x, this.last_flush = -1, this.w_size = 0, this.w_bits = 0, this.w_mask = 0, this.window = null, this.window_size = 0, this.prev = null, this.head = null, this.ins_h = 0, this.hash_size = 0, this.hash_bits = 0, this.hash_mask = 0, this.hash_shift = 0, this.block_start = 0, this.match_length = 0, this.prev_match = 0, this.match_available = 0, this.strstart = 0, this.match_start = 0, this.lookahead = 0, this.prev_length = 0, this.max_chain_length = 0, this.max_lazy_match = 0, this.level = 0, this.strategy = 0, this.good_match = 0, this.nice_match = 0, this.dyn_ltree = new s.Buf16(2 * j), this.dyn_dtree = new s.Buf16(2 * (2 * S + 1)), this.bl_tree = new s.Buf16(2 * (2 * C + 1)), _(this.dyn_ltree), _(this.dyn_dtree), _(this.bl_tree), this.l_desc = null, this.d_desc = null, this.bl_desc = null, this.bl_count = new s.Buf16(P + 1), this.heap = new s.Buf16(2 * k + 1), _(this.heap), this.heap_len = 0, this.heap_max = 0, this.depth = new s.Buf16(2 * k + 1), _(this.depth), this.l_buf = 0, this.lit_bufsize = 0, this.last_lit = 0, this.d_buf = 0, this.opt_len = 0, this.static_len = 0, this.matches = 0, this.insert = 0, this.bi_buf = 0, this.bi_valid = 0;
       }
       function oe(B) {
-        var Y;
-        return B && B.state ? (B.total_in = B.total_out = 0, B.data_type = b, (Y = B.state).pending = 0, Y.pending_out = 0, Y.wrap < 0 && (Y.wrap = -Y.wrap), Y.status = Y.wrap ? I : z, B.adler = Y.wrap === 2 ? 0 : 1, Y.last_flush = h, c._tr_init(Y), g) : N(B, m);
+        var J;
+        return B && B.state ? (B.total_in = B.total_out = 0, B.data_type = b, (J = B.state).pending = 0, J.pending_out = 0, J.wrap < 0 && (J.wrap = -J.wrap), J.status = J.wrap ? I : z, B.adler = J.wrap === 2 ? 0 : 1, J.last_flush = h, c._tr_init(J), g) : N(B, m);
       }
       function ie(B) {
-        var Y = oe(B);
-        return Y === g && function(K) {
+        var J = oe(B);
+        return J === g && function(K) {
           K.window_size = 2 * K.w_size, _(K.head), K.max_lazy_match = o[K.level].max_lazy, K.good_match = o[K.level].good_length, K.nice_match = o[K.level].nice_length, K.max_chain_length = o[K.level].max_chain, K.strstart = 0, K.block_start = 0, K.lookahead = 0, K.insert = 0, K.match_length = K.prev_length = E - 1, K.match_available = 0, K.ins_h = 0;
-        }(B.state), Y;
+        }(B.state), J;
       }
-      function ke(B, Y, K, D, W, X) {
+      function ke(B, J, K, D, W, X) {
         if (!B) return m;
         var ne = 1;
-        if (Y === y && (Y = 6), D < 0 ? (ne = 0, D = -D) : 15 < D && (ne = 2, D -= 16), W < 1 || A < W || K !== x || D < 8 || 15 < D || Y < 0 || 9 < Y || X < 0 || v < X) return N(B, m);
+        if (J === y && (J = 6), D < 0 ? (ne = 0, D = -D) : 15 < D && (ne = 2, D -= 16), W < 1 || A < W || K !== x || D < 8 || 15 < D || J < 0 || 9 < J || X < 0 || v < X) return N(B, m);
         D === 8 && (D = 9);
         var le = new te();
-        return (B.state = le).strm = B, le.wrap = ne, le.gzhead = null, le.w_bits = D, le.w_size = 1 << le.w_bits, le.w_mask = le.w_size - 1, le.hash_bits = W + 7, le.hash_size = 1 << le.hash_bits, le.hash_mask = le.hash_size - 1, le.hash_shift = ~~((le.hash_bits + E - 1) / E), le.window = new s.Buf8(2 * le.w_size), le.head = new s.Buf16(le.hash_size), le.prev = new s.Buf16(le.w_size), le.lit_bufsize = 1 << W + 6, le.pending_buf_size = 4 * le.lit_bufsize, le.pending_buf = new s.Buf8(le.pending_buf_size), le.d_buf = 1 * le.lit_bufsize, le.l_buf = 3 * le.lit_bufsize, le.level = Y, le.strategy = X, le.method = K, ie(B);
+        return (B.state = le).strm = B, le.wrap = ne, le.gzhead = null, le.w_bits = D, le.w_size = 1 << le.w_bits, le.w_mask = le.w_size - 1, le.hash_bits = W + 7, le.hash_size = 1 << le.hash_bits, le.hash_mask = le.hash_size - 1, le.hash_shift = ~~((le.hash_bits + E - 1) / E), le.window = new s.Buf8(2 * le.w_size), le.head = new s.Buf16(le.hash_size), le.prev = new s.Buf16(le.w_size), le.lit_bufsize = 1 << W + 6, le.pending_buf_size = 4 * le.lit_bufsize, le.pending_buf = new s.Buf8(le.pending_buf_size), le.d_buf = 1 * le.lit_bufsize, le.l_buf = 3 * le.lit_bufsize, le.level = J, le.strategy = X, le.method = K, ie(B);
       }
-      o = [new ce(0, 0, 0, 0, function(B, Y) {
+      o = [new ce(0, 0, 0, 0, function(B, J) {
         var K = 65535;
         for (K > B.pending_buf_size - 5 && (K = B.pending_buf_size - 5); ; ) {
           if (B.lookahead <= 1) {
-            if (fe(B), B.lookahead === 0 && Y === h) return M;
+            if (fe(B), B.lookahead === 0 && J === h) return M;
             if (B.lookahead === 0) break;
           }
           B.strstart += B.lookahead, B.lookahead = 0;
           var D = B.block_start + K;
-          if ((B.strstart === 0 || B.strstart >= D) && (B.lookahead = B.strstart - D, B.strstart = D, Q(B, !1), B.strm.avail_out === 0) || B.strstart - B.block_start >= B.w_size - T && (Q(B, !1), B.strm.avail_out === 0)) return M;
+          if ((B.strstart === 0 || B.strstart >= D) && (B.lookahead = B.strstart - D, B.strstart = D, Q(B, !1), B.strm.avail_out === 0) || B.strstart - B.block_start >= B.w_size - L && (Q(B, !1), B.strm.avail_out === 0)) return M;
         }
-        return B.insert = 0, Y === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : (B.strstart > B.block_start && (Q(B, !1), B.strm.avail_out), M);
-      }), new ce(4, 4, 8, 4, ae), new ce(4, 5, 16, 8, ae), new ce(4, 6, 32, 32, ae), new ce(4, 4, 16, 16, pe), new ce(8, 16, 32, 32, pe), new ce(8, 16, 128, 128, pe), new ce(8, 32, 128, 256, pe), new ce(32, 128, 258, 1024, pe), new ce(32, 258, 258, 4096, pe)], a.deflateInit = function(B, Y) {
-        return ke(B, Y, x, 15, 8, 0);
-      }, a.deflateInit2 = ke, a.deflateReset = ie, a.deflateResetKeep = oe, a.deflateSetHeader = function(B, Y) {
-        return B && B.state ? B.state.wrap !== 2 ? m : (B.state.gzhead = Y, g) : m;
-      }, a.deflate = function(B, Y) {
+        return B.insert = 0, J === f ? (Q(B, !0), B.strm.avail_out === 0 ? F : H) : (B.strstart > B.block_start && (Q(B, !1), B.strm.avail_out), M);
+      }), new ce(4, 4, 8, 4, ae), new ce(4, 5, 16, 8, ae), new ce(4, 6, 32, 32, ae), new ce(4, 4, 16, 16, pe), new ce(8, 16, 32, 32, pe), new ce(8, 16, 128, 128, pe), new ce(8, 32, 128, 256, pe), new ce(32, 128, 258, 1024, pe), new ce(32, 258, 258, 4096, pe)], a.deflateInit = function(B, J) {
+        return ke(B, J, x, 15, 8, 0);
+      }, a.deflateInit2 = ke, a.deflateReset = ie, a.deflateResetKeep = oe, a.deflateSetHeader = function(B, J) {
+        return B && B.state ? B.state.wrap !== 2 ? m : (B.state.gzhead = J, g) : m;
+      }, a.deflate = function(B, J) {
         var K, D, W, X;
-        if (!B || !B.state || 5 < Y || Y < 0) return B ? N(B, m) : m;
-        if (D = B.state, !B.output || !B.input && B.avail_in !== 0 || D.status === 666 && Y !== f) return N(B, B.avail_out === 0 ? -5 : m);
-        if (D.strm = B, K = D.last_flush, D.last_flush = Y, D.status === I) if (D.wrap === 2) B.adler = 0, U(D, 31), U(D, 139), U(D, 8), D.gzhead ? (U(D, (D.gzhead.text ? 1 : 0) + (D.gzhead.hcrc ? 2 : 0) + (D.gzhead.extra ? 4 : 0) + (D.gzhead.name ? 8 : 0) + (D.gzhead.comment ? 16 : 0)), U(D, 255 & D.gzhead.time), U(D, D.gzhead.time >> 8 & 255), U(D, D.gzhead.time >> 16 & 255), U(D, D.gzhead.time >> 24 & 255), U(D, D.level === 9 ? 2 : 2 <= D.strategy || D.level < 2 ? 4 : 0), U(D, 255 & D.gzhead.os), D.gzhead.extra && D.gzhead.extra.length && (U(D, 255 & D.gzhead.extra.length), U(D, D.gzhead.extra.length >> 8 & 255)), D.gzhead.hcrc && (B.adler = u(B.adler, D.pending_buf, D.pending, 0)), D.gzindex = 0, D.status = 69) : (U(D, 0), U(D, 0), U(D, 0), U(D, 0), U(D, 0), U(D, D.level === 9 ? 2 : 2 <= D.strategy || D.level < 2 ? 4 : 0), U(D, 3), D.status = z);
+        if (!B || !B.state || 5 < J || J < 0) return B ? N(B, m) : m;
+        if (D = B.state, !B.output || !B.input && B.avail_in !== 0 || D.status === 666 && J !== f) return N(B, B.avail_out === 0 ? -5 : m);
+        if (D.strm = B, K = D.last_flush, D.last_flush = J, D.status === I) if (D.wrap === 2) B.adler = 0, U(D, 31), U(D, 139), U(D, 8), D.gzhead ? (U(D, (D.gzhead.text ? 1 : 0) + (D.gzhead.hcrc ? 2 : 0) + (D.gzhead.extra ? 4 : 0) + (D.gzhead.name ? 8 : 0) + (D.gzhead.comment ? 16 : 0)), U(D, 255 & D.gzhead.time), U(D, D.gzhead.time >> 8 & 255), U(D, D.gzhead.time >> 16 & 255), U(D, D.gzhead.time >> 24 & 255), U(D, D.level === 9 ? 2 : 2 <= D.strategy || D.level < 2 ? 4 : 0), U(D, 255 & D.gzhead.os), D.gzhead.extra && D.gzhead.extra.length && (U(D, 255 & D.gzhead.extra.length), U(D, D.gzhead.extra.length >> 8 & 255)), D.gzhead.hcrc && (B.adler = u(B.adler, D.pending_buf, D.pending, 0)), D.gzindex = 0, D.status = 69) : (U(D, 0), U(D, 0), U(D, 0), U(D, 0), U(D, 0), U(D, D.level === 9 ? 2 : 2 <= D.strategy || D.level < 2 ? 4 : 0), U(D, 3), D.status = z);
         else {
           var ne = x + (D.w_bits - 8 << 4) << 8;
           ne |= (2 <= D.strategy || D.level < 2 ? 0 : D.level < 6 ? 1 : D.level === 6 ? 2 : 3) << 6, D.strstart !== 0 && (ne |= 32), ne += 31 - ne % 31, D.status = z, Z(D, ne), D.strstart !== 0 && (Z(D, B.adler >>> 16), Z(D, 65535 & B.adler)), B.adler = 1;
@@ -140757,50 +140757,50 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         } else D.status = 103;
         if (D.status === 103 && (D.gzhead.hcrc ? (D.pending + 2 > D.pending_buf_size && V(B), D.pending + 2 <= D.pending_buf_size && (U(D, 255 & B.adler), U(D, B.adler >> 8 & 255), B.adler = 0, D.status = z)) : D.status = z), D.pending !== 0) {
           if (V(B), B.avail_out === 0) return D.last_flush = -1, g;
-        } else if (B.avail_in === 0 && $(Y) <= $(K) && Y !== f) return N(B, -5);
+        } else if (B.avail_in === 0 && $(J) <= $(K) && J !== f) return N(B, -5);
         if (D.status === 666 && B.avail_in !== 0) return N(B, -5);
-        if (B.avail_in !== 0 || D.lookahead !== 0 || Y !== h && D.status !== 666) {
-          var le = D.strategy === 2 ? function(J, ue) {
+        if (B.avail_in !== 0 || D.lookahead !== 0 || J !== h && D.status !== 666) {
+          var le = D.strategy === 2 ? function(ee, ue) {
             for (var ye; ; ) {
-              if (J.lookahead === 0 && (fe(J), J.lookahead === 0)) {
+              if (ee.lookahead === 0 && (fe(ee), ee.lookahead === 0)) {
                 if (ue === h) return M;
                 break;
               }
-              if (J.match_length = 0, ye = c._tr_tally(J, 0, J.window[J.strstart]), J.lookahead--, J.strstart++, ye && (Q(J, !1), J.strm.avail_out === 0)) return M;
+              if (ee.match_length = 0, ye = c._tr_tally(ee, 0, ee.window[ee.strstart]), ee.lookahead--, ee.strstart++, ye && (Q(ee, !1), ee.strm.avail_out === 0)) return M;
             }
-            return J.insert = 0, ue === f ? (Q(J, !0), J.strm.avail_out === 0 ? F : H) : J.last_lit && (Q(J, !1), J.strm.avail_out === 0) ? M : R;
-          }(D, Y) : D.strategy === 3 ? function(J, ue) {
-            for (var ye, ge, we, he, me = J.window; ; ) {
-              if (J.lookahead <= L) {
-                if (fe(J), J.lookahead <= L && ue === h) return M;
-                if (J.lookahead === 0) break;
+            return ee.insert = 0, ue === f ? (Q(ee, !0), ee.strm.avail_out === 0 ? F : H) : ee.last_lit && (Q(ee, !1), ee.strm.avail_out === 0) ? M : R;
+          }(D, J) : D.strategy === 3 ? function(ee, ue) {
+            for (var ye, ge, we, he, me = ee.window; ; ) {
+              if (ee.lookahead <= T) {
+                if (fe(ee), ee.lookahead <= T && ue === h) return M;
+                if (ee.lookahead === 0) break;
               }
-              if (J.match_length = 0, J.lookahead >= E && 0 < J.strstart && (ge = me[we = J.strstart - 1]) === me[++we] && ge === me[++we] && ge === me[++we]) {
-                he = J.strstart + L;
+              if (ee.match_length = 0, ee.lookahead >= E && 0 < ee.strstart && (ge = me[we = ee.strstart - 1]) === me[++we] && ge === me[++we] && ge === me[++we]) {
+                he = ee.strstart + T;
                 do
                   ;
                 while (ge === me[++we] && ge === me[++we] && ge === me[++we] && ge === me[++we] && ge === me[++we] && ge === me[++we] && ge === me[++we] && ge === me[++we] && we < he);
-                J.match_length = L - (he - we), J.match_length > J.lookahead && (J.match_length = J.lookahead);
+                ee.match_length = T - (he - we), ee.match_length > ee.lookahead && (ee.match_length = ee.lookahead);
               }
-              if (J.match_length >= E ? (ye = c._tr_tally(J, 1, J.match_length - E), J.lookahead -= J.match_length, J.strstart += J.match_length, J.match_length = 0) : (ye = c._tr_tally(J, 0, J.window[J.strstart]), J.lookahead--, J.strstart++), ye && (Q(J, !1), J.strm.avail_out === 0)) return M;
+              if (ee.match_length >= E ? (ye = c._tr_tally(ee, 1, ee.match_length - E), ee.lookahead -= ee.match_length, ee.strstart += ee.match_length, ee.match_length = 0) : (ye = c._tr_tally(ee, 0, ee.window[ee.strstart]), ee.lookahead--, ee.strstart++), ye && (Q(ee, !1), ee.strm.avail_out === 0)) return M;
             }
-            return J.insert = 0, ue === f ? (Q(J, !0), J.strm.avail_out === 0 ? F : H) : J.last_lit && (Q(J, !1), J.strm.avail_out === 0) ? M : R;
-          }(D, Y) : o[D.level].func(D, Y);
+            return ee.insert = 0, ue === f ? (Q(ee, !0), ee.strm.avail_out === 0 ? F : H) : ee.last_lit && (Q(ee, !1), ee.strm.avail_out === 0) ? M : R;
+          }(D, J) : o[D.level].func(D, J);
           if (le !== F && le !== H || (D.status = 666), le === M || le === F) return B.avail_out === 0 && (D.last_flush = -1), g;
-          if (le === R && (Y === 1 ? c._tr_align(D) : Y !== 5 && (c._tr_stored_block(D, 0, 0, !1), Y === 3 && (_(D.head), D.lookahead === 0 && (D.strstart = 0, D.block_start = 0, D.insert = 0))), V(B), B.avail_out === 0)) return D.last_flush = -1, g;
+          if (le === R && (J === 1 ? c._tr_align(D) : J !== 5 && (c._tr_stored_block(D, 0, 0, !1), J === 3 && (_(D.head), D.lookahead === 0 && (D.strstart = 0, D.block_start = 0, D.insert = 0))), V(B), B.avail_out === 0)) return D.last_flush = -1, g;
         }
-        return Y !== f ? g : D.wrap <= 0 ? 1 : (D.wrap === 2 ? (U(D, 255 & B.adler), U(D, B.adler >> 8 & 255), U(D, B.adler >> 16 & 255), U(D, B.adler >> 24 & 255), U(D, 255 & B.total_in), U(D, B.total_in >> 8 & 255), U(D, B.total_in >> 16 & 255), U(D, B.total_in >> 24 & 255)) : (Z(D, B.adler >>> 16), Z(D, 65535 & B.adler)), V(B), 0 < D.wrap && (D.wrap = -D.wrap), D.pending !== 0 ? g : 1);
+        return J !== f ? g : D.wrap <= 0 ? 1 : (D.wrap === 2 ? (U(D, 255 & B.adler), U(D, B.adler >> 8 & 255), U(D, B.adler >> 16 & 255), U(D, B.adler >> 24 & 255), U(D, 255 & B.total_in), U(D, B.total_in >> 8 & 255), U(D, B.total_in >> 16 & 255), U(D, B.total_in >> 24 & 255)) : (Z(D, B.adler >>> 16), Z(D, 65535 & B.adler)), V(B), 0 < D.wrap && (D.wrap = -D.wrap), D.pending !== 0 ? g : 1);
       }, a.deflateEnd = function(B) {
-        var Y;
-        return B && B.state ? (Y = B.state.status) !== I && Y !== 69 && Y !== 73 && Y !== 91 && Y !== 103 && Y !== z && Y !== 666 ? N(B, m) : (B.state = null, Y === z ? N(B, -3) : g) : m;
-      }, a.deflateSetDictionary = function(B, Y) {
-        var K, D, W, X, ne, le, J, ue, ye = Y.length;
+        var J;
+        return B && B.state ? (J = B.state.status) !== I && J !== 69 && J !== 73 && J !== 91 && J !== 103 && J !== z && J !== 666 ? N(B, m) : (B.state = null, J === z ? N(B, -3) : g) : m;
+      }, a.deflateSetDictionary = function(B, J) {
+        var K, D, W, X, ne, le, ee, ue, ye = J.length;
         if (!B || !B.state || (X = (K = B.state).wrap) === 2 || X === 1 && K.status !== I || K.lookahead) return m;
-        for (X === 1 && (B.adler = d(B.adler, Y, ye, 0)), K.wrap = 0, ye >= K.w_size && (X === 0 && (_(K.head), K.strstart = 0, K.block_start = 0, K.insert = 0), ue = new s.Buf8(K.w_size), s.arraySet(ue, Y, ye - K.w_size, K.w_size, 0), Y = ue, ye = K.w_size), ne = B.avail_in, le = B.next_in, J = B.input, B.avail_in = ye, B.next_in = 0, B.input = Y, fe(K); K.lookahead >= E; ) {
+        for (X === 1 && (B.adler = d(B.adler, J, ye, 0)), K.wrap = 0, ye >= K.w_size && (X === 0 && (_(K.head), K.strstart = 0, K.block_start = 0, K.insert = 0), ue = new s.Buf8(K.w_size), s.arraySet(ue, J, ye - K.w_size, K.w_size, 0), J = ue, ye = K.w_size), ne = B.avail_in, le = B.next_in, ee = B.input, B.avail_in = ye, B.next_in = 0, B.input = J, fe(K); K.lookahead >= E; ) {
           for (D = K.strstart, W = K.lookahead - (E - 1); K.ins_h = (K.ins_h << K.hash_shift ^ K.window[D + E - 1]) & K.hash_mask, K.prev[D & K.w_mask] = K.head[K.ins_h], K.head[K.ins_h] = D, D++, --W; ) ;
           K.strstart = D, K.lookahead = E - 1, fe(K);
         }
-        return K.strstart += K.lookahead, K.block_start = K.strstart, K.insert = K.lookahead, K.lookahead = 0, K.match_length = K.prev_length = E - 1, K.match_available = 0, B.next_in = le, B.input = J, B.avail_in = ne, K.wrap = X, g;
+        return K.strstart += K.lookahead, K.block_start = K.strstart, K.insert = K.lookahead, K.lookahead = 0, K.match_length = K.prev_length = E - 1, K.match_available = 0, B.next_in = le, B.input = ee, B.avail_in = ne, K.wrap = X, g;
       }, a.deflateInfo = "pako deflate (from Nodeca project)";
     }, { "../utils/common": 41, "./adler32": 43, "./crc32": 45, "./messages": 51, "./trees": 52 }], 47: [function(r, i, a) {
       i.exports = function() {
@@ -140808,7 +140808,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       };
     }, {}], 48: [function(r, i, a) {
       i.exports = function(o, s) {
-        var c, d, u, p, h, f, g, m, y, v, b, x, A, k, S, C, j, P, E, L, T, I, z, M, R;
+        var c, d, u, p, h, f, g, m, y, v, b, x, A, k, S, C, j, P, E, T, L, I, z, M, R;
         c = o.state, d = o.next_in, M = o.input, u = d + (o.avail_in - 5), p = o.next_out, R = o.output, h = p - (s - o.avail_out), f = p + (o.avail_out - 257), g = c.dmax, m = c.wsize, y = c.whave, v = c.wnext, b = c.window, x = c.hold, A = c.bits, k = c.lencode, S = c.distcode, C = (1 << c.lenbits) - 1, j = (1 << c.distbits) - 1;
         e: do {
           A < 15 && (x += M[d++] << A, A += 8, x += M[d++] << A, A += 8), P = k[x & C];
@@ -140827,7 +140827,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 o.msg = "invalid literal/length code", c.mode = 30;
                 break e;
               }
-              L = 65535 & P, (E &= 15) && (A < E && (x += M[d++] << A, A += 8), L += x & (1 << E) - 1, x >>>= E, A -= E), A < 15 && (x += M[d++] << A, A += 8, x += M[d++] << A, A += 8), P = S[x & j];
+              T = 65535 & P, (E &= 15) && (A < E && (x += M[d++] << A, A += 8), T += x & (1 << E) - 1, x >>>= E, A -= E), A < 15 && (x += M[d++] << A, A += 8, x += M[d++] << A, A += 8), P = S[x & j];
               n: for (; ; ) {
                 if (x >>>= E = P >>> 24, A -= E, !(16 & (E = P >>> 16 & 255))) {
                   if (!(64 & E)) {
@@ -140837,37 +140837,37 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   o.msg = "invalid distance code", c.mode = 30;
                   break e;
                 }
-                if (T = 65535 & P, A < (E &= 15) && (x += M[d++] << A, (A += 8) < E && (x += M[d++] << A, A += 8)), g < (T += x & (1 << E) - 1)) {
+                if (L = 65535 & P, A < (E &= 15) && (x += M[d++] << A, (A += 8) < E && (x += M[d++] << A, A += 8)), g < (L += x & (1 << E) - 1)) {
                   o.msg = "invalid distance too far back", c.mode = 30;
                   break e;
                 }
-                if (x >>>= E, A -= E, (E = p - h) < T) {
-                  if (y < (E = T - E) && c.sane) {
+                if (x >>>= E, A -= E, (E = p - h) < L) {
+                  if (y < (E = L - E) && c.sane) {
                     o.msg = "invalid distance too far back", c.mode = 30;
                     break e;
                   }
                   if (z = b, (I = 0) === v) {
-                    if (I += m - E, E < L) {
-                      for (L -= E; R[p++] = b[I++], --E; ) ;
-                      I = p - T, z = R;
+                    if (I += m - E, E < T) {
+                      for (T -= E; R[p++] = b[I++], --E; ) ;
+                      I = p - L, z = R;
                     }
                   } else if (v < E) {
-                    if (I += m + v - E, (E -= v) < L) {
-                      for (L -= E; R[p++] = b[I++], --E; ) ;
-                      if (I = 0, v < L) {
-                        for (L -= E = v; R[p++] = b[I++], --E; ) ;
-                        I = p - T, z = R;
+                    if (I += m + v - E, (E -= v) < T) {
+                      for (T -= E; R[p++] = b[I++], --E; ) ;
+                      if (I = 0, v < T) {
+                        for (T -= E = v; R[p++] = b[I++], --E; ) ;
+                        I = p - L, z = R;
                       }
                     }
-                  } else if (I += v - E, E < L) {
-                    for (L -= E; R[p++] = b[I++], --E; ) ;
-                    I = p - T, z = R;
+                  } else if (I += v - E, E < T) {
+                    for (T -= E; R[p++] = b[I++], --E; ) ;
+                    I = p - L, z = R;
                   }
-                  for (; 2 < L; ) R[p++] = z[I++], R[p++] = z[I++], R[p++] = z[I++], L -= 3;
-                  L && (R[p++] = z[I++], 1 < L && (R[p++] = z[I++]));
+                  for (; 2 < T; ) R[p++] = z[I++], R[p++] = z[I++], R[p++] = z[I++], T -= 3;
+                  T && (R[p++] = z[I++], 1 < T && (R[p++] = z[I++]));
                 } else {
-                  for (I = p - T; R[p++] = R[I++], R[p++] = R[I++], R[p++] = R[I++], 2 < (L -= 3); ) ;
-                  L && (R[p++] = R[I++], 1 < L && (R[p++] = R[I++]));
+                  for (I = p - L; R[p++] = R[I++], R[p++] = R[I++], R[p++] = R[I++], 2 < (T -= 3); ) ;
+                  T && (R[p++] = R[I++], 1 < T && (R[p++] = R[I++]));
                 }
                 break;
               }
@@ -140875,7 +140875,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             break;
           }
         } while (d < u && p < f);
-        d -= L = A >> 3, x &= (1 << (A -= L << 3)) - 1, o.next_in = d, o.next_out = p, o.avail_in = d < u ? u - d + 5 : 5 - (d - u), o.avail_out = p < f ? f - p + 257 : 257 - (p - f), c.hold = x, c.bits = A;
+        d -= T = A >> 3, x &= (1 << (A -= T << 3)) - 1, o.next_in = d, o.next_out = p, o.avail_in = d < u ? u - d + 5 : 5 - (d - u), o.avail_out = p < f ? f - p + 257 : 257 - (p - f), c.hold = x, c.bits = A;
       };
     }, {}], 49: [function(r, i, a) {
       var o = r("../utils/common"), s = r("./adler32"), c = r("./crc32"), d = r("./inffast"), u = r("./inftrees"), p = 1, h = 2, f = 0, g = -2, m = 1, y = 852, v = 592;
@@ -140902,7 +140902,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return I ? (R = new x(), (I.state = R).window = null, (M = S(I, z)) !== f && (I.state = null), M) : g;
       }
       var j, P, E = !0;
-      function L(I) {
+      function T(I) {
         if (E) {
           var z;
           for (j = new o.Buf32(512), P = new o.Buf32(32), z = 0; z < 144; ) I.lens[z++] = 8;
@@ -140914,16 +140914,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         }
         I.lencode = j, I.lenbits = 9, I.distcode = P, I.distbits = 5;
       }
-      function T(I, z, M, R) {
+      function L(I, z, M, R) {
         var F, H = I.state;
         return H.window === null && (H.wsize = 1 << H.wbits, H.wnext = 0, H.whave = 0, H.window = new o.Buf8(H.wsize)), R >= H.wsize ? (o.arraySet(H.window, z, M - H.wsize, H.wsize, 0), H.wnext = 0, H.whave = H.wsize) : (R < (F = H.wsize - H.wnext) && (F = R), o.arraySet(H.window, z, M - R, F, H.wnext), (R -= F) ? (o.arraySet(H.window, z, M - R, R, 0), H.wnext = R, H.whave = H.wsize) : (H.wnext += F, H.wnext === H.wsize && (H.wnext = 0), H.whave < H.wsize && (H.whave += F))), 0;
       }
       a.inflateReset = k, a.inflateReset2 = S, a.inflateResetKeep = A, a.inflateInit = function(I) {
         return C(I, 15);
       }, a.inflateInit2 = C, a.inflate = function(I, z) {
-        var M, R, F, H, N, $, _, V, Q, U, Z, re, fe, ae, pe, ce, te, oe, ie, ke, B, Y, K, D, W = 0, X = new o.Buf8(4), ne = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+        var M, R, F, H, N, $, _, V, Q, U, Z, re, fe, ae, pe, ce, te, oe, ie, ke, B, J, K, D, W = 0, X = new o.Buf8(4), ne = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
         if (!I || !I.state || !I.output || !I.input && I.avail_in !== 0) return g;
-        (M = I.state).mode === 12 && (M.mode = 13), N = I.next_out, F = I.output, _ = I.avail_out, H = I.next_in, R = I.input, $ = I.avail_in, V = M.hold, Q = M.bits, U = $, Z = _, Y = f;
+        (M = I.state).mode === 12 && (M.mode = 13), N = I.next_out, F = I.output, _ = I.avail_out, H = I.next_in, R = I.input, $ = I.avail_in, V = M.hold, Q = M.bits, U = $, Z = _, J = f;
         e: for (; ; ) switch (M.mode) {
           case m:
             if (M.wrap === 0) {
@@ -141044,7 +141044,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 M.mode = 14;
                 break;
               case 1:
-                if (L(M), M.mode = 20, z !== 6) break;
+                if (T(M), M.mode = 20, z !== 6) break;
                 V >>>= 2, Q -= 2;
                 break e;
               case 2:
@@ -141094,7 +141094,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               M.lens[ne[M.have++]] = 7 & V, V >>>= 3, Q -= 3;
             }
             for (; M.have < 19; ) M.lens[ne[M.have++]] = 0;
-            if (M.lencode = M.lendyn, M.lenbits = 7, K = { bits: M.lenbits }, Y = u(0, M.lens, 0, 19, M.lencode, 0, M.work, K), M.lenbits = K.bits, Y) {
+            if (M.lencode = M.lendyn, M.lenbits = 7, K = { bits: M.lenbits }, J = u(0, M.lens, 0, 19, M.lencode, 0, M.work, K), M.lenbits = K.bits, J) {
               I.msg = "invalid code lengths set", M.mode = 30;
               break;
             }
@@ -141142,11 +141142,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               I.msg = "invalid code -- missing end-of-block", M.mode = 30;
               break;
             }
-            if (M.lenbits = 9, K = { bits: M.lenbits }, Y = u(p, M.lens, 0, M.nlen, M.lencode, 0, M.work, K), M.lenbits = K.bits, Y) {
+            if (M.lenbits = 9, K = { bits: M.lenbits }, J = u(p, M.lens, 0, M.nlen, M.lencode, 0, M.work, K), M.lenbits = K.bits, J) {
               I.msg = "invalid literal/lengths set", M.mode = 30;
               break;
             }
-            if (M.distbits = 6, M.distcode = M.distdyn, K = { bits: M.distbits }, Y = u(h, M.lens, M.nlen, M.ndist, M.distcode, 0, M.work, K), M.distbits = K.bits, Y) {
+            if (M.distbits = 6, M.distcode = M.distdyn, K = { bits: M.distbits }, J = u(h, M.lens, M.nlen, M.ndist, M.distcode, 0, M.work, K), M.distbits = K.bits, J) {
               I.msg = "invalid distances set", M.mode = 30;
               break;
             }
@@ -141264,10 +141264,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             }
             M.mode = 29;
           case 29:
-            Y = 1;
+            J = 1;
             break e;
           case 30:
-            Y = -3;
+            J = -3;
             break e;
           case 31:
             return -4;
@@ -141275,7 +141275,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           default:
             return g;
         }
-        return I.next_out = N, I.avail_out = _, I.next_in = H, I.avail_in = $, M.hold = V, M.bits = Q, (M.wsize || Z !== I.avail_out && M.mode < 30 && (M.mode < 27 || z !== 4)) && T(I, I.output, I.next_out, Z - I.avail_out) ? (M.mode = 31, -4) : (U -= I.avail_in, Z -= I.avail_out, I.total_in += U, I.total_out += Z, M.total += Z, M.wrap && Z && (I.adler = M.check = M.flags ? c(M.check, F, Z, I.next_out - Z) : s(M.check, F, Z, I.next_out - Z)), I.data_type = M.bits + (M.last ? 64 : 0) + (M.mode === 12 ? 128 : 0) + (M.mode === 20 || M.mode === 15 ? 256 : 0), (U == 0 && Z === 0 || z === 4) && Y === f && (Y = -5), Y);
+        return I.next_out = N, I.avail_out = _, I.next_in = H, I.avail_in = $, M.hold = V, M.bits = Q, (M.wsize || Z !== I.avail_out && M.mode < 30 && (M.mode < 27 || z !== 4)) && L(I, I.output, I.next_out, Z - I.avail_out) ? (M.mode = 31, -4) : (U -= I.avail_in, Z -= I.avail_out, I.total_in += U, I.total_out += Z, M.total += Z, M.wrap && Z && (I.adler = M.check = M.flags ? c(M.check, F, Z, I.next_out - Z) : s(M.check, F, Z, I.next_out - Z)), I.data_type = M.bits + (M.last ? 64 : 0) + (M.mode === 12 ? 128 : 0) + (M.mode === 20 || M.mode === 15 ? 256 : 0), (U == 0 && Z === 0 || z === 4) && J === f && (J = -5), J);
       }, a.inflateEnd = function(I) {
         if (!I || !I.state) return g;
         var z = I.state;
@@ -141285,15 +141285,15 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return I && I.state && 2 & (M = I.state).wrap ? ((M.head = z).done = !1, f) : g;
       }, a.inflateSetDictionary = function(I, z) {
         var M, R = z.length;
-        return I && I.state ? (M = I.state).wrap !== 0 && M.mode !== 11 ? g : M.mode === 11 && s(1, z, R, 0) !== M.check ? -3 : T(I, z, R, R) ? (M.mode = 31, -4) : (M.havedict = 1, f) : g;
+        return I && I.state ? (M = I.state).wrap !== 0 && M.mode !== 11 ? g : M.mode === 11 && s(1, z, R, 0) !== M.check ? -3 : L(I, z, R, R) ? (M.mode = 31, -4) : (M.havedict = 1, f) : g;
       }, a.inflateInfo = "pako inflate (from Nodeca project)";
     }, { "../utils/common": 41, "./adler32": 43, "./crc32": 45, "./inffast": 48, "./inftrees": 50 }], 50: [function(r, i, a) {
       var o = r("../utils/common"), s = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 0, 0], c = [16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 19, 20, 20, 20, 20, 21, 21, 21, 21, 16, 72, 78], d = [1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577, 0, 0], u = [16, 16, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 64, 64];
       i.exports = function(p, h, f, g, m, y, v, b) {
-        var x, A, k, S, C, j, P, E, L, T = b.bits, I = 0, z = 0, M = 0, R = 0, F = 0, H = 0, N = 0, $ = 0, _ = 0, V = 0, Q = null, U = 0, Z = new o.Buf16(16), re = new o.Buf16(16), fe = null, ae = 0;
+        var x, A, k, S, C, j, P, E, T, L = b.bits, I = 0, z = 0, M = 0, R = 0, F = 0, H = 0, N = 0, $ = 0, _ = 0, V = 0, Q = null, U = 0, Z = new o.Buf16(16), re = new o.Buf16(16), fe = null, ae = 0;
         for (I = 0; I <= 15; I++) Z[I] = 0;
         for (z = 0; z < g; z++) Z[h[f + z]]++;
-        for (F = T, R = 15; 1 <= R && Z[R] === 0; R--) ;
+        for (F = L, R = 15; 1 <= R && Z[R] === 0; R--) ;
         if (R < F && (F = R), R === 0) return m[y++] = 20971520, m[y++] = 20971520, b.bits = 1, 0;
         for (M = 1; M < R && Z[M] === 0; M++) ;
         for (F < M && (F = M), I = $ = 1; I <= 15; I++) if ($ <<= 1, ($ -= Z[I]) < 0) return -1;
@@ -141302,7 +141302,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         for (z = 0; z < g; z++) h[f + z] !== 0 && (v[re[h[f + z]]++] = z);
         if (j = p === 0 ? (Q = fe = v, 19) : p === 1 ? (Q = s, U -= 257, fe = c, ae -= 257, 256) : (Q = d, fe = u, -1), I = M, C = y, N = z = V = 0, k = -1, S = (_ = 1 << (H = F)) - 1, p === 1 && 852 < _ || p === 2 && 592 < _) return 1;
         for (; ; ) {
-          for (P = I - N, L = v[z] < j ? (E = 0, v[z]) : v[z] > j ? (E = fe[ae + v[z]], Q[U + v[z]]) : (E = 96, 0), x = 1 << I - N, M = A = 1 << H; m[C + (V >> N) + (A -= x)] = P << 24 | E << 16 | L | 0, A !== 0; ) ;
+          for (P = I - N, T = v[z] < j ? (E = 0, v[z]) : v[z] > j ? (E = fe[ae + v[z]], Q[U + v[z]]) : (E = 96, 0), x = 1 << I - N, M = A = 1 << H; m[C + (V >> N) + (A -= x)] = P << 24 | E << 16 | T | 0, A !== 0; ) ;
           for (x = 1 << I - 1; V & x; ) x >>= 1;
           if (x !== 0 ? (V &= x - 1, V += x) : V = 0, z++, --Z[I] == 0) {
             if (I === R) break;
@@ -141323,8 +141323,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       function d(W) {
         for (var X = W.length; 0 <= --X; ) W[X] = 0;
       }
-      var u = 0, p = 29, h = 256, f = h + 1 + p, g = 30, m = 19, y = 2 * f + 1, v = 15, b = 16, x = 7, A = 256, k = 16, S = 17, C = 18, j = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0], P = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13], E = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7], L = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15], T = new Array(2 * (f + 2));
-      d(T);
+      var u = 0, p = 29, h = 256, f = h + 1 + p, g = 30, m = 19, y = 2 * f + 1, v = 15, b = 16, x = 7, A = 256, k = 16, S = 17, C = 18, j = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0], P = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13], E = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7], T = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15], L = new Array(2 * (f + 2));
+      d(L);
       var I = new Array(2 * g);
       d(I);
       var z = new Array(512);
@@ -141334,8 +141334,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       var R = new Array(p);
       d(R);
       var F, H, N, $ = new Array(g);
-      function _(W, X, ne, le, J) {
-        this.static_tree = W, this.extra_bits = X, this.extra_base = ne, this.elems = le, this.max_length = J, this.has_stree = W && W.length;
+      function _(W, X, ne, le, ee) {
+        this.static_tree = W, this.extra_bits = X, this.extra_base = ne, this.elems = le, this.max_length = ee, this.has_stree = W && W.length;
       }
       function V(W, X) {
         this.dyn_tree = W, this.max_code = 0, this.stat_desc = X;
@@ -141357,11 +141357,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return ne >>> 1;
       }
       function ae(W, X, ne) {
-        var le, J, ue = new Array(v + 1), ye = 0;
+        var le, ee, ue = new Array(v + 1), ye = 0;
         for (le = 1; le <= v; le++) ue[le] = ye = ye + ne[le - 1] << 1;
-        for (J = 0; J <= X; J++) {
-          var ge = W[2 * J + 1];
-          ge !== 0 && (W[2 * J] = fe(ue[ge]++, ge));
+        for (ee = 0; ee <= X; ee++) {
+          var ge = W[2 * ee + 1];
+          ge !== 0 && (W[2 * ee] = fe(ue[ge]++, ge));
         }
       }
       function pe(W) {
@@ -141375,72 +141375,72 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         8 < W.bi_valid ? U(W, W.bi_buf) : 0 < W.bi_valid && (W.pending_buf[W.pending++] = W.bi_buf), W.bi_buf = 0, W.bi_valid = 0;
       }
       function te(W, X, ne, le) {
-        var J = 2 * X, ue = 2 * ne;
-        return W[J] < W[ue] || W[J] === W[ue] && le[X] <= le[ne];
+        var ee = 2 * X, ue = 2 * ne;
+        return W[ee] < W[ue] || W[ee] === W[ue] && le[X] <= le[ne];
       }
       function oe(W, X, ne) {
-        for (var le = W.heap[ne], J = ne << 1; J <= W.heap_len && (J < W.heap_len && te(X, W.heap[J + 1], W.heap[J], W.depth) && J++, !te(X, le, W.heap[J], W.depth)); ) W.heap[ne] = W.heap[J], ne = J, J <<= 1;
+        for (var le = W.heap[ne], ee = ne << 1; ee <= W.heap_len && (ee < W.heap_len && te(X, W.heap[ee + 1], W.heap[ee], W.depth) && ee++, !te(X, le, W.heap[ee], W.depth)); ) W.heap[ne] = W.heap[ee], ne = ee, ee <<= 1;
         W.heap[ne] = le;
       }
       function ie(W, X, ne) {
-        var le, J, ue, ye, ge = 0;
-        if (W.last_lit !== 0) for (; le = W.pending_buf[W.d_buf + 2 * ge] << 8 | W.pending_buf[W.d_buf + 2 * ge + 1], J = W.pending_buf[W.l_buf + ge], ge++, le === 0 ? re(W, J, X) : (re(W, (ue = M[J]) + h + 1, X), (ye = j[ue]) !== 0 && Z(W, J -= R[ue], ye), re(W, ue = Q(--le), ne), (ye = P[ue]) !== 0 && Z(W, le -= $[ue], ye)), ge < W.last_lit; ) ;
+        var le, ee, ue, ye, ge = 0;
+        if (W.last_lit !== 0) for (; le = W.pending_buf[W.d_buf + 2 * ge] << 8 | W.pending_buf[W.d_buf + 2 * ge + 1], ee = W.pending_buf[W.l_buf + ge], ge++, le === 0 ? re(W, ee, X) : (re(W, (ue = M[ee]) + h + 1, X), (ye = j[ue]) !== 0 && Z(W, ee -= R[ue], ye), re(W, ue = Q(--le), ne), (ye = P[ue]) !== 0 && Z(W, le -= $[ue], ye)), ge < W.last_lit; ) ;
         re(W, A, X);
       }
       function ke(W, X) {
-        var ne, le, J, ue = X.dyn_tree, ye = X.stat_desc.static_tree, ge = X.stat_desc.has_stree, we = X.stat_desc.elems, he = -1;
+        var ne, le, ee, ue = X.dyn_tree, ye = X.stat_desc.static_tree, ge = X.stat_desc.has_stree, we = X.stat_desc.elems, he = -1;
         for (W.heap_len = 0, W.heap_max = y, ne = 0; ne < we; ne++) ue[2 * ne] !== 0 ? (W.heap[++W.heap_len] = he = ne, W.depth[ne] = 0) : ue[2 * ne + 1] = 0;
-        for (; W.heap_len < 2; ) ue[2 * (J = W.heap[++W.heap_len] = he < 2 ? ++he : 0)] = 1, W.depth[J] = 0, W.opt_len--, ge && (W.static_len -= ye[2 * J + 1]);
+        for (; W.heap_len < 2; ) ue[2 * (ee = W.heap[++W.heap_len] = he < 2 ? ++he : 0)] = 1, W.depth[ee] = 0, W.opt_len--, ge && (W.static_len -= ye[2 * ee + 1]);
         for (X.max_code = he, ne = W.heap_len >> 1; 1 <= ne; ne--) oe(W, ue, ne);
-        for (J = we; ne = W.heap[1], W.heap[1] = W.heap[W.heap_len--], oe(W, ue, 1), le = W.heap[1], W.heap[--W.heap_max] = ne, W.heap[--W.heap_max] = le, ue[2 * J] = ue[2 * ne] + ue[2 * le], W.depth[J] = (W.depth[ne] >= W.depth[le] ? W.depth[ne] : W.depth[le]) + 1, ue[2 * ne + 1] = ue[2 * le + 1] = J, W.heap[1] = J++, oe(W, ue, 1), 2 <= W.heap_len; ) ;
+        for (ee = we; ne = W.heap[1], W.heap[1] = W.heap[W.heap_len--], oe(W, ue, 1), le = W.heap[1], W.heap[--W.heap_max] = ne, W.heap[--W.heap_max] = le, ue[2 * ee] = ue[2 * ne] + ue[2 * le], W.depth[ee] = (W.depth[ne] >= W.depth[le] ? W.depth[ne] : W.depth[le]) + 1, ue[2 * ne + 1] = ue[2 * le + 1] = ee, W.heap[1] = ee++, oe(W, ue, 1), 2 <= W.heap_len; ) ;
         W.heap[--W.heap_max] = W.heap[1], function(me, Pe) {
-          var Re, Ie, De, qe, Ge, bn, de = Pe.dyn_tree, Ae = Pe.max_code, Be = Pe.stat_desc.static_tree, at = Pe.stat_desc.has_stree, et = Pe.stat_desc.extra_bits, Bt = Pe.stat_desc.extra_base, _e = Pe.stat_desc.max_length, dt = 0;
+          var De, Ie, He, qe, Ge, bn, de = Pe.dyn_tree, Ae = Pe.max_code, Be = Pe.stat_desc.static_tree, at = Pe.stat_desc.has_stree, et = Pe.stat_desc.extra_bits, Bt = Pe.stat_desc.extra_base, _e = Pe.stat_desc.max_length, dt = 0;
           for (qe = 0; qe <= v; qe++) me.bl_count[qe] = 0;
-          for (de[2 * me.heap[me.heap_max] + 1] = 0, Re = me.heap_max + 1; Re < y; Re++) _e < (qe = de[2 * de[2 * (Ie = me.heap[Re]) + 1] + 1] + 1) && (qe = _e, dt++), de[2 * Ie + 1] = qe, Ae < Ie || (me.bl_count[qe]++, Ge = 0, Bt <= Ie && (Ge = et[Ie - Bt]), bn = de[2 * Ie], me.opt_len += bn * (qe + Ge), at && (me.static_len += bn * (Be[2 * Ie + 1] + Ge)));
+          for (de[2 * me.heap[me.heap_max] + 1] = 0, De = me.heap_max + 1; De < y; De++) _e < (qe = de[2 * de[2 * (Ie = me.heap[De]) + 1] + 1] + 1) && (qe = _e, dt++), de[2 * Ie + 1] = qe, Ae < Ie || (me.bl_count[qe]++, Ge = 0, Bt <= Ie && (Ge = et[Ie - Bt]), bn = de[2 * Ie], me.opt_len += bn * (qe + Ge), at && (me.static_len += bn * (Be[2 * Ie + 1] + Ge)));
           if (dt !== 0) {
             do {
               for (qe = _e - 1; me.bl_count[qe] === 0; ) qe--;
               me.bl_count[qe]--, me.bl_count[qe + 1] += 2, me.bl_count[_e]--, dt -= 2;
             } while (0 < dt);
-            for (qe = _e; qe !== 0; qe--) for (Ie = me.bl_count[qe]; Ie !== 0; ) Ae < (De = me.heap[--Re]) || (de[2 * De + 1] !== qe && (me.opt_len += (qe - de[2 * De + 1]) * de[2 * De], de[2 * De + 1] = qe), Ie--);
+            for (qe = _e; qe !== 0; qe--) for (Ie = me.bl_count[qe]; Ie !== 0; ) Ae < (He = me.heap[--De]) || (de[2 * He + 1] !== qe && (me.opt_len += (qe - de[2 * He + 1]) * de[2 * He], de[2 * He + 1] = qe), Ie--);
           }
         }(W, X), ae(ue, he, W.bl_count);
       }
       function B(W, X, ne) {
-        var le, J, ue = -1, ye = X[1], ge = 0, we = 7, he = 4;
-        for (ye === 0 && (we = 138, he = 3), X[2 * (ne + 1) + 1] = 65535, le = 0; le <= ne; le++) J = ye, ye = X[2 * (le + 1) + 1], ++ge < we && J === ye || (ge < he ? W.bl_tree[2 * J] += ge : J !== 0 ? (J !== ue && W.bl_tree[2 * J]++, W.bl_tree[2 * k]++) : ge <= 10 ? W.bl_tree[2 * S]++ : W.bl_tree[2 * C]++, ue = J, he = (ge = 0) === ye ? (we = 138, 3) : J === ye ? (we = 6, 3) : (we = 7, 4));
+        var le, ee, ue = -1, ye = X[1], ge = 0, we = 7, he = 4;
+        for (ye === 0 && (we = 138, he = 3), X[2 * (ne + 1) + 1] = 65535, le = 0; le <= ne; le++) ee = ye, ye = X[2 * (le + 1) + 1], ++ge < we && ee === ye || (ge < he ? W.bl_tree[2 * ee] += ge : ee !== 0 ? (ee !== ue && W.bl_tree[2 * ee]++, W.bl_tree[2 * k]++) : ge <= 10 ? W.bl_tree[2 * S]++ : W.bl_tree[2 * C]++, ue = ee, he = (ge = 0) === ye ? (we = 138, 3) : ee === ye ? (we = 6, 3) : (we = 7, 4));
       }
-      function Y(W, X, ne) {
-        var le, J, ue = -1, ye = X[1], ge = 0, we = 7, he = 4;
-        for (ye === 0 && (we = 138, he = 3), le = 0; le <= ne; le++) if (J = ye, ye = X[2 * (le + 1) + 1], !(++ge < we && J === ye)) {
-          if (ge < he) for (; re(W, J, W.bl_tree), --ge != 0; ) ;
-          else J !== 0 ? (J !== ue && (re(W, J, W.bl_tree), ge--), re(W, k, W.bl_tree), Z(W, ge - 3, 2)) : ge <= 10 ? (re(W, S, W.bl_tree), Z(W, ge - 3, 3)) : (re(W, C, W.bl_tree), Z(W, ge - 11, 7));
-          ue = J, he = (ge = 0) === ye ? (we = 138, 3) : J === ye ? (we = 6, 3) : (we = 7, 4);
+      function J(W, X, ne) {
+        var le, ee, ue = -1, ye = X[1], ge = 0, we = 7, he = 4;
+        for (ye === 0 && (we = 138, he = 3), le = 0; le <= ne; le++) if (ee = ye, ye = X[2 * (le + 1) + 1], !(++ge < we && ee === ye)) {
+          if (ge < he) for (; re(W, ee, W.bl_tree), --ge != 0; ) ;
+          else ee !== 0 ? (ee !== ue && (re(W, ee, W.bl_tree), ge--), re(W, k, W.bl_tree), Z(W, ge - 3, 2)) : ge <= 10 ? (re(W, S, W.bl_tree), Z(W, ge - 3, 3)) : (re(W, C, W.bl_tree), Z(W, ge - 11, 7));
+          ue = ee, he = (ge = 0) === ye ? (we = 138, 3) : ee === ye ? (we = 6, 3) : (we = 7, 4);
         }
       }
       d($);
       var K = !1;
       function D(W, X, ne, le) {
-        Z(W, (u << 1) + (le ? 1 : 0), 3), function(J, ue, ye, ge) {
-          ce(J), U(J, ye), U(J, ~ye), o.arraySet(J.pending_buf, J.window, ue, ye, J.pending), J.pending += ye;
+        Z(W, (u << 1) + (le ? 1 : 0), 3), function(ee, ue, ye, ge) {
+          ce(ee), U(ee, ye), U(ee, ~ye), o.arraySet(ee.pending_buf, ee.window, ue, ye, ee.pending), ee.pending += ye;
         }(W, X, ne);
       }
       a._tr_init = function(W) {
         K || (function() {
-          var X, ne, le, J, ue, ye = new Array(v + 1);
-          for (J = le = 0; J < p - 1; J++) for (R[J] = le, X = 0; X < 1 << j[J]; X++) M[le++] = J;
-          for (M[le - 1] = J, J = ue = 0; J < 16; J++) for ($[J] = ue, X = 0; X < 1 << P[J]; X++) z[ue++] = J;
-          for (ue >>= 7; J < g; J++) for ($[J] = ue << 7, X = 0; X < 1 << P[J] - 7; X++) z[256 + ue++] = J;
+          var X, ne, le, ee, ue, ye = new Array(v + 1);
+          for (ee = le = 0; ee < p - 1; ee++) for (R[ee] = le, X = 0; X < 1 << j[ee]; X++) M[le++] = ee;
+          for (M[le - 1] = ee, ee = ue = 0; ee < 16; ee++) for ($[ee] = ue, X = 0; X < 1 << P[ee]; X++) z[ue++] = ee;
+          for (ue >>= 7; ee < g; ee++) for ($[ee] = ue << 7, X = 0; X < 1 << P[ee] - 7; X++) z[256 + ue++] = ee;
           for (ne = 0; ne <= v; ne++) ye[ne] = 0;
-          for (X = 0; X <= 143; ) T[2 * X + 1] = 8, X++, ye[8]++;
-          for (; X <= 255; ) T[2 * X + 1] = 9, X++, ye[9]++;
-          for (; X <= 279; ) T[2 * X + 1] = 7, X++, ye[7]++;
-          for (; X <= 287; ) T[2 * X + 1] = 8, X++, ye[8]++;
-          for (ae(T, f + 1, ye), X = 0; X < g; X++) I[2 * X + 1] = 5, I[2 * X] = fe(X, 5);
-          F = new _(T, j, h + 1, f, v), H = new _(I, P, 0, g, v), N = new _(new Array(0), E, 0, m, x);
+          for (X = 0; X <= 143; ) L[2 * X + 1] = 8, X++, ye[8]++;
+          for (; X <= 255; ) L[2 * X + 1] = 9, X++, ye[9]++;
+          for (; X <= 279; ) L[2 * X + 1] = 7, X++, ye[7]++;
+          for (; X <= 287; ) L[2 * X + 1] = 8, X++, ye[8]++;
+          for (ae(L, f + 1, ye), X = 0; X < g; X++) I[2 * X + 1] = 5, I[2 * X] = fe(X, 5);
+          F = new _(L, j, h + 1, f, v), H = new _(I, P, 0, g, v), N = new _(new Array(0), E, 0, m, x);
         }(), K = !0), W.l_desc = new V(W.dyn_ltree, F), W.d_desc = new V(W.dyn_dtree, H), W.bl_desc = new V(W.bl_tree, N), W.bi_buf = 0, W.bi_valid = 0, pe(W);
       }, a._tr_stored_block = D, a._tr_flush_block = function(W, X, ne, le) {
-        var J, ue, ye = 0;
+        var ee, ue, ye = 0;
         0 < W.level ? (W.strm.data_type === 2 && (W.strm.data_type = function(ge) {
           var we, he = 4093624447;
           for (we = 0; we <= 31; we++, he >>>= 1) if (1 & he && ge.dyn_ltree[2 * we] !== 0) return s;
@@ -141449,17 +141449,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           return s;
         }(W)), ke(W, W.l_desc), ke(W, W.d_desc), ye = function(ge) {
           var we;
-          for (B(ge, ge.dyn_ltree, ge.l_desc.max_code), B(ge, ge.dyn_dtree, ge.d_desc.max_code), ke(ge, ge.bl_desc), we = m - 1; 3 <= we && ge.bl_tree[2 * L[we] + 1] === 0; we--) ;
+          for (B(ge, ge.dyn_ltree, ge.l_desc.max_code), B(ge, ge.dyn_dtree, ge.d_desc.max_code), ke(ge, ge.bl_desc), we = m - 1; 3 <= we && ge.bl_tree[2 * T[we] + 1] === 0; we--) ;
           return ge.opt_len += 3 * (we + 1) + 5 + 5 + 4, we;
-        }(W), J = W.opt_len + 3 + 7 >>> 3, (ue = W.static_len + 3 + 7 >>> 3) <= J && (J = ue)) : J = ue = ne + 5, ne + 4 <= J && X !== -1 ? D(W, X, ne, le) : W.strategy === 4 || ue === J ? (Z(W, 2 + (le ? 1 : 0), 3), ie(W, T, I)) : (Z(W, 4 + (le ? 1 : 0), 3), function(ge, we, he, me) {
+        }(W), ee = W.opt_len + 3 + 7 >>> 3, (ue = W.static_len + 3 + 7 >>> 3) <= ee && (ee = ue)) : ee = ue = ne + 5, ne + 4 <= ee && X !== -1 ? D(W, X, ne, le) : W.strategy === 4 || ue === ee ? (Z(W, 2 + (le ? 1 : 0), 3), ie(W, L, I)) : (Z(W, 4 + (le ? 1 : 0), 3), function(ge, we, he, me) {
           var Pe;
-          for (Z(ge, we - 257, 5), Z(ge, he - 1, 5), Z(ge, me - 4, 4), Pe = 0; Pe < me; Pe++) Z(ge, ge.bl_tree[2 * L[Pe] + 1], 3);
-          Y(ge, ge.dyn_ltree, we - 1), Y(ge, ge.dyn_dtree, he - 1);
+          for (Z(ge, we - 257, 5), Z(ge, he - 1, 5), Z(ge, me - 4, 4), Pe = 0; Pe < me; Pe++) Z(ge, ge.bl_tree[2 * T[Pe] + 1], 3);
+          J(ge, ge.dyn_ltree, we - 1), J(ge, ge.dyn_dtree, he - 1);
         }(W, W.l_desc.max_code + 1, W.d_desc.max_code + 1, ye + 1), ie(W, W.dyn_ltree, W.dyn_dtree)), pe(W), le && ce(W);
       }, a._tr_tally = function(W, X, ne) {
         return W.pending_buf[W.d_buf + 2 * W.last_lit] = X >>> 8 & 255, W.pending_buf[W.d_buf + 2 * W.last_lit + 1] = 255 & X, W.pending_buf[W.l_buf + W.last_lit] = 255 & ne, W.last_lit++, X === 0 ? W.dyn_ltree[2 * ne]++ : (W.matches++, X--, W.dyn_ltree[2 * (M[ne] + h + 1)]++, W.dyn_dtree[2 * Q(X)]++), W.last_lit === W.lit_bufsize - 1;
       }, a._tr_align = function(W) {
-        Z(W, 2, 3), re(W, A, T), function(X) {
+        Z(W, 2, 3), re(W, A, L), function(X) {
           X.bi_valid === 16 ? (U(X, X.bi_buf), X.bi_buf = 0, X.bi_valid = 0) : 8 <= X.bi_valid && (X.pending_buf[X.pending++] = 255 & X.bi_buf, X.bi_buf >>= 8, X.bi_valid -= 8);
         }(W);
       };
@@ -141547,7 +141547,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
   });
 })(vit);
 var Cun = vit.exports;
-const jie = /* @__PURE__ */ wt(Cun), M2 = (n) => He.t(n, { ns: "common" }), jun = [
+const jie = /* @__PURE__ */ wt(Cun), M2 = (n) => Re.t(n, { ns: "common" }), jun = [
   "oikos-community-hacs-v1",
   "oikos-installed-htmlcards",
   "oikos-installed-smartcards"
@@ -141836,7 +141836,7 @@ const vJ = {
 }, Lun = [">", "<", ">=", "<=", "=", "!="];
 function zun({ trigger: n, onChange: e, dark: r }) {
   var g, m;
-  const { t: i } = ee("common"), a = n.type || "schedule", { haStates: o } = Oe(), [s, c] = O.useState(!1), d = n.entityId ? ((m = (g = o == null ? void 0 : o[n.entityId]) == null ? void 0 : g.attributes) == null ? void 0 : m.friendly_name) || n.entityId : null, u = (y) => e({ type: y, hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6], entityId: "", operator: ">", value: "0" }), p = (y, v) => e({ ...n, [y]: v }), h = (y) => {
+  const { t: i } = Y("common"), a = n.type || "schedule", { haStates: o } = Oe(), [s, c] = O.useState(!1), d = n.entityId ? ((m = (g = o == null ? void 0 : o[n.entityId]) == null ? void 0 : g.attributes) == null ? void 0 : m.friendly_name) || n.entityId : null, u = (y) => e({ type: y, hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6], entityId: "", operator: ">", value: "0" }), p = (y, v) => e({ ...n, [y]: v }), h = (y) => {
     const v = n.days || [0, 1, 2, 3, 4, 5, 6];
     p("days", v.includes(y) ? v.filter((b) => b !== y) : [...v, y].sort());
   }, f = {
@@ -141997,7 +141997,7 @@ function zun({ trigger: n, onChange: e, dark: r }) {
 const Bun = (n) => window.dispatchEvent(new CustomEvent("oikos-popup-preview", { detail: { id: n.id, cardId: n.cardId } }));
 function Run({ popup: n, dark: e, onToggle: r, onRemove: i, onUpdate: a }) {
   var y;
-  const { t: o } = ee("cards"), { t: s } = ee("common"), [c, d] = O.useState(!1), [u, p] = O.useState(!1), h = Wo(n.cardId), g = (vJ[(y = n.trigger) == null ? void 0 : y.type] || vJ.manual).icon, m = () => {
+  const { t: o } = Y("cards"), { t: s } = Y("common"), [c, d] = O.useState(!1), [u, p] = O.useState(!1), h = Wo(n.cardId), g = (vJ[(y = n.trigger) == null ? void 0 : y.type] || vJ.manual).icon, m = () => {
     var b;
     const v = n.trigger || {};
     if (v.type === "schedule") {
@@ -142156,7 +142156,7 @@ function Run({ popup: n, dark: e, onToggle: r, onRemove: i, onUpdate: a }) {
   ] });
 }
 function Dun({ dark: n }) {
-  const { t: e } = ee("cards"), [r, i] = O.useState(t0);
+  const { t: e } = Y("cards"), [r, i] = O.useState(t0);
   O.useEffect(() => {
     const v = () => i(t0());
     return window.addEventListener("oikos-popups-updated", v), () => window.removeEventListener("oikos-popups-updated", v);
@@ -142291,7 +142291,7 @@ function Dun({ dark: n }) {
     ] })
   ] });
 }
-const Yw = (n) => He.t(n, { ns: "common" }), Ait = [
+const Yw = (n) => Re.t(n, { ns: "common" }), Ait = [
   {
     key: "surfaces",
     tokens: [
@@ -142609,66 +142609,66 @@ function Zun({ theme: n }) {
   return /* @__PURE__ */ l.jsx("div", { style: { display: "flex", gap: 0, borderRadius: 8, overflow: "hidden", width: 54, height: 28, flexShrink: 0, border: "1px solid var(--border-medium)" }, children: i.map((a, o) => /* @__PURE__ */ l.jsx("div", { style: { flex: 1, background: a } }, o)) });
 }
 function Kun({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(kJ), [a, o] = O.useState(pW), [s, c] = O.useState(null), [d, u] = O.useState(!1), [p, h] = O.useState(""), [f, g] = O.useState(null), m = O.useRef(null), y = n ? "dark" : "light";
+  const { t: e } = Y("settings"), [r, i] = O.useState(kJ), [a, o] = O.useState(pW), [s, c] = O.useState(null), [d, u] = O.useState(!1), [p, h] = O.useState(""), [f, g] = O.useState(null), m = O.useRef(null), y = n ? "dark" : "light";
   O.useEffect(() => {
-    const T = () => {
+    const L = () => {
       i(kJ()), o(pW());
     };
-    return window.addEventListener("oikos-theme-updated", T), window.addEventListener("oikos-remote-config-refreshed", T), () => {
-      window.removeEventListener("oikos-theme-updated", T), window.removeEventListener("oikos-remote-config-refreshed", T);
+    return window.addEventListener("oikos-theme-updated", L), window.addEventListener("oikos-remote-config-refreshed", L), () => {
+      window.removeEventListener("oikos-theme-updated", L), window.removeEventListener("oikos-remote-config-refreshed", L);
     };
   }, []);
-  const v = (T, I) => {
-    g({ type: T, text: I }), setTimeout(() => g(null), 2600);
-  }, b = (T) => {
-    Cit(T), o(T);
+  const v = (L, I) => {
+    g({ type: L, text: I }), setTimeout(() => g(null), 2600);
+  }, b = (L) => {
+    Cit(L), o(L);
   }, x = () => {
     c({ name: e("theme.themes.newName"), light: {}, dark: {} });
-  }, A = (T) => {
-    c({ id: T.id, name: T.name, light: { ...T.light || {} }, dark: { ...T.dark || {} } });
-  }, k = (T) => {
-    c({ name: `${T.name} (copia)`, light: { ...T.light || {} }, dark: { ...T.dark || {} } });
+  }, A = (L) => {
+    c({ id: L.id, name: L.name, light: { ...L.light || {} }, dark: { ...L.dark || {} } });
+  }, k = (L) => {
+    c({ name: `${L.name} (copia)`, light: { ...L.light || {} }, dark: { ...L.dark || {} } });
   };
   O.useEffect(() => (s ? bJ(s) : ng(), () => {
     s && ng();
   }), [s]);
-  const S = (T, I) => {
+  const S = (L, I) => {
     c((z) => {
       if (!z) return z;
       const M = { ...z, [y]: { ...z[y] } };
-      return I && I.trim() ? M[y][T] = I.trim() : delete M[y][T], bJ(M), M;
+      return I && I.trim() ? M[y][L] = I.trim() : delete M[y][L], bJ(M), M;
     });
   }, C = () => {
     if (!s) return;
-    const T = A1e(s);
-    b(T), c(null), v("ok", e("theme.themes.saved"));
+    const L = A1e(s);
+    b(L), c(null), v("ok", e("theme.themes.saved"));
   }, j = () => {
     c(null), ng();
-  }, P = (T) => {
-    const I = Uun(T);
+  }, P = (L) => {
+    const I = Uun(L);
     if (!I.ok) {
       v("err", I.errors[0] || e("theme.themes.invalid"));
       return;
     }
     const z = A1e(I.theme);
     b(z), v("ok", I.errors.length ? I.errors.join(" · ") : e("theme.themes.imported"));
-  }, E = (T) => {
+  }, E = (L) => {
     var M;
-    const I = (M = T.target.files) == null ? void 0 : M[0];
+    const I = (M = L.target.files) == null ? void 0 : M[0];
     if (!I) return;
     const z = new FileReader();
-    z.onload = () => P(String(z.result || "")), z.readAsText(I), T.target.value = "";
-  }, L = (T) => {
-    const I = new Blob([Xun(T)], { type: "application/json" }), z = URL.createObjectURL(I), M = document.createElement("a");
-    M.href = z, M.download = `oikos-theme-${(T.name || "tema").toLowerCase().replace(/\s+/g, "-")}.json`, M.click(), URL.revokeObjectURL(z);
+    z.onload = () => P(String(z.result || "")), z.readAsText(I), L.target.value = "";
+  }, T = (L) => {
+    const I = new Blob([Xun(L)], { type: "application/json" }), z = URL.createObjectURL(I), M = document.createElement("a");
+    M.href = z, M.download = `oikos-theme-${(L.name || "tema").toLowerCase().replace(/\s+/g, "-")}.json`, M.click(), URL.revokeObjectURL(z);
   };
-  return r.filter((T) => !T.builtIn).length, /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 10 }, children: [
-    /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }, children: r.map((T) => {
-      const I = a === T.id;
+  return r.filter((L) => !L.builtIn).length, /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 10 }, children: [
+    /* @__PURE__ */ l.jsx("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }, children: r.map((L) => {
+      const I = a === L.id;
       return /* @__PURE__ */ l.jsxs(
         "div",
         {
-          onClick: () => b(T.id),
+          onClick: () => b(L.id),
           style: {
             display: "flex",
             alignItems: "center",
@@ -142681,33 +142681,33 @@ function Kun({ dark: n }) {
             transition: "border-color .15s, background .15s"
           },
           children: [
-            /* @__PURE__ */ l.jsx(Zun, { theme: T }),
+            /* @__PURE__ */ l.jsx(Zun, { theme: L }),
             /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, minWidth: 0 }, children: [
-              /* @__PURE__ */ l.jsx("div", { style: { fontSize: 12, fontWeight: 700, color: "var(--text-primary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }, children: T.nameKey ? e(T.nameKey, { ns: "common" }) : T.name }),
-              T.builtIn && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: "var(--text-muted)" }, children: e("theme.themes.preset") })
+              /* @__PURE__ */ l.jsx("div", { style: { fontSize: 12, fontWeight: 700, color: "var(--text-primary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }, children: L.nameKey ? e(L.nameKey, { ns: "common" }) : L.name }),
+              L.builtIn && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: "var(--text-muted)" }, children: e("theme.themes.preset") })
             ] }),
             I && /* @__PURE__ */ l.jsx(Un, { size: 15, color: "var(--amber)", style: { flexShrink: 0 } })
           ]
         },
-        T.id
+        L.id
       );
     }) }),
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: [
       /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(it, { size: 13 }), label: e("theme.themes.new"), onClick: x }),
       /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(Ci, { size: 13 }), label: e("theme.themes.loadFile"), onClick: () => {
-        var T;
-        return (T = m.current) == null ? void 0 : T.click();
+        var L;
+        return (L = m.current) == null ? void 0 : L.click();
       } }),
       /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(vv, { size: 13 }), label: e("theme.themes.paste"), onClick: () => {
-        u((T) => !T), h("");
+        u((L) => !L), h("");
       } }),
       (() => {
-        const T = Oit(a);
-        return T ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-          /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(vl, { size: 13 }), label: e("theme.themes.duplicate"), onClick: () => k(T) }),
-          /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(Hr, { size: 13 }), label: e("theme.themes.export"), onClick: () => L(T) }),
-          !T.builtIn && /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(o1, { size: 13 }), label: e("theme.themes.edit"), onClick: () => A(T) }),
-          !T.builtIn && /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(ct, { size: 13 }), label: e("theme.themes.delete"), danger: !0, onClick: () => qun(T.id) })
+        const L = Oit(a);
+        return L ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+          /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(vl, { size: 13 }), label: e("theme.themes.duplicate"), onClick: () => k(L) }),
+          /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(Hr, { size: 13 }), label: e("theme.themes.export"), onClick: () => T(L) }),
+          !L.builtIn && /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(o1, { size: 13 }), label: e("theme.themes.edit"), onClick: () => A(L) }),
+          !L.builtIn && /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(ct, { size: 13 }), label: e("theme.themes.delete"), danger: !0, onClick: () => qun(L.id) })
         ] }) : null;
       })(),
       a !== "default" && /* @__PURE__ */ l.jsx(Fa, { icon: /* @__PURE__ */ l.jsx(zo, { size: 13 }), label: e("theme.themes.reset"), onClick: () => b("default") }),
@@ -142722,7 +142722,7 @@ function Kun({ dark: n }) {
         "textarea",
         {
           value: p,
-          onChange: (T) => h(T.target.value),
+          onChange: (L) => h(L.target.value),
           placeholder: '{ "oikosTheme": 1, "name": "...", "light": {...}, "dark": {...} }',
           rows: 5,
           style: {
@@ -142751,7 +142751,7 @@ function Kun({ dark: n }) {
         draft: s,
         mode: y,
         t: e,
-        onName: (T) => c((I) => ({ ...I, name: T })),
+        onName: (L) => c((I) => ({ ...I, name: L })),
         onToken: S,
         onSave: C,
         onCancel: j
@@ -142833,7 +142833,7 @@ function Jun({ token: n, value: e, onChange: r, t: i }) {
   ] });
 }
 function epn({ dash: n, isActive: e, canDelete: r, onSetActive: i, onRename: a, onIcon: o, onDuplicate: s, onDelete: c, dark: d }) {
-  const { t: u } = ee("layout");
+  const { t: u } = Y("layout");
   return /* @__PURE__ */ l.jsxs("div", { style: {
     display: "flex",
     alignItems: "center",
@@ -142963,7 +142963,7 @@ function epn({ dash: n, isActive: e, canDelete: r, onSetActive: i, onRename: a, 
   ] });
 }
 function tpn({ dark: n }) {
-  const { t: e } = ee("layout"), [r, i] = O.useState(nr), [a, o] = O.useState(Ma), [s, c] = O.useState(!1), [d, u] = O.useState(""), [p, h] = O.useState("LayoutDashboard"), [f, g] = O.useState(""), [m, y] = O.useState("");
+  const { t: e } = Y("layout"), [r, i] = O.useState(nr), [a, o] = O.useState(Ma), [s, c] = O.useState(!1), [d, u] = O.useState(""), [p, h] = O.useState("LayoutDashboard"), [f, g] = O.useState(""), [m, y] = O.useState("");
   O.useEffect(() => {
     const j = () => {
       i(nr()), o(Ma());
@@ -142981,11 +142981,11 @@ function tpn({ dark: n }) {
   }, A = (j) => {
     jV(j), o(j), setTimeout(() => window.location.reload(), 120);
   }, k = (j) => {
-    const P = r.find((L) => L.id === j), E = e("dashboard.copyLabel", { label: (P == null ? void 0 : P.label) ?? e("dashboard.new") });
+    const P = r.find((T) => T.id === j), E = e("dashboard.copyLabel", { label: (P == null ? void 0 : P.label) ?? e("dashboard.new") });
     Tme({ label: E, icon: (P == null ? void 0 : P.icon) ?? "LayoutDashboard", copyFromId: j }), i(nr()), v(e("dashboard.duplicated"));
   }, S = (j) => {
     if (r.length <= 1) return;
-    const P = r.find((L) => L.id === j);
+    const P = r.find((T) => T.id === j);
     if (!window.confirm(e("dashboard.confirmDelete", { name: (P == null ? void 0 : P.label) ?? "" }))) return;
     const E = j === a;
     _sn(j), i(nr()), o(Ma()), E ? setTimeout(() => window.location.reload(), 120) : v(e("dashboard.deleted"));
@@ -143196,7 +143196,7 @@ function jit() {
 }
 function npn({ plant: n, index: e, dark: r, onChange: i, onRemove: a }) {
   var h;
-  const { t: o } = ee("settings"), [s, c] = O.useState(e === 0), d = (f, g) => i({ ...n, [f]: g }), u = {
+  const { t: o } = Y("settings"), [s, c] = O.useState(e === 0), d = (f, g) => i({ ...n, [f]: g }), u = {
     width: "100%",
     boxSizing: "border-box",
     padding: "7px 10px",
@@ -143273,7 +143273,7 @@ function npn({ plant: n, index: e, dark: r, onChange: i, onRemove: a }) {
 }
 const FU = { display: "block", fontSize: 11, fontWeight: 700, color: "var(--text-muted)", marginBottom: 4 }, NU = { fontSize: 10, fontWeight: 800, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--text-muted)", marginTop: 4 };
 function rpn({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(() => Kb()), a = (d) => {
+  const { t: e } = Y("settings"), [r, i] = O.useState(() => Kb()), a = (d) => {
     i(d), _Ve(d);
   }, o = () => a([...r, VVe()]), s = (d, u) => a(r.map((p, h) => h === d ? u : p)), c = (d) => a(r.filter((u, p) => p !== d));
   return /* @__PURE__ */ l.jsxs(Tr, { title: e("plants.title"), icon: /* @__PURE__ */ l.jsx(Mn, { size: 14 }), dark: n, children: [
@@ -143450,7 +143450,7 @@ function S1e({ label: n, value: e, onChange: r, type: i = "text", hint: a, monos
   ] });
 }
 function Pit({ onClick: n, saved: e, label: r }) {
-  const { t: i } = ee("settings");
+  const { t: i } = Y("settings");
   return /* @__PURE__ */ l.jsxs(
     se.button,
     {
@@ -143479,7 +143479,7 @@ function Pit({ onClick: n, saved: e, label: r }) {
   );
 }
 function lpn({ dark: n }) {
-  const { t: e } = ee("settings"), r = O1(), [i, a] = O.useState(r.enabled), [o, s] = O.useState(r.dayStart), [c, d] = O.useState(r.nightStart), [u, p] = O.useState(!1), h = () => {
+  const { t: e } = Y("settings"), r = O1(), [i, a] = O.useState(r.enabled), [o, s] = O.useState(r.dayStart), [c, d] = O.useState(r.nightStart), [u, p] = O.useState(!1), h = () => {
     qVe({ enabled: i, dayStart: o, nightStart: c }), p(!0), setTimeout(() => p(!1), 1500);
   }, f = {
     background: "var(--bg-secondary, var(--bg-primary))",
@@ -143585,7 +143585,7 @@ function lpn({ dark: n }) {
   ] });
 }
 function cpn({ dark: n }) {
-  const { t: e } = ee("settings"), r = DA(), [i, a] = O.useState(r.host), [o, s] = O.useState(r.wsUrl), [c, d] = O.useState(r.token), [u, p] = O.useState(!1), [h, f] = O.useState(!1), g = () => {
+  const { t: e } = Y("settings"), r = DA(), [i, a] = O.useState(r.host), [o, s] = O.useState(r.wsUrl), [c, d] = O.useState(r.token), [u, p] = O.useState(!1), [h, f] = O.useState(!1), g = () => {
     $Ve({ host: i, wsUrl: o, token: c }), f(!0), setTimeout(() => {
       f(!1), window.location.reload();
     }, 1200);
@@ -143685,7 +143685,7 @@ function cpn({ dark: n }) {
 }
 const dpn = ["mdi:home", "mdi:home-variant", "mdi:view-dashboard", "mdi:home-assistant", "mdi:home-automation", "mdi:monitor-dashboard"];
 function upn({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(null), [a, o] = O.useState(!1), [s, c] = O.useState("mdi:view-dashboard"), [d, u] = O.useState("mdi:view-dashboard"), [p, h] = O.useState(!1), [f, g] = O.useState(!1), [m, y] = O.useState(!1), [v, b] = O.useState(null), x = () => {
+  const { t: e } = Y("settings"), [r, i] = O.useState(null), [a, o] = O.useState(!1), [s, c] = O.useState("mdi:view-dashboard"), [d, u] = O.useState("mdi:view-dashboard"), [p, h] = O.useState(!1), [f, g] = O.useState(!1), [m, y] = O.useState(!1), [v, b] = O.useState(null), x = () => {
     var C;
     return typeof window < "u" ? (C = window.__OIKOS_HASS__) == null ? void 0 : C.connection : null;
   }, A = () => {
@@ -143827,7 +143827,7 @@ function upn({ dark: n }) {
   ] }) });
 }
 function ppn({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(() => _o("fv"));
+  const { t: e } = Y("settings"), [r, i] = O.useState(() => _o("fv"));
   O.useEffect(() => {
     const d = () => i(_o("fv"));
     return window.addEventListener("oikos-setup-profile-updated", d), () => window.removeEventListener("oikos-setup-profile-updated", d);
@@ -143872,7 +143872,7 @@ function ppn({ dark: n }) {
   ] }) });
 }
 function hpn({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(!1), [a, o] = O.useState(null), [s, c] = O.useState(null), d = {
+  const { t: e } = Y("settings"), [r, i] = O.useState(!1), [a, o] = O.useState(null), [s, c] = O.useState(null), d = {
     display: "inline-flex",
     alignItems: "center",
     gap: 6,
@@ -143920,7 +143920,7 @@ function hpn({ dark: n }) {
   ] });
 }
 function fpn() {
-  const { t: n } = ee("settings"), [e, r] = O.useState(""), [i, a] = O.useState(""), [o, s] = O.useState(!1), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(null), g = {
+  const { t: n } = Y("settings"), [e, r] = O.useState(""), [i, a] = O.useState(""), [o, s] = O.useState(!1), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(null), g = {
     width: "100%",
     boxSizing: "border-box",
     padding: "8px 11px",
@@ -144009,7 +144009,7 @@ function fpn() {
   ] });
 }
 function gpn({ dark: n }) {
-  const { t: e } = ee("settings"), [r, i] = O.useState(null), [a, o] = O.useState(null), [s, c] = O.useState(null), [d, u] = O.useState(""), [p, h] = O.useState(!1), [f, g] = O.useState(null), m = async () => {
+  const { t: e } = Y("settings"), [r, i] = O.useState(null), [a, o] = O.useState(null), [s, c] = O.useState(null), [d, u] = O.useState(""), [p, h] = O.useState(!1), [f, g] = O.useState(null), m = async () => {
     try {
       i(await wun());
     } catch {
@@ -144079,7 +144079,7 @@ function gpn({ dark: n }) {
 }
 function mpn({ dark: n }) {
   var v;
-  const { t: e } = ee("settings"), r = O.useRef(null), [i, a] = O.useState(null), [o, s] = O.useState(null), [c, d] = O.useState(""), [u, p] = O.useState(null), h = async () => {
+  const { t: e } = Y("settings"), r = O.useRef(null), [i, a] = O.useState(null), [o, s] = O.useState(null), [c, d] = O.useState(""), [u, p] = O.useState(null), h = async () => {
     try {
       await yJ(), a("ok"), setTimeout(() => a(null), 3e3);
     } catch {
@@ -144271,7 +144271,7 @@ function vpn({ on: n, onChange: e }) {
 }
 function bpn({ dark: n }) {
   var u;
-  const { t: e } = ee("settings"), [r, i] = O.useState("idle"), [a, o] = O.useState(null), [s, c] = O.useState(""), d = async () => {
+  const { t: e } = Y("settings"), [r, i] = O.useState("idle"), [a, o] = O.useState(null), [s, c] = O.useState(""), d = async () => {
     i("working");
     try {
       const p = await Le(Te("/api/uninstall/cleanup"), {
@@ -144347,7 +144347,7 @@ function bpn({ dark: n }) {
 }
 function xpn({ dark: n }) {
   var a;
-  const { t: e, i18n: r } = ee("settings"), i = ((a = r.language) == null ? void 0 : a.split("-")[0]) || "it";
+  const { t: e, i18n: r } = Y("settings"), i = ((a = r.language) == null ? void 0 : a.split("-")[0]) || "it";
   return /* @__PURE__ */ l.jsxs(Tr, { title: e("language.title"), icon: /* @__PURE__ */ l.jsx(Cv, { size: 14 }), dark: n, children: [
     /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexWrap: "wrap", gap: 8 }, children: ypn.map(({ code: o, label: s, flag: c }) => {
       const d = i === o;
@@ -144383,7 +144383,7 @@ function xpn({ dark: n }) {
   ] });
 }
 function Apn({ dark: n, onToggleTheme: e, weatherBgEnabled: r, onWeatherBgChange: i, weatherCond: a }) {
-  const { t: o } = ee("settings"), [s, c] = O.useState(null), [d, u] = O.useState(uG), [p, h] = O.useState(hG), [f, g] = O.useState(Yb), [m, y] = O.useState(!1), v = (() => {
+  const { t: o } = Y("settings"), [s, c] = O.useState(null), [d, u] = O.useState(uG), [p, h] = O.useState(hG), [f, g] = O.useState(Yb), [m, y] = O.useState(!1), v = (() => {
     try {
       return Mie();
     } catch {
@@ -144660,7 +144660,7 @@ function Apn({ dark: n, onToggleTheme: e, weatherBgEnabled: r, onWeatherBgChange
             );
           }) }),
           v && (() => {
-            const { score: k, details: { cores: S, mem: C, isMobile: j, gpuLabel: P } } = v, E = k >= 52 ? "var(--green)" : k >= 28 ? "var(--amber)" : "var(--red)", L = { discrete: "GPU discreta", integrated: "GPU integrata", basic: "GPU base", unknown: "GPU n.d." };
+            const { score: k, details: { cores: S, mem: C, isMobile: j, gpuLabel: P } } = v, E = k >= 52 ? "var(--green)" : k >= 28 ? "var(--amber)" : "var(--red)", T = { discrete: "GPU discreta", integrated: "GPU integrata", basic: "GPU base", unknown: "GPU n.d." };
             return /* @__PURE__ */ l.jsxs("div", { style: {
               display: "flex",
               alignItems: "center",
@@ -144681,7 +144681,7 @@ function Apn({ dark: n, onToggleTheme: e, weatherBgEnabled: r, onWeatherBgChange
                   " core"
                 ] }),
                 /* @__PURE__ */ l.jsx("span", { style: { fontSize: 10, color: "var(--text-muted)" }, children: C != null ? `${C} GB RAM` : o("display.qualityRamUnknown") }),
-                P && P !== "unknown" && /* @__PURE__ */ l.jsx("span", { style: { fontSize: 10, color: "var(--text-muted)" }, children: L[P] ?? P })
+                P && P !== "unknown" && /* @__PURE__ */ l.jsx("span", { style: { fontSize: 10, color: "var(--text-muted)" }, children: T[P] ?? P })
               ] }),
               /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 11, fontWeight: 800, color: E, flexShrink: 0 }, children: [
                 k,
@@ -145576,7 +145576,7 @@ function Upn({ text: n, dark: e }) {
   ] }, i) : r.startsWith("```") ? null : r.trim() === "" ? /* @__PURE__ */ l.jsx("div", { style: { height: 6 } }, i) : /* @__PURE__ */ l.jsx("p", { style: { color: "var(--text-secondary)", margin: "2px 0" }, children: r }, i)) }) : null;
 }
 function Xpn({ card: n, source: e, dark: r, onClose: i }) {
-  const { t: a } = ee("store"), [o, s] = O.useState(null), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(null), [g, m] = O.useState(() => Eo().find((A) => A.id === n.id) ?? null), y = g && n.version && g.version !== n.version;
+  const { t: a } = Y("store"), [o, s] = O.useState(null), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(null), [g, m] = O.useState(() => Eo().find((A) => A.id === n.id) ?? null), y = g && n.version && g.version !== n.version;
   O.useEffect(() => {
     !n || !e || (s(null), n.readme && (p(!0), Hpn(e, n.readme).then((A) => s(A)).catch(() => s(null)).finally(() => p(!1))));
   }, [n == null ? void 0 : n.id, e == null ? void 0 : e.owner, e == null ? void 0 : e.repo, e == null ? void 0 : e.branch]), O.useEffect(() => {
@@ -145766,7 +145766,7 @@ const CJ = "oikos-smartcard-sources", I1e = () => {
 };
 function Gpn({ source: n, dark: e, onRemove: r, onRefresh: i }) {
   var v, b, x;
-  const { t: a } = ee("store"), [o, s] = O.useState(!1), [c, d] = O.useState(null), [u, p] = O.useState(() => {
+  const { t: a } = Y("store"), [o, s] = O.useState(!1), [c, d] = O.useState(null), [u, p] = O.useState(() => {
     const A = Eo(), k = {};
     return A.forEach((S) => {
       k[S.id] = S;
@@ -145892,7 +145892,7 @@ function Gpn({ source: n, dark: e, onRemove: r, onRefresh: i }) {
   ] });
 }
 function Zpn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState(I1e), [a, o] = O.useState(""), [s, c] = O.useState(null), [d, u] = O.useState(null), [p, h] = O.useState("github"), [f, g] = O.useState(""), [m, y] = O.useState(null), v = O.useRef(null);
+  const { t: e } = Y("store"), [r, i] = O.useState(I1e), [a, o] = O.useState(""), [s, c] = O.useState(null), [d, u] = O.useState(null), [p, h] = O.useState("github"), [f, g] = O.useState(""), [m, y] = O.useState(null), v = O.useRef(null);
   O.useEffect(() => {
     const j = I1e();
     j.length !== 0 && j.forEach((P) => b(P.url));
@@ -145903,28 +145903,28 @@ function Zpn({ dark: n }) {
       P = P1e(j);
     } catch {
     }
-    i((E) => E.map((L) => L.url === j ? { ...L, status: "loading", error: null } : L));
+    i((E) => E.map((T) => T.url === j ? { ...T, status: "loading", error: null } : T));
     try {
       const E = await Rpn(P);
-      P && E._branch && E._branch !== P.branch && (P = { ...P, branch: E._branch }), i((L) => {
-        const T = L.map((I) => I.url === j ? { ...I, status: "ok", repoData: E, parsed: P, error: null } : I);
-        return Jw(T), T;
+      P && E._branch && E._branch !== P.branch && (P = { ...P, branch: E._branch }), i((T) => {
+        const L = T.map((I) => I.url === j ? { ...I, status: "ok", repoData: E, parsed: P, error: null } : I);
+        return Jw(L), L;
       });
     } catch (E) {
-      i((L) => {
-        const T = L.map((I) => I.url === j ? { ...I, status: "error", error: E.message, repoData: null } : I);
-        return Jw(T), T;
+      i((T) => {
+        const L = T.map((I) => I.url === j ? { ...I, status: "error", error: E.message, repoData: null } : I);
+        return Jw(L), L;
       });
     }
   }, []), x = (j) => {
-    var L;
-    const P = (L = j.target.files) == null ? void 0 : L[0];
+    var T;
+    const P = (T = j.target.files) == null ? void 0 : T[0];
     if (!P) return;
     u(null);
     const E = new FileReader();
-    E.onload = (T) => {
+    E.onload = (L) => {
       try {
-        const I = JSON.parse(T.target.result);
+        const I = JSON.parse(L.target.result);
         OJ(I), u("ok"), setTimeout(() => u(null), 3e3);
       } catch (I) {
         u(I.message);
@@ -145948,22 +145948,22 @@ function Zpn({ dark: n }) {
     let P = null;
     try {
       P = P1e(j);
-    } catch (T) {
-      c(T.message);
+    } catch (L) {
+      c(L.message);
       return;
     }
     const E = `https://github.com/${P.owner}/${P.repo}`;
-    if (r.find((T) => T.url === E)) {
+    if (r.find((L) => L.url === E)) {
       o("");
       return;
     }
-    const L = [...r, { url: E, status: "idle", repoData: null, parsed: P, error: null }];
-    i(L), Jw(L), o(""), b(E);
+    const T = [...r, { url: E, status: "idle", repoData: null, parsed: P, error: null }];
+    i(T), Jw(T), o(""), b(E);
   }, S = (j) => {
     const P = r.filter((E) => E.url !== j);
     i(P), Jw(P);
   }, C = (j, P, E) => {
-    const L = p === j;
+    const T = p === j;
     return /* @__PURE__ */ l.jsxs(
       "button",
       {
@@ -145978,9 +145978,9 @@ function Zpn({ dark: n }) {
           gap: 6,
           padding: "9px 10px",
           borderRadius: 9,
-          background: L ? "var(--amber-light)" : "transparent",
-          border: `1px solid ${L ? "var(--amber-border)" : n ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
-          color: L ? "var(--amber)" : "var(--text-muted)",
+          background: T ? "var(--amber-light)" : "transparent",
+          border: `1px solid ${T ? "var(--amber-border)" : n ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
+          color: T ? "var(--amber)" : "var(--text-muted)",
           fontSize: 12,
           fontWeight: 700,
           cursor: "pointer",
@@ -146199,7 +146199,7 @@ const E1e = 10 * 1024 * 1024, e5 = [
 ], VU = 350, _U = (n) => new Promise((e) => setTimeout(e, n));
 function Kpn({ dark: n, onClose: e, onUploaded: r }) {
   var k, S;
-  const { t: i } = ee("store"), [a, o] = O.useState(!1), [s, c] = O.useState(!1), [d, u] = O.useState("upload"), [p, h] = O.useState(null), [f, g] = O.useState(null), m = O.useRef(null);
+  const { t: i } = Y("store"), [a, o] = O.useState(!1), [s, c] = O.useState(!1), [d, u] = O.useState("upload"), [p, h] = O.useState(null), [f, g] = O.useState(null), m = O.useRef(null);
   O.useEffect(() => {
     const C = (j) => j.preventDefault();
     return window.addEventListener("dragover", C), window.addEventListener("drop", C), () => {
@@ -146221,13 +146221,13 @@ function Kpn({ dark: n, onClose: e, onUploaded: r }) {
       try {
         const E = new FormData();
         E.append("file", C);
-        const L = Le(Te("/api/cards/upload-zip"), {
+        const T = Le(Te("/api/cards/upload-zip"), {
           method: "POST",
           body: E
         });
         await _U(VU), u("validate"), await _U(VU), u("extract");
-        const T = await L, I = await T.json().catch(() => ({}));
-        if (!T.ok) throw new Error(I.error || `HTTP ${T.status}`);
+        const L = await T, I = await L.json().catch(() => ({}));
+        if (!L.ok) throw new Error(I.error || `HTTP ${L.status}`);
         await _U(VU), u("done"), g(I), h({
           type: "ok",
           text: i("upload.installOk", { name: ((j = I.manifest) == null ? void 0 : j.name) || I.id, version: ((P = I.manifest) == null ? void 0 : P.version) || "?" })
@@ -146491,7 +146491,7 @@ function Kpn({ dark: n, onClose: e, onUploaded: r }) {
   );
 }
 function Ypn({ stage: n, dark: e }) {
-  const { t: r } = ee("store"), i = e5.find((o) => o.key === n) || e5[0], a = e5.findIndex((o) => o.key === n);
+  const { t: r } = Y("store"), i = e5.find((o) => o.key === n) || e5[0], a = e5.findIndex((o) => o.key === n);
   return /* @__PURE__ */ l.jsxs("div", { style: {
     padding: "24px 18px",
     borderRadius: 14,
@@ -146733,7 +146733,7 @@ function ihn({ sensor: n, dark: e, haStates: r, t: i }) {
   );
 }
 function ahn({ title: n, sensors: e, onClose: r }) {
-  const { dark: i, haStates: a = {} } = Oe(), { t: o } = ee("badges"), s = e.filter((c) => {
+  const { dark: i, haStates: a = {} } = Oe(), { t: o } = Y("badges"), s = e.filter((c) => {
     var d;
     return Tie((d = a == null ? void 0 : a[c.id]) == null ? void 0 : d.state);
   }).length;
@@ -146957,17 +146957,17 @@ function Fit({ config: n }) {
   } else
     p === "state" ? P = lhn(j, n) : P = s;
   const E = e ? ohn : shn;
-  let L = c;
+  let T = c;
   if (m != null && m.enabled && x.length > 0) {
     const F = ehn(x, r), N = {
       all_off: m.allOffColor,
       all_on: m.allOnColor || m.anyOnColor,
       mixed: m.mixedColor || m.anyOnColor
     }[F.mode];
-    N && (L = N, F.activeCount > 0);
+    N && (T = N, F.activeCount > 0);
   }
-  let T;
-  typeof L == "string" && L.startsWith("#") ? T = { bg: `${L}1a`, border: `${L}40`, text: L } : T = E[L] || E.gray;
+  let L;
+  typeof T == "string" && T.startsWith("#") ? L = { bg: `${T}1a`, border: `${T}40`, text: T } : L = E[T] || E.gray;
   const I = L1e[d] || L1e.md, z = o ? String(o).replace(/^mdi:/, "") : "", M = z && (!f || f === "full" || f === "icon_value"), R = () => {
     var F;
     if (k) {
@@ -146979,7 +146979,7 @@ function Fit({ config: n }) {
       return;
     }
     if (h != null && h.confirm) {
-      const H = ((F = h.confirm_text) == null ? void 0 : F.trim()) || He.t("confirmExecute", { ns: "common" });
+      const H = ((F = h.confirm_text) == null ? void 0 : F.trim()) || Re.t("confirmExecute", { ns: "common" });
       if (!window.confirm(H)) return;
     }
     chn(h);
@@ -146997,23 +146997,23 @@ function Fit({ config: n }) {
           gap: 6,
           padding: I.padding,
           borderRadius: 99,
-          background: T.bg,
-          border: `1px solid ${T.border}`,
+          background: L.bg,
+          border: `1px solid ${L.border}`,
           fontSize: I.fontSize,
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: I.letterSpacing,
-          color: T.text,
+          color: L.text,
           whiteSpace: "nowrap",
           cursor: S ? "pointer" : "default",
           userSelect: "none"
         },
         children: [
-          M ? /* @__PURE__ */ l.jsx(Ft, { name: z, size: I.iconSize, color: T.text, opacity: 1 }) : !f && /* @__PURE__ */ l.jsx("span", { style: {
+          M ? /* @__PURE__ */ l.jsx(Ft, { name: z, size: I.iconSize, color: L.text, opacity: 1 }) : !f && /* @__PURE__ */ l.jsx("span", { style: {
             width: I.dot,
             height: I.dot,
             borderRadius: "50%",
-            background: T.text,
+            background: L.text,
             display: "inline-block",
             animation: u ? "glowPulse 2s infinite" : "none"
           } }),
@@ -147122,7 +147122,7 @@ const E2 = [
 }, fhn = { id: null, name: "Il mio distintivo", description: "", config: { ...$it } };
 function Vit({ initial: n, onClose: e, onSaved: r }) {
   var U, Z, re, fe, ae, pe, ce;
-  const { t: i } = ee("badges"), a = n ?? fhn, o = !a.id, [s, c] = O.useState({
+  const { t: i } = Y("badges"), a = n ?? fhn, o = !a.id, [s, c] = O.useState({
     ...a,
     id: a.id ?? phn(),
     config: { ...$it, ...a.config }
@@ -147178,12 +147178,12 @@ function Vit({ initial: n, onClose: e, onSaved: r }) {
     { value: "sm", label: i("sizes.small") },
     { value: "md", label: i("sizes.medium") },
     { value: "lg", label: i("sizes.large") }
-  ], L = [
+  ], T = [
     { value: "auto", label: i("formats.auto") },
     { value: "watt", label: i("formats.watt") },
     { value: "percent", label: i("formats.percent") },
     { value: "text", label: i("formats.raw") }
-  ], T = [
+  ], L = [
     { value: "full", label: "☰  " + i("displayModes.full") },
     { value: "icon_value", label: "⬡  " + i("displayModes.icon_value") },
     { value: "label_value", label: "𝘈  " + i("displayModes.label_value") },
@@ -147304,7 +147304,7 @@ function Vit({ initial: n, onClose: e, onSaved: r }) {
         ] }),
         /* @__PURE__ */ l.jsxs("section", { children: [
           /* @__PURE__ */ l.jsx(fa, { children: i("displayMode") }),
-          /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 4 }, children: T.map((te) => /* @__PURE__ */ l.jsx(
+          /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 4 }, children: L.map((te) => /* @__PURE__ */ l.jsx(
             "button",
             {
               onClick: () => S("displayMode", te.value),
@@ -147389,7 +147389,7 @@ function Vit({ initial: n, onClose: e, onSaved: r }) {
                 "input",
                 {
                   value: ie,
-                  onChange: (Y) => A(oe, Y.target.value),
+                  onChange: (J) => A(oe, J.target.value),
                   placeholder: ((B = ke == null ? void 0 : ke.attributes) == null ? void 0 : B.friendly_name) || i("sensors.namePlaceholder"),
                   style: {
                     ...Q,
@@ -147485,7 +147485,7 @@ function Vit({ initial: n, onClose: e, onSaved: r }) {
           ] })
         ] }),
         /* @__PURE__ */ l.jsxs(LU, { children: [
-          /* @__PURE__ */ l.jsx(zn, { label: i("fieldFormat"), children: /* @__PURE__ */ l.jsx(aW, { value: k.format, onChange: (te) => S("format", te), options: L }) }),
+          /* @__PURE__ */ l.jsx(zn, { label: i("fieldFormat"), children: /* @__PURE__ */ l.jsx(aW, { value: k.format, onChange: (te) => S("format", te), options: T }) }),
           /* @__PURE__ */ l.jsx(zn, { label: i("fieldSize"), children: /* @__PURE__ */ l.jsx(aW, { value: k.size, onChange: (te) => S("size", te), options: E }) })
         ] }),
         /* @__PURE__ */ l.jsxs(LU, { children: [
@@ -147643,7 +147643,7 @@ function Vit({ initial: n, onClose: e, onSaved: r }) {
   ] });
 }
 function T2({ value: n, onChange: e, palette: r }) {
-  const { t: i } = ee("common");
+  const { t: i } = Y("common");
   return /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: r.map((a) => {
     const o = n === a.value;
     return /* @__PURE__ */ l.jsx(
@@ -147673,7 +147673,7 @@ function ghn(n, e) {
   return !n || typeof n != "object" ? e("uploadBadge.errorNotFound") : !n.id || typeof n.id != "string" || !/^[a-z0-9][a-z0-9_-]{0,63}$/.test(n.id) || !n.name || !n.config || typeof n.config != "object" ? e("uploadBadge.errorInvalid") : null;
 }
 function mhn({ dark: n, onClose: e, onUploaded: r }) {
-  const { t: i } = ee("store"), [a, o] = O.useState(!1), [s, c] = O.useState(!1), [d, u] = O.useState(null), [p, h] = O.useState(null), f = O.useRef(null);
+  const { t: i } = Y("store"), [a, o] = O.useState(!1), [s, c] = O.useState(!1), [d, u] = O.useState(null), [p, h] = O.useState(null), f = O.useRef(null);
   O.useEffect(() => {
     const A = (k) => k.preventDefault();
     return window.addEventListener("dragover", A), window.addEventListener("drop", A), () => {
@@ -147701,7 +147701,7 @@ function mhn({ dark: n, onClose: e, onUploaded: r }) {
         if (!S) throw new Error(i("uploadBadge.errorNotFound"));
         const C = await S.async("text"), j = JSON.parse(C), P = ghn(j, i);
         if (P) throw new Error(P);
-        const E = DV().find((T) => T.id === j.id), L = {
+        const E = DV().find((L) => L.id === j.id), T = {
           id: j.id,
           name: j.name,
           description: j.description || "",
@@ -147709,7 +147709,7 @@ function mhn({ dark: n, onClose: e, onUploaded: r }) {
           author: j.author || "",
           config: j.config
         };
-        Lie(L), window.dispatchEvent(new CustomEvent("oikos-badges-updated")), window.dispatchEvent(new CustomEvent("oikos-custom-badges-updated")), h({ id: j.id, name: j.name, version: j.version || "1.0.0", updated: !!E }), u({
+        Lie(T), window.dispatchEvent(new CustomEvent("oikos-badges-updated")), window.dispatchEvent(new CustomEvent("oikos-custom-badges-updated")), h({ id: j.id, name: j.name, version: j.version || "1.0.0", updated: !!E }), u({
           type: "ok",
           text: E ? i("uploadBadge.updated", { name: j.name, version: j.version || "1.0.0" }) : i("uploadBadge.installed", { name: j.name, version: j.version || "1.0.0" })
         });
@@ -148237,15 +148237,15 @@ function Ng(n = 640) {
 }
 function To(n) {
   if (!n) return "";
-  const e = n.id ? He.t(`${n.id}.name`, { ns: "cards", defaultValue: "" }) : "";
-  return e || (n.id ? He.t(`catalog.${n.id}.name`, { ns: "chips", defaultValue: "" }) : "") || n.name || n.id || "";
+  const e = n.id ? Re.t(`${n.id}.name`, { ns: "cards", defaultValue: "" }) : "";
+  return e || (n.id ? Re.t(`catalog.${n.id}.name`, { ns: "chips", defaultValue: "" }) : "") || n.name || n.id || "";
 }
 function Fo(n) {
-  const e = n != null && n.id ? He.t(`${n.id}.desc`, { ns: "cards", defaultValue: "" }) : "";
+  const e = n != null && n.id ? Re.t(`${n.id}.desc`, { ns: "cards", defaultValue: "" }) : "";
   if (e) return e;
-  const r = n != null && n.id ? He.t(`catalog.${n.id}.desc`, { ns: "chips", defaultValue: "" }) : "";
+  const r = n != null && n.id ? Re.t(`catalog.${n.id}.desc`, { ns: "chips", defaultValue: "" }) : "";
   if (r) return r;
-  const i = He.language || "";
+  const i = Re.language || "";
   if (!i.startsWith("it")) {
     const a = i.split("-")[0], o = (n == null ? void 0 : n[`description_${i}`]) || (n == null ? void 0 : n[`description_${a}`]);
     if (o) return o;
@@ -148255,10 +148255,10 @@ function Fo(n) {
 }
 function Xit(n) {
   const e = n == null ? void 0 : n.category;
-  return e ? He.t(`category.${e}`, { ns: "store", defaultValue: e }) : "";
+  return e ? Re.t(`category.${e}`, { ns: "store", defaultValue: e }) : "";
 }
 function FV({ dark: n, list: e, detail: r, selectedId: i, onBack: a, mobileMode: o = "navigate" }) {
-  const s = Ng(), { t: c } = ee("store");
+  const s = Ng(), { t: c } = Y("store");
   return s ? o === "accordion" ? /* @__PURE__ */ l.jsx(l.Fragment, { children: e }) : i ? /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }, children: [
     /* @__PURE__ */ l.jsx("div", { style: {
       display: "flex",
@@ -148380,7 +148380,7 @@ function EA({ src: n, ...e }) {
   }, [n]), r ? /* @__PURE__ */ l.jsx("img", { src: r, ...e }) : null;
 }
 function zhn({ entry: n, dark: e, images: r }) {
-  const [i, a] = O.useState(0), o = r[Math.min(i, r.length - 1)];
+  const { t: i } = Y("store"), [a, o] = O.useState(0), s = r[Math.min(a, r.length - 1)];
   return /* @__PURE__ */ l.jsxs("div", { style: { marginBottom: 22 }, children: [
     /* @__PURE__ */ l.jsx("div", { style: {
       borderRadius: 14,
@@ -148390,11 +148390,11 @@ function zhn({ entry: n, dark: e, images: r }) {
     }, children: /* @__PURE__ */ l.jsx(
       EA,
       {
-        src: o,
+        src: s,
         alt: n.name,
         style: { width: "100%", display: "block", maxHeight: Git, objectFit: "contain" },
-        onError: (s) => {
-          s.currentTarget.style.display = "none";
+        onError: (c) => {
+          c.currentTarget.style.display = "none";
         }
       }
     ) }),
@@ -148403,51 +148403,51 @@ function zhn({ entry: n, dark: e, images: r }) {
       gap: 8,
       marginTop: 10,
       flexWrap: "wrap"
-    }, children: r.map((s, c) => {
-      const d = c === i;
+    }, children: r.map((c, d) => {
+      const u = d === a;
       return /* @__PURE__ */ l.jsx(
         "button",
         {
-          onClick: () => a(c),
-          title: `${t("common:ui.preview")} ${c + 1}`,
+          onClick: () => o(d),
+          title: `${i("common:ui.preview")} ${d + 1}`,
           style: {
             width: 72,
             height: 48,
             flexShrink: 0,
             padding: 0,
             borderRadius: 8,
-            border: d ? "2px solid var(--amber)" : `1px solid ${e ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
+            border: u ? "2px solid var(--amber)" : `1px solid ${e ? "rgba(255,255,255,.1)" : "#e2e8f0"}`,
             overflow: "hidden",
             cursor: "pointer",
             background: e ? "rgba(255,255,255,.02)" : "#fafafa",
-            opacity: d ? 1 : 0.75,
+            opacity: u ? 1 : 0.75,
             transition: "opacity .15s, border-color .15s"
           },
-          onMouseEnter: (u) => {
-            d || (u.currentTarget.style.opacity = 1);
+          onMouseEnter: (p) => {
+            u || (p.currentTarget.style.opacity = 1);
           },
-          onMouseLeave: (u) => {
-            d || (u.currentTarget.style.opacity = 0.75);
+          onMouseLeave: (p) => {
+            u || (p.currentTarget.style.opacity = 0.75);
           },
           children: /* @__PURE__ */ l.jsx(
             EA,
             {
-              src: s,
+              src: c,
               alt: "",
               style: { width: "100%", height: "100%", objectFit: "cover", display: "block" },
-              onError: (u) => {
-                u.currentTarget.style.display = "none";
+              onError: (p) => {
+                p.currentTarget.style.display = "none";
               }
             }
           )
         },
-        s + c
+        c + d
       );
     }) })
   ] });
 }
 function NV({ icon: n, name: e, description: r, selected: i, dark: a, badge: o, badgeColor: s = "gray", meta: c, hasUpdate: d, onClick: u, compact: p }) {
-  const { t: h } = ee("store"), f = i ? a ? "rgba(251,191,36,.12)" : "rgba(251,191,36,.1)" : d ? a ? "rgba(16,185,129,.06)" : "rgba(16,185,129,.05)" : "transparent", g = i ? "1px solid var(--amber-border)" : d ? "1px solid rgba(16,185,129,.25)" : "1px solid transparent", m = (c == null ? void 0 : c.find((v) => v.color === "amber" && v.label.includes("→"))) || (c == null ? void 0 : c.find((v) => v.label === "Installato" || v.label === "💾 Locale")), y = s === "premium" || !!(c != null && c.some((v) => v.color === "premium"));
+  const { t: h } = Y("store"), f = i ? a ? "rgba(251,191,36,.12)" : "rgba(251,191,36,.1)" : d ? a ? "rgba(16,185,129,.06)" : "rgba(16,185,129,.05)" : "transparent", g = i ? "1px solid var(--amber-border)" : d ? "1px solid rgba(16,185,129,.25)" : "1px solid transparent", m = (c == null ? void 0 : c.find((v) => v.color === "amber" && v.label.includes("→"))) || (c == null ? void 0 : c.find((v) => v.label === "Installato" || v.label === "💾 Locale")), y = s === "premium" || !!(c != null && c.some((v) => v.color === "premium"));
   return /* @__PURE__ */ l.jsxs(
     "button",
     {
@@ -148599,7 +148599,7 @@ function WV({ icon: n, name: e, badges: r, dark: i, action: a }) {
   ] });
 }
 function Bhn({ entry: n, dark: e, onClose: r }) {
-  const { t: i } = ee("store"), [a, o] = O.useState("page"), [s, c] = O.useState(null), [d, u] = O.useState(!1), p = O.useRef(null), h = (v) => i(`pages.${v.id}`, v.label), f = O.useMemo(() => {
+  const { t: i } = Y("store"), [a, o] = O.useState("page"), [s, c] = O.useState(null), [d, u] = O.useState(!1), p = O.useRef(null), h = (v) => i(`pages.${v.id}`, v.label), f = O.useMemo(() => {
     const v = Jy(), b = new Set(v.map((x) => x.id));
     return [...Phn.filter((x) => !b.has(x.id)), ...v];
   }, []), g = O.useMemo(() => {
@@ -148663,8 +148663,8 @@ function Bhn({ entry: n, dark: e, onClose: r }) {
   ] }) });
 }
 function Rhn({ dark: n }) {
-  var B, Y, K;
-  const { t: e } = ee("store"), r = Ng(), [i, a] = O.useState(""), [o, s] = O.useState(null), [c, d] = O.useState(!0), [u, p] = O.useState(null), [h, f] = O.useState([]), [g, m] = O.useState(null), [y, v] = O.useState(null), [b, x] = O.useState(0), [A, k] = O.useState(!1), [S, C] = O.useState([]), { pluginsLoaded: j, pluginsVersion: P, reloadInstalledCards: E } = Oe(), { licenseStatus: L } = HV(), T = L === "ACTIVE", I = (D) => {
+  var B, J, K;
+  const { t: e } = Y("store"), r = Ng(), [i, a] = O.useState(""), [o, s] = O.useState(null), [c, d] = O.useState(!0), [u, p] = O.useState(null), [h, f] = O.useState([]), [g, m] = O.useState(null), [y, v] = O.useState(null), [b, x] = O.useState(0), [A, k] = O.useState(!1), [S, C] = O.useState([]), { pluginsLoaded: j, pluginsVersion: P, reloadInstalledCards: E } = Oe(), { licenseStatus: T } = HV(), L = T === "ACTIVE", I = (D) => {
     var W;
     return (D == null ? void 0 : D.tier) === "premium" || !!((W = D == null ? void 0 : D._source) != null && W.premium);
   }, z = async () => {
@@ -148699,10 +148699,10 @@ function Rhn({ dark: n }) {
   }, []), O.useEffect(() => {
     const D = Iit();
     D && C(D.list);
-    const W = (le) => IA({ force: le }).then((J) => {
-      C(J), lF(J);
+    const W = (le) => IA({ force: le }).then((ee) => {
+      C(ee), lF(ee);
       try {
-        window.dispatchEvent(new CustomEvent("oikos-card-updates", { detail: J }));
+        window.dispatchEvent(new CustomEvent("oikos-card-updates", { detail: ee }));
       } catch {
       }
     }).catch(() => {
@@ -148725,9 +148725,9 @@ function Rhn({ dark: n }) {
     const D = new Set(Object.keys(_n())), W = [];
     hs().filter((X) => Array.isArray(X.cards) && X.cards.length > 0).forEach((X) => {
       X.cards.forEach((ne) => {
-        var le, J;
+        var le, ee;
         if ((ne.type || "card") === "card" && !D.has(ne.id) && !gW.has(ne.id)) {
-          const ue = ((J = (le = X.releases) == null ? void 0 : le[0]) == null ? void 0 : J.tag) ?? null, ye = ne.preview ? Dr(X, ue, ne.preview) : null, ge = Array.isArray(ne.previews) ? ne.previews.map((we) => Dr(X, ue, we)) : void 0;
+          const ue = ((ee = (le = X.releases) == null ? void 0 : le[0]) == null ? void 0 : ee.tag) ?? null, ye = ne.preview ? Dr(X, ue, ne.preview) : null, ge = Array.isArray(ne.previews) ? ne.previews.map((we) => Dr(X, ue, we)) : void 0;
           W.push({
             ...ne,
             icon: br,
@@ -148775,35 +148775,35 @@ function Rhn({ dark: n }) {
   }, [S, N]), Q = o ? Wo(o) || h.find((D) => D.id === o) : null, U = Q != null && Q._community ? null : Q == null ? void 0 : Q.component, Z = !!(Q != null && Q._community), re = O.useCallback(async (D) => {
     var X, ne, le;
     s(D), v(null);
-    const W = h.find((J) => J.id === D);
+    const W = h.find((ee) => ee.id === D);
     if ((X = W == null ? void 0 : W._source) != null && X.url)
       try {
-        const ue = hs().find((Re) => Re.url === W._source.url);
+        const ue = hs().find((De) => De.url === W._source.url);
         if (!ue) return;
         const ye = ((le = (ne = ue.releases) == null ? void 0 : ne[0]) == null ? void 0 : le.tag) ?? null, ge = W._source.rawBase, we = W.path;
         let he = null;
         if (we && ge !== "__premium__") {
-          const Re = await fetch(`${ge}/${we}/manifest.json?t=${Date.now()}`);
-          if (Re.ok) {
-            const Ie = await Re.json();
+          const De = await fetch(`${ge}/${we}/manifest.json?t=${Date.now()}`);
+          if (De.ok) {
+            const Ie = await De.json();
             he = normalizeCardPaths(Ie, we);
           }
         }
         if (!he) {
-          const Re = ge === "__premium__" ? Te("/api/store/manifest") : `${ge}/manifest.json?t=${Date.now()}`;
-          if (!Re) return;
-          const Ie = await Le(Re);
+          const De = ge === "__premium__" ? Te("/api/store/manifest") : `${ge}/manifest.json?t=${Date.now()}`;
+          if (!De) return;
+          const Ie = await Le(De);
           if (!Ie.ok) return;
-          const De = await Ie.json();
-          if (!Array.isArray(De.cards) || (he = De.cards.find((qe) => qe.id === D), !he)) return;
+          const He = await Ie.json();
+          if (!Array.isArray(He.cards) || (he = He.cards.find((qe) => qe.id === D), !he)) return;
         }
-        const me = he.preview ? Dr(ue, ye, he.preview) : null, Pe = Array.isArray(he.previews) ? he.previews.map((Re) => Dr(ue, ye, Re)) : void 0;
-        f((Re) => Re.map((Ie) => Ie.id === D ? { ...Ie, ...he, preview: me, previews: Pe, icon: br, category: "Comunità", _community: !0, _type: Ie._type || "java", _source: Ie._source } : Ie));
+        const me = he.preview ? Dr(ue, ye, he.preview) : null, Pe = Array.isArray(he.previews) ? he.previews.map((De) => Dr(ue, ye, De)) : void 0;
+        f((De) => De.map((Ie) => Ie.id === D ? { ...Ie, ...he, preview: me, previews: Pe, icon: br, category: "Comunità", _community: !0, _type: Ie._type || "java", _source: Ie._source } : Ie));
       } catch {
       }
   }, [h]), fe = async () => {
     if (Q != null && Q._source) {
-      if (I(Q) && !T) {
+      if (I(Q) && !L) {
         v(e("cards.premiumRequired"));
         return;
       }
@@ -148812,8 +148812,8 @@ function Rhn({ dark: n }) {
         await Ib(Q._source, Q), E && await E(), f((D) => D.filter((W) => W.id !== Q.id)), m(null);
       } catch (D) {
         if (D.conflictData) {
-          const { existing: X, incoming: ne } = D.conflictData, le = `${X.source}${X.version ? " v" + X.version : ""}`, J = e("confirm.alreadyInstalled", { name: To(Q), source: le, incoming: ne.source });
-          if (window.confirm(J))
+          const { existing: X, incoming: ne } = D.conflictData, le = `${X.source}${X.version ? " v" + X.version : ""}`, ee = e("confirm.alreadyInstalled", { name: To(Q), source: le, incoming: ne.source });
+          if (window.confirm(ee))
             try {
               await Ib(Q._source, Q, !0), E && await E(), f((ue) => ue.filter((ye) => ye.id !== Q.id));
             } catch (ue) {
@@ -148827,13 +148827,13 @@ function Rhn({ dark: n }) {
       }
     }
   }, ae = Q ? S.find((D) => D.id === Q.id) : null, pe = Q && (Q.changelog || ((B = ae == null ? void 0 : ae.manifest) == null ? void 0 : B.changelog)) || null, ce = async () => {
-    var le, J, ue, ye, ge;
+    var le, ee, ue, ye, ge;
     if (!Q || !ae) return;
     const D = hs(), W = ae.sourceRepoUrl;
     let X = D.find((we) => we.url === W) ?? D.find((we) => {
       var he, me;
       return (me = (he = we.cards) == null ? void 0 : he.some) == null ? void 0 : me.call(he, (Pe) => Pe.id === Q.id);
-    }), ne = (J = (le = X == null ? void 0 : X.cards) == null ? void 0 : le.find) == null ? void 0 : J.call(le, (we) => we.id === Q.id);
+    }), ne = (ee = (le = X == null ? void 0 : X.cards) == null ? void 0 : le.find) == null ? void 0 : ee.call(le, (we) => we.id === Q.id);
     if (!X || !ne) {
       try {
         await XU();
@@ -148842,7 +148842,7 @@ function Rhn({ dark: n }) {
       const we = hs();
       X = we.find((he) => he.url === W) ?? we.find((he) => {
         var me, Pe;
-        return (Pe = (me = he.cards) == null ? void 0 : me.some) == null ? void 0 : Pe.call(me, (Re) => Re.id === Q.id);
+        return (Pe = (me = he.cards) == null ? void 0 : me.some) == null ? void 0 : Pe.call(me, (De) => De.id === Q.id);
       }), ne = (ye = (ue = X == null ? void 0 : X.cards) == null ? void 0 : ue.find) == null ? void 0 : ye.call(ue, (he) => he.id === Q.id);
     }
     if (!ne && ae.manifest && (ne = ae.manifest), !X && ((ge = Q._meta) != null && ge.sourceRepoUrl)) {
@@ -148876,14 +148876,14 @@ function Rhn({ dark: n }) {
       m(Q.id), v(null);
       try {
         if (!RVe()) {
-          my(gy().filter((J) => J.id !== Q.id)), window.dispatchEvent(new CustomEvent("oikos-plugins-updated")), m(null);
+          my(gy().filter((ee) => ee.id !== Q.id)), window.dispatchEvent(new CustomEvent("oikos-plugins-updated")), m(null);
           return;
         }
         const X = Te(`/api/cards/${Q.id}`), ne = await fetch(X, { method: "DELETE" });
         if (!ne.ok) throw new Error(`HTTP ${ne.status}`);
         const le = await ne.json().catch(() => null);
         if (E && await E(), m(null), le != null && le.packageRemoved) {
-          const J = le.packageRemoved, ue = J.subdir && !J.name ? `subdir "${J.subdir}" (${J.files} istanze)` : `"${J.name}"`;
+          const ee = le.packageRemoved, ue = ee.subdir && !ee.name ? `subdir "${ee.subdir}" (${ee.files} istanze)` : `"${ee.name}"`;
           window.dispatchEvent(new CustomEvent("oikos-notify", {
             detail: {
               ts: Date.now(),
@@ -148891,7 +148891,7 @@ function Rhn({ dark: n }) {
               title: e("notif.uninstalledTitle"),
               body: e("notif.pkgRemovedBody", { label: ue }),
               icon: "RefreshCw",
-              actionLabel: He.t("pkgRestartHa", { ns: "common" }),
+              actionLabel: Re.t("pkgRestartHa", { ns: "common" }),
               actionType: "ha_restart"
             }
           }));
@@ -148905,8 +148905,8 @@ function Rhn({ dark: n }) {
     const W = [], X = !!D._community, ne = !!D.plugin;
     if (X || ne) {
       W.push(D._type === "html" ? { label: "HTML", color: "green" } : D._type === "json" ? { label: "JSON", color: "amber" } : { label: "JAVA", color: "blue" }), D.tier === "premium" && W.push({ label: "✨ Premium", color: "premium" }), D.version && W.push({ label: `v${D.version}`, color: "gray" }), D.author && W.push({ label: `by ${D.author}`, color: "gray" }), ne && (((le = D._meta) == null ? void 0 : le.source) === "manual" ? W.push({ label: "💾 Locale", color: "amber" }) : W.push({ label: "Installato", color: "green" }));
-      const J = S.find((ue) => ue.id === D.id);
-      J && W.push({ label: `v${J.installed} → v${J.latest}`, color: "amber" });
+      const ee = S.find((ue) => ue.id === D.id);
+      ee && W.push({ label: `v${ee.installed} → v${ee.latest}`, color: "amber" });
     }
     return W;
   }, ie = /* @__PURE__ */ l.jsxs("div", { style: {
@@ -149016,7 +149016,7 @@ function Rhn({ dark: n }) {
     /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, overflowY: "auto", padding: r ? "0 10px 16px" : "0 8px 16px" }, children: [
       (() => {
         const D = (W, X = {}) => {
-          const ne = oe(W), le = S.find((ue) => ue.id === W.id), J = o === W.id;
+          const ne = oe(W), le = S.find((ue) => ue.id === W.id), ee = o === W.id;
           return /* @__PURE__ */ l.jsxs(O.Fragment, { children: [
             /* @__PURE__ */ l.jsx(
               NV,
@@ -149024,17 +149024,17 @@ function Rhn({ dark: n }) {
                 icon: W.icon,
                 name: To(W),
                 description: Fo(W),
-                selected: J,
+                selected: ee,
                 dark: n,
                 meta: ne,
                 hasUpdate: !!le,
                 compact: r,
                 onClick: () => {
-                  r ? s(J ? null : W.id) : W._community ? re(W.id) : s(W.id);
+                  r ? s(ee ? null : W.id) : W._community ? re(W.id) : s(W.id);
                 }
               }
             ),
-            r && J && /* @__PURE__ */ l.jsxs("div", { style: {
+            r && ee && /* @__PURE__ */ l.jsxs("div", { style: {
               padding: "10px 14px 14px",
               marginBottom: 4,
               background: n ? "rgba(245,158,11,.05)" : "rgba(245,158,11,.04)",
@@ -149085,7 +149085,7 @@ function Rhn({ dark: n }) {
                   " ",
                   e("cards.uninstall")
                 ] }),
-                W._community && (I(W) && !T ? /* @__PURE__ */ l.jsxs(
+                W._community && (I(W) && !L ? /* @__PURE__ */ l.jsxs(
                   "button",
                   {
                     onClick: () => window.dispatchEvent(new CustomEvent("oikos-navigate-page", { detail: { page: "billing" } })),
@@ -149254,7 +149254,7 @@ function Rhn({ dark: n }) {
       ...!Z && Q.builtIn ? [{ label: "Built-in", color: "blue" }] : [],
       ...Q.version ? [{ label: `v${Q.version}`, color: "gray" }] : [],
       ...Q.author ? [{ label: `by ${Q.author}`, color: "gray" }] : []
-    ], action: Z ? I(Q) && !T ? /* @__PURE__ */ l.jsxs(
+    ], action: Z ? I(Q) && !L ? /* @__PURE__ */ l.jsxs(
       "button",
       {
         onClick: () => window.dispatchEvent(new CustomEvent("oikos-navigate-page", { detail: { page: "billing" } })),
@@ -149367,7 +149367,7 @@ function Rhn({ dark: n }) {
       })(),
       (pe == null ? void 0 : pe.length) > 0 && /* @__PURE__ */ l.jsx("div", { style: { marginBottom: 22 }, children: /* @__PURE__ */ l.jsx(nat, { entries: pe, installedVer: Q.version, dark: n }) }),
       Z && H1e(Q).length === 0 && /* @__PURE__ */ l.jsx("div", { style: { marginBottom: 16, padding: "10px 14px", borderRadius: 10, background: n ? "rgba(59,130,246,.08)" : "#eff6ff", border: `1px solid ${n ? "rgba(59,130,246,.2)" : "#bfdbfe"}`, fontSize: 12, color: n ? "#93c5fd" : "#1d4ed8" }, children: e("cards.installHint") }),
-      Z && ((Y = Q._source) == null ? void 0 : Y.url) && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+      Z && ((J = Q._source) == null ? void 0 : J.url) && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
         /* @__PURE__ */ l.jsx(bi, { children: e("source") }),
         /* @__PURE__ */ l.jsxs("div", { style: { marginBottom: 22, display: "flex", flexDirection: "column", gap: 6 }, children: [
           /* @__PURE__ */ l.jsxs(
@@ -149404,7 +149404,7 @@ function Rhn({ dark: n }) {
   ] });
 }
 function Dhn({ trigger: n, onChange: e, dark: r }) {
-  const { t: i } = ee("store"), a = (n == null ? void 0 : n.type) || "schedule", o = (p, h) => e({ ...n, [p]: h }), s = (p) => e({ type: p, hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6], entityId: "", operator: ">", value: "0" }), c = (p) => {
+  const { t: i } = Y("store"), a = (n == null ? void 0 : n.type) || "schedule", o = (p, h) => e({ ...n, [p]: h }), s = (p) => e({ type: p, hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6], entityId: "", operator: ">", value: "0" }), c = (p) => {
     const h = n.days || [0, 1, 2, 3, 4, 5, 6];
     o("days", h.includes(p) ? h.filter((f) => f !== p) : [...h, p].sort());
   }, d = { background: "var(--bg-primary)", border: "1px solid var(--border-medium)", borderRadius: 7, padding: "6px 10px", fontSize: 12, color: "var(--text-primary)", outline: "none", width: "100%" }, u = {
@@ -149452,7 +149452,7 @@ function Dhn({ trigger: n, onChange: e, dark: r }) {
   ] });
 }
 function Hhn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState(null), [a, o] = O.useState(t0), [s, c] = O.useState(null), [d, u] = O.useState({ type: "schedule", hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6] }), [, p] = O.useState(0), h = Ng();
+  const { t: e } = Y("store"), [r, i] = O.useState(null), [a, o] = O.useState(t0), [s, c] = O.useState(null), [d, u] = O.useState({ type: "schedule", hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6] }), [, p] = O.useState(0), h = Ng();
   O.useEffect(() => {
     const P = () => p((E) => E + 1);
     return window.addEventListener("oikos-plugins-updated", P), window.addEventListener("oikos-smartcards-updated", P), () => {
@@ -149465,18 +149465,18 @@ function Hhn({ dark: n }) {
   ), v = (P = {}) => {
     var E;
     if (P.type === "schedule") {
-      const L = ((E = P.days) == null ? void 0 : E.length) === 7 ? e("triggers.everyDay") : (P.days || []).map((T) => BV[T]).join(", ");
-      return `${String(P.hour ?? 9).padStart(2, "0")}:${String(P.minute ?? 0).padStart(2, "0")} — ${L}`;
+      const T = ((E = P.days) == null ? void 0 : E.length) === 7 ? e("triggers.everyDay") : (P.days || []).map((L) => BV[L]).join(", ");
+      return `${String(P.hour ?? 9).padStart(2, "0")}:${String(P.minute ?? 0).padStart(2, "0")} — ${T}`;
     }
     return P.type === "ha_condition" ? `${P.entityId || "—"} ${P.operator || ">"} ${P.value || "0"}` : e("triggers.manual");
   }, b = () => {
     const P = { id: `${r}-${Date.now()}`, cardId: r, enabled: !0, label: (g == null ? void 0 : g.name) || r, trigger: d }, E = [...a, P];
     o(E), Mb(E), c(null), u({ type: "schedule", hour: 9, minute: 0, days: [0, 1, 2, 3, 4, 5, 6] });
   }, x = (P) => {
-    const E = a.filter((L) => L.id !== P);
+    const E = a.filter((T) => T.id !== P);
     o(E), Mb(E);
   }, A = (P) => {
-    const E = a.map((L) => L.id === P ? { ...L, enabled: !L.enabled } : L);
+    const E = a.map((T) => T.id === P ? { ...T, enabled: !T.enabled } : T);
     o(E), Mb(E);
   }, k = (P) => window.dispatchEvent(new CustomEvent("oikos-popup-preview", { detail: { id: P.id, cardId: P.cardId } })), S = () => {
     const P = window.prompt(e("popup.promptName"), "Il mio popup");
@@ -149513,7 +149513,7 @@ function Hhn({ dark: n }) {
     ) }),
     /* @__PURE__ */ l.jsx("div", { style: { padding: h ? "10px 12px 6px" : "4px 12px 6px", flexShrink: 0, fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".07em", color: "var(--text-muted)" }, children: e("popup.chooseCard") }),
     /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflowY: "auto", padding: h ? "0 10px 16px" : "0 8px 16px" }, children: f.map((P) => {
-      const E = a.filter((L) => L.cardId === P.id).length;
+      const E = a.filter((T) => T.cardId === P.id).length;
       return /* @__PURE__ */ l.jsx(
         NV,
         {
@@ -149566,8 +149566,8 @@ function Hhn({ dark: n }) {
       y.length > 0 && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
         /* @__PURE__ */ l.jsx(bi, { children: e("popup.configuredPopups") }),
         /* @__PURE__ */ l.jsx("div", { style: { display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }, children: y.map((P) => {
-          var L, T;
-          const E = ((T = Mhn[(L = P.trigger) == null ? void 0 : L.type]) == null ? void 0 : T.icon) || ka;
+          var T, L;
+          const E = ((L = Mhn[(T = P.trigger) == null ? void 0 : T.type]) == null ? void 0 : L.icon) || ka;
           return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 8, padding: "10px 12px", borderRadius: 10, background: n ? "rgba(255,255,255,.03)" : "#f8fafc", border: `1px solid ${n ? "rgba(255,255,255,.07)" : "#e2e8f0"}`, opacity: P.enabled ? 1 : 0.55 }, children: [
             /* @__PURE__ */ l.jsx(E, { size: 14, color: "var(--text-muted)" }),
             /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, minWidth: 0 }, children: [
@@ -149605,7 +149605,7 @@ function Kit(n) {
   }, [n, e, r, i]);
 }
 function Yit({ stubs: n, dark: e }) {
-  const { t: r } = ee("store"), { reloadInstalledCards: i } = Oe(), [a, o] = O.useState(null), [s, c] = O.useState(null);
+  const { t: r } = Y("store"), { reloadInstalledCards: i } = Oe(), [a, o] = O.useState(null), [s, c] = O.useState(null);
   if (!n.length) return null;
   const d = async (u) => {
     o(u.id), c(null);
@@ -149638,33 +149638,33 @@ function Yit({ stubs: n, dark: e }) {
   ] });
 }
 function Fhn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState(null), [a, o] = O.useState(CA), [s, c] = O.useState(null), [, d] = O.useState(0), u = Ng();
+  const { t: e } = Y("store"), [r, i] = O.useState(null), [a, o] = O.useState(CA), [s, c] = O.useState(null), [, d] = O.useState(0), u = Ng();
   O.useEffect(() => {
-    const T = () => d((I) => I + 1);
-    return window.addEventListener("oikos-custom-chips-updated", T), () => window.removeEventListener("oikos-custom-chips-updated", T);
+    const L = () => d((I) => I + 1);
+    return window.addEventListener("oikos-custom-chips-updated", L), () => window.removeEventListener("oikos-custom-chips-updated", L);
   }, []);
   const p = O.useMemo(() => {
-    const T = _o("fv");
+    const L = _o("fv");
     return Object.values(qi).filter((I) => {
       var z;
-      return !((z = I.requires) != null && z.includes("fv") && !T);
+      return !((z = I.requires) != null && z.includes("fv") && !L);
     });
-  }, []), h = Kit("chip"), f = r ? qi[r] : null, g = f == null ? void 0 : f.component, m = !!(f != null && f._custom), y = a.find((T) => T.id === r), v = a.findIndex((T) => T.id === r), b = v >= 0, x = (y == null ? void 0 : y.enabled) ?? !1, A = (T) => {
-    o(T), Prt(T);
+  }, []), h = Kit("chip"), f = r ? qi[r] : null, g = f == null ? void 0 : f.component, m = !!(f != null && f._custom), y = a.find((L) => L.id === r), v = a.findIndex((L) => L.id === r), b = v >= 0, x = (y == null ? void 0 : y.enabled) ?? !1, A = (L) => {
+    o(L), Prt(L);
   }, k = () => {
     b || A([...a, { id: r, enabled: !0 }]);
   }, S = () => {
-    A(a.filter((T) => T.id !== r));
+    A(a.filter((L) => L.id !== r));
   }, C = () => {
-    A(a.map((T) => T.id === r ? { ...T, enabled: !T.enabled } : T));
+    A(a.map((L) => L.id === r ? { ...L, enabled: !L.enabled } : L));
   }, j = () => {
     if (v <= 0) return;
-    const T = [...a];
-    [T[v - 1], T[v]] = [T[v], T[v - 1]], A(T);
+    const L = [...a];
+    [L[v - 1], L[v]] = [L[v], L[v - 1]], A(L);
   }, P = () => {
     if (v < 0 || v >= a.length - 1) return;
-    const T = [...a];
-    [T[v], T[v + 1]] = [T[v + 1], T[v]], A(T);
+    const L = [...a];
+    [L[v], L[v + 1]] = [L[v + 1], L[v]], A(L);
   }, E = /* @__PURE__ */ l.jsxs("div", { style: { width: u ? "100%" : "clamp(220px, 32%, 300px)", flexShrink: 0, display: "flex", flexDirection: "column", borderRight: u ? "none" : `1px solid ${n ? "rgba(255,255,255,.07)" : "#f1f5f9"}` }, children: [
     !u && /* @__PURE__ */ l.jsx("div", { style: { padding: "14px 12px 10px", flexShrink: 0 }, children: /* @__PURE__ */ l.jsxs(
       "button",
@@ -149695,25 +149695,25 @@ function Fhn({ dark: n }) {
     ) }),
     h.length > 0 && /* @__PURE__ */ l.jsx("div", { style: { padding: "0 12px 4px" }, children: /* @__PURE__ */ l.jsx(Yit, { stubs: h, dark: n }) }),
     /* @__PURE__ */ l.jsx("div", { style: { padding: u ? "10px 12px 6px" : "4px 12px 6px", flexShrink: 0, fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".07em", color: "var(--text-muted)" }, children: e("chips.available") }),
-    /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflowY: "auto", padding: u ? "0 10px 16px" : "0 8px 16px" }, children: p.map((T) => {
-      const I = a.some((z) => z.id === T.id);
+    /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflowY: "auto", padding: u ? "0 10px 16px" : "0 8px 16px" }, children: p.map((L) => {
+      const I = a.some((z) => z.id === L.id);
       return /* @__PURE__ */ l.jsx(
         NV,
         {
-          icon: T.icon,
-          name: To(T),
-          description: Fo(T),
-          selected: r === T.id,
+          icon: L.icon,
+          name: To(L),
+          description: Fo(L),
+          selected: r === L.id,
           dark: n,
           compact: u,
-          badge: T._custom ? "Custom" : I ? e("chips.active") : void 0,
-          badgeColor: T._custom ? "amber" : "green",
-          onClick: () => i(T.id)
+          badge: L._custom ? "Custom" : I ? e("chips.active") : void 0,
+          badgeColor: L._custom ? "amber" : "green",
+          onClick: () => i(L.id)
         },
-        T.id
+        L.id
       );
     }) })
-  ] }), L = /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }, children: f ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+  ] }), T = /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }, children: f ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
       WV,
       {
@@ -149788,7 +149788,7 @@ function Fhn({ dark: n }) {
     ] })
   ] }) : /* @__PURE__ */ l.jsx(QV, { icon: js, label: e("selectHint.chip") }) });
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-    /* @__PURE__ */ l.jsx(FV, { dark: n, list: E, detail: L, selectedId: r, onBack: () => i(null) }),
+    /* @__PURE__ */ l.jsx(FV, { dark: n, list: E, detail: T, selectedId: r, onBack: () => i(null) }),
     s && /* @__PURE__ */ l.jsx(
       Lrt,
       {
@@ -149826,7 +149826,7 @@ async function Whn(n, e, r, i = !1) {
   let f;
   try {
     const g = Te("/api/cards/install");
-    if (!g) throw new Error(He.t("store:errors.storeUnavailablePanel"));
+    if (!g) throw new Error(Re.t("store:errors.storeUnavailablePanel"));
     f = await Le(g, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -149844,7 +149844,7 @@ async function Whn(n, e, r, i = !1) {
       signal: p.signal
     });
   } catch (g) {
-    throw g.name === "AbortError" ? new Error(He.t("store:errors.installTimeout")) : g;
+    throw g.name === "AbortError" ? new Error(Re.t("store:errors.installTimeout")) : g;
   } finally {
     clearTimeout(h);
   }
@@ -149871,7 +149871,7 @@ async function Ib(n, e, r = !1) {
     }
   if (e._oikosBundle) {
     const g = n.github && i ? `https://raw.githubusercontent.com/${n.github.owner}/${n.github.repo}/${i}/${e.file}` : `${n.rawBase}/${e.file}`, y = (await s$(g)).filter((v) => !VA(v));
-    if (y.length === 0) throw new Error(He.t("store:errors.noCustomElement"));
+    if (y.length === 0) throw new Error(Re.t("store:errors.noCustomElement"));
     return y.forEach((v) => xk(v, e.name, null, g)), Epn({ id: e.id, name: e.name, url: g, version: i }), { ok: !0, bundle: !0, elements: y };
   }
   if (e.entry && !RVe()) {
@@ -149894,7 +149894,7 @@ async function Ib(n, e, r = !1) {
     return Whn(n, e, i, r);
   const a = e.file || e.id + ".js", o = Dr(n, i, a), s = await fetch(o);
   if (!s.ok) throw new Error(`HTTP ${s.status}`);
-  if (!(await s.text()).trim()) throw new Error(He.t("store:errors.emptyPluginFile"));
+  if (!(await s.text()).trim()) throw new Error(Re.t("store:errors.emptyPluginFile"));
   const d = {
     url: o,
     id: e.id,
@@ -150023,10 +150023,10 @@ function qhn(n, e) {
   return i && Date.now() - i < Vhn;
 }
 async function Uhn(n, e) {
-  if (qhn(n, e)) throw new Error(He.t("store:errors.noRelease"));
+  if (qhn(n, e)) throw new Error(Re.t("store:errors.noRelease"));
   const r = await fetch(`https://api.github.com/repos/${n}/${e}/releases/latest`);
   if (r.status === 404)
-    throw _hn(n, e), new Error(He.t("store:errors.noRelease"));
+    throw _hn(n, e), new Error(Re.t("store:errors.noRelease"));
   if (!r.ok) throw new Error(`GitHub API: HTTP ${r.status}`);
   return (await r.json()).tag_name;
 }
@@ -150115,7 +150115,7 @@ function Ghn(n, e) {
   return 0;
 }
 function nat({ entries: n, installedVer: e, dark: r }) {
-  const { t: i } = ee("store");
+  const { t: i } = Y("store");
   if (!(n != null && n.length)) return null;
   const a = n.length > 4;
   return /* @__PURE__ */ l.jsxs("div", { style: { borderTop: `1px solid ${r ? "rgba(255,255,255,.07)" : "#f1f5f9"}`, paddingTop: 12 }, children: [
@@ -150142,54 +150142,54 @@ function nat({ entries: n, installedVer: e, dark: r }) {
   ] });
 }
 function Zhn({ card: n, source: e, dark: r, onClose: i, onInstall: a }) {
-  var x, A;
-  const [o, s] = O.useState(null), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(null), [g, m] = O.useState(() => !!_n()[n == null ? void 0 : n.id]);
+  var A, k;
+  const { t: o } = Y("store"), [s, c] = O.useState(null), [d, u] = O.useState(!1), [p, h] = O.useState(!1), [f, g] = O.useState(null), [m, y] = O.useState(() => !!_n()[n == null ? void 0 : n.id]);
   if (O.useEffect(() => {
     if (!n || !(e != null && e.rawBase) || e.rawBase === "__premium__") {
-      s(null);
+      c(null);
       return;
     }
-    let k = !1;
-    const S = [
+    let S = !1;
+    const C = [
       n.path ? `${e.rawBase}/${n.path}/README.md` : null,
       `${e.rawBase}/README.md`
     ].filter(Boolean);
-    return s(null), d(!0), (async () => {
-      for (const C of S)
+    return c(null), u(!0), (async () => {
+      for (const j of C)
         try {
-          const j = await fetch(`${C}?t=${Date.now()}`, { cache: "no-store" });
-          if (j.ok) {
-            const P = await j.text();
-            if (!k) {
-              s(P);
+          const P = await fetch(`${j}?t=${Date.now()}`, { cache: "no-store" });
+          if (P.ok) {
+            const E = await P.text();
+            if (!S) {
+              c(E);
               return;
             }
           }
         } catch {
         }
-      k || s(null);
+      S || c(null);
     })().finally(() => {
-      k || d(!1);
+      S || u(!1);
     }), () => {
-      k = !0;
+      S = !0;
     };
   }, [n == null ? void 0 : n.id, e == null ? void 0 : e.rawBase]), O.useEffect(() => {
-    m(!!_n()[n == null ? void 0 : n.id]), f(null);
+    y(!!_n()[n == null ? void 0 : n.id]), g(null);
   }, [n == null ? void 0 : n.id]), O.useEffect(() => {
-    const k = () => m(!!_n()[n == null ? void 0 : n.id]);
-    return window.addEventListener("oikos-cards-reloaded", k), () => window.removeEventListener("oikos-cards-reloaded", k);
+    const S = () => y(!!_n()[n == null ? void 0 : n.id]);
+    return window.addEventListener("oikos-cards-reloaded", S), () => window.removeEventListener("oikos-cards-reloaded", S);
   }, [n == null ? void 0 : n.id]), !n) return null;
-  const y = n.preview ? Dr(e, null, n.preview) : null, v = n.logo ? Dr(e, null, n.logo) : null, b = e != null && e.github ? `https://github.com/${e.github.owner}/${e.github.repo}` : e == null ? void 0 : e.url;
+  const v = n.preview ? Dr(e, null, n.preview) : null, b = n.logo ? Dr(e, null, n.logo) : null, x = e != null && e.github ? `https://github.com/${e.github.owner}/${e.github.repo}` : e == null ? void 0 : e.url;
   return /* @__PURE__ */ l.jsxs("div", { style: { padding: "14px 14px 16px", display: "flex", flexDirection: "column", gap: 12 }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }, children: [
-      v && /* @__PURE__ */ l.jsx(
+      b && /* @__PURE__ */ l.jsx(
         "img",
         {
-          src: v,
+          src: b,
           alt: "",
           loading: "lazy",
           style: { width: 40, height: 40, borderRadius: 9, objectFit: "contain", flexShrink: 0, border: `1px solid ${r ? "rgba(255,255,255,.1)" : "#e2e8f0"}`, background: r ? "rgba(255,255,255,.04)" : "#f8fafc" },
-          onError: (k) => k.currentTarget.style.display = "none"
+          onError: (S) => S.currentTarget.style.display = "none"
         }
       ),
       /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, minWidth: 0 }, children: [
@@ -150207,13 +150207,13 @@ function Zhn({ card: n, source: e, dark: r, onClose: i, onInstall: a }) {
         ] })
       ] }),
       /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }, children: [
-        b && /* @__PURE__ */ l.jsx(
+        x && /* @__PURE__ */ l.jsx(
           "a",
           {
-            href: b,
+            href: x,
             target: "_blank",
             rel: "noopener noreferrer",
-            title: t("common:openOnGithub", { defaultValue: "Open on GitHub" }),
+            title: o("common:openOnGithub", { defaultValue: "Open on GitHub" }),
             style: { display: "flex", alignItems: "center", padding: 4, color: "var(--text-muted)", textDecoration: "none", borderRadius: 6 },
             children: /* @__PURE__ */ l.jsx(wa, { size: 14 })
           }
@@ -150221,14 +150221,14 @@ function Zhn({ card: n, source: e, dark: r, onClose: i, onInstall: a }) {
         /* @__PURE__ */ l.jsx("button", { onClick: i, style: { background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", padding: 2 }, children: /* @__PURE__ */ l.jsx(Xe, { size: 15 }) })
       ] })
     ] }),
-    y && /* @__PURE__ */ l.jsx("div", { style: { borderRadius: 10, overflow: "hidden", border: `1px solid ${r ? "rgba(255,255,255,.08)" : "#e2e8f0"}` }, children: /* @__PURE__ */ l.jsx(
+    v && /* @__PURE__ */ l.jsx("div", { style: { borderRadius: 10, overflow: "hidden", border: `1px solid ${r ? "rgba(255,255,255,.08)" : "#e2e8f0"}` }, children: /* @__PURE__ */ l.jsx(
       EA,
       {
-        src: y,
+        src: v,
         alt: n.name,
         loading: "lazy",
         style: { width: "100%", display: "block", maxHeight: 300, objectFit: "contain" },
-        onError: (k) => k.currentTarget.parentElement.style.display = "none"
+        onError: (S) => S.currentTarget.parentElement.style.display = "none"
       }
     ) }),
     Fo(n) && /* @__PURE__ */ l.jsx("p", { style: { fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6, margin: 0 }, children: Fo(n) }),
@@ -150236,48 +150236,48 @@ function Zhn({ card: n, source: e, dark: r, onClose: i, onInstall: a }) {
       /* @__PURE__ */ l.jsx(
         "button",
         {
-          disabled: u,
+          disabled: p,
           onClick: async () => {
-            p(!0), f(null);
+            h(!0), g(null);
             try {
-              await a(n), m(!0);
-            } catch (k) {
-              f(k.message);
+              await a(n), y(!0);
+            } catch (S) {
+              g(S.message);
             } finally {
-              p(!1);
+              h(!1);
             }
           },
-          style: { display: "flex", alignItems: "center", gap: 6, padding: "8px 14px", borderRadius: 9, fontSize: 12, fontWeight: 700, background: "var(--amber-light)", border: "1px solid var(--amber-border)", color: "var(--amber)", cursor: u ? "not-allowed" : "pointer", opacity: u ? 0.6 : 1 },
-          children: u ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+          style: { display: "flex", alignItems: "center", gap: 6, padding: "8px 14px", borderRadius: 9, fontSize: 12, fontWeight: 700, background: "var(--amber-light)", border: "1px solid var(--amber-border)", color: "var(--amber)", cursor: p ? "not-allowed" : "pointer", opacity: p ? 0.6 : 1 },
+          children: p ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
             /* @__PURE__ */ l.jsx(Dt, { size: 12, style: { animation: "spin 1s linear infinite" } }),
             " ",
-            t("common:ui.installing")
-          ] }) : g ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+            o("common:ui.installing")
+          ] }) : m ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
             /* @__PURE__ */ l.jsx(Un, { size: 12 }),
             " ",
-            t("common:ui.reinstall")
+            o("common:ui.reinstall")
           ] }) : /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
             /* @__PURE__ */ l.jsx(Hr, { size: 12 }),
             " Installa"
           ] })
         }
       ),
-      g && /* @__PURE__ */ l.jsx("span", { style: { display: "flex", alignItems: "center", gap: 5, padding: "8px 12px", borderRadius: 9, fontSize: 11, fontWeight: 600, background: "rgba(34,197,94,.08)", border: "1px solid rgba(34,197,94,.2)", color: "#22c55e" }, children: "✓ Installata" })
+      m && /* @__PURE__ */ l.jsx("span", { style: { display: "flex", alignItems: "center", gap: 5, padding: "8px 12px", borderRadius: 9, fontSize: 11, fontWeight: 600, background: "rgba(34,197,94,.08)", border: "1px solid rgba(34,197,94,.2)", color: "#22c55e" }, children: "✓ Installata" })
     ] }),
-    h && /* @__PURE__ */ l.jsx("div", { style: { padding: "8px 12px", borderRadius: 8, background: r ? "rgba(239,68,68,.08)" : "#fef2f2", border: `1px solid ${r ? "rgba(239,68,68,.2)" : "#fecaca"}`, fontSize: 11, color: r ? "#f87171" : "#dc2626" }, children: h }),
-    ((x = n.changelog) == null ? void 0 : x.length) > 0 && /* @__PURE__ */ l.jsx(nat, { entries: n.changelog, installedVer: (A = _n()[n.id]) == null ? void 0 : A.version, dark: r }),
-    (o || c) && /* @__PURE__ */ l.jsxs("div", { style: { borderTop: `1px solid ${r ? "rgba(255,255,255,.07)" : "#f1f5f9"}`, paddingTop: 12 }, children: [
+    f && /* @__PURE__ */ l.jsx("div", { style: { padding: "8px 12px", borderRadius: 8, background: r ? "rgba(239,68,68,.08)" : "#fef2f2", border: `1px solid ${r ? "rgba(239,68,68,.2)" : "#fecaca"}`, fontSize: 11, color: r ? "#f87171" : "#dc2626" }, children: f }),
+    ((A = n.changelog) == null ? void 0 : A.length) > 0 && /* @__PURE__ */ l.jsx(nat, { entries: n.changelog, installedVer: (k = _n()[n.id]) == null ? void 0 : k.version, dark: r }),
+    (s || d) && /* @__PURE__ */ l.jsxs("div", { style: { borderTop: `1px solid ${r ? "rgba(255,255,255,.07)" : "#f1f5f9"}`, paddingTop: 12 }, children: [
       /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 8 }, children: "README" }),
-      c ? /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 11, color: "var(--text-muted)", display: "flex", alignItems: "center", gap: 6 }, children: [
+      d ? /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 11, color: "var(--text-muted)", display: "flex", alignItems: "center", gap: 6 }, children: [
         /* @__PURE__ */ l.jsx(Dt, { size: 11, style: { animation: "spin 1s linear infinite" } }),
         " ",
-        t("common:ui.loading")
-      ] }) : /* @__PURE__ */ l.jsx(Xhn, { text: o })
+        o("common:ui.loading")
+      ] }) : /* @__PURE__ */ l.jsx(Xhn, { text: s })
     ] })
   ] });
 }
 function Khn({ source: n, dark: e, onRemove: r, onRefresh: i, onInstall: a }) {
-  const { t: o } = ee("store"), [s, c] = O.useState(!1), [d, u] = O.useState(null);
+  const { t: o } = Y("store"), [s, c] = O.useState(!1), [d, u] = O.useState(null);
   let p = n.url;
   if (n.premium)
     p = "Premium";
@@ -150388,7 +150388,7 @@ function Khn({ source: n, dark: e, onRemove: r, onRefresh: i, onInstall: a }) {
 }
 const F1e = "oikos-store-community-sub";
 function Yhn({ dark: n }) {
-  const { t: e } = ee("store"), r = Ng(), [i, a] = O.useState(() => {
+  const { t: e } = Y("store"), r = Ng(), [i, a] = O.useState(() => {
     try {
       return localStorage.getItem(F1e) || "lovelace";
     } catch {
@@ -150416,8 +150416,8 @@ function Yhn({ dark: n }) {
       s((j) => {
         const P = [...j];
         for (const E of C) {
-          const L = `https://github.com/${E.repo}`, T = P.findIndex((I) => I.url === L);
-          T === -1 ? P.push({ url: L, status: "idle", cards: [], ...E }) : P[T] = { ...P[T], ...E };
+          const T = `https://github.com/${E.repo}`, L = P.findIndex((I) => I.url === T);
+          L === -1 ? P.push({ url: T, status: "idle", cards: [], ...E }) : P[L] = { ...P[L], ...E };
         }
         return tf(P), P.filter((E) => E.status === "idle").forEach((E) => v(E.url)), P;
       }), k || d(S.community || []);
@@ -150428,23 +150428,23 @@ function Yhn({ dark: n }) {
   const y = async (k) => {
     !k.startsWith("http://") && !k.startsWith("https://") && (k = "https://" + k);
     const S = new URL(k);
-    if (cF.find((L) => L.url === k && L.premium)) {
-      const L = Te("/api/store/manifest");
-      if (!L) throw new Error(He.t("store:errors.premiumNeedsAddon"));
-      const T = await Le(`${L}?t=${Date.now()}`, { cache: "no-store" });
-      if (T.status === 401) throw new Error(He.t("common:apiErrors.license_key_missing"));
-      if (T.status === 403) throw new Error(He.t("common:apiErrors.premium_required"));
-      if (!T.ok) throw new Error(`HTTP ${T.status} (premium proxy)`);
-      return { data: await T.json(), rawBase: "__premium__", github: null };
+    if (cF.find((T) => T.url === k && T.premium)) {
+      const T = Te("/api/store/manifest");
+      if (!T) throw new Error(Re.t("store:errors.premiumNeedsAddon"));
+      const L = await Le(`${T}?t=${Date.now()}`, { cache: "no-store" });
+      if (L.status === 401) throw new Error(Re.t("common:apiErrors.license_key_missing"));
+      if (L.status === 403) throw new Error(Re.t("common:apiErrors.premium_required"));
+      if (!L.ok) throw new Error(`HTTP ${L.status} (premium proxy)`);
+      return { data: await L.json(), rawBase: "__premium__", github: null };
     }
     if (S.hostname === "github.com") {
-      const L = S.pathname.split("/").filter(Boolean);
-      if (L.length === 2) {
-        const [T, I] = L, z = `https://raw.githubusercontent.com/${T}/${I}`;
+      const T = S.pathname.split("/").filter(Boolean);
+      if (T.length === 2) {
+        const [L, I] = T, z = `https://raw.githubusercontent.com/${L}/${I}`;
         for (const M of ["main", "master"]) {
           const R = `${z}/${M}`, F = await fetch(`${R}/manifest.json?t=${Date.now()}`, { cache: "no-store" });
           if (F.ok)
-            return { data: await F.json(), rawBase: R, github: { owner: T, repo: I } };
+            return { data: await F.json(), rawBase: R, github: { owner: L, repo: I } };
         }
         for (const M of ["main", "master"]) {
           const R = await fetch(`${z}/${M}/oikos.json?t=${Date.now()}`, { cache: "no-store" });
@@ -150459,11 +150459,11 @@ function Yhn({ dark: n }) {
           }
           const N = F.content_in_root === !1 ? `dist/${F.filename}` : F.filename;
           return { data: {
-            repo: `${T}/${I}`,
+            repo: `${L}/${I}`,
             version: H || "1.0.0",
             _oikosBundle: !0,
             cards: [{
-              id: `${T}/${I}`,
+              id: `${L}/${I}`,
               name: F.name || I,
               description: F.description || null,
               description_en: F.description_en || null,
@@ -150474,9 +150474,9 @@ function Yhn({ dark: n }) {
               readme: "README.md",
               _oikosBundle: !0
             }]
-          }, rawBase: `${z}/${M}`, github: { owner: T, repo: I } };
+          }, rawBase: `${z}/${M}`, github: { owner: L, repo: I } };
         }
-        throw new Error(He.t("store:errors.manifestNotFoundInRepo"));
+        throw new Error(Re.t("store:errors.manifestNotFoundInRepo"));
       }
     }
     const j = await fetch(k);
@@ -150488,8 +150488,8 @@ function Yhn({ dark: n }) {
     try {
       const { data: S, rawBase: C, github: j } = await y(k), { ok: P, errors: E } = Qhn(S);
       if (!P) throw new Error(E.slice(0, 3).join("; "));
-      s((L) => {
-        const T = L.map((I) => I.url === k ? {
+      s((T) => {
+        const L = T.map((I) => I.url === k ? {
           ...I,
           status: "ok",
           cards: S.cards,
@@ -150501,11 +150501,11 @@ function Yhn({ dark: n }) {
           github: j,
           error: null
         } : I);
-        return tf(T), T;
+        return tf(L), L;
       });
       try {
-        const L = await IA({ force: !0 });
-        window.dispatchEvent(new CustomEvent("oikos-card-updates", { detail: L }));
+        const T = await IA({ force: !0 });
+        window.dispatchEvent(new CustomEvent("oikos-card-updates", { detail: T }));
       } catch {
       }
     } catch (S) {
@@ -150693,9 +150693,9 @@ function Yhn({ dark: n }) {
                 "button",
                 {
                   onClick: () => {
-                    if (o.find((T) => T.url === E)) return;
-                    const L = [...o, { url: E, status: "idle", cards: [], error: null }];
-                    s(L), tf(L), v(E);
+                    if (o.find((L) => L.url === E)) return;
+                    const T = [...o, { url: E, status: "idle", cards: [], error: null }];
+                    s(T), tf(T), v(E);
                   },
                   style: { display: "flex", alignItems: "center", gap: 5, padding: "6px 10px", borderRadius: 8, fontSize: 11, fontWeight: 700, background: "var(--amber-light)", border: "1px solid var(--amber-border)", color: "var(--amber)", cursor: "pointer", flexShrink: 0 },
                   children: [
@@ -150724,7 +150724,7 @@ function Yhn({ dark: n }) {
   ] });
 }
 function Jhn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState([]), [a, o] = O.useState(null), { reloadInstalledCards: s, pluginsVersion: c } = Oe(), d = O.useCallback(async () => {
+  const { t: e } = Y("store"), [r, i] = O.useState([]), [a, o] = O.useState(null), { reloadInstalledCards: s, pluginsVersion: c } = Oe(), d = O.useCallback(async () => {
     try {
       const h = await (await Le(Te("/api/cards"))).json();
       i(Array.isArray(h) ? h.filter((f) => {
@@ -150886,7 +150886,7 @@ function GU({ dark: n, active: e, onClick: r, icon: i, title: a, subtitle: o, ac
 }
 const N1e = "oikos-store-community-hint", efn = "https://github.com/Bobsilvio/oikos-card-starter";
 function tfn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState(() => {
+  const { t: e } = Y("store"), [r, i] = O.useState(() => {
     try {
       return localStorage.getItem(N1e) !== "collapsed";
     } catch {
@@ -151041,7 +151041,7 @@ const ZU = [
   { id: "devices", label: "Dispositivi" }
 ];
 function nfn({ dark: n }) {
-  const { t: e } = ee("store"), r = (I) => e(`pages.${I.id}`, I.label), [i, a] = O.useState(null), [o, s] = O.useState(null), [, c] = O.useState(0), d = Ng(), [u, p] = O.useState(!1), [h, f] = O.useState(""), [g, m] = O.useState({ loading: !1, error: null, done: null }), y = O.useCallback(async () => {
+  const { t: e } = Y("store"), r = (I) => e(`pages.${I.id}`, I.label), [i, a] = O.useState(null), [o, s] = O.useState(null), [, c] = O.useState(0), d = Ng(), [u, p] = O.useState(!1), [h, f] = O.useState(""), [g, m] = O.useState({ loading: !1, error: null, done: null }), y = O.useCallback(async () => {
     const I = h.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\.git$/, "");
     if (!I.includes("/")) {
       m({ loading: !1, error: e("badges.gitFormatError"), done: null });
@@ -151086,7 +151086,7 @@ function nfn({ dark: n }) {
     const M = v[z] || [], R = M.find((H) => H.id === I);
     let F;
     R ? R.enabled ? F = M.map((H) => H.id === I ? { ...H, enabled: !1 } : H) : F = M.map((H) => H.id === I ? { ...H, enabled: !0 } : H) : F = [...M, { id: I, enabled: !0 }], fW(z, F), window.dispatchEvent(new CustomEvent("oikos-badges-updated", { detail: { pageId: z } })), b((H) => ({ ...H, [z]: F }));
-  }, L = /* @__PURE__ */ l.jsxs("div", { style: { width: d ? "100%" : "clamp(200px, 30%, 280px)", flexShrink: 0, display: "flex", flexDirection: "column", borderRight: d ? "none" : `1px solid ${n ? "rgba(255,255,255,.07)" : "#f1f5f9"}` }, children: [
+  }, T = /* @__PURE__ */ l.jsxs("div", { style: { width: d ? "100%" : "clamp(200px, 30%, 280px)", flexShrink: 0, display: "flex", flexDirection: "column", borderRight: d ? "none" : `1px solid ${n ? "rgba(255,255,255,.07)" : "#f1f5f9"}` }, children: [
     !d && /* @__PURE__ */ l.jsxs("div", { style: { padding: "14px 12px 6px", flexShrink: 0, display: "flex", flexDirection: "column", gap: 6 }, children: [
       /* @__PURE__ */ l.jsxs(
         "button",
@@ -151215,7 +151215,7 @@ function nfn({ dark: n }) {
         I.id
       );
     }) })
-  ] }), T = /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }, children: k ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+  ] }), L = /* @__PURE__ */ l.jsx("div", { style: { flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }, children: k ? /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
     /* @__PURE__ */ l.jsx(
       WV,
       {
@@ -151249,7 +151249,7 @@ function nfn({ dark: n }) {
     ] })
   ] }) : /* @__PURE__ */ l.jsx(QV, { icon: Nc, label: e("selectHint.badge") }) });
   return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-    /* @__PURE__ */ l.jsx(FV, { dark: n, list: L, detail: T, selectedId: i, onBack: () => a(null) }),
+    /* @__PURE__ */ l.jsx(FV, { dark: n, list: T, detail: L, selectedId: i, onBack: () => a(null) }),
     o && /* @__PURE__ */ l.jsx(
       Vit,
       {
@@ -151274,7 +151274,7 @@ function rfn(n) {
 }
 const ifn = ["Energia", "Meteo", "Casa", "Custom"], Q1e = { name: "", url: "", content: "", height: 280, version: "1.0.0", category: "Custom", author: "", description: "" };
 function afn({ dark: n }) {
-  const { t: e } = ee("store"), [r, i] = O.useState(() => cl()), [a, o] = O.useState(!1), [s, c] = O.useState(Q1e), [d, u] = O.useState(""), [p, h] = O.useState(!1), [f, g] = O.useState(!1), [m, y] = O.useState(null), [v, b] = O.useState(null), [x, A] = O.useState({ content: "", url: "", version: "", showPaste: !1 }), k = O.useRef(null), S = O.useRef(null);
+  const { t: e } = Y("store"), [r, i] = O.useState(() => cl()), [a, o] = O.useState(!1), [s, c] = O.useState(Q1e), [d, u] = O.useState(""), [p, h] = O.useState(!1), [f, g] = O.useState(!1), [m, y] = O.useState(null), [v, b] = O.useState(null), [x, A] = O.useState({ content: "", url: "", version: "", showPaste: !1 }), k = O.useRef(null), S = O.useRef(null);
   O.useEffect(() => {
     const I = () => i(cl());
     return window.addEventListener("oikos-htmlcards-updated", I), () => window.removeEventListener("oikos-htmlcards-updated", I);
@@ -151315,7 +151315,7 @@ function afn({ dark: n }) {
     const z = {};
     x.content.trim() ? (z.content = x.content, z.url = "") : x.url.trim() && (z.url = x.url, z.content = ""), x.version.trim() && (z.version = x.version), Object.keys(z).length !== 0 && (bK(I, z), b(null), A({ content: "", url: "", version: "", showPaste: !1 }), i(cl()));
   }
-  function L() {
+  function T() {
     if (!s.name.trim()) return u("Il nome è obbligatorio.");
     if (!s.url.trim() && !s.content.trim()) return u("Carica un file HTML oppure inserisci un URL.");
     if (s.url.trim())
@@ -151338,7 +151338,7 @@ function afn({ dark: n }) {
       description: s.description.trim()
     }), i(cl()), o(!1), c(Q1e), g(!1);
   }
-  function T(I) {
+  function L(I) {
     y(I), setTimeout(() => {
       uPt(I), i(cl()), y(null);
     }, 300);
@@ -151562,7 +151562,7 @@ function afn({ dark: n }) {
       /* @__PURE__ */ l.jsx("div", { style: { display: "flex", justifyContent: "flex-end" }, children: /* @__PURE__ */ l.jsxs(
         "button",
         {
-          onClick: L,
+          onClick: T,
           disabled: f,
           style: {
             display: "flex",
@@ -151675,7 +151675,7 @@ function afn({ dark: n }) {
               /* @__PURE__ */ l.jsx(
                 "button",
                 {
-                  onClick: () => T(I.id),
+                  onClick: () => L(I.id),
                   disabled: m === I.id,
                   title: e("removeCard"),
                   style: {
@@ -151808,7 +151808,7 @@ function afn({ dark: n }) {
 }
 const W1e = "oikos-store-tab";
 function ofn() {
-  const { dark: n } = Oe(), { t: e } = ee("store"), r = [
+  const { dark: n } = Oe(), { t: e } = Y("store"), r = [
     { id: "cards", label: e("tabs.cards"), icon: br },
     { id: "popup", label: e("tabs.popup"), icon: Aa },
     { id: "chips", label: e("tabs.chips"), icon: js },
@@ -151844,9 +151844,9 @@ function ofn() {
     ] })
   ] });
 }
-const z2 = "https://homeoikos.com", sfn = "2.6.58+202607311735".split("+")[0];
+const z2 = "https://homeoikos.com", sfn = "2.6.59+202608020553".split("+")[0];
 function lfn({ status: n, dark: e }) {
-  const { t: r } = ee("settings"), i = {
+  const { t: r } = Y("settings"), i = {
     TRIAL: { bg: e ? "rgba(245,158,11,.15)" : "#fffbeb", text: e ? "#fbbf24" : "#d97706", label: r("billing.statusTrial") },
     ACTIVE: { bg: e ? "rgba(52,211,153,.15)" : "#f0fdf4", text: e ? "#34d399" : "#16a34a", label: r("billing.statusActive") },
     EXPIRED: { bg: e ? "rgba(239,68,68,.15)" : "#fef2f2", text: e ? "#f87171" : "#dc2626", label: r("billing.statusExpired") },
@@ -151863,7 +151863,7 @@ function lfn({ status: n, dark: e }) {
   }, children: a.label });
 }
 function cfn({ dark: n }) {
-  const { licenseKey: e, licenseStatus: r, trialDaysLeft: i, trialEndsAt: a, expiresAt: o, maxInstances: s, userEmail: c, removeLicenseKey: d, refresh: u } = HV(), [p, h] = O.useState(null), [f, g] = O.useState(!1), [m, y] = O.useState(""), [v] = O.useState(() => localStorage.getItem("oikos-auth-token") ?? ""), { t: b, i18n: x } = ee("settings"), A = n ? "#f8fafc" : "#0f172a", k = n ? "rgba(255,255,255,.55)" : "#64748b", S = n ? "rgba(255,255,255,.10)" : "#e2e8f0", C = n ? "rgba(255,255,255,.04)" : "#fff", j = n ? "#fbbf24" : "#d97706";
+  const { licenseKey: e, licenseStatus: r, trialDaysLeft: i, trialEndsAt: a, expiresAt: o, maxInstances: s, userEmail: c, removeLicenseKey: d, refresh: u } = HV(), [p, h] = O.useState(null), [f, g] = O.useState(!1), [m, y] = O.useState(""), [v] = O.useState(() => localStorage.getItem("oikos-auth-token") ?? ""), { t: b, i18n: x } = Y("settings"), A = n ? "#f8fafc" : "#0f172a", k = n ? "rgba(255,255,255,.55)" : "#64748b", S = n ? "rgba(255,255,255,.10)" : "#e2e8f0", C = n ? "rgba(255,255,255,.04)" : "#fff", j = n ? "#fbbf24" : "#d97706";
   O.useEffect(() => {
     !v || !z2 || fetch(`${z2}/api/license/status`, {
       headers: { Authorization: `Bearer ${v}` }
@@ -151884,8 +151884,8 @@ function cfn({ dark: n }) {
       M = !0;
     };
   }, []);
-  const L = P.free ? b("billing.free") : P.price != null ? `${P.currency === "EUR" ? "€" : P.currency + " "}${P.price.toFixed(2).replace(".", ",")}` : null;
-  async function T() {
+  const T = P.free ? b("billing.free") : P.price != null ? `${P.currency === "EUR" ? "€" : P.currency + " "}${P.price.toFixed(2).replace(".", ",")}` : null;
+  async function L() {
     if (!(!v || !p)) {
       g(!0), y("");
       try {
@@ -152008,13 +152008,13 @@ function cfn({ dark: n }) {
       /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }, children: [
         /* @__PURE__ */ l.jsx(In, { size: 18, color: j }),
         /* @__PURE__ */ l.jsx("span", { style: { fontWeight: 700, color: A }, children: b("billing.activateSubscription") }),
-        L && /* @__PURE__ */ l.jsxs("span", { style: {
+        T && /* @__PURE__ */ l.jsxs("span", { style: {
           marginLeft: "auto",
           fontWeight: 800,
           fontSize: 18,
           color: j
         }, children: [
-          L,
+          T,
           !P.free && /* @__PURE__ */ l.jsx("span", { style: { fontSize: 12, fontWeight: 500, color: k }, children: b("billing.perMonth") })
         ] })
       ] }),
@@ -152045,7 +152045,7 @@ function cfn({ dark: n }) {
         m
       ] }),
       v ? /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 10 }, children: [
-        /* @__PURE__ */ l.jsxs("button", { onClick: T, disabled: f, style: {
+        /* @__PURE__ */ l.jsxs("button", { onClick: L, disabled: f, style: {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -152123,7 +152123,7 @@ function cfn({ dark: n }) {
   ] });
 }
 function dfn({ dark: n }) {
-  const { t: e } = ee("settings");
+  const { t: e } = Y("settings");
   return /* @__PURE__ */ l.jsxs(
     se.div,
     {
@@ -152477,7 +152477,7 @@ function vfn({ cond: n, dark: e, enabled: r }) {
   );
 }
 function bfn({ cardId: n, visible: e, onClose: r }) {
-  const { dark: i } = Oe(), { t: a } = ee("layout"), o = Wo(n);
+  const { dark: i } = Oe(), { t: a } = Y("layout"), o = Wo(n);
   if (!o) return null;
   const s = o.component;
   return /* @__PURE__ */ l.jsx(ut, { children: e && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
@@ -152789,7 +152789,7 @@ function Cfn() {
             prev: C,
             current: j
           }), window.__OIKOS_WATCHER_TRACE__.length > 100 && window.__OIKOS_WATCHER_TRACE__.shift());
-          const T = (g = b.detect) == null ? void 0 : g.call(b, {
+          const L = (g = b.detect) == null ? void 0 : g.call(b, {
             prev: k.length === 1 ? C[0] : C,
             current: k.length === 1 ? j[0] : j,
             attrs: k.length === 1 ? P[0] : P,
@@ -152802,20 +152802,20 @@ function Cfn() {
             ts: Date.now(),
             watcher: b.id,
             cardId: A.cardId,
-            event: T ? "detect_match" : "detect_skip",
-            data: T
-          }), window.__OIKOS_WATCHER_TRACE__.length > 100 && window.__OIKOS_WATCHER_TRACE__.shift()), !T) continue;
-          const I = (m = b.dedupKey) == null ? void 0 : m.call(b, T, A.cfg, A.cardId);
+            event: L ? "detect_match" : "detect_skip",
+            data: L
+          }), window.__OIKOS_WATCHER_TRACE__.length > 100 && window.__OIKOS_WATCHER_TRACE__.shift()), !L) continue;
+          const I = (m = b.dedupKey) == null ? void 0 : m.call(b, L, A.cfg, A.cardId);
           if (I) {
             if (sessionStorage.getItem(I)) continue;
             sessionStorage.setItem(I, "1");
           }
-          const z = (y = b.notify) == null ? void 0 : y.call(b, T, A.cfg, A.cardId);
-          z && Ofn(z), (v = b.onTrigger) == null || v.call(b, T, A.cfg, A.cardId), b.Popup && !T.skipPopup && r({
+          const z = (y = b.notify) == null ? void 0 : y.call(b, L, A.cfg, A.cardId);
+          z && Ofn(z), (v = b.onTrigger) == null || v.call(b, L, A.cfg, A.cardId), b.Popup && !L.skipPopup && r({
             watcherId: b.id,
             cardId: A.cardId,
             cfg: A.cfg,
-            data: T,
+            data: L,
             Popup: b.Popup
           });
           return;
@@ -152930,7 +152930,7 @@ function Pfn(n, e) {
   return { dragY: i, onTouchStart: o, onTouchMove: s, onTouchEnd: c };
 }
 function Mfn() {
-  const { dark: n, activePopupId: e, closePopup: r } = Oe(), { t: i } = ee("common"), [a, o] = O.useState(JU);
+  const { dark: n, activePopupId: e, closePopup: r } = Oe(), { t: i } = Y("common"), [a, o] = O.useState(JU);
   O.useEffect(() => {
     if (!e) return;
     const k = WG(e, JU);
@@ -153068,8 +153068,8 @@ function Mfn() {
   ] });
 }
 const rat = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAgAElEQVR4XuzdC7yld13f++e69t5zC5eEi+cogoaLEUIkWg8oAkexx8vRqowit9Kq1V6tPVoVqihKa60vjxxfKhZPX7a2KhaUUgIIiH1ppWp6lGAmCQkkJBgISQhJZmbvvdZzOb/v7/f/P2vtSUhCZiaZWfNZOMzee631rOd5P8/42nzXb33/5TiOpd3GghsCCCCAAAIIIIAAAggggAACCCCAAAIIIIDA2gh49rs2R8OBIIAAAggggAACCCCAAAIIIIAAAggggAACCOwRIADmgkAAAQQQQAABBBBAAAEEEEAAAQQQQAABBNZUgAB4TU8sh4UAAggggAACCCCAAAIIIIAAAggggAACCBAAcw0ggAACCCCAAAIIIIAAAggggAACCCCAAAJrKkAAvKYnlsNCAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQIgLkGEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBNRUgAF7TE8thIYAAAggggAACCCCAAAIIIIAAAggggAACBMBcAwgggAACCCCAAAIIIIAAAggggAACCCCAwJoKEACv6YnlsBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQJgrgEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQGBNBQiA1/TEclgIIIAAAggggAACCCCAAAIIIIAAAggggAABMNcAAggggAACCCCAAAIIIIAAAggggAACCCCwpgIEwGt6YjksBBBAAAEEEEAAAQQQQAABBBBAAAEEEECAAJhrAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQWFMBAuA1PbEcFgIIIIAAAggggAACCCCAAAIIIIAAAgggQADMNYAAAggggAACCCCAAAIIIIAAAggggAACCKypAAHwmp5YDgsBBBBAAAEEEEAAAQQQQAABBBBAAAEEECAA5hpAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQTWVIAAeE1PLIeFAAIIIIAAAggggAACCCCAAAIIIIAAAggQAHMNIIAAAggggAACCCCAAAIIIIAAAggggAACaypAALymJ5bDQgABBBBAAAEEEEAAAQQQQAABBBBAAAEECIC5BhBAAAEEEEAAAQQQQAABBBBAAAEEEEAAgTUVIABe0xPLYSGAAAIIIIAAAggggAACCCCAAAIIIIAAAgTAXAMIIIAAAggggAACCCCAAAIIIIAAAggggMCaChAAr+mJ5bAQQAABBBBAAAEEEEAAAQQQQAABBBBAAAECYK4BBBBAAAEEEEAAAQQQQAABBBBAAAEEEEBgTQUIgNf0xHJYCCCAAAIIIIAAAggggAACCCCAAAIIIIAAATDXAAIIIIAAAggggAACCCCAAAIIIIAAAgggsKYCBMBremI5LAQQQAABBBBAAAEEEEAAAQQQQAABBBBAgACYawABBBBAAAEEEEAAAQQQQAABBBBAAAEEEFhTAQLgNT2xHBYCCCCAAAIIIIAAAggggAACCCCAAAIIIEAAzDWAAAIIIIAAAggggAACCCCAAAIIIIAAAgisqQAB8JqeWA4LAQQQQAABBBBAAAEEEEAAAQQQQAABBBAgAOYaQAABBBBAAAEEEEAAAQQQQAABBBBAAAEE1lSAAHhNTyyHhQACCCCAAAIIIIAAAggggAACCCCAAAIIEABzDSCAAAIIIIAAAggggAACCCCAAAIIIIAAAmsqQAC8pieWw0IAAQQQQAABBBBAAAEEEEAAAQQQQAABBAiAuQYQQAABBBBAAAEEEEAAAQQQQAABBBBAAIE1FSAAXtMTy2EhgAACCCCAAAIIIIAAAggggAACCCCAAAIEwFwDCCCAAAIIIIAAAggggAACCCCAAAIIIIDAmgoQAK/pieWwEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABAmCuAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAYE0FCIDX9MRyWAgggAACCCCAAAIIIIAAAggggAACCCCAAAEw1wACCCCAAAIIIIAAAggggAACCCCAAAIIILCmAgTAa3piOSwEEEAAAQQQQAABBBBAAAEEEEAAAQQQQIAAmGsAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBYUwEC4DU9sRwWAggggAACCCCAAAIIIIAAAggggAACCCBAAMw1gAACCCCAAAIIIIAAAggggAACCCCAAAIIrKkAAfCanlgOCwEEEEAAAQQQQAABBBBAAAEEEEAAAQQQIADmGkAAAQQQQAABBBBAAAEEEEAAAQQQQAABBNZUgAB4TU8sh4UAAggggAACCCCAAAIIIIAAAggggAACCBAAcw0ggAACCCCAAAIIIIAAAggggAACCCCAAAJrKkAAvKYnlsNCAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQIgLkGEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBNRUgAF7TE8thIYAAAggggAACCCCAAAIIIIAAAggggAACBMBcAwgggAACCCCAAAIIIIAAAggggAACCCCAwJoKEACv6YnlsBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQJgrgEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQGBNBQiA1/TEclgIIIAAAggggAACCCCAAAIIIIAAAggggAABMNcAAggggAACCCCAAAIIIIAAAggggAACCCCwpgIEwGt6YjksBBBAAAEEEEAAAQQQQAABBBBAAAEEEECAAJhrAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQWFMBAuA1PbEcFgIIIIAAAggggAACCCCAAAIIIIAAAgggQADMNYAAAggggAACCCCAAAIIIIAAAggggAACCKypAAHwmp5YDgsBBBBAAAEEEEAAAQQQQAABBBBAAAEEECAA5hpAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQTWVIAAeE1PLIeFAAIIIIAAAggggAACCCCAAAIIIIAAAggQAHMNIIAAAggggAACCCCAAAIIIIAAAggggAACaypAALymJ5bDQgABBBBAAAEEEEAAAQQQQAABBBBAAAEECIC5BhBAAAEEEEAAAQQQQAABBBBAAAEEEEAAgTUVIABe0xPLYSGAAAIIIIAAAggggAACCCCAAAIIIIAAAgTAXAMIIIAAAggggAACCCCAAAIIIIAAAggggMCaChAAr+mJ5bAQQAABBBBAAAEEEEAAAQQQQAABBBBAAAECYK4BBBBAAAEEEEAAAQQQQAABBBBAAAEEEEBgTQUIgNf0xHJYCCCAAAIIIIAAAggggAACCCCAAAIIIIAAATDXAAIIIIAAAggggAACCCCAAAIIIIAAAgggsKYCBMBremI5LAQQQAABBBBAAAEEEEAAAQQQQAABBBBAgACYawABBBBAAAEEEEAAAQQQQAABBBBAAAEEEFhTAQLgNT2xHBYCCCCAAAIIIIAAAggggAACCCCAAAIIIEAAzDWAAAIIIIAAAggggAACCCCAAAIIIIAAAgisqQAB8JqeWA4LAQQQQAABBBBAAAEEEEAAAQQQQAABBBAgAOYaQAABBBBAAAEEEEAAAQQQQAABBBBAAAEE1lSAAHhNTyyHhQACCCCAAAIIIIAAAggggAACCCCAAAIIEABzDSCAAAIIIIAAAggggAACCCCAAAIIIIAAAmsqQAC8pieWw0IAAQQQQAABBBBAAAEEEEAAAQQQQAABBAiAuQYQQAABBBBAAAEEEEAAAQQQQAABBBBAAIE1FSAAXtMTy2EhgAACCCCAAAIIIIAAAggggAACCCCAAAIEwFwDCCCAAAIIIIAAAggggAACCCCAAAIIIIDAmgoQAK/pieWwEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABAmCuAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAYE0FCIDX9MRyWAgggAACCCCAAAIIIIAAAggggAACCCCAAAEw1wACCCCAAAIIIIAAAggggAACCCCAAAIIILCmAgTAa3piOSwEEEAAAQQQQAABBBBAAAEEEEAAAQQQQIAAmGsAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBYUwEC4DU9sRwWAggggAACCCCAAAIIIIAAAggggAACCCBAAMw1gAACCCCAAAIIIIAAAggggAACCCCAAAIIrKkAAfCanlgOCwEEEEAAAQQQQAABBBBAAAEEEEAAAQQQIADmGkAAAQQQQAABBBBAAAEEEEAAAQQQQAABBNZUgAB4TU8sh4UAAggggAACCCCAAAIIIIAAAggggAACCBAAcw0ggAACCCCAAAIIIIAAAggggAACCCCAAAJrKkAAvKYnlsNCAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQIgLkGEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBNRUgAF7TE8thIYAAAggggAACCCCAAAIIIIAAAggggAACBMBcAwgggAACCCCAAAIIIIAAAggggAACCCCAwJoKEACv6YnlsBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQJgrgEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQGBNBQiA1/TEclgIIIAAAggggAACCCCAAAIIIIAAAggggAABMNcAAggggAACCCCAAAIIIIAAAggggAACCCCwpgIEwGt6YjksBBBAAAEEEEAAAQQQQAABBBBAAAEEEECAAJhrAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQWFMBAuA1PbEcFgIIIIAAAggggAACCCCAAAIIIIAAAgggQADMNYAAAggggAACCCCAAAIIIIAAAggggAACCKypAAHwmp5YDgsBBBBAAAEEEEAAAQQQQAABBBBAAAEEECAA5hpAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQTWVIAAeE1PLIeFAAIIIIAAAggggAACCCCAAAIIIIAAAggQAHMNIIAAAggggAACCCCAAAIIIIAAAggggAACaypAALymJ5bDQgABBBBAAAEEEEAAAQQQQAABBBBAAAEECIC5BhBAAAEEEEAAAQQQQAABBBBAAAEEEEAAgTUVIABe0xPLYSGAAAIIIIAAAggggAACCCCAAAIIIIAAAgTAXAMIIIAAAggggAACCCCAAAIIIIAAAggggMCaChAAr+mJ5bAQQAABBBBAAAEEEEAAAQQQQAABBBBAAAECYK4BBBBAAAEEEEAAAQQQQAABBBBAAAEEEEBgTQUIgNf0xHJYCCCAAAIIIIAAAggggAACCCCAAAIIIIAAATDXAAIIIIAAAggggAACCCCAAAIIIIAAAgggsKYCBMBremI5LAQQQAABBBBAAAEEEEAAAQQQQAABBBBAgACYawABBBBAAAEEEEAAAQQQQAABBBBAAAEEEFhTAQLgNT2xHBYCCCCAAAIIIIAAAggggAACCCCAAAIIIEAAzDWAAAIIIIAAAggggAACCCCAAAIIIIAAAgisqQAB8JqeWA4LAQQQQAABBBBA4J4C4zhWRfGH9udgWVz3yarYPFoV9Vb8Trx721Ac3z8UX1T0RfGioSzLEUMEEEAAAQQQQAABBM52AQLgs/0Msv8IIIAAAggggAAC9yowjm+q7/hIcaA6uvOovh8fNxTlE4qy/NxiqB4zFMWhsqo3i2LcLIZFU1nYO4xDb8nw0WIcbi3L4sPlUB4p6/Zjj7ig/WTxv75o1wJhexo3BBBAAAEEEEAAAQTOLgEC4LPrfLG3CCCAAAIIIIAAAvcjMN70pq1P3Tp/4lDWz7FR3ufu9sVF1VhcMI79Afvld1bVbVMOY2U3+6srq0K57mi5b2EDwsPYl2M/9OO8bJq7m7K8qSmGP62r8Y9sdvj9j+4u+mR56aULTgICCCCAAAIIIIAAAmeLAAHw2XKm2E8EEEAAAQQQQACBzyhgyW1594d+89HznfLixVD8rW6sn1eV9efbdK/1O/RlXRT2p7MB4LKw4FdJrwW+9quwDfXa7K/9Pdp99jP7eWmPjPuroustEi6boairu6phuLpthj8Yi+6ydrO+5uBTX34HU8FclAgggAACCCCAAAJnugAB8Jl+htg/BBBAAAEEEEAAgfsUGG9+275bb91+7qIoX9H19XMt1D2/Hbu2Vb6r8Le0OWCN9/adbycHwPZVfO8TwEMxDJ3fp1+QFRRbBUTRKRuuLQgebCx4rK0cuNkZy+q2qlr8yawo/uMjx0e+t7z0G49zihBAAAEEEEAAAQQQOFMFCIDP1DPDfiGAAAIIIIAAAgjcd/BrHb+3HimeaM29f7cr21eU4/hY63awpt651zrUFvoq1C2t3sH/Tku6ldYHYd0PHv1q0leRr9VDFPq5B8L21zBoMjgFwRYAF1Xjj1/oPuuCWIyNJcuzT27U3X+qi8WvHrz45dcxDcwFiwACCCCAAAIIIHAmChAAn4lnhX1CAAEEEEAAAQQQuP/w94PV186H5kcty72kbYqtplyU1tfrk74e5vZ9MdgfG+qNagf7UQS++tsCX5vytbZfD3Z1q+0BCop102NjFjgmgOPJVh/RtIW1QthccWPfzsb52GxX9Xj5RrH7bw42m+8qLzo859QhgAACCCCAAAIIIHAmCRAAn0lng31BAAEEEEAAAQQQuF+B26+97NDuztFv2lk0r27b5sLGJn6beiiqwdZms2DXQ1sLd63312Z/7XtLiCPsLYrGslxFvrr19vjaQt7K/ju6fxUA23aUGKcJ4Dr9tmyxsv3cQl97XDfYhlQVUc1sEthqIsrWVpSrr2+Kxc+N5fibj3jGS+6434PgAQgggAACCCCAAAIIPEQCBMAPETQvgwACCCCAAAIIIHDyAndc/7uPOH6s/KeLsf2+WT08uu53rcehKxoLekuLdi3ntZBWAbDWd9MXqnKIqgcN8Srw7RUKp9vQdUVd2099Orj3r6P+YbSwWBGytmUxsk8SNx4k9/0ieoStaKK3AFhLzPXVbFiM9ac36v63NqrqZ7YuOnzjyR8tW0AAAQQQQAABBBBA4OQFCIBP3pAtIIAAAggggAACCDwEAp+88u2P6/rj/3w+bPyd2aw41FbW8TvfseRWk7yjrfPWF62Ftr1P61be5avgN4/8xi++6vmNGeAofkiP8Z/ZVK+S4zQxHIvDpboIrweOZygQjolhC3+VMdur2/JxxVC1xe7Y7MzK7vdsGvnV5z3rFR+xx6Tm4YcAiJdAAAEEEEAAAQQQQOBeBAiAuSwQQAABBBBAAAEEzniBT1/xXx95dDz64/Ou/e7NjXqrsr7f0qZyrYDBgl6rbbAwttTkrv095N9wLZ1dTvdGYKsF4XRT129lk8Ee+NqUsELh0aZ5VwNgXzhOVRKW4cbP4/7cExxTwSkUrq0eYqgtAK7H42M5b6vx3RvF+E/Pe9bLrjvjcdlBBBBAAAEEEEAAgbUWIABe69PLwSGAAAIIIIAAAme/wCc+8a79xSfu/Ec7Q/1DTTU80v7YWG6Etqp9UABcq5NXlQ8p4PVQ1wJe3RQCa2LXp4HtT23VDbr5gnBa7M2aHhTmalbXA17VSSgsTtURCoD98bZgnAJfVUToFj+2fbBF4jqrklBFhEXGxcIKKXbGZr5Zj7/RbvU/dOhpr7j97D8LHAECCCCAAAIIIIDA2SpAAHy2njn2GwEEEEAAAQQQOAcExvHy9uYPfPhli2H2r5uqe1RdLErv6bUe3tyuoADYi3/tNtMkrr63ADjWarOuXu8Htp5fnwBONw+L46YQWI/PIbE/TulumviNYNkel6ofpsd5YGxb99ezb1QtXNkrNK2FwLNxd2iPzZruFx/Zzn66vOjw0XPgdHGICCCAAAIIIIAAAmegAAHwGXhS2CUEEEAAAQQQQACBEPj4lW/6svm8+nd1XT2tHnatwUGTtrm9V49Q7YNN8qr3N3X0Dpb8eohrwa3CYt1iEbhU8ZBwvcKh1qRvTP7GdG+XHqvt5cqHmPjVAnKlpcWaANaCcREQx0Sx/bRYLBa2MJw9ziaB+7LxEHi7r+44r53/g4Nf8srf4pwigAACCCCAAAIIIPBwCBAAPxzqvCYCCCCAAAIIIIDA/Qrcdc1/Ov+u4+0v9WX9t2blvKm0vFu3KNp2wxd6m4LdUqO3dlNFg7p6tSCcBb5aEG55s2qHTp29jf1RB3D0Beum51Q2ues1ED79azmzBbx1XkQubUSBcgTAnf+ktpBXj9N21SqhbXrdhG22s30Zy41iZ2jshcY/O7jVH9739L9z0/0eNA9AAAEEEEAAAQQQQOAUCxAAn2JQNocAAggggAACCCBw8gKqfvjEB6/7ezv95r9u626zGRelah8U3irE9ZBWq72lBdw0CawAOAe42oP8i66CWU33quohwt0IeWPyN8LiHAb713qu/kvBrh7vr2GvqyXkLPAt9Uc/t9w5P1+TxOqciG3VtivaeFt01azYHmfdvur46w9dsP/V5ece3j55HbaAAAIIIIAAAggggMADFyAAfuBWPBIBBBBAAAEEEEDgIRK45Yo3P2m7L37bOhqetVF3ZdHteM+vAtfSAmAPeNMibwqBpyDWF4eL29BZjYOC3zQIrABY4a9uUQkRC8QpPM4hcA6APTTOwXAKgAsLdX0yWPugqWEPhNMksgJou3mNhE8EWwjc2+ObjaIrN8bFWN2yWe5+66FLXvYnDxEhL4MAAggggAACCCCAQPzejAMCCCCAAAIIIIAAAmeSgIWq5Y0feMs/3C2q121W44F2nFtNgxZ10+StJmtVs1BF965P7Mbkb0z66kjsewtr7RH+syZ1Bnf2db6pyiFPBOtxHuTaD3w7vfUMq+/XH67XSwGxhcveP6zA2be/EgDb82MbMVnsv2jbttQFbBUWxfaw0TfV8KuPfuZ3/EP7+XJHziR49gUBBBBAAAEEEEBgLQUIgNfytHJQCCCAAAIIIIDA2Stw0zVv+1+2j3dvmTXVl9bDvKyGhUWtVq+ggNcmdqumnSZvFcKqi8ErGVLoqkBYwa8qIaaQ2DsdlA5rG8nG7veI16aCVyeBLcON7aeYNqqCbVse7MYPVQOhiWAFwrk7WOFv7gH2R2oSuLaeYKuB2B0qWxCu/ti+dvymRz7zxX9x9p4d9hwBBBBAAAEEEEDgbBMgAD7bzhj7iwACCCCAAAIIrLGABa/1TX/1u9+9M7a/0AzzWVtY76+Fv+rX9eDVpmkVtGrUt/Y+X03i7u3wnXp8p4DWAuT02OgITo+3DmF/vm2yTtO8e6Z3beJYC8QpAM6LwvlzU+1DngBWq4R3CNs++gRx2p88cNzbA3qrrZgX+/rNav4rh/Y/8p+VF37d7hqfRg4NAQQQQAABBBBA4AwSIAA+g04Gu4IAAggggAACCJzrArd88K2Pvasbfqusqq+alb2VJexY0KtpWoW4Ef5qWldzuJrn9UqGFLyeaOcTwytTu7pfj/eF3NIibv69potVJWGBsbadQ+DcC6zZ4ugMtkA4NajpsTlU9pqJ1u7R0PDQ2dSv9QDbz/JksZ7bjXUxH9uxK5pb9rfHXnjgGa/84Ll+rjl+BBBAAAEEEEAAgYdGgAD4oXHmVRBAAAEEEEAAAQQegMDHPvCmF9y9W//mbFY+xgJgq32YW4evJnUttNUibvbba123UwCsGgblwh7ueuev9fc29gP7eXQG22JtaWG4mP6Nqd/8RwGw9wprqtcWlVM3cEwDW4Bri7j581MlhIfJqb7Xg2MNJlvQq+c3qgb2zdi2U2fwaBUTsX1bEE6NFPVGcbxvuoP1zj/Zf8krfukBcPAQBBBAAAEEEEAAAQROWoAA+KQJ2QACCCCAAAIIIIDAqRDQ4m83fOA//8v50PzArO7b3P2rqgfv3rVQN+ofGg9m4+dRz+DhrgW4/r0WafPHx/1N+o1XXb0xAZxWafPnqsc3d/5GQFzbE0br783Tvkp2c92DwuHe/uOvba+nKWNfdC7Gf/3vvP2ohVCIrGfVRWcvdLyrx7Ls337+sza/uSwPR68FNwQQQAABBBBAAAEETqMAAfBpxGXTCCCAAAIIIIAAAg9c4JNXvunAnfPiv4xl/bym6Cw+tWleq1+Ywtc0vev9v6qBSCW7mtr1ANgC31wJkXuA9b0e55O4CpDTTUFtLN6m4DaCXw9s7aaO3+j6jW7fCImVEqvWQfsTf+fHT5USqojIXcM+jaxF6KIbWJF0aZPLqoHYHcqPHNja/YoDF73yEw9ch0cigAACCCCAAAIIIPDgBAiAH5wbz0IAAQQQQAABBBA4xQLX/8V/fObxYeOyjbZ6XFt1VrkbAbCqFPLErwey0+RvCmFTLUNtoWtUM6SJXIW5K/s4WtDr9Q42wevBr+5PAXB8bXPD3t2rSofoCq5L+9vXnNO0b6qh8C5g3WK/rKjCv1PVxJ5u4TRprO5gTQFbDF3My2Y8vqi3D5bHXnLo0u/6vVNMyOYQQAABBBBAAAEEELiHAAEwFwUCCCCAAAIIIIDAwy6g+ocbP/CbL9kuDr5xo+o2ynLu9Qk+bZu6fFWx0DSNB8Axiau6h1QDYX+VSmotjNXU7TTRu7JYm+JgTfeqx7e0MFe36BVOwW2a6tW2awt8Gwt/u84Wdcvb01O9LsIiXwuZ1fubp4Nzp/Bqx3AOo/11FC57fURb3LVbDIdm3c+cd8krXmU/X44lP+xngR1AAAEEEEAAAQQQWEcBAuB1PKscEwIIIIAAAgggcJYJjFe+aXbtzvAzY3vgH29Ucxu3XRRlZ5GpVl5bmcrtUx1DDlqnqV0tDpdWg6vTxK4IIiiOyd5S6a2mdbV6m+JYBcyqdvDHRY9wvqnKwRd9W7l5FYUvPxeBcQ6oVx9zYr+w35deZ7TX74emOGbDzU3dv/2CQ+d/W3nh1+2eZaeK3UUAAQQQQAABBBA4ywQIgM+yE8buIoAAAggggAAC6yhw/V/87iN2+v63q6b9mlndWdK6W1QpOPWpXeWoHuKmrl4tBme3PD/rU7u5mEH9vVrMzb7PHcD+PNVJaMo3hbhW2hlVswkAACAASURBVLBcQC71A0fIG9PBqpSIWwp87R4PnoeYCm6q2nuEI0JOC8nZYzurgqgthR67CJj98bYtG3Iuegupj8/Lsd6YHdnqh+cduvQ7b1vH88kxIYAAAggggAACCJw5AgTAZ865YE8QQAABBBBAAIFzVuCGI29+/LHj5WVtWz1zo7EItjvuk7tpPndaCE5AZZ0j1xTPdhbCapK3H4u2bW1Ntwh6K6+EiPoFT4o95LUmXg+R9ZioksjTwHqIB7afMQDWtrQWXATA0+Jx2u5KjcSQOonzBLECZ6+IGKwHuGqK4wt7iXb/rVvN4tmPePp3fPicPekcOAIIIIAAAggggMBDIkAA/JAw8yIIIIAAAggggAAC9yXwkSNvfsLubvXupiwvbJuhGHqbAM4TtwptlbF6hUOEsH5L/b6aDI6fx8SvZ7P2Mz06VzzkKV6fAE7VDmqCsCFe7wPOk8F1bZO69jwPhm3RON3UKbw6BZz7fiNItnjXAmg9T/uo8DimjrsULqt5OPavGBufAN62Aed5OTt2oOyf/ahnfecVXBkIIIAAAggggAACCJxOAQLg06nLthFAAAEEEEAAAQQekMBHr3jzk3bG9j1NWTyxrjoLSxdp6tdS2pTYaqI3un+jkqFWp65VMOgWXcC50zeqGhQAR69vTOAqFFZQmwNgBbgeFKft5cleBcB5wlfPa/Ucf2xM/ur1vXLCwlyfNE6/UatT2O+3EDgeF8Gyh8ej6ibsnrIp5qPVQPTtzoG2e+75l7z0zx8QEA9CAAEEEEAAAQQQQOBBChAAP0g4noYAAggggAACCCBw6gQ+fORtF853+ne3dfkEWyDNpmYtBE6VDWPq9PUoVz3A3t2rADa9fg5etfibOnz9PguLLahVOquqBxvLnbp6NVnswWwKZ/W1Bc9W0ZC6flOwO00Kp0DXYuDpgPOCcf56NkGsmzqHFQ5HHUQEzrr5dHGaFu4t/N3py2K32pzP6vlXPe7il/6PU6fIlhBAAAEEEEAAAQQQuKcAATBXBQIIIIAAAggggMDDLvDhv3zLkxdj8/ttXTyhKhcWmCoE1iRuCmu9mEF1ChYCW9dvTADHbiuo9ZA1dwNrEjgFr/HzmOAdbVpYi7N5sKyQ1jcZoa8/LgfJHgwrME4LztljPXi2+32C2B7vi7+pd1iPzBXDut93SMFvqn2wr2wOOAJgu38sWw+Ajxez+VY1f/5jL3nZnzzs+OwAAggggAACCCCAwFoLEACv9enl4BBAAAEEEEAAgbNDQAHw7mABcDM+obYJ4GrsvJ9XYa3XNGhxtjRJm7t/fcJXeatVQeT7onIhen7j67wIXO4R1mRwhLQ5APa14tLrtPaiueO3bZrp61hULoLcwoJmr5OYZopVA5FC5BQq63U1hazHjVYO7FPJ9h81EysAPja2831194LHXvLS/352nCH2EgEEEEAAAQQQQOBsFSAAPlvPHPuNAAIIIIAAAgiskcB1V771CxeL6l1NNTwpB8AxSRu1DropqPW6BoW0fUzlKsVVEJuneHMAHP3ACo5TMGshbK5wqFKlhBZv8wnjaZI4VUvYlPDYdz5p3NjEr7+2B7hxG22bFuv6kG/j4XNMEcfEcnQOK1D20NiC635Y5Cfaa1XFYrCF4MZ2Z7PafcFjv+QV71+j08ihIIAAAggggAACCJyBAgTAZ+BJYZcQQAABBBBAAIFzTeBDV/zXJ3Xd+I62KZ5cV1bVYDUQHuZaCDwt9pa7eVX/EO0LMWFrFbyxuFssulaudO7mHl6va0iLuMUCb3lq155sga4HtWlBuVi0LbZvubGHzAqhp0nk9Bv01DecqiLUIRzbWfj+RF9xnlJWV7AWiKsLq7oodsbm2Oasf94FT3/x5efaueZ4EUAAAQQQQAABBB5aAQLgh9abV0MAAQQQQAABBBC4F4HrPvh7n9sN7dstPn16U2uCdu7TuTFZayGvfmsdo3pBIWv+eYTAafLWFmNTLqw/eSLYQ1ifyo1Khtwp7JUSNiGcb6qbyI+LCgibDtaQr6oe1PGbtpEfH53C8XxNFut71UDoNqbJ5X5hNRa2M/q5B9XqFa5nxbyvi92i+dS+ZvH8Rz39O6/ggkAAAQQQQAABBBBA4HQKEACfTl22jQACCCCAAAIIIPCABG68+q2fs7Noftemfb+0LOaWvc4tWI0AOE/x5qlabdAD2TTpq7DWb1qEbU8XbwqQUxWD4lqvZVhd+C2FwsudjMXfRi3dpgoJq3cYbAw4B8CxEFwKdL1ioppeM+9Xnh7OFRAaUfbJZHUA2xTzYmjGRVHd0Gx0X/uYL3rJtQ8IiAchgAACCCCAAAIIIPAgBQiAHyQcT0MAAQQQQAABBBA4dQLXX/n2x5Vl/TvzfnhOW3UeAKt+QeGu1zfYTRUN+jp/70PBKQQerN5BAbBuqR1iWoQtTwRbpa8Fufn+1NubOntjUjgWgFPlhIe3KclVpUNloW/sj8Lg/DoRBCt01i0Hvro7AmNNLNsUcOow1vdj1RS7Yz1amP0/x3b45vOfcvivT50iW0IAAQQQQAABBBBA4J4CBMBcFQgggAACCCCAAAIPu8BfX/euz+26+vd2u51L2rK3ToXOqxUUoFp1blF6+mpRqrp7LUT1wNUmcOumtEXWrF7BA9uoYihtale9EKMFxgpnh7yYXNn443KNhCaBFSZ3aRE3vV4sImeLu1knxGDBb1RJxIRx4/ujr+N5o/VS5Mf7/Sk4Vm9x7hnOVRReEWH73dvBKABuNzavacr5Nx966uFrHnZ8dgABBBBAAAEEEEBgrQUIgNf69HJwCCCAAAIIIIDA2SFww9WXvaDrq9+w6oXH11aQUNpCcMp8FZz2qmOwPwqAddOkbr7Pp35tETfv7PX7tMBbH5O5aTpYgawHtfb81cC21uJuFuRanOvb1Vex/Qh2fdA3hccKlRXwqnYiQuCY+G2aZgqUNaHsIbLtq+oqFFBP1RHaZ4XN9tSFdUpsj/V8q+2///wv/o5ftccsy4jPjtPFXiKAAAIIIIAAAgicRQIEwGfRyWJXEUAAAQQQQACBdROwELW8/qrLPm/ejf/GUt9vqqu+bWz616sfNPHrKWwEuD4JnKZ8FdfmiV2vbbDAdbB0VYu56bk+Hbzym64/3+73x1lE60Fv/BXTxXabQmUPglORhAJmy2e9dsKC39Up4Xwucg2FNqi6hzJNDKvz1wNsC4YVFI++EJy+H30KuCjra5qi+4ELNmbvLS86PF+3c8vxIIAAAggggAACCJwZAgTAZ8Z5YC8QQAABBBBAAIFzUuCjV77zou2+e8041l/f1MVmXS3s91NN82riNqZrFQL7FHCqZ9DEr+oUlLMqkFVArJtP3E4LttnibX23rGVQ0Ju6evVYbdcXeUv9wnpea+lxfo0IdS1N9gfb/igdtr996leTwHq9vD9p2xYxe3+waitKu2+0xFrbzxPFtV7LaiMUA9vRWfVEq6O7caPZ+fFHlO1vEQKfk/8EOGgEEEAAAQQQQOC0CxAAn3ZiXgABBBBAAAEEEEDgRIFxvLy94cgtX7LTjT9RNZsv0OTvaMFpXapeIRZ70y+qXWeLqOVV3XLQ6qu/2WJwqaphWnxNQW0KgxUKe3g8LcgWoW++eSdvmgTOz1+tbNDjGu/51VSvhbkKpVOArO+9YsI7gW2bte2LGibsNfV6eSJYfcWroXNp4a++7zxItq/rDauDqMeqrT9WFzu/0M6KXz/0lO+8jasFAQQQQAABBBBAAIFTKUAAfCo12RYCCCCAAAIIIIDA/QpYQFp96Kp3/s1ht3ydpawX1dVgw7Gj1ewqAFZoagUMGpZNi7spXY0gNn511Vc+uZsmcHWfah8UyC57e6M2wqd0feE4pci5Azi6eXNFRG+TwLppaneaCPaAON3U+ZsXkvNQ2AJqvZZtN1dT6JE5BM7b0Ot6GOxBsPY5Fq9TON11tg+2x5WlvpYAjxaE3zVrq9+sivm/fNRFh2+8X0QegAACCCCAAAIIIIDAAxQgAH6AUDwMAQQQQAABBBBA4OQFbr758n1H77zjb3aL8TVN3Vw0jrs2yKtSBPX2atrXun09AFbAG5PAY1rErUyLwPnabD79ayFt6gguVuoc1PWbe33jcVHdoEqHWNwtVUakReLU6JAnen0y2Lap71X14I+fporj+KepXgXLypdTOKznqEZCNw+fNRGszmLtp47L/uOBsT2usz++/JxC4WqmZeOKnaHcnZXj++pq/tpHffGFf16Wly5OXvzs34J6os/+o7jvI7DrJDVSr/uRcnwIIIAAAggg8HAIrP0vUw8HKq+JAAIIIIAAAgggcE+B669/3+bi+Px75l35gxvt7HOqsrd0VH+6YrHYnSZ8cwCs4HXIU7kKgW0QV0GqfhYhbJrGTdlZnsj1kNZT4jTZm6obok/YnqeJXt2dFmir7AXzpG4OnrVom7bnwbAPG6dpXj3fQ+KYNl52BmubMTPc2EOmx+tHqfoh73++r0nbVQisTuBhrMbdvrQ14vojW233OguB33K2hMAKae868juPnHU75y3GsbUEviw7S+zrIVD0fZ9KlcvOvtZ9+r5N58KuA/uxf6MfdfZ9ep6NgtsJt+Ln/He+tHTtaDE93Wp7TG+PyTcNW+f79Lhpw/pCubq9SGd/1+n5Gtf2m21Dr6X79Hfau2m7/oVWHUyPn14zbdO3fR833d3k0XW9fdAtX8feSbBLwOquR9Np+3FY2DsEM79Y/WvtT2Pj8kN3dN8jq0+VT3zlzn2/GPcigAACCCCAAALptxkgEEAAAQQQQAABBBA43QIW/j5ufnTnexd99feaWfNYCz8Vv/p07jDG5K8vtuYBa2RxUZ0QIWz07GqBtVgUbk+3buoC9oQ43XxxOPv+no+L/t2oZ7C5W3XypkljD9qU7aUqCdVR5NuJ2/Hw1zuFU6+wcsP08His/VyL0qVMc+oZ1nPsOHwyWXO/tWWg9r2lvv51bwvHLcp6tJ7gj21W48+Ms81/f8FTv+nu031+Tnb7d/75r3/Z0a744ardeFpTjmIVsAeoNnA9WsWHNXx06sGwrg/PxC3ytuNWl4acGutCHkaPau0s564PnQlvYNb/+WWQejs6e4xyexVpRPmG3bcyQ2vbVcXGZ5iqtV3IC/jZl1POmxAswLfsWtdBzHbbdad2EG1Q6az+VqWH7e9gp1EHpusm9ny6HqYLZ+Ua8mtm+X1iUBNIDpr9TsHZSytT1823NNpjertcmmZW7Pb9p6vu2Fse2z7zZ8pLmRI/2WuX5yOAAAIIIHAuCDABfC6cZY4RAQQQQAABBBB4GAU+fOW7P2976P7FODbf3jbVARtijLTUF0PTKm0p1E0Ltqk6QTfFer5oWgqIvfLBg8AuqhVWwlUPyTQtnFLYeK6P6HrXrgfH9sOohIhpXlVOKKn0zVjAnBeJy4u71YoXV15nSZiGWtP9+rlXTqRwLy8CF7Hksm7CH+cTyHm4NYWBWtDOAvApPixbq4OwcoyuvGVf0/9Svb98/aO+4PCdD+MpvM+XHi+/vL19PPJPt4eNn9iq+41qXJir7LzIWf9nPrm2I4X7Og8enOpERfeyty7b132/CPfJM861uzbLio1pp/TYdL0oWbararo2bIzWg/Wo4kivZ2H96gKBlgD7taKSDr0p4BG0XWN6gp+v1ECxuq/5XPaWyup+XbO1Jrn1pkN6c+HEQDi/QaDCk3wd6HVXCy5ytUm+nvMxWgbtPn3ZFHP7s+jGK87bXLzw4MUv/+SZel2wXwgggAACCCBw5ggQAJ8554I9QQABBBBAAAEE1krAArP6Qx9655fM5+O/GKvma6px2GxsbFNDnAracj+vQttpIlPxmz7t78HtsmIhB24elKYOXwVsOSz0+1MI6KGaj2zGQnC1BWZT/YP3DfuGvQs4RjsjgFykHmErlojnpXxWEa5CxNGCybyYXD5Rvo0cTqap3hz0eYewFphLx6P98QoLBaJ7wuu0KJ3u04CpZqOtOWGoZuO8H4/Oqv6NVdn9/KOf/uKbzsQLZLRqj0/d/rHXLobqB/aVC2tB3tVYr09s65i9e9kMIrxf1nIoII5F9GLSWwF/hOcB7yG+r6yXJ78jCNafhUHlNwimc6EzaeF6ZSFxDuH3XFfaKx9Hjv8JpKDfX18tz3Y9Nt4Rrf1TQKzp8DSprcxebyCszhN7wB3P9/2zNyn0RoPezMjXno4/X+cnnjfvtvbjtQl49UH7IoVxncWQeAqp03VS2TVsA8GmOit27MrsqtmH6354waO/7My8Js7E65R9QgABBBBA4FwWIAA+l88+x44AAggggAACCJwmgXG8vL3qqk+8sNstftTCrC9rZ55s6RPz0yfec9jnVQge7KVF11KHroe0K+GqRnXjl1cL37QAmyYu0zSw9/0q/PMpz1z94B/g9+BOIWSEkRa62WMVuqnCQWG0QmAP/iy6jMA4UBTe5gAxFqdLwXDdWpCoADmC4wgHl4FgnkIubX8i0LNp0nTLE6bL73P4qenlaANQMKivRkWpg83TjuWxduzfVjf9ax/9xd9+tR3DZ6g2OE0n8342O17+tn13lZ/+2cVYf9/WsF025dxOh/1JU9gxYZvOXA4784J+so9R6el8Nh6OpulwnTWdJ5/ijUlu3bS9HOrncNaniPdMhltgmkL7eP0IWfVqU7Bswa1CY6/isJsmemsPY3WNpCnyNJsdiwgua0Z8iF1vHvgygXbNKfDVdXjidZv21yeDNcmrumI9z56vv/VGgf7OtylYTj/w720fvRZ5tmHx+mxc1LMP72vG5++7+KUfe3jOOq+KAAIIIIAAAmeTAAHw2XS22FcEEEAAAQQQQOAsELj66j8+OAx3fvt8t/gh62x9ksVcNkyZQ74IebVQ2hR0pWlKxW4+/ZomcSOq0w9Tz64C3hQO+o9TCOidvTkotp9rQjhPgOpxuX93qmhIE8i6L4e1/lF+fe9VDKoLUDAbz522lSoJPEz0zt/lr9KNpnw17ZtCZp/qXJnyVaaYKw1yRUGE1cuQW6+r1DEmkLUWWWP1F7ZMmCWki7LpbNmyPyyb+Wse88Xf8T9sHxLKw39BjFf/2sG7js7+n52xePm+wgLgwSogbHEzD8W9izeC173TvynQla+mhX1BvDiPHqhaaO428dS4TVUM6XFpET3dpfPnz02BvIfBCmTV2Ts9354wTdbq2kqlGxa0xw7mkW+9bkz2+rV34t/5mvLgN4JcTTFbu3FMM089v3miOTav60WHkFqNY8JdP/eXXtZW5Gti9c2PWAnO3myoN024HefF7IYD5fC8rUtffuOKEF8igAACCCCAAAL3KkAAzIWBAAIIIIAAAgggcMoErr32sgt25uPf7xb199i6Xo+vNAbrH4vvi8ViUbRtG3UKmp71CVGFZmmqU32tnviljtwUEuv5Xae+Xls2bCUAzjudg7JcMdDY9hUC58DRwzeFsT41bCHanmnLCP30Ef4IcG1xshQIjpoGtW5gvz9VAPjrp9+gveM23TQNqrgxpl4jwNyzfyuL1+XJ1ZhiXnYP2yJo/hSPLT3QtJDUXl/TwLZM3jgf7EP/Q3/F/rp/7SNmzWXlRYfnp+zEncSGxmt/49BdR4dftv178dZ43OJJ7e0iFvVbDXB9UT/Fnwpw7RxZwO0Bu5//1Wnt1NGcwnRZuLstlOd/p0A5QmMFyCnwTz/3KWAdj86nT3yng/NKhng9vx5y+J6uDw+MvZN4b7a+GtL7tk+cv06VJKtvOugVvV3Eb1FnsrxwVjbgix/GfubbdH3oB3ly2o/JrgMz2x03xt169tH9Zfm8rS95yUdP4tTxVAQQQAABBBA4RwQIgM+RE81hIoAAAggggAACp1PAwq/yyJF3fUE/dP9XNzYvq6txyyoTYlBVlQvdIk271tOiXJFvRQ+qLwSmRd40L5qC3zwV6ZOSHvR9hlvqXW0qm5G1hd38pioHn+RV7pYngvM0b+qITWGtkujocs0f59f3FjquTBb71LKHz7Zdr3WwD/1bMKlAO3pj7WZ/aRI4LzY2dbumOoNlPUGE09GRm55ofzWpk1a1BQrCc4DdNDPPMgf72Xz0ZuKb2mr3deeXj/mN8uKvPXY6z+sD2bYC4DvvHt9g5/3bNwcLgD2u3vXA3SbAvV/Xg8zcfZwWwcuVG/KPQNamr72po3fbbK3zEtPAuSIkd3Tk85mnvJfdvx6iKnBeCex9ktcvunS+7PsIpFNlSAqANdebr6EYTY5ah+gGtv+28XWPmLVfXkmRp3djv3JtyLJ/OAX7KyFv7Edccz4V7Mcf162uQn+DJP2tXHv0/bCe6qIt5sXG2DWbH90cdp6778v+zhnZC/1ArhsegwACCCCAAAIPnQAB8ENnzSshgAACCCCAAAJrKRDh72UX7/bDTwx99dVNU241rRXVKjSzQLa2wCwWa9NCassFr3Iv7LRom4VpTdPo8/wRiKXALP/CqkA4Jmbj75TSTSGed7nqo/+aPLU7K1tITR/ln7qGlyOZaeEtey31sk4ToRE65olidQHn/lkPoNMkaj6JMY0cVRF+syywtQTTQvA0JapKgpg81n5Mk6x54tmy6j3Twnqcby/2wSshlBNq05481sVc/bFlPe6O460H2vqXNmYbv3joad9y+8N5YY1XvunAXfPFG+Z9+eKtardsbPq3shoIzVrnAN6Ps8s1DRZ1+5S0hnTjnKsWwwNfHa3Oxwk1Hjq+1QnbfO3kADbuX6kV0fnPIW1a9E3XRw58/fpJi8v566UAOrxXJoB9o/rhcv/z9eGP9Tcw8gR7CoDzhHh6x2JcGRm+1//xtVJf4seRTqYmzP282xR4vAFi35fWATzOxn62deNGt/2VBMAP55XPayOAAAIIIHD2CBAAnz3nij1FAAEEEEAAAQTOOAELpuoPXv3OL+sW/WuLoXle0w4a+rTeWgtBU7Clnfa8VkWmFrZFP2v07Wq0VQOhOQTOPcAnfsx+9aP3WlTMl9+y55aaMNUiYT6VaeGrwmO7V0GsPWDaBw/49HivnIjgLne15knNWFstLfym56aJUa+qyFOqK2dAr1+3UWPgNwXTeapY31swqBBSE56rIfRUWZEqH2ze1Ssr8qSznuoBsLbl+WOEo3p41VgNgGWCC+sFHsr2+EY5/+XNavzZgxe//JMP18UxfuDf7797bH5l3tcv2fCGWgt/raVWAfDqLR+3VOK2XBxuMpGZTp0H7nEuctVDLOQXTQreLxzf2WlN1RBes7Gcwk2108vB39wFEUlxnLI0veuTwpFI+xsVcX+qkLA3MXR/nNJlV68/JgXVfs7yceWLNx++TxmnY9Gx5SA6TRXnpQ1z0BwvpGtKge+Koe1XX20UO4VKNmZ/vVX0z6ED+OG66nldBBBAAAEEzi4BAuCz63yxtwgggAACCCCAwBkjMI7vaz541dEXLnar11RN+0zLQtvCJj+j0kHhrH2bQrkcuHoAq45Y7z5dljpEcJfDYYvLVLGwsJhrNpuOVx3AuvUeuqmfN3/kPwJDX5ArTX02Pj0ZIXTu2c2/+Hq0Fqmih6x5sjQqG/QKtiV7rvJAr4FIE7y5wsHDyVQX4TuUJkw9rLXHKmBerYKIEFNhZxzXFDjrqXYsCoB9+jWFx9ls2jc7rnysmoL2wWotOFZZ1DqUxzbq8S32kj/1mEtecu3DcXGMN79t39233P3Lu0Xzss1xuyy77WLDgnlN0pYr9Rd9CsoV3UagnysZVPsRQb4WB9Q0cJP7fT3kT+coVzakANiPNYW5vohfcs7n03NYeXnNrio34nV1kjXNXdr145tIAbsHxgprdc2m6yNXQAya/vbAV8/fu7hb7Iamt9MVNg2ne/9InJLVLmTfTlRK5Ofq7wi4l4HvmANvF7FCCOv/7a3m5PhQj105u3lfMTybAPjhuOJ5TQQQQAABBM4+AQLgs++csccIIIAAAggggMDDLmCLvW0cn/ff2Pf1T9gvlE9tGmv9VdinEFdTnBag6TvPviz8Uv6VJx9z4JmnfSMEW3bu5lCszhUQaWI3d8je8yP4y9qGgIlFtyIEjrA4bhHC5kDYAz275UngGNxU+BdBbb5potnrG/TYFCD61LH9J14tbd+S37ZVP3B8n/c/tqUwNCaX83PyoKj2Tz25Mwu4I1zWFKqqLHJAHn/nSgBt3yNBG5W1gg2bBm4XG3XxVjveV51/8bdfZ/u4d/R2OpLT88V405u27r5j+KXFUL9iq9z1ALjxk7WscpgCei38pqoOha+pCzgH3nLUteKL46XQ1638/GkiOILwhBF/p1BZ192JHcPL7uf0P3kUJnsncPL0cl2FtMsFA/2NAS38Z6+Vb9o/7erqdPdU+zGFuX6G0lOWE8Z5//K2dCRRc7GcDI9zq+A5BdS5szpfX346de3o31RbWNA+zkubAB7nz6YC4vRc02wVAQQQQACBdRMgAF63M8rxIIAAAggggAACp1ngyivfd2BRHH/p0NU/ZGHpEyy6qnxiM01t2lyu74FCymmy1+MxC0d9+DEW+dLEo0La6GC1cM++7rpYxM37de0xMfkaH+3XhGVM0uaJ3xTIpo/lLztiUyDsIW36KL9t06qK07ZPmCjVImAKHX0RtvSa9rNpetmnhO3n9h+f3k0Z5Nil40uBXUwoLxcFU5+v9rdLU9AxXBwdvwo7u7kt6eWLyKXgPHD8+HIA7IFwmjiVlb7vUqCtQHKwB1t0PG53xXxjVv+ZzVz/6AUXv/i/m9cywTzN14MHwLdbAFzUr9gYd8p62DHJMFWYbnudqhZUXxHBuV8Xdrz+RkHqVs7Bu9dhpPoQXxROXjJME7pT6OsTvXGYegVdHzGJGwesifB8y3Uj/tg8jWshb0z6prx8ZXE4f9yKoE5NXEv5lrul8zTw6oivX+x7b5pQT6lx7nbOw8HTGxp5ETq/ALTwXKqduJcAeFHNbtqo6v9tU6MyFwAAIABJREFU/5e8+ObTfHrZPAIIIIAAAgisgQAB8BqcRA4BAQQQQAABBBB4KAS02NsVH/79C4bt/rvLsf3HluxdUDdj2S/mHtIpoFSYlft/80Jty45dBX9aDE0Lwik4SxOPaSo2FkCLwDYC4Ajm8iTtMmKL4DB36+7p4M0TnhY+akG4uC8FfDZ+uVy4TYFyqOWKhsond6OiQWGkAjhVQegj/76/qUM4P17H69UD2oYv9mbzuBZYR3Ac/b265V5aHZ/f0oSwKhJyN3D+uVdWKDJNFvnYPEi2cDwHpu5iKWPnnbmtOoEtW9aKd8Ofb7XDjzy62fzj8qLDdmJO/y0mgPtfXvSzl2+W20a3Y9OyywA4G/sxpTcBFA7nSo98rAstGGh+eRG2mLj1Xo09/irNiAA5T0ZHfURUNOjHe7uAfSLc30BQ1mvm6Xx6rurPyV2/K53Rfu3Y3d4NnCZ01QWcJndPVJ0qI9IdObTP59/PY66wmK7ztN2Vc53DYK9KyQG2lz/rGlQH8MwqIKpxUbY3bRXFl++/9GUfP/1nmFdAAAEEEEAAgbNdgAD4bD+D7D8CCCCAAAIIIPAQCVxxzbue2u0OPzwO9TdvbLaHrGPXUikLSNNCWF6LkD6ivzqAOi2CNgVgCtoU3uVFwOIj+P4h9xTa+v0p4FMA7AFa2n6uQsjdu1OA6xO8loH6b7jLft8I+XoLqKNDOIdsU6CbwlpFjx67pcBx6FK4a4Hj1Dfs08ApeEyLj3kIa/u9uuiZ78c0wZxDZos//Vhs4lfhtmovTgiptQ9Th62OYnUMdWVCVMGzpog9cPZJY+uHtYhzvrBotaxuaMv+NY/fnL3poQiBvQP41mO2CFzz0n21VUAM21MA7PufJmtz9UNqfrDHxGKAuuWw04/H3NUT7SGxFvnT9K090EPRNE2dDXPgrvB3aZVHd+N/6uQJci3wlq+VMM5vEKRJ4JXaj3SG975RkYJ7X4QudQRHZUdMeufbtMjdCU0cCr/v7bYa+ubtlaqhSDf/p6AweLRijUYdwBYAVxs3bm7Ov/zARa/8xEP0z5+XQQABBBBAAIGzWIAA+Cw+eew6AggggAACCCDwUAiM4+XtFVfd9vTFvP9Jmzb9mqaubWU2C20tpIvO3FhkK09Kap9qdULkvts04ZgX/fK+3ynojS5UhX4+Qawh1hyqTZ+jjwneHIn5lOgJE7nLieIcANvjfcJz+Tn+WhFtms7V9qag1adu7Y8yttTnmzuAI6iOidKmaYpusfAB3hw4RjCcO3/jtdTRmysr4vysdAn4cUTg7cOt9qJTIK0gMS1I5qGiBaSxWJ2FveqHrZuolJjv+n4qUEzrhE2VGt0Qk8C2RzfNyv7n9s3q//CIZ7zkjtN5nYwf+Pf77yrbX9kdmpdsFjvlrJhbeGv4Frgqx5SPh7dp4jtPx5apAkL7FnUhBuLBuK6BZCrf9L9Y7OhjgjedI4XotToivC5Bxj4ynJ6/NM/B8eqCf1EVkTbs7zwoZU3PTdfdate09jFXUKjAY29omyeOY3vaTJ769uelNzLyom7LNz7S1ZF88jWZd8sDbZv8jWqSFABb0L9d2OJ/5cZNm0XHBPDpvLDZNgIIIIAAAmskQAC8RieTQ0EAAQQQQAABBE61gAVP1RVX//7XL3bHn6zr5iLLQDVGqyKHmGS1YEphrwfAK8Wn3uSQ6hf00fVIxlZDuZWJTksJcyDqXcJp6lXBlyZdNQUaH/lP1RApUJ66VHOwmKdlU6jqfbsr2euyYmJvOOgBr3ZXi5MpbEsBY4R8EUQuJ5qjmiIfUwwqq5ohgr4cYEcFRPyqHZnksjO2zB2+OdhLE8dxrBZ4WtVAjrujuzZ/X/n9qtCIcF0VFItpUbvBnt82G3403VgPi6G4c7Pt3jA7uPmvHvUFh+881ddG3p4HwNXGG+Z99Z1b1bysBmue6Oe2VFnUebht6rT1MNZZ7Fi8KXh5LnQNNP7gvebaQlSCqPYi+pP91sX1ME0Yy9rfd0jWXt8QU78e+KaJbZ829+3pfKV4XvuXFmFbvY5XJ4bz8fq1Hf+1DJ7jTPvP79HtO0HlifdlxUfctXfNvjwNvRoiR31GW/T2JsD2kBaBq8q/QQfw6bqq2S4CCCCAAALrJUAAvF7nk6NBAAEEEEAAAQROmcAHPvGB/cOnb/m6fj68pm1mTy3KvqqV0E0TjRFc5Y/l6+sIqvZOvOonPu3qE68KA3MgmjtXI9BToBuTszF1O1Ut+GCnJiHj5h/ptyDMKyGq1poW/PX6xleIG/1l0gOn6UlVCOSp3uVidXu7fXPg5tUK6Rjyx+9zh2wcqwLtynbDD1YgNqg5WvVB1DJIxfbFp5pj0jkCxxNrLhqb7uy16J0dmwe/1iGsY+7t8cvKidwTrENKi4J5nUUKzZO5jtcDaA8gLST2gVabxbUQeKPpf63ZrH7ugqeengXDxqvfevDO3e1/a6Hz4ZlNANuctF0qFor7WbBj1+lJAbB6nz0Atv3PAb6fKy305lPPintVomBT0nZZeLdyuuVF8Hz6WcfZRZe0hob1JoHC3tWbppD9cTkwTouqeca84pYnwb1D2INd7U+84ZBvfghasC4tGOfHlK5XD5jTpG48N97wmILm9IbFdD3n19izt/FNnvo98S699mDT3aP1PacKiJu36uHL91380o/dy2b4EQIIIIAAAgggsEeAAJgLAgEEEEAAAQQQQOAeAtdee+3G0cX13zt29Q+Wbf14G+tUImaDsBY+2hjwFKZO05rLDlZFbvGR9QhYp4nGlAtbFJvCrtytmyY+9RSvQVh2tXqelgJgBcP+usp5fTrXgs7OYrGy+Ni+WfP+saqft1h0j7GdtLzMR4mnCeC8TW1PEa1PLqfJUl8cLE+JRrI3TfT6x+89C4zKBnXtdj45Ws7379v64PFjO4+xAPpzLOD0bLwfdu3ZcXyNT/imEFKvp3A7hX8RKMd9uaIgwnN1EEfgHYFhvG6eRNWUcN5GnVzyycsBsO634Vjbx5ktDme9wEW93RY7vzMrZ686/5mH//pUX+4pAP61Rd9822a94xPAuk6U3cYEdg5SU4CdgtNIguN4wytuoz3fs/wUaOcpYV8ULlWE+LR0Cum9OCPZ5WoRLZjXrFhPFQ96RRmma8hfL0+Op6A2v/kwTa7n/dJz07mJWod07tL+e6Ct6yhPvOsRaSLYz586h1Monc9BDp9dKd+XQu9pej19P9j1rgD42FCPXbVpAXBHAHyqL2a2hwACCCCAwJoKEACv6YnlsBBAAAEEEEAAgQcrcNVVf/ro7f7od1nA+v11Wz+2rC1FVN2DRad5anM59asO4Ah8p6nUNOGrCgQPVvNQZR4MTr26miTOi2d5CGcTsDHEGx253n+qINce5xUTCtE8uLM238o+Br/bd/baV7VV8dOb+zf+vJuP/681InyVjZ/6Glo5YF2dUHaTNA2smeL8eh7EKeBNbRU63jot2rWsgYg7ex8hLm7bmNU/NvTD/NjO/O9X9ezps2psxmJeajK1sS6LKvXVTkGmQcTr5RA3B9nReZttFQKvTo/mQDI6gaMvVzcFwHE8Adxb54MHoIq47bVqCws1SztaaL0zlDvtOP5u0/T/4jFf/O0fsWBy75j2g71Y7HkeAC923ri7qF60We2UtQJc7yhOu5eCbh+otXOqIdq8eFvsvgWpdlyNHZ/6k70zWDUetoe5kiOH5Hk34/ykQW/7oV8vKcAttXCcpq/1BoS9npeTqBYiXb8KjNOepV7foJi6iqfrXOdZF9Je5yVVmhjWJLcW5UsVErrfr1sd6xQqrzwry6c3G6ZQOC3yp+f5InOp6UL1Gf5vSIvAqQNYFRAWAO9rCIBP4rLlqQgggAACCJxTAgTA59Tp5mARQAABBBBAAIH7FviL69/3iOF48aqqar/bPlZ/yEKxso/yVQ8uPdxK3bW5n1cf7/epVO/GzVOuCnTjtXLlQ66AiDA3Ak8P+FKApgA5b0v35ynjXA2h+oDYYGMvVS6qqntXW5SvfvJFB67Uj6+7Zv6WRV98Q1tbEufbT0lbyjoVPHogl/I/fR+Baexo689Y1lIocNVNWWmEzzajaj+zWgUFrB/frMpvWWxt/WW5c/SS+bx7dVW2L6iqfsNmhDWDG6+fepLdRTOraRJY2+1PCAdVUxH9wgoWl520eztil9UYY2dTxWkROg/gKwt8PWSNoFzVGGVjYbkFwbv2YkO5tSi67XdvteMPPfqiw0dO1b8FBcB3zHfeOBSzF7XD0dIWn7MAdtdz0xywx/HGK9bmmKdu95wPO56ZTZdrQltVEApGNVUdj/Fx55jeNSdp6us88euBeZqarlQkbYFvb5a+8Juy2Dydm6Z9fTI3dQAvHSx4z4vR6Ye+8F4bVRApZJ8CXT3fO5/tLOd9TG8YxDWz982P/LxcJRIX1krNiW8vVZJMb5j43HosUKfLfrB/hM2sON7bInCNTQBXcyaAT9VFzHYQQAABBBBYcwEC4DU/wRweAggggAACCCDwQAU+cPV/e+K8X/ywxYcvnrXNAZvG9N8Vp2FRD6yWFQS+yJoFV8t6BU20KvjdO9m7ZwI4T9/a31oGLE+65inXPG2r6DWHaP4a3qlrUa0NWi664e6Njfq/VFX52qc97es/5OGYpcPXXv2ONy/66ps9AI5e3r2HnvZXoVpUTUSvsDJTfw0P+iLsUx9vY222+RaBoaad1XBbFbvdcOPGRvG1T3zKN16tx3z0iv/6pK7sftCC4RfNquKRFgDbMHFnIWRaIC720fYpws8IaMPSw00/CPXirnYfx941FvIOqR+4skRU9Qa16gTShLWequ0psF4NGvW1Syh0bmd21FYJMVRd2e/891ljIfAXFf+zLA+nOdMHepXc83HjlW86cGc3vNEqIA6343bZVDsxAezHs6wGmaot0kjtasWB11zofQab3tVJ9utITqlz1yeAbbG9HKDmANnPi9l4F3AKhNP14IG7nqPqDf+ZVyyEkVw0z52nw9XakN7fiElhrxCJGpGYwF3+z6b8xoCPi+vNjDSxq+sz9i/eUsjnNU8c63r0106T4KuSeQI9/r2l/c3T8z7FrEszKiA0Abyo931i37Dz5VuXvvzGB3/meCYCCCCAAAIInCsCBMDnypnmOBFAAAEEEEAAgfsQ+J/Xve8Lu+3up20685sswZtVlpophIsuVYvzhoXislTBkAIqTVj6Imf6uH6EX7mzNr9UDn892PLa1Ag7p8BOk5xazM1CTt28asK3FZ25usXH+/U6WnitvKOuu1/Z2tr3+ic96atvWT2ka46847e7oXxRU/X+CfocAOsYfD/z/von9/PCdCms8+/T9K16d/XaCk5XFvpSmKnwbm6LcVkP8PWbZfHVT3jGN3wk78PN17zt/O3dxXfNF+M/mc3qx2oSOCaR89SqDjCmimtbxC7C4Zg6jg7bMMgL1ingdRdfDS1PgvqIb7xkDrQ1/WrbUWVFDoC9ekN/NF2tENQmR+uyLWyhtnHeK9Ec/mKj6H7ggmd82x+fbB2EAuA7LADuLQDWInBtZYuz2WtqIny6PhTgThPZabI65946HxrwTRUXEolrJYXh5pRvHqrmxe5yxYj3DS+vqykczm8weJjsEWpMEfuUr51vc1MQnN90yJUfXk3syrGwnL7vrVsk149M1RN6SesaiQllTR3HE6e6ijQZr2smJsDzonTxnOmY0rRw7rreE27rtdMigrp2ejuHO2M7drP9t2wN3f+2dcmLb1j9N8DXCCCAAAIIIIDAvQkQAHNdIIAAAggggAAC57DAOL6vufya8W/YEOWP2VTp85q2mnUahVSvr/2lINa7fS3Q6+yPQrD4WH4KUG10MqZ4Y8JVYaYW34oQK32kfWXi0n+ux6U6BgWcWjQu3yK4jMnYHAyrv1U5nIW/N9iE6M9vbrb/4Qu+4GvuPPG0XX3VO37HcupvrWoLgGuL+VKdQg5Fl9Ooy2qHe5z6NKWpY86BnDcKeLeC3SyEs4XVivliuH6rqvYEwLr79msvO3THzvG/3ff198/a6vOqobdU1gLRysK/NBk9bcseH8F3dP7WaeLYp0T9+xQcKvNM/cheUaEqCu1KrotQAJqDeE0yKyi0aVhtQwv2KQRW8NnNrTe3bS1EVADZahmzK6xM4FUXbO17b3nh12n1ugd18wB4Uf7aMFYvUgDclHPbYQtMc8Cbwk5N0qq/Oeau4xpavUUHso5bV054a3o5vQ0wHaO6ov368Fw86iFyTUjYxnMVKMcXg3vkNxl8u+l8Kuf3ig9d0z4LrVdLk+0eMMeEb6550BeqmvD918Svrl9d7+lNhfzmRZyfmMzOk8v24Cmgj/2L3TuBYXle9RjftqopokJksIX9jtsbEItm/ycP9NvP3rz0b394DyLfIIAAAggggAAC9yJAAMxlgQACCCCAAAIInKMCl4+Xt8PVd31jt+h/ZKOZPdM+0W7lCYqbctdvVA8oAFWwtbBQL4doCkg9zNXUowJGhW4KOC3PtDndJBoBptcQKCTOP/cQOEIzhW0eqGmRrjRFnANlzWB6ILxQ22pxpJ4VP77ZVG+/8DOEldccuex3+278pkqL1hUWQKbpYq9HSBPAefGx/DH71VPvx5NSOQ+604Rpnsj1x6oCwnishuKGfXX71Z/39K+7RwB3881v27d72+4LbU22H7ftPKNVg4X14mqKtNHH+afwMQWJ9jOLBr3iIi+Kp5danYCO8NrCdQW6HsBrSlaLplko70FxhMZxXKqDiCOTvU+fpooE7wzW/fVMcf44X/TXN8XuTz/u6V/4G2V5qca8P+ubdwDv7Lyx6y0ALo+XrTp6LfRWyp9DdL8OvFrB9j9n6Sckn0GfAmD/Jo5PobFfXx6MR/irW5l6HDxYt4f4tLp9kSdoV+sn9NoR7UbEm+tF4pymNy/SmxI54J0eM72hkdy1P6s1J7bB1UXtMr4H0N4THCfD8vo95zcHwJpIzgG+14OkyDsfRw7OdU8OgMfmwK2bw+6zN5/1sus+6xPGExBAAAEEEEDgnBMgAD7nTjkHjAACCCCAAAIIFMUHPvGB/duf/uThsWt+tC3LJ1loWk0fh0+BrgKsCKHS4m76Wl2pCqksIFXwplvu8c0f24/1uvKvmRG+KvyM50UAmsO1XLXgf6cQOG/fkk59An/ed937N9rmp77oi/7mH9rj7rWz1p5jHcDv+i99N3x9YwekqdvBqgNyFB2LkaXANdcFrFQs6PW7qQIiagGaMU13pkDc99mQOtupvtc08uyrL7yXAFgmmqy+6a9ue8FOX/5kVVeXNOUwU/Sq7XZm4UG6LULW2CJtUw9y8oxQMjw8vBVomvaNqV7r8/WgMAWLqfs2dwrr6bk3OJy1jYgVczWEplFthTg7MguCh/4Tzbjz8/ua6tfOu+jwpz7bfx8RAB9/42Js0yJwemNgbvuQ3yTIC+tF6O+LwCmY9gA7vXHgE8y5/sMCcT9Vq5FtqoVI15v3OHuiqjTcJqy90iHXkMQR1Jq+9QUHo8c3MmXNH8c1OE0Nq4LDQ/V0za6Eu/lcTG6+V1ECkc+bL2ho53H1ms7Xs18LaXp7ctW17m+CpEnodH159Ov/biLszjefgvYQ3I5HFRCDTXHPFADvEAB/thcrj0cAAQQQQOAcFSAAPkdPPIeNAAIIIIAAAueuwLXX/o9Dt3VHv6sY2n9iOeTnWkusKhysxjemcDXBGIHp3lAuL5imME03TUpOk6YpUNPzo7ogJjg9AEuTvfmj+fF96kr1RbrUh2u5bq5IsGDUwrix68pda9v9zxuz9mee9rQXXnlfXbUKgK+5+h3vsM28sLUsbrQAUrecQ8fEbJpIzoG27tc+pkA47+eJnbB58S6fYrVtdDYCvOiKG2ZtaQHw3/qMH8G37dUfPfLmZ8y74qeqqv7axkDt2d5d4IFlrkZIHjmQtEDWJ333dMKauaodcrAeC56liVKvyIigM0+S5r/zVR7hdXTy6maT0t5DrCB4qNpxd97fWZfdrx/cX73u4Bd+yyc/m38d47W/cehTR+s3bi+Gb9vfdKUtUeaL2Xk2uxJU+0S3fpYmYXs7z3GdxatNiw2ma2aagE47EwsDatLX/L3SoY36hlShoWtxmvrVNZrfwEhdvBHQRjWGO6aOYr9GVfPg5+Ne+nn9dTXGHQv4qdshvxng9RNpgtiPOVVx+L+PvNhdqqTIE71TUGxBsp9HX0tOiw9GiOxvuKyegDSBrIB6KDeK3XFWzOut2/Y3u8/ZfOYrfBFEbggggAACCCCAwH0JEABzfSCAAAIIIIAAAueQwAc/8p7H3r0z/INybP5B3TSPtHCz7D0szfUBy+ndHBaudul6p2muiEjBlILJCFj3hnipgXXSzR/x9x+oJiCls4MFgcuJSYWc9biYL+4oyv7XN5rmZ23y9+P3d4rs9aurrnr779vQ7wtUAWHBsQXL2pY+9h9Dw97JqknKE3dMu6P7UyCb+3ZzUOctxTo+PUZLullwaAHwRy0A/t/vKwDO+3zjkbd88W7X/cjYN18/a6pDVgdRKjiUa66DkKpuUbGRJn/TJHUO5u1JsQdpsjX7+U9TeO/BcnKNQDstBpeqBfLEtQePFrwrBNY07WKorGej3q2LnbduzKqffuRTX/RX9xW4r54PBcC3WwBsFcPftlnumrBVXaQp1inQ9H1K8KlaY88UuF8SEXB7VYSi+XRdKZyNwDzOY3QYq0fal1Xza9ev1TRBnsp805sZy/+5k6/PHAD7Gxo5FE/Bra6cfB3otWLhNy2kp1dKHb4riyEOnVVdeE92XGDLvmhNHKfqkbTfqvjwCo70BkruKF59Pb9OfdHAdM3pb1/ELvwUAB/vLDhuD9zWNDvPOUQAfH//r4H7EUAAAQQQQCD9rgsEAggggAACCCCAwDkg8P6r3vf5Xb/zg3U5e3HT1o+wkMmGUDUpGdOkq1OkqxwKUvfUNthH+/PH1KdQLE355mnO6HKNEEvRpp6RpzMjpFx21kZIqB3wigWb/O0+aQu5/d/nHTjwhic84SvveCCnRgHwkWve8e5+MTxfn8b3ENdeudGBWeAWk5sK8yLQi0/hx+hp/lsTzfF1PH4KqFNImKedF5ZDWtD8gANgvcYNR978eGP+R13ffJ9lrufVKrC1SV9/PU33piAzB7iDzokaNzz0jRAzB7+q0VgNfGPKdnl/9prCzRQuT/7pATp3+fi1mJlNoI7bC2tc7ro/26jHn3rMxY95b1k+v7s/f58A3rYAuBstAJ7bVqynVyGuVzLEeY43EyJcVQVEvtaysR9f2p9pQUFVdNiWcjWHdzHr7FhwvVB+PtqUdKqTyPvoIW86f7krOSoUtIhaDHt7oGs1HAqYPZBVmKxAXk9IYfO0PV0Tep5XMMR50L8ar6vwSWLbdt9Znr8orJjDq0eiM9oMUqCdJ5unwPc+AmC/7tKFNgXDnvBHlYcCYFVAdM1+AuD7uzC5HwEEEEAAAQQmASaAuRgQQAABBBBAAIE1F1A4+v6r33PRYjH8cFO239rMylnKw/wj6J7nKjRLvxnmUC6HZcuu070dq9NH3DW16Yu82U9Ww6tUdaDPuHvwp0+5e9C2nHD1QM1iPvt4veVpVtyws3t1vVH+3Fb9+f/pwgsv3H2gp8YngK9553ttQbuvqixc9dzXg23vtkjBnaLBCAAjNM1TlmnqWVm4T0Lrv/NE83ISU9vTvlrQadlt+dG2KR7QBHA+hpuufOejuvH4K+Z9+Q9nbfv55m471JUeRtpr5voA3z9LmNsUTk4haeoI9tB+5TimSeVl+p5ecjnqHBO08Tw/577tlT7cNAHbq+O4qC1cHW+YFYuffNz59W+Xn3t4+77Ow/jhN513+9HujRaMf2sOgAstMWfn3/3tQP36sOA2Tzz7/qdJ4CoKf23H4q/VGgU/T2nf/G8LxBeW1vZte7cFqkdsGvvuwe6w06+RW5Udl9YFbBeAnfU+XdEabvZgWMm5Rp2HGKXWE3RxxIitzxz72oS6TGzQW2IBrcf64+xnxmMFFPpOI8d2rdU2/XueXeOXjPOdx26MvW0/Fk70iWR1N6d/EzlwzxP0y1H01Il9wuKA+bzqfMf+W11HOSu2rQJi0ey/vW12ns0E8AP9/xA8DgEEEEAAgXNbgAD43D7/HD0CCCCAAAIIrLmABWj1n1z1B8+Z73avbtvZVzZ1uVH6cm958lWp7HLidap9SAFpBHIK7mIQdM/H9m0zOSzV8yrFY6lv1Xt086JcKjnVzb735bPS6/nH/L3/V1FbOe+GxR+3bfW64smP/aOLyouixPcB3hQAf/DIZX9ou/0VG42tFOcTnilwToukRRyYpzgj/PTKAQXVfk/qLPbkOxYny7cIjBWSW3Bq+eFiPt44a4sXPJAKiNVDuOmmP9ka7rrlG3f78sfKunlqY6n50M9LVQi4pe2r9snDTgsPNU061TpMi5ylruaV8+Hn6YSu2amz1s+hJqxtAbrOJlOniggttrbsFbYw2s/HaCPUOwuLHcfq4xvl4g379le/fPDCw7d+plOhCeDbjlX/1mLRF60GwNr3qZNXi//ZJREVF3GbFuXL9SMpAM7dv1psz489TaervsPCXuvArYatWfPevpj/6L5i6ybb7/Hovs2xOL5jA97WtKyuheKAPW/HIE3WvxeCXRilbX3eT8n4qP6RE2/2+HGjthjZtqmbFSaP+5X6b44HF9uW387H4tD+uO/Yoiqa7UOLoX7NzqL6zrbfmWkCuvVmCqXE97pmod21fFNCm4kJ9eUbLKuT0RH4a2TdronKKiB8AvjA7U1x7CsOXfrKqz/TeeHnCCCAAAIIIIDA9HsXFAgggAACCCCAAALrKXD99e/bvPH44oW22NaPWdD3TAsYq8j7YjGsHCz6YmKpqGF1UjRPKPp8ZA6npoA3OlijEzg+6m+NslEVkbqAc1hgJN12AAAgAElEQVQ8bceDRwWrUQlQWpBa1xuWwVmmNczfMqvL1z35yc+7Rs0Un+0ZUQB85ZF3/aEtDvYVm01VWtVFOj6FkHlzeX8VPsaErw/hZosUAFszr7/8PSclFJQryLRYbyhu3GiqzzoAjrDvfc2NRz79VRYC/3DZbFgoP8w0cFpb0KfpXK8V0APTongeptvPbE46sSwD4GkKO50fryZI4eLSPYWNeVG0fHz2vR+nJeU+matp1dQhPFhob9PA47xodi0E/nezon3do57xLX99b+dmvPqtB2/bvvsNu934HVvVwoZvbcI4VVj4GV9ZfE7dG8sJ8xD2eWvtf7qeoughMnh/rE0I+zFZiGw9w8V8nA37Z+V/3Dyw+Y/KLzh852d7rZzqx9u+lfO//NUf3xk2/vlsmG9u2jBy1HuoBiK/mgaIl68ck9BLC+921gO8mySOf0hBfdSVRP+0KiC2e3vTpD1IAHyqTyTbQwABBBBAYI0FmABe45PLoSGAAAIIIIDAuStw+Yfffd7dx8aXWqj2/dVG9USL0OrOFqxSoKbPrOfgMD5iH2mbAjifPk2LkOXO1mmKM4W/kdrF5KierwC41sf4bUiysc++K9zSZKmmHxUSR6ioyc8I+jThqWlQW4iu6PrhLnvqr8/q2b96ylOe8/EHE/767lgA/FdH3vkHNrX63Lrs/FP8HjbbbZqMtX1pGntNC+bUDezBtoWefksLbflEcF5UTJ/zX5nUzF/bPmv/PzqrN17w5Gd8w0cezFWm0PCmq95uY879Dw5j+y02TbzfRlc1verhvM0ZxyJivohbVCkoOF/eVhaD867gvb3AeZI7AuUI3rW9OIYU9Ppp97MUj1EArMXO7FT5S1lZcTfYgnxju22n9Q+2ivmPPOri7/irE493vPlt+2695c5fWnTVy7equW3Kpq9tq01KPPP/4JiC6RQCawLYF6PLFRBqcPDC3TT1rEoOhaHRUeIBqmSsAmHcqvvf3n9w3/eeCQGw9m37//vFV2/3B161r1xsNraoYm0huE8ApxqU6BlO0+cK9O1caA5/ddJ3Cry9nSKu4Lg5Sjyn3vQAuJsd+FQ77nzFwWe9/KoHc/3xHAQQQAABBBA4twQIgM+t883RIoAAAggggMCaCyhYfP+H3v85i+7Y95V9/b3NRvuowgJRixbTdGksrOW3KdDNQakCuGX3rYJd3TzM9TA0h4mxoFfcLAzNE73WW5sX1fIh3in8zcFXhJaa/LVmCltrbDjWD4tfP7DRvuYpT3n+bSdzanTcf3Xlu97bDePz6sZe2PZFzRMx0ZwPN4JFBW+NjslTzhRKp77d1X1Q9asCUgV3OTjVcff2s6Gvbqg3qxc89an/5/Uns983X/O287cX3Y/Mh+aVbaOF+RQcLlSb653J7p5qBHxiObH7cVidQ20PzHURfpdKbNNCZh7OK2nXOVT1gh1vTHJ78h0BZZocjvOyDIfjeH0ZPdueLbo22JhyXbzHChhe/eiLvvAvy/LSRT7u0SbNb/v0x1+/6Mvv2ix3rX/ZJl/tdWvfX53rHGUu/6eHv9Hgk62ri8TFFqdu5lR5oYA6wvyq6CydVgC8rxl+Z3+3+z3lpX/vYZ8A1j4f+9Off9Xx8bxX7yvnm824o1l4ryCZqkR0DaWQ3pe70/lIbz7kAD6tDTe9sZLPY9QU+wKJdiI3i2MRAN9hdRPPPfilL79HIH8y1yPPRQABBBBAAIH1FCAAXs/zylEhgAACCCCAwDkq8P4P/benbe/MX9PWs/+jaesDva1bpf7eygOoCNy8ezfVOlgOm762cNcHD6MJV1/3FtzFImoKEGOhN03yRmiY6h7ydKl/Tl3zmbaIWF6kTJ2/KnC1myZvlWP6xKNNlVo+eGtfbL+x2Wpe//QnffUtJ3u6FAB/8Mjvv8f6eZ9f1RZ4jwtfiCuHo9r+VGORX0wduxbETYt0paA4jtOC4xSA5+dFAF5ratny5fKGZqs+6QBYu6IQeGfef8+xrvr7mxv142vrBS59ETWF6BHgDvp+qgyI/fb98gnu+JXeouApUNW5zsG9Jkjz5HUEqRHaq1cgnx8/3rRo27TonzJiPVdJetXa0metkt3rmnL3dY/ZPO9N5YVf54v0jddetvGp7bt+Yb4ovmej2rXwXRPA1hltgWWb6hu8KiS9URBvJsQbDbWdpGkyWNddDklT+KvrdEjJqOo3tOWdYsMmgIc3HyjG7y4veeWnT/baORXP37YA+Fhx6NWbxe7mhl1747DrU+ZReRJvPGgBO4+x0yT2tOifQvIUxkdvc6rxSJPP9g/YrlHNhGuuuvUO4H7jIAHwqThxbAMBBBBAAIFzRIAA+Bw50RwmAggggAACCKy3gCoQ3v+hP3zyfNH9dFNufEPdVjMNDCo49ODSwqSpzsCDTtU2aE4xFkDz+yzYVMjo07H6Po8kriwupgD0xDBvqojIoZ1PfSq5y52yVg1hAaIFX6P1EQ/dovuYrTP2s+c/4hH/7nM+59Ljp+LMeAB89bvfU/TV88ums7RNgWl6fQukI3RMi6vlAFJ1GCuLwulD92GUAsq0Y5qY9fDcAlEduwfAi+Kjzb7m+Sc7AZyPfRyvnH3kyHUvtcqFf2Zh+ZPberAmCwvv7TjylLIH9JaILiuSFc7n6W09LNdCRGWEd8r60eTjCo9pQT+7L4LkmOzWWmleEZIqIVQZoYqG0a6DwSs92mLXLie7mD6xv+lfP9sY3njwyS++vfjY72zefkf/i7uL4pU+AaztqbbCtuQBaO6N9kA4fjZ0y2tSU8zRHZ0n01MSr+xbdRAWTMeyhapAaDUBO+5ri987UDV/t3zGS+44FdfPyW5j+89e/2NHx60f3SoWGxvjrtlHYJ9rSPKbJl7z64dn4bCH3TqnaRpd/370dXrjwd9TmaojogJCi8BpAnjYPHRHUx77yoPP/NtXnuy+83wEEEAAAQQQWH8BAuD1P8ccIQIIIIAAAgicAwJ/dOUf/A1btOunmrb5Svu4+EyDuwre+vSxfw9zU29vnnhVNKjAr+vm9nH8CEP1NP3tE4tqh02VAcvp2dTHmkLU3DXr4WSaKvapYZ/0jUlV3RQm1mMz9P3ij+wFfupgW/zxE5/4/J1TdWpiAvjd77G99wB4tAlUhYy1fZUXgbOIMU04x6/AedJXU6Yx8ZsWH0vBW943eUWgHc8zZ4WlH6236lMWAGu7mqS9vuu/anfevaZtN7+0rSyLV0BvYapC25iOjYlgD+FTv28+Pu8B9oXc8qS1zrkdl2eNyxqLqc7Cp4eXbwz4gnia0k2T3zpeXQMKJb2rt5rZFLAmgptxty/uthqG327G8RcM+S5b+e1nd3b6w7ZgnL3XoP2wegqfJpdq7HNcB9FXrOPJgXzuJM6vX9rUsL8pYYG0njAF1tZJPJSNJmDHrXZ824Fm8cryou/61Km6hk5mOxYAv/bYsPXP9xWLdlbavydfAC5VbngXhB3PYP+yfGJeEBazm6V/b17uvrrInz8sTQ77/VoY0N6wKWdpAvi8T8+GneceuPSlHzyZ/ea5CCCAAAIIIHBuCBAAnxvnmaNEAAEEEEAAgTUW+NOP/emjj9569I2zduMb2o26no+9NQNE6KZpUYVMqnPIXbj6RH8sLLUMPpVRddYpG4uNRTCYJ2j90Wl7wRghcMyK7l1kLNZSiwXH/n/23gRQrqrM9j9z1b03A4MgoxBmiUwSZRaCoIii7UQrTq22iqK22rY+h9cD3f3vtruf+uQ5d78enFAbZ2hRIehDnCIQMjEISQjzTJJ7b1Wd6b/W9+19qpKHD0hukrq53+mH996qU+fsvfbe9eC311mfAEAAO1ArWmgncMkfwuX51/MPOfmGzS329vuGkQD4huU/uSIKo9MquFDDSN3MUlBNIKIrTOeKug32Q4C3vKAOWZ9ZO1igi3nBHnbnAJNlXk2pA9j3i/1Yc+O3j+/m4V/Fcfs5WQLiV6OoHWIFeJQOpgq0lnFRR7C4TcVFq8XShCu6XmmXeY72UcfT5+rqdZocYc4DFskDNfb/oVA52E9gSwc4dcnxe1En3XZULW6nwa8AZk/vTHSOSiMW4FPoLlEiDlqr81j19QcdwlqkTgsDejezwHixvw44l8UlrEXgCIDHsugHY0n3j4YGAC++6O8mitH3jwTdBD5pzHuOhVuD4oImFHcbI1SG6wwAeGA56ZIUrR3AVwF17YoDmxEQWdBBBETV3umRtNpw6qxj33DD71sT9ropYAqYAqaAKWAKmAJeAQPANhdMAVPAFDAFTAFTwBSY5gpcs/aaXSYfmvx0lrReFiJrAQBPQ37l8I/9KxyM4SmVd6RImyvKhnMIQQno1OnqogAcPO7L4+GhcwizyJu4YzVygNCX2LAU9yMjCAi8mPdb9/DCv42NZRceuu9Jd081/GX7CE6XLP/xlejYqVFcCQD2DkxNXu0D8H5/FImy774gnGQgN0Xf9EyBrJRM0CZ1ArsDAJ5qB7BvF+4Xr7nl24f0JoMLYeZ+IXJ020GUi2yDrmVmUniQyyxfzQMedPT69rs+CEjUWALvCFantn6O1/OZuzUjGlyfuTGQpKmMKYEt85wLZhPXCUy6VZ0m2SQ+nlZ5L02CEpPC5UkLnFYIL5sQPovYucIj54DV+AcF0gl2J3zbGBQt4JjYVz4TIQM4CSbLlBEQl46F4euHJQKic91nP7ahk74PReAEACPHWQGwuOIR4wHtZNkBoOvB2Ac3p7jO+HLfKC3OfT+WWgxOAXAVtgQAl625BoD7C9l+MwVMAVPAFDAFTIHHUcAAsE0RU8AUMAVMAVPAFDAFdgAFfv67nz+jyKsPFd3inCALZ4UJkBFjAghjCTX5WH8TA+Achu4Rcwm3xZHg/6Q4GOMiCIFZxM0VSfPg0Rfw8sXhVDoFxzHcvs3n6QAOUgT+1o8EcfWlJBr9h6MPPfHOrSW1RECs/MkiMMXnEAAjYxiQFo/iQwM6gDXCwEE4iScmYIM7mXCY2ccSTav9ldRc6iAOYkJMrxdbrwAYLuDVSSuckiJwv0+T1Td+b17Rqz6EyIlzR0fSOYi10IJ+QvC1iBuPfrE3upzVwcz+xg1s9HdQIKuw1fdJx04SQ9hzgcou+gPX4TUEMjtHN3+nC1kduprdq45wOq6rIOUGg5tP/CHnuSxp7/6VTGXec6DQm48YaQqj8ZYNqNb7iQM2TINe0K5bSXDZWF29bmgA8LWf/afxXus9I0EHKcUoACdryAN6dWU3nmpx+rI/LEDIfA63WcOsDpfp7DdjIoB3HrLunAO4W2cOAHfhAD7PHMBb60vFrmsKmAKmgClgCuxAChgA3oEG07piCpgCpoApYAqYAjNXAQLQ/7Py/+zRq6v/VhbFm5AFPFaFAKEIkvUOTIJOKfrVxBkoEJR4BCY/uCJnBHneCSzuWMI6AlWXOethHcGjgmEHsOAIbgAeYh+qOnoYMPYT2Uj700fud8pWLdbF/l+/4sdXAXufUgc5uBraTGelGEs12qJEdAPdqwSnCoC9A5jP3HuI7R20/Kz+q3LNiIXGWYv4Axg6i7JelWTp6U9/+gtWb81Zd/ctl+022Z08v6zTC7I03Z1xEBUM1QT6PCS+wY2Rd2ILoRZcqH3Rfjro2kBwl0vrIiTkYpIfPOjoRrE2EHUP9r3DGPPKZQW7CBG6e+kMxiTSueCybx0g9psIHsI3sRUu8kA3KDgmCuAbGOyymMU9LO50pom0gskaDuBW9KOxcMN5wxIBMXHdZz8+0Rt591gwGcfVJMMtNP/Yzb1+8Tc/WzgmOhd99C/7H3EhOkAPH7uc7IsuYvai/ykc0PBZZ3MezcLOqbOe+bolW3P+2bVNAVPAFDAFTAFTYMdQwADwjjGO1gtTwBQwBUwBU8AUMAVEATiBd58s8/dUvfJtaZruHCTEdfpIPg/CtBQ01zt5aTqU1+VRdecMdRmkdJrCwtsAuX5+q8JHyZx1j/inKNAl4QJ0fYIPFiiSBlb1iV2Suf9+8MHHr9vawzMIgOkA5vP0bLvPtqWbWUCjy5f1UFGyjp0jlW2kW9jrxCJyPo6AYFJhd0z4i2Jo1W1jSXz6AYe/cM3W7tv9N3539niRv75bRu9Lk3Q/eHBRZ41xDW4cmqgFB2+Zzsy+omHNmA5k73KABAq7yIH+BgHINj/D/FrJrEUkAyE/wLk6vl3RQEYauGt7YCs6yhxiqT2XPQ0ALG5i918ckjpCDQE5qTl/T10BNEJPyYvmZ118iS/OJ25YnCdTjhEIZVKPZOmVY2nvVeGh5z2wtfV/Itef+O3nPjFRtN81Wk/ECQB9GkFczDkPwweLMNZu0dV+w0Rc94xTiSRaQzKpueOiYcDE6c5xnUCHNNhQYC62d3o0rScMAD+RwbFzTAFTwBQwBUwBU6Cp7WBSmAKmgClgCpgCpoApYArsIAosWrVop7oXvjfvFu9Js3hODZJGJyLhpTOAapE3mg8lJsIVq/JGXgd2CezkHBePMCiPOBsF9A0U9dJUAsDfamnaTi7cOdz/0oMPPri7LWSVDOCVl/8UrsqTQeDCskTssCLDfvE7B7bFM+tAsM/DJWbj4cF4sgkYV1cqwBsf3cc/eVHdNprUCw+cf87t26J/q1YtaoeT657bK5ALHIdHo32gqxi3EuMwALDZFmYfa/SFgn3NaWZ6sUJsAl4OFP/WyAgHujGm8nmnDQE4Dz9PCITlfbzgs4D5t8RNAJArAOa9AI69k5dzCvC2LHPJEBaw7CIhJHaCH3LOdO8w5+sy5/z9kOfhYygYATFZJHW7lf58VrHh5eFRr79vW+j/ePeYuO4Ln5zIs3e164mohYJ9kdt80HgVIlzmAbP4m3q2a2rMfYqBNcQ+8qWIxfYkk9mNW9N/BcDjcAAXrTnrsgAREMe85vrHa5u9bwqYAqaAKWAKmAKmgDmAbQ6YAqaAKWAKmAKmgCmwAypAJ3An7/13FCv7oySLxgCBwQWB/JDRKvmxAwdBoRx4WYCwg6Y+G9Y7MeVv59wU2CfFqQD01Clbg3t1yjq/KmvHf/+sg5/3c7w2UNZq64pMAHzdyh9dhRaeEsdAjGgMnZSae6wOaB+H0C/EpU5VHlL8jLEQYrz0Wbn6uo+HIMATCAydur3iNuh6+uHbwAHslUO74jU3fe85qMn2V3UYP7sVh1mISAhmHfucXY17oAtX4SHd3n68fSavh9xNXIeDsB6G6/3o+HVaMN+XPBJOYB5Nlq9/nwXPBGj+3+/zIhqFQPC88YaBXktjOhqnMq/l3NqyAeEznPFhKb4XZYhAiAmAfxUHj7501vw33rN1Z9YTu/rE9f/yPyd68Tvb1WTUCgjl1TnP1UQgz/Ehz1bNOS8Z59CPd9D5xwgIwG43JyUdQjKCtUghIyAQtKFF4No7rUvrSQPAT2x47CxTwBQwBUwBU2DGK2AAeMZPARPAFDAFTAFTwBQwBXZUBX52y8926xXFX6Mm1evTsWREIBt5oANv/CnQU1yiRH6aGUsAJRDUOWblp4Ny4lKEm9M/+h+j5BUAcF2V5QaETXytPdL6+IJ5C28mEN6WugoAvvHHV+HHKREcwHXVB8D9jGIHKBFXIf2mA1UczJpZy7gDHixyxiNyDk0guaYrLBzXzSvEQFS3xXG2cP78M7eJA9g3AO2M7rjpe88oyvDCok5fmEU1mtdFJ9TpzKJ/6vLGGLqcY7ZfYaSPsfDeaJcP7Iq+NeehjzIPpIgbi485PZyn2oNlOoQVUOqGgncAUzaJ20BUhoBh56YejKPw0RrSUpdD7LNu6cb2QD4BwNYtCbpmkeMcpEEHGcDtLPt1VHf/YNb8c4cFAH9qMk8uIADOAIBDxEDwYKSIbECIC5hCuEKEGAtdjz5zWlalm48uasPp67USnMwIDADgor3T+qyefI45gLflt4zdyxQwBUwBU8AUmL4KGACevmNnLTcFTAFTwBQwBUyBIVCArsz/+t3vkjk7lVmn+2gW9OqkiBI8Bl7VcZGUYZYUE626t89Tk/zw4PACMGdj++1W7sPPb/v5fp1u9+NxFb04asFeCISkXJOQTTNaPbCjU9HDJs189c5Ml+vK0lZ43J9ATgp78fNFVXfz4t4sjb8Qzw4+ddw+Zzy4lbv0mJd3AHgRANtzwrigZVIcwJJ3u0nqmfbRwza9nI+7kMxa52j1AJjva2au6tODExYw7netVnD6QQc9f+326O+a5d+bX9T1X6Ao2FlxWMxCyAJmFhEh25ZrkxjF4Ar1ebjqC99Jn70TnM5m77wlRPaZs7ieQErGFtDd6+IMZKvARYgMZkvLNZlZ6zKCU7ehQAAsmcsuKqLgHBJKzYnosplZpA/QXq+HMZPCcLpBwWKDGh2B3sFfiwzceqSV/jqqhgcAj1/7zxd1yvQdjIBIpUgfM5rZRS539w8WWojNBx0bD36hC729KE7IvorbdyDTWRzD4uhW53AZZA4Az10PJU4dO/oN122P+Wf3NAVMAVPAFDAFTIHppYAB4Ok1XtZaU8AUMAVMAVPAFBgCBZbXy7O1ayZ3rcviQBTIOgzk6mBAmqfVZbgLIhLGAKvosyXZ6gFkrQe+uR8Iay2I5Oooim+ukvC2Kp/70NnbIB+XYBRxEId3u93PR0lyfAxLJR2udHYSABNOEQCr41ezYz0E9g5gzQ8GvHIZrpLVCiAYV3EN7+9aGEb/Ryvd6d8XHLjg0e01POzn9Tf+eBF69RwkT4RhREesy7YFuG3AJ2AmXaUl3Kk8mjgD9C9mxADczYy2IAhGQm4/K9hBOYI7uKox5OGtYyPRwu0FgNnf21b8YF8068/gBn5jK6tHIzRKivYBAIsxl11EUbF+3rGOjo9+INBtxtoBVw8fRRtnfCZ+lMxnvEAYK0Xd6AgX4Kz/OeHjNVRUzCmC200crd6RzMtqDIUD6w4CN1nFDgLzhEGATQBKADxR0QGc/mp2seEPwiPOu3d7zbnB+yIC4lOT3fiCdtCJWhH0p7aE5g4AC0jn35h7ku/Lo9Kffv1J/MMA/PWaEgAzRUL7jzswAmJkl/VZvv60sQWvu3YY+m9tMAVMAVPAFDAFTIHhVsAA8HCPj7XOFDAFTAFTwBQwBYZAAYGoD9w0a3zDhr27VXlMnRengMgc2Qrb8wB4dgHsSuM4iiTqk1EKNNqSg7nsTg0/BedBSm5Rl+s6RbUWdO3GNImuAmT8BXDZ2hccdNz6rRWbwPb/dNXVLyrX5xdlo62nISEXLJcAD95DV3iKSQgsPiXtpufQFYKj05eOUMIr/0g/PiORpFVe/y4aqT+2R7D/V7ZVsbffNx3YxyU3XnElmnpqGAEAE7w5s3UD1Uja8Mi9Zhqrw7mhnHQ1A8j5gmjwSeNN97i+g6N67yjI8yLIy+DWZDReeMR2cgB7HVYtv3SPsO5c0C2SN2VJvCczgQmAYwBwjtlGQNcV7BOXsC8wxo2AJgdZIwq4OUBXKq3iCoj7RQIJaQUgM9AW/zTO1UEpRTsRV6Mg3L3U8evWhURMqJOcY6C6E7grdfbAtLkfwSjzS+JWMN6N6pGR1q/C9JGXzD5oSIrAXQsAnKcXtOrJqB2xQKJzM7uCe+ICpv4Ewdwf4k+kd7iUEXmPrmf+5AaLrkMH65m7LRsWjMDAQwYBUoYZAZFvMAA8BP//gzXBFDAFTAFTwBSYDgoYAJ4Oo2RtNAVMAVPAFDAFTIHtpsCPb108txuUJwOmvaQuohPDuN4rjuJZEao4RYmAXnBdzZDlIdmy4GiFRBDA0ecLpeF9STNFpaeCcJUIKC824Oe9uMIvwjT8z2Bu+NOzdz1+3dbo7JJ7low9+MjDHwRB+kCcRS0CTnFwoq0eQvmcX9oNvWvU90s6WjBOIQoKBOACZ92UpuGFe2Xxd+bNW9jZGm1+ste8fsVPFkHwU6MEEFSycKE3fvq+gHe7zFVGIfOhekHdchvJusX71EMzkflOHwD3i93FCoCL6rZkLD1tewNgtv3BWy6bs77beV23jD6I6bZ3FJX0OEvEg3fx+igHyT12Tm+F/ASrTgOZCOizK4SnDnFOVOcidpEgg05dn/tLkEtwSXc1wbtGQShojhkhQWA8EMUhjmxXNI6NFP2bWA5tjzq1cW/JUmBDkE0cZsFEkQQjo9mvot66l8waFgfwtf/7oskie0erGhcAHKIIIdXjTok6fnWzReeapBzLJoSAeKpOqO42XVxvNSCD4Ns5hrno+hnAcze0ys5pY8e+5rdPdp3Y+aaAKWAKmAKmgCkw8xQwADzzxtx6bAqYAqaAKWAKmAJPQIFF9y2fNTk+fiy4zRvjKjwrTuOn1Mj2RXwC+A3zSAeBrz4I3y9sBSBMMx8AGiEYD8n3dD997EBC9IZCT4CRVV2WjxRh9aM0jf/33LnBr47fCiD4CuQBl+OdL6ZpcjqiSBEFofmr6gZ1maUOWmnGL5ygtDXTewlYBQcwXb9lr8yXttvJ35542BnfwefVrjgEx7UEwEF0apJWYVkxh7Ufd6AQWIGbJnTwmXoXx+w0oANTdBA4PBDV7ECojpsAcCYr3DqyHSMgNpV71apFiJ996EWTk+VH0ix9RhKXMAGXUhyuQmPFye2yd/vRDApq6UbVn7JB0Y/FcK8zMkSiQRywFajLbGEWAyREd+f5ec22JQncqoS34oLXz9NhrpB347XD9vmIDg9JxQ0rxF592LWMH4AwSqxN5HEwOpL9Js7XnzM8APhfPzVZpBeMBN2oFdL925X1I1Z5twnU6Cd/uwxg6kNQL/3VUW2AsGZt6Gtu3qLwn88A3gC38eljx7z2N0Ow9KwJpoApYAqYAqaAKTDkChgAHvIBsuaZAqaAKWAKmAKmwLZX4PJ7luxerO++Jy6C18RZvCf8pEkYx3xGW118IFIeVHn4tVGhMV/nzWfmOtDo3cEEY+qM1EfpCSqTOK4RLlvmee/+KE2/n2ThJ8/c/4SVU937q26+6u1YbzEAACAASURBVMy8W/xz2kqfJnCOTldCP2a6atU3uaU8je4cnwTA4gYtgk4QVVfhj4+NHLbzzxeEC1y1salu5eZd77crr7gS0P20MMlhcgWEQyeYIdtkqeIx+hAREB5CEr3xYFEyiSog5HSuWQLgJj7BAWBtFd6BExrDdmu7XZ928MFn37F5rZ36T9X1ouS2pQ+dBkb/UVz9hDis00QMv8gFputXICqDFHwBPM1Gph4CdAkrPQyWnjr86By9viibqOC0kkxgAPF+pIT+54UCXeckd3/XKJ7H+zNneaNidGSfboOkySfGZ9B2OXTdoHga7lWg9Si2Foy0s8Vxvu5FQwOAr/93OICTd7SrTtQGAK4LAGApJsj2a2wGgTAPwmz5iX+aDGYaoumwF9c6vhviVBahdwUrmI/xZAH6jwzgoj13HAB4oQHgqV9HdkVTwBQwBUwBU2BHVMAA8I44qtYnU8AUMAVMAVPAFNgsBRbXi9MHVoXHA8r+GSDZmWGSIiqhDGtAw1JyUBWcOX4z4PjV2wlopBfYAWCCHHX2aa5nBKIlmbsOdrEQmTgjmcNKyEqnJgx/sBkXeVn8Nm5lfz2W7XXlifvuO7lZHXqMDy26b9Gs+uH6r+IyfTesigkdr94BTMcy20JYqNmtLrIUlBgO5fVIDr4ka2d/d9wBz/nd1sor3pJ+LgYABqg+LU4YXkvo6WC2c7X2HcAE39o/N3LyQ13ceFGcrgTz0EMAqUYZaD5uKA7gugpvSdN04aGHPvfOLWnzVH8W7YzuWHbJMzpV8eGyTs4BAR4BjJTQATpxW0nad6TyVa+Nc/fK/Pbwm1kQ1ARCCRh2mcAN2KUkzjnu51GIWBSBtRL5QE01+1Zdw3hdXtQicSkiHvgT88pd3+ULw3HMIwbs9K5iMcPif0pcgxEQdAAnw+QAXvKlT3eK+HzYsKOE8Q/YgNC15L4D2O0m2wHRMPyakNgHjSjx3wneZa7aqf6SyCxREYDDcEB3CgLg2eMoB3f66NGv+fVUzyG7nilgCpgCpoApYArseAoYAN7xxtR6ZAqYAqaAKWAKmAKboQAjHzrrOufVveo9aTs5BA/QwzCJcmn06cGdl/MxdZdRinc2AjsCafxj8ISmzF+l01Gcixqyq85hQhyBhw4qquvUF9liFTnGQjB8oepVoMD5nUmWXpTuNOczC3efv2EzuvWYH/nprT89opqsv44U48MApYXlCghkE10MAl4WM3CZVzDTVnfFWfj5bCT+4rPnLbxnqtox1ddZvPIni6I6PTWKAe0B4XwWbeizVTk2GLsmr1aAJGG3awkBvh8PujZxfj/Wg78D3DEWo2DGc3BLO02GDgB7TdfccMkBZVj8abcbviZOojkp6G2EtA7ZpICZ3R+D/WN/qQ2hpMxpFw6tTlZ1gSsId85eBzQJOiv3GX5OADA/D1CuzmpdHwTAen/928NnRkDwaJzJ3kHfAGdtbUQHLM4SADza+nUc986ZfdDL7pvqebQ51xtf8h+f7eTRW1vBZJQid5otZdayj4aRa2JO8fskhD4e+rJgJKM0dGNJx4X7Q+IEdo5p+M11XBg/gm+IiRK/t3eGA3jCAPDmDJZ9xhQwBUwBU8AUmIEKGACegYNuXTYFTAFTwBQwBUyBjRVYtOq6ncar/N1xJ3g/4hdm5Qj9jTItgCWPxftHtuHiJYgh4vU5qI+lpUA1ie90j3w3j34rOAPXkcgFgl8BOw6GSWEyvifuU3FAgmOW43ji/V/bI/E/nrr3s9dOxdjhfvFVN/3s/WCCH0myaDZjEehQ5kEIzPtLdAKcyGVZ3YzG/kM0q/WNE/c9ccqcyFPRj02vsXjFlYuiID41iAqYfdkfn3HripIJWaPDVZ28fe7rgKbEYDAYQnOAxRENPQpXUE4dw1GQ49IVHMDtNB5aAMyWrlr17Z2qDdWf9Mrg/CwOd8coc6gBxx0IlvhfFidU+AhDOlMWmqxfmQseTDYu6oEMX0xkwl2vmd8E8T/pZvdQU/KmXdbvRvEpbhBlo8RFcfBcH93hP6+gGu2NmQEcIgJiZHFaTpwza/65Q7EhMX79f3x+Mg//mAC4BYBNAMwMY4kZoaj81uCGkKx3FwFBFzD1BShGCLjmbTi9RUMXPaIAGK5fDJD0v8LVW3PHR+uuAeCt8UVi1zQFTAFTwBQwBXZABQwA74CDal0yBUwBU8AUMAVMgSeuAOHvhqL7waAbnJ+223PLRMu7lZF7hF0AjY938NdVp6jknzbxAH0XsOM7ku/Lw7ss5bFvgjYHkOn4lSfb3TkCfACCCJ1bKR6lB0YCRIMbuOgUQfXtZGTkA8/d9+gpiRz41epfzet0Ol9P4vRZ4MxNwa4E9kykJxBew/jb+1mQxR/d9cBdfzM/nN974qpunzMXr1gEABydGsIBzE7Q2Sz6+mJvgL8yHpJuq5EPPHwRssbxSwc33a50YOqpGg0hBzAq9AGrvGUkG14HsB+BW2/9xtyoE78qL6I/BYE9EAA4igC0ZZNBrLnAi+hMksCdy7p4mM+J18kBYM7H2Mc4yAaIL1rWd7aLRs79jqBlmcfcABGAy5xryQQWteV/PQT248DzNPAAp7tsZj8evi8V16IUgQuD0Xb7t0k5+aKhAcBL/uMLE93gzSNRFy1kYUcFwJSS+0CiA6Guy1wWDdwEJAAW8fhjIHJE4Dz+5pME8vkwlQiMyToJimzOOPKGLQPYTw77aQqYAqaAKWAKmAL/TwUMANsEMQVMAVPAFDAFTIEZqwCKvY0VG/L3xmX9kTqJWyj2xuRYcYkSUwm0EjcfQRchmLp1CWv0kXh1TvrMXJ8x2wBH7wD2TksW2tIQCHH/EnB5MOZBsi/6RLgszky0IwvhBO706NG9pJ0kHzj5wAW3b+mgMe+487vOnyZ1fGGV1KnEIuTS17qX5xPA4FeESXjhKQed8tstvde2+vy1Ny5aBIvkqRGKwLFiHYGbRA64wloCGzluHrw5gK/VztQJK2BOrKZ4XB96EABTG7owGW1AVkedAIFvGW0PXwbwY2nN4nCrlz/4ym4RfhjvH5Ym5Lk1AxlkHvZjIFQvFCSUTQhUPqQacklZEa6ooY/W8EXdJOqgydEg2ERUQdETpslrsZibz7j1YyDxDw5CI2F6o2Zv6iT2b3J9CQAtIjiAW79Ny87wAODrvyQO4JGwF8Griz7niHDQYndNPIyD6Fper380mwt83+WDe0A+WBQPI9MA4CqbO55VVgRuW3232H1MAVPAFDAFTIHproAB4Ok+gtZ+U8AUMAVMAVPAFNgsBZbXy7PVq7vnh736owCdTymBxEo+hT4Io5j1C/ciM1AFDjIXllDYZZqCoSnccY/B8xl6BWG++FsTkqptJDyUYnI4wNZ8EbKN3JDeKcifuB8fhacLkMbkOA96vaj6t3Cs/f6pyAS+ZtU1h1Xd8jtZmh2CbNyw6uZAeXUXycdfjEaTj52wzwl3SUDwNDkW38gIiEgygKuqJ3nGcgzASXGzMgZCXnPAl8NB6J8ju5UgvInDoON0IMaAj/CzEBecwUVe3TI20hrqCIjBYatvuax1e955Tq+MPpqX5QlwmKdSdJB5wDIntTCb37xInSOYzl+dknSo6lQYhJoNypQcX43WoLNVIwzU7Rt7B7Z737uAObUkFoFE3rnldbh0XQm4d0BUM3NJlBGy0IMDeHR0cTJMERA3fPkLvSJ+M6CsFIEL8E8mWeF9wN4HwbqRFDIOAvm/vs9SKBJ9llnp5qx+v7BYHMaHG1FRWwB4DgcwYLNFQEyT7yZrpilgCpgCpoApsL0VMAC8vUfA7m8KmAKmgClgCpgC21wBQJXoe3cs+YNWJ/w8QOyuvQDe34TZrur+legAAbD8VyV1N9K3SxjrAS8bTSBFXOPBDYtrDTodBx2+Ev3gAA/PEYiGwlkCtnzxMcJJQCGFXQA+krGqTmA6glOmUxTlRDcu/24s3uPjJ+677xZl8kKH5Gc3Xv3Rdhh/ME7TVq/TfSAPy88nWXLRSQedNBTFtZ7M5CAARryxFoEL8ibbtoKLW8YQRck2cmS6izfAkYzTAUfNZpZMBDmrcWo7B3BVh7eMZtPDAew1xHiHt938rQV1EX2krNPTk7CcFcPGXotT1UFep5X02WX4ugTbjV2+fm8D52keNqmvzluuA53vGANxAwOsE2w6sCu5t7KvgHGRLGyNOiAE9hEp1NtHQPgicd4B3MmTYGSk9Zu0mnzx0ERAAAB380gAcIZiewTAdFgPaA95tH9c0UrVNYvZH77IoGZBKHBvNioErEdBD+kmE1UahO1dJ1rFhtNHF7z+V09mjdi5poApYAqYAqaAKTAzFTAAPDPH3XptCpgCpoApYArMaAW+u3b5QWGn86VW0jquiKqwALAR5y/yb3lUALPMRBUWKBAGcQB8JL5xgyq08pEPzrMnbtFBoLNphimv7eEuIQ8dqh4Ai+PR/c3f5RF5FiFz2alZnAQRHcakxUX5YNmK3nD6vsdctqUDefUtV8/vjXe/0ErTnVH87qLddtntS/N3n79hS6+7PT6/GBEQYPsCgBWi+WgCOls3jngY1Jvps+pY7bs1FRSrg3VwXIjvClRVK1EEbnQaZABvOg7c/Fi18lv7xnV6PoKl/zhKwl2jCkXzACwVegNeMiiYXJJzUvyodD67/GoHLAXiyhrQRGVxVnuHL529cp4D74zicA5fgl7Z8CADlaQN5uU6RzZfJ/d0DmJdP7qmmvWGImiTAMDtdjZcReCWfuWL3V74JhSmkwiIGPScgS8RY0bEWa3fIwrBvQN94zzkEBm/1ExcwxTVs2H+FKCObShcnRnAVbbLRFxOPnfusa/95fZYa3ZPU8AUMAVMAVPAFJheChgAnl7jZa01BUwBU8AUMAVMgS1UYNF9y2eNr+/+U1JHb0LybZpHZVCQ9EowrD5yLtGn/AuZrwTABDJ063oHsNRqY1YqThx0/EpEBB+pd05HAjT/KLu6HQnL+L4CIXUB42+QLgWQziXJlGD+TTQmgE1zRFGrTSMhUBWqrIor6ig+d+G8Yx7ZEklATJP61quPSiHDLofssnI6FHt7rP7S3frbm666kgA4jAA0Jb5Wow2aR++Z8ytFzFxEgRtoAn9xWrox8cXIJPlWCnDJByT/l+NXFHBnlwDA0yQD+LH0WrPmBzsXE+Ubyyp9FzqzL/Ig4gw7HHTtckoK4OXmByGsJGI7mDvwXw8+HKTJAHaOYU8uCUB1w4NVBXkJzGWXqy3ry0VwNFEoOE8L02G+M3NZAKiDpvibKRN13Ao6RSoZwFn98Dljh7/u7i2Z/1P12XEAYERTvGmk7gDRIv8YENhDc13burEkedKuqJtOUp2fOie53rkRpef77w8Cc3UCQ1EC4DIO8tbciaTsGQCeqgG065gCpoApYAqYAju4AgaAd/ABtu6ZAqaAKWAKmAKmQF8Buh//6/YbXhb1yn8JW9lsun9LUD3x4TEDtnHqaY6pBzQCwAh3nSOPAFjgLUAgj6YAlnucPaJVmPzGxwlInircgGKKBIREVSzGQRD+NkDMw18HIauaRcwU/BIAe6clrwwQDBdwMVlF4UcX7v/MT+E9Fyw8c0ebAHjxTYuulCJwdAAD7BMA+9gBD4FlqOk8ZdQH9PeAkj/pThW9yeDwfukiCXwURCSO7CTIc8LI8ubRduv0Qw997p3TVfW77vr+aO+R4PlFGf0VsoDnRyFmFNcAJ5hzTIsbVRzAuiZ0w8NHGeh/SqgTmHjSbaA41y6XgbjZZc9Di+gplOfBNaXz30dzKGjmutFNEgyAZuL6DRJsiJRwyXYAQFvtkevbwfoXjh326ruGQf/1AMCdbvCmdthFSq9mAA+WevOQvP+EgJtrMue44eO0cM7pTfukrmGA3woxECiEl2dzJ9rh5OmjR1kExDCMv7XBFDAFTAFTwBQYdgUMAA/7CFn7TAFTwBQwBUwBU2DKFFh0101PmZyc/Aoe6T+zTklNAfkAWhU74XAQWDNK+/+aJO7fBM49gD8f4cCICD7WDlwmYEsiJJyDkZmlkt3r4huEnPHyOFcyUd376gp0MQXOYcrzQrqI5QOuSJaLKCA8SvnsPIth9Qp24Y4qS19w+n5HL58ykabxhRgBATyuGcAhAXp/vLyDkgW16KwksSRw9MBXuu3BI8fAOWBVDo3ngAlVRlEcwFV982grXnjYYc8bCgC5ucNW14uS22/ecGpZRn8OzHscZnmG3YUQKRBNBq9Yb51r3edX9++ncJiH5ABTRs5vvCYpBm4MPGiXwm4O7HKDQ1zX2ISR8XFFFsuKmcSagSAg2lmNvQOYRdCydvuGsahz9uih5w4FgCcA7uXJm+BPjlp1TwGwRDdQn37OrxRy8zEaMg0VrAtg/z3w130ZCCRGEnkwCQheJLMnR+qJ544+8w2/2Nyxt8+ZAqaAKWAKmAKmwMxRwADwzBlr66kpYAqYAqaAKTDjFbj0jqXnhpPF5+J2tnOOR7QJb3nkHkgBAAt4ck5ex20dKKSDV8GwuBrp6GV2KUiZdzl6hzDBlbzP+AYXE8FHvz3XlUxT3ouZvryedx57z6CzDlZ8DF7e53X6UJpFuxIGRBRB2UuCv37e/gsuxHX6lGmGjjQBcBgmp0IYmFLpwuznrspYO0e1j4EQlyljDrxzm5Eb/UGUomQ86AaWf2n2ABjjhgyOHQIAs1t0xt/+u8uf3uvmf1XW8YuzNErisMSM0k0NAcA8qBd/ONDr18Kgu1VjD9T5y8gSX3RPHL96L42VkExb5P8yd5jRCD5ug5+RGmlcZ05/N7MjvJFjDNUB3Fo6mqw/e/Tg194xDNN9/IavfmESReBGol6Ulh2JgGCfGGVBfXQiadZ0BAevwF4HfDk3VROfEewiIXwWssBhdQCXQRpM0Amd0gE8bg7gYRh8a4MpYAqYAqaAKTANFDAAPA0GyZpoCpgCpoApYAqYAluuwA/XLt9lstP5ZhbHC0PgLRZ+41H5PF5AGUdpmpv57FJmmQq8AghUcOMyeQeAjQfHck3nXBRA7Bx+REG+2BVBTwEoFLFWGY5B6ChwyGUAi0PSHQ104/XzXpCyuFQOzFn0fj0yMnbWlmYBb7nC2/8Kv7rxiivjKDuNGcBl2dXYDD5i7zOVORaAusCbOo4A68xU5oh5YC/jJYOtwF8PBXKE8JXA34ibBjfPbiXT3gE8OGq333LZgXmv+rMgSF8Zp+HOcV2Q0jontWogxd42KXbYbJSIvgCfTraYjmq3bkQ/YZ4knZqr7UGwFOvjyxLJITkpDSAlTPZzn5nbHgC3R0aWjoSTLxgWB7AHwFk9iQgIZEojBsI7gD0ArjHXxFmObwIeZcFsZHU/e/irsw3fNxBVddXvAN0ownDg+6FXZUE3nT0+EnZOHz36Nb8eHEP73RQwBUwBU8AUMAVMgcdSwACwzQtTwBQwBUwBU8AU2OEVYD7st+9Y8tJ4Q/6VIItbURohIECLsDFr1zvy6LBrHs8WB6IWY/OPoOMvgTf+HF/kygNCTRbou4TFXSoAGNfgvXItAkX4S+CTwscrjkiXcTqYUyvQx9/LgWepD0WgCQBMGJkgrLXo9tYXrfANZ8877js7/EA+Tgd/ddOVV4R1vFAiICR6wFtHNUqATusELkxxA0vcAHzUjNPwURBu7Fh0S93DrhAaH9GXgn0K5jCMAKHBTbOy6PTpHgGxqaR3rPzJrmU4/uayar8vSsLdBQIjkoEQU9yrbs34uSi52QOQlm5hAmCfXS1A02nZmKvxYbp/Eym8yInunMXQlWPGsZPDRSXQge1OxAlwwOZhMDo6trQdTgwdAGYERAr3eYrOMtqC3y8befO5lp2jv58HrN8HXicfC+MBcOO0xvcBAXhet1AEbs6GLBg/deyo110709e99d8UMAVMAVPAFDAFHl8BA8CPr5GdYQqYAqaAKWAKmALTXIHv3n/j7GhD54soNnVuncZhkgHCuuxdgVcDTtsmk5fOPAeufEawZpoC1LgYiNCBKomOdY/FMzZAnKfy+DdcpABmJWEjca57rJ3nSwyByxQWBuY+7x8NV3Cs1+Kn/aPzwsUAgPkvcVmUBXWvwAP0xVcOPGS3txwcHtyd5kO1Rc3/5Y1XXBEFycIQAJhQvWJUBrKambmszksHMV1m7aDm8ntTnwyKq0lTYgi8E9g7VnFZXvPmuJUufOY0zwB+LMHXrr1mpFr/wCs6efChLE0Pq6suk48x3TEfoSvnroeSohFdv3hNY1E0AkKAJvRsIiAYeeJybtUtz/gNFVxiEvCh1BWRE3ivxuz+GEgmsDpgu2UStFvtZaPJoy8YmgiIpV/93EQ3fItEQEj+LzaWOHck6JvfBArPWXRSCtsB5vo85bLAho70r0kjb/SVqIwmKxifiVL0PwUAnrsuqzecPOvI1y7dokVjHzYFTAFTwBQwBUyBGaGAAeAZMczWSVPAFDAFTAFTYGYrcOkd1x9SjOeXxq3soALBpH0opZRv0KGnLjyf8RsIQPQZwXXhsjlJCglxmAXs3Is+x5Mux/6j7c6Byke/xWiKx+fFAaxF4giLpVgW3aXO7eidqgIkcbEmkoBojW5V3K/oAWzizyRsMQu4DvLqrqpVn/rcpy24dSaP9C9XLvpxFEbPDRABIbEaku3LsXKubKByAcEeqHmXr4PvGkEA4EandqK/y1skcDzELUwnMF3Axc0RIiB2RADMrtb14nTNirVnTObB32KVHBlFCECpYb3FkaZx44jWKA2dz1wPOpfV0eo3Vjz89EX5xAFLOUHSfUSHZAFjPeB/IbOCYVTyc65jV1xO0lfgAO6Fwdjo6LKwt+4Fux41JBnAS772mU4ZvY0O4ITFIFEIjn2RDO+B4m4sQljRTS3ucjfH3MaE/+7RvF/22W0AMe7FRc+USRZ0CmxqtOeuS8vJE2cffZ4VgJzJX3rWd1PAFDAFTAFT4AkqYAD4CQplp5kCpoApYAqYAqbA9FXgW7de+6akV11UtqLRCmAwTVvqyBMnaN91J9CJAJC5p4L69G+eIQDGORols9SBneY9AVZ8rF0jIiQ6ApRWwY0DWbwmAZB73JuZpgqH3OPf4jrWDGF/qDPQPUYvSKlUQEnAxhAJwqJOUYAJvfT5hxz3g+k7Slve8l/etOhHgGpnMNkBVLy5ILOcBTQSuBNUuiwC70ilC9wX9ZP3BfTSb+oPHR8tAogCXNgIKMr6prEkWHj44WfdveUtH84roM/R7Td+55i8qC6M0vYZUVWmmOOY+i4TmXOZUN1nKNPXSnewK3rmHddK0WUSSw62X2cVdFS3r4uWYDE4Wn/pDMYYMJ+ZursoYeXvMQFoHLTb7Rui3roXDgsAngQAnnAAOOUGD+ecgN2++1y/M/B37IvAaSawSIPzvSPYR2AwosR/l0gcBLPH41YwWSVBObLTuqSYMAA8nEvHWmUKmAKmgClgCgydAgaAh25IrEGmgClgCpgCpoApMJUKAKDE31u15N+SMDwvxwPUFdygcaoF35RjbQyA/b0FvBAEC+RS5y7/T3JgHUAkCGRFLAIbdUAy/3TAzescfK6akwBlBVoO8MJZ6oGwFIhjW5gbLNdU6Dh40DnpYZG6U9EifqSTw5tZ/uU5h530t3jdBxlMpYzT4lq/XHnFjzC6CoAxFpLvPPhovQe7jOiArbUqnBN7IGOZmhM8cswJLBXaOXCMl+I4DXpdwLo6vHE0rk/fkQGwzDXYUe+66XuH9Or6w2WRviJJ6xFEmYCRa8SBuFYFABdB6sCm27IQ4C5RHG4eMwebcN1Dz00BsIBPvM8MYVkidARj3TF7W9YCxwUREATAs8ZGl5T1hrN3O+zVdw3D5JxY+tVPT/Si80fCHNHJ0AZ6EOpyy4YayDxCf+R7B0UIObfIuX22tIfD8r57AqHE98NGcRvcfEAGcqdO4QDeySIghmHgrQ2mgClgCpgCpsA0UcAA8DQZKGumKWAKmAKmgClgCmyeAj+5Y+WuG8bHr46z5NAcBLUCXcqyTADfYI6pgFhCv4HDO0TpCOb7dPTxNeZ4yiPczePdBFZaTMybHTVqQJ2/zP7lUTqgqAWwNAdVs341E7gq3SPx7tFwpUUVOJi2q3EEEi4JeAMAxocTgKRu0bvkkEOf8pqZnANMAIyCfmcwAoK6+TF2JmoFktBRghz4ohsPAn0ZfwBh0dlzdx/LwdcIjSU6AoW4eoTLAQBwsMMDYL8c1qz5wc75+vzCKmi9Pk3D2TGs1rJhgfxfcbVyqjpQ7jcvPAjuR5yo/n49cdNDQbvfQOHd6IJ3oFQTT2h8dYdmABMAj460rxsJJ140NiwAeMVX/tdEN3l7O+hFcdVDNAv7qi5g9kbyxGVeoTP+S8JlHvv5yfmom0naXUZBND2XaA3t/2TFDOA5G1rl5CmzjnnN9c1J9ospYAqYAqaAKWAKmAK/RwEDwDY1TAFTwBQwBUwBU2CHVuD7a69/djhZXVm14rEuYBXzYNM0fdw+Dzr2eLI4dB0ZJLRqCsEB5hDwloC36mx0OcECfn3GsDoACYA151M/QygkjmC6BAkYeQ8HhKWBzrHKYnAFoBgdyDzyvCsgLUYROEZOINYYucCdX7fT9vMXzjvmkcft3A56AgDw5QDAZ3oA7LWW+AYJnXXRDnRS0t3NyA5kPNOhSkewAGKOjQ9/cOPDTwnQx09E4UoERFXVK0fi4Lk7ugN4cKrcfctlu0308guKKr0gScJdM2ZiVLlASwG3LHYo8FId7ISfEqHii/B557sD61xO3uXui6VJ8Tjnyo+ZFewyhfU8XAsZwC4C4rrRcHxoAPA4APA4AHAr6GJVwvmL75oIZnxqIBs/bD/mjqxzl/nts377kQ+6KUFSXLkYGq+/fLeIAxgAvMYd0jnjWdB9zthRr7p2B13O1i1TwBQwBUwBU8AUmEIFDABPoZh2KVPAFDAFTAFTwBQYPgW+ffuSA/X/ZAAAIABJREFUV7fy6ks5SGnu4hXIZf1j6Gyxdxxq6q/L2yVwEaCl0Q76hot3cIXfCL2keJWPa/DAdiC6QZy+OMSNivgAXxBKAZk7nBO4gb8uAkIel9cI4SYflJ8gAJZ2AwYJAAbU7q6fvDOb037hWfs8c8nwjcK2adE1K398eRykAMBwemOMvNYK1wHMB+M5OEYcX2XqHKEm7oHZzOLGdI/icwAaAAzNWQwQAHkFshDOmEkAmCqtWrWoHXYeuaCbp+8baaV7VGUPqpaobaYA2Gs+OOJYNRJrwDBfD3y9e95vqmg0BF3tlB6OYpxOQOyLqMn5GMWyjuGAjYORdvvasXDDOcPiAB5f9rWLxvPkHRAHALgHm3OOjRlu2rDdCLFwjv0m1kXWeL/Ym8+e9t8lkgfsnjLg95OYgTEvGSrRqzI4gOeOZ+HEqWNHvua322Z12V1MAVPAFDAFTAFTYDorYAB4Oo+etd0UMAVMAVPAFDAF/p8KsIjVt1Yt+XA7CC4ssjjM4fCkm9bnavoPazG4PmRtXImMe5C4Bj2TGbwCchgZQLCDj7kkhybjU8Gyy0b1EQNkN+IA9rERCpQJh7XgnMLIECiN+b8+I1gMx4RqNP+5uAmCom5B1yULaiGWQgA12tMrYIwM33vOgcd9bqZOi2tW/uSHUZA8r4Z1VJykTn9fBE50cuNGjcSQSmi/CSwWt7c4Lh19l7F3MRwNAK4AgNvPnT9/4T0zTe977rl8rPtw5xWdbvTfkiQ+JI7KCJEQWrwN8LYpfEaAibWjTl/EZgCc+w2TTQGwjJV3CutqDCKXkS2uWFklWBtwAE8WEQHwdWG44UXDkgE8vuzii9Z3w3eMRN0orbtYm/ieIbhFrEiS6sYRneOa+e03oHwRON18YOZxE5/Bdc0+i3tYATByp8UBnNctZADP3ZBWneeMHf3q62ba/LP+mgKmgClgCpgCpsCTV8AA8JPXzD5hCpgCpoApYAqYAtNEgeX18uzm1b2Lkip4S5HigWxmi7IIHFy76vp1ZNcVAWugoCvG1rzPMyX/1TkYAbs041fduXQG03HqHb2No9g5ewl01YPqncDOaewiBypGEYCU8f8EdPlH5T1IdlESysEYP6D5thHsq97dGiIjoqzLL+5xYPyuBeGCfJoM0ZQ20wPgKioRv0yYNpgt2x9NcaNSSQyeuIJZnMtB4BgZ0eLOdjnAMryu+J64VTnWjL7Nq+VjSfuMmQiAVbs6un3ZZWf3quAv4iQ8OgqLOGXyct1zkRAOsDutWQyNRnrJunYwPXaQvnbrT8C7052u2VQycl3etWys9AHwaLv929G6d87Y4S+/e0on0WZebP2yiz/dKZLzs3oiarEOY9lFDrB2ZjDqQjaXsMmjr2MDyLujB86T7xbGRLgYCL+B4QG4RkDMBgC2DODNHC77mClgCpgCpoApMOMUMAA844bcOmwKmAKmgClgCswcBb5/112jeefef0+C4OVlAkRFhyHgC351IjRlquRvQicFUFrsbRAA81Vm7UqmqXuk21enChOFWgKJ+T8SBcFH4mn10yJQ3o06WDiuyQMmFCOspENYoLJmAvts0H40hTabmaqEZjRdavE6wDJ8qMiLG8JZ2UteuNcz18ycUe739Bc3XnEZLKJnBQnEEEivAI4/fOE9fU2dl5oNzGJ8LmqD4y+ZtfpZybQleHTZrZwf/L2EM7UsqmWjs7MzjjjgjHtnotayXupFydrl64/plNXfQdNTUyaSiEbMw/brQLYsnJ79nGuZvO7wY0EA7AsvamSCrinvqJds4TgLOnlUj7Sz344GxYuHBQCPL/v6p8fz6PxWMBklLAKH/kfcZGKcBSNIxAUNCO5gt/ZZN6N8//zGQ+OOHvjekIzxKJEIiG7QYgTE+lY58RwrAjdTV5/12xQwBUwBU8AUeHIKGAB+cnrZ2aaAKWAKmAKmgCkwjRRYdN/yWes2FF8BWHpxnjCCodAiXwJdHv9ojLg4VSCOzzhlnINz9/EqoTh0NQM1aTKBCX4IhlF4zoMclyns/xb4OACI6QjUTNQ+uJRzN/k3Nt67gDuQRebEUYiGgnkGWRl0umnwvrF9d/3XheG8zuP3cMc6Aw7g/wrr+PlhylQMl9ss46NxEAS4ojl05sEIDnndObEFvhNgEs6Jw1rdmzz4OUJkGVMpAlctHRnLzpzJANjPntUrLnlmLw/+uizjhSPtuF0jFxgwWNaEaiYLoO+q9mBeJreOhQfvjFuReBMp2kdwig0U587mhkodo8xaEdVZlvxmLOi9ZNb8c4cigmP90q9/FtEUbyUApgM4xLqX/F83DyUYxj0R0Ajh+u4hsW4IcU0rNGbRx00d0DVyxCerJOims9e3y94ps575qhmb+b1jfXtZb0wBU8AUMAVMga2rgAHgrauvXd0UMAVMAVPAFDAFtqMCl99zz1hn/L4vAfO9tMyYyqnFmAYBsHfhPlYzBwGwQEDn4qOx1wNB/qSTjwcYs4CuQaA1mAlMIMTDZwz7e5cOTBIAe0hZA3w1j8Nv8m9svH8JmCTsl4+L41O8dlpHdd7trqnT5HNhK7r47D2PWYv3+1bL7TgW2+LWv1h55X9FoQJggrMGuPkCb4S7OOikFFc1HeGSsep0dE7hCAOpRbi8E1vHVCMK1AFsALg/ooyDWLvsO/OKMPgA4OyrW0kwC5nAmJmMb+gDYL+GCHR1LTC/Wjc4ZJ3Qic18bYln0YgEwnuOJd9PJP82DjplVLfT9JqRVvmy2Qe97L5tMbce7x7rl37zsxN5/dak3BCNIQujrpDCgv4w+kK/A9jbWDahNAOY/eJ3Bom3cwljXmq0i/uOwHTV7xfkJ8vrdAAjAzxAmblszvpWOHnyrCPOu+Hx2mbvmwKmgClgCpgCpoApYADY5oApYAqYAqaAKWAK7LAKLKpXtdet2vDPAErnFYSChE501vmwXpe56x2imwohcIqAkB+ge9eBwhzgMELsgxRoI4X1GaYuksFDYF7PQ97BIlcEvh4K+UfBFRAp+PLv+fZ4YMy8WmDfoKCrUB4hd7nEaE/z+HwOe2pR9pB3vDhsp1/Owvbl++yX3Dk/nN/bYQdadQ5/cfNVl8V18vwg0QxgPz5NEb1SQSLHS8bGZdJ63ZvxJDCWQn/qFG8ygZ2DWyIgytIcwJtMKDiB9yzy+n1lnb6hlYW7IuMXSw/TjqDdF1KU4oX+P0Fkx0QBvLdayzVd9IOL6PAgn/A9AASeLMJ6tJ39NAvDV8459JwHhmFeewdwO+xEqTiAEdnATRwp7qhRMJofjZ9NBrDfwNFMb32SgPPNx0aoaH6DiBtNBa7Rq1ONgAjGT5p15GuXDkP/rQ2mgClgCpgCpoApMNwKGAAe7vGx1pkCpoApYAqYAqbAFiiwuK7T21ct+URSVe+AAxgZwIB6iGigs1MPT4I3Nsl6AOujAQQYSq6vzwDW7FheRnKFXZ4s/xaXqOTGKvjxj7ZL9AAApOaAbuwSZjskihYQKPZuQR9P4BzFcm/nliQHq/B65eBSTABduMgDl1tb58g1qMpxFJNaUSfhf8Zh6z/P2v/o23dURzAB8C9v/ullcZA8v4pBCOn2dWPG4n9a+E9H3UdqEPBKgS2+LkX8vENbx3TwX5QlD9iNbQ0XalEWy0ZHszPnz1s4FBEEW7BMpvSja9b8YOdqXed1RZ28HxEl+4RBL0T5RS266BzVDRQVhTXr16+t/oYJcq254UFg6mMiZMkiAqFM6lYSLRpNoj8cGgC8/OLPTPbitxEA06dLAEw/P/sqW08SK4KeOrez/86gA5h9rKXYnStQ6SJLJPICa5tPLmhWNaNnmAGcBr0EERDhhAHgKZ29djFTwBQwBUwBU2DHVcAA8I47ttYzU8AUMAVMAVNgxivAR9MvWX3dR9t19JdFGjFJVOBfDBehgMABuDooli8e1gBgd65AG/dvTw309ZAXANY7hLUwG4AiDH0CtHzEALODmYkKKEQQJM5SOonp6/XAmG0k86JT0sFggWTyiLy2km0oCZLdZwiaeD/CTCl2RsgNrEYYXRZFHZZ1r4yCxVGafRmfvmLXrLrjxH1PnNyRJog4gG+66tKojs+qE4QMuCJug85SaljCIC0ckYAdTl7+ZOEyfcTe5dFiIKljA3yZ50qA7CBwgVjnvMiXpWn8vAWHn3X3jqTjVPRl7dprRvJH73llXkYfbiXJQUHdixkHIRDYHeqKda76gfk/GMkSu9NlHXHBcO5jVk8Ucd1Kwx+PhcWr584/96GpaPOWXmO9A8Bp3YmyMGfYg+svNxZ046jEwt0oz5sZx34PyuVQuy8mPR+F3zjv5DMCwTFT4RKexO8FAXCQnzj7qFct29K22+dNAVPAFDAFTAFTYMdXwADwjj/G1kNTwBQwBUwBU2BGK/Ct269/U5LXXyzTKCJIGQTAApQcRN1YJOdI9BEQDsQSIHtI2HzWu0p5HV/kbZPY3cZ56oAzXX+Fg2G8JoHzIFD2UQSDAJj3I6pke/kZHv4zzAv2fxMaCdyka5AOS8khjWsYlQmCN+DF24qwvCxuJd8eLXdftnDejlEsTgDwyqu+Hwfp2QUcwExvEPflQLE+Aeji5naZrA7UI6qgOc9vCsiYiKp9Z7AEcBDiwVwMALw0Tkaf9+z55gB+rC+YevnybE1w08l5Ef5dHMUL4gjBvYiD4MyUjQ8pgKhrxmvt5zNhp0BTzGtZnwDyMZy/NANXeG+yjOuRJPxuNpr/0S4HnvvoMHzBPQoA3Okmb2sxAiLoIduXGd66KdOsU6x7eSLAbejQgc5Npk0hcOS+b3wBuU0BcAcREEU6tq4VFyfMnn/uimHov7XBFDAFTAFTwBQwBYZbAQPAwz0+1jpTwBQwBUwBU8AU2EIFvn370uelverSPIsSFmAiAGycngRNLmph49v0ATBflzxZAimX0SmvOWevjy5tII88rk1uSKiYOOCjkQJNUTIX3VAUAGK8P2Np8ZMOQbmPdybLNfTxcR4Ewg0k26jBCtX4uLjm1So4E1IpUDpRdzKLzBWwveJ5c7y/qk6iS9HEr2dVeuMZBxy7Dtf22RhbqPq2/zjd3tes+Nm3AdXOCREOm9cA4egp+19WJRIz6gKwsZtXQQfAtwO624NIMAojoKAuiIXjJIpTqNQKkyoDQU4x7Alq6CF6mf+PAL4OZQyQ4dEryutHRsIXHHHAGfdu+95OjztyTNbecPFJ473w75M0PTaqy6wO8jBJWOWMidxRkCIPl5sWErnhox4wbzXywEWtuIgViWwJMxSBYwRE9dXdd22/Ldzj+ePDoMajy7/2mcluKhEQmWQAd13kiH53eOgr6xvr0a9PX0RSIDhWH4ExNmzkM4yFaL6fOENZgBAVDrsVQiay2euyIj9h9jMNAA/D+FsbTAFTwBQwBUyBYVfAAPCwj5C1zxQwBUwBU8AUMAW2SIHv3L388Hi8d02ZxHPhfBUALI/zS6SCz3xV0CTuWokC0Ft6HOq5r7g/vWPYFYDjdTaqXyV5n644XO2iJlzRN+987EdLKBwSZzKuWyJbVq7nsx6a3GG9Xt8R3G+fgiXtisSsou0EwBI1wT7gTSkex3xhIjd2DoANj9fXiCntlWVxdx2HV4BxXjJ35/Dnx+96/LotEnw7fZiw8WfXX/Gvadr+wxIBEGWRT2I07wnCci3euxOdvhNa3A6B7oSODyOTYBzYt8RrIPNFgqpxKeQbw3lPwQtPhaB7Qto98fs+cE/vnSbJUzEIs9tZFo+2R+tOp/szEOVzFxy6cCiKkG0n2R/3thyXNcu+fmgnrz/a7VSvSJM6HRvNsMfhMpplvXGm8ifWi5vzXAP8u0ZutoekSZJiJbEIXAQHcPXvu+8cXxDudc7E4zZiG5wAAPzZbpm9tVUhAxibDzE2m/Btoesbfd0o+oHefGaI+3XOvwWAq2OYAFgBsbqjvSsdZuGggia9uhWUydx1Wd0zALwNxtZuYQqYAqaAKWAK7AgKGADeEUbR+mAKmAKmgClgCpgCv1eByx68ZU7n4fVXR0nyDJQGCwleWIRNwKgHLYC2WoBNga3P5PVFwQYJrzp/FRZL1i9jIVxYgEYOMHSAwIduXQdyBjJO+T4jB+TzREQDkQ4VgnqluJyAIVc4yrmB9Xx1ChfOIVkXWtyMERCOZbsYCi0oJ65ggmOB28wkVRcxf2dfU6JmeIFRrKsqur378WT95XUWXNwKkutP2/9Z9023gnFXXf+jlwJ5n4LqYavDqLoxjdLb46q8f/d2PL7//qflFPXxXM6MksB54YpgRRLcf1/28EP5HFiBd4OeT8P4PB2jc1TZq+dhjH8zMjf78wUHnjkUEQTD/hVwx5JL9pmo8nflef262WOz9oAVHdMxx/yDUxs0XhdOCEewul8l70E8wgOxK9yAieEAzgM4gOt/furI3HeH8xZ2hqHvdAB3CjiA664A4ISbPhJ3ocUZvfuf3xcxjebuaDaUeA614PrndwefEqAkA+s/wPcJATBAc1CmY4+mFTKAzQE8DMNvbTAFTAFTwBQwBYZeAQPAQz9E1kBTwBQwBUwBU8AU2BIF6EC85NbrvowwhleVCQrBybP+LMZE5y6deH2HHVmNxi0wv1N/18JvfRirrmAFwPreQI7wgCuYZzUF4+QzAwWwBB7zJVfIDY/BK7DV+8kB26ncaSCiwheTImJmP5hMIQZWD5SbAAdtb4m0B0l1cE5Ccf6yQJzPNkb/AUldQbSqjhGT0J3sPlhU1a+TLP7GSDj64xMPPPL+x4OmWzI+U/nZxfXitHdHLzlhn24ehguR9zF1B8EwoHDaW33faKfT2SlM6uK4g15w13SD5FOnyJO/0v03fnf2hl735WWV/Rnm9aGof4jdC3D5sHBZuGq991EnGonAdeOjIIiDkyCv0jqLup/Z/emHvi8M5/eefEum/hMPLf3KZ/Kq9TY6gJHQi46BUotrX78f/PeFPGEAJ7MHu2yJj3Xhudpf9z3E7yO3ESTrHN8PLAIH0ByU2Zx1WdU1B/DUD6Vd0RQwBUwBU8AU2CEVMAC8Qw6rdcoUMAVMAVPAFDAFBhX41m1L3p/U4d9WcZDloEpJkqjjV/J3B5y2zkbLR7Eb+Et44zJ6Gd2gcMZl7sob/NcplxmxqewCeF2eqYM68oi3A8s8XcGQXg+G3iYruA97FQILeB4oKEWQ62ERATAPD3abQnV0JKN/g/fw19IiW32QzdcRC0EQxyRWkOD80TwoF4Vp+qUsDn85HR3BtgqGTwHMxXjtyu+dNNkr/jJNR04J6h6yl2HM5gaJy8Zmq9WR792/fmeDGy5pkCMDOI3y/7nn0/f9QBguoLN7ux8PL7/4U5Pd5B0jUQf+XqxxxkDwCQG4erm+ud6Y8a1Z3/Jl0BR1rP0GjsRA9F2/oOMNHNZ4GryHq09WWVCls9eh4NxJs4961bLt3nlrgClgCpgCpoApYAoMvQIGgId+iKyBpoApYAqYAqaAKbClCnxr9Q0nxEXxrTqK9yjh/hVXLRmMXBiA1P8bEQCwFp9ChAPdexKvgDMBeQfBDIGOZO+6olW1y9ht3LvCd2jn8wBH3bw8fHREk/PLFgDssoAbizxt5AxEe8QdyORTVCGTwAlfIG7gekJs8XqKcwbdhj5ruEIeaZNr7Nolj6Tj+oMQnLEQfPScgBxtr+teXha98sEiKH8ep/HX29nYj0/Z78iHt3Q87PMzWwG6qe+46XtH9PLgL8GDXxBFZSvGZOSqrDkv/YbGQAFETluJxQUALkqULYx6n9zz8H3/2/AA4K9+spu339kKJgQA09nMMAuC7QjEV6NbQHD5XYIYB1l/vugjrL/yN893Tx7I9wS/evh15OJcGCmDlRxsyHHl9tz1cTl58i7HnnfDzJ5N1ntTwBQwBUwBU8AUeCIKGAB+IirZOaaAKWAKmAKmgCkwrRX44eoVe072Ji5N4tYxFdkmgItmczJvcxDSqtOWXGYQ5hII69+az9mAXD6i7uNLXQE5QmP/PsJNnW6aMezv5/N/CXTl0W68o/f0ABcAGm5jAloB0nDxamSEL0K3aVE45wB2TmTcTV2/ApDUnUyI3LiaUVhLHkVni1zmqJxPZOWyJbwjmLERuFtZ9fKHizr4UZjFFyfpyLXRPkfduzDEs/t2mAKbqcDqFT/csyw6f4HtjVe3kmg2IXBVOscs1yU3UEBBmyxuboEAAHdBUrMo/8Seh+8CADy1UR+b2ZXg0WUXf6JTZO/KAICJaRMUnKwL/GTBSVr7dfk6AKzufV9k0v/iYyJcnUaX59136XMlVkjunizx+Wz2+ijfcNIuC167dHPbbJ8zBUwBU8AUMAVMgZmjgAHgmTPW1lNTwBQwBUwBU2DGKrBo1ar2Q9Uj/yMto7ejehTQDGAoWaeLXPAQuHkEXWId/GPoCn3p0vUA2Ltw6dBrwA5+GSzoxNfpDHZnuJ/e4avgVxyPLmJiMFeY9/JZw4k4AJWzIqTBPRLuHMpS0A2QDCcRllX4RzODXVRFkwnsoiXgBNb70lksAasN0BYcDCauANt93v3ko+glAoXjMgIDDh7M8+IGFFq7JMzaPzhz32PusRzcGbu0trjjd930/afkVfWWXhH9SRanu8Mni5mJ+Y5NF7rTI8zlsoKbVtaSAuBeHREA/+NeT3/pRzD3+vb6LW7N5l8AERCfnOzE7xyJu4gYR9vRBy3kxnXmikP6pwmcU593E8ev+5rwheLkqQTGRXCdyneUg8d4rYJLv4NdrDKdtT4KeyftcuS5BoA3f9jsk6aAKWAKmAKmwIxRwADwjBlq66gpYAqYAqaAKTCzFfjm7dc/b7SXfLPO4tm9OgddUXjqYx58ZIOAVld4TVyynuG68wXaCBAmMvX/KqWQuB/P4Au+MWOYn9CYCe/4awrI+UJygz8H8oc9EGKEg7SLsIj/oGic3Mtnpro2yiPkTezEoHOyX2iKjkrAXAW9DkyJOxn984BZ4DAcyLyvFI0jxnKPpPMziGzlJ9cXZXl1Fddfy1rhT4O9j7vHHMEze41tbu/relGyZuWGt/WK8ENZGu/JUmdhXYCLMveBmx2Yr2LNp2ceReCCtErD3sf2PvwP/vvQAOBlF1/UK7N3ZCgCl0TYYCp7iG2BIljP/nuEUJc0Vziw+45hH7kepa9YkrIhxLU+kAfMldl87wgABiZPZq9vBZ0TLQN4c2edfc4UMAVMAVPAFJhZChgAnlnjbb01BUwBU8AUMAVmrAKXPXjLnMl1k1/K6uhFdRLAyqqQ1hd48zDVg1xxypKDCo5x2Z0D8Q/yYQdbGd0gOZ2MbBCI04+M4PVZaM7HPsg9XY5v4xhm9APtt4SrzhXcFHIT8qMQidhVgBHa7ou5Ma+3xP0EMrn2CSh2AGmjKAt3bw+UydQEgEu+qgI2uZ2PkHDxGCHhrwNWAqDRDjgya6DhqtvpPYJAievx68Xh7Nnfe95Tj7wf9xzwHs/YKWcdfxIK3HXX90fzh6sXTubRhUkcHJImYRQRhtINT6CKOa8AFUXgqoQA+B/2mf/Sjw4LAH7whq9+rlukbxkJ8yisezDIM+JB1zMdvrI+XeFGLrWNI2ZcsTtmi7u8X79BI5tNbjXJRkyUBhM0SGdz12XV+Imzjz5v+ZOQ2U41BUwBU8AUMAVMgRmqgAHgGTrw1m1TwBQwBUwBU2AmKnDJmuWvyLrl58Is3LWGi5bG19oVWaMeBKcx8oEJfQk86cwbBMJNTEMT7etcv84d3GTsimtRs4UF+A7kBGsROAVCvJ4Hq3JiA5QldVfgrJ6nB4GStNNB4uZ9VwSORaViiXjY+JCCdQKE2RBAJhcFIcCZYNe3zwUag2A1kJpuYz6OL/1gAATBllwLXkwgYIFyuGRZVBvKoFgECv2VuNX+ebrvMfeZI3gmrrLN7zOLw61Z8f2zEJl7YZq0j8ZKhPGXkRC5gGBZA1GGYmptzLyJf3ra4S/90LAA4Puv/9rne1Xyx62wFyUoAOcBMDePBnPDN/0+kfXMJVboGvPvc2OndsUo9Rx8H0kmMlKGIUWZzV3fqifNAbz5080+aQqYAqaAKWAKzCgFDADPqOG2zpoCpoApYAqYAjNbgZ/csXLXbl78c1TVLwlbqdZmArxFooE69LwrGK8NghoPYRtY64q7yVPpLtdTHt12gNZDHw9eBZ4OuH69u5eAmUcTQ+GuRwOtxFN4H63LoWBROCnm5hzABYpMKcCttdiUY8XkzoNxE97lDNyMfiqc9q7iBH1hOwVM4/Fy/94gtKKjWdpMhzOTJ8TdSMey6kQHNFzBbFpVFPlDcCQvQy7xN+Mw/cHzDnzWXcMC6Wb27J8evcf8i++8+QfP6OXR30dhekYcV0kY9Joc7AD2/bxO6zjs/tN+h8/98LAUgXvwhq99oVcnb87qbpSgNmLEwpHcUJLIB91I4jr3a7bEovTOev1+0PNlE4ibLoTB8vSBi4XghhLWaok1OgkAXKdz17fLzimznvmqJdNjZK2VpoApYAqYAqaAKbA9FTAAvD3Vt3ubAqaAKWAKmAKmwDZVgA7D/7r7xjPjifxLUSvbDVGaYbdEgIFEc2qur3fxCoBxzldUo5LYBQ98oyRtHL76GX10e9DNK65a5xQWcEuA47I/PXD1kNUDZolXcK5h3h841oFjJbvM6OW5UiROwOvG/9DSrHDZAV0p9iaBDgqUXbUp6QtuxsiIBloj/sFDbOYE+2v3C1PhsoBTPKcsc3k/BdCS/FLcU87DNTSmAjfo5RNlGF1bRuF3kyy8bNdWdvuCvRZMbNMBt5tNWwXWrrz0iE5efSyK04VR0GtFcR3KhgnnadCqk6j3j097+hwUgVuo1uDtfDy09Kuf65TJW1pBD5gW6wNF4JImI9xFsoibPwzyEmsxzcTlz82ixMWr0GnvnzzQYozucLs53J+qEAHRKeGNTuesT4rOKTsbAN7OI2+3NwVMAVOo8ginAAAgAElEQVTAFDAFpocCBoCnxzhZK00BU8AUMAVMAVNgihRYVK9qd9ZMvj8uqg+WcTCrQqUmAlKXfrBRdANhJmFrlCZyTr/oGqMPFIYqsNWM38FDkhFolyXyGQDAdMv6MyX3d/BwkQweqBJ1qRfQ5RXjolqQrR8x4cG1ZgK76ArXHsSobnR5flb6gYMZyHQ8EwJrfnDSP9e122cKN+5lB6x8TimvHjoIzEfW2c8KcBiWTbEtIhO5DnrlJHq5BvbHS8M4vHjfg+Ysmx/O703RcNpldlAFuFmz+sbv7Ffk9Z8HQfaqVjsaqQGAuRLKKiUA/uR+h+31wTBckA+DBATA3Sp1ALgrkRXwxTcI2K8hWafcyNFSb871Syd/37XPNT0YQcOT5LsG59MB3MEXV5XNXh+Hk6fs/AxzAA/D+FsbTAFTwBQwBUyBYVfAAPCwj5C1zxQwBUwBU8AUMAWmXIHL7r5lt2pi/PPtpPVikKQ4h1uv4iPZAC9052nhJTj4AFAJXhh5wKgID1sF3Lgia2wci7zJQYescxPz/AYKO+csPyeHd956gOwct1KEzRWMk5gHIiStuiYfY5E5unx9jbXBNkgmL5zJdEnyMhLp4PpERzCPQQCcw20ogMoVepPz8cpGkRbMIZaICQ+gFVgrAOYj66qPdknzh72rUQvFKVQGSK5r3LCsyrUA7l9DzvLXDqh3v+Xggw/uTvng2gV3KAVWr/jhnmXV/UAQt96YhPUcguFegQSEqPpCMDr2nnnzFnaGocP3swhclb1lJOggAqKHlYR12ESy9L8L+B9fHvDyO0cLP+rTBYPu/0FgXLkICRaDwyoPuhU2pACAoyA/eZcjXnHDMPTf2mAKmAKmgClgCpgCw62AAeDhHh9rnSlgCpgCpoApYAo4BX64dvkueZCPnLPv0XduqSiESJfedeMJWa/61yRNDu4FRYi4AsnnDCLNwRUY42Asg28VyCjApVvP/63n/t/uX57nIyP6eboOBDkA7GEQAeugk1dcx+LoZWovXbuaIVqhCJvcG38rvFVgS/hLs69wapxQuCgLwmKfL+whMNs16FaW6/L+zB5lhIOLjPAF4iTiAU+ja/v0aXv9vEY+SCSFOJUVAPMxdgIrnpMIwI5dfrAGHIdl3S2r6tYiDP+/sw876WJct1/lbksH1j6/QyqwZs0Pds7Xl+8sqvi9SZzsxO2HNCq/1Jpbv2Ovvc4ZiliRB5Z87TPdIHtbK0AGcN2VCAiu0cG1xgQIrk8WWdTvF6xfbLIQAEfMIkcouY+R2ag4JM/HWTkd+CgC10V2jQHgHXKqW6dMAVPAFDAFTIGtpoAB4K0mrV3YFDAFTAFTwBQwBaZCgeX18uzmVflpYbc4HxbSKhtJP3TOgcfcsqXXBpiJf3DH8jem3epvqijcHc7UsEdw6Ry8vlCbz/iV171D1gFbceT6w78m19D8Th/A0EQoOLDs4Q4jhpm364tEAY+Kg9cXkfNF1nwEhABhyfh1wNgVgfN/D7oII4DsxqnrgDO6KOBp8H41X6O1EEeI+7NIHIFvk0vsMol5BnvL2+d5LmBZczOA40QbwGb8r7afwArnMhKC1AsZyuIIxodjMqwyrtZNrr949k4HvXnhvHlD4eDc0vlkn9+6Cjx4y2VzHur03tkr0vdk7ZGd4qD7jdlh7+27HfaS9Vv3zk/s6g/c8LWLOmX69nbUixPA37rqKeilw9dv+AxuLnGViEOfa0XXM5NXBl36XDtcZ1Wh2cA8nxnABMBlOntdK+qcMHv+uSueWAvtLFPAFDAFTAFTwBSYyQoYAJ7Jo299NwVMAVPAFDAFhlyBy+pbWvmtE6+K8vKjrbQ1D1yx6EXlZ9Ox+qPP3+Oo8S1t/tX33zj7kfH8g3G3fH+VxRkhcNcVWBO/r0RB9N29TTany+5VgKMAVUDuQAE3Barq9Cs9+HUN9m7fvjtQYx14vSZSQQyzmvlL562AIMBTnzncPC5Oty9CdzXygTxW28TDZwlLQTp5eFw/TwAsB1CVnMdHy6WIm4T3Sl+00BsdvDjffQ4fbNy/8kHcS3i0ywwOAKr0+gq0GNhKbQrolfFe+D1BMDLAcKcbl+8784CTvojzNglC3tJR/f2fh0bRimBFUtxbpA9V+QjIWjsp4yyu8ixHQ5CD3K178frRsWr82D2P7eGloSgwtvUUmV5Xvm/5olnjwcOv3dBJ/2TWSHjNrKh8z9AA4OVf/WSnl72TAJju34hrFmuDOduyTeKeIPBrUr4f/PrCevSwmIUatUhj/7tAXpONFTh/AYB7NZzD6ZyHkzI/fs7RL7t5eo2itdYUMAVMAVPAFDAFtocCBoC3h+p2T1PAFDAFTAFTwBR4XAUW3bd81qPj5WvSvLqwCqPd4hSUkxSlVz5SjsQvPme/+Vc/7kWewAmXrlq+B0IMPhRX1RvCJJvTA9UsIyGtTSyD5gDrxRR4qtPVAxyJYBiAvzxfgCwcfwJexb2nAGej+AWBvCxspeCU1+PBQmoEvlEJCMQCcox8wN/8pwfXLwuu+fvz82WV66PlDP8dOJjBWxSotybO3zpIvZuX7cNrg4cAYO22tJkHnYk8fCSGf4SdIFfF8HBci+DFmvIgMJlt9REYjIUgxEpxRpXnHfgjvxplrY+cccDx9z6BIdqsU5g28Ys7ftEOgtFdinxibwzRYQBrh6Ht+4DU7wphd4IqY9AtQ6eTuigZrgGx6kfR2Afw8TvDuF4CSn591g5vRyMeOmGfEzoYp43zPjardfahzVVg1apF7XLigYVYouW8Z8xbNCxF4O5f9rWP94rs3QTAEfc0sO4457mouEx8ZAxXFDdYdPm4SBnGufB7wK0brhd5X743sJ7wDaBRL/g7zoJOAQDcmvUQcoafvdMRL711c7W0z5kCpoApYAqYAqbAzFHAAPDMGWvrqSlgCpgCpoApMG0U+PGtt87dUG14BzDHu+MkfWrBOFySE/xPnJdlEUf/8gcHHvGOqXKPfv+um55SF8UHo05xQZDE7bAVixNYDjp4nQtXIK+DNwJQJaMXBx/zxi8lCsj5iAb9MN/v53p6V5/AILqGBfrqZ1h0Dg5UcfzCmSo/4ZQV8kwwhMpSTNoNfUE6XqOEYxcF1QQQCzzC//lYCbm9OHTZAjgM3XXZBQ9/m6xjSuuKxjXuXXyKINq3WQE3IhwAdvuRFgqqFHjTxaiPsW/sYgYY5r2ZdVrBF1nl3xvJRt996kHPXru1JuR1q67baV3dfXaY18+HACfg7ntDqrmYP23QOdT2E4zvABvhPf9kH6Q3GoVRALFXZQcyPIrX7sFQ/wId/GnSDn8BEHyvuYO31ug9/nUJ92VlDlF+9P3Lvq4AOIQDmEXgZI1z3fUjrhkNI2vDbcgw05ubQ35LIZanAJinrYBY1r2sXx/RAicwviMIgMvW6INp2Vmw8zGvXv34itkZpoApYAqYAqaAKTDTFTAAPNNngPXfFDAFTAFTwBQYMgW+v/amvbvdznvSMnh7lMajBXAKAQgLtKWIEYiLCiECwepekpz38nmH/3Kqmn/5Pb/bvdOdfHvQKf84asV74SaArXgwG/+2lAM887FsKczmnMECclg0DY3xAKcxxDooyixdD1mZH0zC6A2kHqyq64/QlxEOUZDhQ7Q6o+JTUZXV/WGcrEIzirLI94c1+alRGrXKmG0jwcTD5tBFILBAWBf9AEgkxds8UFLeKWBZ4idcg2mobopNsW0Csr1LmY+uq7OXh8ZWKDT1fzdREoThUkROYy8IvjTTVPXie7gOasOVS6tW/Kaz9j/h2qkaN38dZjr/4o4le/Q63RPDqnxVGiUnwlH9FDQCVmrMIZfRjBhpF2vByAv2S4v7sS8+kzWBfn7cSuYswwqMYl01JsMGOKpXFlF1VRxn39g32WPFPMswnuqhnJbXe2DpxZ+cyNN3tuM8Tqout2oQueIjU1xctnP8+pxxdpRF4Oj8l6KOzNHmnk9TxLHvtJenA/BEQImfk8gALtL2/WnUO3bXI1691TZSpuVAWKNNAVPAFDAFTAFT4DEVMABsE8MUMAVMAVPAFDAFhkIBuvouuX3F4cg4+HBShy+u03CsiohRxN+qEQdw2CbAdgloHmIEvhO30/PP2evQB6aqA5ffs2RscrJ+UZiXH4D788goSeMQ0RO5GnEbKOgBqDh8XVE2wl9nS9Tiazgpkdxe/V3Oa2Cqd/qpQ1cLRTEfFxgIoLHo9B7Gr4vqNP5qWtXX51kKAl0dGJXVi4tucSZcrAcBUkMmZc8F3MMCk8TJqrBWgK0rHuUL2em7/TiLjfKN2V58voFPPJNOZHE2+2xfbW+TgUDXr7iXRRxxLuo9MF7EWTnjL+hKLuu8V6yNW+n5zzvw+B9NlXPbj/s1a5fvUvbGX1IW5Xmgvc+EW3puFKPkHOYPtfHQF4jXRVzoJ8VbCQAnvzunpfSPbuUGhGsxPz5+j0f6a+pTdHs5NgRWo3NfAnz/j5MOOGmtRUNM1Sqcnte5bwkygMvWRgA4chshPj6GcS7Y0JH1IStxMCqGRRL5hIPfnOFui3tKgLZ6iZuhwx//jGO51+1Z90Zl79inHH3undNTMWu1KWAKmAKmgClgCmxLBQwAb0u17V6mgClgCpgCpoAp8JgKLKrr5IE1y55dT+Z/2YrihVUaxzUKsuUuIxfWS4GrhKwwvwYZXkiqoDuR1m992dOe8eWphG90kn5n9Yoj6rJ3AVy4L4ziaLcgS6Q9BDd0AjN6gYCVTtEmIkHcpPqvVptGK9C8Jzm+PN/RU4lMwO94hbAUvBs4Mi/HEbywDBENX4bR97un7X3QnYN9W3zXXaP3Vw8cFRbhC+uqfB4CIw7BRWZVsNrW4pR2xaKcFZnQkofPGBaXsXMLy6u+qJwD097BPFioqskDZt8YEoyDfVBQrEXi+hooOC1KPAIvkRPQiFoVQQ9F3z75ggNP/NBUPrZ/C4oE3rf64afDFP6uuAheCWg+Cw2AURcqErw7h3POR/Fl+FxWs0BsQG1H5sStTNKN8+R1V4BLoL77nX2VGA2OL3/ARg3Zi16Z/xLFvv5X1I5+cuK+Jz5kS3xmKnD/DV//eLfK3p2F3RhbRhIBUZfquG/WDTLB+TejYvxOhHfZc00RAPvvEF1nGhPDNcj5R4DMcJgO4qrr1ug9Y1n32LHDXn3XzFTcem0KmAKmgClgCpgCT0YBA8BPRi071xQwBUwBU8AUMAWmXIHLAPHGbxt/YZwHH4YN9ki4XlPATEBWZmUyM1Ndpsympcs0xg+YX4OoB1dpmf80TbNXv3De/HumumE/hKu0U5bHozjYG+o8f26StXYuw1JSAwK6+JjjiUexBdQ48AsG64o29V8TQIrTCYMYiUCISDAJxq1RCXD8AjSX6MuaJEv+M0rir+63T/umg8ODu4/VJzqlf3TvDaNlN9kvrPOz6l5xDkDRsVErG2PUAeCxuF7ZPt4LORINxAQ07v9OXeNUIekA8PT3HITZCqC03Yy18BXxBkG3fM5fHxCVdDnlQ/A50xOqxWmWvPaMA4+7earGafFdi0fH8+K1URG9Fw07oI6jlA0j060YhCxF7tBmcfP6iAwXZwGyy7bzwfvBiAvGQVSMyXCN1HP0swEor+Qb41qEywmKcclj+TnulpcPAzpfnrWTvzlh/xNWTlUf7TrTR4EHl379HyeK5L2tCBEQ3ETAGuQ84vxjRAujYgqfEY554/N99akAzFHGtcCxL4Xj3HeKxKnowpL/LWgKxjTvIQO4ykbvjevCHMDTZ4pYS00BU8AUMAVMge2qgAHg7Sq/3dwUMAVMAVPAFJjZClx+zz1j4xMPvDzM8z8P0/QAxDqEhL/42ThL+w5MzTsgHuE/MeMginqiFwb/FI/s8rFz9tprYmuoqSA4PxV25JcjUuFZwDRPjZNkLMnSWFywoDvyKDf+rYrwZhAoNu1x+bMxrLp04UqxJ8kSqCfAVe/Ki+JqhP9+MxoJr37+HkeNP9F+0K18xe1L9wODPBPA9ZXIqj2mSuq5gOf0BEt+MdvDCAfcFIBJYajP8a2hIYu6eRjVB078nEJfHx/MNvX7pmBeABd+Eray74yckPFykREAwHXVKx4GJ3/78w86/ptT5dT+2erFe6J974Z+bwZTfwr7GgLQak4xg4odNiNwkz44iCvF/NgvhWo+soP6JAlgNekxXc4uFkIzghXeMS6DjmpqSsBOLbIwFahPiIeYC4YI/6ZO6o+OHjD6swXhgvyJjqOdN/0VgAP4Y92q9b406mImYbMHmxCIanExD7qJJbOO85MbB+KQ9458AmOXn813/NqT3zEdWSCSm2AExwDA3RxO/2zkXnwBLdj1qJffMf3Vsx6YAqaAKWAKmAKmwNZWwADw1lbYrm8KmAKmgClgCpgCj6nANwBW6175lrhXvitM4z3DLIl6gCZMzKXLkgczaQcfiZZcWRZNY/wCfm+Bcdbd/IFempz/4v0O+85UxgsMNhqwL7r8jhU7dYJy77JbnQhX6EmAL0eA7uyTJukctDkhv2G7BoG1z9Mtq6JGX1DCKZ6EE3h9URUPwkK6CvD1GhCen4yF4aqTn3bEo5vb/sV1nT645oZ9kFV8ZtkrXgWv6rMg0CjdwmEShoyt8IdCXFfsDYDURziwrXQle8hLAEw4rMXR9Hw+uu7HQzON+Z5z2wJmlXmBWFyXi4y/Awwohui7c0f3e+2J++47ORVLgfAXV/1bdOEPwzQcQZAFIpSds9cBYERBSDtjAltxOOudvaGSANgDbD9e7GtZuP75qAuXwUpncMEigLweLsZMYZmfPhICwBj9riF0UPSK34VZ9MGTDzyZ87GJS56Kvts1hleB+5Ze/DedPPtgK8mTsMyxvFnUUTzobu5hncgc5IYCAbDCXXGZJ8yd1k0FH9oicJjnNBEQDIvAJssAAM6S+ridD3/5muFVxVpmCpgCpoApYAqYAsOigAHgYRkJa4cpYAqYAqaAKTBDFCCU/N59y3afHA/eleX1BSAlcysE+9L16+FvE6ngAJsCOxo7+4/yMzOXcRCRBGoG1wYj8VtftOfTr9va0I3tv+r+FWPrJ4P9APwOgPXzMDTv4Kgu9wDamYX7p+Lww4lVUVRggJNo5v1wNq8Oo+gWMMQ70iK8P25nd8d7H/boQiQ2TNXQE1T/4I7rD6yrmtEQrwCDekaVRHND3LgGrRQnMCEUHbuaPSxAnf8nbl8fZeFe95m3QrJwiHlRXM6+cJrLyHVAtCpyxCUjnoPjhuiHops/Umf1G84++JTvT0Ufr75r8dOKvP4bQO5XhkncJtmVyAdGTgwANeYc85Ac4oHXGzgPt7A8ms8Nhv+fvTcBtKuszob3fM69SUgCMieBMAgSBdGojGq0qEUBsYpDtVpbbbHT11oHBmVQkE52/Nqvfm39raItFBQV6oDGKtrBIAKGKZAAGQhBpkz3nD1+z7PW++5zLrW/mPHk3rUx3nvO2cO7n73efe5+1rOeRfUuWw3yp5j7UtCs5ztoBEeEVAFM+bD6CyvZr6p0bXon6nR8VFbVKviU/M7YguyrpgTeEVd+9Pfx8O3/fHG/SC/I4hxu4YiHGiQw71FMGLh55718wQAzUtQyhfOxTdBgHkrDN1Xto2Kg9RCWBAwSFA2sR6AAburOjA1pXLxw70XnPDj66NgIDQFDwBAwBAwBQ2B3I2AE8O6+AnZ8Q8AQMAQMAUNgmiFw3erlR5S9+nwIU3+hieNZUK2qbytIPNeTq1XRksBT0k6beiVootT6zsprrAFbA6hxaT7w3bCT/NZr5z/r9l0FKcngO4I70sd/HHc2lnE36hdJnaQq78OS1FUdlUUVhyX8fOf0XnroobQFACm8c5Why5vl2b1regsA1mlQ4b4O4L4ATNQsHJedy8I4hUspHQtAggq+bLJH4gkE5zD53lo60BnBkcPeLkJVwapgJHGsJewgYqFcFOILwtyJqrh2Zmfmu0895NjHt/ea/OeaO/fZXGz647CM3gJgUzbl47HpcUyPVS48Hy7k14Sc9QreoQZ9sh5Xp0KZKkvfEI7E7lMIYK8spi2E4OQClOSvkMBi+8EdqlcweGVtLIcGcf2JiZXReHbuSw875evbe+62/egj8NBtn72kX3fP64Z5CsoX5idU8GpigJNDlfWumZt3mWb8uacxvc/hHkjvYCrYGbOMX6rOXWNCZG6gd0/QBA4ZM3gAp0lzgimARz82bISGgCFgCBgChsAoIGAE8ChcBRuDIWAIGAKGgCEwDRCgX+01999zZFMWH+kE0RlNGnXgiRAUoj8lxQHSRJRxWoYvXplYSNB5YliFqEo2ksCUEmn8noCJi2s4z6bxtUkQf+DMQ49eNQ0g/amnSMy/cv8P55dRfRr8ft8AgvS5sDqYG6VRTPKaCKuPsfPGJQlMKtNJrklACeJ4DbpYS9pdMzi5NiSOHblFootN1dDUDtYI0EPn/R9XafTWVxx2wtd+6kB/ygq3rr91xo/7+e8Hvfq98NKYBcW4kGQSA9IgkGSb9/dlif3Ar5ifOwFzW3LvWTd6rfpl+Lz8OfOnJBzcSrR+4P7KEiSdI8RZzS+/C1YYhZTuYwzk16vq+00nefuShSfdtb0Y2PajjcDDt37u4ommc34HBDBoWjRA5ORinOi4B5YpYhaj88qdUksOO8MQJXwHDQhjsV+RGYgdZY4AHluf1uXJc447x+51ox0aNjpDwBAwBAwBQ2AkEDACeCQugw3CEDAEDAFDwBCY2giQbLz6/rteHJfVZWEVviDqRCnIX2lSRm9V/mQZvhKMioVYEjhyj+sIieLK7km2eYJY/IDZwKsAaVKUE1Gafr5MwotfP/+YFVMb1ad/dlQEP3h/flAZNS9uyuYNsM04CVzSHIIM/+WwYNM2NRx1OxVZqxBUVLYK9YRrEUJty8WrsHVttU/wBDC42QD2E3XR1Ncd8cx933xkeCTUz9u+LG2apLz/+28Li/pPILGdU0VIByBQaGPREtSeOCNZK03bnDLZxQ/PQUg2r/gVSxGqK52y1283RG77JIQnw2X7Fh8lzgUTUQ6ri4fYIeM9UUCzz18uxsE3dJLs3S9c+ML1246CbTnqCDx8++cumqiyCzphgRmFuIIFBP1/29jj/Y02IUxoOV9gsRSR+aQ+277poDQi5AJfYB9/qlRXBXBeRZgV4w91guoUI4BHPTJsfIaAIWAIGAKGwGggYATwaFwHG4UhYAgYAoaAITBlEVi6alX38Wbi1KqffwyWDcej01hUg7zz5K8QIN6DFX+ZqGJTiTxpkITmXOq5SrWvEiaedAydko4EijRgyyF5rYMyTKMvoFnSRWcfcuRdO9tuYU+6cPQI/te1tx0Ej9olYVm9AVi9AE3i9pU2bjArJe1ESwV6GVCjWEHpSvyVmMf/xQmuRdkqamn9IMQUVL/8KTYIJIB75aYiC37jFYe84NPbi8+Nq28+NuyXV6Kd3aIS2QMfK+KJiiCSpnP0j3aKcSGAXewIZeZIYBmHs3ig23Tr3yuic25PElcb2JFoGybkKpblP4UcFs9gelALCQwriirHVqqeJlGeoFkXVMBMTEwEneCCUw879c8sFrc3GkZ3+4duvfLiXg0FcAQFMC48ZookHCSRxd+xeNU4rUTkfWf7wPZukyxGOBN5D6SqXLIKztJECOAsmMB9rk7G1o51ilPmHvOLD4wuKjYyQ8AQMAQMAUPAEBgVBIwAHpUrYeMwBAwBQ8AQMASmIALLmiZ9YNWPfiku6gvCJFpQoBkZmY7K87jCvbGLFsv3QSw6RaW3gdDSaF2eSgArIec1qLSDiEV52fSLBv4GeZ1G36rS7INvOPjIW414mxxcVNUWq2/Zr6jrl1Z59Ysge0+GL/BeBTknXgspQYe1BjyX4azhNlb/Uk9wDggsVS4KAcyf4GiburotHk/PfskBx21XefrSDctn5hs3/29kDN5cp1XqleL+bGg6wSXGAMTKYkgJLEpcZ7DqrSI8Aew9WdkEjgvPmEkFbXIHxTP3hXP1TQddT79W+ezj0ickFC+RFSuRh2Z4KVTptMQI0N2wquqVTTd6w0sOPemWKTjN7ZSAwMO3febDE/XYhSSAwfoHKYLRxw/jU/x9XcKAXr4yjwQ5xJojgJl7EUU54wmfiHWJI4Al5hrEU9IJJhhTQba62wlPtSZwFn6GgCFgCBgChoAh8HQQMAL46aBk6xgChoAhYAgYAobAz4zAV1av3ntjtfEdnbz6vTBLDmpQGF1WIOpAuolvrG/ERY7D/UUyaJTkvGmd5QOblDmuZNI4qPoVJaZo7FyJP45Bb1qwhXWcxt/sR82FvzDvmGXknX/mk5jiG9Ca4+urbzmwV5evDYrqHLC/zwKTuzc9gkUJHEGjCI5U1LW0XaD7Akl64CIEMEXBJN1B3pN8T0BQ4SJX4IA/Nnvh8y9dHIZserdNC/2Lv/7gsrd08vhvqjQcr2Lof3GtxR/VEb/8XZTAsLCgUtn77zIiZCmdgtyT2C6eagxckgWuaRxJOC5MInCf3upB+7vxmAPbC67XkndueyqRRYxOKwynlm5IIgOvNIQbLAZeNMWXZuw141cWH7T4x9sEiG000gisv/UzF/Sa8Yu6UZEy7NGYUiwgRMXrmgh6x+nIVzK4hIE2hxt6LMM2jOem8tOHCvskKDAnQ/EAhnlJmN2fJfVL9nnOm1ePNDA2OEPAEDAEDAFDwBAYCQSMAB6Jy2CDMAQMAUPAEDAEphYCX37ggbl5tfm8tCjfHXWyvYoElC/+6iBRpqpdEorazE0JtoESU5ScYoZJ8kRxqdUcU02DhxZoTVVxCfatok8wiRM24CJZCU/gtKrLOEnuKKL4ku4hyfWnb6cf7dS6SoOzoUfwmnVb9s+r+KS6V70RjsonR2nyDLkKZNlxhYR88tYKtF1wlg+i/mXDqhrv1fCYKJtHob4+e8khz71pe/D6twtzpacAACAASURBVLX/Nb+cCP85jZITCrD5ED2i+VouRCvJMDmuI269RzGku0GWpLBjKDSunOKSpg5aYq8jopCSxJz3LqY6k4sQwKJIB4UM2wdp5ibEHI7E/Q1Zk4j9hY9fDsrZmET0tBa1JmMR/5EYhx0EvDW2FmHznlOOOPFT24OLbTuaCKz/4Wc+2AvHLxmL6iyBt0pQ9oUAFhWviw0mMFRB77S/uNexwRsXjTMNUCYmhABGMoL3M70n6n2uRNwWSLU0cef+Tl29bO7xb75/NBGxURkChoAhYAgYAobAKCFgBPAoXQ0biyFgCBgChoAhsIcjQEXpV9bfdUi/V38wrYK3oMHYrAIER8k6eBIc5NngL0sSeJLijaSHqCdRho/VaAehHq1KmHjlXOyad1Fbx6VV0oF/UwJYG4ORAK7pX4vXoEqaLMke2prUfxxF8T+effDRj5klxE8ONF6/r665Y25Z9V4KHN8ItunkKA4PABtFo10l8Yd8damiJekOOjZISeJT6VoU/xbPHjtjyX6LNm9POH/9vmXnJmXwh3UWzUTjNxg7MxZAiUHtmyROhew8VhlPPnFA4oyEtRBpjqAVJSYJW0e8qVcEo0q9fsV+hGSvK81ncoKkMIlt3Y8qzb13q89D+NJ9XUfL/H3TL/EDJgnMhnAcUwFnjCb4drRPeOYJ+5ywcXuwsW1HD4GHbv307/eD8cvGoiYLQdGG8IQWAnjYg3po2N5GxCesOI98QgJ+3C3pKz7CTGj5+IMPdx85hiibtSGsJs7e59i3/PvooWEjMgQMAUPAEDAEDIFRQ8AI4FG7IjYeQ8AQMAQMAUNgD0WA5OGXH7rnqHJzflk3il5dd5KMZgyFyDBBlfGvDlcy30Tq3Tp5Ycm8Em6VMMXS+0gWUnXaTMl97hwhhAAWQhm0pJDFUAJD/SmEGxWrJJrLGmX4YYN/m+oo+mIdB5eeMf+YFXsozLtk2GwW962Hbt57S685qS5KeATHL0476X4ElBx7JCSrs0XgtcF1y6iCzasCKte/ePnC49+3PST70lXLD6iLrV8EEbYYkl709oOiF/FT1ri2IFTFhoLkrlNIDhIK9PGlWtIrKr3SUq0iImcCEoNAJunrPaRVASwct6p3Jd5Uxcvt2rjFOcrHzhZDfZB1/Va5zo9JJIt8WreX8bJsP697AOq9Jx12wv/ZHnx2SRDYQX4mBB764Wfe2wu6l2dQAMeI1xBJL/Xw1QaJcj9zdiV+x15Rzo+5huYlnD2Ou+fJOjS4YSyF0OYj/kvEV7+Ji24afXxuGH40XHTOdiVbfqYTtZUNAUPAEDAEDAFDYI9EwAjgPfKy2aANAUPAEDAEDIHRQoBNxTauWnFSk/cvyeLw5CqGBS9LmEH0CufrFJUkgX1JvRAiwp25kvmhUxICmLYCTqHpLTM9QSxkMlk+7NuTKG2pvhB7tJVAGbUj9dAULsjwe1IUExNh86dnHfHcC42A++kxRFL/Xx+7d1azeeOLwzx/M0rTT02TzgFRGidUKfJzwR2kVQfKxKasH58Iy3e8YsHzvvjT9/6T1yD5/I0HfnBuUjR/WsZh2oCsZTzQ49lfa24pCnGqgtm8zTXPYpct4WvxnqiTRdUr7d10fXgCi6Icgael+I68xSlQiSlqS37ubUgcGeyP5xXAHAvJPPFGlrHodmSH+R73RTJZiGCq0WVcJKDZJq+5M+wGrzxh3glrthUj2270EFj3w0//Xi8Y+1iHFhAgf0kAi880g7O9xykRLEpxelYjoeDtHfi+RIezGvExp+kvF2e8Eco9tQm2Qm0fJ2MPp2H+gX2OfdbnwnDxNvttjx6aNiJDwBAwBAwBQ8AQ2NEIGAG8oxG1/RkChoAhYAgYAtMMgWVNk65ddffPB3l+UZJmx4VJFFXQiVbgKkiYUdsm9gykMaQZEokPb+Gg5K/3lvXQcT0upEvkNxBs9GCl76pXaDruuCXiZJ8gR0iuCOkn5fhRAK4yiEooQGGe2eT5o0Uaf+B1Rz73H6bZZdqu0yUpC2uIOU295Xg0i3tTEiSvzNL0ILrlJmkKoSt+o29pE6zqp8HpSw469q5tPeCND9++f7glvxpK31NKCmeptiWlCxLVN3tT8oxErVqF0DO1tQxJ+L5T/DrrBuGoYR1BCwhZnwJxR96Kjy/9qEGqqbGEa0pI4q61jFBPVvkM75EA1uPjJ3xJVCyMeHNq3wbxpuNSn2LGMKaFeAzXvTpvsuaXTzn8pM9uK0a23eghsO62T/9evxkXAjiCBQRoWrWjkcSFxkOFBpU+caGqYGdBgnUS3Lvgod3e3/wZ6r1Sle2xKIChhEcsIyBxhAwhGD7YSfKL5nT2+efwyNP7o4eMjcgQMAQMAUPAEDAERgEBI4BH4SrYGAwBQ8AQMAQMgT0Uga+uXz9ja//J18VF+SFQYIcHqK2HLE0aaKm2koq1QcMjKWNmObwjgFtlm1Ndcov2M9c4yfv/CunGsnoSa75ZkjT5IiniSqSdKlPJErKH8IsFBRNDLRdWzYYyjj8+Mxz729MOP/zJPRTy3T7s761ePbY5eOSFTb98SyeMTouTdD58guMY6sSyKv8t7IZvPPmA4zZs60C/ufaWk5st1TVhEu9fpyDNSKDh+vKakqL16kmyq7RwEF9oCTGRg2vU0XKE6+OlKoHp3wsrEBKwJH6dCliVubSwcAkJSTkMEhJVgTJ+IW6VAJaxuGMIXez2reeqKl8t1VdCXAhg956Q1iSPMTWQHrn2xUecdA5i2Yf3tsJl240IAmtu/8f35tX45d24EQKYCmBpVMjkAJIJ3makTSRQLY54UrsajTneq5jMeEqvy6HY0gRYhfsrshbYeRrU8RjfWpcEvUvn7veMK8MDXrllRCCxYRgChoAhYAgYAobACCFgBPAIXQwbiiFgCBgChoAhsCchcN0jd83qP1n/OjRov5WkyTyU64PvIFU2IMl8mTxJjjzPWz9UnqdXtuk5D0qjB+SwerxyAX/rVML6p4v4s2JpPVwdj9aWU4NQwXBA/MIKAAMq++XaupteNGvGvv/8ygMOMIJkOwON1g/f/fHdMzdPbHlumJe/OiPMXoWLkfWS4OMHHtL5g0XhonxbD/G1lT/4UFI1F1ZplIl2llYTPhngFL1C2pJZk46BUPYmVOfSCsIpbyU2miBNUIyPZoBcNWYionB8q9hHeCUwS/WRtKDtg2tOiHZt8jmTCNw+dhYPBY7FWPZ+rCSAvecwY5VRqVYQGrfwTgbh69TITHyod0mzdaJ3XzJ3xolLDlr8423FybYbLQQGBHAFAhjXnz7AIGnZ2JJMMP3LvQJYkgLuKczfs6gAbpBwGCaIh++F/mxFeU4SWJohprh1ZqCbkyZHgiuN6090O81fzjrynEdGCx0bjSFgCBgChoAhYAjsbgSMAN7dV8CObwgYAoaAIWAI7IEIXLdy5f5FOfFbaVP/Rph1ZkPUCPkaaA8pTVbjBq/2lSJ4Ki1BsoEBm+zjykZtTg087O/aQkKPVvoHOyJYVG8k95yvqieOaTHB/fgSftLQCdWXVc3/7qm6yYePXhB8cXuIyT3wMu2SIS9bt2z8iaI5Kc/L58ed5PpXLnjBj7b1wIiB+Bsrf/AvYLjOqtC1T0haqnldAoD7VTsRp7aFnNYvXmnL1y4/oLFG9pf2FKLW1YZ13osabdna+BNizZXoS+xSWizKTKzvvIMl9vDZwIKCPtU0ttaEhG9e2I5J3x4cg57AGH7Vb7ZWY83rXrbwpK9uK1a23WghsO62f/zdXj1+RTcGAUxrEsaos74RP3PEn9wfJSBAAIsvurMSQcIgpQWE2AUzZv1qmmzwCmEfS7yfSpVDnCJOU1iaJEHORFedbM2i3ie7TfaHY88+aw1i2kXgaGFlozEEDAFDwBAwBAyBXY+AEcC7HnM7oiFgCBgChoAhsEcj8KX77lvQr3rnBWXx5mRsbK8axrziSznU7V5YBzBdSshS+8aFpsADwlfe8QSJQ8SX13tP4JYcpp8myUAwd9IkSbvHiQK4JVFc8y0h+kp4cMIdE82SlsVj2e+fOf9Z38X2jn3Zo+EfycFTEXxzcHPy/OD55faQTt954La5RdH/DpitY+j/64laTwC3ftHOEoK5Bu+tqvGgaltPmKnfKglkKCtZXu/INLWHUFVmApWwhKsod9U6YvDaWT+QuJOGcVAFa/M7tTLxTQh5SLedxKZr/sYTIAfXxjUVoSD66ryq+lF13mlHnPJHI3lBbVA/MwLrbv3H3+4143+QxWU3YWJLGg/qfUpyCaIwd/Hqkl7D9zkmJmhTIg0ExSZHHU0kLl2zwjYu3ejopy4WO4irmnEFF+5eFfTiqP63LKk/NOfo1y/7mU/ENjAEDAFDwBAwBAyBKYmAEcBT8rLaSRkChoAhYAgYAjseATYCu3rNykVBv39B1oSvBUGXgT2Dta4juJzXr/Q2cstw0zYh45zX5UDt67vb6wYkkpUU8X+iTFYMszmcbqsNufwizcCE0AuDjJ/lZZ7X+X/EWXreWYc8+9+3h5Tc8UjaHv8nBG5Y+8Pjx7aU36iScG6JZm5lDSKfHqkSE0qQiSevs2HwynD2a9MEgXr2+oUl+ELAwo9V/X6hsiRZxvUQKz4ea5dQYJO44UXSF9hfVbn9slGc8/TV5IRrGsfYG/KnBtXHaBaCmPkIxi0V8JBoSiOvuiybKm4+seSwE99jPsBTYz6svfVT70ETuD9J4qab0f/X+ZSrN7VTmkNJrhUS/l6n/r+SUHDxo8QxSGB5rdiI1zSV6y7+ySSH4neuanTmHphuY5KtQAxXMdxTquL73aQ6f3Y287vWHG5qxJidhSFgCBgChoAhsD0IGAG8PejZtoaAIWAIGAKGwDRBYGnTJA89cPeL46K5EEXJJ8HuIYPiTJS/QswNNXdrVZoslXdc3KT3nBJzuDq5Ldl3Sjk2duNC4oyL4+fa1yQ6vHqOTb6E+EP5PpooNQ2o317YfCHJ0g+fteCYO4383XOC9IYHvv/68X702TqL0iKmAzDJW40xWRhr+OFVu1T2igLYWTSw+Zoofqm2lJ/qFy3u1JBhMmC5LnhgsYWgP68QaE45zEZ2w6pMEs7ymjEo21PEPlAIiz8wyu91aIg/xiLHisCXMTiCDnSvrAP6mXvicRv8d9PsmZ1XLT5o8dY95wrZSP8nBNbc+ulz82Dmn6RxORbDlRf3SWd9w+QFlOlMbuHae7saJrEkVhBzcv9i2LBRIBNl9LMm2evuq14JzNiTBIezj/BjmZQQw72TeyuruC7DeG0W9K/Ypzv+D0YCW+waAoaAIWAIGALTGwEjgKf39bezNwQMAUPAEDAEfioCS1et6m5o+mdGRXkRmm0d3SRJBM9f8VH1xJeoMklMgITl4q0bRAXZNmxTck50k/TEJM3hyqIHyl8lk2tnggkRaHsMP1BvAaGEWyLemgmtJKCqDPJiYxEnn63Hoz88+8Bn3f9TT85WGBkEaCPxrw/+1/s7E9HlQSeOSACT6KqHbD7KMhfyl76+pGHZZM0nIJQI1iZaogj32Ye2fJ5krirHlZCDnYPrCecJZm8TQX9WkrdUboriF7HK49ZQAnPxBLNPbEhc067aN5FzKk6GpVhD0AOADCAJYZKAGCek86vDTudFLz508UMjcxFsINuMwNpbP/OeiXrsjztpPRY2eZB62weNmFY5ro0x5SaoOnGX3GD8qK8vYpSKc3zuEwqML9980Pv/MklGFbvG4uC+S/W5hHWYwhYia/p5/ShsKf5+LMv+YsbRZ63b5hO0DQ0BQ8AQMAQMAUNgj0bACOA9+vLZ4A0BQ8AQMAQMgZ2LwHWPPDJrYstjb0sn8vfXSTSf5G8llpOqihTlr69TJudAzs6V4CvRQe9e79er5fNcfKm+V/b6s2iVnlBV+rJo31DOk8qi7BR/YRyrjoRoiWH2W03kjxVx+CczxpJP/Ny8Zz26c5Gxve9oBKgyzx/4wZ+neXNu3YnDKoIKkuSvU5mrMtd5SLtGg7RzUA9gtF/Dv1i8U50tg1OPe99fjncQmxK8qix3pfX8nKSvxK2zIol9ky5GO8ld52btj9nGs7MfEY9gWks45btvKlfThoL7pMqT4y2gCM7rTc1Y9MIlC0+6a0djafvb9Qisue3Kd/fr8T9N4mo8CUngIlZpeePuk/4+KPGFYJBEBWJ2kg8wYxwqX3kPPua8t6rXtEueudh2dtNt00uxmRheeH9GsqNu4qAK0wYN4npQJV+Txs0Fey8658Fdj44d0RAwBAwBQ8AQMAR2NwJGAO/uK2DHNwQMAUPAEDAERhSBKx94YG5YT7yrk1fvA4G1TxmB0hBTVDYbcmQuFY1Df03Qq9KrIRv6Xvpmbe4cSWh4woOkhSgu0eBNmhgJ6aaKTtJofJ+fcz1+Ru5YfH7FkxUKTnyWgkjBv6bIizuLJLosOyS55vTwyP6IQmrD+v9BYNm6deNP5huuDKv6rCoNw4LyWVfqrjYOEnxCAms8IGYKVfxyUX9U2DHg84HliBJstGoQX1VaQfgkxJDvqieBqSj3CnPuU80d1K9VD0LeWJsbej9WUWYiVtmgULxadQuXwNB4x6du/PhJGwuQfE2/mkiSzomnHvWiWy0w9nwEVt/2mXf1q/E/63bC8bDOESF6/2K8+kXujfJvsnJ92ELHx6/YPTzFF9gr1BlPmiDTyosYN2FpbChe2FTHu6SbI4EbxHWvCXNE941x1Fz0jGf/wi0YhzXF3PPDzs7AEDAEDAFDwBB42ggYAfy0obIVDQFDwBAwBAyB6YPANWtWzCu25u9Pq+AXQfrObbJYCDmWF0tJvFMzer/VFIpMLcV3PpaurFnUjkJ/OVrMNTFSEoRNshxR4RrIkeAbXpQ/VgI48R+5bej5GxaU/tY/asazD+w176gbl4SQ3tmyRyLwnQdum1vWzXVouHZq1dGEABdVhavCkc0BWwW4b7rm/YFlDW2W5RMPXj3u9yM2Da5/IAkzltgzmZD4Nx2BJnvyRLG3c+Bx6OZAwplkG+KaiQrZt/u99WoleY0lYbKC4mFREqOyH8fKYCXhCeAgi170ksNPun2PvGA26EkIPPjDz7xxoup+otOJ9oLuFkQ/khP0hObv4keN16SEHQnMu6JPOHh1sCQVXFJMYgYEL9MLXITkfYpimIkz3hZ9gqR2XtjoANceR5ImIILpC9zPkcMLy1u6WXPZnGP2vz4Ml9j90uLYEDAEDAFDwBCYJggYATxNLrSdpiFgCBgChoAh8HQQoA/r1StXzoeH5YVp07ytDuNOFUdhQU2Za6pFVSZVv578pdeqL1v2HC3JLlFsev/VtmmRljfTK0LK4V1DOJJ93tOX4yxBngjpIQpg3ZcoOKm+JIkHxqPJyybv5d+LZ4598MwFR30Pn3ue+emcqq0zYgjc+PDt+web6xsQGM+rSQAz5hy56xW0TBi0nqnioTrwVvXKcq/+rZmQYHOtoYRFazEiqYxBc0GJLa/qHSKW2/J8F9jS9VAWp+ht/YU1RqWnlyN75bjOQkJ+0raCFhM8L4reqQBOwxeefMTJPxqxS2HD2QYE1i7/3PFPToRXjo/PODqq85AWEA0rFSS55ZpZ8o7GIHEx2do9gLBlMsIr0QfJBxLJgwaDrdWDU8SrSJ6ZBZ0HpIu5kABWAlkTGVQcSwIvSgP0PcSw6tXjaf2x2VH8mXDROZu34XRtE0PAEDAEDAFDwBDYwxAwAngPu2A2XEPAEDAEDAFDYGci8C/3rzgehpEfScLqZXWcdCmIrMH2ltJoiL6SSmpR19aSFI7sJZlBxa8nwP4nApjj9yQwCQuSeqr2pCWENvASj2GwZF4hx0/ZEC7CugksH+q8KPOwuTFK4wvOPOSYHxr5uzOjYtfs+xur7z44rIqvFlWxqMlw/XnBnR+qL3kfbopVk8kC0ZXCL7pyzdqELGPeQRS6dOTVuAL7qs3YHKGsXsIN/KOV2W2JXp9C4I5wbPH9RUzHkJ9rw0Ldo9hAkFhz63tiuaYlilPDq2WFLrKZI4s5R8KyDsp+OZF1YiOAd0147fSjNKuWdh/c9PDb+2XnojgND8gi3NXE/oHxp37TpGgZK0xuUEmuPunats37UctAPWnMdSXuSOLqPobzXD5ueV+U+7H76fMUoiZuY159qAuUdNRN1PSK5uEZnehvoqbzF3OPP/uJnQ6QHcAQMAQMAUPAEDAEdisCRgDvVvjt4IaAIWAIGAKGwGggwAZcj65c+dyg6F+RRfFLi7CJ6wSFzOAUPPlLSs0TXt53laNXMleVmb6Jljd9eCphwRJ+4SkcoUxiQzrHkSTD9t7zV0gLvB87F1YSfR2QdWmJPZT1lq1NdU001rngjPlHrR0NBG0U24vAjQ/cdlhVll9Dg7/Dxe8DJBib/SmBpUStV4wzDkUVjgAbJrj8GIbJVyGDxWAaceabvLkSecS6EnI8DghlEmY+noWHe6qm3DXjIpHmCWAfy2KBQtKY43S+xBrXHKtrmChnok29qoliUzwevuCUw065e3uxs+1HA4Fm+fLswequd4BcfV9nLDsMYRw2VQkWttABOgscnzyTGGPMIaGgXsGDZm5yP3Qqcsatev4672sff+792FmOMBYZe746Q9THYs2jgcx5wzwEE3l95NmqMNnaict/COP4j/Z5zptXjwaKNgpDwBAwBAwBQ8AQ2BkIGAG8M1C1fRoChoAhYAgYAnsQAiAH4mtW3Xt60u99NAyTY4I0jUEAh6XUD8PDd6iM3Ze0ewLDK37RJE7O2BNm2tANxEY96HKvkHjFpSckfG39gPhQladoj7E/qORYno/9xLD7jct6QxUnf9WMxX97+oFHPrIHwWxD/SkIfO3B2xc3RfHlMqz3jztQ9SLh4AktT7LKLqg0J8lFIosNBLGIupfR5Xx7/aGE+HWLxC61l0w+oFJe1JPYnJvIZwheIZipOqbHCYkzksJD+/Ql9V5hSRWyt5jwCt+WROZQYQGQphmOqeNktJMAZvO6pqjXp7OixSfNP8mSGFNodqyCEjicePRlvV5z6Vh3/LkxkmkkgOuqQIWEyyi4mArZOFA8phkXWmVRYT2xJKE62Hn+apBr0zdJNCBW9f5KxTl2j6oJsZBwcyZio04mPtiIU7MP6o3trHTEwZqVF1Ha9ItmaxpFX8vi4iNzjvslq6aYQrFop2IIGAKGgCFgCAwjYASwxYMhYAgYAoaAITCNEVi6YcPMRzZufHXa718UJ/HRNToNUfVL8k0JYDSsovLMlSr7plrDBLASb1pq7Ik6El9CTDjymDycb+imcLOkmco3pwZ2jbn8HyYkjtlAid4Q3QhsdANH16JcV8bpZTMPPfLvlliztykVtV+/b9nsPAw+DPPn36gTiL0zFxDuLMXOwRNZpLkQVyS8hq0b+HtZFEHCJmtgdj0xq0SYEm+DWEZDLpK8pN0ciavxqN6pLenrbBs82eYtJOgvzPhGB8I2jlV1yeM4NfywBQTeFusH8RrGUmAPVf2DeJ9nLDll36M3TamLaSfDGArX3X3tSRN5eFkad04GrQsn9Qq3sbIlYX28ebjoDcz4UxJY75+etG3jlwpfacSpsezvr0oikxDWRIjGoXOS4NwZUgh7b+qS99goC3LcY+swxTSp/rOTRRfuc+yB37bmcBbEhoAhYAgYAobA1EPACOCpd03tjAwBQ8AQMAQMgaeFAMnfR5944tykKH8XXrr7NyR/6eIAMrdEAyNp7kYbS68Ado2F2AxOGwuRMFNVmVea+dLjSeQEiTH3FwebuGl5virZ/OJL/YXU46dYT4gODCgpQZtUxT312NiH9ou61580f/7E0zpBW2mPQOBrD/7goH5ZfiCuorehUdWcuBOLKYiocNWGVxSSfqEi3MeOV5z7RllU10bYjj7SEpdOiU5CzdtCaDxr3HrlMK1IPGlM94nB+3pUn9jwx/MJEbq5Kqnbpi7cMDUZwmXYjoLrkQiu+9Lm8MqXP/Pkd+BzlQfbMqUQYGXFw3ddd8yWfvWxIM5O6yRhpt3/1H9a40YV6RonDDT4UtNzvdQmmMOxI2Sw3BvVB3gQv9rQULZ3ntne/Ro3cHefnmwtUSP6GMNlgfssFOpBmAS9CnfbJlgxlpSXz5k9/+pw4ZLelLogdjKGgCFgCBgChsA0R8AI4GkeAHb6hoAhYAgYAtMPAarTvrxmzUFl3vuNOK/eFSbxM0qQXgXIViHWqOaleaUj2pSEkHbzQ6ozLbdvsA1/Vl5x2VY4K4nhS5mpKObvJHWV8PCEBLaVdl3eMoK+l1BLYp0E9HJSlujvVd9ZZ8kFr1lw9Jexj6e6sk6/CzhFzpgE2fUP/OCZdRV+KK2b1xXoRkVlLanRtJM50lf/VB0QwC4h4ePMNSNkWEjsukyD9wZmAkPUvKCUPZnG+OM/8aKG+tcr1T2sXJ/EHBexZZVodYp014iLzHKb5ODu/RxxFic1mrx5gi6Bl7ZfqGqPsGv4/5Z53HzwFUed+idT5HLaafwPCKy+70tH5hPlJVHcOSsNmjHoeyWzwRiFx4PGCe+ftDShstw12vRJDiYM5H4p5r3eakdV7dI8jsk4RyJ7v98QFhAawIO4lxh1ViQI/JZklioPVmjEsCoJO00/Lx/Oov4fJ3H093OP/2VrDmeRbQgYAoaAIWAITBEEjACeIhfSTsMQMAQMAUPAEHi6CPzLffcdGdXlhztNc3YdJ+M5HRZAXIFpFSWjqCaHSCtVP5LAdaXF0qHelR87M1TuQZWVkSPUHEHhVJYNtvFl9FriXKithPhWOq4CJEhco9EbFHARFXB9yCSj+KYwjT44+9Bjbl5itg9P9xKP/HpMQlz/4C0vD4rwY4iA45o0TGiHylhjbMRpIrYirZLRJQkkP0HCyxHAFAlT3etL4kkAS1yBRJbkA5SNQqQNNRr0iQ2C5EvjvcqdZfFpjG1I+Kre0sW1s5DwgVu31QAAIABJREFUntYufyHrtLFP1a9r0gUCmItaSWiSRGwr2PQQhtnwAH4yH69Pe8WCU5aN/MWyAW43Ao/ccc2BW4LwfWWRvjNJg9lMeyEiEJ+MK71XUk0e4X6qRK2+JzYjuBcyjHhvluSZkMBclzk5VZrDw1diti5drLlmhtoDzldpDAhnUcS7pJ0Q0FyP1R6I+irMmomieQKewJ+Og/iKfRe/7aHtBsB2YAgYAoaAIWAIGAK7HQEjgHf7JbABGAKGgCFgCBgCuwYBKi6vWbny+KgqL46b5jRYPmQ1GDRQAUL4iirSEWtsMgSOTv1QXcmxjJKEAyktL8l0XpNsKjTs+UtLCCHiQISRI+Zr/Zw7IWmhBJ23huBxMrAVEcRxKXmIougXQfPNppOe9/r5R9+2axCyo+wKBL60bt14nW94FRr6XRrG8bPAYkUVZLFU/mqsedWvxocnT30sikLSe546lbpX4ybuL1taOki4eiWvI8JiEMJerSvewC4RUXEW0NIEBNikhnPSiFBRUWLOEcHcr7zWOSHNuFTXqYp4ZznBhnL+NeOfBHCMydXP89tmz+6etPigxVt3BeZ2jN2PwOOrPj9n4+b6/b0meXc3SeYmcFsngQtzc1LAmtRomxmqrQgTGdKY0Cl/Gc/t7xQEl0ikMW6Zh+BPF588W0k+PMX7ulUAOzhkTokUHokXWZdzC8eDGrhXRhNZVF0Zd6qPzD3mbaut+mL3x5CNwBAwBAwBQ8AQ2B4EjADeHvRsW0PAEDAEDAFDYA9BgOTvF1aufGlUFheDMDgBzd7iil2wQLrSgsH7KkSuUzzJOLVvAGGG9+iP2nr2wqOBamEhGZz3qfda9YQCGgo5wkyJCFpEcKnEo9KD5lTCJJvxfgfHSvhWWWwqwvAz3Rnjf/CaAw8z4mEPibGnM8ylzaruptVPnhv3i/eXUbhfmIDuh+yR5FMVwPqBHr6imgV3hdj0ZKzElwh5lSijz++wRYlaOmBbxKUoHh0BLE236CmCRQgyvO8V6MMerCCiVUGJMPX7ba0jJP6dshJxKvvH8XU+aCND0mZc/DhaLNx84vskgCPsP4ICuAzrq5ccfuKbjFR7OlEzddZ5dMUNe20t+m8o6/S9iIejw7pAeNaw3+mJ9QM91TXmB0r3mEk3R/BGzsJBkxdMTjgPakmEuHvykEmOaOgHN1yxgJDEnLtvSyrFzR3GszZMRBoEMmXMxqZXhv0oyL/ZjYLz5z7vbbdOnSthZ2IIGAKGgCFgCEw/BIwAnn7X3M7YEDAEDAFDYJohQMVl1e+fEZT5BSAZjmmSNEazLVXmSpk9ewcpkRA78oBN2YaVmJ789eXEVKypB7ASDJUjjKkkk+ZxrDbGfocMHoQwY3d6lvbLcSvYPFBhSdUklMIJapLDvF5dpvFfzMzCT71q/qLHptmlmtKn+5X77zgwb3q/ExX1u8IsnlsiAtlwUNS77i9SpBucMlzjqG2+1iKjKkdvAdHGqA80kGIkWmlZIuXy9JUgOQZyVxlaPZC3jFCyF8SvK7nnbrTB4YBFkwZzXnnpSvTpXKIerGrtoDYTqgRWZTsJ6USacvHkxOMVa1MB3BRwHu7Uv/FzC0/9xJS+4HZyPxGBplmarL3jiZcUTXhpEnYWh2GeNXWO+EGSjffBJGlJYFW7++QbYhsWOcPxrM0PvV0JDjdk90DlMCOfi49nf7+mrF3246ZF29TQKYa5De0gavSt69dMW+Tf7STNB/Y+9uBlYbhEO9TZYggYAoaAIWAIGAJ7FAJGAO9Rl8sGawgYAoaAIWAI/GwILN2wYebjmza9Kyry34av6iEVySnIJ8Xzl8W+rr7dE7y+3HiYAB4+opBbJMuGSuqFLADhRQWaEBKiVkOHeaoepTyZf24oSUYCWJSYsj1IMSqFqUrDylAm31rH6YfGDktvPD08sv+znamtPcoI3LDm1nlFUV0WVc0bwNB265gRo7GiSQVEnnBVmniQeEQ2wqsTqYwUxa5jij0/S7ViS+bSJ3VI/Sh7803eeDSqeEFq6fF0RVo1eMJYfm/Vks7kVxIWSvJy8fEv1tW0SMH+oWIWSxMuGaxU2PzQJ1bg9YumhvQU5txQixOc6SNNt37ZkgUn/2iUr5mNbechgHiKVt/5+WNguPuRuonPgL15lGBOMC6rQv3Rec+UMHXJON4v0wht5FhFgUBXH18fk1qxAc9esSmROHX2EeJUwnuxNCvUz8VyQhTxeo4+AcMkhXpq00eb6yO2o7jJ8YWQl+U9Y1HwgWc8783WjHPnhYbt2RAwBAwBQ8AQ2GkIGAG806C1HRsChoAhYAgYArsXgetXrTpga5n/VlpW58Ljdw48f8MGDa7Y6Eoe+kXBCELMy36HNLte6auNsAL4s1LR6MgClho75TCK7p2C00uHWR7PfQ/8fbkV96MqS18mDzIM46Bna4yuX/2q+M8g7V74hkOP/g6ICce+7V787OjbjwCJri+u+dGzk6q6pCrr08HQZk0SBVSgcwnZcE18cvFCrBaYHHDNr6gmFy9qjS3xB4aCVsmxWkgsaVo4RM7Sh9crcr0ntWzr1muc0p0ZCCGUqV6HDzB3rvNBCejKNdNioyy/eGsKtZBQVaYoNId8Vnl8fp5D3R5BiSwBz+NTicyfZVyXUfV/Dz589m8vChdB9mnLdEZg7V3XHVWU9UWYAWckUTMDd2M0Qsxbj2tR8VLN7hodUmE+7DHN+UCFsDTpFIsUJXXVk10mA+/0EqOSHHFNCj3mnA+S4HBMMJMUqmbn/drZR/BeH2VB3kTIc9Sr0qj8SDM249p9jz5r03S+dnbuhoAhYAgYAobAnoaAEcB72hWz8RoChoAhYAgYAk8DgetXrjxkouifDwLhTXGazkKbIddvHpQviSlyASTDnCKSJDAVZsOmDVIK75sKia2DriOKsiEFmRAGrpRfu9qTcoCCzP2VQeLBE8raO4skBfZQ9kn+1k0Ufy0Z65x/5kFH3Grk79O4uHvIKrjm4ZfW3vaiqGg+BqXsKVUSoO8bNOgpSF8SUlDLSlzQr9clJUShqNE5udRd1L9KAMviCNthAphvJy4xQW9eXRxhBiWuxLPfu1MUC0HmyuFVfanrtaSzmye+6SG1861CmXt3Td68VYW3hhB+m2Nh80OSz3wNzhjzaU2UJme87LAXmZ/qHhLHO3uYD9513UF1XlxcNPHbkRBLowgO6GL7wAQZbER403T3XiWEB49vVLS3lhC8V9NyxC0+USKfY34pCYw7viQtdD++SSK9emS/7v4s928m7KBs5/cFG4VGSZca5GAiLx/vhP2/2SdLrggXnbN5Z+Nj+zcEDAFDwBAwBAyBHYOAEcA7BkfbiyFgCBgChoAhMBIIUHF57QP3PrfqVeclTXNmkKYpqs4h7IJiEg/0NR7+peTdK8mkhN41yQIRxlJ2JRTYkIj/tJmbJ3PV2Zclw04x6YgEKVd2xIR6uvpSfpIKA9KMJfaodJb91kW/j2Zy30iTznlnLjzqdql/tmVKILCsadK1a+54eVJUV+CaPxtNz+I+lI1i+4CmVz4JgRetilbjxzWAE7NSNrmi4tdbNfAzVSi2JJgLTLUgUUUuF/7Q5AVdeklzTf6cykcuNUkxcM5U67JknoSa1L67hRYPMVg5f0w2q+P62hhxyKJCbCvU5oFLgTJ+nmPiFMJUcKKrFjMu/3jaM0/+FUt0TIkw32Ensfb2L8zvN/33NU3yi1DuzoWGPKRXOk16Ja6ZuvA/GbcyNzQh4glg3yRRrHVo4eDU8D6RJ0Y8bh9tEsN9DwxOZEhhLwSwKoTpER+nGQI4CQo2MayCLfjtM3En/tjei855cIcBYTsyBAwBQ8AQMAQMgZ2GgBHAOw1a27EhYAgYAoaAIbBrEbiqaeLq3ntPDXr5xZ00PaGK4wzGj6GWo6vil4s2uVLit1UAS9kvP/fN3wbt20TB6xS+ngAeVoxxn0J+Oe9WIYyhGYuppAQLQdJX1Gck7/IyyLAveLNWeVBdVyfJ+W9YeNQ9Rv7u2ljZmUcj+bt+9fJfCPvVRUkSH1WB8YcrLmwR4HjAOEJssNGVkKpoajW8qKcv1YdIRCDwxNPUxaRq2DWWvDWJZiZ840HWvjv7CJe4iPG5KtTdURzhRZ9en/iQuG8VxZwoWnbfls1zzoibQ6O+1lTQY3wyDqoj6cUq5DV9Wel7PWheR6I4IbkMxgy+F482SfP604489Vs7E3/b956JwOOrPj9n49b83KJM3x+F5eworNAHUS1KGO8Sry72SQBzSUHIyn2dryUp4WNR7/OtHYpTDnsLFN+scDhWuT9V4Ou9XPYrymOdP5F8hrs4PK0xe5qJMswR2ddmQXn+3OPffP+eibqN2hAwBAwBQ8AQmD4IGAE8fa61nakhYAgYAobAFEaApNt999xzWljVl6ZxcnyfwkeU2HOhKNGTAcMqXd9ASNYBKecJMd94a+CtOvBh9VYPvimXkgYk2RRcEsFcRG3smsAlYM/oVEkiGE3AmqYoN+dN86UkG7v0rMMOu3sKX5Zpd2pLNyyfOZHXb4vy6kNNFB2AxAE4XlWQV1DY+mWYePIklVcAq7JWS8+9Ap0JiFa1KLYL+iesV9xq40G1PFVbCY1L2lvLa/qhYuE+Sf6K2NyRW75UXghfNmxzCmP1TBmMmfsjcc3ttcHhQCnsx+bnTo2Se/FtlQRIQva7rNLmLzvJvAuWLFzY257AWLpqaXfzxuo1cZZu3G/2jJsWH7R46/bsz7YdHQQeXXHDXhsnnvyVfh7+bpZF88KgFDsIzgN6+oow3iXvOOrIqdW9FYrEdZusEwGxJiw4Z6gi9l0SXYz7l36++GZwMrfoHew8g1uLE5DA0iQuToMcn1VRmjdF/+vdJPzw7GPf+MOnKttpAxMENyfBbY9mG5MnO3HdSdFXjhkRfIQvgzKp66Qs9wqCPMhmFsERPw//C/OAH52ItJEYAoaAIWAITCUEjACeSlfTzsUQMAQMAUNgWiJw1erVY0Genx32+hfEcXJUlSYxKK62EZC3bxBCzDfDcoytkALueVs8Ib1a1xFoRV1MsnaAJM2peZ1nJBAX8bBTjMX4nASBLCwfpsaYvANtINBZCx6UG6sk+ssk7PzvVy9cuH5aXrApetJfWb1877puficpq1+vk2jfAuwsrRXYQHBALLnmb46YHbZzUCJ4oAAWYpZKWxJaLolBlSNtFUiw6ucKJi1JVDnsrEnEZ3rY0VrJ2kECREvrxXTCWaB4D2xPEqvSF8Sbi+1hb+DCqX5TIZ51rvFn2xyO8wBEcdqkQZ2D+q6L70ezx17/yoNfuHp7L//X7lq6OJhoPgWyemaVNJ/Mkvqvlhy15Mfbu1/bfjQQWAWCP9qy7px+mVyC++chSQgDlaYvJLD3/PVVHCmSa0w0tJYoiETfJE7mBW7FfO2tSPQeT2JXVb7eCsjPDZ/0c7NKEixt4kXu6ToXNamCGEeE90ukHcv+98a7wcfjzl7fndXU/S1VfwYaPe6PyXsYKOjDQPUuxNQ8ANvt1YSoTOFcBH/MmhB8o2yF1/BjUVivw3x/MImj5WE2vmLW0Qs2huFidGi0xRAwBAwBQ8AQMAR2BAJGAO8IFG0fhoAhYAgYAobAbkLgqg0bZlabNr016xfngyibV4V4jIZKEd66fPLXh3xnySDKMffQ74frbXf1DwKQAq5Enl7BSs5pF3lfet+eplOZeRGkL4H3ZIEnzUKQE90kDcKiQL+s6r4yij8+Z9ben16y337WPGg3xczOOOzX1y1fUOT5B2E4/Y46ybpFVIntA+MBjd9EOasWJI548l7SrecvYwwx55pYeR9TJXVBr8I3uI0x4XJ9UzinQHeklHzivKj5+7AvsCgXOSfEDkJjXZrKtX7VA09fP862yRaYNCp/OUavGOZeUu6MZfpeTSzHJFGHAdE/uIYTd9U8WmbVb79i4Umf217sl65a1c23PHhRJ4h+P+ukcVXWMNLOP5N2xy998eEvWGNWKtuL8Ghs3yy/KlsdFD+fF8mHwzA6Nmpy0q3onakELwyCnYWPeluLH7C7h+sccNUfmE9+PpAE5hxgRcZTm3hydfmuAGHs556fP15xLPPXKY59wi/CvT0HjVuHKbXJP06j5u6mbiaw5pyyCfbH/JmLWdZFEhAyeNQCsImiSz76/WrCkIUhaAjahDl+fTSJ6pVRU98axs3XumHnh2PH7ftwGC4ZyPFH4zLZKAwBQ8AQMAQMgT0KASOA96jLZYM1BAwBQ8AQMAQGCFy14qF9i3rze9Ky+PUkTfcvURdfQ55VkeBqVY1OEQn6QB6++ZFT7HqCVwgEIc1Q1o7/RInJsn1RiU1u7ubJhAGB4JpuYT2qMlU1qaRDzP2SZCvLuiyLu+tu98KjDjnyy4tCPOTbMiUQYIn3V9bd/cyqP/GRuGpeE6RJN0ziMGc8SOJAEwmeUPUepdTMcmG8Kpkk7qKt2lDVuINFPHiptvVeI1x3WO3rSN/WisE3wHKx7vckpfJCQrt5AUWjvqfHG1il+CaHSrQxoSKElZ8f0mhLx6MJFrU9ScW2QpvE4V8TFkG/TJs/fka3c8VxBxy3ZXsv+tJ7v3dEOVFe0+kmz0lTUnpR0+/nOZrOfS/sRu972RGn3ry9x7DtRwMBzJto3fKrTsyb4KK6Dl8KRx/wolXI+2ySuMQI4g/TTQYsybuheSCK9EK9rtXehNEL8terfzkHmHCRZJ7Gfxalk+brsB2QEMS02SYJ7Y6JBIQYZIewhKhZ3+EtIvi14BvMYcwco/h6O9cUP0/p8y1WQfTSBmOMccI5BglMzMkcsvmirp/EV9ftWVheF6bZ9bOfHd0fhudMvjmMxuWyURgChoAhYAgYAiOPgBHAI3+JbICGgCFgCBgChsBkBEi6XX3//fvX/eL34KB4bhAnM6j85YM8y+3lgb5VQWpzKu8LKcpEEl2OgPPkFxVlsvimWcooKKE7tLRNhvCgL8Sea4Tl1Z30+hVirGqojmySvEALo+YmeAFcdPrCI2/Cg78r2reruqcjgOsfX7/uRy+KetVHkiZ6SZ2G7LmGBEQd0CIhAmNFSwexfyAh6gik1rfBAeDVipJccJ67DBLGV9I2soJlA+Ja7R8mNxz0Zes8tk9QDHubSrwLAcUEh/oRe8IrogKYoe4IYcazVx2L0tInS7hvkmeu3J5kFj/3x/ENunhuLMsnGYemb4j+8tPh7Jn/a8l+i7Zb8U5u7Ov33PS7mPeXZuPZuCRZgAdBJ98+0estC7vZ+/c/Yva/LwoXWZJlT59gOgfCh+655igUUJxX1PHZcVPOhKlKSKsdSaq4eeLtHFpf96EKDTbjRC5C12WsuIaHEj+SpNH5wM9DJkTku6DGdwmIZnef997ucfvazROso8Umicz3KEzUE8jtU/y82cQO3yMyTzF/2t+fen3cdi0hjDlEE6EcnRXLMO3HYX1rGlZXJ0H8lZn7ZqvC+edMTIFLbKdgCBgChoAhYAjsMgSMAN5lUNuBDAFDwBAwBAyBHYPAVSseOKYqehcmIRSXSToTdg3kW9WD1DVzm0wAa4MsUe06BRYbWIkCeIjgEiKMXDEe5kWtRcLOMVzqz6oP/aLecqfiCQi+JJnA3lwJ1cN50cRFWaCjz1fDbufCM+ctvN3K03fM9R+FvSxvlmcr19SvTvLyYtA+xxQIGjZ7k0ZvUk6O/3MqclXuulHTw5cWJSCFuPima/6cGG5ejevjk59xv8PJCIlN583r1YS+UZzEsS9Vd8dV1a+qhmV910TOH5fjUYWksMOq9nX2E7K+I8YS10SOhJkQWbR5YJLEN46j6pHsNcrZ86b6Uhxn/2vJwuPv3xHX7Kb7li3Y1Nt8NTxSXxBnCU9GCDshgYEwiLEm7+Wryyy6eL/D9/qskcA7AvXR2MeaFdfMC4v6N7f0mnencTQHd3z0NWScYnwkYV38MUHCeGUiUBIUsGfQpIhaRdDyRO/fug1sFtrEjDQCxedsNodP1T7FJQx1/5zHmkjxc5rzipYSVMjHJIGH7Fc4k72CmP7FXIQE9o3r2uSOTlKpTJGcIitQdLyyPhXB+CLK4SlTB9lWnPiqJMi/DFXxp2Yd+9Z77HtlNGLURmEIGAKGgCEw+ggYATz618hGaAgYAoaAIWAICAJLmyZZc++9x4YTxUfHkui0JssSVM3iYVxLfOmlSJKXhFSSeoWuKh75XM4HfG/xIP2z+CDvmm61JfFDJfOeVJAmcf7Bvi3BH6gthWCoSiECSC2k7MRVVb08iq4O4855Zy1YsM4u4dRBYOnjq+Zs3rT1TWlRnweiaH6YxmEf11/UvyRSoQQkAawkrdo/+CZwMRWCXFDGrgSUKnAbejxgUeLWKXydZ7DbQLx7+bEQW46Ykm19THrVo7JijmzyHsED+xPxsyYJ5gkmaSDnGltx3BibG4yofr2qmO95gouEsJC+rhkdVZYk30TpXAR5r+x9rTPWee+p8557z4648pz7xcrv/mo1UfxZ0kk7PD9PghNBEtIpemuFZQMSuHikypq/6XRm/O2LD1380I44vu1j9yPw6Iob9tra33RuXsXviaN4XhSVuLmTCHbh2irsEeFs1gl7B1fX0Q7ezxuf4GMMU7GucwEEsE8M+rh3NkAkhCUp4gjkutQEjnxH4CBMQsjiPIdlfzRycN8brAz5yQs+QRKFiUaxqnAe4Prd1GaNSADjvpJiAqZBv2jQEi8u0qi+KYvrj845bsF3zB9498enjcAQMAQMAUNg9BEwAnj0r5GN0BAwBAwBQ8AQCK5CuX19z32vqHv9y7M0XdTAAJTVvCwCJunr1bleceUllxFLdrEGRYmi5mWrHqcIG/iz4gFerB6wJ5IGQ8rHVl055NwgpcL+wZ6KYJJg9GQV8hf/VxaboPz9VNwZ/4Mz5s9fa5dv6iDwhbW3z6/71Qfg9/umOE32Zlsn8Zxm9AhpQ29cJXlJ3wihJAkIJXOk6Zqs7Dx3HaHEAnQlmJRU4nbDHtTcr7oKO0Wj9xflcRyRK7GKY7WN46hudMxzy5JJLsOrIklYk3ziQB3Z5NWJziJF4ry1iVDSV4gqRwCr6l3HHTcYNOrmy6i5Nk6iC18y//gVO+rKL13zH/N6G3ufhcfwKQ0k9jIsKjRd8ofH4WkQZlhCNIC3l9fF57MZ3QtfcuiLVu2ocdh+di8C69d/dUb1+NYz+2X9QTiCLEoh2IUaWOadVF44exQ/SsYHfap9Ms8rbGuqfTGXqGgnaavfH5zDam1SI7Motg7uu0OSgFzc9wfnc+3U75yXavFCde/A4cePRfbJpo38ivFNHn2CyJG8PLY0g+O8YhyLul89g+W7SazlMZ9BAJPWBu3d5E1C56N7xuL+ZTPG9r8mPPL0/u69OnZ0Q8AQMAQMAUNgtBEwAni0r4+NzhAwBAwBQ8AQCK7asGFm+cSmV4ZFfnEWdxbVqH0VnlVUWaCgXBMfT6B5yPSBWV8NqxgnvRZJpaoh+eiuq+tDvDyUF84H2Cm0WoLBqR+5HkrS5UFdlL9NswHN6P4qysY/fsZBB221yzc1EEB8hNc/ePvCvGouSurmHCgMuxUaUUmpuIsfXy7OM9YybiVGNQClTVprOeKbqXlLBh95A7RcyborVwelOSmGJfHh/IJJhjL0tNmVqo5b9aCzfGBg6xxArDPJAdmkqhR1bK3a3cc/toudSlh9slk6rw3eSALzXEhMcfwZle8Vjlw1G1F6/09ZFl96yoLn7TDVO8YW/evK7/xalFcfC5NkNs9FfVp1qqL3o1M7s8RfRiqqTsxdzN76m0Envfilh77o+zh/a541BaYj4+GhO689ZaIKL46jzklRWGSIfAQB1Pft3CNnyrjQ5or08BU/bafQJQEs9j+kU4cTfm1iRatKOO+8ktdbQvikoFqjqMpXEo8keYUDRlCKKwpj0SV/+NVA9tglfGgJMZyIaclikMqsJCn9fh3JLOJ6R27zKyuMk6CoI7ghdxoIgteMxeUls+cecmW4cElvClxiOwVDwBAwBAwBQ2CnIGAE8E6B1XZqCBgChoAhYAjsGARuWPHoXo9Vj/56XBa/k6SdA2owbzUekOWBGzag0mRL/EwHJFbrf6qmjZMGMsnXtFVfgcjzv7dre8KObJMSTK1NhMgP8QBPcg2P9QlVlmgHDwLg/jrrXB7NmHXVWfvuu2nHIGB7GQUEPv/Abc+PqvpjCJQXN/AaQMxBzKv2IqSIlGQa8gz1pKQQQGxSRsJn4EHtlcBPJYAHSnakN5zaludPomo4xrX9lZJLSlQpSupfrUpkvwgZ3NbCKxnWKnlB/noyldupgl6VyvrTKZfJaPEsHUFG71RRJoKgErvSolxfd+I/nxnP+LsXzXvWozvymn111feORuO3K9MkOb6C6a9P5shPORXavihhR4KP4yJ5Lc4bcIXJi/y2uJNeGhx+4peXhCFMmm3Z0xEgCbzu7i8eict9Xj8P3hCH1XgSe+W8+rdrE0PneS1zRJMag3nhSGAm91qvXzE9UWW8m1s+10Clu8xJKSRxc53zwXlQCEFLSyHOGdc7VOePJn5q+Hhz71QCcx75JI0ngoU4lsQLYhkHkdecxm5ya8M6bQJJz/uGHtxhGkyg62QdpevH4uLyvaq5nwwXn2GJxz09wG38hoAhYAgYAjsFASOAdwqstlNDwBAwBAwBQ2D7EKDi8tp71x5cVL3fTprynXWc7B0mWVihNNdVyQox69W6g6ZWzhvUVeK2ykb3EE3vUyWOBorKQdGu8mT6YO4/147wJAS8TQSJAHDPUBiWQUoesK4gxizurTtjF5996OFXYf/Du9w+IGzr3YoAm73dvaY6Mcybj8KW4cQKBr8NiCav+hWHBar6qCQkKTOULODAf5IHqcafT0w4paG3iPDEkCM06aurSt3J4lVPDmvTQnqQKmlF8kgJIrKfSoLx9woexdK0zTV7dUtiAAAgAElEQVR/EyLXqRTVQoL7hy65lcxjXSiMuU+qaX3ihB6ofM0ECMbW1EWT4/ebQf7+6YEHd764oxuvff2+ZbPLYsulaRC+J8jiROxecA44MyWj3V/yvsGj91D1pBqL+MnWYX6ur5LmkjkzZ3x68UGLjSDbrbNqxx384ZXX7b9la31hVYZvRV/A2Wj/FtLqx88PmZnO1oFkLOcG5wrVwF5Br0pd31RRFcPatE2TimwKJ98jnOr0HXL7J1HsEy9eoatWEFwfiRH2gXTTvE3SMOFCMlga2AkdrPPbW7VQ3Uvi2VWheMUyEZP7BplfLHS7r3gspwSuoqwpm3jDrHjigvH6uH8MFy9Wk2JbDAFDwBAwBAwBQ6BFwAhgCwZDwBAwBAwBQ2DEECD5e/V9aw5viomLQa6+Nsiy8TBJw4L+iXwuBzlG5keJNLA74rE61Ll9yNextX5wai6SYFT7eqKXvw+X4vqy97aE3mFTuwd3erOSlGMToJDlxGXFLkTfD+LsgqMOP/ymRWGYjxicNpxtRAAxEH/h/tvOAdNyMWwGDg+yNILFAR1HlRyi366X+uEdJXb0YL7JoI8zr7L1SuFhxaF692rOQMrSSQIPEbXyPnbuS8/96fh1xce0qMD3ohocTC846g5SErC/hi5SPIhBgrmS89qpikkoD9s++BJ22jx4H+1WoehUiUx8COmKSdNQZVxVG7D/q6I0/etXHPr8FTvaYoH3gW/c/x/nVL3qz9JOvH8dQdALQlrUl1A6i+WGs8YgAaz4uXJ8jx9ep2TnwJblvf6GKOv8+V5J9teLD1/85DaGhW02YgisXv2VvaMt/V+Z6NW/m3bSA2AQhKmg1g3kcVv/bcwFn5DhfZ6EMOPJN0CUOSqSfqpwdY57H26Z01L5wXZuzr4B63kf4OFKE64h6l061HsLFsamqxzR+4O7UYDQ1eSK2pqoR7FrEAnimfvX+wNzLiCvHWFMApmLt4MA+Rv0IBtGHcramWl5/l71c/7JSOARC1QbjiFgCBgChsBuR8AI4N1+CWwAhoAhYAgYAobAAAFp9rZy9fPCvHdREjSn1UmS1SBwRPjEh2avnPQEDz2AHbnVEmOTFJb6rpbBDywhvETXEwIkeOXB3DW88p97EqxVc+FYMS0em7oJixIeo+F3m2583usXPvM/7TpOHQS+/MBtc/tN8+a4LN8Hk+cFNaSx9Jxu48HVhas+fLCo5yeSEc46wWuA2UxK4sspDT35SoJKvHudD68nlAfkrCeGlQjyC2M+DpOAktgYhqFby/z2rNP5VBTXT8JA9PngqF4KlewCEMkzYJsA6pRqQaQvHLnklcoyIqeKF+JXFMUkpEg463h50mEpHqe0OdkCemt9WZW3BEnwuXBs7MZXHnDclh195XnIpQ/+5/OKieJvkyw7HnpHFsW3c51EteKpimfvcazuFkqOSck+kzQ4F/p0i4NxGfb6Qf7JuJP90ZKFJ96/o8dt+9s9CKxe/b2xcPOGX8rr9DxM1XlIfYA+ZRM1JWw5v7wFi5DDzhXFW0JIDHHuigKXCnOSrb4RoyYVRF0PGwdJAPKrhHPEK3zbpon6RqsqlqaQ+P4Soplq34H3r8Spv0+I5Qo9ilV5rAkjbbDIhUSwxLQbX+GaSJIZJtVNWyRo/DHHu01eNw/MjPJ3zXzeO2/cPVfDjmoIGAKGgCFgCIwmAkYAj+Z1sVEZAoaAIWAITEMESP42K1YuCfP8kiyJX1ijm1QBnpW1tKLn4kM0i7/5cOw6vqvnqdp6SvU6lFDyuzzkq2pSHqBJbrGU16uFPUkkb7ineJVt6vrOE5IP4dpMrgk6bPYGIiwsCj6o95o4+WKTph9+w8KFVD+a7cMUidnPP75qTrRx03lBXr07zKLZJS8744/sItWB3mOWcebjy8UYS8s1fnzTJo1HKgq9glc9gXVbadqG3ysQS6oA1O0Hal8NK27vSSS1aUBTK/K6fbjvhtWNURr/wbz58X8cExxTfuuRO8b7VXBI0M9fCpJqSV2Uz8cO9kP8d8SuGHNHdPMyDiWQlATm/KHHKagzMMAkx+qqws8gB2/1CLa7OUzCr0NYfFOnTlefsuA5T+6suP/Gyu8egmn911A3v7IB40blNVXMDZtkJTB2EDJNjFXb5M7wfOeloj+3bxJHxLhNFiZNv1/gf/mN8Xj3gpcvfNHtOAfvxzFFInh6nkazaml3ff7kyzZPxJdDCXxsCiUwc36a9KBunJ6/nuj1inEkB4aawDGe5PvFE7Uu4cjvGFHnYh8kgKUKhRUpMtkxf9ombYOKEs7XRLzBB8kbxmjC5pGS0XRJIZln3ivcJS/kNqAEsdwLXPM6ks48E74nnt3YDxI7qhBmMhRHnEAOFSf+rVlJ+Pbx4966ZnpGg521IWAIGAKGgCHw3xEwAtiiwhAwBAwBQ8AQGAEEvrd69diarf0zo35+YZZ1n1UlYSyqJq2NlRL2sgRJRuVWisdqfCbeidIQTrRP4pvYQKPoS2nlEdo3w3JNeeRUHelLH1FKudR+cTJ/y315Ek6JpSbIwCbERQk1ZLWpiMKr0pnJpa89+IjVIwCfDWEHIfDF9XctRMOx80H+vilMohlNEoH8hRcuy8VB0jJeGF/qBy0tmZzi18URPUJBzogfMP1DpVEht3WEkyjWtcRcFX+TExXDKl9PS6rVgbdsUMIKnRCbGAbZ/bq+upOll75s/rNXPpXIxHGir665Yw6ME44K6/rosK6OAf/1TMiA90e0z8LEGcPRU5wGLa0hNgTxCyuJJE1yTLityKX8GG/dG8XRzVj/lm4a3PXSA5//2M4iff0lXLrqljl5tfWSThi/q4miMarzqbgkoUbSDULmtnGd32ayZQsx5aRmCT+4OnofDzWHS0iy103dy/vfRSOtC+JnnvzvS6w53A6aQbt3N4z51StuOKUswsuTJF2M9CCSHkwQSgpHyVo/sVyyTz1/dR6rBYNXkGvyTxS/TDK2vt2YMGyQKCSss2holbyDpKOQvcyziHbdJ4REOizN4LxFBBHjmKj29RUoLWnsVMbeE5jfWeoZ3MD1Rcek3t5Yg++jKqBiY7g6K8ei6u/mzo4+EB751o2796rY0Q0BQ8AQMAQMgdFAwAjg0bgONgpDwBAwBAyBaYwAyd91W4t3xr3+e+MsOxSqWlRqg7YSSlcJND6ZT2pIJUW6fNh2FhBOgUU2V4q9h5S/4tfqPFSpmBLijWW2LCMns+SayfkHf/Vv9ISdPHKzBheKS6giy/qxOk3/ciwI/vr0I498ZBpftil36l+8/9aFiIEr4rI5q8nSrEQYkVQp6kJtEZynKH/3TdFSkC8kd1qLETEBHhhDeOXvUy0hCB5JHlEMOxWrt2IY9vqVJm8Mfyp+2RAOsZniHah6t+Zh/am0k13xyoOf81OTEBhffPNDN3eeqGeM5UE+BqpoHPYWM6s6mhlG1QycJq1W2MIuh1HEE2j19gRsL55Mx4tNc+cGWxeHu6ap1E2P3DVr68bHfjcugvfG3XQW5cjwMxbVo7eoIAZJ4oh0enqDGG45Paek5nVTYk1V1iTJvJKSyuaMXsdFVRV5viLOksvnJQddvXDhwt6UC+ppeEIkgdfedcMRaJR2eRB2XosUThxJlQj9QdSKwVeNyEzlnPL2KkMkr8SPV+mSIObXgCON1SNYZnGLsFg9FM7qwSWGWqW/KxBpm7rRw15sKHwCyCmHnRJYY1cV7uIbzvWYByqdH7BLbPoEUpzpfOD3W5B0gn6dNBNl+MTspPjlvV7wzuumYRjYKRsChoAhYAgYAv8NASOALSgMAUPAEDAEDIHdiMBVKx7aN6y2/Fq3rn4n7nb2KdC7qqKyin6rtPz1j9neqYFWDq7MnupgaepGAsib+UplO9WZUP+1Ng5e1aUqLy5UFAsRTK6Xnq3+QZ+P9E6xKY4SUFmlqIGP8eSPzlfroRj8eHf23p84a999N+1G2OzQOxABEkY3rL3jWNgLfBSy89OCNMpypB/YQI1KPbYdk0UaAfpA07eGvaJF+SuWJIw9X2JO71D1BOZ7/FwU5d51xBFFqkzUuJf90nZECCKOQD1JM6jdMb6m6OdP4Mffz9hn78uWzF34xI6Agp67coq70Q5hWbMsfXJV8Y64iC9v0mgfkr/0bhUsQPiKBQbh8QauOpHb059EnDtfY0+46dlpXkd8mjHxeS3RSq7J+72Hg256xYwg+/+sOdyOiKbR2MeGe687Ymsv+Ajcsl+NWTkTsxAi+ALfGUzqDb5HJLEo3ws657h4OxEmG0Ttj+8Buj7I+26uimLeWQ1F3qphyHaIil4SzbQsUcsHxt7AvkErVSYriKNKFcK8rwjJLF3eVPEbcRyocFESWjy5XZM6qowlzUmDJKyfBgUCfqKK6jhurt9nv+4bw/nnTIzGVbFRGAKGgCFgCBgCuw8BI4B3H/Z2ZEPAEDAEDIFpjsA1K9bMq/LN53fD6M1RlsyuaNIbJ0HhGt6I4knKWvXrWshbEsAkdlsP4EhtIpzHKoVWnrRrqJiUB/LhRnFKAnuVb/ugL0pB7RIvBDD9G6nSYul4VeAxvb63zsY+vNf4+BfPOOigrdP80k2Z0yf5+6W1d74wLPKPpU14CpoOxhUufFHl4q3JaNPFl4hPbgQHS2hXMu78PB0BzPjUeGWzNtcUDu+V2EA9fJ1FBGPZqQOHLUfkiJgHjPWUxC8IpBiHRmCuqbP4z/YKo0+eesixj0+VC7GiWdFZ/eATbwx69aW4FyyA7UZI4o0Emlq9KJ4k32TO0oJVPMG9HYe+7+ez4Cf3ClVrV97T1fPFztO1C7Ukabg8z5+owurKtJtccdL8k9ZOFVyn+3msv/er+/UmJn6/LKPfRGFJtyr7pG0lqeeTgbBEEbJVvhPYMBCErcxP8QzWxm2SeHApRSZkZF0ywm4eDxPAw5grCaxksyQyaPXgqlr88QdqYiYc9Y7Du4nYy5D/JfGs34CiZlclMgjp9vtt6PsR86TgPpIMxt1ps6UInpybTPzq2PHvvHZ3Jnemexza+RsChoAhYAiMBgJGAI/GdbBRGAKGgCFgCEwjBKg2vO7BB59Vbel9GPTL2WGWpTAdxbM2iDLh0bSMng+9QtYOefRStSdaLU/2OGuHgWLLKXyf8g3vH8KF5CV55JRbfIjm7/4BnU/X8h6UYikJ6BxukkGznM3e9jviiH81r9CpE6jLm+XZyjXhz4VlcynY1udSYsuYg/0ISBdV8raKca8gdeo/Kv+GCVvx4ZRkg5KQXslLOxISRl5FrMkIrkNVMWLZKVjB8bZWEj4RQTIqhUaVmuEIPgiwLLi3SMPL5y08/nOLw7CYKldi2bpl40+W9RvDXvBR3AUOjGC2zXsBSS6vqBZ947Ctg1fs03NZ7hNOnTkQBDtbDt9Uz9lBsGmW3ECwb9dQMoFvaoybQj7R66Pj3bVxJ/zwifNOvM8Is6kRYauXf2XvOtjya3WT/iYSegdGUQl7b9iKUNXrSFSSrWoR4ZrASUApAewThuLF7ZvEeUsHH5PuXlH7Zo6Y9YxXxpW3jWjnvCQbVfkr1Syi8sX9xPn90jNYthVvYr0GPhnKL0O9J/lmdkoX6/eaNoMjNy0/wyzogQRO0LQxK4s3zlj8toemxhW1szAEDAFDwBAwBLYNASOAtw0328oQMAQMAUPAENgmBJY2TfL4fQ+8OOgXF4xl4clhMp71qzIk6Sa+nSyLlYfvwYOzPADjoVioHDZt43pOFQyqqH1AFkIOn/OBmwSSPFy7Tu0kkVuS2BF1QvzKg7p7GKcqjA/4HEtZBCE6YlVh/I0gSy+MDjvsB+eE8AWwZUogcAMUp9Wa8heiXnkhWJqj6hh2A+gtSIWd2I/gLD35K4QuhbokbBwho0kJZ9XgYlEJSmcKIb7SEAmiZJuLJ4DTCOXZUAV7jZ8H05PHEuuiSKT6HD/Z1BCS+LKqloUz0ouy+TO+dXp4ZH9KXAScxLcf+sG+5dbyN4u8enechfuzExYq1xU7kOpUTKtiUi1bxK6Fli+cq1yp9CQblNb0+cUlGJ7n3JMSeP5z/V28l3mlcX/g5ySBceim7pdFEdT/kYxlv3/yghd+f6rgPN3Po1m1tLt+4sfnTJTZR2C7MB8a/5AqYJLAkgigZRBVtc5eSHhZZ8PCpE3rJU2bBSpwqQ7WrINASwWwKtOdl6/zoa8Rv609kRzD3UecnYT2OKVOXeT9rnkkYpVkLkldSVio769WFExWuTOP5O8d8rlTytNxooEVBMwtgi1V3BtL+m+f89y3XTXd48DO3xAwBAwBQ2B6I2AE8PS+/nb2hoAhYAgYArsQgeseeWRW9djm1yVleWGSxofVcQqXT6htXRk9STLx6qT6j4/EQ36KXik5+OIeqDP1FJQcomeoVwrKz6d4tvpycq+Y0gd/3VeMkt4GJECGreq8t7WKkxvCsHPp645Y8KNdCJMdaicj8KV1dz8DxMzb07L+PcTbgbDdhNesJhmYQND4c16dLp7EfmASAaxF2j4uvUqdCnVJNriEQyKe1KpiHy4Fl9hkyzWxHRmKajY4G2r2FlfQ/db1t6NOdsFr5h3z/amkSiX5m09UH0TN+rnwW+7SiHV4/uqcTNvSeRVlTvb8FU9VeWv4T3p9T6+ZSyQ5YoyELwvqNYmkPsC6Paw5+B+bw4FhrupyWZ2G75u5sPsfu6oB3k4O+2m/+6ZZmqz90Y9fBZn3JcjwHQenh5hVHnVJJbCq8lVN7m2DtBqEixCwEjJ6X2gTPZ4Adgkffpn5xJFEJec/bXklCcFGdPq91ip4XUWAvmZjUo1jua/gnySC3PFIFJcYq688kPsRVcKiKHYmESSWsSt6DkvKNOkGW+qoTpP46rnH7vvWMFzCQdhiCBgChoAhYAhMSwSMAJ6Wl91O2hAwBAwBQ2BXI3D9qg0HFPmm36kn8l9JOt1nwOdTmr3BrNA1yFHi1qsvQQWrmskTOa5UXh/Q9QHcl+a29g3uQX3SuQ0RwMOEMgk5feh3ymLul/uscnBQTa8Ow0/G8cwrXnvEwat3NVZ2vJ2DAK51+MV1dz+z7BXv60bR68DMzKmQgqDqXFTjiAWqwukB6puGMSkxTOhIGTiWUkq94RXqCJ9hApifM36FgHSKPb7nVcP+7MRjWBo68UNdnwpjiXGaCxflRBU3X4g6ycVnH3zcvfjc95zbOQDtwr1+df2t+wVbeheHRfOLYRLOogIb/R8BQ6n+22DNtKQdiFNVKfNfpJfalMstJIBJ0pXON5xva3MtT9TxHafqnkS2q+er+L86r2FWAxB/HJk3hjrPy1VxNzr/lIUnXjOVsN+Fl3nkDoU5Hq1bftWJZR1fnjf1yUgvRAnuAfTb5vcBbX1V/TtQ3IrqXKpFhpNAOhWRLFDluXwnDRrEtXPc3UhQX6BxLJ7CA6sYbUlIFe+guEQIaMYx85e4v1CtPryNT0b5xKX3FB4miMUfO+5gJ2mQh1kzUYerZ0bF6bOe+5blI3dRbECGgCFgCBgChsAuQsAI4F0EtB3GEDAEDAFDYHoj8E933vfB8aq6sAyj8SDJQnY0F5JXHn7xwOsa6nhvXxFiCjE3IHy9MrJ9GBZV1sADcTLC7qGZpbjOU5EP2bXwfXhkdu+RYI5pF4HGQGFVNk1RrqnGxv5qrNv95OkHHvjI9L5qU+fsaT3y5AN3vRDK7ouzMF4Sd7IYtiPCqErSwZdwu3JrIR8dici4oaVIq/oTcsYpzoe3I8HI7fH5QJU3WfFHRH3cD6OLsnQlkiBHjjGgOu8/WaXxlU0SXvEL845bM3WuhJ7JDStuOqHZXP5Td0Z3QQPlL2wXtPFV2yzLzVNPjLkEEFgt2R7V+/rTNdQS2aPgPvD89ZjJtQSRJtfYKSzlM0cAi1UMFvmcDbRwAaURWAU6uqwfQPe9y8aj7tWLD1/85FS7DtPxfJgIWnvH1ccVVXBJGKavTKKq0+D+Xxe5+L77eJB4cglEphB08S3a3Gs2CR1OSIjSl2pyt7jVaFnigmwS5FS062eITx7bxbMoj11SarhpnFjQsCrBqX45Gr1XKYGsyRAkUSSRlWGvCTzN02BrlVQzk/xPZjwnOT8MzzEro+kY+HbOhoAhYAgYApPqxQwOQ8AQMAQMAUPAENgJCJB8W3vbnV8ZT7KXNSy6TVJ54JUyez7QklxzD7TS5VxK5vXJ2b8Wjka9IlRtJUSbNunRhfujSsu/dkQQHsWpKlR/RGwBz1CSv/qwDJJJPH/xPJxD+RuF9xVJ56K9o+baJQsX9nYCFLbL3YAA/X77a8rXwO/3Q1DXLWrSGIavNP9wVgBuTK3PJl5PKuOW2CQJLMGqqnHnRDDsNyvbuFLs1qjAeVZDyNouXI8+wN6GRFTF2L/YReBtqBHX1p3wz8bC9JOvmr/osd0A2U4/5JcfuG1u0994XqcOzw3SaAZnqPfpFvLVEW6cxd6j298PtHGWKrOlwR4Vw9KETxx/HYmsnsG6zcBmY+AJ7NS/jhCWRABV3VRgu6oDKb+HNBmK8cebrPm/nb3Ty0/Y54SNOx0cO8AuQWD9nVc9pw7Sv+yX9YvTqIIKuC8JnES+XpwVg1Pseq95JiRjELaecGUiSGNM41HuB/xukf9n3HkLCZfsxA58XIolDClf7I+JT2kEie8nLtoCVelm3afukc1JJYFJuyKq1+khjO38+ywz4HygR7FUKNCSBjYQPdy8wji5u5vmL59x9JvX7RKA7SCGgCFgCBgChsCIIWAK4BG7IDYcQ8AQMAQMgamHwFfXr5/x2MNPfC9J0+fUEWgVPJhGeMrWEmzX2Mkp+PyDdkiCjg/irjReSlqFYHPqXQeTt4TgA68oCD0hzK7q8gytD8rygE2llJDGjhTCxhmVU0UBo9XiB1l3xgWvOWLhN/AgbwqpKRKGNzy6Yq+JzeWb4rK6IE7i+fT71b5snqJ1pE37F6H+wjDyFg4DKNT3l2QPmzT5EmxJWHgvUKf9a8llRwzxcyoFJRYR9z7BQZUfVXsRLB+giyf9c1edRh+dedDM65aEUzsJsXTVLXMmqomL47J5B9xY92ITPtbgi88pSC1R53tSjWTsU373nqxtwy7eH3DTEJGws9bwqmL/2l/L9tq5+wKvxzCxrw3iAnDTSFbh1yLPt+IGdFU6Hl128oKT75si02NanwbtINbffc2v9arsT5Mw7wRlrjZACKzUKc2Z0Gn9dRmD0jRUzIAFu4HXtFf+KjncksDue40/fIJIk5EKvU8gwedbLWD8fUXuNGoJI+u0GSeXgHIJJRLAck+hnzXe4/cf50+D5nZ8I4mzoGBjy7gb5FG3P6N+9BVjx77j29P6wtvJGwKGgCFgCExbBIwAnraX3k7cEDAEDAFDYFch8PlVq+ZMPNn7zyTrHllDZkuSJ0z4IA0ijYQZy7ud368QtK6MXmwgnBpPyrP5kEyfTjwkV+LB6svryfsoOcdFHppZaM8HZ0cwUzEspbMs2ZXmWzg2n8p7fViPRjdXneR9Zx9xxLdx7Fa8uavwsePsHASuXX/vflEv/+2wLN/dJMk+NNMscM2VUBGtqBAmQuiQcBSVOX2oyZ0ooePjb7jRkhCFCJPWg5OkjSOAvcenWn9qUyf/2fBZelW6xCMbm6HVW5TGNzWd9LzZBz37v5aE4bRo1rR03bJnTGwu3tnk1e+l3c5+mPNizNF6KiNZRHsMKrZF8eiIYE+e8d5BaxjvCd6W7OPC1UMqa5/08ddxmACW64LrL8SdV2y3twH6CUckBKEEhtNwWH4lHRs77+QFL7jD7hU7Z97uyr2uu+vaV/Wq+J+Sppwd1n0ldBE7Ee4T3rNXEjxOuStNIrF4hbBYvrA6QFwcXGWJ2DhowlISmPw+4teP+2YRBbB70TaGdPcPf+6S2HTffRqz+r3I+PSJTGkSJ4Q0ncrxfYakKj8XP3MQwHIckMBVg3VgB7GlSuuZ4abfHD/27f/HYndXRpkdyxAwBAwBQ2BUEDACeFSuhI3DEDAEDAFDYMoicO2da/Ypi95/QY60sMFTqjwsgwSWUlb30OwJNZFeciGBg/XE91dUk/q2L5uXEnGSvixxdSW7QuQJV6QqTfH5JaNEZRWfpp2aOOZ2ZQFZX78Co/PddMbM95552Pyb7aF4aoQgPT6vXXvvwVGVvz/K618OsmgGWP4Qnr+O/PU2IaoYVTKH8fTfuX/GZ1uy7f5q1EZtzqLEbz/whJD9UdEnjQaZsoDyV1StJJKg8SVRU9fgd0ngoAtZ3c978OtcGnSiD73mwGNvmW5xuLxZnq26b+OvJXn9vrjTObhBQzjRWDoSvbXjoKofb1IxLSSxqKdpF8FFFZSc/9qUi6p/FfJrIkh/ahO5IfsPd08Q+weEBS1n9B7jPIF5swJJT9cQHpsmHbiWt1RZdEG08KRvTheifmrcGf77Way945qf25oH/9JNw9lNOSEJwk4qEnJN8JAMFok57w2IOzff4RekX1Oi9eX3kCNonXUECWQmLDn/GZclCWVHCOs2g+8zH9+scvEqYHUSn+yP7xXv+n2mcZoimcntvCJZEqVCJmszS7GEwPAKEMF502k6UfH3M4896NwwXDItEkxTNW7tvAwBQ8AQMAS2DQEjgLcNN9vKEDAEDAFDwBB42ghcteKhfYOtm5eFWTofMkdHAOvDLQleLY11rgsgdNnARlTC7IbuHrh94yxVZLqHXGmGo7WwWr5NtZ6qs6gQFgWXSDtJ+JLE4aM32+I0TbllMySXyXei7vgHzjx8wfef9snYiiOPwBceWnFM0y8+EpfFq5o0GasgGyWZ2Kp0HUlTk9x1lg2i2PONmobOcFB5PZm0IcEjJAwVo5KAUG9qrxZsLR5cQsLvUlSBjFHEo7DBcB8JuulnwANf9uoFz1k13chfj8uydcvGH8mrV9YT5UVpnD4nTpMIlhDiy1tKJ0gl0KRiAEvb+MrfH0CC0dZfuhkAACAASURBVJvVVwGoTyuJX+KsZJr3XBX7D2nqxzddA0DxTCXr65r/SWEC7iG+CRiVxiDR8B9CpQl6E727k25y0Ywjup9fHC4uRn5S2AB/IgIPLr/qzH6ZfjaLqhkVXD5SJA+QlHFzWWNDLUUcAez8eH0zQo0fZ09EIthVspCAlQaFbv7ToohL7HJM/nvKNzltv9PcKBmeQuayCsap3+X70icoOBdoKYNEplTEOBLYJ5smKeLxHVnhXz/IOKKvz5m935nhwiXmcW9zwhAwBAwBQ2DaIWAE8LS75HbChoAhYAgYArsagWvvXb9ftWXTzSDj5oEAluZbUeq7qTsC2JWsqlpKR+hLXsWEE0/EQtDQ29B9xvdI6nBpvX+dok8UxCzbdQ/vVFRlWD8h65fnE0XTfCnLxi981RHz793VeNjxdg4CS9Fs8LEH7jw2LuvLofF8eZ0lCf1+4YjpLAUkcly8eLWvJwqVaCE7q76c+rkkFZhQYMNCR/A+1SvWn42rDp/sVesTG1iJKlJRHJN4zpGiKIpHgk72qWBG8udnPOOotTsHlT1nr1Ru33j/spdUveKyOE5fkHT/H3tvAm9nWZ79vvNae4cMBAgBQsjAhkAUq40DimC0NoAoKkqrneyp/jraetqqFGkF5+/rsae2X49t7e/UU79WGxFFnJiMtk7ABgwaCCQhZCCEKAgk2Xut9U7nvu7hXSupVCDJzs7e9/IXk73Xu97hep73Wbz/53quO06oBluYo6iVZqSGPOEjMR6AXez4xxyPOiIZxvESfCyPZ4rGAtjnsZSAIT23Zx/q2ZhisBgOY4n6kPZqXnBtxyl+V/c63V3RUHrlzKH2v6w4ccXYkaO0nykUQH/bcte//1Yepn8XV0UW1QRT6fcJDL+6qkQmgNS9yxOVMg5wWcGmz0mRQc7p5b4icUSY3ITTX8YTmRwKyY4rjl8tZrp/PfLGkY4JDcxCqHNdP0/TDw2U5vgYjlCSCAoGxVhZQK+CfoefkXqP4KQgyoJO0KLrKkfn1r2Xhc/59b3eC1wBV8AVcAVcgemmgAPg6dbifr2ugCvgCrgCE64AAHCxd/ed5AA+scSSbV1Wa7m9AnrFIcVwBg/f7OzTgju63N6W6g8uqbXPAATxfpTVlGSshAsQv0vVYRwVvTqq6sfrrPWJNAn/+hcXLvRq6BPeGw7NAQFzPr/93lVxp/gw4Zln0RL9mIqpEW+RKAYrygb7uUSPGIiR/xS0foOV3YMA2BynjQMdkBjb20SDwkiDvwZ7sA0v/4YLHVyIjpdRf8bRwh5hyrzcFrbTD8xqh58557hluw+NKkfeXkm/+KYt3zut16k+nMXZBbRgIAPjAsTHCxENAt4UcCECBk5dhXFoaQFfCoF1PGgAMICY5bkO5K7a0nkGeQyIpZBXk/OsKwtMUXYjV1Hd65U/olmlj2Vzor8957hzvB2PoC5X16Pp1nUb39ctkne1aKooLCkWiKAqjw/6HWUTCRargAmBiL7DAFybyUfta+w/b6JDpOPhe83gL392n5QZQGAZT/oTFAaGgYhRyLRf/FAmPfqxSShEWReSdc9zV/ie0+J0XDRVoys4cokAcLdOKQYiuKeVhefMXn7po0dQU/mpugKugCvgCrgCB0UBB8AHRUbfiSvgCrgCroAr8OQKrF63eT4txb6jjKMTuOwbgVl+yGa3pS2bL2RJq7qlsDoey2l52StZsgzacA4jMoHNodc8UFuuq+QyGgBO6QE7oQfplNZt593uw1XW/usZ0cKPrVwc+hLYKdJpv7Nt29DD9e5VQaf3QSI3y4IsiXJkwFI/AwDex6mHCQGyjA4CPwaLuuy7kURBikUAiKsPkEUiCAB2uA/js/ijbvQmMgKRAgwTkUcLWEjOQtoypY7b7XVvD1vZVa2Tzrh+5TQp9vZ0u9r1D9yyuOqW78ni9JI4jWdTW8J0y7B30FFp+xXILiCYQRhAHIrr0UsgvoaIc2P3C/hxjjBBNXn1C0li7b71EfYJN7EA0v54oa0TCiyu8qqTh73/NZy0P/qiJS96+Oleq29/eBR44O7PnUDfM58qi/rlKd2YZdHlSRuuncbfTxLhwM5evvcF4OJ7igutabY09zedTLBJSgHGMpnEmdQYL/jzFDqj8Fi26WfeM8jVom7NRBLDXfn+s9/xBAd9tDk+Q+c+aMbklAFl7sOIpaBiip0gpdU14f0zsu45M878tYcOj+p+VFfAFXAFXAFX4PAp4AD48GnvR3YFXAFXwBWYJgqsvnfbSWGvd0cRx/MqZP7SAzHKMA0uqbcl93iQjhETodEO4G22FJsfqPWB2R547UG7eZDGIzWD5ZKdv4RngqigEjxlb0s4fNQHk3b66VXz5/vy1ynS99bVdXbvlnveFvfyP6OOc0JBlIUzf6mnlLqM28AJijJZ5nQDEQFS+L8GdWm3LfEGnKG9DGYECwRSAEx9TPKo5T8l4QDmfqoTEtIHBejwMcuqTvKKjL/5d8Kh9mXnn7TsFvrsAJWcIg1yEC/ja9vWzQ2KPW9Lq/iPozg+DnEQ2D3yvaUt+u5IZP3yygAtthcS1DVAxlNCBOD2AXd6nrYc3wCxZbJiKT+iJXhBP+AbAX3+PE1MobiWjD/UtshkLaiQX16OlVH1uaEse+/Zi89+4CDK4Ls6BApQ34ioANwbumXyt2T9PY4qgqIhtV/1Cz9KxMIAAB44F3xn8WQjuW0TfKfRZrZSwPqT5fciM5z7rK5UQWyD9F+dUEDBUsBaywymyYxmgknHJB6l9N/N2INzA0PWoQQOZgbX5AxmYI18YIxtCoC7RbB1TlicO/S8X9lyCGT1XboCroAr4Aq4ApNaAQfAk7p5/ORcAVfAFXAFpoICqzftWFiP7729irNjS13yyvmG+tAqjiZzOFnsg+Z66pJcPF3zA60u9TZAjKJNeGHJthRxwkM5HqTpAboq64SeiAnPrA+z9vsvWrrosw7dpkKPkmu49uH7jy/HO29N8+oPwiQ8vkwI5cD5S/91R62uOZ4aKyKpndLlFJoITFFQqCCXIQ36D/3NzjtdSt048hr5AFpkOgLvoaYb9z99cc6vxASQ7y6iINuiR67kL6VpdNn5Jy/33Omn2A3X7lw7Y1en95t1r3pXkiUnhVEYSaQH5QKjrTQT1VzeBoItE7VxQioYoy4iKwjMGa7jC9zDEUEycH9ZUq9wWTNV4T42gNy0MY6PTGCsMkBf6WEv+VfiZOiKcxa/4Ac+1jzFRp7gzbatWz2X+O+qbpC8i/rPsymOnkNGQF/FbQtKi/gFc4/jLTjF4eTVTF5dxUJZLlLUUSc0saKFX813Fda8SKwRQ1tbsdLEkEj0kU1kypoCmWgyB7r0OwHCjbNYVyBYzAz3afoczX1x364IAGOiwvo5nX5QUgxEr4q3Z0l+3pyzfuX+CZbdD+cKuAKugCvgChx2BRwAH/Ym8BNwBVwBV8AVmOoKfGbD1qVRL7+1TrK5uTouAU0Y2ii4teW15uSFw44fhO2BmYvAwd2rjks85ALi8JJZAnkwUvGSXHJ5Ylt6QK46YwU9+H43Gh6+bMHSU25bEYb5VNd6ulzftVvXn0jU9UoqpvYmqu43owD5SATukd8b67bBYJo+Bi+v9DHQQ8ASi4bYVzHrb4iEwMv6mzl9+0u70T/F1QeXII7Jkxr4DGdCSPZvUlCIRFWNkRv508lQ8sELTjjjgenSRgfrOtds3twuwh9dSBD4A1naWkapC2GuE0YM6gbGBCyvx6vWiaZmabw5s9Xp3aww0N8bQEaNSAFnFvEhbWxRIjwmKWTjaFWNBGAAiNzyMix6ve4dcSt+zzlLzllD28pA5q/DrkC94Sut7b3uc/I6fFunDC6i74njEjLukm+cUh7E5W0Z0CVNIHL70heLTOvoBBL1Kzh++ZcM/+X3BowBgHmMsCgS+h7jYnADKwQwLjRwl7frx0XwPjkKSYvGWV/TbSwKqdJih/ZZ679NmAkBYOyHHcCA1nSVeZAFeRE4AD7sPdFPwBVwBVwBV+BwKeAA+HAp78d1BVwBV8AVmDYK/Ovd20aSsntLkLWOBpgp1H3H2YqakWpLV+HoE5BmgE4KPtlyb3Na4SGc8xUpLsIeprFkG+CXKqXXda+TR2n2tTxrXfb6RSfeM23EnuIXiqXb125fvzzIw/emZfWqOonaPcAR6ktAODwpAICCCAZMBCjgA9jjJdUGXwb+C5DZima86krtfX5Wlsh9Ehme1OnYkYdX4zxVCAkImHB2AMGknEJo8/qxOov//qih4EMr5y3fM8Wb55BdHrV7fPPW0ZeX3fKqNMl+nsgcJUMQ/iKd8T9uC3b/6wSR/g6uXoZmcHWr8zemTHFza/NSec55kBUG6EN9pyXGIMlwblYc6LjEUTVSJk4BNPUL9DGcB9nQizzfGKbh5ScEJ1w3MjLSPWTC+I5/pgL1unXZ9mDjwl5QvbGb12+hNl1CjJ+i6CtKCgHQpYKhWmRQ8nz3nXzk32F84DFE8n85MgbwXwEuFyXEhCYXL1UIjDPTDN/G4WuxMZigRP40VgnQeFUgfgKrDRQ3I8KEncXof4iWwPs8eGnGtXRa+pVMbAEEc+E3Gco41ga/T+j7scB3JV1nXlMhuLLePCvunTv8nF/d/jOF8w1cAVfAFXAFXIEppoAD4CnWoH45roAr4Aq4ApNPAQDgrOrdWqbxnKqO6WFWYRw9oJbI6MXS1maJtj3Q9p2+sixXCjzBOTxYCAoREE3OItxY9GBddzsoIfe1cEb69tcuWrSFPmc+4sknjp/RU1YA8PearfeeHefVVUkdnUvF3pKKqEte59wnGpcugzxCeQSAAekEvkh/AiDknzUKwH4G5GUnuRYZtJ81ILixogv0k8xfKxomgLBgp19EkQ+AOkGvRwwm2t6Lk48eNTP95CvnLn38KV+ob/hTFUD737z9jmeV48WVaZxelLRSMliXYV7lA0voLSdVgS7M4AzkZMLIXij8xk1II4XEyvSLbPHEElmJpfCW5KjKRzUbViekMLmAbSQTmAAc2Svxb0wC0D6rsT17H0qHs48eM/PoTyx3+D/hvRr95eFNnz92by+8pNetf5MaZRl9exyVJHSHYoJIHb84sUEAzCAVwJfbV6JdGPBSn6CihJwzjb7A/QmOcS1oyuMBtb3FxQhM7k8ocF8ZdKYD7NIcEYqc4lx4fAL0RV/jFS90ttQ/+TuPk3yx4kVXzphrGBNeMo8qjmRcCfqtOuO5qBzGPNoAJe4og399lnVfOuv0N/94whvED+gKuAKugCvgChxmBRwAH+YG8MO7Aq6AK+AKTH0FriYAXJXjt9Wt1mxiJPBRBik5qQzYQQHOSMSDtBbcweMuRz7QewZwGMFoZqc9ZJvTqQaAo4fmBA/EZbUlj8M3vX5k0XenvrrT4wq/Um9odR+oLgi7+XsJ3j07SOO4ZNMlgRj81xzKvgHk8fJsABPNjN4P+IqrThx93J+sDJs6gPcvy4a+alEPMgEhsFAKK+mCa0Ae2l1KkCWm04lLKvbW620o28mHZi048zMrw1Dswv46KAp884G1i8er7uVpkFyapMnMHhXwYh8wYjhCyz1VwEc/8/hC7/M4gvFB3b5NDA2WyxOEa2Ih4KhUVtx3/8JlKRMI6GuIiTW3pY1jgxmtDPIwXHXzx8os/Os4mfW3Lz3lrJ8cFAF8J/+tAgC/mwj8Bp3g5WUV/npVhS8mhjorpa8cgF0GvBQXg5etCLA5wmbCyFad0ASjrDCRSAV2mVtOMH0ejl3J2ZVTMhe6AVgDwjju4EQmTzKgh+j3Hfcshs4YtwQus7NXHb42BnG0TDO+ybQWO4m5QCEVPuUca7rGglzNWEnDYdj4kwSdOqH5jvrO44aHXxaOXPiEdyNXwBVwBVwBV2C6KeAAeLq1uF+vK+AKuAKuwIQrAABc153bqjSbXVAYqgFgfmCmP2AtcGvyz7p8tp9paFEQ4uCDo6lx9OH5WZe6ss+JqAzFAgRhGn27DtuXXLzk+Icn/GL9gAddget27BjO88d/Jdybv4vg71Jy/lJqJ+FeOPOo/QFjzeHJSNbALAp57R/5oPDvp0U+8EetiJNeBZxz4hwVhygDYIAZOhByYQFkMJkRwSkIB15Z52QCvpmiKd635KRlty8Pw95BF8R3GKzZdev87t76HXG3/v06iWdUlAtMkRC8BF9ygQWkAaDhxcge44eOL4lmtVq0jBFfc3jLhwTCmYMc4N+gMUM/jZzYPwYE4C3PuzCoY7yq8/HunjIOPxtHravOWbpiqzffoVNg27bvDHUe33EuMd63FVX00izLjqV1JvSlU4ZxQh5aLY4mfUJcvnhZzBCDe9zfWEPAbdwHwAC4uP8NADP4V4cwJh9gFx6MMJI+pI7gJioE++8XIURAL8c00HcX3OOYWQgVPtvn0Z8QU4Hjcf/V70mcP8eOaPA1Q2M41uEsJgDME1ZJyjESSDTu1DRlkgRfnzOruCg8+dLxQ9cKvmdXwBVwBVwBV2ByKuAAeHK2i5+VK+AKuAKuwBRSAEXg4m4+GrTac9gBzLmH8mBtbjwDwE02J1xXcObp8lo4qvAyh19By76RxYoXP+gqAI7pAHEruznLZl16/smzH51CMk7LS/nKQxuOGx/PfyfuVX9UR/XcOo7CKCWXG9iK5nai77BTkws1qbN3YLm/Cde4xs01rG+Ig1M+B4AyuJ050DFpgaXfZBTl0m+WCwxgTOyR4G9VJ2WwtxuF19VpeOXrF5xx37RssAm86P/cctfR4/X4b1ad8o/SVvvkXOJSCablsoSfHeESMQMojJe1bURL77m9AXlRCQyRD+gX9HsGbVr0S3JVNXcVH9CJKobDTNqo0B9NAFjRStoRg8OKAByAHk8Y0DZ1UeeU8/rlJIsue8nil2ygY5j3fAIVm7qH2rnz+hlPPDL+LJL+zcRQX0NW34UAv7QqRJ/1pMgbA1PqD+LWxkSORAqxA5jew2SORYXw3+rEBZjlCQT+HNq+H9cwuJJFJikF8kpMr41NGvGgp9MUOaX3peibjGgWSdPsBxFJvGLBHlnl+OYmtu8/I9lwJMv3qrqCGRhLbx6vkzoL80/OftbS3w7DFV4QdereDn5lroAr4Aq4Ak+igANg7xqugCvgCrgCrsAhVsAAcJ215sABHKUpUIw8yJpDUzNZ7eHWwLBUMSego6vtORMRjih6aJeYCHkDABiV3BOCxkRkvlENJW94/YIFjxziS/PdH0IFvrJ9w4LuePfPwqp4c5i2ZsP1C0gHCMfQn4sniUPcIEwD4hjC7JvHCZhnL4uI6MMbtQIqljMIxMxPYZFAGY2a4IJwcP1S9AP9quoVj5VD6T/E7aG/vvj4Je48P4T9YnDXazZvbhf1o68hZ+dVcZqcRu7riIYYhnoG1GSJPmAfjTkAcvQ3slgBhxuAhnZGFisBYCnOJUfhyAdzjdPPyC8Hi4MTGFAZmasSHSH74n+ye5QmojB5pSsWEA5S9cqSwOAdYRb+ny9e9OLvTJBEU/owiHu4774vnVZ0il8vivD17Va2KIzKDI5fQFFMFXERQIp8wP0LB7AAYJlE4iJwaDTNzAXo5b6hE0j2oBhqRjTvy76MaP8W48CTAegfyJRmp7AVJJT8YHtZpINl/tr3HPoMT2Jh0pOLoCI/hL73NHOcJyU4ekL7Jf+73+9wrZIZLOdXlpJHDVKNuY46TINunVAAcvftw2f80sdpfzrgTenu4RfnCrgCroAr4Arso4ADYO8QroAr4Aq4Aq7AIVbgc/dtWVJ1y9srAsAVua7wOAzYwm4sdVxW6thDKIQ+S/eX2vIvFOLokm6uik4vA3h4no3p4T2mB984S7+Vt+LXOgA+xA17iHZP8CX80kP3nZ53iivaVfDGKo5TKfZW8VJpOL9RpIvbXx12gw7PBrYoGGZMgiJg6HfszxP3sAAVg4AKVuh9FGayJeH4nLjvBMA02bAAzyjghGpzRb6zTJK/CaOZ//C6xYsfO0Sy+G6fRAFAwBu23XlO2cnf34rTFxcUBsGREOoTtxxfGSvQhgLJ0BMwKYCu1OT4DmAxBv9Yko/PWSYspprgFDZnKGdMC0AcBIfoYTxB0RPgiOPi/aSi4nDdsbXxUPwn7VPa31rhTsxn1K/R5ps23XBs1em+opvXv5PE2QupmFpGLUoNQuZWvVENAFuzJuq2tRgFOHzxsvexjmBw/MCkIq8PUIgrAFdyx9k0jMJuNCFlRUotcgRAmPOEBycZMMmpLFgmOiUCiY+PInPsKpYxCQ52+3wTQ4LCcJppjs8D8CJ6ooHVmBQD8KU+3Z/YwkFokgIZwGE6Pjvac8HQGW/+5jMS3T/kCrgCroAr4Aoc4Qo4AD7CG9BP3xVwBVwBV2DyK8AO4E4xWlMERAGHHbuZxLUJAIy/C3vAbqqui9NOoiHgyFPHMD0W48UgUCELO/zo3yltGtHS6yhLvhu009e8+sQTvdL55O8e+5whwM51D258QdXNr6JYhfOIcmSU7coVuDhnk+CvODrNQS5OTHMBG5wb3CkyexmyMLExR2+f9DFAUYe58B9AFFkhHSIagJdTU+4wRUAAsGTstCNgk9MZVdX9dSv785lDx35x1fz5e48wuafM6WLS4PoH7zwr7JZ/TkUgXxWkSasIS4pkpfGGppxkmb3l+cLBK5eOrsXtrE5yy4CVXGlZoYAhiHkiUht0AqrvEJexTGIBJBICIA9RxICCKeW7oq+gT+EcUtqoyqug2+lsS9vJZWcvOfsz7sZ8et1w8+Y17Xx87zmU9vM2ui9XUirMXLoRaYoIDaz3rd7PWBky6ObnqRw4bQ3gN3/D20/glE8FszrI+6ZJAmrSPhSWTGC8MAHJYw7e578xRmCsENc4Q1j6MBy+4ujFwCIdY5/VBQqqBSCjv2k8Bf0MLG2Z5DyZoOOPqcVgWPuxTXIYIDYITHNnVJUyC3plRH+lP2yFe86fsexNO56e4r61K+AKuAKugCswNRRwADw12tGvwhVwBVwBV2ASK/CvVAQuzbu3BUPDVARO4AgygAW22HJbAXIUparuJQEqg8v78b4VeZJtC3oApvxOuIPpD9xeMYrqZMmt4VBy0YUnnPCjSSyLn9p+CozWdfrQto0rq/HuB8I4+vkgjSmqFVSfIA5lLYg3TzMumwmB/XZiAEWLfpHVHD2FNxLwornR6uiE83zQQQfGzH0LmdJN7iacorSkmiAMXHkRLbMO8oJWjtf31sOtK05ZcMaXVpBB2Rv08CuwZjMVhyuCK6gg368l7WQmggB6Za/JbjXnLncrJrUW/SFwHy8BdjLRgPbmdGkFxJYh23cA96NGZHtCcLQbyvvt9x/NIQbrA+BjR2lR10Webw/a0Z/NGGp/fsWJK8YOv3qT+wzqejTduHHXSK9T/yqtJLk0TbJFGd2UFUFfANiqpnaGQ3bgfrd83aa96D7m+5qaGE5/yfwVh7eNERL5Ipm/SZjohJPCYc7sBXgV562tCMBKAQayNDTAESxxMf2JAe5qmL/SCUxxBku+L8NbwGfrHzwm0QQTP6XS+9xHOSuJhzLkFit55nO270hezaDu9CIX5zllY1PERULxD2kxFHb+auazw8vD8NJ+JsXkbnI/O1fAFXAFXAFX4KAq4AD4oMrpO3MFXAFXwBVwBf6rAlcTAK6K3m1Be2h2RQAE7rpUi++QPUmcvroUN9IiSuyqU4jXL5KD52ABM3ivH/8gLuGIoAsygNMsvT0NsgtXnTp/l7fHkaHAdTt2DBfdxy8N8+oymhw4lVy/MeH9IE4zhmkWyWBgTtpeIIy5OIXgYIk2LJt9YAyADLhiAJhzpzmIBJMR/UkGdg8rAIbb2Ao+YTvAGHwuBSzKy6ooercmw8OXzVyw7Nsrw1DySPw1KRRYs2P02E63eltShm+nsWM+nMAl3LuAdurApAkGPtcmY1UBngFeTClx8Tc4OGlT6TuW69ofr+yC8basaIAJWPsO/qX5w5YVy05gBYNpktT5WPFoEVf/86SReR8bCUe6k0LASXgS5Pqd3xkbu7go6t+IkuysLI2GGcoTveV4BotQAK7nf6tTF0X89N9NlILGCQkUptagNraIB2QC2woD+VsmfWSsQVwITTOq2xsTkHB3I4qBgS8cwFZckPNFLLaIWp2AM4NazH7SyzKFLYKCXeo0c4DjIXbCzoeczU2/4r5pk1JSaU7ORSEynwNgMr4fwYLhYKbz7daUPx0m29pB93VznvPLd0zC5vVTcgVcAVfAFXAFJkQBB8ATIrMfxBVwBVwBV2A6K3DNPdtPq+rurWWcEQCmJ2G4f/UhPChRoVzSOuUBXZWCywpQpimgI0tjOfkBj+O8LLsPgbEt1fkhANwlAJzdUUbtCy9ecrwX4zoCOt6Nj26a/fjj+VuiTv7uOI3mV0mKxdzcK9DOjSPPluJrX7Flzsx3tDgTim7hBWgM6guM17w4V7Nf4AkFvfASB17feW5QhR114Ib0Plx9lPlbJ2XRIdf5N8okvPK1C868zZfvT84ONkpu0UceqN5KFvJ3h0l8chVVyJDm0ldN3q/mAEseq04skUOUs54B4vA3DTjcH2x80nxVzBMw8NXQAPRF+ZzA4aZPWbqIOo3tWIgYgbsU6yB6nfyJKqn+nyQ66v8+d+R5vmpBuxRiPdavv3luVfVeUOTFW+MkW0mTQ7MJpuKODa2AGn9P0GcE0Mr9joigplhb85Wi+brYllYUCLDv54Bz3BC1P142wchjD4FcgcBNtDAXGbQICA6P0D7En1UXrmSGY/JJxhlOstHvt8FMYYmw0T6j45jEj4hDuMkpBwDGiMbRD7I9T0tYjAXOj0+AIpX4i5ImG9IhuH9p4/Lq45Yf/eYwXOmTVZNzyPKzcgVcAVfAFZgABRwAT4DIfghXwBVwBVyB6a3A1Zu2jdSd3m1VQgAY7jeCK6gBx646LeKFJJZ/VgAAIABJREFUB2LGwASI4f6Vkl30AKzLedmrx3RFnV3sxtMCXrA70WeQ9xjm4xT/27qziNsXOACe/P3uy5vXze8U4TvCsvytKg6OqeMkjFPK21UrrlS0J8AjXLfpL5YBbOAWkAZFtuxVw/WLHzX31d6CEZR3g7cGwIlladpSfynEJBnVDF0o7yHMi26Vpp+iaIGPvGreyGaHv5O7f43uGB1+tBeuqvPeVVGSLA85gBdji0BdiYCQYm14MZSzSAigWYbCRZBR/rMtrwfMY8CnrksAR/zMrkt1jRv85X0i/oH+NlDMv+OnD4KG1K9TCq4BBC6KvEtD278MDWeXv3DBCx+Z3Moe+rPbtu07Q7t3735+rzv+m1Gc/QK1xXxqhpjag3g+ZSlz4TVy+Rsw1WKOmCFEe9q4YPDUzjjBBCSc4EhRAESl/oBJJoG2Ao25XXgC0nLnJabBHL3WL9gXTA5gW40gfUgyf5sJJepPifYz7gdaSBL9inuBZgZLEUsrSCmPpwKB8dVGOLqAw5gmODmuAv1PADDl0OwDujFzhmMAANdhShdJ+b9xq5OG3bccc+Yl/37oW86P4Aq4Aq6AK+AKTF4FHABP3rbxM3MFXAFXwBWYIgogAqIuO6N11p4FbMs+JuS6WuyDLonmy+UltvogTNtwlXVaYtu4oCxDUSGOPHDLw3qMWIg8D1ppsrabzrjgkkXHPTRFJJxylwF335e233fieKe4LC3q36yzeBgOTQLA4q4jiEEsmIsuMYhRBcyJCSDMGdBKbptiTArmAHdy6gupwj0T0JaBW/SD9UFzhaI4FMMX9DuCexQjEMQ4fFHurNL4H6t26+MXH7/EneVHSI+k9o1u2Dr6CooWeV+axD9fEQkuqjzEBJM4dgXQMZCDw5KbHzE1stTAnMBwY0rG62CeNByhCpIV2HHfsT40sDzfVjJgH5jc4MkHhs1YDYHJK8QHFF1ykn4unJG+92ULzt40HScYdu68fsYjj5Sn9fLi10ibi7O0tTCKaWqIcCbFrjQF2TIqbGaTQAJPdUJHJwjtPYts4IxdOPmtzJs5aJtVAARZadwxoA9nsCxH6UNZg81NJIQCaCvyxhnQEtzL8wjcxvQ3nL/cx7AqgfYrTmCB1+hfcu5yfk1MxUAmsUxsYeqUFNGICbMSI4uYj6fRIuwOpl8BAIfxUFDFbfTY79I+3jx3+au3HiG3rZ+mK+AKuAKugCtwSBRwAHxIZPWdugKugCvgCrgCfQVWr7//dCqcdSsAMGrfhFSYi11y9EBsS68Tzf7l9zXDdTCDFXsTAKPuqAbQ2NJZengH1CFIkCXp2l52lAPgSdwJr96yYXnY7V4VFtUFBFaHaiInOectoCiTQH0uAjgAgMUBTr9jZqIQjX5g8IK8yya/UzI78WIT8ACIMzi3f/bvoFQMYqjQGxUSAwAmz2C9vUyT9yXp7E+vmj9/7ySW1U/tpyhAbR7f9NAdp5Xj+QeSOrmI8n+zkiIAuBcpQIuJ1AHEgpYJhBMAHNFYJX1GYgCKgsYZmlQwEIzVCpwVzJ8hiKi5r+Ykt4kFy5y2ccwmtCyCgLo73Kh1nVdlFdXfjOP0XeeOnD1t8lrrek2yfv3YkvFu9Wt0h78hCtNT0ixsU7uQKOKWLVDMT7UmfTgiwSYS+fsEQNUywJv7X8YTLiQJWI/Pw7GtANjcvGKsJQewhsbge0Ymm3TqScGuFG/D7vpgmPer27HjWzOHsZ0cU1zBNSasdMWLxRcBAMv4ZS5k9CUt+MYxSTh/9EXpf5Rk0gffmBYbAMAcacE5wXAgh0GHOhIB4Mfacf4HR5/5xs/Q+7r+wYcJV8AVcAVcAVdgeirgAHh6trtftSvgCrgCrsAEKnDNfQ+cUefFLVXankkL6Qn8opK6Op/UmdU4MRX4ceEuAD9YqXS5Lz1Z88O7bSsERx3AQc7uq7hH2ZpZsjaMhs9/1eJ5OyfwMv1QT0GBNRSj++iWe86qO9WHszB4eR5HtCqbliwDyDA4EccvgIplXFohLfl5/yXXAuDM4QcAJC8CMaAq5JhjOGTF3hSBmMucN6XjGyTGsQgtMUgJeuTVzKt1wcz2VbNPOv0LK73Y21No4cm7yfUPrF0c1L0rg7x6HWVNH8UDBo0zOS35Z1emQkSDjLgSxAGYwxNGTPQ2g3o8DgG4ISdWnaT4jEQHaNEvnXxA/8SLHZrqaOeCXpppjvfYxY5+R+v6y6pcG2Xpn1ZLX/wfU7nf1ZTV/MONuxb2OuXrSeo3pnHrWTT506b7XwzQ9Kcp0MaQXoAuhgrRWcYDjlLgTGeLBVKQT/pKJIdmAnPBt75rG5EROA5nymskxOCqgCaDV7+PcEo2HsmqEx2nNNLBeDG3J52jOMptUgETWpxWzOCWi1HSzxYhYVEP6Dx8LRxHkTfvox9yZAX9joctvdU4CoL2yeeDXdNkao+YeaeOaW4tun7+CUe/MZy/yieuJu/Q5GfmCrgCroArMEEKOACeIKH9MK6AK+AKuALTV4Gr792xLCzGbi3ibCYe4SNyb1Gkar9oUuPmJTiiQISL2wD2gf8CsIAF46FXIU0DBRm04P8KWt5L25JDLyUAHDgAnnQdDsvxP3f/PefHvepDcRQtL1MiFUkcUh1AcvcJoKFN5LyRbYmF3+gHCv3NWdePD4ELWDIvGeKoA1D6hoAZw8G2WysCR4htHxCEAlDYPgZIAoTrwgIc3l634/e85sQzvk7vDaC6SSetn9BTVODbO9fO2zPW+0NakfC7aSs9uqIBBXAQoNdeDNKI3nH/YYBHy/UBCAEdqX9wxiv3NYmFAAS2DGkxb6LvKRS2jFqLKbAICYxV7GgHtJSX7IuKWeI+yOu60xlfn7Rbl5176ku+PBX737p1X5s7XhP4raLfIrJ+ZpYmM2PWlOBvk/mikSyaz2tAlccK/X4woMt/Y3NorVnOAMY8cYTcX41kaGIW0AYKcM0Jjs/j4bDJ1lX3t7WvAX/O+GVjsfQBIGYbf9CWDK1pA7h2uR/pJAEAsE0+4fzhALeL5b8lkLiZUOB9A4JrbnREkTQWB8Euc1wnTWDJkInYGkLS9GecDp9X8eNzWt3fnvPs3/Ds36c4PvhmroAr4Aq4AlNbAQfAU7t9/epcAVfAFXAFJoEC19y344woH78FALhHD7hxkhL3oAdbfUjnWuaa94s0zMEXXFEMANmh1QfE5vgEQOGogAAAGEXgekFKERBJNuOC8z0DeBK0vpzCtT9aPzN/Iroo6HT/Iknj06oojmqqBAiQ0sOy+lQgBgcuMHRRZ6U5xPGeuif3dQL3f8+xEOz4A3jRfsTuXiztFiBc6MRDpTMNkueJz8BdTkWWEAKcVzm5Qm9KhluXX3TSaXeJFdFfU0WBGx8dnV3vrt5C8R5/REvsF1LBwJianFcaAJ5Jf8HEE/2fjVHa99Cv9u8OHOegEw6YpZJYAQPK4vhExjDDPI0oAHCWbHOMbwoRNYIAOmOii+IEKBKi3kkVz/5ieEb731acuGJsKrQBXL933fOTn+/Vxe9ROu6r4jg6mjQPURgUABwObAaeGsuBa+bxX+9ChrQ8ESgRQgx2jQxjRQigKz6j7mtzCku72HihxwE0ppUC4saltkAxSRqLcCjOIh9whjOIpWaViSgBynYs2pBOXV3enGmvjmM9D2tTPgG8NFKCr0knB0L0Gfp+ZJc4/U6SoeW87PsuQkFMBs79rOnmHHncpNUU5APuVnE+FBb/2h4K3jXr9Df/eCr0G78GV8AVcAVcAVfgQBVwAHygCvrnXQFXwBVwBVyBn6HAFzZsOTPo5t8rKQIi5/Lr9IBND8AJP8TjyRvURJ7uUaZHHJyyUzir8AIoFGeeZHLy1nhwVgBcl+T8pVzPMC8CcpKtDVOPgJgsHXP1rl1HhU88+o642317HcfHhq0W7LRYzcygjB2VWuat1sgGA8AAZeYE5ibnAGDAEXLcKdSV3+tSanX2GgDGMcBr4NaUfmQdS/obuh3cnhw/XJZ1lNd7yZm8Oo3SD124cGTTZNHQz+PgKrBm8+Z2Ef94VdCtryRX+Fk1ImUB5XSFgUA5OEnh3tSxSKMGBpf+W0SEQeC+n9eyyfH3wLnTeCfu4P64xg5RIoHIF25hcgw5wtQx2R1KGdT5eP7jsJ187Ng5cz62fN7yPQdXiYndG2kX3v7DL19YFcl7sqGhFXTpFAhPATAcdQAHrDprAWEBZ/V+NQBs0NVWBdh9zysAkCmvjl/O6FUnLUck0P4B3CUVHOOOZDlXhQBVy+A1NbA/jDto1/6xJIJCxhtdccARROIIx58sTdlNDoSMz9GQEqT0uzzvMjiWqJGBySyF2nADM0xmQy9BXJqQYNBM/U8mQG2SQKIj+BzoDx+L3dD0M/WdiibQuiUNr1X5nzOz6G2zl1+6cWJb2I/mCrgCroAr4ApMXgUcAE/etvEzcwVcAVfAFZgiClxz99ZnhUH+nSJpzaTlvpxRCMDHS/l5bXW/Ng3ZQsUBypxYgIA5gOXJXbM6B3IcSzws0/5S7IqKwNED99owaXsG8CToP1/YuPFkclf+adjt/UbUTmeR85dMvgRktP3YtKbwl/+l7j77XeP61QxOy+dslnQrXbN4CMAzgBTLCo5owoDhjLnsFBTDUwcHOoCdZP7SD1X1kyKOPz6zPfcjK+fNO6JB2yRo+kl/CtSX4q9vu/MlYa94bxTFL6YZpBYFg1DMeD92gBGkEbeBK8KEE14oEifhNPT/NPkkDFnzIuh36ImSQTsANwH4CDyigBwVpGO3aOPqpN9zQUONFABwpD9Eh4NOEZX/ELWDvzxn4Tk7Jr24T3KCKPb2nTv2XDHcmvXHURrMZNBJuSsokEY0k+9HiW6xbFzZEe5hBqg2XsCtzS5+2d7awDKW8TOajRJmNN7DgjbsxAyo7usUBoFNGNBr1rhGQJhjF8C4cR2zK7wfHcKfU6c3omm4f7AbGN9ngLsaQ6GngvNr3qdt1fUtkQ+68sEyh/nzuE6eQJB9sj8Y5wlnMx27ChP6Ok3JiByuS+runxx/1i/ddKT2Ez9vV8AVcAVcAVfgUCjgAPhQqOr7dAVcAVfAFXAFBhS4ev22s5K6/HYvio8qkGEI2xfcWD+lKDmWSMsDsz7owg0HB5c+PAMQw3FVoKI6HoK1mBwQS4JMRXJ6UW0ndwBPgh543aZNC3t550N1VV2StFqtAoZGdnsTyFHXrzl+m1zMAQAsoAMXIkBEsn4JhKA4EoEjAyJcLIn2y+9TdK8AIXqZQxz9RyGzLd9H30nh/MOEAmx6RbUjGEr/r9Zw+s+vnLv08Ukgn5/CBChA/SC6eeudy8Kqek9chm+gWJKUJhfYnb7PSgN0J3UHN7msnCkrGa4GjS3CgGtXoj8OuNQtg5Z7NPdzjTbQz8P5KZMSiH+w4l+MRBkCF91ivAyrLyTD0V+8+OQX3/9UoknguN1fxqfyuUMp/fc3fPO5vd2df2rNGHpuReUfcS8nRHbhZsX1JzRByBM5NEYMxjiwe1bHB8L0jTNXgKyOD3TiAov7BdgASZsicRwDIe5u/hwdBy/8DsdDHAS3Jf2end82UcWjkEQ08DoChbBQVyJDBNDSxTTjVJFLjjleEj8BACzbcrwF/Q6ZvYDKWAmBz6d6zZhg6Ged63CGY+r3ofQhyTzGqoic/qZvvioMk3WttLz82Kq+IVx+ae9QtqPv2xVwBVwBV8AVONIUcAB8pLWYn68r4Aq4Aq7AEafA1RseWh7n49/L4/Qoft6mB9bm4d4eZNUVBfzBL3Ns6nJXBof0ismvyQ/SA9/gvC8UT8IDeq8TZFlrbZmkqy5ecvzDR5xYU+CEAdU+t2Xjc6Je/r64qH+xypKsJqcjrWZnyIOWlOXYfffd/v+2nxuHMPUHBjIcAaG5mNQHrMiS5XWmHCEi7kzbDv2jAcAAbLq0OyF8kiBntay3kiv5g0edcsYnV4ZUTdBf006BG3eMLgw61bvronpTkmZzqGsQ2xXYJ8DQlv0rzLNsamTGkvsS/QtJIhEBQo6w0QgAeIBlrEPRuP7S//0F5m4NoGwrHhQkAvKhKFwTB1CQx7TMvxUl4XuHTh369opwBYUX8/0Q3fXwXUO79+4+Jq7iY8uonE9j4nw6/aNprzNokxYnblc1QcF6N82SPUTnsz3Ksh9lYfF42p79xFnHnzVOELK/HOMQ9QJkAN9572O/Htbp/yTYfrREQAjwxP3M16oTOhXNzciNLNAVfmj+kd2w6tIdKMIHwJrq2IJM3aZYKFabcKSEjB/mKDZwzNBX88GxmmTwfZtQatqAi5aKm3fwhZ8zakiMcbUWEZScYlnNIv2CrsBWIfCXIY1r3Lfwz767l2zoEonB7+mXHeImMNmF/TcZw9h5UudlTGsYqg1ZnF953LN++bMT0Y6HqHv4bl0BV8AVcAVcgUOmgAPgQyat79gVcAVcAVfAFRAFrr53x7K4HL81pyJwiIAwB7BkJYqrE0W5CGpwpm/zgE7P6oNLYPk9xRMAws2DMX2AXL/wyAURIiCS9PtFkp7vAHjieyCW1V+zZdO5Qafz/qwOX0g0Ps7ZwijL4NnlhyXecMTtd3oGVMxd13fNSVwIO311KTj3Eeouzer8ZsJAARH1J3PICciTbRkyAc6QU5hOBkGh68pW+/KjT0pvWhku7ky8Yn7EyaLALdvvOWZPufetdbd4d5y1GALLxIE4N/GCWZyB7sAEFSfVoC8iboD6FYAwr1ookOOKonGAwjRBRf82sGhgkneKfbEdWByduEfw4mxqvA3wiUkMFI4jgFgVVZnnvfvjVvp3WRB/FdtQzMrz6db4BXLbP4c2P5b2MxyFUYvtoZIooc88CKYlH2lV9QiJdggo7ibQ+AgtzFhHp/cdcqB+e3jx0ZuXh8sPqXt006YbZz8ylv95UMW/m7XTYTodBbTixOXCoHjRTB+v9ODIBwWkOnDw7/WqLIeXgaoBU77n1eGL7wZ2/A4AVdZWxxXSltsVQJ/duv1xip3gA6yXnb5s4e67h3l8QXMx1O23G35X0HcSr1Sh7VHnTSIu6FjsKLa27k8OWLE7Hg8x8dWsikDigxyT2pm+M+E6jgKCv2WcRGuTuPzQvBnzvhwuXunj2GQZVPw8XAFXwBVwBSaVAg6AJ1Vz+Mm4Aq6AK+AKTEUFGADn47eWSTYTQQ1YHh3SkzuDPgIq/GBuT726lLYpBGcP/QpCsD1eKAFmS7LxeRRRYgBMS6cZAMeZA+AJ7kworPWTovvqqFdcScRjGa1nJgZFcR2AOcQ/Ci7uB/ghLkoADmQBK+fRs+273cBxxAnXzwyWtu8745Dta2AI78FBydtQX+Cl2jqhgH9jeTX2lxIFjnLCaVW1Nmhn73r1SaevOdzL4ie4qfxwT6IA+nAePvKrYV5elmbpEjA29DEU8eKOywkmBHhjcbCXlPsbK4WUPg3YK7ARfRG9WSY0bMJKQKYl0lq0iRST44PJ/aDRAxZNYMdiFyoxQwK3ZPAtO+R23drLexF97gRyLg+Tz5QOR1jTjLzqKrXJMr6XcCwASLiLyS1LlmLcJXWRF106941VVN+YJOnVNKKue9HIi544VJ3l7ru/dsLeovxE2mpfQBdFnJMuDBEHGp8xGPHDmd0Wu6DaYLu+C9eKoxFabYr2iaMaijZjhO6Ds3P134PfI+Y0biapDPjTFxRZbDG40K5qGLbRWDzkIBwCbc4a63hmKxPkHLHqoX88O5eEgbMsOLDr4/RjBs794nM2ESBO4f73JjUbGdbjLmVJ3xpn1YdPODO4MQwv7YcSH6qG8/26Aq6AK+AKuAJHqAIOgI/QhvPTdgVcAVfAFThyFLjmnu2nRWXvNioCNwsLXvmR3BxdTaajmOBQHKnJ9dXMQzjr8OzND9iNA1iec5vlufSknaJSOjuAYwLAbQfAE9hFrt+5c8aesSf+j7iT/3GSpqcUgFCJurmB69WFa6fEDjp9mRNYYj3kP81kPgCgTF12DTJjnNNEgEhWqy4F1/2Js1wjIxiogN2Rs5DccgmAEFkz87JaE8/ILnvNiWfeRafq0GQC+8pkP9S6el22Y9vYBXWv+gB1mzMSmjnIg14TJ4AJCIkwkXxegZDqzEQBN9BUApkpsmw59xX9VSctmuJgCiX3KzBn4JCSHprjQa9BF6iBT8rEbWqQccyADoZ8PxAF5egKzay1/GyLBGYIqbcgT6BhHMb6C3Yg1znB5Z1lUH4tzuJPvGDJS75Puz7o0SgAqd+/72sXlN3oU1Sr8WicLN2b3D34nADRDXgOAOD9+w9n6rL+gOMG2uEElkgJe9hTeiv71GgPg7ENDFb4jDaO45Rc3Oz+JUNw+USSJmsJvO8kB/axBF/PitP4GGrokBauEGfOWW/0Cxl/gHItOkSKxVmkA49s6DMa8yATAj/lkVQnzJpz5O9KibCgLH1K8wgep+zkL2Vx+FfHnXnMD8Jw5UFvo8l+r/r5uQKugCvgCrgCT0cBB8BPRy3f1hVwBVwBV8AVeAYKGACmCIhZ8JqhiFf/gVv/DXjLTk+rzi7FlfDi2ACzdenxrWgYlsDi33jYZwCckwM4hQPYIyCeQVM9o49cs3HjPKqi9gdxr/f2mMJEKyJTqPXX5DQPLN8Wx69AXHG0wfcHGGKeyEEHZB+iAIjxDAGgm+Zgou0ZpgC4AbLxDxL9ACAkRaPkby4qRVSHwoj3FGnwhTpMr3rdwpFNz+iC/UNTXgHAyZu33Pqiqlu+P4mScykXAPW6wi7FOoDBsRMX/Vf7rY1bPL2l/U7+1r5Jf1uWsIBNkdAgLIAjoCTHPFg+9oDKVhwTULHJtVVYafeRRBXImCnnJ1C0/3tMv0kkhbxkcsT2h/kag5HkEKZbhkzGRb6pSoK/i+PW6ucvev7DB9spv3bn9TO6u8oPEFL/nTiuWlFFQBWuZBoVLJKBAagA7v6ggjQgztTttwX/TMAb9zvGF+iJoAUeFlgX+a7BdwWIt12rjB1afBQrBFLKmadhBPkwBIAfI5G+H8X1Z+M0+8qMGdUj4+O0kqUz9vK6ii6lHb2QnNsY//hrjccaEGOeyJQ+YgUrObdXJzz5HPTFxuKBCTHrW5wJ3OQCU1+K07pAkcsgHO/mvU2tNPz0UDv41DEjl2yf8jekX6Ar4Aq4Aq6AK3AQFHAAfBBE9F24Aq6AK+AKuAL/nQLXrn/w9KDs3QoHcEEP6FyKR6utw6TGmaz6QG6Pxeb8MmhiMNHAMbtA2UGlMIUerhEBEfR6QbvdvpMA8AWeAXzo++V1mzYt7Pa6VyR19UtJuz2T4h64eBbai6GWLblmBx/lmA4AYIYxDGewRFoAjEHdhlFx5i853tBrNDbCMjaFm9D/wSHOhQHF5WsAGC5jAkoUOoIdlPR2/UiVpX8z1Er//sITRn506NXxIxzJCgAC/8eWO5bleX45VTB8XUpZtWS8RB0v7mvmsOU+zk50uGoxUSGjGLKAOfMXXlB1AnO+7UAkhIBC3BfqXNWsYRsHzf0J5y5cojHtuwHAvCICRFFcxoCdBnf78QbiGDWHsoFkW4HBRdG0MCK2QmauuUxrhqlUYKzX3U2j7S3ERd//vMUv+dbBhsB33rNmUa83/mlaOfBCuGl5Sgga0d8AphyB0ATjagSC6mB5v6CviAdqXM2a3QwILJqom5iBqkJhRE4QwBfgKn9zhAc1Mq1EGSeoO0ru708nWfrVxYvnPxQO5CKT3vGWe66fV4TlqrxTvSVOkue2hrKjcDhqIxn9KBZCxiJtF2onLhhIMUV48YSnZg9zC2kf4XbgKCTEN2MbmuIEsw6TcYq22RBH1Q3Uap8Ljhn64fz5q/YeyfeYn7sr4Aq4Aq6AKzCRCjgAnki1/ViugCvgCrgC01IBOIDDundbRQ5gyixEAPBA9S55tseDvDk72SMK9xw5qKxoWPMQrS43re3DURJsDEPGIsG+uNdlAJyEyfmrTp2/a1oKPgEXDTj2+S1blhWdsfdmZf26oJ2m5QAZQm6qZDvv+59a5lA0FzAKLrFjDpiEl0LLS7x9faAF4IY+gQkDXnavu4V7eF/ILMutOTuVts+InMQlkE64LU/jjxzVOvp/r5o/36HJBPSRqXKI72xbN3cs33NZUoS/FWbZ0VUEf2oN5igTHeiU1m85/9dyfvvQ0cY2OD2lAKKtdOirxP2fBkO+HwAOaT8WDYDuzmMi9WcGhRodYY5SBsW0DY2Ysn/AUFiWdQKmcSNrrADIKuqJEeDd545r9kfHbsZe2jCq06rode+ts+jD8dz02hcdc/CygTGW3P7D6/8wCJO/pInAtKY4BZsABPA2YM6g1qS2nF/OXO4XBO1HyUtBPR5JdAyCIde2NVc0pYE3ABiBGUGVPlGU+booqq7Jwvi6JWe88n76/JNGxAAEb9789QVRp/NK+vZ5bV1HzyagfxxFNLcS+lLjtqzIHazjl7iNZXzCaxDYW0/gYZTmMnmutBd0actHi6DYkIXBTWkW3VDPDNedeOKrx6bK/eXX4Qq4Aq6AK+AKTJQCDoAnSmk/jivgCrgCrsC0VeDqTdtGok5vNI/TWUGdkts3YQedudsAOdgpZ7CCAy11Sf9AgqMAElkGbHBCshoFIkb01JzSEm0qYPT9MvEIiEPV4VYT9Ii3bnpROdZ7b1zW58btLCupEQFjBx1t5J5rirzhXPrwl9GHLMfWJdoGgJsl1IBZjeMXZEaLKBGKEcelAuFBxy8vubftqD/B/ZtXdZTEPyjT5N2nLzj968vDsHeodPH9Tl0F1vzkzjn14+Wbqfe8M0zjhWVIRcuQa02UcRDmgd0ZXOR+ioJtKPZF49Jgf8b4xvBPixY28A+GXuxTAbC9bwDYIoOt+GE/QlgiHzj2gOdOBAcPQkaOFFDoyGwUoBpwVyNVGLDCSYzzxYnT+0VBQJs+lUYpGVrpvPL6sTIuP9GKhz+0YumKxw9Wi991303nVmVsAAAgAElEQVRLunn5aQoLf34YlQzX8UrV3d+PzNBHtwEAbHrzJWFcsUgYdkVjnBGXNGuh1mrIw1buit2/1DyU7FsXP0zi6FPk+L2WhokHR0YupMp/T+1V16Pprs2PzR3r5meQpq+g2cvn0+TX6cS2jyVd20lU0lcX4f1+8Tl7BpXkGp4YoNGL3L7kBu+WefkT6gcb0ygYJZD8jaimMWzm0btOPvnF40/tjHwrV8AVcAVcAVfAFdhfAQfA3idcAVfAFXAFXIFDrMDqjbtOTXt7b8+jbBbhEI6AYJda49zSJcwUQinONVifCGQwiBDHHMCiAOBYl/vjoZk9WwGKxOFF5XeCujsOB7BnAB+iNr1ux47hsb1PXET2wSsItiyvI6LvGvmAnF5eiq7tYe0nLjfNJtXzMuebnaZEQxiy6jvj8Dt+T4EvlmyLY1icjgZPUOtKC1nRMmtsTv2I1u7TcdZWrfSy15502hr6d9+qeYj08d1OXQWo30U333/Hm+o8/4u03VpKEJYgME9lBQUc5zReoUcOLvE3AEwu0MbVypNdTdaNjG8cHWE5tLhbFBRaYTHECfAYR47dQRcrQ13cXwqiqUiZwFuFvwCg8hLQiwgIPr5BX743EZ+iDmONVeFCZk3WNjnpYxyXjk8gmCooduqooEzc9pUvXPTCzQejxaHtHffe8KYqj/6OhvhZBD/ZCMvAFqsJdAyIo1SjNqz4Xv/o+yRFcJyMuYAVquP7xrLGMVkUxnWV0/qAqtxRB91rs1b6qdNOO44K3q2QjIZn+IIr+MH1N8/pRcVS0vF0Ov3T6GyW0BGPp2JyM2sCwnRNnM2ByHJaBdGjuOU9tOJlF6HobXSxG5I6uq+Kkk2Lkvqh8GmA6Gd4yv4xV8AVcAVcAVdgWijgAHhaNLNfpCvgCrgCrsDhVOBaAsBlb+9oHbdm53BwkgO4KXQD/DAARwZdok3hHzwo29JpBcRYQi3L/AkIa4V18hUT9OsGWZY5AD4EDf6lLVuO3pN331p3u38YpsmJYYyyUUGQo02Qi6oObfydyFvNEmfLbLbIh0EAbO5f3p7BDeJANFNVgb8Vi+NcUgJtAMCDLxwzRfGoLjnA4QqnzkF7WlMm4btfu3DZnQ5/D0GHmIa7XFevy3ZsHX8BZUp/mPji2XGWxiUiIXQCo3Gw25imExYMYBNyxBNYxQtOVYbA6gTuF4uzbHN1rtrYpxE5yG0wJ7E4jMUJDwzNL71/msJuWiixyU6g+0ciFQT8WuSERapwvIrF7OB+RhIFJuv0iQkAmu3JlEmQ1/kXsnb0RysWnfvQwegK63/0rZm7d+39XBgmvxCERcgTSZpxjFgNBsJ2Is3latE9dQSbHhb9YKCd84Rx7hzBgAlFuoiq2lsU9X+2WvE/Dg0NfWPx4pWPHYzr2G9cioKNX00fDYJWHsbtoi4pMafKoiiJer08zCjxoiDqSxE13XBG0YmiuZ0FC2gQC142mKhzsE/L9+cKuAKugCvgCkxLBRwAT8tm94t2BVwBV8AVmEgFPr/h4aVhb+z2MmrP7gHakouLbLtNMR52oDG4kIJFcLCZI43q0AuAULBh4HAQFFt2ZlRRdmSeB61WywHwQW7g1Q9tOC7fW789LYq3E/SajaAFLvameaUMlehnOA65LYm8iLmwn9GLTGdb0m7xH/ufpgFgZJwC3vTbWfJUBy28JbW3uBnF/ctFsrCEutfrRHG8Jkhb73ntopG1A9HEB1kV3910VeDmHaPPC7rBR6iI27lkj80IARPD077PKxgkigQZszamsQMXhRDhrsVklcY/IElComxoxYMC3aYonPV4vo9iKXLIkx80jqJAWE6FxTDxQQUwJSOY7hHN394HmGpDDbp68SvckhyngziEgZxayR4mc786lbFPcy5zzAKOU5a9si4/3UqSdz5v5NyDUlTx9ntu+O26ij5GqzpaXNyuLIKYLP2FOqAbcN44m2WSiYvpYQUJjQcVxW3w9wRpKSsSJAuZdILROCiLcm+n19tE0UGro3br335u2flbfIyYrneyX7cr4Aq4Aq7AdFLAAfB0am2/VlfAFXAFXIHDogAAcNAZv72Ms9nMPMgBTO5RPZd+FrCdHBfx0sgAoBSGgOqAE/ea5G4CZrAbFEWRCBBkAJIUAZG1CQBTEbiLlxz/8GG54Cl20H/dsmVJ1Bt/Dy2WfkMdRzODNOXiRgy28AeuOnboiauRQZQCYM4YxTbsUuxncD6ZRP0icChQZevksfW+xeJwDAFpBMBA0OBWJCsyLeruFlH8L3ESf+TVp5z+gIOdKdYZJ8nlUJ8Pv7Hz+6cU3fwDdV6+oU7iFodBAEZibAJPpX8TspUVDur+BRAW0FvIfUPgMgGg1NgU6/I2/pmTFdEFfM9Z5EOIYnOEQ+GIJyjM4JMgMBy6XHiRHcESK9FMygwAapMRUyo8psIZTPesuX8NAAukrgLEuzBExbHonCVOgky0ed0jB/RHjo0WfHhkZOQpZ+Y+WTMiC7jXq79EB1gWJzWF4mKtB083SS48/SyxFjLe8BikY5HEReAaaHuNuuAoGN4OZ0sJznV5N+3183GYfn7u3LmbPFN3ktxQfhqugCvgCrgCrsAEKOAAeAJE9kO4Aq6AK+AKTG8FEAFBYHa0iLLZBUBdTIXgLIuRpUGQbz+rsg8Xxe/JS57tQV8dXVwkCS+CJ0QCGQCmcLAhAqKdfZ+CABwAH2C3AzH57JZ7F1W94P1JVRPkilrwCgJmNTmkaD1qOkAZjuTQXF78xT8rqKkIzAi0l1xnoGMGxQql+qcqecEMjQ3s6DYAWxQNyp/hKQJqd8CvlD6SUOJDkecP1a30H8tW/PHXzz911wFevn/cFfiZCnzzwVtP7nWqq6iI2BuSoewodE44dAuCsYMZ1RJh0++/MuxZpAFwrwBWQEwe72BghSt4wOnK29MbnIygkQ8Gd7E7Pobeb4C5gy9zG8NFLPeVjK0WrcPQVH9moKwTcPsWqWPCqlnbOHc4iNNgfHxsR9bKfm/FqS+97kCjVuh84tF7b/wTKs72viyLMhyQJwQB0XHCGoFh12ZZ8s21QiOZcZLrg4hB2Ot2OtujJPxCGkb/liRLfrh8+XIvBvkze7dv4Aq4Aq6AK+AKTC0FHABPrfb0q3EFXAFXwBWYhApwBvDY3tEyac2u2B1KDmDlExL7IEWI5KXV2nVpMn7DS3wZoIgvjR2/+ntxguFJn3JnOQN4PBgaan+/G8QOgA+wL1z9wIbnVp3eh6MwOq+KaEk2rcXuaSQHQG8BAAsHNgCsuhCtGVHqr2nRpm0FIPXjHwZALxev6gMmcfLJPtDuKLKFvxPLBKb+wbCsIMhc0oL5svdAMNx+Xyub9dlV8+fvPcBL94+7Ak9ZgTU7Ro8l1+o7gl75+2nWmk2OWDLmiiN3MKoGO8R9YmMa3wc0ERahAJz2dxnh6EfKZmB2OQA8xQRrrldxGZcFTXyh+BwX1aRCcep4NQDM46Y6ZQUC9yMp9nXQCoDGOAoArJshK1d1ELgsizFAp2XSDUU5kWBblMV92YzWm56/6MV3PmXhnmTDtRvWLOiO51+llRzL6ZposQiyjunauBicZYMPjiPyncBjBaIs8HUgVfHqoqh2VSUVeIuzT7Zas9YtW3bO7gM9P/+8K+AKuAKugCvgChyZCjgAPjLbzc/aFXAFXAFX4AhS4Oq7t40QpLutoAgIqmzDcINhBoMJAIl+siuKE6EwERb+8gt/AQDjkZ4hofzeIiA4dkCXXSeETOISGcCZA+AD6B+jdZ1ueGDD88JO7yNZlLy0SqIY/sCS+ZDGPWgxKV6ajVZU5y+3KFaq67bSxv2YD8tExfv2WXy+gb0Kjs3ZZy5hFNnCNigiZ4WqsEIc8LcoilvrNLxq1qLTb1oZ0tp4f7kCE6zAjY+Ozg4eD3637BZ/FKXJvCrtB+hyxi7dExZXw6emebtw8HJ/xkCH/F91uFPXVkewRt4g8xf5v1Rwke8Xep/vOYK6du9hJA1pfOR7SSNZcFyDoxxJoaC5Pwkj4y9ctnxaPNwOOPPNfY+CcQqA+fh0TeLwx/2IoIu4zoP8n+cenbxj2XEHDllvveemj6Vx+vtYXBBG4vTPaXWHvSwephmPcAY4V0vWyMvHyqr8VtpKPjmzFX596dJXPj7BXcIP5wq4Aq6AK+AKuAKTTAEHwJOsQfx0XAFXwBVwBaaeAteu23VqUY2NVj8FABuIAOBlWMhgse/+ZKBIoANGNClcjwJxAkEYVKhc+Iw4gLsUUZtRETiPgHgmPYnaI/rspvsuTnrFB6IkPq2kgFIkcBJXYUeiLRnnrNEmokEhMNpDHYjIDB2M7hCTNoEcLGrnCAcrDifFspr2xOdxHAbE/d9bP0HTE/ilbpDXYU70N47/s25lf3bxgkW3Hejy82eil3/GFTAFRneMDj/SLd+Yj+XvS9qtk0OEkmPIQnzBQNQJ/xsAGGObGuUlxprct4jGYYArewUQZsgJ4MurHcwpr2OkAmBx5oKWYgyle4om2SwzeLCFZLfi9pVJNLmPwZIZAvPMjE6+6f2nJ7LP+RRUaA0v4N+UC3rGQa9b7KJB+G3njJz3xQPtFd/f8PVVeR6vztJwVkmjBUIpOHZGxxUKB9Yxg4rq0fnDAExjEhmFqTBdUdwWpsGnkqz9lbNOfdkOHxcOtDX8866AK+AKuAKuwNRQwAHw1GhHvwpXwBVwBVyBSazAagLAMQHgMBua3VPoAE+vvBT2NdmwVihMXMKMK/DgD2iIh39kzRIQgMONgQkygOEOBiAB+OAMYC8C90y6w5pdu47a9cRPLsm6+RVxK1tK8DekFeYB4C+WtENvQq68jB0RENEABMZ7AEHWVlY0qqA2iSm0FNuj4BXKYjWASco7MXwyQGaZwZTpoIDH/lON3IZo6xxZz3Qqed7rhfWXo6h9+WsWL76Po1f95QocZgXW1euyrVueuCjohX+RJunyqBUnOfdlKqSG8UlXPmA6xYq4Sf/HMCYAmCNuLOOcfi3RN1bMTEdNhp40hhoAps9jK3YBM2yW/VvBNj4e3a9wI+NlERFw5OOcZMIFUFkc+/gT0X07eB483tK9j32wq1kzi2Mq6Ak8HZVhnfe6/5EODf/Si5a86IAKcN5x/82nlJ34S1kaL69CWjdC50ZOfwbB8rVRBhkdtyrpuFFCw0HRK8pqAw0Rn02SdPWzT3sZxoT+0pLD3C/88K6AK+AKuAKugCtw+BVwAHz428DPwBVwBVwBV2CKK/D5DQ8vrTrjt5dpaza4BmABGdSaF7vbkO2qy/+t4r0hPYMQYBOMQuCWUyDJERBinyN4UkgERJsygOvQM4CfRr+6bseO4c743re3e+WfhFl6TI+qrdWUrQFAywX3qMHYyajRD5L/2XcBmzMYVm36XHNkc/EauKn188gvlUJZ2AeglDqCKdPXgBeDKsa6MgFAydEE+QlRFcHuXlT+Wxa1/scFixc/8DQu0zd1BQ65AihkdsP221dUvfKDBHRXhlR5DPEpJY1Ndp8g1xYvAFiZNJEicZX2f46D0CgG3AQNOEZu8KCbWDNx+Z5h968671H9DPeoZm5LfI7GR2hEBCDqIADm+03hMUNgdR0zaNZ72qCvQWqOpdDzicmBG/XCvIjyPz771HP/nrYV2vwMXhs2bGg9Vmz5KOHd343SKMJUEUdOqANYso5pPUGVVN28t53e/QLx4H+Z287WLV68svMMDukfcQVcAVfAFXAFXIEproAD4CnewH55roAr4Aq4AodfgdXrdy5O8s4dRdqawwyCC7+J4wz5vWbdFPNZf9k/tulnVSIVGA40crFxDrAWi4OjjpcvIwKCgAa5xNrt1DOAn0azX3v//ceTu+73s7L6vYjgb0k2uhxZouBJ8BQCtmtbWEGpSotRsSNbHdoMiTQCwly+DKUUZvEpYYk7Wo+Qjr3QD9C6kmkqy+KLvMfOYew/S8jpR+7hhE4jruofdbPk72YOzfyrlfPm7Xkal+mbugITpgCNR+EN20aXV73ifVVerUra6RCbf6lzSwRE313LP8MLj0kOGt+aYm586wnEtRUPBn8bIEyOfMtG58kwvU9t0oTvtQYK94Gwja2cm8tQuR+rI7m69DscW2MgGB7zeVqxOFqRQS5gvG+gGvM4SZVSJnfv1uGjkkt+7uQXP3gggt+y/oY3hkX8KQLALUz48WgkjmdEwVdUAO/HhJ/XxK34n2cEC785MjLSDwk+kAP7Z10BV8AVcAVcAVdgSirgAHhKNqtflCvgCrgCrsBkUgAAOC7G76ii1pyKi4WpW01QIP8/Misl41Gr1FuRJAYigJGynSxRls8xuGCgLFBFAHCPAHDLAfBT7ABfe+CBEzrj+VWtoHpzONQapoQFzvstFPTUBOslgzlvMnnZEYil44MZoXQ8gHn73aDDGyDJ3Ie8L8R+6PnJgnO4FeWztsQcTr+EwG9A4Be/C4uqommDzVUaf7icMWf1xccdt/spXqJv5gocNgVu3DG6sOjm7wi64W+3h7MhCk/g6RQZ0/rF1uCI54gFlFXjMZIJJ0+GoP/b6ggeKwFibVIFRl3Jj9DxUaMidPzEvSefiRtHsI2dEukg46lFRjQuYTow4lh4jOX39Y5VYNwU4bTxmu7hJEqDlEbhvFs+USXl75299Jx/PRDhRzfduLDcG307ayUnFTU81KRCQcS7Dsd6BUVNtFqfOGrmUd88c8HZP/EImANR2j/rCrgCroAr4ApMDwUcAE+PdvardAVcAVfAFTiMCgAAp/n4HUXcmoMUR8BeQI0GRHD+pMAGVJRnIKHAtx8DIbCkcZsqAAYPjjUPOAX0oAzg9lBGERBeBO6/a3I4FL+4ffvSemz8/VkYvjZI4nZB4Ik4K5mwqY0IAHGhNmsP5C4DJCnMNdBrf8O4zVBIYyGs/dCeDJHU+cjwmG2+4oIMB7JOAbGkX9BxCH4BctHq+TrKcwoBjddXcXzlq5eMfN6zPQ/jzeyHftoK3Pjo6OxyT/XWuBf8IcU8nFzFnHtO3VjGNMnlFQc8bg9kXUt+L026AOByPIRMkOFPSlkH/Zc5iQ0Aa55ws0JCJmoYIaN4ImIUaP9w/CKSAisuOD6C7k92/mrEBN21Otbqao3G+Wsw2hz8er+ibh0mcGraN9mHiyr/3DGnzvvVkfCZu3JH69E0/8FjX8yS1i+iEFxedB4P6urONEs+NdSKvvqsxa/Y5eD3aXdH/4Ar4Aq4Aq6AKzBtFXAAPG2b3i/cFXAFXAFXYKIUQAZwmI+PFmFrTk4QIopTLtoG11lj6AX04wxLdaRpxi8vf+b3pMAYFzpCLTCKejBozE5RZEOSSzWmP612urYbpKsuXnL8ARUimih9Jvo4BHmiL27b9ry607mqHUSvrLMsyUl4LvYmZIp8igJ8kdkr+ssydbgC7dU4sJFdqr8GAOKiV7Au4qWACZEQBvAZDpNzEMvM+RgKgXk5OsGwBAXmQMJQNI6qO8Wt9jfLLL385AWL71wRhkSt/OUKHFkKbKg3tB7Y9tj5Rad3OTlln1sndYqJsP69ZEUPAWf1nkPOAd0HKLqIe6Si8RLwtz8JhltEo1PUQd/MpyA+AlE5Bng1ExirL+R+xr0nKy5sgmZQ0YhjdnQ1BpzCGrNjE0JwJFvROHPuy3gQ4XzrvNN9JBqOLnzBwpfcdiAt9d0ffu1t3fH6D+IsuDdtRaujVvat5y962Y8OJF/4QM7HP+sKuAKugCvgCrgCR64CDoCP3LbzM3cFXAFXwBU4QhS45p7tp1Vl97YqGZ5VchEwcaANukgRA8AvI4kKB/tLly00QDZjtxpcbcQpEnK0sXsUEJgiIFpD6doyTM5/1eJ5O48QiSbsNL9S161y0wOvDYrue7K0dWZNdsAuuQwJAFPMA9yBKYMhwF4RWiDQYBEp/AzH4GAUBJqN21OXpnPMAy9pV6BPkNjcjoiAZjei5XpyxEQRpCD7yPikP0lF1d663U6cpjcHWXrZa04ZWTdhIvmBXIFDpMAN2+4cieryL+MqfA05gTVdu5/Ty4UWeSJMXL821tnfcATDwdtkoyvxRaFG3r4pEicOXZpKofsUMSo63mpGN47MDmQFwM3+1alvP8swjIk3AdMGn/tJPOIgZkc/CkASaEZOO80mVUVcXHb24pd89EAc+6M7RofDsd0ntmcFO5fPWzmpMr+xioLHQgtQPkR9xnfrCrgCroAr4Aq4AgdHAQfAB0dH34sr4Aq4Aq6AK/CkCqxe/+DpSdm9tYiHGgCsbKOBClGieZMKJAxQAGFINEQfADc5lexgM4dqQHEBdAq9TtAabt1VhfEqB8D7Ngk7fzdvviQc730kaaWLgzghThMGhRZ8k0JvksrLEEqdugo5BPgCeAxAInbywp2o/0VlmaP94n39c+BICUAk+xv4S0EUSH4C9zEcjeTujvJyT91O/7+oTv/HxUuXbnfI4gPMVFAA0PDmnbf/etqN/t88KqkUYn8iTMY1BbdgwBR3ywiXBkvL6AWQbe5DAFwBkOQEliJy9mCDTG2JkcCkjo2hiGjpZ/mynnTj2r3K4yyOxZnccl6YwLGJG46K4FMaKGDXZLbzzvh9REFEZVh38s4NQ+nMX1qxdMXjU6HtBq+hrtck992950VU1S8K0/CeU0+d91gYrvDVCVOtof16XAFXwBVwBaaUAg6Ap1Rz+sW4Aq6AK+AKTEYF4AAO6vzWPGzNhicUERBkF+NTBW/keAFdymyxDpYhi224CJLBR3UPVwQ8xAWszlMiD5YB3Gpld1VR6gB4v87whS1bzuw9vudTwzOGf47UI5ZEmb8KhAyvNzCIIA87+8yRiLZSKITdGsw1h7C9R4m9DIHKmiCuOhLhLG7yTtFitG8uckXwFwAMsR5Yrp4g/5QaOiqrR/I4/njUmvE3r1+w4JHJ2Kf9nFyBZ6IAAPBNO+54S9yt/6lKajK7y32GCRRxz8qdiFxgc+gaAI4Tuh8Lcd7Hmgls91XNkTqIYJBHG9xZUlQT+9d7GfsHItbCcFLIjdy6HDkhRTXl3sTNLuOrFXvEpA+PxeoExrliDMD9jhewMR9fx2MCwMHY+Ng98VDr/HOWnrP1mWg1mT+zceP18554fPyf4qj981FUbKbqdLenafTtOEg2UBs+moWtPfVRw2MLFpzdg7hPZQJLHcVhcPfdycZsS5s+NyvMqzlhVQ2VVfTIyLNf9cCBuKkns55+bq6AK+AKuAKuwEQo4AB4IlT2Y7gCroAr4ApMawWu3bjr1KrXGe0G8eyAlgdTFTh2ojHstW9ihRJCEwRICFjou80EMvaLEgFg7A+AYypslKbJXWGcnX/+ouMemtbCD1w84MJnNmz6jTQvPh5lWasmm55pj+XjFsfRuACR62v5o4R6rAgVdskuXnXuwjGMnGD7fFyJ27DJANYl6tZOgEZwFgPwD5aRSlBcrtulBOFge9Fqva8env2ZS+fNm1RLvr0vuQIHqsCauk56W297f1ZG765SLu/Gu6T7kQGwTbjw5BYiVLioosJgbEoAmMdNhrcDGcIKjhH5wI58jm3APSzbg/Fy7jrlatu9LBM8toJCwTP9Fceg0XLM5t62+522R0Y341+OeJE4CluhUdOEEfab0Hl3xnvbKK3i/BeNnHv3geo22T5/7703n9Tt5tdnSXpmWLPxl0zY5R4SjJzA0WPkwN6ZxOG9NHd5Hw15D9J4+KOgSp+gwJ2CEjnKNI15+Csoq4giOqgnhC0qiDmnLusTqrI6lb4jz6SWW0rtNxe+7KIovjdj7tAfnnrqql2TTQs/H1fAFXAFXAFX4EhRwAHwkdJSfp6ugCvgCrgCR6wCKAJXdcZvL9P2bDjegAuwTNggrxUTYhCijmAwCHHBSfakgUlsY25gKwrHUQW0VxjkAICzVuoREPv1ltV1HVcb739nqyw/UMcZGdUGckSxLWsIc6ABIY2C0P0MOrJ5O90ejkLO81WQBecfvxgYAWL1ARP+aU5HoHssUweFTtEX8rwKy2JrkLSuPDrO/n3l4sWdI7bD+4m7Ak+iwJrNm9u96uH/nYThJQSA5f5QNy8+Agfw4ERXXWqxS2yGApgw5dqkCjt0NbZBJ9RwP8nn5QQIKDKQLeH+RXYwrbTAuErpL3qb9jOF8Ytmws1iXgYmh+yS7PgYlwfPh538Oq0T0o1edqpHy6T85XNOe9mNU61DbCMA/ERe3phG9bKILtYmwCQnmXg+2hT4vay7BOv30K93l1U5TrkenLqDsBv+UE1J0AGFSARBi34cjqJ0VlmUM5JIZjqpf4RVFEHy9VkavmrRslWbp5qWfj2ugCvgCrgCrsBEKeAAeKKU9uO4Aq6AK+AKTFsFrr5710hYjt1WZUMMgPFHljAXAiHMvUbLkS0SoFmSrGBRthO40bhU2XkGYiwRAxHcZ1QELmsnHgGxX2+D8/Dh+x/486xbXFFlaRRSwTXRWh29cBRyDba+mxfNgjxQye3VonC6337dI2oBZJAC5iLeA0vCzT1oy8j1GJIdKkvHsWeQEgpBDeICNsXqniptXXbG4lOvXx6GWDbtL1dgyilw/c61M4Ld419Mk+jlAMA2cWKRD8CG4tCl+xJmeQXCvCpCV0nIpIuAXUThRAR2iTTKWNosqRBH72BGeskTLjqO6phJ9LFx72N7AGKA4qLKef/2oKQJEOpU1hgK2s7Oxcbniibg+FMwM5dht6zy97z0jJUfnWoNuX3DVxbszqObSZeROCJKywJhEk3iilg7fCdxuA2iOUQBmbS0tQ/94prm0sZbZVlo4ga1M7V7SVkh1Hb3ttvhRQtHLtw01bT063EFXAFXwBVwBSZKAQfAE6W0H8cVcAVcAVdg2ipw9b07lsVFfkuRtGfRkldZkozlx4gB4HxYhRX8wKwRD/Q7rJWNKS9Ysiw1EgKQmPOAtVAZ4geUTgAAwwHcaiV3lbFnAA92uC8mvkkAACAASURBVNG6Tjc9sPWqrJtfRvm6ZKwmNyDrDZdZH1jAMSgvKxYlupsDuF9DSou5YQk44BRiHQClKAICL/wHVkltAXCF9gVUMuc2QBYXliryIKGNyC73gzKMrjh26Wk3rgypLp2/XIEpqsC3frR+5vhjj12fpPHZBaUA1GT03KeoG5y6iF+h+3BwoovvQXb+ClhsJs14HkXGQoaLuoJicMUET+ToxBn/noZYi2SJkdmtNzUm5OBIBryU+G7aVifd7PiIduCICV0B0F/FIW5gi5QAj6Y7ucqr4h/PPfO8351qzXn//V8+pddNv0EqnRKTA1gijajNCKCLA1seMRGXUTD0lTFV4jL631mYNDNgXFFuekwhOFaET/RPqY+kda+s7221awfAU60j+fW4Aq6AK+AKTKgCDoAnVG4/mCvgCrgCrsB0VOCa+3acUfe6t1RRe2aJB1wsZ2bXmhYKY7hhRY/gSJNtBpc6J3CsaiE4gRHieAMwBgDGeylARq8TtBEBkWZeBG6gszEAvn/r+9Ne711FkoRRArc19LPXvo7BQQBsSJhBu7oQGThhubkVjVIgJABYXMCc88tuODmGLBHXeGD44oqcukPy9TKNL7/k5CV30j73tRlPx5vFr3lKK3Djo6Oz613dm7Kh1ooe3R/lACzEPcUREAQRbbUD53DTvQqHMGfu0oSYjIs6IaZwlydUaJskFkBsYyffd5z1q9nBAMGw5yqgxB3Hmb+6P870ZnexNIM9KBnUhOcX24qLH7CzD6NlDKa4CcopRnYx0d+66PWuO/fZK19H59S3vU6BFn5g/fWLx+vo2zQKnpBwDga+vwbGR52wNBBsbWZA3QA7vtJscozbXxUv+LuRCvTRhGlZkwM4iDZlrep8dwBPgc7jl+AKuAKugCtw2BRwAHzYpPcDuwKugCvgCkwXBVave+jMrO5+rxemM2mBMegvO4DF4STw1hy94m7rA2BzrwFimHsKupX0gMzbkoMNjraSC5YRbOx1g1ZGERAOgPfpXgqAP0AA+J0AwHAA49UvxCaYd9A5iJ9lOXrflLvPfzgBAiuoN9DBS9c5G5QgFoERhla6DeBUTB+IKBqzMza2N8yS64Moveq1S5f+YLrcC36d01uBNZvvnDM2tvvr7RnDzy3oxggJzEodtj70DTU6xcAtK4YxE/ebFXHTwowY//iexf2G9zk3HTnrcu8y2lWHcOMS5igWud8RPsvFNIEYtSic3cv292CL2WoLm4AzR7KMHXRsgtd8uoiDoeiCvNtd85Izz11F+5pSzv4t931pyXjZ+h6pd5wBYIa66gBGUTwD8QyGGfTLePjTXjQl1/wacTrsE9bvt6BOsUZjc5KVv+gAeHqPH371roAr4Aq4AgemgAPgA9PPP+0KuAKugCvgCvxMBa5e99DyuBr7bhEPkQOYHnQVAOODVjSon/lrGZX2ALyvEzjWB+VBAMzxA4AZBBwZAHsExH9pk6cKgO2D+0MgQKqQIjnwH04GmAwWixvQMprhYtNCVoqXEwJdVOmegFAdpHVYx3X9eCco/z7Mgv/16pNPf/BndiDfwBWYIgoAAO8d2/uNoeHh5xRJf9IF4xk7QQnw4sUxDYCFmskLpGouXPBE2x70mO9Vqi3GRd4GCsTxvzUreP/7unH40z2J4pmczY3icOTctXv5v34GN7lGwugKDPH1y2oOuFcxnvP4QJcBAEwO4O8dfeaxL1seLp9Sud6bN391Ubeb3RbX5bFBmOu4KFm/yGOWbGSB8XhRIbjGVc0/aySHab1PrjNygAGQEcWhDuA6irckafGKU0676P4pciv4ZbgCroAr4Aq4AhOugAPgCZfcD+gKuAKugCsw3RS4et2W5VFdfLeIsplVTZWPQDfY6auV6NkpKkuc2bs2UIjMHpCltpEsZeaq9pQvK5+Hc0qgBBzAcU5F4NLYHcD7dbJBAJzHiIBAEThRb/8l46JrE/xgq8V5j02eqIIguLXxQmk3zg6lj/Gn0ZbqSgRgItcv5TMTtiqKDWW7/dGZQzP+beW8eXum273g1zu9FWAHcGfsG8PDM56TUwYwXhjbAF9x8+D+gpOUbpXGuYv4GwO7ktkNf+i+jn2Dv/QpdhUjgcDGU540U9cvVSsbgI9yPLh6MZ6mXAVSMoAtgqcpGmdF53hyRwtDcuawjOFWJK6Z0AOYLsM675WjJ7ROfOnIyEh3KrU8AHCRt26p8t68ONYCfMgBJn049oaLYkLbflE4/B7FT3m8HIgzwioY0w8AnsZI1p8dwISSiyquqzDZnrXKle4Ankq9yK/FFXAFXAFXYKIVcAA80Yr78VwBV8AVcAWmnQKSATx+S04AmDygvLyVoYE+DNuyYiyRrcjJxhECChZt2bI9EFuRId6WXVVwrEnhnQwssjMetNqUAexF4PbpZwDAGzdv/WDW7f1pkdDCbwAhzhz9r/8pJLDJChkJqG9+p1wYnmv8juGULmGHSxguX36R4xfgFwCJWyjvVQSpvl8n2RXzTjnlphUh2eb85QpMMwXYATw+toYiIH6OuB6DWYa/WsQN1lkDsDxGspO0HxuA+4vf13HS5LOxFO5THj8lm0WLPMpx8MKu+nEtUpyMf7YJHXUUW5E3Keymx0Txt2ZckHxvAM1+PjCc/pRdy1EUlG1b0bRfr/zu3OXHrpxqDuBNm25cWJXRrVWeHx/zrJcWM0V8Aya/uICpxuww55dCm4joYKc3bQOXL6If2B3MmcGy6gXaMUjn78AwQGm4MGk9SDFKr1hwxqvum2a3jF+uK+AKuAKugCtw0BRwAHzQpPQduQKugCvgCrgCP12B1esfPD0pu7fmUXtWhQgIZPxqAbGEbVLihGOoS0ug+cuZtvmpGZTqHLZc2poeoLmGEb1iuFApAiKjCAgHwPu2hTmAszx/Zy8iRIPl4gBFDdCR7f9LRCW3lyzrtlc/i1ldiAqAQXot6RPuX+SLEuOqg163LKPgG0GWvPuiU05FsbefHoTpN5ArMMUV+Moj35sVPFLflLXaz6d7gsupMfTTSAADqviZ7zlkKaCAW0wFwRjsykoJ/A6OXTh3zf3L+2HuS7nbWnCxJuAoOd4EawEe+R6nmxKuUwbJ5iQGDObBmFuAhgguFgc3seWA91dcSCNJ1IOO3WphlTximfgBAM7z8uvnnPHS86daBvDGjdefXNfZrUXenY8MYHE+0x9MgMEJrK5ecWFLzrK0k7iFm4xf7e/Q2TTNAY9RLJXaAI7tikJzqjB9qB32VjoAnuIDhF+eK+AKuAKuwCFVwAHwIZXXd+4KuAKugCvgCgTB1XdvG6GMytEyaTEA5offRKrZwynFxYo0BmJfNChO4X4xnf7XtkVAIIKAaxehAj3IQ68TDA217yrDaNWrFs/b6fqLAj8tAxjIwuB532W4L+glCsGJHfay7aydmFFhCTtgETKYq4hcbeBWBKZo46hXFnUaf63MWpe99pRT7vb2cAWmswLX71w7o9zT+XISJ+dVZJFHdi6D2P4NNlC0TVz2ALMIFMB2iW6JWIcq19USnOEr2wIAw1Vq7tySnMICdrUYHEFIjKcFOXWThPbWAGAFzoDN7PgnIEz3PUCyFenEPjBxZy8pUqZZxVrwETNIvF8UqyMATOf4hZcsO/eSqTbpwwC4Sm8rit7xMYqPKvRlPXhFijqx2XwtLm77I45r1VFn3PDVZS5uFIFjBzWAPQNlKgIXEwCuHQBP57HDr90VcAVcAVfgwBVwAHzgGvoeXAFXwBVwBVyB/1aB1et2nZrVY7dTBMQs4AhZ2iqvxlmqLmD8DkC3iR2wJclNpXopUlQTwBCHHPItBZ8gAzjMu8Hw8NBd9K4D4IFWaRzA3d47yzQjbk6QqI+dGOSwrv/tfxlho/03EOgE95sAoTLIKJajLnuUx5wX9NuvRcNH/c6rTz7Zi735ODHtFfhKvaFVbX7kU+249caSisABrkrKgoxnZPXkWAVb4SAQUOIDEBWREtzl+2wQvmLM5AgBHj3l/xUKyxgpUJePZc5i3ozuTho/sd8mjkfHAdzHDKZ5QJB4AwbBnPPSj4UxuFzrKgE+VzoWIHTZLSnRp/zkeWe+7LemWsNvvueri/Jo6Laq6h4bRhrhAA0YiAPXy3iIiCJ29yKXWWEvT3ZaaykcRnsDtuOFz/E6GGobAGBC6nWUtB5K0/K8k089f+NU09KvxxVwBVwBV8AVmCgFHABPlNJ+HFfAFXAFXIFpqwAAcFrtvb2IWwyA4WlrihYZnEAVeXWnsVMKy2r5oRkxBVJRXcAGwUU8SFuFdTiKFR7DAQwAnGXZD6IkWXX+ouMemrai73fhBoBbvfyd/SJw/SSGvpPvyf7TyLbd9/1KyTHaAO3ES89rKtBHUGkojX9c1MmlFy1atMbbwRVwBdgtG315+21XtHrRlWUrDFEMzOAsolYiKgImsQHI1w2Cghy6AmLFCWxF4AwCY1jkCTNYRukVx6kCYy0sx2Mm0+BGfjBhy/JFhMNgvAucxQDCiH8Q96/sHy92tfKEmwBgZsHqALZUF4OciDeu87Cg6/vQy844971Tre233PelJd3gqNuqsjuXBjvSSvSFE7hC/jmD+4IKulVBi1e70JsDhd+44B8Df80Gpm3xQqwHisBVCvprWlFR0p84be9Iq7HzTl5+sQPgqdaZ/HpcAVfAFXAFJkwBB8ATJrUfyBVwBVwBV2C6KoAIiKjIb6/SoZk5sn8VAEMPOMYYZnCGooAJc6NZdqUAEnX8apV6c8XZe/LwLBEQ7fbQD8jh6gB4oMMBAG+5f+v7o27vXWVG6bxwAGMlshkH9+ucjQO7+X0fABswYiiFIlb4H5Ywo+2wYpkASEpry4da2d3dpLrw1Scu3Tpd+75ftyuwvwLXbb/tDe1u+O9VFlNNNwQGGLxFpq9mAlOECsY/jnpoil1igJRxsOR7j+JZ6FdSjFGjGrienMBZ/N2PcJCMdXEDExxGxIOuxODoCC3oxhm2gJk6MPD9rO5hLmpGO8Zkj8RN9AuXWZEzy7JFEbo6r3cXQfm2laef9+9TrRcAAPfCo24vi+4cAGA4sOF8RnYDWtQAvS5OaS5fvu+sHfaN08BGgOxcFNAmSQn+UuvSopnsobTunHfyma/eMNW09OtxBVwBV8AVcAUmSgEHwBOltB/HFXAFXAFXYNoqcM09208Li3yUHMAzS4IOFUFgW9rcwER2R8Fu1l9evO828lANx9sggESUAR6axX1Kfxc9OIB/mGfJqosXHrdj2oq+34UbAP7/2XsTIMmu6zzz7ZnV1eAOkCLRC3rB1iQlkuAKcMFCLIRgiqTM0EQ4LMuKsS3bmpEobhJFyRRJSXY4HJLliRlrPJqxR5IVCBDcZFIEIFEckiCxo7vZWLvR3WigG/va3VWZb5v/P+eel68KoASCqO6qyvMQiKrKfPnyvf/e+7Lzu//9Tzo//ji0iePMYjg0n5KbgZ6+I3BymIUO4Akgplub+D44FAlC8H9ajts8y3fVRXGxxz94L3QFJgr81cEb35jORd9us2RNpYmxYfwFFykdv8ER2kWz9ICvjNMwXuOwgkKZIkGkRkQQQ8qY7jJ9tTCZxkvw2eDiDQ7ULgOcYJf5vcgnlvux5LT3JuXodQ2Z3+ZM7k/QiSMYx8zgZK7HzcG6iC8995Szb11t7X/33V/bHMezN45H8y/Jclw0nNR0bBMAC7AP4eqmnSgu5D1kPoc4DnF7B4e2Tnwi/1cgMe7P0pYKgKO4eCBrj77LAfBq60l+Pa6AK+AKuALHUgEHwMdSbX8vV8AVcAVcgalU4PI77j8tq8obSgBgfpm1Cuj88ku3U4ovy88GHZmVqJs6zTRvUpdDW5Edzay1+AG45xABkRfZD+rBwAFwr7cZAM5G5cerDIIDACvEDQqH8F8txkd3X4BR4flJRrD+04lwnm1HJyIYhWYHExTRCQwAnFXjdqbId8Ov+N5LN23aP5Ud3y/aFXgWBa657/aX16On/zrNitfXuPVhwX/YC+MHA80mtAQkAgKmqKpYBVBLRKj3Sn1NHSIiZExyIAJEyh2xy0gPRdkCKBZ/r0To9DJpeR8Ij0++GAWAHMY/E8N1RYaeKsG18EqCaexThWJ2Mv4BiVOcd1VWu9q0uOTdW95yYLV1BALgtl1zc12NX5SkwcENTQjuGashhU2l2JsV1et/limY56ZxR4z2UGFTgHPJag7Z9xS5blHoNC0ebJvRuzafceldq01Lvx5XwBVwBVwBV+BYKeAA+Fgp7e/jCrgCroArMLUK0AHcwgFcIwKiAvFgEThWirf4By1MFMBjz5Emy2glKxH/B2ebAQhCEkJHhZjqAJYM4NF8VAwHO+FyvdgdwJMuRwB83z0HfycezX2CAJgOYCKImJEcUieK5GbyzyL42ER3AqgOVEg7KdjQ+AdAHissFYpOsfhTggzLFE64NUW+f5TE5/30hg33TG3n9wt3BRYpwBzgr9976+8VVfvRCgOmtskWOukl+gEvCM5doFQtvgZDKOJho6aE0xSTL5aJTqeoTqIFRz9ep7EP6jTliFaHLibHGPvCrJaw0anL1zFzVmpzEkOGY0khMxYxw6NSJC4cPpYICHX8S8QEXqcRFeEnDp8leZRWSTtqyq80L37JPzr3pG2HV1snuOuuaza1UXFL24xfFMfIPKdW0Eyc2wHuUm/eUu1eKe0oG7QN+1BAi/3g49LejIAg+OckGydJMWmKDOCHovToOZs3ewTEautLfj2ugCvgCrgCx04BB8DHTmt/J1fAFXAFXIEpVeDyOx4+LW/mb6ii7AR4Q8WklgQHqlRHNwDJL8yhmv1kSbJmYi4uHKcZlcyiJKRQqMEIiLSsoiLPdpYzuQPgXn8jAN63997PwwH80THWJ6e5LuU2Z6+5gYMRGK/sgaJeASliIgPACu4tvVnfjG1R8JdyPlqT5wfn2/Y9l23e7LmVUzr2/bKfXYGv33fz+cnR6gvxIHtxwxztAFwFrYZxRUdvizgGGW+haBgBbAO3bSwQmBNjkzEYYyKMReAUHmuuL18vwJjHZbwOIW/IXScoJgTmJpNBdKyKMzjE7eB33CkAKAGTmUjAfQAmCX9t5QXvH7Z6Q2Az3juDYzUq63qctR85d/M5f4TnJzeTVdIh9u37ximjcubWtoYDOIHrV5zQ0K2LcOA8J/C5rbAIQF/+DpOdk1UvGvsgmc84AoE8dU4gusRtQM84GTyaJnPnnHLaZXesEgn9MlwBV8AVcAVcgWOugAPgYy65v6Er4Aq4Aq7AtClw5c6DZzTR+Po2HaytpKiNVpInmOAX4kkGprp5F2TR0t3LTMwQ/aDuNwAIKZyEL9ydMxiuU3qlADwIgJNB7kXgeh2NAHjvngNwHZYfGcUoV4QUCMIFQibL8hQQFNy9fx8Aln0XgOHgdMPjKDGHde2jaDbPH5hvmndfunmzL1uetkHv1/t3KnD1Y3te3Dz22NfTJH17hYhXFoPTiS6sbAjjKgMAVGcpIGAoFEcAzMcYuSAO3FCgTX7nmOaEGKMaqjJASYxFunNtkg3P2wQOYSO/CMn7hXEvU20S9aAgWmLZaWPF/wqmdUVAxaiDsPKiizsgMMb9PcElVKPx/e1s/t5zT3nHqgSWjIBo2hPgAB6dkKKB6iY4t0MWcB0+t7QTQOdelI5E7DDMPmyW/WttzTbUQnDalvzMTNPhY0kyd7YDYL+xuAKugCvgCrgCz18BB8DPXzt/pSvgCrgCroAr8JwUIABu4/L6JinW0s3EInBS7A0uYCkaFIAHYaQth20APCQCIlRUN2fqpAicOtfMRcUlzzlhSVlGgyIHAE4dAPdaZ1fbFrfvO/D76dzoV0pGQHDNtmRPKgDmEnHTcyHYfeY/lQTAh4cJ4Fu4sRUqhSxm/qzHBMAPzjf5uy7dfLID4Oc0UnynaVGAMRDX3HvrpxEf+1ttAQ8pxkwNqGvRD5J5TkcooK7cEwNQLEPmr02UsdgaHcHmGtYxTPev3T8nxR0Z/8BxyvgdFivjlsDhK45TyRXGRogb8r01umAy/mWMM0ICjxEA8xbCzFrZgsM1ITBu4nrcVn9y7pZ3/BJeMyGdq6hxCYDr9oRbkcmxNkkZ/VBSBHFAE+ITzGtbKDBXaXt5wGGli5mju89AFtkjIA7xHA2Ox8/MNBk+nmbzZ2889advX0Uy+qW4Aq6AK+AKuALHVAEHwMdUbn8zV8AVcAVcgWlUwABwHecCgFs42yR7kqCQPEECJEOV9PBFuYOKIcvSMifFyiabQkf9kq3OYaIIAmCNgEg9AqLX2RQA7//9fFz+yjhB8Cj0F02DY9Acv+a+ViDRK85nRYuMExkAZjgp20wcilwyDnBF+AQH8No8f3i+Lc5xADyNo96v+e9T4FsHdryuGTdXR1l8UgVrL129zNCWiIYsDy7QEA0AqEsQ3ALY2v1OJsiCI5hRDgITO6duyJsNk2vkjeb012xfvd/W1eQ+yvfNwgoLO3dO6lhOsDh9cb/gfSPD5F2JSZ5uBQZWXswMBnT/RuNR9UC8pv25d617x7f+Pg1W6vO7d//VlqqZvYUAGCnODEBm/kUowoc2421RPtOsvTSWQ+6VbJNe1BH1taJ9zFxnO6Clpb0SuoEFAA8eQ4XTd2w6/ZI7V6pmft6ugCvgCrgCrsDxVsAB8PFuAX9/V8AVcAVcgVWvAAEwsMD1tUVAyNJmrX5OgGEAmEJ0AJIuqrCkWb4048u1Zl6qM66qxuJks+XMBMIJXVNwsw2Hxc44T9wB3OtZjIDYv3f/72Wj8UdKAGAWHxIXcG/TdtAHJlnA8heNgZ1Tu18wjtXq5XXiAtZM4aTFcmi0wwkCgNt3XrJpk0OLVT/K/QJ/VAW+2bZZc++OT6VN/MkqqQc1hqTk8mKwEQZzIxDmZkDQMoEZCSGxD8Ex2k2LMUsWw1sncNSRz43ptPqLGnI1s3YChS1aRwY6Nw5pDugw8cPjEEwS/hpI7kdCMIs4Z3HPNm1w7lcMX5L+s7NedtaTP6omK2X/PXuu2jquZ25pmvFsAttzzMlMFsKUTGW9idrqFgW84bEAgTuHdojkkJgOQnw6iOkAlvspJkvxMqaqZ8gAbqO5d2w+41JfTbFSOomfpyvgCrgCrsCyU8AB8LJrEj8hV8AVcAVcgdWmwOW7Dp1ZROPrxlEuGcBRmmnVeCZBhAxfhbuTSAc6SgUSS6UyLXxkG12mtkTWls7Sl5byGOUoWjMz3NlmDoD7/YgA+P577v1cO5r/WJUiLAMOPsv97DsDyS4E/AQnocIiwouF/2Sywn2CmOhEtMxLQniLgMiyR8ZRdI4D4NU2ov16XigFrnlw5yujJ0dfifP0zW2GO14AsLz3EfoaEObv6vgNLlIbn8ic7QNZpHvDfco09JC8gBUUOqmmsJegsh/xErMip+QHc2WG5g0LHJbJN2YAh9gC7CfHCedhRcsYUUA4jN3h+sfdukkfiYv0596x4Y3fxP6rrvibtfuePdecOm4GNyP6YRaJyJKzzLaZFPELK1rQDJbxK4CXxfxEFXMDkxfjsQDcqb85gOU+zBUzWNuSxnQAz73dAfALNfL8OK6AK+AKuALTqIAD4Glsdb9mV8AVcAVcgWOqwJcAgOt2fF2TD9aWlZQZ0gJwXcExPR06erX4DSGEOtwkb9ZcaaxETzhBHGmwmC4pwmJCR3EAj5EBPEQEROIREL1WptvwcQDgrBx/XBzAAMAWAaGASIvtdVmg8trJP5OsDbosZsuzDJEcBBuyAWYglVQiIE4YDB6Zq+uzvQjcMR1u/mYrTIGr9930r7M6+ne4AQ4bZCzUXT4sxmUo3kaWqvdDxrJoRqyNSSvaJs5TJb2dAv2JMskUDky2LjmhlmCsEvbiXoyXlLgHpAkeQZyDwsdJFi2Bpa0QsPuFno8CTt578br5qm7+4D2nnv1pPDeZsVth7fFcTveOe75+WtuccHNbj9cQAPMDSTSr8btkJ4fPNAqLv2uJ6AhubExmMltZIjhYNE5c3vp6ZrKL0zo4hhm5HMEBnKSDx9LIAfBzaRvfxxVwBVwBV8AV+GEKOAD2vuEKuAKugCvgCiyxAlfehQiIsry+TJAB3NB5qhnA/a1fxIiPGwAWphi+PNOhJouZgzNNowcILwCJ8cWbDmABwIiAGBeeAdzXVwHwfZ+N5+Y+UecKgEkpCB9YBIpAwtrgh0FgaYvgXOuODQe3tFdwHLIIFN2AST0vERBHmwYZwJt92fISjzE//MpV4P87dPOJo6PRH2ZJ/OEW6/4BgZH7Gpy9GJd6/9MJFnPyciQaJOS41bgcBbYGhPtOfrp0NdIhFHwDWeb+uBPohl/4fFUiSx33BAPANglnNeKYAcytxv1WnccaU5E0bVtW5XeydPiPztl81r0rtzWe25nfufcbp7f1CTc19fwaqXPHjzW6p6tSps3ErY0H+kVOBfgK6KULOEQamdbitOYxtL1l4lMWYhSAx3R1DwmAPQP4uTWP7+UKuAKugCvgCjyrAg6AvWO4Aq6AK+AKuAJLrAABcDtWACwLhgFtE6se33/vXuyAQcgWwMLWEXdgknnAYekzX66wAu41Oq+q+agYDHaWg8wdwD1tGQGxFwA4G81/vE6x1jyHT1fyJaGfrjvWZeCB9BCy9zM+J0X47HEDxlq1nqRDQBQdiiwc1ZQoApc+PNfkXgRuiceXH37lK/CtA7dtrUfzf55m6ZvqNMYdDv/RUIoVEQJ0Q+YvHfb8m4BYHaRllOc5JnGCw7QrpmnPq5uX+3OyB4cWsTS2BcO+HMu4t4gJi5zoVgOE1Rfd5FC4GZv7OMN9HDESbVM3D1dF9IvvWf+W/7Gaox+spwkArtbe3DSjGTqAkxwwnDEZkuGLNhMArMVJZXEEC8RhY2SObgp5meFsz0m7hAgOgf7IaY9arqfA5yWKwGWtA+CVP9L9ClwBV8AVcAWOpwIOJkUWWwAAIABJREFUgI+n+v7eroAr4Aq4AlOhwOV33H8airPdOI4zAcAJlhmnAAeaiRgcpBYpsPiTOWTLwmDWgQuBD/J3qFjGL874PcPPBA7gGTiA590BvKBvGQDOx6OPjxHwyTaQHF9qFirW0wVcy/JlwgwFR3EoQmWONEv1nOSIhvYLgIPPE8RnAFMEwEdbB8BTMcj9In9sBf5m/84PR+PqfwdMfOm4rcRsSwisTl64gkM8jkYwqNNXc9JlFHfFNDU2B0g33DNlPMviCTpSAYHh9lWwrI8R+moeu0bsmOtXYnqwy4KVAQFAy7ElvgCxPaPqqaaIPv+ajS/7w63x1tGPLcQKOIAB4Lqen2ERONGXbcGJSfmoUgCfhLiOvit7kvOsmc7SPraCIhTbqxjHwVUyAQAjHeTROBm9ffPmC+9eAfL4KboCroAr4Aq4AstSAQfAy7JZ/KRcAVfAFXAFVpMCV9x58PS4HN8wjvO1DYraxICPGaijgQZeqxUVs2xfVBNSCUAmBHiEL8h0D8vy5wBDuPSZm4JHfPkGeJwZ5l4EblEHCgD4c+n83MeqLBcAzEJvBEgEDWMsXdZNgQSXjKv+2jYGnAwGmQMxDhEQgXqIk5i5oozimM3yh6ooO+fCzescWqymAe3XsiQKbH9g++xD8+2vpmX1URSFe1EDGymd92PAQMvebrAiQouKBRcvh2iIiNB8dL2vcjzq4yFqB8fQjFndLFKC45y5wkmIJNA4CXX1S0G5MFEnk0S8O4QJIjqJ63HVJmVSlXH132Ze9oqPvO3lW59aEmGW4UEJgJtyzS1NMx4SAEtkB2M4WFSvp68idNXNJi35GFpDHmeCfX8jMJYoj/B4HMHdjc/AIl/zWJSMAYAv8DidZdgf/JRcAVfAFXAFVoYCDoBXRjv5WboCroAr4AqsYAUuRxG4pBldV2cDAcDEFATAthnckL+t6rwB4N6SWf0iHYAwQC83iQEOxeIIHuPxKFo7u2Znk85cdPHG2UMrWLYX9NQJgO/Zc+/n83H10THITpoXghgI0lkTbgGE6P1BG6JliXZZzCGfkrt1AJjIQjIsGQOhxfhOyIuH5vP07IvXrdv9gl6MH8wVWKUKfP/Ru190+Okjv5XW9b9CTMsQPuCoxrjiBA0z0DlU6d41SNtaPjojcOjYxYQMITEnd/r3S8lIx/NSbkwgrt43a1QZ08kejS9gnETnNOa+zJ+VnSdFzGSSDvs247oqq+qvZmfW/vLbT3nDvlXaJM96WbfvuebUpi62I0NjKDCdETiSTz/Rly+kltSUzmtxZRPg0zwdMpkJ3hfce63An1ivdbUMAXBezDwel0fevun0S+6cJp39Wl0BV8AVcAVcgRdSAQfAL6SafixXwBVwBVwBV+BZFLhi16FtaTv6fpUM1pb4UksHsLnYuHt/SbOuWqZ7zZxuk8xEO/TETYVH8G3asoEBTRA9MI7WzAx2Rnly8YXrTzzoDaIKEADv2XPf54rx+GNlCgKcAfQQxQdgwX1SKeqkBaXM8ashEZNNuERYpsxl56a9LkWnXTgAYLTFbJa6A9g7oCvwIyrw1wdufQ1idT+X1M2HMRhnSiJgTnIBwlomcIWxlmMSzQBwFwUBMCt30BAd0d1brQhcOJemDUBYwKQCYXOvEjrK/ZerKsI9gccR6Ix6ZxL3Pa6b+Wp0TbZ2zb8+d92bpm6C5457/ua0thnc0lTzM6o9hOHHEf5njA6Tc2i+tsgcaikTlcy0DzEb/VgIAnWJ3AnF/Rq6ssXpjSKdAQAn1VEHwD/iWPLdXQFXwBVwBVyBxd9jXBFXwBVwBVwBV8AVWEIFrrztgdfGzeh7JSIggB3km3GWMbFXMy77EHLhabAQkgJgW6JswJHOVVvqzOf5e85luOUcAPAQADh1ANwTcwKA5z8mGcBwABMAG8SNsUR8UrjIoK8tZ57kgEpeJR1soj8dheoepOOQAJjtUjBaomQGcOYAeAnHlR969SpwzYM7X9kcGf8m8nX/aVykM3XSwtyr8QBSBC5MzDBOgOPWAORkBcVkZYS9pp/frXCSbuEmKnAvZjE5LQxnkzpapGwBBMZzGU4jrqPySDl/TTE7+OS7Tn7TD6ah6NvinrZnz1Vbx+3sdgJggecAwLYSRXRjHARXsRjY7QHeBdFHAQZbFjAJO9ukgjObn5Fc8cIicFk+fNwB8Ood735lroAr4Aq4AsdGAXcAHxud/V1cAVfAFXAFpliBy29/4HV5XX1vnOSzEgEB0JBlmjNpX4b5NVe2kCm7IBYiaKcZl/rRXcPB1r0WlIKPJ3BX5Q2LwA1+AAB8kTuAJ51OAPA9938mnz/6yRJVoOgANriuUJ2YgUZDugqxhFy2yfJkwl11ARJKKIiy4lO2Hw/TAlxIETi0zwkAwB4BMcUD3y/9x1Lgm3t3vWquOforbVX/kzTPTmwwb8P7YsnJmhDh0JTq5GVEg7j3kdmr90V1pHKCxxz9fCzDvuIiZvG2kKOuoFEnfZjta5nCAi8ZC8HJOszUpUx5qdMjTdb89ziJ/8056984tSssGAHRNsNb23qkANiKYIrLtxagbrp2RfV4f+0+yybtY/dauf/yrgsAzNbQz8dU7sxpigzgePyWrVvP3/NjdSp/sSvgCrgCroArMMUKOACe4sb3S3cFXAFXwBU4NgrQAdzW5fertJgFr4hSZiKKYzTEN7ASvbiomKMYKtb3Tq3bD49ZJm0pjjUtWNTgd76e4DGp5uEAnvEIiEVNKwB43/2fKebmBADTAWwAuF+VHrApLD3WOAfCDQVCekAub9asUXUYEjApbApLmCVTNIpytMkwSx4aF5lnAB+bYebvsgoV+BoygdunnvpgW5Yfw7g7veYNEBEuBmn7k2DP5uC1InAElKyXKc596tQ5fcN9N4xrFnE0gMxJNeBkiX0A/IW5v7m/TdM/zmez//yun3jjw6tQ7ud8SQTAUTtza12NZ1IUgWORUslUDtFFen8McRz2OcfPL0L1Re9iekv74XmbXNPVFuoATpOZR1sA4FNPveCe53ySvqMr4Aq4Aq6AK+AKLFDAAbB3CFfAFXAFXAFXYIkV+AsA4LQcfb/Jh7N1Q8CLuIbgJCU4lKxDc5RK1uXCE+L3aIJH2S9kXPIrN52nXP6sP9V5GpcjiYCIC88A7quoDuCDnx2M5z5uDmDmiCrAnTix9TXq/NXl5XxOC9grqLBYCG2kGBEdUrUerjcBw3VoCxTjmxnkD5ZNfs7FW1Z/EThoEH/9gd2vmD9avRQuSlg1kaKa500Sj8F0ijY3yk7F8XxpWSb8ezyGmAP8NhJNuQhfWyHYMnuPLR6qVe84zxzGIzixi7bCOdhz9t52Pg3Oqy70/Oz97P3/rttC//z712av4bEQydIFSPN9+N78KdeGnznOrf8e9lx3jGGLPRqYyifHkX4J+2kzrtKmHbTZmnLu5a98/eNnQdK/63xX8nM3tjfmDxyI3xaNyl8GZzwPleBeCkOuZj9g4wQMa2oaANbxzDFJmIsxKa5edQpLAbkwZjPcT+Uuyv3westW57hnL2TpMuQCt2kbP1XW1c3pIP5PyYa3f/XcOLYlAitZ1h/r3JkB3NQ5AHA5TDPNrGdakcSg8/MI2vL/ONwvMS8muoMQy6Qa24EOYQHyzNnQQaFtNC6lTcStLbfoHC7smceiZP5tmzdfePePdeL+YlfAFXAFXAFXYIoVcAA8xY3vl+4KuAKugCtwbBRgBETWVNeOo2wtATC/AWckFgIfzHHKhxUm9gGwVVUnNFbAoedchyXOdP5KBXt+wQYdycpxNEARuDZLLrp444mHjs0VLv93UQB8HwBwCQAM+zUAPHNEJfKBTI7RG2EZswAloRQKc61deJXmBFboC28ajqMMUp1r/C0F9EjhAJ7N8wdGWfrOi9etfgD8tbvvPvHIkaf+7SBL3pnkacrF8+iV4D7iqOSabjA7UOJgCwRuxW/4z/4OXUgc1oHryUPdeJA6YIKEdYQQJBHs8XHGsqJtZGCEA0kRMGInAXuxtCebmI5OqTAFNIXH1cvNXZRU4bxZFizma3rkn8fuYC3nAmi5r5uG5Rz5zriayaSB9CecFAuUMSW6xWjldfYnGnBCfH89OQGSvc7FtwoInOnfulsN7MsTxI+4RWYBzKl4HLePh5qs/c8/c+pZf778R+HzP0PK9I39N70KJcQuacb1z6d19KZkkK4RECx3QB2zbD1pxxAJgYZRGInbreT8hlaU8mLcn67VMLlWVRXuyzwG5McbYXzP4/ntAM7/Nc0GXz3v5J98AH9bD3v+F7MKXqkAeHBrU4+HFMvcvl3xzHDfnMToTCYvsf4iqhCRI/dPmWDT1TDc6Lrm47z38nEW5KvRpmmGDOCkBAC+4K5VIJ9fgivgCrgCroArcFwUcAB8XGT3N3UFXAFXwBWYJgWuuOPB10fj0bU1MoArZAALALYM4EB7LWOWujybqXGxK1jdbQEK08cGEkQilJbz0XDN0AHwog5GAHzPPQd/Z1COPzGmFZMObIIikCGBQHCiEUJYtXoBFwEMibstaA1HoIAjOrC5vxXzM7jHf1jFNUASXkMAPJcm57xv/fpVn1v55d27tkRH5/8yzYtTmwx0FYBU+ixnKAhzLDLDok86R7WaOAmCFKAHIB+Aqo0HPifuQIGrE0DEIopygNDe8pY4CkpJySNsT93H8pwVENomx5X9A4AK52XHneyp423yOoVW6hZ95phV12l4jVzLJE9aSHR3vjoR1IfDlmcbrkDgr7xXmACSSSL8nwOkgXE3Zdt8+dKtP/kPpwFO0kh91f4dGwBzL46a6gMAvq+FLC+P0yTH/9YWUjBOQGJw+FsOMPsi+5HpLZM72A8/W8a/lKO6Qss9ATh/FzD7l7JB8uX3nvzWPTKJ4VunQOcAbqoh51bYZ6W/69wH50Se8TlmcFfGEe6R5tq2/i/jldMlks1sbcmII0RxsAhcUjkA9j7oCrgCroAr4Ar8GAo4AP4xxPOXugKugCvgCrgCz0WBK3Y++Pq2mb+2QQZwE+cCsfIchYUIfmBSFFgUXLxc1SyOqHDgDgwt+sRWuKHgKGO4JQBwzn3KOY+AeJZGIQDeu/vgZ7NyXh3ABL8gF0wEXQzcCfXoAhaXL2BEURTiHpRiU1imHEoULXgXO4Y5gJNqHK0tiqkBwF89sGdr9dThr2eDfHPFolmQuDK7JXGOml07rTvXX3Bo9gHpQtAawHDPiS2gPgAmmnn5XnJsvAnf0sCrTqoYbF3orJ/AqIXP2ynrmNTjyVuwT5AB0sdMd3HnB9ZusOBvseouhLrdMvdF49qKPj6jywYHq2QT8PhhwiHBBBKdqjnGfMI8Vd5M4viqSzZuu3QaALDp9M22zcoDt5zUlM0bmra8CE7fn4IXfxNmdl6KoT1IEt4U0Sxhkkb6RJgN4FimroS/0JJpwGVZlU/gl714zc1pHl/T5vGNJ7969sFt8bbxc7nHT9s+t+/5NorARdurGhEQkJraiouX90fGbWQ6ruhyT8PKlv7YMgBsjmEbsxxn0j4SBMNcDrQReHCSDR/N07m3bdly8e5p09qv1xVwBVwBV8AVeKEUcAD8Qinpx3EFXAFXwBVwBX6IAoyAiMej77EIXAQAzDgHi4DAYnOFV2bxDZmJsvx8EUgSMGYZwD13ocA0OKoUADMDeLArGSQXXrj+xKmtUr+4KUIExOeK0fhjBMB0/jIGwuInEdCqwELdgME9SHCpOcsTKKnPIxO0i4OQCA7SJmkHFIDDH2lDAJwfOhqn75wKB/CB3Vuap57+q7hIN9cocoikggjGPQE5FqHRuWJpEAzCJxK4MAG4BooVFqs7W4vsTRzvC9sWryf4DY5bfd2Ezsa08tKdGF5k4Jl4SvJgGeVA0Bsch3xcALO0MVz1nCQI7lu6ihnpwJ9cxq7vpX2F7lz7m05URrvocQhwJ+djS9371yDnHv5Fzv6mG45h7uYeOJfn5Xzw/iBjOdMq4viaS9adcfG0ulSZEfzYgeTEtqq2oB1PRYNtQQO8GhEhL4FUMxBsIKXjoFQlDn5GMUdYCJA81Wbxfegvd+J1d9SD9g6Hvs/tY1yLwA0FAMvY7HJ8Q78X/t6LNQp9mOOd46WNdFWF3XM5nvoTOFpKk6/PxAGMHOBH07jyInDPrXl8L1fAFXAFXAFX4FkVcADsHcMVcAVcAVfAFVhiBa7YdWhbVJfXEQBLdCe++FoROIsSSEMWrXl/JRKUy+jpqsLWRQwElmQO4BAlLMV2mD0bw3k6Myxugy/rwsvWveL+Jb60FXN4iYDYe/DzxWj00THcgTEiOOj+tcgHzQNW0DtxkDISQuGubQIXmT1rbULde8WlzAFsERBHk3g6IiAAgNunjwAAJ+IAbrjMHhoxo1eqPgXHLtCbSEkFCVnrykJZNavVnK50/lnfF1AEiEvt7TEDsA3BEeFrcMxOMrMtFxtLyJk3KjAp7BsiFORYtlQdhNCcvf33tbgFyRC2NmecaZgoII/l+3Ppuj5Px/DEItx/Xd8B3R84Cx/vAWCbjAj3AE5EUFXpnzhAxhMeI1Qmy//mkvVnXDitAHiRlunf7tuXV82jg3gwm83Mj9M6K9N5UF8Wz+O+LKqXVDms/UdxS147ik48c/49eBj6LfJ1r5jb2zE/UQLgOJrpHMAcY5LEXCLageOMQ35BZEpw/3Occfxp+T2OSnHXS6a33Fr1/ktCr2OHleUwEZQOHonb0VtPPfWCe475xfobugKugCvgCrgCq0QBB8CrpCH9MlwBV8AVcAWWrwKX7zp0ZlSNrqvTwVoDwAaGhCfKF91JiukC8BXApMYOTJaaa+X6sHydRcvwfMKCclg+Oxzmt1XDzAFwr0tc3rZFvOfQ7xbV6CNlmqGSEyCEFBFTgEtnmgJg5oOqi40/WVRKs2dRFYrOywB7+Vr5mxESIW+URckIMzIpAldHa9LswVEenzMNReC+eO/dm5MjR6+K8mxTDWc1ax2S/QK1aZEtxcGdU3rC2tQR2IHSEAlBoNTlAbPfm8OQv/fA0qSJFzq37fE4FEvU10wKTvHctP3CUnVjfwaoDAwHwCsRLewfPIqAY/0ntP1DejHclYkEuh7D/owbETqMTZIIQr97NkewHDc4ivl7P49YMoe5zB7uX7qT0c9QyS791qUbtl0wTREQy/duPx1nphEQyfayHUsGMMfZpBAcf7d8+sl4WTCxwuk3iYXRe6Y5/KVAHCJOuHWrADBpGqfDx5Jo9JatW89f9Xnq09GD/CpdAVfAFXAFjocCDoCPh+r+nq6AK+AKuAJTpcBf7Dx4RtaOryuTwQlNKAInebI90IOF3MF9OoFU+iVapbKECP2yLC62bqk6C5MRkKWAZmlV0gG8a4QIiPd7BETXzwiAk90Hfj8ty18hAKYDuJKMWAUVyheBKZk3GYoaSfsAESpsDyAjHNGcp3S0CjAW+MuM2CYq0EQ52nNNkj00n0dnTwsAjgCA0yzbVLJvQ4+aNkD+BAyXfguXbt8RS+hDANSHnXT+SmQEgxkEoOo4kcJvvc1g0iReQt3BBmItxoFtor8v/CfvpOibPo631Z+La8WFvxnVIhA5AGXL5iXUXXD+NqbDuapXnOg5REawl/0Qn6n1xT4UtuvpHOp0UDP7lxNHOFbWNDzlb192yuvOcwC8oIv4H0uowG17vrU1bvMdVVQOef/TIo5hzHKo9yZIZLVKb9JG+nnIDOYEG1evdH0fKwL4O3OAFzqAiyfSuH7zli3negbwErarH9oVcAVcAVdgdSvgAHh1t69fnSvgCrgCrsAyUOBKAGAUKkIEhAJgLhG3SvT8XQASMmX5mC1hlwJUsrQ8LD3vrU42JyqdUvq8FsBKGhQqq5gBPNw5XyQXOwCeND4BcHTPgd/LR6NfLdMCRl/1pPYBW848DRb5ItQL3JGAUgCeZViGfGD4LkMsgWXUSmprlON5OrFRVipamxcPjYtkKgDwX+6/a1M7P7oKnVgjIKhTgKHUz2I1NCsXKbqddVb7t0HULsph8bgNAKnvtO2DYgPHXYSEvTcKUlmms405AUwBzIqjludnEy0/BABbLTmLCOk7gK2/COgK0RWdwz9cB93Acp34P9Qik78Tm9kxh39w/jYBeJszvcYZc0sDEG95XSggmbcp3r799vs2nukAeBnc66flFAQAJ4Pt4/FoJs208Jt8BnWTGyEShY+zT9vnWIh2sPFu41U/3nj/zKMS905mtHMM0aGP2ynux8WTWTJ+y+bNF9w1LRr7dboCroAr4Aq4Ai+0Ag6AX2hF/XiugCvgCrgCrsAiBa7YcfB01By6vuo5gDNCMhbDMQfq4ogHi4QAUxLQFQCwOau6DGB+QWb0A2uawQGclPOIgBjsjPP0oos3nnjIG0MVYAbw3j33/W42nv81AcAoLiQMN+g6iQTQwmN8XOuHKRA2p6npbu5hA32yhBnOTGYGZ3i/HMBuJokBgLPpAcBz46uiLEMROLimAwDu9z8rlsZICM30xQRHTLUUELM9JHaD8Ql0DVvuLp5/NndsPwqiD5R4PHtOgFSvCFww+naO334GtJxIiIAIvGpSnDE4gPsu437EA8mXnvfCiAoNnphkBts/vOW1YYJH+teiQnEsbNctgafLPPxNICxAmw5JAOCs4Ru3375042sdAPvN7pgpwAzgJpq9FU5dAcB07IqrF9EkFrUiY5ATGey/6OEyAcNJkjAm9JdJXAT3M4DMaHDNBOfnW4JkmeGTaTznAPiYtbC/kSvgCrgCrsBqVMAB8GpsVb8mV8AVcAVcgWWlAAFw04yub/KZzgFscMvciVyiriBooeOXf6t7Ui/JYCQdwuaGtKXpBoDXDIY7qnz2oktPWfvAshLiOJ5MAMCfS0ejj1VZjggIIlrN8OVmDksDbFqgiJsu3efzhBNdZEFoL2ZWcqsI39VSHA1wyAx/z6Txg+M8m4oM4K/s23dKMjpydZTnm8dwVzfUh/ynF3dg7ll1BGoIg2Yu96Mb1B2sWnMP6C/xDVokivsTFPGPPpiP8J70HDcgR+oc1DcWiC+Dh8vQ8RjiUqT4nAHX4MBNszDOsBsBNSqGafOHbtAVtcLrNTtancWdQ9z6tkW5BMevPdzBaouysMwJG9NhgBsA6+f+du7ocGzLAY6YA4wICJzI34YM4IU5GcdxvPlbr24FmAGMpPPtdVsOCX45YVahAGlYLyEXz8foWO9HmvTHgfRrdHS7L7AAnKyAQb+W/s9YHd4f6iTK0sGTdXL0zWduvvDu1a2sX50r4Aq4Aq6AK7B0CjgAXjpt/ciugCvgCrgCroAo8Be333dqWlY3wAH8on4EBJ+bLGlXR2DaATFaf/ExLUhnQtEMGKt7NcQVhGzSDFgrG4+j4QDZjMVaB8C9/mcAGPp8bJwgiAAA2EAjd1NQiDYI5C2YT3sZtZpvmcKxKvAdbcP925BZySX7AuawD/fIm3G0JssfnEvjs9+3fv2qL1z0xUN7N6ZPHb06zrItJfKVW0JgmbhY+E9Ng72TteIhGzfsp05she0aqhFeD63prp4AYH2cy8XzHMvGEX9SoPgc9ZdXSs21AJBDgSpCXLaRnAPHlrl9sT+fk/btgH9wKBMWV8zYDk58wCkDyITAPEcF2roRYsnxe31vgQbPAoBtV1PKIiIWg99uP4IynFMC9ssicDghFoE7H/s7APbPnGOiwG0HvrU1KovtZT2a4eoTzf+Fm1c+01gykQUzGW2E1RDYwVZOLJ4IoWO+y/HGa9NQBE76vhyMB08wtodPVcmRsxwAH5Pm9TdxBVwBV8AVWKUKOABepQ3rl+UKuAKugCuwfBS4fNdDW5J67sY6KV4MRCtMV5a3csl4OE0zHPYdk/bFmLuw6JuAp5JZwTyGFrfiF2ZuPFJO/lOOEAFRIAJiLSIgZj0CIuhLAHzP3fd9Pq/mP8oIiCSFA9iWGUP0kjEapIbBIcqXSWG34ESVCILgAOaDjIDgRqcpn+PfdAMzm1UiIBQAPzCfJedMDQB+/Omro6LYUuWZZCiby1ZAMNFrWBKugNTCGCbj1JyCfWAqaRECh9Xxqym6CzdzzwvAD2PLikgZhLaoj/67dnENGDdmyDVA3H8Hvm/nJO7ZmuV8ehBZ+kMY013ROMYC9x3FvBID0LwaFnRj3wqPLwbmMrb5fDhOQxDOewcywxkBkcKu3MTxty/b+NpzHQAvn3v+aj+TXQe+uaUeDbZXbbkmSTC+pTiixTvozwURJ50zXjOBWfxt8Ta5xzJTOEweMTMfYywFAI6z8VtO33TenatdW78+V8AVcAVcAVdgqRRwALxUyvpxXQFXwBVwBVyBoMAXdjy4qa6P3NzmMwKAaU80J69YFbFZBqgB4AUQLLgiZUdbMhvAI5fDK0CCA5VLblEErsjzneWMF4Hrd0BxAO8++Nl0PPdxRkAQABNLms4VM2iBLAkABcyHfyHZ3wL7RGsW8etHRiioICyWSAJQRQLgtJqP1hYFAHA6HQB4LxzA84cZAbGlgSO3ARQiFO9yfEO/pcaib6+4Xj/KpA982X6TJIVQRA2Q/ZnO4onfNkeUQ+fADfmjusRcIxu6DGCBt+GvHgCeFLGa9B6+vh8ZoedvWcU6/uwaeETJOMYv0rfCDA8nbASISWzE5Hw76B2AWb/PdnEv6JtWLC7G9fEcayy3FwAMLo6jfufSjdve4wDYP3KOlQI77/3rzVG5ZgcBMDqiTI41iL2x6BXp1/Ig7oXI/mVOvUyQyeMExpPij/KxFoAvU38lDzwAY7UBZxg3AwfAx6px/X1cAVfAFXAFVq0CDoBXbdP6hbkCroAr4AosFwUuv+OBU+LR/M1VOniJBgTwS7FC4CoAXHieBOx0wEyW1OoSdnULAy4SPMFo1RWAkzjU8FGO/VHWTADwYJDvKofphe9ff+LB5aLB8T6Pb7Zt9jAB8NzRT0SDmbhCXnDoAAAgAElEQVQmlGA74D8CCYF2orZujHSQv3sQU5+xTGB1pE6AsQI+OjNTtgWKIs0OBgfnkvidP71hwz3H+/qX+v2/CAAczz15dTaY2VLCzl5bET3qi+3ZnK0LQKh14wB+Js8pkO+7gwUOGUSVfGCLQ6ELUcdK955oCy0+p87ZmriUjRyAkx2bPKr7nSC/n+Eg/UGft+JtBnYNVFmRxhZQVo5jyRXdz8k18NyUEU8e6xzDoaHMEdwHxrwOLqcXRzL6V8ouWqJjF+m1l67f9m68LwXwzRVYcgXoAE6qmR0lisDVCaNQQnQLJz1wD9S/6chnFAT7rDwiY5AguKrUCTwBvdp1GbHD5/i4FErl61oA4HjwZJtWyAB+t2cAL3nr+hu4Aq6AK+AKrFYFHACv1pb163IFXAFXwBVYNgp88fZDG5uqvHkc5y9lBnCML8RWKb1zoQZoZeCJeYrqnArZpCGjlEvpudFtxS1OgH3FzagAOKEDuMh34evzRZed9or7l40Ix/lECIAf2H3/78yMx58EiI/bXAEwi76JnnSliWNTf1pROHWtAcYH0IgnugxYXZqvpFBfTwcw/6+iAq8ZJsn9dZa+86KNG/ce58tf8rdnEbjm6OGr0yLbXEPbSiYnGPSgwHKBo73ngLUTo//a9iHonIDPZ/+nKgHwQtCq7cDl4gLmLVMlOHWZJszHFQBrwTiOQdZQEyLMPOfeefYBcNf28oqQLWzF4QxOh5kDAmAZlwECp8EZ3ufJAncXpfVyAii24Gm+PgizwAXMiSDrbwEAp02CS26uu2zj685xALzk3dzfICiwY+83T0+b4c3jtpxh3AvvkbT7thi7WhgzxECE6BaiYBkTIWqnH62jAzfMXYSlF50jGAevmyTKs5kn0mj+rK1bz1/1eereyVwBV8AVcAVcgaVSwAHwUinrx3UFXAFXwBVwBYICBMBtOb65TIqXVixqQxcUCmWpkze4AAOwoqOUDihCKub7mvPRAFkSQDGiatVxGv6nI5BF4OJSisDdBq/ghQ6AJ11QHMB7Hvw3xXjuN8ZpFhO2JSgEh1paC5yfWGEvfzMSooGhknKbU03AIZffEwMCTIgjlCAObUZgLFXv8VTO/+sRM4Dvq+PmnPM3bdq/2gcDAXCLCIi0KDYzA1gK5fWya/uRn51rtgeCu/4dloCzAKI6ffWfqn1ArPEpCpzSEKlgmcKa04zXEUqR1hPIq+U3AGbN3jYgLCOQYCoAYoX6E8fygudltAYAHM6rG39h2XoOZz+jLwxmG+jSooELXcC8Li06Bwd6iMaYeND1qqXoHd/T6rsBkEl/kwgITPoAAOMQ16/d+Ppzzo1jnRXyzRVYYgV27vvWGVFd3DyuxkNEqkvEigJe/dmtnAhj3CZ1FOxqMUYONARYy5na2Mg46YlCi/a5x4kSrpohAK7j8Zu3bTl39xJfmh/eFXAFXAFXwBVYtQo4AF61TesX5gq4Aq6AK7BcFBAH8HiMCAgFwARjjIDQL776EwvV5UuxOP6C/2/BsvewBJ0AmI9zr4ljkT5ifKmGK7gdzUdrZga31TPZhZetcwew9QEC4If2HPrtfHT0U3WuReAqQMQYPy3WQRy8+IvQr6ta37OCiisVcEKiBNBuAvm6qA46TPEcgGOB1ihYBC7P70W7vmsaAPAXD+3dmDx55Jo4yzoATKe7mNODs5bF2vogyNqmgz3s42F/AmDZzCkbgLA+SPev7Ng5hTWaASMoWG0FmOL//ljqxylIs4pzMTiHQwE5BbL6GCcB7DVS+43/y5jVczMXr0wEyGQOl7A/+13HMoQFfPGyDILJmOdkQ8iStuwIc1AGAEwhVDskTHOJPfsa3MYCgOPo+lk4gB0AP7v2/ugLrwABcF3nNzd1NYzZ6Qlz6eLF/Q/za1GDiUiuYOEEjY0NG1d6HwUoltkRvY/KZxrHcxhbhMAp+roMK0ZAZMUTeTxyB/AL35R+RFfAFXAFXIEpUsAB8BQ1tl+qK+AKuAKuwPFRgBnA6Wh0kwFggjGCRvlC3Fv2zbMjwOocjkKpJqBXvijD+qtZppNK6+IUxJ7iAEbxsUEBB/BM4QC419wCgPcCAM9NALC6SkOmamgPdXTSdclCRQoaFVyEwkQAFgnd22S/zKlEZiXdmzXcmNyHDuIUbZTDCTebFQeA9d95/qZXr3oH8Bf279+UHnn6qjhPN9fM7qSO0EkiGQQO0c1rmgEKhX+BSqQBJkMIQW0TEMQICboFQ4REf+SKs7e3LcwS1QkVc8wasNUl6hxbWQBO6jK0qAYWYRTAyjEopaw4JaOREuwOdu7h6F0mcAeBLQICL5JjhP4hY5m/h8uzjGl7XuNGLCCCOeA6BcHHNMoiOIDtXKmN5FDgesoabnN4zuEAvnTD6872CIjjc3+fxnclAG7q4S1tWw4k/zoAYH4+EQDTASyfZwZ0NctIHL+8RzZhpsYmPU1DOv51glPHgtw/mjTKi+ETJSIgXucRENPY3fyaXQFXwBVwBV4gBRwAv0BC+mFcAVfAFXAFXIEfpsDl21EErp2/qckGL2VSL78aZyzmtOhTWCGZLVcnrZo4o7q4h8CKCC/tCzb8Vvp7VCF6YCwAuB4iAsIdwF2TEAAzA3gwnv9kleUwXiMxWfRXB1q31D8ACEIKyYxltAaApgFEaR86WQPgYxE5FpDTGAG4MgE+csILtMOaJEMGcDQVGcB/CQBcHkURuGKwqaLzl5MUEgOhTdC5gIPL3fqzRSQYEDKXoHboCQDu3PB4gQBii+bonMGBsMItyI0IVaMeAOtDXrZmaiuMNmsxiyhmOfqAwGm4Drk/9wnOb56BREjALS7A3xyNXcZwiKroMrqZLyxXPIFfkhuhQnQTP+F5A+HyHK+J54Hrtv5lHdiul4/z/Ng/6xH6JqrtZWl2/fs2bJsaAIx2SG+LbkvPjM6slwp64z2S3bt35/dt2VK7s/qZn2zb7/nOaQCz29u4HrCvc6zKhA3uf3IflLichRBYxh06sMSv2ExImNC08Z0y85eTaToQZPzSARzF+WN50r751FPfueoLaj5TbX/EFXAFXAFXwBV4YRRwAPzC6OhHcQVcAVfAFXAFfqgCix3AdP1qfEBYbg4HpBal0u+9tnFprcKoycc1HZO25FwBFxyKAYqlCdxX5Xw0BACuHAAvaA8C4Ad3H/xsMZr/RF2gCBwAvIB4OHgXOEqNTATXqoFCAkGBvFWIHQhtQpcaowIEaDKOFdCD/tEM7YAM4PurtJ0KAPzFe+/dnMw9dVWbZZvanAhcM4A1OoGOdU5u4DE6BEMRRHmuFxEh/V9I/CTaweA6n+vDYQPuCpYnoDlutChi5woOMQ/mppVjhLaVpehS1E/5LOEVjYrqwOcvaFMCLXHqa4Yvl7jbQOXfFhnRASxxMy8sKMf9DfQmXXawXo+cjiyBD31IuZcCYEoRerElkSgAxvJ5FrdDBESOCAi8/PrZDdMRAXHtgWtnDj4++sU8SV6HGJfHkri5BYnqdyRZ8ng7mD0yGETj6Mia6qSNR5u5aK59OnpT+55JkIh0oyCpmMP/Fv+fvHt3+mj06GAuS9ZUZY1JumYTutRZzag6pW7aPS8ZZn9wzunnPO0fcRMFbjnwra1pOdiBlShDBhjJ7IWM7xDtQHEhYp7kAnQ7JzAm1GyFi9wzxRjM8cqPQzqHQ5yKhP/i77jA83AAZ4NH22z+rDNOOXeft4Mr4Aq4Aq6AK+AKPD8FHAA/P938Va6AK+AKuAKuwHNWIDiAb4QD+GXjGl9q4SgVV2GAjfLlOBR5ssxSHpwxD3yKTkr7At05H8VNpaDMYFjG1eDjuWiQZw6AF7UOAfAjew59Jp2f+3UCYKxTlj1qAl1dZd9pLLmUEFqzKxXMMaOVmy5LBugIQFCX7LOtdLk+wVyGfRH5Ea0dFgfmmuRdl5zyE/uec2dZoTsSAMdHD18NO+opTaEF8qiJZfmCVXYOWi2spxdq4NScsdRT+zPAa9hHtA3H68c92MQHnbv6Gk6kqIPX9uuKpwVdCfvNfSwP0ZEokSpaeHFxBrFCYYXB0v6GZMNMDYGVAedwRaG/KBPrb7qfRbrY9VvfU2cvr0ABMJfBLwTAC+IiANpYcGvQpC0CrW+YXX/m2dPgVP3qnde+pp2bv3J25oQ3oNgehlt9GPnPT5Rt9EiSxQ+g5z2MzI5HEUtwBF1pDgo+jb71ZIPf0ybGaIe1N2o4VZbHTTMLTV+CNv0JQMoNOBj+j09CX3tplsRruetofrw3nU0uvsCdpwv68k0HvrklHQ93YDjM8BOqRH8sckx9sV+yn/c6vxbJxBiWsROiIMLECseP3l/1M463WRkHnWuen5NZlKVDB8Ar9LPBT9sVcAVcAVdg+SjgAHj5tIWfiSvgCrgCrsAqVYAAOGlHN9ZZ8bISJIKWQ1kiSwciAJTBXQPBnSNKlqobKAoQuHMgTpbHC7iiCxiFxzwC4tk7kQLg+z+Tjca/XqEIHINdDTAS7dKBLSAiLODXbGDAQhbbCnEGAgADyKQTUxzYAjO1sB+3lpERoBjZGBEQRX6gTPKpAMBfPrB7S314dHWbJhvbIgdURyAJ3euEOr2IDYLczuUON7BoFiYzxFHLSIceHLa86xTglK7iBiSZx9aCaPpaaws5GNqiD4AN4FumLh30MvkSNroTCe7FIYzsUoPD5uK15wmC+2ORF2HASt+WUROMAJkUupP+sqB4nZgkw3gPES4BILPbSbQFIzJ6kz7ytkGwLgZDnOilAOBhmyFtI7lxzfpt75gGAPyN3devq0blNwYzw9MxCROzPbW9lTi2oMHMjW3YUfg796BQcQwyiQ4HNymdqTFEQ0HNPG7R6lKrjOU1xe2NhRechJCCkG05Vx5M0vr8804/585V+vH0vC5r573f3VxX6U5IJACYk5UyHkMMhIyJHgRm47D/5mFsy6QKx24otGgTQjlm4zjm+LhOqKEta35WFo9jyu4sj4B4Xs3lL3IFXAFXwBVwBfSfya6DK+AKuAKugCvgCiytAoyASEZjOIAVABOKyZdbWVIuJHHiIgQ8FDCML9SEVgYcOzAVoFl3xuIAxmFQNb2AAzhmBMQw8wzgRU0qAHj3/Z+BM1cAMJaPdzEFBA7MVKXulUUAMFqDUIP/WDI3K48psIk+UgWA6mojZlSoSGDMCIiiAgDO0vuqbPCuiza+au/S9rDjf/QrDuzZGj89d1VS5BsrxiBQDoGfqp9lLGthPYXAFmcibl30a3k85Aabg7d/ZQKGuSzcolHE+av2bRbi6yZU8P5alE9bxjY5jwCczLWrLu8AZa1YHcG+jMFJlASLxPWjHcAIFRpbkUZ0IDkWuKNN6Kg7PyxxD3M5pkOXRIAH5FqNinOCJ7iNJe6B1mntWHo+7GeEk3QmY7KhIACOoptfteG1bz8rjsvj3xOW9gz+cv8Nm5oj428MhsPNNdMvQptaG7I9ukzuEDsS+hJ3FsAuwBh9hJu2kMZu8J5rDm/mRqd0o46aQ9kwPfe8TW92ANxr2h37v72prgYAwNUa3g/RG2WsCQCWDyQdj51LP7wWH1EysdbfZFgzOoefiWGCk+M3AQxme9QVx+PwsTyeRwbwBZ4BvLRDzI/uCrgCroArsIoVcAC8ihvXL80VcAVcAVdgeSjwhdsObmhH5U1NMXj5GA40eMzgElUA0TmgFq8Xly/FGvOggGhyLeaWUkegfH2WL8opisAl1SgaDlAEbibzInC95l/sAGYROHGLklUQ5nYOT3OHhsgHqoudFPhqFAF1J2QySGiOUs2UBZQjWKoRAZFl983H2TunIQJCAfDhq5NiuIEAuAGk5UQHmWjf4U7Qzo0gWH4anw2AUxywAl7FjylFERXMowXMZS1OWcvONZf8JPbBCqgJHAzv049pEJBrwJi/h33oYDTwzDHaP08CLZuEkX0MLANcs0igFWcTZBVcz3qlltmtPw0wGvClw1H2ChnACiInENkWAcATGQ7HCSM8Tz0gbo6183C/3rp5Q/y2bfG28fK44y3dWXx1742nR6PRVflgeDLc5khxmAB+bS8OvglQt4kFeU4mGMJ9NYxjmIgFqnf3YekPOskjMHPcPJTOxOdesOFtty3dVa28I9+y93sbkyr7AYrAzeJmFyYwFABrf6azHu1gcSwy0QnAzvaRSY6F+ShtGF857stsC3PxS9HNGqMqLR6Ni9IzgFdeV/EzdgVcAVfAFVhGCjgAXkaN4afiCrgCroArsDoVuHzXwfXxGAA4L15BABzDfdo5R4MjcULCJhBD1LCib13toolGfVBEoJbF+NKNDEYC4KqJL7zstFfcvzoV/dGvigD4oXsO/U4xP/9JjYCAAzg4La0YmUEiBYKTzF8+bhmWliHLZ80RaiA4A0EE80BxrirK6nE0AwfwOMmnCgBHWbGhzjAVQRInDlh1uhtkZb+XpeGh35uDVjJvCXbR36VfEyJj5T7JKp2BEv8AzS0ruO/kVf3VVdiPSbDYh35v0XPBM10bG7CdgGCGqxjUN2OuAEE6foMbXNzhvSiJiWN4Ei+hINjeXTVgvIC+twEwA97mlF4Y+2KL9SwjlY5gdUyPBWZmuBS8963p+sHb3xdvHf3oI2NlveIr+6/fFh+urylmB69EpoNGubAImW28X9IBHiJdpE+ZiTr0Q5kYCO0i9+HAkK2t1WGO1AjA/WQcP1oX6XmXbHrTjpWl1NKeLQFw2hQ762a8NoZVmv8ZNLdMblkXESZDwHdl3FsES42JMmsHaR+Kj7ZjHocUPrUJNr4OhR2zfPAwHN9nbdt8zr1Le2V+dFfAFXAFXAFXYPUq4AB49batX5kr4Aq4Aq7AMlHgv+98dF1WHb2pzQcnloQPwL90AMvydcKocJ7yBVmIEWFTAEJkG3BOLVgSHwqPGTTWJbc8KpYtCwBO3QG8qO1vbNt8924A4NHcJ6QIXFJ0EKi/qxXZY9E3BXUKCJVZTuICukxZaS9oL6AjOLEJBxHFQQBcpsVUAOAr9+w5tR0dvirKBxuqnGW2NLM3odOaXZjBGIRqgDzM2p1gUo3eEFc1l32jv6fBJiwQKGTimiOYUScChBc5iwmdBNoF4CRwXv6VG4r2LVp23o93sPY36CTnG8itnZtCRnYCHBGA24rFTdzfwRlOaBiunYdQDq5adE5oPFZjP8k17grMhegHc/wH66/5WzujtDiTcTQAYMZAoGge6u6l25OTi7dNAwC+8t4bXpsdrf+6GOQnwQEsznABiWwzxriwiYKLut+upn2/beUxRorY/VciNnQTByuH/3z7aFNk51+86Y3bl8nHybI4DQLguEp2oq7eWs6DKACm45dF4DT+QfqpFXnD4whaDrEpC92/9tlG7ZPgyOf4UMc87xtpVGSDh6vkKADwex0AL4se4CfhCrgCroArsBIVcAC8ElvNz9kVcAVcAVdgRSlAAJzXczfVaS4AuAWpyJOcX3cFAAtwEIAxcSF2wAKwV5ec634EaQYiBSwhq1K+bAMkZTxKORfNDPNddZte5A7gSTchAN6z+4HPFuO5jwsATjPEOPSyl8OuBPOiLwGwQECFFotdhOYg7OID6HYT5oH8X7xMojiy9N5RnL3r0k2v3r+iOuzzONkr7wMAfmoeADgVAFxTO8kADoXVQr8d0NmLPmtZwH0Xu8RrSJSoxmtIIblxqYA4TIIsiFFgzm8HTA06cZBogUQCZQPBkyX+lvc6yfcNw08zS8WBCOexWW/5CyMXAsBF3EK3PN3grzrBw9J3ZpYSfDMTWCIsgpi9YnACqUPf6wBzPwM4vISvt4kgi79QDzSur0HcL3NWAYDTNNm59uTZt54bnzL/PJpuRb3kS/tvPjOZG31zODM8qZLbnqbPWiaz3TdtXP6wi5vcX/WrEDOerW9J/ADHM/vhuHksGqQXvHfjm29ZUUIt8ckSAEdlvLNN6rXi/LX+Gz7P+FgfAOvvmPwx2h4mSjTrN+QxY1xweqMsUeBQxmKMiVLcpxFskqXFw+DA7gBe4nb1w7sCroAr4AqsbgUcAK/u9vWrcwVcAVfAFVgGCnwJALiEAxhF4E4E+hKwmKeFOtcs5DOEoS5w+pJMGWlcdB0d+CW8IAgWGIRMUHxbFgdwiwxgj4DoVHsmACagA2QMbmrzYXfRlAE42gGsyFsUnGmTnFkJJZDdpAAcuSfaghEQs4N8f1kn77xoy2sOLINuuKSnQADcPDl3NTr2+qjIJQKCDk2LaJVyeQQ8zFcVp7sVR1MIb5nYEvQAOEoIJ0WhxHU7yQylIzBlFrPwpPrpqqyeiJOkbmEZFKbKcRDDZxyCXDm+jMESpwqXwo8S4EkySmvNAYnF7sktZP+Kf1iCKYhrBVgnqbxrmJBBO7OxOU8gddlAYvEIfhnERf7yOo6GciLyds8W+TD5J7hmJZvjMayGXxT5MnEAB1txpQA4begATn4wu37tW6YBAF+BDODBuPpWNihOQj1NbaEFPXui5cIOH8boolHQdwZr62t/pJM1o9t73DweD7PzHQAvFO7me767IanTnXU0PiGRzGXt5+LY5xRIKGbKsduP1IFbPWT86sQl9ba+L+MwjBdGRsgkEFYQtBUnhIqHcLN+s0dALOlt3A/uCrgCroArsMoVcAC8yhvYL88VcAVcAVfg+CtAB3BaHbmpSYsTa1mnnEQZHMACGvilV9aKW5EndZxKTmp4rg+B9TW67HnintR9EzgrBQAX2W11lDsA7jW9RkAc/J3BePSJMsvjGMv46QAGTpS9jLMvqE3ENgEgNp25jz0/cQCz/dSJKEXEAIhzvI4AeE2R7q+abCoA8OX33HNaOj93VQwAzCJwLRywLJQnDmD+DcEMAAOTEvNo64QoB+pqblh5NoBWA8BMPhCN2WItWG8bjaJB9ifgyX8G1nsE1cDqKthwU+xIAoz3b/OiaMvxuPv3LlzG8nudlGI7bEq8Kx7j/9UCGgjAGrakSZssb8GhFGenTd5EA30yCXZ8vh6xFzzmK3Bpv4bHf7qEgZGdQl2Oev0232PXR43kcUkS0Yxh26TQYPhDXK4BFBM8M2e6B4B3rlk3HQ7gKw7csnVmbvydbDg4qWLwAIm+6SITYRMc3OXI9gD84i8+iwGw9FFiSMYYVBjHZft4UyQOgHv3Uv668/5vrWvm1+xsotGL2Uklt5cgGBEt4qTmvZATPTbMQzwLXytdXSY8dGWF9WtO+MiYlAxgLZgojvyan5fFA0U0/+atW8+9b9Gp+J+ugCvgCrgCroAr8BwVcAD8HIXy3VwBV8AVcAVcgeergGQA10/f2ObDk+ZhDWQRuBBzKkDLtgVONjpQCS5k6Tj2CE5VcVcZNJJq9VqwSuAYAHDWAABn2e3zaXHhh7a+3L8sB3G/iSJwD+459G9myvFvjBOENBDIwV02SWB+Zusyr5ZL/tVMqs62LoKDUDNEQ/A5PQ5cq/iRoh0K/D/M4v0IhHjXeze/etXnVhIAJ3NHr0qKTABwQ91EI+2fdXC4MqZEo07ChIcAYLqDF8IgiWMQ828/T5TtgbJxqIQWl83hZmbwK//g1Rv+H7LX5zs2X+jXoU8kX7n/zk+lTfvrKDI4Q3dvHfqPTdr084cN7Np5cMz3YzEs+qGLOJCwAvRHAcDqhEYExI5k3eCt05AB/OUDN21JjlTX5jOcTMOIDHoZKe8yfIOg/FsAYyieZ0TS7rWM4tCxHe6lQuLVda4REPXj9TA9/30eAbFgqNx64NrXxFXxg7oevcQmZ8zJrpMWGLeMuGfsAztvb+NjjFlpMDFC578VcRTHPz7nOF40VoWvxRwKisClaXEoGTRvPm3dO7yw6Qt90/LjuQKugCvgCkyNAg6Ap6ap/UJdAVfAFXAFjpcCX9j+6MlN+zSKwA1PGrf4VgzwSACsS2afBQAL/NWz7ZbW4ouwfHFmfmpwCRqYtOsyADzIs9tHiQPgfnsTAD+y54Hfysfzv1nnM+A+BGkT528/O1QBXIAWIauyg8ABvlsROLoFCTAqtAu3jIiYucwoArd2pthX1em7piEC4oq9e09P5o4gAzhbRwDMjGXGLxDYGmRXAApvOsjQJLta9xErMLY4OIWlkBS9gl2IrrYmJzpyPoxMlXKY/8sPnrzlvx6vcf3D3vcr993+G1kdfbpK4yEBpU7ihDAJswCHFxsA1mXyEiWxwAndRT+E+4XcEAjLATQZUyAAOMlu3bQhetu2eBvSUlf3duV9151aHEm/mw3zV9RxjSJwCgslc5mxIaHQmEJd3kBVV8436EqLcGMN91ACYNFdFmbgngDXr4JHuqyh8dzo8XZN7gB4UbciAG7H6Q+apnxJgqKObAeVW8d4JtZefUxiIbpJS06A0mDNMKRJ5IYUeWT7MfM3AGBpDxaFbHMA4MGDeTR3ljuAV/f49qtzBVwBV8AVWFoFHAAvrb5+dFfAFXAFXAFXILr8zkdeE89LBMQrq5YeSCxpRaEsBROhSFbIFujcf+I+JShbmHBpBcpMVgWXkwiItB5FRZHfhpRhj4Do9T0C4IcAgIvRnABgsaeFGA3uRoAry78l8RW6d5Dd9NefXGKuIFOXMCu8JPhQZzZblzm3EgExyPfVzfQA4OjI4aviIltXI16jFchLmMmJC1n0rUvEpT8T9KiOuoI/RCDgGToAdQxw+TiLnek/VeUQ8hiBENzu4+poNRj+8w9s2PSny+0Wc+X+Xb+VltWnmjwrGvQPu25ltwvNyqLBor5moFJAZLC2StSBCdEDwAijwFxGevOr1p/59rPieJJbsdxEeYHO58r7bj11eLS+NpmRnGUr2McwCF0Ngf8sU3bBpE5gv50Lm3EuUjxz4f01C32UYJgREPG4eqwt8vMvPOUNt75Al7AqDkMA3IyzXVFbvpi3QAJg05aDFL1eVkzIJI7eOXUlAKC66C7F4rhqRZ/l2gqL37DijXxcU4KxYibKH8HylrPO3Myu1/cAACAASURBVHT2/lUhoF+EK+AKuAKugCtwHBRwAHwcRPe3dAVcAVfAFZguBb5w28M/Uc0dvjkZrn3ViBEQgGJSgCpECggUk6I5k4xQgjBu/RRQK4zF/esGldIJiEJuIoEkjFhRVo3wWHRbkg4cAPe6GQHwA3cf+u1idPRTTbFGHMAoHhaAJBM2JkoTACPvNcQ/KKhUyB5gpCxP1sxfIgrdNLLDisClaIfZQbG/adOpiIC4ct9dZ8RHx99o4QBu0AHFYc3+DHRj+ch0Ak+gHAvm6VJ79mFzurPf25JwgezBuWkTIyzZRvdrUo4BgPNf+MCGrZcvt7vJF+75waeLqP3NMomLljEj4jYn8NKJAp1oWLgsns9ZFqpA4fB0EhyqdQCc5gBmPAmLPqZVgyJw+Y3Ddae/41zEGC83LV7o8yEAngEAjgGAq678Gym43i0tU1r7XIhpYUROlznd64PsS8GdavrrugBmeXOiQZzmjzVZ5gB4UUOyCFxcFzubuDohzdoFAFgmbmRmRzO7ZXLMUlq68HSOg6A1JzpDe1kRPs3NxnoKfg7i/ywuHkvy0Vmnb3z33he6T/nxXAFXwBVwBVyBaVHAAfC0tLRfpyvgCrgCrsBxU+DyXQ+9qh7P3xQXw1dXKGhDAJzAAcwvvcxAFHQRiuR0S2WJJggeCRt7Zy6wWICxVk/nkmeBj8Io66gAGM7T5AcATxdfdtorPC8xaEcAfBAAeKYaf6rKCnoopfCbATaB7wbkSRkpJx2sQXw6gqVtggOYjkyDmdyXmZaZOAqx/JlgDg7gmSJF9m/xzmnIAL5y3z4A4MPfiIpcADAd1tQXAFyjS0I7qLuVfxHuQsPwOJeRi44Ab+IQ5D54XtrAQB67Pf7P+FhVHh0Vg5//0IZNVxy3gf1D3viL+3f9dlY1nyrzNCf8RYqIGM6tqJs5T/v9Z5L7G5RiH8T1s09JUazgEpa3pAg4aAyx6ABOsuz6NSefcc40AOAv37/9tOJIfW00TF9GANxNKKC/yL3RJhToCcafCnhloOv4DeOZhfRsjMtP65/4KbEu7GsVXlPXj8dpdp47gBd29h37v72pHq/ZjgyStW1bYqyHCBeZHGO76GQHIx04lgl7dZVEcLyLA/iZG4ty8vV0FHOcSJFO3EhwnMfqon7z6ze8857lNt79fFwBV8AVcAVcgZWigAPgldJSfp6ugCvgCrgCK1YBAuCmHN0Y5YPXIBJAXL0EwJb7SeAgmahhGSxDErtMUMKJAHwXPBYeT7rl4wCPXFLLCIgc2YxxdtH7Tz/x4IoV7QU+cQLgQ3cd/PSgGn+6zgcSRFnJEvsQwSERA1xIPnFmihMzLBG3SAgDwFUoTmaAUvMrCYxQAA7HEgCcJ/vqNp+KDGAC4IQAOEMGMCIgkiwXLWHW7QCwRWxIHESIzCDckWJRlL8Xh2D5oV3yQQBLyLyFvlyeXx6dy/J//LMbN3/hBe4qP/bhrty36/N53XwcADhT9y904OSCRBTo1nee9t/QXJEh6jfsqwnJtsRe5owCAKYDOM3zG2bXnXn2tADg/HBJB/DLNAKCEwaMCNEIAps0iAXw4r5aaRFBuXcCqlN3cZtyBUYvXodxJbKiAvsK/GXUCDpvU7aPJ3nqAHjRqLjx3u9uzkbDW5uoWtvCeE4ArJEuitLFuNtNmGEE9CbMJKKDzYFxXyJmwyIh+DPBC/k8J0tkdQsnhHCXhsv9sSQduwP4x747+QFcAVfAFXAFplkBB8DT3Pp+7a6AK+AKuALHRIE/3/ngK+N6fFOczwAA0wEJQEaIQ9dacPLyi68Bng5YhCW0PEl8JdYv1ESW4TV8vHPAwYGaM3uxGYPBwQHsAHhB24oD+I77fnOmrn6ryoayxl4gW3D20gEs7REymRkB0bWD6KzoLgmAQwqb4TV9QEmYHAEA54k6gNfk2R7Qynefv27dqndiCwA+cvgbLQBwA/hbiwtY3ZcCfAL6VHM1cx0MAhuA15/mhGV/t77dZYvilQTAOeMP6goO4OJ/+tD6TV85JoP4R3iTK/fe9vuDKP7oKG1TKXUlOcDmQFVAJnArTC4QOAoEZ7SLuCf5GnNShn+qW7EycUTHyFKFPnAAF23MInBTFgHRfI8OYAJg9jHdrAiZ6meRAh0Q7sVqyN6Auwbk5ZUykDFugwNVIjoAj9MyehzF/M69eNMbt/8IXWDV70oHcAMHMAEwBqNMcEhGdzCwc4UE759dW4Ts6+Dz75z90o/DxI/8lMkhXXkh+eqSCU4EnD+apPWbPAN41Xctv0BXwBVwBVyBJVTAAfASiuuHdgVcAVfAFXAFqEAAwDcAAK8rsaw4Afyh04yQiy5JAVyEDcxCZfGhEOsgXIJYgo61sESegJJbVWnRsm55PL9w04XajFhgbmcUZxe7A3jS/y5v27S88/7fmKnKzxAAo3AWlhmrO5D+U3HwUuMA4ilz57gWl3VYugxggcbrMmtbODF5DBaHIxzOAaRwZMliHhT5XU02PPfC9avfiX3F3r2nZ0cPX9Vm+bo2L6KKrkvpqsF9GQCmAWCJ2+gD31BEig5rZgcLBAUFMggsXAn7FIBCGTRPy/ro0TXZz/3sazZ9dTndZdBn4i8fuOPfpWXzq2Uep40Uw8P4xrUYlJS5H3FLTmJG4vB8F/WwKGKEAF3AmFysHosAOAMxztL0ppn1294+DQ5gzQBuvhfPZOoADjEQjGDpZ/5SK4uEYIwGHfvSG3u53+yg1ha8ExsAVjc/oCPjCkbNY9VMdN7FJzsA7o+z7fuuO6Utkx2YfxAHsAFgcl7p2yqsRhh10Q+INMETjUDfCai3MW7RKHJv4P2UBSS5YoaxL3H+SJzUb9q2+RzE6vjmCrgCroAr4Aq4As9HAQfAz0c1f40r4Aq4Aq6AK/AjKHDl9gdOGpXzN6TDNetKEh5ALPvSy6roLAgnZjbCCZDHmhmyUtwN36YDyKA/zeAFX2sAmLBMnKfMW8S+WTsGyEx3Vu3aiz505uyhH+E0V/WuAoDvvv/X15TV75TpALWFuCzfnGZ66VK1HpmVojMdbWE5Mt2/3ZLmrjoXzL4sVGRIDm2WA/YJlEMFqbScj4aD4q4qGb7n4o0nrvp2IABOjzx9VZQXHQBWd6Yu6bbNHL4CgAIA7VzsYcm49GnA+AXZ12wPZuICyuU4GCIWjh7J02XnACYA/tK9d/6HtK7+lwrkUQAwroTDXq49hEpbzEC/iOCzDcBJNrCCNQPA0vfY53BwOIABgM+YCgDMDOAcGcDpMHtZSZd0mKixCAI6eKkTgSQ1ZgSETKwFwCtQUeIgzJG9sBifgEdO9hAO8/eqfbxMIncAL+qct+z93sa4QhG4qIYDuInKaCy8l7qZg50v4f1QJjdsojO4e3UFgN4DdCKIk5lqxJbM67DSIo4x2pEjnsb5w+2weeNPnvy2+1b1B5VfnCvgCrgCroArsIQKOABeQnH90K6AK+AKuAKuABW4/O5DJzaHy+vjbLABPjUpQEYQwc2yQPklmSiXX365YJ6uKX4xhtlUnVQElL3MSnO4xchbFdckgEfBhfb1PIHHzipyANzvfQTA47vv/+RsWX12DDs1KmdJkTJxpAlwUAewRUAIvAjQrsv5peMwFIEjLhZTqzB6QvyQHRoAMDJqo2Ge7h4N4vdcNgUREOoAPnJVnSTr4sFQHMAWAWEQs99/1e2nkI6bJKOwn3MlOUaIGN0tV1SWiGvhM44XwF/08+boXJ5++EMbN/+P5XSXIQC+cv9t/xExFf9yjLkEhH13LlXGO9g1PRMAayFBdaT/8C0N94IaUSPEmnQA401uXLNx2zumxQE8PBp9jwC4AnjkGBRdw8YMWmpYMVOdmbIh6oFkkfpKoiyAcI3n1YWtendRMFY4jg5rrNbA/483WeIAeFGXVAdwtsMAcIVJL7kZWqxJoLmcpLACcXoIc7JbZrAdWFfCxNyfGcCc4MA9mjEQbYM2i4uHoxkHwMvpXufn4gq4Aq6AK7DyFHAAvPLazM/YFXAFXAFXYIUpcOXtT718dORxOIBnNo7IefHFViucAzgK8JLkwy7SoSxLBRJcCh9iCgjPCMWkKjo2Ag4BxOId5vduxA7g7wIZwPgqvaNKTrjYHcCTjiIA+K77Pramrn+3TCUtWfTUrElqaBCJTjRduizRDlbUSLJZFRbROayrm6V0WYBHgJISC0yXKuATAPCaIt0zhwzgaQLAyCNYVyMCAjkkUgCOkxkNobgsvYdyIbO1K7QVCiCKxTpsfac7gSmBncQnBKc7IyDiqjo6nhn+7AfWbfz6crodEAB/8cDtf5RVzS8hAiJBFreMbW4aFbIQfHUAnNcn0Ezd0uaZNuDbh+hyv2AEDA5LB3CWxTcMp6QInERAHGlZBO7lFQSQHOCw2aSZjMvQbwiAuSGqQPeSanoy6BU48jlO4oh7NfixJbMav+O1SdUAAGdeBG7RIGMRuLQstmNQz7IAnyYTqXPX2sEK7XXtEtrKnL+6ckVdwAkmMq2PE/52451zKGicNB48EsXzb3zdlncfWE7j3c/FFXAFXAFXwBVYSQo4AF5JreXn6gq4Aq6AK7AiFbh815Mvq+eevD4ZDDY1cJ+yMJQVvrHib/0LM6ckv1Q3JZ1sTCPQj2xZ1tz7Ik0HqwAOYEmi4ayaR8X0bHsVr73EAfBEVQLg0Z33fXS2qX9PIiAIHoOOCtEN0gUQgb916bhudQmImWUSzyEu7QCUDAqHyFoBwCnda/UIReDSe8Zt8u73bT151S9bFgfwkSNXRQWKwBUDpCCTrtNpqUu6kXKigKjXj8X9Lv2WIA77hoJQ0p8DeBe/fHDFyv51GRUsLkUAPMg/9P51p/zVcropSATEgdv/NwDgfzFGIHQLByP7jMVcGIfkOUukA1kk/08BisWhqmNZ1ZoERKjLfALJWvYxuC1RFA8AOJ2aInAaARFdm6AIHCMgGt7/5KZoedEKITkhxkgWcaSGPsccYPJ15vvG6JAKIieFB7s+x7bhBFDVRFkTPY6Chg6AFw2ymw5cuyUZ59ubtlnDCCMpiinjFuEb4t7VCQ8rZijPhskNi37Rcf/MrVvdwpsqbtIomYomHDyaxOM3egbwcrrb+bm4Aq6AK+AKrDQFHACvtBbz83UFXAFXwBVYcQr82Y4nXhqXT12XFoMt4tNlDmUodCVgR/1mAUiAUAiwIDRKozGWegsshouSAKgKMEmjIlB0LC106bhUsIcjENmz2G/7aHbtxR8+Ze0DK06sJTphAuD5Ow/+2tq6/L0qHYC7E+aqU1DYRFhaT5ZkjlNbFq5gQwEToyK4dZEFAWEYAGZkR8zl+SgCN8ySvXCAvvuiLa9Z9a61CQDO4QCG+5fRGgBwtjqfS7tFRwkKZV8l/KH1Uvu9waDaHLLMcQ1AmAUTLTNY+jnboqrnxnn6sz+zcfPXlqjLPK/DCgDed9v/gYiK/7ku0rgF2JVJA+tj4fpsubxl1lofI7CkG5LXbsDX3P8Eaox7kfxUPI8F8gKAoc8tw/Wnv3UqIiAO7jwjO1x9NxtmL60RAUFfuDmrJ75pQl4DvLy1KpwU5z4GrsJJOtPl1awtKPdbA490q0vyDpzmWdU+QQfwezf+1C3Pq0Os0hfdcuD7W+tRvB3KztAB3N1DQ7E9y1gmbG90mYveQ8M4kH7MpuGkjhiBNfIoobs9ZABLu+KlbI0sLh5J4tKLwK3S/uSX5Qq4Aq6AK3BsFHAAfGx09ndxBVwBV8AVmGIFvnjL4y85Wj99XTYYbG2iAdISEdVQZFHJb7fdF2L9SCYo00gIPpfIPuYUJLggALYl8pIlLOAyADW43gpED+A7963j2bWXOACedDrAh+RP7z74kdmy/Ld1NkwaAkYWLAKxJXyQpch4bJIJrM7TDkJ27kuFweZkncSP6utTtA+QnwLgPNtdNsm5U+MARgZwlAMAE3oyZxUdMSEERiGu0LkFABPOscyegEwiIPnVHIT604C8uIcDACZMogOY6dlJVc+P8uJDP7Nx47IDwF/cu+uP06b9RQJgasAJnSoUwuO1s0/lubp5W0JGxkRYBASdrBL8HfpZ6JfmVqdOUlQLmiZ4TQ7SBph56ys3nPnWs+K4XO232csP7Tpz5nBJAPwSi3/QsajOfBmDATZSCwPplkOrWqvTWiZ0CBhlnJed05zuX/6fMnqgJABOHAAv6lh0AEejbAcmN2YIe6WgpuR6hwlLFuizeAc8XkJfTmjQcc0Bb+NdV1BobIRMcLAlOblp40EmiJjVPng4GrZeBG61D3C/PlfAFXAFXIElVcAB8JLK6wd3BVwBV8AVcAVQBG7PYy+uHj/y/STPTqvjIb4DE4xZ4aFQNZ1QK4AIg18GgQQIB4AkjwF4mCNV99X82QxfojOCjDS+JZqZveT9m9Y+6PqrAgTA/+9dh/7XtdX431dpnrBImcQxh0xlW3ZvS/KFUxBULtI6oMxOVmsHi5AgAM5ZvAxRHDNZctd8kZ43LRnAydzhq5IsX9dkhRSBYz+nva/LvWU/ZkQGdQ3uXl3Cz6XeC5U1VzDbhVjIIlNI7AZ0DY7G82WR/ez7l2ERuC/vvfOPs7b9xTFDuXFtNblYAFsEkAS4XS4q84x7wJKRMDLBQ6QmYzusDAjZETAYI08ZE0FjTPSAjBUIt00BgE+aEgB8JRzAgyPNd5MieykLj0lBNzpGw4oKgkXN7q4mrv0A3emsZv+h3jKxI+ECutFhDh21r/IY/I8REHXyRJW25154yhtu9XvpRIEb9t+wKR3FO+qknsVCFUz2hNiS8DklLmuSW3R8+/zSSB1LtzbXr2bam3ubKwHEARxgfoLxgqaKBungobqo3vhT695xv7eDK+AKuAKugCvgCjw/BRwAPz/d/FWugCvgCrgCrsBzVkAB8OHvpUVxehXntJ12Ll5ZBBviBxQmBucUYx9s2WxvWWxXKIfuVYAk7q/Fx8Ca4L7K6W6L25vbmbWXfHDLCQ8955Nc5TsqAL4fALgSACwOVcDaFB5KJUC6BJyAzgoZaZE4ZkKwEJGB92cKNSkiR/cv2wEQnhnAg8Ht46g479JTTlr1URyMgIiOPHVVVgzgAM4lm5X/M/lB+nEA6gTAssSeVAcbMRyf08gT9GnqbPm/wVFI5y/bSkAw9hvwt7KeR4G9f/jBDZv/cjl1XUZAfHk/AHCtAHjMSZkihwNSHf0SdYHOpC5+Os+D4x9hyQRfBSJdBFCGHGC9NmJKdUXq/UKClSUDmEXg4JAGAD5jKhzAXz244/T0cPvdeJC9jBEQAheZ+WsTNlLfjY8pACZE50/LkZbMaRYVhPQaAREUll/o+rXHETtAcj9unsCiDXcALxpk2/ddd0o9TndWcTWLWHsBwB1YD5MVRLtNAPJad0/bQga5bLznhpUv3WsUztP2q45g3o+5MiN/uCmqNzgAXk53Oz8XV8AVcAVcgZWmgAPgldZifr6ugCvgCrgCK06Br9396Isef/zItekgP7NNciKwrjCRFLkhkKAfVeBv+JLcXaVGPhBwSHGd8N3ZXMD47q0ZqmAVujR+TEZ0UztY8z4HwJOuQgD83+6875dPqOv/UCbwULLoltR+MweaOdU0A5hwTmI4BFhoNqUCCbQVQRxzLwkseQgB9wo0pDAX4JMA4CK/PY4G516w6ZWr3on9pf37z2wPP/2NpMhPrpCvbACYdFegD53UgbbRASxRJ3RjUs/+v0Z7eaKia7fOn7EJOXhpJQA4HVdzh7P0gx88ZfkVgfvK/tv/T/SDf1qiOlbFQmWShRyiHaRYmbqgFeSGCR9ZCa+OX4Nj/GkwfNKTFRzT/UsInCLIOk+THadsiN+yLd6Gwb+6t1AE7rsoAvdyFoGzybMJMLcJNcv0DZm/oiXzHniXDApLcUKuAuAkhO5PACwbx3GF56roibaIHAAv6lYCgOtkJyZmZvmh1ADGi4bMWA6TmDJ5xjskPpxicfSGuBdOcISs4MnQV2cwM7FrFD4V538PABdJ/kgzaN/wkye/bdUX1FzdI9ivzhVwBVwBV+B4KuAA+Hiq7+/tCrgCroArMBUK/CkAcPLk0e+mRb4N/jN8Q+ZSWIIKLklmFoTCBwFCHQBSIKmPadExbsxT7TuGaZLkRmdkzv2rObDN7IZRNnPph7ee8PBUCPwcLlIA8B0H/9XaevwHdADHGQqViW4KgCcRGyoo4a9pL/oGCMwXZRlTfif5zbpsXEE924EO4Bz/F3lyR5WsOXcaHMAEwM3ho9+Is/jkNkdhQiqBfi4REJL3SwjMgltwSYuhlRBUbNULMpWtKJ84rukClCXgGDUhMoUF9nKApKxs5o4Ok5/5wPpNVz2H5j9mu9AB/JX9d/4XRIH8whh234rnz8kdy/VF5AOv2yJgqAM3xLbAlToZ/7YSYDEA5gSRPMfJILwuowM4TnYlG/Kz3hdvHR2zCz1Ob0QAnB5trk2HKRzAvCGG+2dwl+p9VLyn4QwJHRUmqotaCxGaG5UAWMc/Jm04ftE+mmWLNkIERFolT6DDnX/+xp+8+Thd8rJ82+sAgLMy3gn5Z+tUc38JgOuKk5E6SaHxOXb6CuvD/E43aWZF4QTOi0OeOd84Dsa5tIdkBPPx9JFoGDkAXpa9wU/KFXAFXAFXYKUo4AB4pbSUn6cr4Aq4Aq7AilWAALh54vB38qJ4bZQMEDHJFAiAIS5RNqBDcAHqRQcUtzZYfVm1nl+cuYScX4iB0PT5UByqi4xgIThGGDACIoluqAazDoB7PUYjIA7+0ux4/IdVlqcEwBXphNlSe/taZmWXO0u9zZEmDk7BvLqUXwCH0Ep9nMv42Y5SBC69c5wM3jMNAPhyAOAsAOAKgJwxJ1qciz1WtVGYOQFsz5Z1zYiE0MGpardRcW50aGJRuADg+Tz94PuXoQP4S/tu/7/TpvnHFeYZagJgRhzjnOHUFXArcDEA7YVjeZL5axnBWgwLwSJ4jcQc4BiElYRkOt6RARzHUwmAyzD5ZZBcJml698a+ttaRrB9KmEaYkLApH47jLABIma8QFzAygIvkgos2vP6mFfsBtAQnLhnAdQQHcLWmMds0738h29sAfBf/Ip91OqIJde3zS13C0mjhJ1cH2H4aCUNon8XFI/GMO4CXoCn9kK6AK+AKuAJTpIAD4ClqbL9UV8AVcAVcgeOjAAFw9OTR7yAL9LX06bZ0AAOQWaanfFkOleyTAHwn/rVwzsHqawDYCmvpF2oCSGSN4ncWgQPDuL4czP60O4An7S0O4LsO/osTqvI/VukgbUOsRhfpIDrqP4ueueyeT4Yl4l1BMnUZSpYrAkU1NgKgE03BCAgWgRsW2R1lMpgKB7AC4MPfaLMUDmBkADP6gQXQxPjbz7lGPwUgbuBk73JZJzZBAer2j1PNCw0ZoSEjmFCOADgd1/Pzg/xDP7Nx49eOz6h+9neVDOB7b/sTwLGfpwNYXNAdDGfshcY+9AFZf6JBi77BM4z9JvcHLo1XPS0qhk5VgeGsFZckO45uOP0tH0bk8HLSYinO5QpkAA8OV9/NZrKXGQDu3wsnmb76m+Z5B5e1LZfA45x803un5gXbxIOOXzaPxkHEZftEM8jfe+H61924FNezUo95473f3RyV+Q54ddfwg6cKE5Qs3mafSQZ/tR00w9s2ZgPznsmJDYL3LkqHE0ZcUUH3P+8bcgvAZ2UVPzrM6jdu23zOvStVMz9vV8AVcAVcAVfgeCvgAPh4t4C/vyvgCrgCrsCqV+DPdjzx0rg8/K00z15bwsvE+AdmUYLcMBBCi97IctkAHcRhql98O0ekfKvmEmZdGmugiA8zc5FVjTIcIynnSNy+nxezl1122oseWfXiPscLJAD+szsP/bPZpvxPZVJg1XwalQEu6CG0IJQ6Lg2z9wM5FoJhY0kGMSWpQ7Jd4dJG/EOEdpgZ5LfXyeD8izeeeOg5nuaK3e3KffvOQAbwVW2WCQCuuXRb+rRmJ9OxKl04LL9PQvEzulupeSN9G/EQsuR7si38h6pCT5RRlCJw83n2wQ9s3Pj15SQaAfBX99/5fwFZ/ZMxrLnUwWC4LoEn7KIWk8xTjXfRSaAOWIZoiH4msIJM3jMUagoMB8lMsuyWV60//W1nxTE63urerjx40xn54fg7BMANb55hzNJS3Ye91tdMv36ci2gXWiCklGhdMvRRTkywSKFkAyPOgBnAVZ66A3hRtxIAXOc7m6aeIQBmIT5uHQCeRKuHMR/un9KvdaUEN453mb8MUUeyxgXP1RbJQbc8/suzwaNxEb/hda95y4HV3cP96lwBV8AVcAVcgaVTwAHw0mnrR3YFXAFXwBVwBUSBP7/zqVfER5742zQfnEkATEcgcSNrPllBdP5OMMF8U/5UhxqzDzUCQr5cSwV7/fI8Wb4MaMR4AuyXJ4AXiB7AV+trm2ztP/jgGS961JtAFSAA/vM7H/jna5rxH9EBTACskasTcLQQPfaq1gcR+85gA0p0sckWoiFo5J4A4OyuURGfd9m6dfev9na4Yu/e05MjR66KsnQdIyDE+Yr/pa/SAcuIEsKeEAVhxQthh5dxwExlPsf+bo5OAaaLtGfxuEEAwOMs/cByjID4yoE7/0vWNL9QYkaGkwziAJaoFw5yzY7mBII4xkO/YeSL1IALfcnGd41OakUJ+VSGSAkBnQBkdEnmuFGkafb/s/cm0HbV15nnPeO992lgxkYSSGKwABljBMF4SDvyDDYGJENsl+Mk3XaqU67q6lrl7kq6urpW9Uqt6kr3qu6udHcqSSVpD8FYAZvBNsGA8diOzTxIBsQkARJCA0LSe+/ee6be3x7OOe9BgpCR9IZ9vbD07nCG77/Pebq///f/9r395We/c20QUP7L3H4gAzicKH6a9OLjCroXslNarm8+8emxIriHWj4tv65JA9JzD4Wkay0QBcPOU5kI4naPcANn1AQu8gzg6VUFAFwSAKaJQoql3wAAIABJREFUxxoAs86kIdf1NAAMB7DUdnNf5cgOjuBBgziMJb2IjGZ1bSMXm1cEYFKtE+0hPL9mzenv3jK3K9zPzhVwBVwBV8AVOHwKOAA+fNr6ll0BV8AVcAVcAVZgw33bTxqVw++n3e45eUXoK6ImWWBB9H9wmgkMli/IcPXp92T+05oU4e8MxOyLNP1c5wDjWzJ9rgbAVedHvWjBlR9ZfcweHwJRgAHw49v+UW8w/D86vV5UUQYzpAZoy9WNKkCupnCvKd2UjGC4twE4EU+gERD9NHq8rMg9eObSOe9aAwCOJya/S0G3p2YExXOAdaJAgQJLAHN6hvWNqAscnOxc73D/Ad5pkzQ07KozltktKw84DEOt/xQtFPNiOEzTq69cvvyW1xyoI/gGOIANAMMBjLOGCxhufj5PPT8BW00uMhzQdo2bO/KVMBO8UhzViC0IkY2aFwSAk3suW3H2O+n9Qpfn8IObwI0XP4368XEV1RH1abMK0T81+kELhycYWHOJFIDx1HLTAX8x5WDAEc5fjiahO3JMkxfkMqeM5dAB8KvUEzKAOzk1gaMICNQu9zMFjLcoCETm4Pqe0nBP3L18P9bJT171ole5OLNpYg4xRvTgCSGeNCEAHIR76HekA+A5fG37qbkCroAr4AocfgUcAB9+jX0ProAr4Aq4AvNcgWsf3vGmsBjeGUbJuQDAwA4BIiAQ2UBfbuH2ZRgEF6QCYINDAhnFTsWNowCOiB4hNkIchfTlmONoCwLAtCR8NKCnwu+Hi3rrPrb82JfmufT16W8go2Tx2PYv9IvsPxTUBA4OVYaKDN91ST27gdUlaFZBIRHcpAg4UpYry2YBM2oHsO4ppvdS2y/KAB52CABvLsvgAx88Y8mcz60EAI7GAYBDcgDTBAcc1q3aBYTjrE9ASzRD45onMWnZvdV6OyuYom2l5jEe/En5ExMgAMABAHAcf/KqlStvnEk1DgB809ZH/yKtqt8cgl7RtUtJAkDWEvGizl+JuoBbUpzB0Af/4+gBqkPcE8wFjPNjuAY3Na73FgBOCgqYCKO7P7rinHfNBwB84/aN5yYHRj8Je9GxBUy7upICkwsWkcF61QC4mSiT2I2m9vi+qcjc9Iarmu+xRU51Rlpnwd4sCTwCYtpF9rNnfrYyKqNHyqocg1VacC/bd+W+StriT/uiickxq+NXu14545q11wxgvSdzCBLT5WA3zfpc6A7gmXS382NxBVwBV8AVmG0KOACebSPmx+sKuAKugCsw6xTYsPHFN1eD8TujJD2noCBDBmMEgAFxS3YHKoDU5cn4Em1NxQB4zWkK8IsHXisyWgLOnxNgRGY4Ao8E00aTAG93RYt66x0AN6UCAFw+/vw/TYfZHwb9fgRwBNYO7A54IVm+iNYgME/wx+AbQyWAek5ulT8LgpDmvjZoWSDHVjNsUxonAOBeEjyVBfH7L115yjOzrmhf5wEbAA6S5NQMIB2NDuH0VbAjCFcc7e1MYOgIGCouzeafpTBiN5m5bQCMOqfxGg5Hw7T3mXWnL//r13moh/XtAMDf3vr4X4Rl+Zt5EpIlN+hkVGg81YAaQ6Ypz+cgEgNRDjhnOX88EAWBB7ug64ZaTTYwADC/Ri7JmK79iLppzScAfP32jav748OfhN34GAPA7QEVoG43UolzwD20NvbjR4brjcZ2rcsKC4wU6U36JtC3iPYWceBN4KZdNfdt+8nyYrK7CQ5gTFxwE1PEmGBCR2sYH4H+4uiXe6xNsJnrenpGs4HgJjMcjeJ4EnQXrSi48KIzLprzk2mH9QblG3cFXAFXwBWY1wo4AJ7Xw+8n7wq4Aq6AK3AkFLhh0zOnFJPZHUkyds6ooK+xSZ+WLpPHUZs+1YAXTkAsQdZcWtgFgRwBNaxplLlOm5zUiGEGHHAJvMUMgEMCwH0HwK3Bvauq4l2PP//fpdnoD4q4RxJT56J2BiiNBwMLEhPYUtyEAoQbECdObMlnNpdh0zAOzzHgpG1FxagzloRbizJ93/vPetOTR6LOjuY+OAKCHMAAwAU1gYPrFfXLLc8U5iLjE4CNnbCaB8w6cvQGLbdHdjBiQPlfpxqJYDEQCoeRMZpi06PRaDJNfuMTp5++4Wie9/R9AwB/awtlAHc6vz0MKWU27lKzQTS5I1cvTfgA2hoABvQ1hyP+zi5finbABT09XsQmHPj9BNjyEQFg2jnFFFQxRUBcOk8iIL7xwqa39saHPw676TE54XVFvK1hsCRvabRnzd7a7Rzt2rbr3e6l/DM0xTVM2cvgmOGo3FulkQPgaYV+z7Z7Tisnql9UUTVGLduaSTTcR/F7iK9XcVM390r8Tb56Mihm57tOCFH9871X348oDn635mcnQbwz7JZrzl92yXMz6Xr3Y3EFXAFXwBVwBWaTAg6AZ9No+bG6Aq6AK+AKzEoFrr3nsRPz8clvj431LsgySvkNKbkTmQ2ECsnAR45eNqJSr6yQIhMDMvhS+xv+M4GtShxU2g+LoyMUoomTDQAYndTJSUmhoADABJu+nx4ztv4jp3oGsBXMxqpKH9/8/P+Y5Nm/rKKuGAM5h7KsAOYQ6EBPjmg8Jmn594CWL48oc3JUFUEREsikgSLeFqVhUKVEL2kDYTdI4oRGgAys1K1IgCWPF/X+IoCUVb2w8ywhwPevPfPUJ2Zl4b6Og75xy5Zzq/0Tt4VJvIybwMHVC1egNjWsHZgEfjCtwa5qTHTQZdBk4bZyrTUfl/NBOaxZYlKQoUsN1mhpfj4a9nr/YP3y5de/jsM87G9lALz10T+hKJfPjejgK8r75qkEThGhainkn96AwO0IjOkHZpnAFhFROyjJnc56IWsVud80GxHG4d2XnXbu/IiAeOEX53X3D35M9vrFkBJ1Jo8GKIrARhI1Xgf3TL7e5d3IXBcdNXtd76v8MXqNlghwPElKGcDuAH7lZfPz539+amci+EUVVwsAgFlbjTLhsbC4ojYAxoQn6YpcYHa+60SauN1l1UU9bHxf0HZ85OCm0HYCwPkFbz/1XXO+oeZhv0n5DlwBV8AVcAXmrQIOgOft0PuJuwKugCvgChwpBb6zeXP3hecmvpim6fllGG+ltk07CP4cIBw0SW4+Ao8hgcROn74ILyQwcSxxo5MITJ5MX4uPJ1h2EpHgk4hULIy7fWKREX1HhuUXUJjAJLFLdrQRtOgCKmWjDnWF+n5CDmAHwM0If2dz1R3mW/91Ohx8kYhZnFVk8auCQRlUL5COTxOS2EILvp8hBP8EmSy3kxNzX1SlgyBiOkwsqEyCPOlWUXZMJ++cHMTxUnK0riTtV9IQriCwtCTtpouoCRKtTk8CcrSSMzN8tEqSy9bOgwiIGgCnybKcZjQ4AgI1ahwOgEh/4DgNzU/mAA7NuxVnpgI6zgimWQ9EJmg8B3M9EhoAOBhlo1G3+6l1K1Z840hdxwezHwDgm7c++p/iqvP5YYyrEi5oiSCQhlekCyC4mMkpMvmVUQ+2H+Qgm/MXAJidqRqlYQA4zqnNYBz//LLl57x7PmQAf+O5R87vDvIf0kW2OGP2KwDYYh8aYK6RInCQawSBAV/+s3apihuVo194fEhj6IyYF5qmS4rAAfCrFP7fPve3y+JRsimrskUBzVPatQuQi7EAuzWnP09YsiFY8q7x0MQTyfW25+xJueGqCx5hwhiPaGfcKxwAH8xNyN/jCrgCroAr4Ar8HQo4APbScAVcAVfAFXAFjoACX37whQW98azbOWbZgavPJYRooajNvgMKMw1Ov7cT7k52pLuzsl+l2eIkj95ELsm3UNbi24KieDt9Vz6zmyQn0Hr5fpL2grziLvb0HRoWYlpqPpwAwvhRPznmqg+cs3j3ETi1WbELREDsfPCJT3WGk79Luo0T1X2ANLyb0goeLar0+V689MClZ3YyElIsga/xIM3DTZs68bOd5xYOws7SIMhWUrjzhZ0yf2dCYLiT5cdEafLzZOGxn1u78uQXXmt7s/31GgB3o2UZu38FAFNAbX1qlmvLGauksuUB4w3tZfi4NAyYGgC2jFzAOXYAIwN4Ye+T609d8c2ZpB0D4OcIABfV5zOygmeYm0Hed93UrmkGh+MGaMSDG0ASfuS/143hRAd+XyygWPKT6fYBCE6QjB3ACQHgU8+eFwD4+mcfflt/WAAAH5OT8R5amfsUOpmb3DKlzVkqukqTMf4Trn6F6uYKxp/WdJCqlwFwnHf2lknoERDTLjIA4GgYb8qDclFAsx14IAu4aWJq1l+Ny9GxaWCvFLaMh8B6rMRosu8F3JPzVwBw0HkxSos17gCeSXc7PxZXwBVwBVyB2aaAA+DZNmJ+vK6AK+AKuALzTgE0MOts2tmP8tGxBC7fEuTFrxKdeFcah+eFYXpynKZhXpbEgOkLdJmBLv+4kx531eWrFu+ad2L9PSd806M7Fw074yd2ou6BhZ037yPgO2Jy/gY8AP6+/8wz3VHRX5yNDpxc5dX5tOm9K8Ozbl+9Ohi9AbuY0ZsAAO4cmLgtSKNlOcFfXpqPDGDQuZbLFScBAMzt9OD4NYswvQfwB9mfDIOQiYsICYKceB7LytkpTB/hJnBkAB51x8gBfOqMcwDfQgA4rYLP08QAzQmg2WBAmchyHtzQSuMKZLm7Zh3T39lFybngEo+BBz7H0EzXxvN74GpFZip9lMJkyNCeUATEqnkRAQEHcG9Y/KDTIwCMiQT9JmPgt4khMGepRTxIBjMDR/1M+7Nch/QfGhLyy4DsTQTEBz68/G33zugL8AgfHEdADMKNZVgtIgjMrl+exFDHvo0DX7MW+UC1bQ1Pa+e2AnmL8MDzMhnULB1I6IqnEIgXKeT+gjWnrdl2hE/Vd+cKuAKugCvgCswZBRwAz5mh9BNxBVwBV8AVmC8KwM360kM7ji+D7CLKqrw0rPIPEa1Y0e/2KKYg74w6wY/KbrL+8lVLHAAfxaIQZ/YbA5iP4mkc1K4FAE/eRrnIywrKACaLZScHFCL+1l6CXwNfLBOHww8QTzOtGXqq/7qi1839ytEHWJKvzeKQjB3lBTWBSz/9iRUrbjioAzyCb+IIiKL6HWQA53DsagQEg1zEDcDFDEDOjQe1TZk2hIQ+AJM4V5y/NMZTlzA3ytIM8CIjdyTpRxEQcRTde+nysy+ZDxEQN2zbtKY3kd9FEw2Ly4QmDGqKS6sfKH4AAB0PueosF1jjRLTpmDWBk3gNGiSNIID2qEd2omL+glJiEAGRhdX7P7Li/PuOYAnN+F39mJrApZOdTUVQLig4n5vDXOoJHTQqrCNcrPGbRhXZjBvqOyQAbA+ZAJLYE3MFA9jjPXEn3hl1Y4qAeLtnAM/46vADdAVcAVfAFZipCjgAnqkj48flCrgCroAr4Aq8hgKIIbj1iT0LR4PBW/PJyd8aC4t19BV6cRF3byvD6LMfe9vyl1xEV+BIKPCNZ545J5kcfpfyp5dlcOwSWAOMI4ZWA2ADc3XWL2JL9HV7jnAPH24bAFtjKASHAhLHyBnN82yYdj81EwHwLVse/eOorP5hFkdk+A3Jkd+YzPEPbz5nAto4F2a7DC1bTuAWALaxq4EYdMV7OQKCAGWOJnDRfZctP/sd8wEAb3hu49vHJrMfxP3u4hG7TjXSISTHuEY7CNiFS1rUs+gR+TvdITlKQ5vyEVDnetNJCIuBkGaDHW4CRwDYHcDTbiI/3f7TFdFE8kgelgvAcJGpbNcwAHocy7hQDLaMgTnc8T4bkxYAtqxrzHpIjrDmhAcI0g7I/BvtzHrlmkuWXfLckbif+T5cAVfAFXAFXIG5qIAD4Lk4qn5OroAr4Aq4AvNOAcQblIOJK8rxfZ/qJN17F3YX//sPn//m8XknhJ/wUVGAAfD45HerJFo2AlSLyLmKoAdzrFq0MiIQQIMIwhn0keXiGnVgbkEYZAHq4HLl16XRoeSCUpzCgLrA9cc+OdMiICD+t7Y+9n+HRfm7BoClGZ7QSIkXoOMH/CIKCUDOzyutZGmAyOhcKdaldqhiaT3rRPRYmmvR37OcACU9FcYP9E57y8VrgwDZ4nP68U0CwN1h+YOqGywuOBpEw9QVQHK+NItsQN0iBaQBWRsG82e1AaFFjABAwgWMmA4A4CirPAP4VSrqJ9vuWx5M5huDKBAAjMgWnbiAljK5QRrq9Vxb+21bTIQl7kQc2M14ASDbvYGiH8gtz90Ud5X9zpqLl1787JwucD85V8AVcAVcAVfgMCrgAPgwiuubdgVcAVfAFXAFjqQC3Ohs084TYyJHV73tTTvnS/zAkdTY9/XqClz/9NNnJxMTt5P1b1lBnfWoM5m6f7lJIdtemyZctMRel903TaEEAFGigQAhuINh0yRCCk8wQ08CfsgZ5QzgyWE2HFvw6fXLl10/08bklq2P/V9RUf6jIk2I21L+L2CXni9xMj4fbtrIkNsal4m7uSI4zABTAXBEAKwNypEJnKD5GfJs0QSOrNJhED180vJVF11EnQhnmhZv9PEgAiIdz74fjcWLcjaLI9O36duIyAB+cL0hT5r0I50M/LLGBuNtYkHHAx/D5xm2E5BEBAQB4JfzNP7gpae99e43+lxm8/buoQiIYhhsKikCQiSXum3Ha7CeMhT1BAegsGR6N65rybzWz1ruC7YIgEz3ETiAo07oAHg2F4wfuyvgCrgCrsCMUMAB8IwYBj8IV8AVcAVcAVfAFXAFZq8CcACHBya/G1ITuE6adkaFNn+Dm7J28BJYI1Zn7kDmvBSRINBIHa7W+0kBUROVgOxcgDlyBMIBPCIA3Ov/xvqVp319pqn2rWc3/1GY51/IkzggBMlZvrLsXZrcseuUGBjnAOt5mgMV7xEPsDTD65CODDGxDW2Kx25hkGTK+wYAjsP4oROXr/qV+QCAr9/26EX9yex7QS9clLXitQOE9uKhALEk/Zo6Iw01goC1nAKAkcPccgLT52NoTTEEBoCLbvKhj5y6+uczrc6O5vHAARwNKoqAKBYirkXFrx3Vtcaaw2wOX7irAXaN8+JnHQD+A9d3k3ktDeTQ1TQKk12dfuAO4KM56L5vV8AVcAVcgVmvgAPgWT+EfgKugCvgCrgCroAr4AocXQUAgKPxAWUAdxgAFwQ3KYe6bgKHFlHSFMqOUyMRWgBYXpF/miL+AI/YmnoBBMHRCTMxOTSTPMuG3d5n16087bqje+av3PstWzf/UVwWXxgSvQIARkcxMqHK+VvmMQFKwC9EFuAhyajyHv6ZACQAJhypnE/LsLx5DYAyJI3YARzGD/YJAM+HCIgbtj/yK2MT1feqXriQs5W1PqwXHMhi3ZCspScavLXhr40av5czgTVLmJuOIbyEnkNTuFG1ryIA/OFTV/9sptXZ0Tyen26/f0UwWT5cRADASHOQ5nl01U85LEza2AoAvEBNS6WeMQOCn2kM2eGunwIAxnbsWgAADjAJ0ol2k9N9zUVnXLT1aJ6379sVcAVcAVfAFZjNCjgAns2j58fuCrgCroAr4Aq4Aq7ADFDgxi1bzg0OTN4WJOGyMo4p9oCAGkGekpbRw51pJkHANoBMelUhj4I3/RdpSdDNHuyUZQexPANXLH5GBnCc5dmo2/vNq1ae9rUZcPpTDoEiIAgAV18YEL1SlMigsjkfnL+AsoSykg14GejF87S0nqMIkIHK564NzkQ/gpZFxjAtIsHiiDKAl589PzKAt2+8uDuRf6/TixcIABbHtAB0NMezTFmJHYD+eAAsmo78M+USMPhVhzpHScAZXAqYdwD8919VAMCdieLhMi4XIuMh576E4lxPuNYtc1kBsNYwMoHFmS2N3morsI5HRHm/+CwmOHjCBKOBCIgq2ENjfYED4Jl2t/PjcQVcAVfAFZhNCjgAnk2j5cfqCrgCroAr4Aq4Aq7ADFQAADiaGNxGlt1lOZqbAcxhWT5ZgoGFWqv1GRRJBjBcmU0EhAA6cbrWrkyyzrITFqyoomX59H5Cpp1wmGfDJP3tdWes+KuZJsfNWx77j1FR/GM0gcvgPE1ShosU/kDxFfJP71gTC8wRrIZnhpYFAW40exPHtLyfc2xJT8sDLnMCwADh9NYoCucNAL7+hY3vGBvP76y60QKkjFQcoyEwnRuRKXi0TFlpRMjTBqxdXVcasdGOhuCNEABGZi3c5lFJtZYF+8pu4A7gaRfZT7f/lABwwgAY48DScaA1mjtSTjeNCzc5hCvY3NX0Hp784Tkey2WWz9ZObI2A4LsDO4OlCRwN1+4wcgfwTLvX+fG4Aq6AK+AKzC4FHADPrvHyo3UFXAFXwBVwBVwBV2DGKWAAuIoCdgBLBAQInTgv8WAHLCINiOYI9Gn+GQqEJxEJ4gAGOBKnsGYIo2kaaB3iHwgyAQDPVAcwAHBMAHhEABgREBW5fGXZO50PAUY8AMEa9+lUwCs+Sm16p3rg/XUzODaqUr83gsIpFI1CioB4y7yIgGAAPFncGXTjBRlA+d/5TUYAozQYg+NUfkYUhwBhgEpxmPNrNEb8/oImGTBmcAeTrTUugpfLbuQZwNPuOMgADkfVI+RUpyiOJvYBkzTIUMb1GyfS1FCucwHClu/LOdZyJfC1AGjM9wSNPGmufwHA1AxxV9ErPQN4xt35/YBcAVfAFXAFZpMCDoBn02j5sboCroAr4Aq4Aq6AKzADFWAAfAAO4GhZBtATIbSW8jwJ7kRR09gJ7JdBmzbpap8KMJIaYwXWAQIrJ0KjqRiuYrgLAUdHMzcDGE3gCAB/YUQnkXEDN8aNDMAAsBH/wK7IGo41KljDPGv6VjfQo7cIQKe/0DZ4iTxgOAkThMGDYyvmRwawAeBOGjEAtuZv7cZuUBNA0cCjvCbVVWcpa9RIncmsTnSULVNi+gy5qztR3nk5T4IPXnraW++egZfdUTukH2+757RoFDxCMRyL4FbP0TSPrnOudGp0CMCLaxyOfXH023UvAB7XMU+KtKIiBAQDwouTmGZMOAIFk0ZRFe3M+8WaS5Zd8txRO2nfsSvgCrgCroArMMsVcAA8ywfQD98VcAVcAVfAFXAFXIGjrcDNm7esDrLJ2zpRvLQgB3AVJQSFCPIQAG0/asBJAAiwlzM+4RDkpeMgQBJzUOgSfZAjWUKO2AhpmdbFBkeDmdsEbsujf5xUnX8IAJyH5IZWF6+de8JAHBmniMYw5C0uSmropmBMGr8hAcKc0jUABs7kCAiKkijDKgqDB3orzpoXGcAAwAsmCo6AAABGBrDoYy5U4HXUlswcGBhuphamXiniRJUxYIc1nNnaaDCi2Yuw6LxcuAP4FbeXHzz/81OTUbgRABjxygUmZui6Lwn+sn9dIbDEtzRfNwF0eQUARCYIb2AYO8D78CpnCYshuJMk3U4xwuRJ8GKZFmvedeq7nj/a9zrfvyvgCrgCroArMFsVcAA8W0fOj9sVcAVcAVfAFXAFXIEZosA3ntj61mgwcRt1NVtSRimRSWoEx/bfZvk9DtXyQG3Jd6QA1BaEW8xBTkvJJQLCIB65fuHSpG12ERWRTWajpP/ZdWeedt0MkcAgYnDLM5v/U1JVnx9REzjOQwZYrCEYQS4skaf/Yal8QICcky04D1ndj3pC/BmKjdAYYH5W8lMFAHNDrbxEDO59l604+x30fsVmM0mRN/ZYLAOYm8DBUK3O0hoA64SDRTygzgxC5nne5NG2JibaLmsHwAc3XgDA6Sh+pAirxWhYiP9JXWrECUFh1Co7gbX+Wecm7FpcvsjIxjXAcR1wuNt27JqhKqcLgADwjjRJ1qw5bc22gztCf5cr4Aq4Aq6AK+AKTFfAAbDXhCvgCrgCroAr4Aq4Aq7AL6XA9U89+7ZkMH4rrQNfksfU9AxeXcBLpKwC7gD20MMyPm1ncLHiUWhGaw1K9f2Ng1PyWinwgJyvBIPzwWiQ9D/9iTNOveGXOvA3+MN0vMHNW5/4k7SqPjekkykVACMGQjJn1ekI969m1OIQBJI1zfJqKKnEN0fcATskJU4DADiBxASAozC+59KVq945XwCwOYABgDkyAJrWjeD0q40Cd+RG22QDdJYMWqokmpgQICkZ07Cc8p/0MwcZEMikeA2qs+DlPI0oAmKVR0C0rhWJgCAAHBQcAYGIFs5SxmSGNoPjeibAi2iInPKUI5r5YK+2UHuYt1lnmxTCn4h7AKjH9cCREpUAYAqCeCGMgzUXrbho+xt8yfrmXAFXwBVwBVyBeaOAA+B5M9R+oq6AK+AKuAJHQ4G7KvoG+0wn3rn7pe4gGXWDLIpiWcneyaIi72Xp8KQTjhvuXNHJrgZ+aLrjHI3Dndf73FBV0cInOnFW7EqHUd7rjKp+Eg7JfBaNhkUw6B8XDU455ZTsQuKVYHvzWqxpJ28AmAp4SUHLtgGAAdkAgOWhDbvYzScxD+wQtFfVJWhuQXYHvuJBnwEMwmezydEwHZuZAHjLE38Sl8XnRlQ5JVyqRLqQAlEaECPLbtRqgmWQ2yIIAMokH1XzCEgHzkOOJQ+V1WQHMEGysqRn4nsJAF8yHwDwDc9tuqQ/zO4QBzDVEdUD5/q2GpFx5ix3hyMgqbWHv0sjOIkkkc808SRWh+YA5qxmgpZJEb6cd2MHwNOuRWkCRxnAZb6QfsOpg12bGSK/mxz8dPkzVAcEBnRn/TX/ujRXcGvcAPNjujZQ641rmGq+AJIPd6Rp5A5g/6XjCrgCroAr4Ar8Ego4AP4lxPOPugKugCvgCrgC0xXYsLFKB/mOY4MiOKXIy1XUVf6coCyX0VfkE+nr8SLK+KSgxCoiHEHfccuMvhjvD6JoVxBG1NwmfDoOqqejfvR8OJbsOun048bX0ipyV/mNVwBOzW9t394fjZfHV6NqaV4UZxJlWEHDspTG6yRyDR5LsGJBQANDnG1I6OIAsaY95FHbWYXB8/TzczSUT6dp8Hy/s3TnpWd2EPlqSQZv/AHP8C3eRA7gzuT4rVUYLympxAvQH3X0IcKsJfxnAAAgAElEQVQAQEcAnDguaRJEmj0pIGZop6+LS1ObRSnA46ZoAL/0UoJtjCZmLAC+aevjfxrn+X+VJ3GQA/ySExpwi4kYnTNcqXDy2gNAHGkZdIa1QxilBB2QZWvnzs5VdbYW2YhAeNmJUchhdN/Y8rMvmQ/3CgDgsVF+R5kQAIaEFiFixt+6aaBkSkdoOIa3oemY1hB+5rTZadEElKYs9clObdoQuVNjcgCX3fhDHzl11c9n+CV4RA/vru33r+hOluQAzheQBZ3qFyEmVOuFNINDqdvEBuoYCJd/BljHuGkdY9jM7Y73AQA3rn85JbiAwzLaUXazCz0D+IgOs+/MFXAFXAFXYI4p4AB4jg2on44r4Aq4Aq7A0VHgyw9WC4Js16qizNeGxfDX6CjOTMPg5Cjp9sl1FodxyKvdw4BokD7Q2ArQsKRuWfS9l8xUgyHlpu6vqmwH+f02duL+D9Mq/OHCxSc9e9lZwfDonNnc2ivBhfCvn3jhhE5WXFxl+a8FVfHOssyWJnFyTBQnvRhduMi6SpEFxH6DIA4TdqRhfT4eIRGOPC/ybDQcEPTYRzzjmSBOfxjEyQ8Jaj6Yn7107zXzIIt1elV847Hnzg+G+24N0+4pBZZ8A3pimTcBOoa7WvUWdRDxcvumARe7NRkCN0AIYNQeaOwFvI7/ZnoExC3PPv5nUV78l1kcKQCO0BZLIxwsCkLyjQ2ICwAG4lXnr+rB58wRGo3i7A4GaIMWRVFFUXh/b/nZ75gPAPj6Z6kJ3Ki8o0yjhSWc0tbAzeqLAPuUyBGVjWsLo6AN+QCOTXvYs8WpqvVG7vOA3L8h1WdSRC/nSegO4GkXfA2Aw2JByXMZ5Pplh69m9+La1saOnMHM1zo9kPmr8RvsG9Ymj9Qvkh+YGOImcBoBIa54AsBVuKNIHADPrd/GfjaugCvgCrgCR1oBB8BHWnHfnyvgCrgCrsCcUQA88MuP7j8uPDB+XpZn65OgfF8aRivDJO0RlaEvwBH9jxZq02/bjL7hhvQcGjexGxJuNHKYwS3FX5/N8Qf7GRmDi4w+UY4OlGX8iypO7gjC+JZkUfjYNWcc//KcEfAIngiiOHZu2r6EslTXFqPhekqpfUeSpseHURxJDKhmgbJbk4bAwBEiB2iMyPVLYCLvpASEkVHJz+UZSFyHaDAlsZYvkH/tfhrrO6M0+e4J6SnPrF0ZDI7gKR7VXbEDeOLArZ04XULgE1kmDIDbDl/UOJyCSECp0S43gZJ/jooTsMlwZfij10aBZl6IlaCfE0CjIhsOugs+tX7Fkm8e1ROftnN2lm957M8JUv/WgCYQMoBGqhU0gsND/agEuswBbP8UF/BrUBjvxc9JRPcPOnfoZk5JQGGaNeIIjRgRECEA8Kp5AYC/uf2xi7vjwzurXrgQzmrYSRH3YBMMnDmLGAFtJgbsK/UlUBGPdhSENYhjtzUiJdiVTpslIh/Q3xEBUaQeATH9GkMERJSFj2TViEE83OusORy+rYkbrlXUtZY78nwtk5mvZypijJllhSMahTOudTUA7gcUmEJjEe4M+uWaS5ZdQitl/OEKuAKugCvgCrgCh6KAA+BDUc0/4wq4Aq6AKzDvFbjr6ar3zK4XLqnywW+RK3RtksRvCuIumX4TAl+U/QnUiwxU+yJrmab0ZRfwRxbMMmoQ4Ej/xQl9JcYq2SITBxRwGH07zicnhtRpfVsnTL4bJP0vHz92/P3uCD74EvzWlr3H7T+w/9JyNPqtKs8vjJLeMRTfQFxB3NjWgAzhzCXAj1A4AhmUP0mjwA5ggArhSOJaA9iHo5AhPhmG4S/MR1U5GI5TyvNTVTe6PkmTL11xxpLn5kM0xI1PPnteZ/LA39BkxZIySRgAA+rAUI0HL8HXZfhtAIy/21J8+VOW5rezNBjiEWRCdEJJmQrUYI0cmqMhZQD/+rqVS286+Eo4/O8EAL75mcf/kqIZPjuk+qoI4AL+4j+cFznM+SDggBYg2QBgPI/5nxr0ogY5NZUX19fZyYBsAMAAZ6RFFc4nB/ALG9/R3ZfdEY7FDIApTYcn2ACALW+Wg1jqhRa4YEW/5iH3XM4AhttXJyD4dXWqBpiwIxdwWiYEgCuKgFjtERAtBeEAHqMMYJqqJAcw1Tdb9yXiof2oHexw8ENnmhBB7WMyrYbDdE0YgBcIL7//+P0MjGmkgvjFoFte6AD48N/DfA+ugCvgCrgCc1cBB8Bzd2z9zFwBV8AVcAUOgwLgLdc98MJpWV79g04++Vky+Z0eJD0ihfS3iOICclnGDgBBzcP4SzHgrnWZhzuNARf+bB1fDX3oOX6dvwCLm6ooh7QcmchkPsC36Kc6ydifxVV47ScvOHH7fICLhzqM91RV8tim5y6gcI3PV9ngSiJlx1NGLZl+U7iza0cgQC4eaL4lOavtkWmamJmzzTrdW1YtPsuvwd0KR2sxIsxRUt+44CeduPu/n9RfeudcdwO3AXBOGcBw/3KCLRqewS3NABjLucXtDlXxn63IB+uhzA25dlhQjULQjFdxcsoHung9Hw4H8dg1609fevOh1sfh+BwA8E1bHv9SUlafGVEEBBbFI8Qbesj549wxuSD/BDfHrzmEBQhr/dGnkRUsoLgBlfh8kZEDmJ4jNzQA8H0UATEvMoA3bN948cLx4s6pERBwm9s1OxWoTwW/cp3a/VUc19YUTvW1GiUAHFMtxnnkAPhVLpQfvPDgyu6weCTvVGMZKtxWUKBWEeGgE56mr13P3IQP90i6H7QzwbEL/A7E+JQ0qWb3VsBidgBXAMC5A+DDcdPybboCroAr4ArMGwUcAM+bofYTdQVcAVfAFfhlFUCMwLP373p3lU3+s7jK18bp2CIgmpy+uTLk1QXebIayhk3aCR3uRXaS6hddAEh7SPapAAyDi7YSvlSwkXLXrIxcaVlVjCb3kV34+5107N/9xttOuBu7/2XPba59/qubdy8OBhNXd0aT/w3BtlVl3EtLcmZX5CiTPFbSH65eXaIMKMkAwsanBm7WeEuWkJtbECDflpJzrAHGWRkUMmoT8L5yUFWjbGuZdP806Hb/fN2Zb35xruls53M9RUBEE/tvraJkSUEOYOBJ1HDbASwNthT0MB5uADCgJwBwHQGBfAO8rmv7GScTNOXcWyw1z0eDQdr7xPoVy749kzQFAL5l6xNfogzZz1B2LLd7y7W2cJzS2E0gL2CXTS+YQxi3EYPDcKdaszgAdLlPiBMYkIybwDEAju7tL1/1zvmSAdwflbd30miRNIEzgNsAYNFIvuJY3IBpZ1EvDH/ZbSrVg9uBRY7w6gv6eEQO4DgjAJxEngE87SL70Za7T0868cNZVY2VdK0WFTl6UZ/0O45rmldMsHNXYK5G69STQBr9wPdhHad2BAwyruXzuGfQdVImL3Z6mQPgmXSz82NxBVwBV8AVmHUKOACedUPmB+wKuAKugCtwNBS4jZq87cx3fizKR7+fdpPzOmEcUPsliuYlwIPoQ21+Y05e9vnRl1dAX3aHKqNFsxtxRFqzJ/lVbBmWZPcVIIHVr2qHrDNSASUBwigjmNzAlBFc/bxI+v+q3z35h9esDkZHQ5eZtk8AuL9+fPeSfDTxhaTIPxcl6YkF5QeUFOdAib0KGyTLgQEDty0ixxlrDtggDk3ASwOWDCh0qbhFFrTPW8ZHUB6PGVGlhB3BWSehA6pGo8Ewjr+cdON/O1cjIa576qnzk4nBrWUUn0IxEAyAcW0A6IrTUtx9lsVqLuBm9b05ZEVHc2HXn+enCcxhOTjcxBQBXPT6669ccep3ZlINov6+tfXJL1F+7GeGlAJTAYDh3qBOXgp04cNFFASDXG14JeeswIv+zPV5vM8cwFxf0BXViogCuFSxwzC6b2yeOIDRBG5sWH6XIlYWFzGAI12zHLUjgLxt3ufrkq5bTM7hGrdIAXle69Kc2dP/JLgOAJzksQPgV7nAfrL1njPCMnwIABgMHgBYbq4ywSGTP1a7mgOsGcvI/bV6x+87vA8Z+TFn78jkRv07j651QOSwCHeFY501Fy+9+NmZdL37sbgCroAr4Aq4ArNJAQfAs2m0/FhdAVfAFXAFjooCGza+fDytOP+dOJv8QtxbsKSKuhT6qtm9gDLI+SUIwd9/1VmWI0u2oVviLsOydiW9AnX4azD/fzvDUp6XZjj8DgbJBCPIWVkBdBBei+C4ygbEl/MtVXfh7y15+0nfnA8OwNcqgOs3vXhWlU/8G1pifHkY9xeUZAUkpeC3ZOdv05TMMllli1Ca3aekcwxAbx3sFWYYMDYHqzkxOcMAMQUth5uMKo0XgQ382RkNaDCLASVb3p6m/f/+irOXPvZa5zHbXr9+8zMXBMPxb5dRQgA47WSAcQSAQ41wMMe0ZdkiAxQTIZJ521wHkvnZjjyQiRR2wAKkYlk+kGo+mizSBVdduXLJbTNJK46AIAdwXFAERBKQEVgAJa57mwjiyZ/WaoD2fWJ6JAQckFahDMrovgIADD1ockEAcEAREKetmhcREADA6TC/PeqniwoSq32fbQPg2umr8S4WQVA7fnFtQlu9Dzf3Y70ra5xLNw/25lHyoUtPW3X3TKqzo30sP9px9+nRZPQwzWeOFWTLp4x6nuzE6oca3losBN9bZVITTfb49yDuxAbd0QQOjmvOA8fMp0Ug0TWDz9F74yrelY0FF75nyUVbj/a5+/5dAVfAFXAFXIHZqoAD4Nk6cn7croAr4Aq4AkdEAYG/E/+01xn9kyAZOzavyHYWUpMrdXzWjl84zbThW3NgBBnM5UeAkN3A6oisLAN0as8c/iLMS5DrjdhSZmuKg2/EiBiA0zSjJkVZNRgNn8h7C794zttOvPWiICB78Px7sPP3sR0rwlH2B3FnuD6Ix7o5N9sj8Mu9iZrmWlCnzgKlcTCnNuAwIAQeDBxbTjVbgo/lyPzQ1/AJi4bg8bfxxBJneluA5+goqBUY/R2+zuiGIun83rqzTnua9jtt9GfvuF23+Zk18WD8W+T+PSWnxmdofoYaZwBM/0mEA/2pTk2J4cBSe2l0hgxXxKC0M1lZDYuAQNwBX0vkFAQ+Go0m8nTsiivPWHrHTFJNAPDmr4RZ+WkAYIQ4sBuSXIxcV6gDjh0RPZoICJnoMUekRb/Y641bWFYUFNQoCyWY0jIA+vmBk1ec/Y75cO1veO4X7+xN5reF/YgBcIn2i+rW58kF1Br0teZu9USb6CtRPap1q3Bqp7nmriOCAHneaVbuLeKIAPBbHQC39OIM4FEFALwgC+hqRgwEJjXIvRtTBjhfuvg9Vkdx6IoXXOO6IoZrmj4iKwTq8G/NyuYgfXEFY9KnCneNHADPpFudH4sr4Aq4Aq7ALFTAAfAsHDQ/ZFfAFXAFXIEjowDgbzGc/GJaDf/rMkyP7SR9xD6wSwnuRXPoMpDRDESLdgBsQP4puqNLcyuKGZAVyW2uRT9rFqWCCYuCCKdFRJizGHAjpIBKAIqIfgBYDMtBOczGn+lEx/7jX7/gpNto3/MuExjO33Kw73/rx+GHwm6/OyLkRk3YyHkpAI7hrML4tuOSl+AzpBBHoAB6yCdONYvwKEhnwAgAYIb++i8oONoiav5nWaPmXrMMzCKj12nOAEA/JGAflaMhNRC8qxpb8MVPnHXKxiNTyYd/LwDA0WCCAHB6SpVQVcIhj3xPAjw18CHQy9AXHnYAXbyHnMAARoVm3Aaa6Qr9oD0cm9YuUdyxmgE8HIyXCxZefsWKZXcd/rM7+D0AAN+8hQBwWXx6AIsj3QPQAK7QgsE1ixphGM5JJBJFkqMxljomZVJJLmEA8rY7FfrhZ65nuqf0iLzRTw+uXHnOO1YHcz8GBgC4O5HdFo3Fi3LOV4/Y2c/AF/dGnaCps3+5Zlpfd6atymiawmksDL9fxohc3NQErtybxeEHP3raefccfBXM/XcCAKfDzsPDMl9QkQMY91C4+jEpUem9VgCvOP3xkGxlTF40k2sGgDniHo52Wj0g1z0iJWRCDtMkcRnt6oyVHgEx90vLz9AVcAVcAVfgMCrgAPgwiuubdgVcAVfAFZi9Cnxnc9Xde2DP7yb5gf8p7i08dkQUB/AXfk6BN+Ic5WZMGhkgTlKBO203MC9oV+gD8CVAQptcKegNya3KkFc9obUDkMBRGwhhLa1kWQJ7FJ0ujoXgcxKMqsFg+LNowTGf+8TqE+YMWDyYCvrWQ1uOmxgN/leKxfiNuDeWBjH5taE5xqgDOAsyJA20areu6tjAoSbCA/sE8BU4ZNmhAL2U9zyCw40X4es4TF3yjPcboMMEAByKaAXGkRCAnzRWYTYqx8vOhvCYxf/smpUnv3Aw5zjT3/O1J7deFI3vv4Xg+5sLijwA8ORrpUo0HoXcmcSBqAtf7bhO6Al+F8pZ9ayQ6ToFejauao4IpQccwOFgcnw0tuCKq5Yvu3MmaUNjH95EADgqi0+NYsqehseX6ggxJHzsugKA3eEKc+V+IXWGUm3niRsgtnOUmAOpsQ5BMoKU1AQufCBaEb/zsuCs4UzS4nAcy18//4t3pfsHt8YLuouzGBVG1yRguTpNzVMvqygk4oH11Qk2ix1A0VkTRxwnR7XowwHwa4/cXdvvX9EfhY8Mq4Jidmj1i36jxKQEAHCkkUji/W/ukZjw4QnT9hQl/W7kiRG+JgQW4/cqO+Rx68b/ymhn1cvWXLLskude++j8Ha6AK+AKuAKugCvwago4APa6cAVcAVfAFXAFpilwT1Ulv3jopU+kw/1/GHfHllLaJjcRQ5SAOULF4ctrkAUEM9CVZauNq0zcegIgZCey9H0qADbwg9cFAEsmIrYXacQAb4cBmlIwNIHCd2XOrJWE2042ORoU4XWLFi3+55evWrxrPgzsTY/uXJRP7v+9uJP/E4odWFgGtO6e4gfgHwN8g36c/asZvdCE3du2FFxFguwCbsWxikxLgcUKJhTUs/6AcDRQFvnQzrwUB7hCY0RQ0LDggQpJOSqYYAct388mJ/aP4uQ/LDyp/4eXL1kyMdvHasMTWy4s9u8jANw7pZN0JcoEjulSmqBhiTgul0gBsIF4hrmIR7Hx4HiE5p+nZHbnR07gSHSk2APAvsHERNbtX7nu9OW3zyTtDAATCPvUiGgjR5DgejeXOZ0fO8n5oBsKBgDMtWP3FT0pXO3yvDxhnyRCRlCMtlXStFQYPTC2In3X2mDlYCZpcTiOBQC4Nz78TthPjwEAhr42wWP7k0gBidyB1gx9UTs8IaR66s91Jng9FjImISby6KadZJ29ZRx/4MPLz7n3cJzPbN0mMoDjyfShYZUTAJbJDFzzIV3fAMC4ptv1WmjkCVzC/IqCXrsP8EQQ/5LUiTheWUEIH8/RkCRBurPTyy/0JnCztWL8uF0BV8AVcAVmggIOgGfCKPgxuAKugCvgCswoBb724J5fDUbjf5rEyapO1A0ygn4McnjpqjiUYjR2Ytgny9L5Oy0cwJZxSN9jORNRUQ/ew+/XzuhYuG2fwXtsybe8X6EyYiVo3wyU8dUYBE3hRlaQxxUd0m1ZPcUMxJQHHAwHk5Nh//ePWXTSn1x2VjCnHYFYbn/Dxuc/282G/2c81ls8ItJWoOlWnHQyAg7sQFXHNrUo0vHSLGCNfDBHmjR9g7tSAC+gMYPgfKSRDwY0dBxpHAAtAZgZLKGxkbqKLQaEB1jHjzNw4QQmOMIZtsWoygaDXUHa/Z315624ebbHdiACIpgYv6WTpEvQBI7zWTEZUsUyQQIUSs/RTyILUkpwrcD9B8pLQAjvQVM4A3jidLcJFgXyuPZwHWbDiXzBwo/PRAfwjVs2f5UK8ZPiANYGgzXAjRQAI69W7huEznhyye4H0yMgUGcGgK0JIVzAEaJoihyvPrBoZX9eAGCOgJjMvk0R38chexbQkScY6ggRy+jGtSyREJwxrc3gVOY6FkJgpYWMYDBkIg8AGLUaj6q9RT96/0eWnHvfjPoldZQP5kc7HqImcCUiIMYonJuPRibNkHOPGAg4eCUOgjOB1XHNsUi4fjkWia4Oej7CGzGGHCEhGc4AxoiL4CZwXOfRrmCBR0Ac5WH33bsCroAr4ArMcgUcAM/yAfTDdwVcAVfAFXhjFbjp4QNvOjCx+z/34vjSIu5HQZR2MoIB9fJsdonCdQvwh++v+uW3tnqqgwmwT5d0C9iRHFpGwnD5KQA2QGyREIiK4O1OazJmX5SzLKPv2+o41pb2ABiAaBH9nBRZNTF+4P7O2HG/+cnzj3/kjVVnZm1tw6M7V4Xje7/W73XfngdxQPigk+fI7iV0E9P4YBkyOswjk5K4fRPNAOAj48RKMmAT9zZnznKToiantiQQz68CFDG8EMeqjKMA+hzRDng910xnBU4AwAh+FnAHyEFREHAmY3854ZO8+Jtw0cLfXnfmm1+cWeq+vqP52ubnLwgm938rStMlBdzygD8kOvQxMG46sANbm6HxBAbgkTrluUkaxxxodqta56VJHGI0sBycBmk0GK/GFn784yuWfe/1HenhfTccwDc+8/i1VV5cU6YJ51BnOvZcb6QH55qi2Rgvb0ctaSwGg0zLBBcnKje+00PmpfS1LjQ5RPelLthm0LlvwfLue+aDAxgAOB3PvhWNJccXtPJB8n8hkGjYNGlETro0hWPXNK63VrRI7drX+7E1iRQALA5ggvidNA/2FlHw/o+scADcvnLu3HHPGb2J6OE8CPoWAcETPXD44vpEfetkD2odN2B5XcepzgKm6TBAY7iHcTfOxelv76NfwJSbjgzgcGfZjykC4nyPgDi8tzDfuivgCrgCrsAcVsAB8BweXD81V8AVcAVcgdenwC3bqrEDL+z+/Sg/8MVOMtYtw4RIjTSlMdCb0RdUgD4AYIl6UDyjjiZZ3oomYQJz6sxZ/eJrwLeOiSDIwKDYogbskNVRClzEu1CgbJEE1myMISSiIQA/6It3AvdaORgM8uD/Oakb/eu1q08+8PpUmB3v/sYvnjuhk+V/1O0E1xRJGo0A5jnpIeWGRHWTNsAFZE5qNjP7BTEuttS45dqVSA+zagoIsvHj6A+FyBb1gdetuRe7BpFZKUM1pUkcjzUYFJ5HZAcb3uAEJlCSZ3vyKP2XK85d+ucXBUE2O9R/5VHCAVxNTt4Sp90lGWdiSxM4Tvk1lyW0Bgui2kYdC0BnkflnedgEiugpQI/c3DrBwsvyMUTDyfGsu/CKq86YgRnATz92HV2Ln8iSmKJjYgbAVh+oL2gCdMnudNQsZwBbM0KpOUwIWT2xA7hVU1CEsTBNdlC1I1X4gbJ7zHvmQpTIa9X/hm0b35Puz28M+9EJBGYlUkfzZuWClXz2etIFLnOAR7j1tXGnrMSAGx8gHkszOJtFdo2bCNzqGgEBAEzN5hwATxuYO3c8fEZ/sniYblgCgDF5RqNBV77CW21qKIPCGficlW8rX3QljFz7uEfIxA9cv4DANhGCMsddJCqCXaE3gXuty8NfdwVcAVfAFXAF/l4FHAB7gbgCroAr4Aq4AqrAtQ/uf188fOmrFPvw5jJOCd5QAysAAnyFVc5rziQGB/rllr/A2nJu/UIL0mWuxnZTuEK739gXYQZCBDI4sAAQ17aqGbQAwCE63WvzHAOYAGMCjjWzEo4rgGnaP3lhq9HEvheqeNE/Pyc+7obVqwP0RJtTjxs3bvt0NJr4s05vQT8PSEACOMTDSBPSiuANHKacITnFddY40HJ18hposOZDFjmQl5kCfmlK1oBjzfelZ3jbQHFYykx/g1vTHJrm6mRXGzuQxQnLua20JDqnCA9kAlejUTkcDh4JFy76/NVvefPdtE0jobNmvBDFcd0Tz703HE58rRMn1ASOGu9pxAZOgs9ImxxaEziGRTRsyGiFK9o0NgBs4wdHtjXWQ64omT45QqMcDiby7sKrrjp9yXdnklCcAfz0o18Pi3I9IiByuKFxjq2IAvwdtYJaiwNaHo/7C0NxRMHIpJGtCJBQagD15iw5JoP0Q0O5OM+pCVz84KgXfnjdm8+c1S7ygxnHG57f9IFkWGwIkvA4AOAMUQPk9q8fmpHOTnKOgBDAzo3i6MHwHfdo6M3xLfRZnjlSp7oBSlzZGWmcd/YWveB9ly1dff/BHN98eQ8cwP3J+KFhWVIEhGTb4wG90UDTrmdk+CLiwRpw8qQO6lzvn20ALBM+6v41J7bmuIdFZzeFTax5z5KLts4Xjf08XQFXwBVwBVyBN1oBB8BvtKK+PVfAFXAFXIFZqcB3NlfdXS9t/4tumf161V0U5YADBO0MyoDAtGFiA4DldK2pGP4uQFiXsmtmcBPxYLBLQYSBY13oza5I/sJMS2kZPKqjTbdrIKlplCVOSXzBNiMcnKVRlZVZlj9Qhen/EgfRfWGSTeLYJrJRlGZBWEjwYv2w7lG9jvwtG9HOuwRM8Cc9CLaEkdFw/EwUJUG/HyXZYcIUlBxcZGOl/+I8CEs6MNJJ/q1Bwa1Jke77+FtP3klPtXvAv+56+c7m3YuH4/v+Ok7CDxZhl12WcOLKWDWQl8eC8z0pK7ReWi+CM9KF67LVtI+f1yX2daavNuFDDERNZrkZn7q76XXJstQsUXV0c/4lTwYInKozXM2JTO8vipwbmgWUA1FE0Y1hEv5xmEXPZcmg1idk/Zso57JK+TBMV9MfzxFrkdd6dNr0OdGf/k7C5J2R/EmDg+f4/SHyS8R0TM7pgJx3IVnIedv0gYDieyv6kWI16FKgj5X0HzUpYyM010RYUEQqHXUQjNGmLisnDnyG4h8WBklKx2LgXOtXHbwYH07Y0IgTy7BurjMFoaQPO4dxHaKxFB8xclnpEGmQisHkRJEuuOLKM5be8boL6DB+gAHwU499nWIq1g+jOKDrjBoSmhYQXe4LDIA50kEuD0xWSGa4POxeY3+XJoYWJSIO4ghsmAqgG0Y7s2707+ia/P/CvDPgRfUyK2Fap7sAACAASURBVAE2VwW04SCJKZ68qqJSZqDw97LqVmmPipTuDLjq+e8Y13p2So6lfd3j59Ggnv2qP2PPhcGQ68zOg+qhuQdg21nG952SLky8rwhzOgWZPouzkO8Z9tkyqaqY/pOapffGYY+O5YpwYvTFKqq6VK0EzuX6Mndpc+jNLYYn1vSQOFPW9NXrk5vF6QQFtsXXrQLgbhXszVIHwDYm9uddz957ZreIHgQAprHgVRdY+VJyDUveN094yR0JSx/qTWACzCZSK5oAlckgnUiDY5veiUgdXj+A/F/6H0VAEAAOLnz3kjVbph+L/+wKuAKugCvgCrgCB6eAA+CD08nf5Qq4Aq6AKzDHFfjK3bs/GGR7vhonC0/qpGPkoZVl+7D+MmBVMMgNhQwm1s7FFgAGXYOLSaMHSgJ+2I51RYeMDByoURln0ubiVMX7+atyzT8MYGhWbc1UBCBL/xxxpmJ7SSLbY1chUTu4JAmS5UU+3EnH/ELWKccJOlGfnTwm4MJcCBQOK8tz/tJNX7WlDTtOuh5trNTHD7QvsCZmdxZjAecnaCLOkHMeea01QlrxLJkbCRsj7ZadsRR4OzHM7x5bePy/uOK8N+34Zcrpm7/YsT4cjf9Z2B07tiA0iSZ93MBNQY+yL4a/Bho4c1aBugEeHIOBSgNHAEGAvbUbE8vEFSIDcNj7rAagvTkKZcm+AWjREMeF8bXID46BUAen6ErwigBYUIyo21y4kwZzP22T2CzexpCZw0Q4goIZrIwIxWLCPMctk2gU2DJK8uMzjJxLAH5OByBgS9SMHMlY646Do8EJaaTZ8QhzOUIx8IdwMfoMVxhtDOciYRrYA4CysFveP6fYYqV8TpSG29v1CRz2o6hLkJhf50+iTtmJbdeR4EfWgPgoXQyU60u1WxTiuOaTwn+amwwAzDXOObmoa3K545nBOGUAL5iRGcA3P/0ER0DkFAGRmRZ8TpwyzXWBHG9+6HVszl+rE7s+alCm+tFQ8ks5Jnzg+qfPU95wGQfVPloVMEFYt6C/426FOQ+MMhUXRRETR6XRJhm5EDAsVEtU6hh8/MmmTCoI6uSF0ZH9yxSG3GVQLFLQjVeZp6e4HmkjeF9IS/2tbLie6N2Uv0L+Zq4KqhPaDJ6nKRmUOF2gXGrYPqYjcG/h17F3rjDsgetXskHo3cfSBxbTTYWue5q8iMRBzRNgGjFgR2wa2p94Hg5yg8FyHUqGty3hqAEyXNq006SgJnDd0JvATRMTDuAFw/ShQVEwAEYDOExSYMh4IgMOa60idmHz7yz5nVbDeNKdehjKfUCjIxABgepkFzFWv6ACaHMEgV8qg+iCd5/uAHh6XfvProAr4Aq4Aq7AwSrgAPhglfL3uQKugCvgCsxZBf7qob3HFRP7/jIqs8s76WJyocHBSF9M4WRUJ659aTWAh2+3MZa640utwmIGxsxQQXUUZOF7MQAoLVdm4KAN5bR3XOMw5uZvDVzmhk8AmoZizDRL+IYBsL4+dVA0TxjuY0RK0J8RbbfIR+LDIqcsAyUG2tTYjJGMLkG3pc96HHy+GkPBX9rVCduOszCXor2X43MLZFrIknd2K1NPn7FujLzbanxi8u5o8fFXrj/3pO2HWky3P7nnmH3j+6+Ng+AjlJ0bhlGXloGrdrpROMosC9TAmsFhfg0P6AhGCnjF5w5d8Xd5nYEr6YWXAO/NeQ0g1QYZ3MCIHcG6cxYBgy5PAGCyz5i2xTqCuLUAMD/HYBBIjmqOjmNK3jCRM7yfm13pxIONv2zf8o41CkRDRMxhazoAoOLRBtjYpkIzerscF45eJjz0+BX/4fjJVcqv26mCCPLyenX3wlsq21NkyJMDmumrKFGiSzTmgF3TAoSwb8RB1OxR5WSaCMcvHx9ykxUAT06OVwvHLr9ixbK7DrWWDsfnADgNAGcpOYABxLTGWFd2/QoA5muRHY5AoZaPKhNOhU4g2f0C59627CMXmGuHRAc0Awzm61DncHj1QuszGH3sAm5KwHY403m8GYha4zncnwBzbZWCfIjrho3D6nLHxBWqQJf3i47ajI3OB+eMgRUHNzm5cf4qtiFl4n58+Kg71oWpNO0Xk1F0r+Qtcl1IfUgOu35tAWjU/F9cwBGFatt1y7m+qEmdxLHa4muSHjFPKEy9n7XvEVYTJWkkADjYW/aoCdwSbwLXvl64CdwweSirqrESVB3jRcVjcTj1WKEU6GVZcELXcSvznkaKM76l8aPUoRmFbeLDolLCKnqJtuIAuD0I/ndXwBVwBVwBV+B1KuAA+HUK5m93BVwBV8AVmHsKfPXu598dZuPfLqP+4jLsEUMgWEfgw/IK5Yxl+bU9QnTyYmAG0MHeSn4AxjD8VCCDJbF4T93kzZbGtzY2Bdwo5KgjA3if4q6Sw2gAMH5sPHrysuWl1r49AtjyPIybGldAPzNUYVdla3m6npyBIXZx4bP0HxxcbeArEFOeBxhE/IQBSgaWiEwgMNglOzI5XDtRPllRKsQN/Tcnv/nLNKv6xubd74wHL99WRWMLKcmCABuAD4Ft1qlpumfjNF0fbg4FgI5G9VNAukInc/8yoGMGznACYwAoEVMuNLYJACawU2B7/eDxATXWYtHxAhQzJyzrxCnFerzskG4eyCe2iBGLqeD9MNTDEn1AM17ozx/i82CAIjBREjYbpx2KU5Gd1oLlzFIABBoHkgMXD1seb2Nbx2CoE5Ndu2jSpMeNDF/UFWCb1BgOTjKOoQGDP5ll4NfZpUnXFuujExoyPgqboYM27bJxE0CJWqXmi9gUgB/0Hw4OFGOLPrZu5Sk/aEl31P8KAHzT009sCIp8nQFgjJsBW1zXOCc4eRsAKzqyvgo/ua0WO1MNgNL5Y4wYIkNLabYFfNbOuq6d5tCfAXMD2DHA3HhOzeFctwrgrF6saR83UsR9DHvAcenKBJlAaAFiAnqoVTzLr5Ej1yaZ+GcdZ9QMQ2j+tKBsyYW1lQ8yQcKnzHWCmqbPqy527zEN6A0ChFVQm6gD4GaAzpBbrgt5yDalqaDUZdsJXE8QKVgHiQQARhO4UbfyDOBpV9ZdL1IExARlAHfKPkXF1JNiMp5Tf6/IRKZMcPG6Ar7v6oRULk1MOd5EJzzbE2xsB0dZVeGeqhev8QiIo36L8wNwBVwBV8AVmMUKOACexYPnh+4KuAKugCvwxijwlZ9t/R86w4n/uewtpljNFL40gm3kNQQoYaconHLmrlVnLn0zlSXr8qvUXJAW4VBR8qc4KgVI1E1w6EtuA2kUAjEMEhAiGaltr1/j7BQfKL5Aq1uQ7at6XPob3QANaBniJaY23xEAjO/iBoBNwcaxJXCQEwR0Gb65FqerDbDFkQe8XNea2KFhHS3NRiAtIArBwC5g1GB/mSVj/yp5+yn//hpa0X0oIwe49rVNO/9FN5/8t52kT+vaGy3gWG2AjsJoHBVc0HQMDDUVkjIOYjCujdlgjWSCKi5TTlkApGCApkvEFWTBCInX2HmrbmKD7ZIobFnEIMxwSSqIpTGrPwdADo30wfvS48f4M5jHRwH4GPRKJAIckVjdj+X/eN6ctFPcdrzNdq1agyzUkQAYNMSSOpFHXbMA0wwHzdFnIAcwUc+7NQkCMyVnLqsOBoj5eCwTWQkcZQvwvpAjgQccqwzSdek+lpDbcXBjOJwzXz+qn7qMwUcjxG6MqKD6iz92xelLfngotXS4PsMA+KnN11Nw7ZVlN4UBnsE9JirkIZrC2WiZvxYrw7rB3Yr7AcCqOoZlPBS+MzRttGMgjvxgG3MdCzj7s0xjNVqR2wzY+f4iKBZAHrDU6sCAvK0w4HganuESV/2r3bvsHsMTG7Rtdou3Y1R4AgDID/dRdUHr9WXOXPusXJO0L27MJppNAbV4mvYRJ3IPREhASbWB+uGoFYk24fgI3o5kqch2GIaro9kKwECwaaSvo6NkRP+lRbG36nbXfmjZWx44XDUzG7f7g2fvPysp4odGVd7jyQJyAWMikO9ZJHH9K8xShXCScKtjkgf1rZM+FIMuE60MhKV+LFaHaxK/QanGYwLAZS9yADwbi8WP2RVwBVwBV2DGKOAAeMYMhR+IK+AKuAKuwNFQYAP1RZr48RM3EiT8aBb1iI+lDEhDzeiN4PgkqGLZneLSU6gGyGCAT51rAGwMEc0Bqo6zWPMpa2ejOX3VUWfnblm2zc+IImhlVDLEbAAwGInBTXNOCTiSbFpY4MSJp8upFSzWPEp31AAYcWPZg7+sa36ubE8BuMIqfEEH7LHl4fRhgcKaUQqtqCFdJxhOTA7Hjl336dUn/M2hjvMt26qxvS8+d8NYFH24iqhpmeZotOEvnJEMqXSpsaQKYFm5RDEIVBXIBDYpS+IbRyMvtWd6oRoowLTxlMxgAKbGwcnbpxzLGloy3KImRhhzy73UCAgJk5Zt27J2ZptwZ9J7co0IYdgPAKr1w+PJ4NmOTP7WHjdx0Cn4UpFRK3CfoiKk5NQtjGgQBS48xloj08fG9ONP8qFr3IaCNYPqHNNAYBYOYYY4NAGCB7VvkvM1EEd5CHgdALiJ2aAjYfCJY5cmcXCi8qMG49qoi4gR9QUjB/Dk/pwygK9aeer3D7WeDsfnGAA/+fgNNGF0RRbTWaIG6FQMAFuUCOrO6sAWA1j9tCEr4LFcd+0axSQATbow1zRIKqCZoxowcaPRI2yiVSjMsTYEfA2IJjg26QknUtfRD+JO5wkLA/66TWs+2Z58aNe9gGWZYMGYcqSJBUBY7IXVm7yz3r+4cMVVL0M/dUICz5lXHrEP7MjXe6FeJny8EiUskRWskE1UMaAUJz7fM1g9jcLQE7VMcA4dzjOKgOi8lKXp+z7qAHjK5fKj5x54CwVcP0jh0gyAC8zp2aQZacnROAC7qD+bzEE96f0DsLg90WlfSHH/tYkhBv24b2JVQSfYTd0OvQnc4bhp+TZdAVfAFXAF5o0CDoDnzVD7iboCroAr4Aq8mgLXPrzjTRRO+4M47r8lj3sBmWY5w1KWYrP/SBxomldqwMTAjMEzgziW7Ysvw+zs5CxZWcotD3Wj1cZMAYLiWqPl0wpP2Z0H0GwOKnbDNXmqr3YuxmoEeGqOrQIfgFFbYitLcLFEn56zzFCco8I2OydAnDAGIBWwx5CX36eQBwAR0A4gRQFKHYHBnxEN4ooyiIvR1jJacOm68078xaFW4tee2H1quf/A7ZS9vCpIeiwNux9ZY81FVuBg5wAACxcy59cqzLaxMdDArkDkmbaaSAGBsYaZfc4c322nMaEtmAxbwFgglhwLj7ZmSNvYWLQDXjOXscBXqTPLzGVHLLaiURUSKyIQlt3d7ARv/hlnI2Layup5HhnZD6B1rY2CQoWy9TGL3VYW69d1oY49duuSJjhUpmzWYE8nI3T87TooCQhZvbEOdqgEgPl5e/90oIwMV7426AyxL9VJxrjTSXDOBOaqbLi/M7bwipmYAWwREKOIrg7UJyctiAAGtqXBmdSATLi0nKqtcbUJI9yOpK4sn1rGJc9losEmnnDNsUOc3dmSKc1RHKgxbhko48LJHDiEVt3XwJVqT9YaIJO3qTPJZZU6tfo2x7vFydjx2j453xgAkOFvExVS3z/1wqgnIVpAWOjhVF3q+60ukoADGs9ZxAaeNnd1PQnH9WeRGrJDc7QjoJknzKhebaWG1W2Y0aRD3tlTpvHaS089+6FDvW/Nxc997/kHV/Wz8MFRp+jmtG5GOg7KGNu9CL8LkMnM46OTiCHpLVNPuBhosohvUc3EHDKx5b4sdcprTGgbSRARAA4cAM/FYvJzcgVcAVfAFThiCjgAPmJS+45cAVfAFXAFZqICX7l/z0e7w33XdboLFxTkAB4R8DNYBXDIGZn85dbQHL6vEiDR6IXaracggx25+tvVAF2znN+ohXxRrgFZ7a4DerNfzU30A0OP9rL4KQ46UdUAY62xukzN4aaroAUgKrQ1CCTwuUaUuonGXSrQRVMbWpDYIjIYYOv+OJMUX/jJqcl5ozijfICNfzc5btGnPrb8WGrmc2iPLz2846o0m/h/g7i/mNaAM/SqH+r0taXz5nI0qM1wR51oOF52QyrwbYNvg9s5RTTwUmbLTQaM4MgPBbvc5E4clXVTs9ZpyXiJS5NhnL5mjmADZVYjNfgF0Kptl20QOxWEsasULk0gPoV69bbYOTn1n3iWEcwQWGMEGK4pWGS94CA1MKmwWIzBLdCs14I5Qbn28JwCNnP8WdZyPQ7sVpbJAwPxBijZkYld6LUm2cPqIFQQLTVKbyIwRK0ZOyVFQBRjC69ct2LZ9w6tmg7Pp9gB/PQTXw/LYj0cwAUBU9RaW3/s2a43XC9cCxQ5w5Bb9WYIprIniCjRiAeOjdD19aatTYIAfLYd7ubAxXMMdKlWxQmurlw431GfgLQAwnoN8ZjaPQyFyxNKEgXBjvSW+xsA2e6BBlBlmGUDHDnBC/wl69kmXdh9jwkuawqm95W6SaNiQkQ84NH4hKUebUWGOaDr64nnJijmhCYJbKJB7p86kVM7nqUOqbmYxOJQREnbkRoiu53eG+cUPeAA+BUXy+3b7j1nbJTenwVFFxnAyC0XACwTVzJoBNAxqcn3GF05QN3/ZAJCfr/YxAbXJG0Djl9El9gtJ6Lrh/9XBbvLbrXmPUsu2np4rlzfqivgCrgCroArMPcVcAA898fYz9AVcAVcAVfg71AAsObae/f8m141/P087EZ5lHYyMqmxyRLLV8n9yl9W8aW2RVgZ0KlDafqm20yy/doUiAowwhAD1KXJmsX7zYXHubo16JUICIMcAmc0U1O72tfLyfUzzWflKDjjFvvVg+LT4Yxfa8pjS8p12a5+QbcGXfX2GC4KlGHAovtnAMyuVcQQkN+LAHBM4IoWnHfCbCLPo/g/nnbeKb93URA04bevozLp3IOvPvL8HyTD4b8ouwuiMKJoDqUEpgsfk5FujnlAhIK6ZhVAmBOYj70F0hk6QlUFFAYwDQjX77Vl8jr+U6M0aEzo83hwHqnmWRqAYlBK/I7BszniAD3ZUamRDwQ8DKjJeTGJrZdRW21aRutUCTFRYRm+4vg1eGswse5N14oUEABGenAnP6sTcY9CTvssQKY0A5RKskZOcgytCQseg6YRFFyq9WSIjpnFT9jYIfcXx2Gg1KISgCf5ckOkBjvpAYDpMEfDfcOkd8XVZ828CIibCQAHBIBHCUVAwIFPx4uUbDwoKUTuJwpDp4wRO3cF9LdjIPj6rSceKna0ZwCUfA9pRSgYQMc46oOdsVSzlqvcTBIYrLMbm0ZMoNbsHqF55PyZegII9SrjbZm+NpHFx8j3AYlysExsOf4m9pvfJzZvaQ6G1zWmgv/O27ejeOVXFdkftqH3zvYEheqMiSCuLfTzxL1c4TgmP2QConnU98TWvS1EFAttIymCPUUSuQO4pRf+esf2+87tTUb351GVlpgQIBHRDJJXlNRRIs34SmY5IK8259NoHNSlxOlYtrXsyCJ8+HO0TZq62JV3yzXvXXrxs9MOxX90BVwBV8AVcAVcgYNUwAHwQQrlb3MFXAFXwBWYewogU3b8+V3Xd6PqI6OwS4uAEwIrvF4bK/JrFxvO3MCZuRcli1IhQwskAuDg0XZNiitPIE77eUDdgkCDLOFud6UnuEMQx5orcS6mOtfqz9MBMYCZlmHZBkWvgMAAHPp+OyHLmDUHLwicxAzoslz6wTIz+by0DGzb1uSOc4Dpi3/KjsdcADBpEYPcjgaTRdz/b68678T/TJ9rs5eDLqoNz1b9fM+zXyee87EiHuOgWMAtOMzY0atgxzJCeYk63IoKnhgEg4ux1dGW3eNluC9Ve8tOxbY4k5echOQIr53C5iLEfuHKBOhWJzgDMXa/WbaHggx2dxqQE+BuoIyBCAFjdkKy61VygCU/Wd6HZnF1Iy4cvtWWOiynZB1L5cnyfnPjqdoGcQF1eVKDc5tlYsDcmlJPAmTqhBKqUfss7xufUUjItajDyY5dVKNeCwZw60kLrX1zg9ZQmXNcMQmhB0pOWKlhBYPa5CygeoIuCc4NOmejlyd7Cy6/+vQlPzroIjoCb6Rjj256ihzAVbVuFIecU10DYOiqwFPCHJpIiNrBynCygbocv4IYCbglzbGuNcD6a6wC1zeDUAO0crLSMBAL6RtHP5zY9bigCxc/5H18V9M65Pqo71m4L4qLGDWPeuV7AHrD4dgU4NfOb40osUkMaw7G9aaxDfUEB9e1AOLGRTwV0db3vTqaRI56epZ5fXex6BxqTgYgLTCYJldQzwrT6xgMrWtsr76v0cfQBC4alXuqXuoAeNq1c8f2jed2JzJyAFdphfxzlCLmCVAQaGCIiGuuD/3dx9c4frc0TQzb8UOWZS9RJpgoaxzZ7AAuw51ZN7/QAfARuIn5LlwBV8AVcAXmrAIOgOfs0PqJuQKugCvgCryWAt94sDo5H73wQ1p+/ZYy6gcZfYsFkBVAJ0v+pTkV/afEisGW5ZcCjir4EGyjUAQgQ11pTbLCVMDHsEGhjTXWwn7YRYUvzvxlWhys8mjyf+11ARYNKBFnncCOOhPT8nrrJbcKqGuDnWa4muNXHcHYLrsuAVgBWtSxWjdBMxcwXgMYUldrTAcOuFgRuCIDJHBUVY6Ge6o0/cy61ScfcgO4GzbtPCUbjX+vrKJVZdKjDcPaB6CAjMgmv1PcZJqXy4BMQL1llRooBsSSZn6Ns9rAqDmcGUbZkmU+f3HwMozSupgOOksKkW6PDy+wN0jKRkoDmwKYeQk+9mO1Y+BDm2iJ9qqxOoq5LrXZmsVMGPhv9i0DLKyrgbh1czUdb0DyGsbCrc0IW92h7JqUpd1Av3BRmoMS/k9zfkp9mgO4vVi/uQLbDmQcf6bXGapaSklcyCHqVRufSeaxblezQwGAI1wXo8HLWdK/8qqZ5wCObnr6qesIWK/PkAFM40RXtJwTnSUAMOvGtmZxafPZa2RIPT465niNE1ORvGCudr23iNt+av22gTuUA5Bvj4/dR6yZI97P14QCO3veMn7t9tKeuLL7DLbbns6x+xkDPMvcNdiqIBl68D4wP4PnWvfS9nbbjSi5gvV+2ExBaZM6yxjW07TjwT2IdcZUBt8TpY4JJOrkGk0ooL4wBjyRIfdNuMwl6gKTDHQPK6M9ZeIZwM2VLH+DA7g7Ed6fh520xG0UjeDwW4IcvjLZKffddv1Jpr0OVB3FIa5/yyc3/a0ZJ+5HmBugcdtV9N0BPH0c/GdXwBVwBVwBV+D1KOAA+PWo5e91BVwBV8AVmFMK/NVDg9N7oz0/y8PkRMr/pRxD+eIqbjVtysVuOGBMc/bKElc8GFxZNEMrP3NKRIKBDm3KxA7baYDXgFs7K9EcwAY02pmr+LJtjylLq6f9VmfAYo5fuGTpQ8gJNbAsTk51p1ojOvZ+6jJp0E46KHEAK5hWZ5+9x0C3uTaBMuFapIReMC+gxCofDp6N04WXX3He8YfcSOnah7adHWWDHxVh98Qq6XdKXUIubtWmwRQAggEocUiq3uR0NHefAVfREBrJQ8CuEDl7r0U2lB1qPIZa4KaAWN4ujkVxbgtEk9ebXF28riuda4evZabyngHHrDmfuoTN+cZIWF28iK1o55MKDWzAXu0C5rPRR50CYFEXGq/QakYosFAzVrXQZAV/kzdsIEYiG+DFE/c0atWW+Mv7RQ+rL2v4JfqIKxkPAT36HIM22R8c5JZZi8KprxEaNxlf2jbiEejnBDrDAZz0rpyRERDPPPk1ig+4ekTFCeBZAO4CQuL8NToE4BPniKgBrgMdf3NFiptSmzRiNUArUsOG2GoHI8gaa7EhUqSudatrvvpbmdmtSBmuRYwnO9gBbxvY3HZiyoSL1Ze6avVnA8+NA18dvea+NbBKDm8DwLzfVtQNg8Ma9CrYVmc8X1m8Lb1udMLE6qeORGk1tcR9iDWGk1+d9FyD+FmdqBQwwCdUz4eZXhgngpRR3nmpSqP3fXTZ6gdq3f0vBIA3ntsfFPdnYZnS3EwNgOW+qFnR0wBwe0LNJGyiXqT+OKqE76XyOwgZwJh8jcpgV9XvXOgZwF58roAr4Aq4Aq7AoSvgAPjQtfNPugKugCvgCsxyBb788PCc/uDFn1fRgoVZmHRGcF/q4neOgFCAyhEM6mDjZjYKJdj1aABPQYc0RhNgJ59RsKKOWcAswDQ45AQAyq9ifbkGzTXg0+2bw7LdJG768mcGGUKOpjqD2eBmwEadxAqxLeO2Pj8+mhYAxjYB3MzRzACUrXPyJ70XTaq4ORXOA32d0MwK+Zkx7SvPqtFo8HjSW/TBK8874ZDzG697cOeapDP44SCPFlRpVxuWNS7qOqNZz0uWmgtk4+NUJyKcfQzLFCBNaWLF8R167hwrAYCtWaWhZPROgWh4dw1nhaxarfB4AeCSg3hKpm8dGSGfteNjZ6Rqz0v2NSOWtbfi0PFlSManRMekjmHLjuXGbjhOixzRyAtDXAbQamMoQh8YiOn42ecViRHB5IgMe9gSfSlbgYqvcIfys1OdwHYODCk1BqN2a7NjVPYAeMmRKHaN1dEn6phGYymNgBil/XXrzlw205rARTc/9QQ5gMv1OVngkf2LjFQAR9RDSLQs4s5XCrhexTBtmcw89grIGSBrDbNO/HfRJKIl+IBkeM6c/1JKGuvQAvptuF+7cIF99QKya4YnUfg/NObSa57HZ+pSfpvgwH2Rx9ia9hnAVrLaxKDofdXuR3oPqSusvrc2Kxvq4tPz5okHvb/i2Dg7WusVsjT1qBnguN4xwYC61FUddt0iIQLnaZnrFonD9wk0qBuVe4t+8r4rlq6+v30c8/3vt297+JyFw+qBUVCmeYSmmjSC7Ny3rGf9/cY3RWTo633CJuS0iabcM3W1AoCxNV2l61wiT2jihxr1AQB3+uFF716yZst8197P3xVwBVwBV8AVOFQF6GCWJQAAIABJREFUHAAfqnL+OVfAFXAFXIFZr8BX7jtwfq94+aeUT9vPg4SiCzUDE+AEUAXwsJRM1ulL/jkjFkvrFbKg0RWDq5YqAvemAg92QHJ8gEIvBTfmPK2/P1v0RO14E1JEhsHadcrQzBo/qQOQn2rBanxGgKAcWZNBKz83AFMOXJ9VYNw0bqrPi/bHEEUdsIll0SqcAoyCFgDAgJi05L0ajiY29hefuPbyVYt3HWrRfO3hHe9K8sm7RkFKmZM9ccfSUQAAcfd4zlptjrcNtrFPAdj0CTouNNGy7N72EndA1DqvuTVudsyAGygFy2K1CQJzR/P2jWSqwxOAvwF3MmFgn28DYJBzA24Ct9RhrONnnwGQFtglNWnADdZMBtvINMa5wn0NyIaCwbhypjS2qXVgwFU5WznNAWyAmAEwtoN6hVsT9YY6VOemwDab7BCHJs4rVdc452nrhAEfiEaSGJCvJzZUt9ImFsxlXx8fwSEcO+0gRuRHllETuLFPXPOWpbcfak0djs/RGEY3PvnkhqgsrsooA7iicQV6NIALDzWPB8aLxrCZuNBxwwqEGoZj6bvBXrlv2LWNnFXW1TLHGaI30R0WDTHVOd7cG6A739bg6MZEB3Jca+jbbkKn9WNO32kAuD3hwfc7jL9OrliWNQ9768ZogLYNtPlq5vuU7q+uT/t5GgDX1/n4GeC2PbzNyNq0Ct8bVJ861od+bpoP6gQOic+NDiEKLQmJiuClMg3XXr7srQ8ejnqZrdu8fdu9BICTB4adIi0TxP42Kxbk995UBzey2vn3qCxzESjcmjDgiTfcsxAhjMlERHDQ6zRCnNscF8HuzoLoQgfAs7Vi/LhdAVfAFXAFZoICDoBnwij4MbgCroAr4AocFQX+8v7R2xdXu/42j8e6eUVQkAAwABNn38apwhZxIcFtxyCMXhOo0nJvtpx5tgQawEGad2kmrL6Hoz/B52CWA7So18bLr2TrXi/5tI1LFJDDmoHVbkm2c+rnWseg6+oFNKmybTzCoEefFxcmU2V5xsBbC2Wb05ePT4EggA1DLGRoItNVc3hh+mWIiuXTIfzKBIAHgweTE45Ze9XK4/Ye6kD/1UPb/os4P3BHES5MqoTGBhZtfthYII9ZzwXL28HGoH8rk5fPQ5e+m5PVMnjr1fGsYwP8DbDWjmHWoInWsCZtbegueirQVVBq593OTJUB1rpiLoLj5/52dZ1VdPwSWWGxCGYZlZ9LytwUoCJjiEgHyTC1PSIvWCIbWC19vu2SFMepQFxTtYZ0CpQBgNsZtMiqrvegESm83F4dxOC8bbeplJa6RLXeWCetWxxW/X4+XjnPWlf+LHQhZzmOMx/tG3b7664+Y9mdh1pTh+NzAMDcBK4o18EBnGPscE/RzGbOEtdrBaPadj+y/pRtzW5hnDu9VRK48RF1QFtdIYuc9MZqgrYDG83/QHYZvvL9x+JDmrqpITK2axNY6kZvhUTYjqXO7P5Hx2hQWYCxTpTpxJRMgjTQto6wmf6NA+NJTdk4pgHxFzw5oQ8e++a8bHty3Fr3gOo4Fv1IEx2hdV5PZU3Vx3YBxzO7mwlM8nkoXI9Q57hr4b6BVQxluGcUd9Zecep5hxxfczjq7GhvEwB4bDJ6II867AC2GAiLIcF42vXcrk+bALHfM3b/QwQMA1+dQLKVGhGFCQHEJ0G0u9MLHQAf7YH3/bsCroAr4ArMagUcAM/q4fODdwVcAVfAFfhlFPjSA6ML+tmOn5bp4i7hWvhJGajBHYpu95b9a+CL90XQQMBKA8DajjbJiFW3JEPVqQDCGr5JYycsUbZIBl26rICy7Y7DbuuoAIUrADICIhVg0HG1wUwd7WuAxNhK62eGPwwNJZ/UvpSbk8/2Kx+xWAhx0vKZYZ/4oDbtwv7R+I2XZJMLuEsduyqKgMjz0f39BQvWXnbWCfsOdbyufejZ90bZxB15NBZ3KAPYmpeFBMz4OBCLy5qIq7HdxIp1amXsYvwsssIAMAAnD68BMyWlaPLHDkN1gdfwzJrrGbhQgG6Zlrk5cdXRKuMp2ZhTwIhllurxcewEr80XgMKZu63l/wZKax0NoCoAFrYK528DULkJlm6jdpxqTVmzrVKPP2TI1kwqwAHMutgS/7p+yA2NbcCpTGPAVcxudFlmj7q3JlsGnwUQywZMA9NzKuSTZoioR4Z8iDngHGCeUOik+PxouG/Um3kA+K6qivc/8+TXg7wkB3BAvJdqjSWU69yud9xt8JAJBDSFE12U/apRUvSaqo1lk0t91G5hrYNWWscUnW0SB00up0SK2KSJjms9iWIFZmC27T62GuB96oEb3MdUhU4mCKCV+4s57m2zfLlZXTO0bgHDOo7CYlVazmcFu9geA3Or1ekOY72u2nERBpClNvF53DcoBbhV7zzVguOnBnCdrOr0qmg3jeOvfey0cx+xY/c/pQlcfxDfPwrIAYwGcDTZZxBeokWa/OUpeinnx/XN17XVN/8ulHemlBOdZZK5jiak+B0Vl53do1500dpTLnjG9XcFXAFXwBVwBVyBQ1PAAfCh6eafcgVcAVfAFZgDCnzlEYqAmNhLAHhRn3qXM9YsNLOVXZdwkdoSY7h2AdfovNuOWMgwBRBbZu80F5vJBYekwTEGO60IBQYUBvAU6HB3dWTqwh3FDmSjLwr41LM5tSmZ7AMP/kWPfdoSf3zhph/NINp2CAOKSEOp5jgE9LYcfQpL4GrkTcMtzVmN4uiTTFqYtjJy15F+RJzyYvhgcuziX8oBfO0D296TdsbvHHZ6KQAwRyHw+GDfpI9ZV3V8wK3EiTvVqW1LxuGU5HFUuGtQ2JyTzdp8AcrteAcse4djTcC5AnzS4RWQXuGl6crHo/VhjkqgTXFSyhjXDd0sQgLAmP7O8JOXRMvYyWekgZ04NA3QywDXgBVsjU/TMnT1vDn1VDJm8Wg7hBngaKQEKkg+qyBYHfAG1Q22C/RpHKFSfLQvPV4BbjTFYo5LvLfVzNCcg83xtM6HM0R1woG2CQDcGQ73j9KxT1x91pLv2rU1E/4EAJ54+qlv0IB9LCc6WVCt5HxRa4FOzwxnoo9reZpzVsFs7bDFGHPgrgBKdm1jXMgNj+X3nJkM1z3uU3zvarKWBcQqdOcJBrkfCJi1O4GMH4CqPd8GrO3jM53l9caRy/cDrTPLhq7rWSMBuF5w7DgEm3ziSQerZ3Ev417SfjT3INlH21XK+7X4l9aEmn2+dparBnKcNIGBmlRndg2rbXwAkAkCp3mwe5QE7/348tUbZ0J9zZRj+N72B1ank8F9eVSlHHGCpR+4p9DvKqkBlDzVoa5gsPGyrGp2YNOYId9X70Byy0BGsG6HJ4zofoF7dNoJ91BM00XvXXH+0zNFAz8OV8AVcAVcAVdgtingAHi2jZgfryvgCrgCrsAbpsBX7xuem5a7f1aE/YU5Qz2QAYEryIk10GKAk3dcw1AFoAo8akAB1tNysBnkqGGEAhjLXG3nZeI9tWMOOYgt150dS6hLwEGCS4IUgD98fAZ+GBJNcx2/CgCWAAo0GzOHpwAlbuZk8Q96rpZbzF/QpwFgAZDisGVww8AQWbmAUWjqU1bFcLipc8zxa685a9HOQx286x7Z/itJMfnDQZX0gnSMxyZHHq8BYPoZbsra3WhZsxolAGDMwEqbowFoMrDUpe8GriyXF7EJDFa1FqoCgNdgrcwGyOeliZoBqLb70UAtdorpBQPABv7FqWuOWc10tUgIjY7g7RMjAXBHRjG2hDEHwOMKtIgGjENrPbxBMgy91JqMc0QxJ9w8TsHwFEc6vZ5onm9t7KwzixWk63kwzEWWMtWpRQ2IXk2NWL3wcbaa87VrwI6THfGof3MEsiNagBI7oRkQ0r7gGsSESJ4RAO7++tVnnnrrodbU4fjcLdu2jSXDyVvp2vzVjC4GrBMIyNGIWm1dhjKh0xprjh151UcTygCNzDlsb0WTOWtYyeMLqIrrtobE8k5zBtcTSDohxC5uvabxOYOldjR8/6oh8asco9YHNzxsX0t6vVkNGOCtJwz02mogcJN5bREsfJ3odWz3VDmbBlrbNVqvXtAJsemREA1AlusAx4Mca85Up/unqcwrAvAfrs1B1ukW0S7KuH3vZctXbzoc9TJbt3nH9o3n9ibz+xkAa9wLTyLRfVImdhTy61DZdS7362aFjDWxFB20WRx9BvdyHieMJ22YgiD20GKXX/nV5b/y1GzVzI/bFXAFXAFXwBU42go4AD7aI+D7dwVcAVfAFThqCnz5wcmVaUEO4CB9UxV2ybUKh62ALo4UQLyAdi1nhx13Lhfgx13j0Sm+djkKQkA0hDSv0Uc7VBPLpG1JvYJIcwDj3fwl2ZphmcMTX67N/QsgApBEfxpsqXfDjjl9Xp9sMInhv0bqGvow/DH4K/DWGqZNHZgmuqD9vH2xxzEyFGTSVPIS3pg0Q0DDYHDgybR/3AfWn3vclkMd7Os2vfDWNB/8aNhJji2jrrpesU80crITbsVg6HOcKdkCRjwyAG90nOL6E3BdjwPGCDEWNL4Mk3UJPJyCAmzbURiS5Wzwi/U2WKaOT86T1oZoDKvIYS4/y+iYg9d0sZoCAJHaIg86W88lJgD1gU8SVuc/wVUZkjCAy+tzbVWgvKbAL7SoVQbgjP+kbjVjONTzrR3KGrExxVHO7xcwK9cKdLIJEQNs07KldU81mG45T1kXjJNwdc7Nll5RUo8iFE3KII6DzhEZwADAkwSAPznDAPC3tz21PJos7szK6vSK8lAKnAMdd6HXNaCvXesx53y3mp8BclN98Hm36rfdQK2+fmy9PL0ocTLScFI4cuPkrd3gBu6tfnX7zeqFJiNY6kGuGwHAqDtxkFv0jdUxT/60jheOT26GCYinjbxkqqlxpfNw6mfMOS73I765ybVtk082QcWXFm3HasKaWtLHGCjqBMMrMtVbdcbnVd+YRfdXOJHpuK3ZYGdIMTZlvLNKOr/mALiuPP7LD7Y9fE40qh7IwyotOfZHIpH4dxNfu6KtTayZw5od7Rpz1Nz75P6LWsA1jkkf+/2GFRK4ORAA3l1F6cW/uvxtDoCnDoX/5Aq4Aq6AK+AKHLQCDoAPWip/oyvgCrgCrsBcU2DD5uqk7OUX76TGQm8tox71/NHF/pwDiyZiicA1gANe8g84IRm/OUGq2HJVCUpo5CpDDIYq5oaz6AUGFwIc8QUYQG6KE1SBL14Xh5Q80N8eZEe+SEvEQttVbE2cLALAAIo53mw79gvfHH4NAG5cf/ylXY+77UiUzzT/ZGjAHCi2gm8FgnBoMgyg/8Ck4ffKs8ltYTr28fXnnnTfodbQho3bTuuMRndlVbiSHMBYGyyQisbMXJEaoyu7MEBkjlKLfADg1YxgdgGrg9YyRQ1UsZ5MI2U5M5yC1qRIQEcTpdAGwFCJQVnLTSnjSECZYauAZF62D7hlIFjHuG6GZdEVnCkNIDgVPNfgDceBcwTXJs0ta9UAMANXFqapBIHiuv9mqqIeGtue1BBVJE9W6CRB6/xwTo171Jykeu70PkwK1A+dtGjnVJt7k7cB8APgaIDUomVZJ5nYiIj0U78pWjZOkywEgIfdBZ+65oxTvn2oNXU4PnfTs09/pD/Kb8jCcIwcwDgjHhs4dfEgIsx1hSxglocbFurYot40usQuN3bUK0gzvWoNgWh1Qqi2+NL7eb5AXZkGgHnCwO4xOlnDx1Pfl5r9VBiPVvSMwX270uv7geVXs20W7nQ9R3N9KsRHTSIqQq4bjXrQi9U4dlMnBP8UNttzUyYN9DXehcbs4K82ISGzCDqp8f+z9ybgkpTnfW/t3X3OsFgyywCzsUgsBi1GIMlxJIxssQkEEkSyvET2tX29xI9jJ3bi3Mc3Ua5vHvveeIls5z52EtuyZPBoIQiBpCg2jgVISCAWCW3si2ZYZmDEnKW71vv+36WqzmGAYbazvW2Pzjnd1dVV/+/7qqnf9//+b3stkz3xuNNxwBML/Wzt3mfysSK6oKC86Sp2ALyHgfI5AsBTRXBXHtQEgKVd+aqCeA/o3w8bt2sG2kO/L9jpz6tV5HqJSB1MHGB8c4a8rmzB9hxt0gQ7qih+w3lbPAP4YFy3fJ+ugCvgCrgCa0MBB8Bro539LF0BV8AVcAX2oMDWx5rReNuOqwdxfWmZjEIgOnaDEthIEkodVFDYB3DshjNXWs9dZq5cgzPmaGsIFDMQbh19VtBIHb8GRnD7DPCs+wYEWbBs2WCFFVsyB7EuuY8og5GXy/fOs3+cXFhs0aODwJ3TEu8316W8riROIw8sSqH9HHW6tkV/4N4DBKgmuhy9aqpi9rlodPhPXHXGUZ/c14543TefPmxmfvYTVGvo/GAwTYeByA4siU8ZfApEFMBgTsUF0R3il5U2VfDQP5Y+ZOI2ZOgojlqJOpB4CSk617k47X0GmPoqc79pP6sHcBW69QGw2DcBRTonXQvneg5wy4K2Y++OW4uCtdnPCvZ1QztmaLDgmBUet8ffAml5owFyc0zzfAQbfruJAyskyNujH3NTdErA6WqZtfY55vDk9zAclskVgc1Ay10EB4NP5IUiAgOskQoMBuVkps6mfuzKU46/bl/71IF+302U//vcww/+m6QofqtKk6jSGAZxYMunReif7KwV9+9i3WW8Ac+z7XbBISKjvM0kV7hpE0D9iR0b19bPWT+dcLLXrB+Y/uyuNs3bI7ND0OPA+NIJMT5uc+liXNjqg17f7gNrcxPbdYLBnvYhOQYrAoeJlW5yTPSRopvi3tdxAvhLVNCOoctA77KDAXuTNrZFtDZnOfofXm+PR8cfG/rhVkbkS44icOmOPGne6hnAC0cLR0BMqjsp/oEBMLS0jGpxVXd9tz+ByP2PV8J0kwH92BwqycfXchSJQ1/HbmLkoNfN0/koesP5x73+kQM9bn1/roAr4Aq4Aq7AWlHAAfBaaWk/T1fAFXAFXIHnKUAAIvrLr3z3A8Ny7l81g6m4iqigEvJFLS8VBavUfYc71q5Il0AGc8IuBBkL83cjvhEGWpEbYiDIPujtO3V5P7y1PLB//C2wDJkUcKwq7FSHn0VGGJQzB293A24uTHN8LpTBABKeXRj/0Lk321v5XtGuFsS0ILAHcOhsyzJHWi2cf01QzOZNPPz197xu/QfpnJ5Poveib25tmnhy52O/mzTVr9TpFNUGSji2AJmStoyeC8G1a7z3fL7mQIPjzBy9faCLQwHwhWOSlyEvKi7XgdTOPWluNYaf6lwDjOb2NNCFuBByPcIp3gfzsqSdZxXE0dgDp10fU9ckg1DkGNOCaNXd3LH8U5fsM/imD0IhN/Q4eRi07sTut729Tm74BdvLqnyJzJBl2erk1M0M9PJ59ORv4bVOmPBRGBBnwNNvHwG7BiylCbvjtRHEjllqF0RAhJPxbDm17ifec9Jxn9iL7nNINrlx+/ajqtnn/obG5FubLKX8X9BqnRCx1QLa+1u3bA+YijtW4mf6AJiBuL4PRfTw4MkJNVrCcWnXIEkL0Xzr/nhtryqyb7tumDCdM9uiETo3L9zfbc41YJzCUrwXkTbSJboYGcsrl+PUjHLtr+1kDa6yeqzc2hr1wTnbnGuikRRW1M0mJizbWyekOhdwN8ECTG3d2BzSyEa2GBRIaU5gO25c59n5y9nlsPzTT3IAD+t452SQ/NBlG06955B0ohXyIX0AXEE2vazjuiqPxddfmZiTlzoAvGCSAJNlPKkXBgVF4OAn2iJCDnodPR1NBW/4AQfAK6SH+GG6Aq6AK+AKLEcFHAAvx1bxY3IFXAFXwBU4ZAr8+Z27r8zKXX8eZ+umCgoztKgDcXuKq9YcvAxkASCseJO61uSeVoCiOSNtqT+AFYMduNr4rMThZNmXBgAZcgntldd7Dt8+gO0cnwJlDNAht3aBY1jdhXY+eM2cVuyw0oxZjnBg52wHJsWBp047Pna7pZeffBvfB0EKO/lpgBqGmMBMVTDAcU1mqzAbfPCYs9b/y/NCrou1T48P3bntR6Ni/KfxYHo6SAe8rF4KaZlmAlzlONBugG8KEpmsC3YzRzdviPczpFWAze41wfAG0ngz/bsFtLbEWXXt2l2Qa9tmPacs76935uYAZs3awoGqnUZMGPBHjqycWA/AWYE7BX5tiS4U31Pwi3bE80itlnOS3OTaAJseTzeJIedtIBFnI2C2nZYQ8Lhomb3EmkA7c3bq4eLU4GDGsm51BguwxBJ8pevINVandKe5wFMAPIZ11MaI+sDZJHDK58VsMZz+yR991XEf36fOdBDe9InHH35TNjP+KM0gHE/5vwEAsEVydJnGMk6RW21uyMX9i59HBAO935ySEj0jz5mbWvC+FNuytuV4D4ayBtCt3br2Q8SDZU0LdO4mrWQuon970L0m/UDHBpoH8awW0YxYC0BW/dtgH2I75HjlhX50Smrtr23RLyLX758LIWH/OqX9SB3DmPioqNpe24cs9gWfi5kXBeXof8iZ7q8QsHNGP8akHf+kfQ3K+JlJEp5/+ZYz7joIXWbF7hIAeDSu7hwHVRakEt/C32HcgSS2xdqt1Va/P/m7SDbm819wXbSJgoImENlZTlN86GsEgClS5RyPgFixXcYP3BVwBVwBV2AZKOAAeBk0gh+CK+AKuAKuwNIpcPWd85vL8VOfSwZTJxGlpBxg3JTSbSeBSwEE3Vel3NDasuhu+bbcxcrfhlk4SYIjHehGGKBWi24ZIOON2wzNruiTAWBb/g3HsDgAFfiqVHDlMS8ma2BCzlIrZoRtGYRQZAF/BLhHL4vVbsrbjEYDpm1GbdcW/eJTiFtgMEgRCObUNEgIN6fFLgjcpuPlz6+JDVCRtnqMN382O2Ldey/f8j279rW1/+rep06ud+/+dDocnRxlw6AgsbF0va8/Fw1iN6LhUClSBv0MAPP25iCEu0zCWNvzEoC0sH3bHFYWReAkm5kNrKMLAJwp1OgXeeOP0xgHhmG6LcMSBXBYwi79TZzHcDfjqPAZAu6x786VLZnUCumhObeNTFjgQYkg3G+wHwaO6hjvu2y5rQweM6STdjR4vBjgcP/Wz5BTXQjJ8bo4hDvMjb8F7PX6lQJvmZSQSI2FkxcKktAqC96H3G06N4yrST5TDIbvf+8pJ3xsX/vTgXwfHX943cMP/ocsr/55kyUZ8n9x0uh37TkAmmt/4wkKbv6FKwbMHy+ZzmiPLnKE20N152kCvhjpdYevTbK9tKk58pF5rXpiMkaHBe+LtrG2lrbFhAoBd5306kCwwH0Bd9L/eSoFEz9dtoUMQ52gaMeLTkRZtAeurdLui0GztAaOhyE3wpAxbnTCDKOG36cTG/2/LSed34BkCI6Hkb5s48F07jKA5XW4/a3/8bVTI1L4uj0ugukwe2acNW+77Pgz7jyQ/WWl78sA8CSssjqTiBfkmtsDbN+iPPoTCtw/MOmmG9pr/aJ/fC2glS5yPQEApmtbFT5dx9G5b9n8modWunZ+/K6AK+AKuAKuwFIp4AB4qZT3z3UFXAFXwBVYFgpsvbfJitntnxxkyY+U4SAsDWjgxhPV7NsMSXHyLn5Y4TE2mGnmZ387gx22FBxLWlsYYe5iBmK6jPv5H9G+xjfE+noL/9qlts8vEsbgTYFM3xXH+0FuIwMPuXmXm+3uPwvg3uUHvZ+diLw6Wryk5mLua4H3lppfyzZAMvqGWK4PHatJE8fVw3kwfdGPnvW939zXht9671Prxnlx7SgK31YTABYno4ApOKwl0kHOAQ4/0Vmc3AYzWyCuABgAi8ErzrIHIpmc46HwHFCbgSrBi9gaXYt39bVbDPTsNQYcCvvkWATgWl8xYIY24Y8FuuXP1lxqaoe2a/J5CzCuODJACweCyRmM16XYEpEB7ijnY8ZlcaTK3zzBwO5gOjfsm0v3CfTr942FzlDVXY/Xkj3gVO7OS0I6+PMV4Jnz1MaD9QWcQ0nZvjgnTCjYQ7JyFSkDmrIDuAyysto9N5z+6feduP6j+9qfDuT7rt+27XvDmZkbSI43BBlNJKEbAqhSXymoL7baaRHHfubtwskT6Cd9Tboyta06ptkFTP0PbY6GW+iYlbbiz2F3to1pseka7K9owsiKzgGmIrtX+gfmo2AfFlWwooALyGn7YqwJgJXWkPOR64H0eQW0PNa0//DxLATcNmHSRrD0xoCsaOjO3a42+MR24kqjJmRsLASJC1Yu0KvioJbjtoiCBRNw2gFsX6IfVgQIaI7zCgG3z5ZJ8vZLN776yweyv6z0ffUdwDW53XEhbicl0F56oen6iZ4xJkBgEtY/rUfZNQzgvXW480QBtQQ5sdM63kEznef+4KazHlzp2vnxuwKugCvgCrgCS6WAA+ClUt4/1xVwBVwBV2DZKHD1V57+QFKNf7PJDovrBgAKrl1x0gnwBOvoIgIM8jGUIKdrTC4yAyECCbtlyAKArQgcbMEKRJTktqzL8joVgHTuTvl4cfVKPjF/Pm6yAU/aSN0O4rKTTbdf4DJWAMmAyIrKaSssgJG2nd2z088Oagvw6T9auAXgxUAR6KWgZddUOI0Oa5BQ2HI+O1+m33Ppe1/zvX+7rw2PHOD83p3/loj9vwnSUVjrEnLRQfToA2ABa6IFgDAeIXKdGa6JXniaAVAvEoH15fPA8np1CLNDlr27bfwBIIe5JfvxGpat2zql4UTUPsGRHzxboKBLte67rQHWngesF4nWuesIvhgA1r5mcQ9dZq84nO0YDeBZO3L70flzXqs6dqM4FZ3gDO/t/3kQWHIdVFMZL9gGkkp/5U/u9aSuL1m7LYbm4k5FAT6C92iHNuMWuIgAcFk1UVGQA3jqZ99z8vHX7Gt/OpDvu+7BBy/N8slfV0k61aRpWGjmc05Oxn7UQEzXF5ybjVHLyDUHukzY6DWCowoEzlp/4GgC9CeOxbBcZnFyS1EzAccA7ZJJhNsEAAAgAElEQVT1iwmQ7kw5goG6DLc9bWMOYJkAEOjL7YH3MKzuvdmuOZhkUOCHZAfm0Xodsv7BkwhsFu7Sdnl82qEYIOxdSjrIi26kjubuHTxmzBFcWeFHbMrjnPoLiZVSPjYmELBbGZuW1y46AgjjiHDeFkmCn5jUwfvhMOfrBEFHZAAPmnjXOA0ueOeGM247kP1lpe+rD4ArEs2+h/j7DwXc6JrbPXCt1e8n9EeN4uE+qBM88v3TFTG16yr2Qe5ftNfOMq7OPX/j2Q+sdO38+F0BV8AVcAVcgaVSwAHwUinvn+sKuAKugCuwbBT46J3PvjWpZj9JheAOK8oU6JIBMC+/1qJrXQasfHW2mZYKZ3iJM1x0pRGNzgkpQAs3u3Dk6pJthXWyL3GwKnpgQGiOPTgILYOV4QqSDPBeOPQAKgBV9ObZBBWQ0y0BFzAirjy8xg5Lhtvy/g4M4gkDnTgwpSEKY+RY9/yfDnyO9LosN4ebtiJ+VASkYjAI6e/JTFUOjvjl95519P9H23YWz5fZC/76m7t+aDi/6/o6G01VgFOajWq7YZkBw/T8DQiDeQucsAxdK1oFIIf2Fv1N+8VLzlvwqcXLLPMXgJQ1VOBhGhv47ztoGXgQbcJn1bVkXNrEgUHf/vs5BxoAkJf2y3FLnSqBtfwcFO9lneIc2rkEhmSETlSTdmKibUKL7jA4IyoyUFNIaf2k31eKgsC+QmGJKBC4LvtX8Gd9s3Voa++G2V3PgccLd2kBewIlu4zj9nmaRRD3KdyDdMxV0cRlMTMZrFsWAPizTzwxne/e/QdhVf10EUdhjVgB9De0izqgzXktI4SKJKIf0ZOpeWrbooF2PdCJCThsSSR2f+P6YZnWPVcw91yb0OD4EG4MFpp7mBJgntBQk69ckyhSA45txJ/w5Ia4++UhkyC2qsH6BV+ruC1oX3QMXLwPANUmpvS6wruga1dIMywLnOs6wdUmR9gKBiuW2AmlDv+OEOO8kt5khByTHS/OTa6PfPQA1O1rdkZydtgjMqfxM6b+Kr8ZAJdYDAbjkyIYBNGuIgkvuNgBsPYL+fG5bV89bTCp7yzDelBRBjAriD5P1xxzt3f9rnOI84SEAmD+fsF3C88h6YoTtCmx45Lc13g/Zf9iQDAArpP6jedt+P77FxyI/+EKuAKugCvgCrgCe62AA+C9lso3dAVcAVfAFVitCmy9b/dR1bPPXZ2l8Q+R54vCC8jRS2CrX+WIM2TpYUXGGPgCKHI8AjJmZUm/FBSTbFNbysrL2zWblbMlmazIVzDwC7udyEUlsFCAbldsTJCFAT/cDPddmK3jTpdg8z4ZJhP0BSTGknFAbOZB3dc+F0JSyMMOPgM/likK6MS39RZTIJEAVhGu7wvEURsYMvDJoLKgHEeCTAOq4hOXeT0O0v+6/pUbf/m8LeF4X/vSdQ/OHDP+7s6Px1H05iYZktygB1IgS/SWPUeJun6ZdTOZEDBsDmxtN6AraUeNjFDohfYWYCvta/CUzbIKucTBJhAV7Ys8Ue4j/df17/b9gB8KgAXca44uARDOM+YTUPemvm5tY65f084mJbo+0BUY5OMQ+yy7eBEF0cI7BYKIm2idqChiqNrJ/qS/Yz7DQA5cluacREJIXxdsy15PhTpSkCtv9WiL5OnEh8B4iZ7oIhCQS0Kfi0xrjraQfoWH9H/6TPqZxU2Tz42frabW/dxVp2xa8gzgGx+976R6vv4U9cVXV1T1rKaxbLnYlpEbAvzrZA07dbXwIhe4svNUmmoRDdyGPAkjgM1ynyWmQDSx8cbXJ7atyySBjVPud+Zq1f7U9WVzugO2iTPerm+YeOoKt/UAvXY+jkTR/oV+hvPE+wFo8eC+BscuxpGCYnFyS9+SOAtz5SvgxpnqZIVl3eC0eLKBx4Q4eG3/2Mb6vkSqIO5CPjtE3rGOQ7mOyUNwd9en+pnVAI+YAGL4CziOzy6Cp4ssvfCSTafd0e7Efwk+u+2eU9dV8V2TKm8BsBRtRHZvtwKm//3E7cZNrhDY2gffPwtiX+g6TXEweC8c87gmpk2wcxIn5AA+0x3A3v9cAVfAFXAFXIF9VMAB8D4K529zBVwBV8AVWD0KEDAIP/KVne+bquf/pE6G68j3RfQpZQAMsCDAQb8yCVowENNl6baEu80txM2sutQAw1pXZLtkWd29tkLWgKTCWQOC4lMTxxoAcesINpbRy/nEdli6zyCZi+/gxpkwNpEiTuYtinFV5AW53Wo8hX+UdUy8BO9CagIW2wN6gL4wyKMXBejgvNndpbBQDhf7N1KNLGGhx1x4ibN4+bafzM503MhtJRHqupjP6+iaI7cc+S/ecdxxc/vae+g4oq33PvnTgyr//Xg4NZXTAeLowQ1FIwPp1g4GMxW0qn6IhBCnq9Exsw6qA1WLsTH6YofvwnZgH6fGOsjZmqNYMoUBN6GZFaEC1MTnMUAFzCRXNL8fbQenZFXSiVQFRUXMECXJyempB1KTnABbtfg3uY3gLMVBcQ8Rvg3t417BMH4FYI5yM+KwKYnkYgIAkRwRwz2Br7oHhn14rf8Q+GrOY92eOg4YDrpvRNmfTU0tzodFzj/MNyBFWEEnT1bU4m0n+NdEFLAifJueYxAuaLvtXzwRIewS3RTjUo+HfiWIndJzdRnGZVXPTvJ7h4cf8WuXv/rEL+1rXzpQ7/sUxT8E4+Ivg0F2ZE5ny9A8lbbAxIJM6OjEDmCunhULQx03ad38iNwQYM8QjZtHuwG78AnSo+V5sEFL6iT4OPocAc54Hi+rE1vgOQYzv2Z9EcpK36dP42FOfZENs+IWR6exCap2kkKXKHBbozkBoBkAc2PJM9ifTjRw8UL0D5p8ssgF6uDUBzAxhvKNmJKQZf/IjeZuEXGn53QUPnBqfwWI/DfALU2SIN26JbpyHaJXxEquU1oM1SmHmXckBnhcsuXSJ2OTSTk/uBvwmMSz9JkJNgyqiHI8kNxyRz2V/tQlnj27YLggAmIwqb5SBNUCAFzRpB8mBLjwqT10UlHmJaWQqDnZW8u2bsvXA71u8vcsNTZc2hRIs7NIMnIAn+EO4AN14fL9uAKugCvgCqw5BRwAr7km9xN2BVwBV8AV2JMCH7ln1/c045lPDOLoLVU0pHzZjGMg8BAAq8QWBLQfb2jwAC5g2o7dtAqAGZ7AGYeaaG3mqxTvEuewOPwYqoCjMHQVVxwDPQVk/eM1N6hl2DJsa11zREAIKBF7CqrJPFGMapY++IthPPhCXYffIQA3aXLKuJB1+nHNBIZqq0cRfRzhHMIkbEyks4cBk1yL4CX83woEaYCAQiIiwLvMaYjG0VnRmnepFcX1fIRN0p4ZO1I6JAhwGMyTNs8QvvnCe8465sv0/n2OgMCxfOL+3Uc3c7uuzdLkTTkdNLKAmRXitECjNTbDslcF1Eq7VCDFChlYbyxmR/atFYIDoJCaRuKwVABnUQ+WTYliaf2HZeW2EwIKgA2gMXDDMYCVAcxxOwsADikrmeIDZsMs+wx95GeoYNWTJHBaV80gIuJFr5HgQF0MpDhVgNuo5nbAyXNdOuwR7YfjFxwH0Ed2WabGzPfhp5Pz70E0sHM7F/LtQsu+wXvBeTLTp44hQQYkKyYSYDqlPoTP53Jb6Edm3bWPayJ6E9v8lCHKCwx8qfvZYdk+uW/iNbEIUwoo/T/1K+psdIgUXtCE9x81DG47b8uWfXaTLzixffwDExI3PPjIH1Ekxc9UVElyrNECITnQ8QAAll86AMxwVaMcONMXQ8YiSABRVf1Owm64SH+pmjRK5pokonEd3F+H5YRdwuCrOhZpQLN+dH0BJWasS+NVQSp7YDH1QUePXhFxZguPY/otTmIyh+M9sp30F2o/IfLA9zwbgcsGXkMMMENbumLQkn1IQhuKN58moLinwvMJD6/gXXkfdRoQcu4z3MY4aPRq8aJje+2ItD86Z/pA9hlT96KPpAPVGQzr33TFxAWphcPchyjUHW/gsaBeaJ6foP+vqD9BH4OQnKzM18AmodeHNB+D2olfXn/ia247OwyLfewiq/Jtn9l+1xnrJtFXipCKqNKlidmu4ndxYNv3mTYHCRlr/rqNBenyurJGJxwtLwTxQXgkWI1Dm9B0ys4qHTgAXpW9yU/KFXAFXAFX4FAp4AD4UCntn+MKuAKugCuw7BX48J3f/YVRPfP/hNn0VNmkdC8KayUAIUgJQE7PvcfwEJRCowW08A3DXoaDtgzWIhTk9M1xhvcylrCl9Lhp5n0CNoO9yN+gq1bAzJbiYz/tMnHdDu+TPE84f5s6n595KoyHHw7j0X/dfOZhD3y/8EGDIwu+/z/aA4DWSEft4bnDFj334Nc7cHji6R14sefXEUPH/mbyoDnq9KB+Kx0DPHj72xHAoa69d/uvDIPJ7xTRIG2oYFlJfJCq8bGzDIW3kMkL/SQmQeA8Q95e0TI+DmZP4obk9lkA4gDvlVf14jMkr1agcUmgonVJqtOTdwQXHNoT/QF0VkEHtx0cbngf7SNDG5dFlTflZ5Ph6NfqV62/7ypiUz33Kx+WarbH9uu9vr/SHur3721feN52B6IfHYiT/fRD2zc3xfyNTRyeWlP8w4QmGCT/t4snsP7BYMyKXhFJ5/5ofBgxHUx+u+XzMs4BcRWSUV8Ga4vI1E/w9+OUhfGBaP2mB4+mN432MF4PxPkt3sd8b+JgT/vf3Xu9f73oP/9Cx0XXh73tD7aLF9r+5e5nT4ckAH0/J6sORhssh31+9om7v296HN4xiZoMl17u89xXtTAmIfT+hauNMBJN+XsV350ce6PXRNleIjhwDcd2PA9E1+gMERBJ6hEQy6Hx/RhcAVfAFXAFVqwCDoBXbNP5gbsCroAr4AocaAWu/sb85nDuub/M4vAHiyAl5xotPEURGnaBwqwmjl484OxjJ68lB8DoqlmYtoUBH4O+dqOL5bHm7mPHKFuBYeQELZRCcewiVrgs++ngMe9HM0TxO3I3SwBo9unRjXOTz1Rx+oeHR4Pfu+CMI5450Doth/1d+43tm4PJzDVxlJ0TZqOQ4iXEgkyPAjZVsaVqVIdAV+CEthCaAV8UJQIANqemLVdWR5oVJ2PAgX0oWgIA5nbtgT58NhkVtV8QhKb9Ykm8tZe1v1hgYWIsgwFFOxTF/KPh1BH/LDz1mBsBf5eDvn4ML60AIP31jz76M+nc+IP1YJAV1N5FuWcAbHuzLOD2b+1nVjgLRJhd/mTj5ggP9EdM8mAig37Cm0t/byuH6U9ftmHz5xxQvnQ7+RYHXoHPPXHPmaNxfPs4LDJkXkvcCS+bkIkvvY5iAnPhg5OcGQCzmx0TYLYqAn/zzChdjRFnhBUwMK3Td25aBzurQeBF4A58U/oeXQFXwBVwBdaQAg6A11Bj+6m6Aq6AK+AKvLgCWLt8zd27L4uK7/5RnAzX1/EUFq4y1LNYAYpqFbjYxkDI0n5zeAIwwtXUdzxZsSwBgOI4xfYGI+V5daDS85YJCudvHx5juz39zaCIgCJhYLhJaWflfUEy9e53n/mKe1ZrmwO+bf3q9ssG5fiPs9HU+oqA/RgRHHBpaz5zTEXZLHPAltzT+nVxBltxKXVeS6ABYJssXOc2QRErbRvL/DWg0bcYGvBgCKJZxBSAIQAfHjban+U4o1ggJg4A+kIqkhYWszNFMv3H6bGD/+uqo4+eWa3ttRrP6zOPPfaKfJL/VVSUFzbpIKyov6EYoDiAteibxpFoviyPc6Tf2oPd4JoTzHEQ7CKnbVKZzOAMYeps6JEI84jpCZrguOHww49833neX1Zjt1oR5/TpJ7961mi2ub2M67TSDGtEm6DgKB5tBLBOmPLkqJ4Z+jhPpLbXXonG6T9KujZiYpRyOjQDOHimIAewZwCviO7hB+kKuAKugCuwTBVwALxMG8YPyxVwBVwBV2BpFNj6WDOqn3r6/47q8c+HgyMGVH88yJE8ySCwi3OwOIaukJbcwZqbqb/s27YVeGvuX7EOGyg2VyjKsnEhNQXCev/8PPCL94ozWAo84QY7QqxAOaYg0PiLdbzuXe86fXr70qh4aD71xvuawcx4+++sa/JfQBQElVHjGAgswwf85egHBbLQ1DJ95eikuJaAWRA2zVzWTGaE7SYE4bhdkMuqenPgMQCytQ+KR8GtTaAOz8UUR2H7RGsDdAD48nOtW5gOikB9NZ5B3O7fx1NH/u/vOe2obx8a1fxTDpQC133nO6+LZ+euJ7fu8cihJu89OYDpf1HUTzOAbYz2I0AAgBdM/iAKFysBkAXMFwVx/nJEhDqAU1wX6PlqPD8TDKf+1Ts2b/7jA3Uevh9X4OUqAAA8NRcwAC5h6NUVElgZgQdPkiI0HtdTnlOT78d2PCATW7eTSRH7buWrJl0vJVoHKyiQ+ExDZFeYBee8ZcPr7nu5x+rbuwKugCvgCrgCroAo4ADYe4Ir4Aq4Aq6AK7BIgWvu2HFaWeV/kiXxD9bxMKLATbp9TYK8lGWpWOzKLk58kQLWMPjTG1heoa35r5r5aZnAVhzOboT5fVyJqSsCJ9m/cAIubhZdOrvgabnZxn6pmhHn/6aUJkv086YwSf/JO159+I7V3rgf+9aOU4PZ5/40jaI3hYOpGMmRBcpbcTwDAWBzbLdF+LooCCsSx1BCX7fIBgZ26uLsQw3LZjbHNtdXs7gIRHEQAIwY/slSaCvyx05ONAbatyGXNvk4Kad5WzR12K8ed+bGa88LQ7HO+WPFKPCJhx75jXQy+bdhOhgWWKmug5aXwsPkzZME6FEymG1SqH+C7UQRvZe301DgmqJcEprE4GsFzWLQdEaQUFxIWRQPNdNTV7zjhBPuXjFC+YGuOgU+8+TXXjOaa76ch2WKCAjMkGEylApXco6DZfv2Jz4wmWljwYq9weWLyTFs34/YsWx1jB7Kvabv2XBXnAXn/uAJr/WJslXXm/yEXAFXwBVwBQ6VAg6AD5XS/jmugCvgCrgCK0aBrU0Tz98x84+D8rt/kCbp9zXJKKqopDx8oFjUL/mycjoNQWF2Ki12OLXZh8iYRTaswmN1jvJ74Sy192nGL/CyFMnRjFlVTYrQ4SEfzO4qdaPKjTPdRNOdcjiZa6I0+/sqzq684rTDd64Y0ffxQBHb8bGvPfXGerL7g8NB9toqTCNkNzOQg05IRu4tNTbdxTndy2KmaAZznJm+nPMLF6a2Bcd7kNPT4K+5g/tgr3WG0/4Y8IcJtz0sbIj2CGmJdEz/5uZmnqiz4e8Ms+n/ctUZHv2wj82/ZG+76amn1u1+buZ6Knr1liqKid4jFkYnADDgNeXB3L52oJwpjZQH/S9wcz4iMgKrB1qnOq4Neo3Be+D+TYqSrkzRx0ZR+LPnbdmya8lO3j94zSsAADw1H3yZ4h/Sgiy6FGjUAmBMXFjhQvveQv/GQwAwdWxk+/L1uXtYDAS+Eg0AYwKNJz+C6NkyTs7xCIg13/VcAFfAFXAFXIH9UMAB8H6I5291BVwBV8AVWL0KAALPfmX3j8fl7n+XJemGIhyQ2beDwDhzLlKjS17tb3Z4Ykm3ukopxlczf3G3S3EBmgmLpd0MErEUVovmMPjlG2PkFijg5cxayQLlG2a4W/HTqpFpE+AzY4KOUT4fJFl6c5gOL18LDmCcPucB3/P4FXTuv5tkw80EgcMiojL0iF4gBzBlYnAbmNOs70qzTF926OqSYynIpQ5OpXCovYVie+YAxjJl/mxrF3UBo7iRHpNERfDxUbuzq7sKMtpRWY6fHYfZHx6WZb9/2alH7V69o2j1ntn1Dz76I2GeX1PE0ZFlCHpLYJf+YZIA/9I0bfuBZYJjyMpyeIoe0YmeLvu0c4zjOoEs4YT6L7v70X+o30R5nhdp+kuXbNn032gfWn5y9WrsZ7Z8FfgfT9372uFc86VJWKcNGdUr6qO4RtqkmsUC2xnUVhSu/f4St3v3fSZxPKlOsCECQr5f0f8ZHD9LhU0dAC/fLuFH5gq4Aq6AK7ACFHAAvAIayQ/RFXAFXAFXYGkUuO6bzWE7Z2d+Mp08+69RFK5KBmFZI9MQ+bLiIO0DYAazWK5qBW9w02s3vEZ6FPgCOMr7JQcYDysWJ47SiuIhOCVRQJIC4Q5AAix2rmIDwGGRB+kg+UKSDi676JTDnl4a5Q79p2597LFR/Ux4ZZiPfzOM01PqOIuaJKO2oMJc0FhdwFATQM5yek1z4g7yYGsmY1uNgKD2Rpv12q99ndtFMoARBcFAH9XtFQabQzgmFo3M37AqmrrIn6iG0x8cRlN/uhYc2oe+Jxz8T7zu6acPi3bPfbCpyh9vqJ/l6n7k7qMTA3CKc64vIK4VuOJs3+cXcuTrhk7oGBBDsUDxSobBAJnCBfpO+c14enTpBRs23H/wz9I/wRV4YQUMAI+DKq1prqPULHQrdpmo49euhQDAyNBfGIdC33GWh63XUIwVvAdF4AwAs/s9DJ+hSb1zzt945gPeLq6AK+AKuAKugCuwbwo4AN433fxdroAr4Aq4AmtEgQ/d3Uw3+bO/EJVzvxzE6fFVNCQYmJGX04q+qYMXLj0AXc1+tdgBgEdzn3JusEY5tIXhFlU/h6wMEumGWbKD5bEwxkCKRrHbip2qgMXkkgI0IgCcDdIvN6PhOy47cd2Ta6SZ+DRvaprk8XuevDLKZ/91EqenVekwhiEbKI3Bm8IGri6v8RlwmsF1ZnpiPwwtFNAbwKf0VQG9unS50nY0IzYX66IHWD4K+WF7CsSk31HIiA4MadFN+SS52P7ge46K/+Ttxx47u5baZjWd6/UPP/z6IC8+WdP1gBK3gwpOb4xHyn62fkSpEDy5E6HjyQjm/+UJIi4iKJEj6F+AxhbpYhnUFRV0xLgGSB6GBJHLosrr6i8uPvnkn6P3WR7MapLVz2UFKXDjd+563XQe31bEFDufNEFB2b/crym7Gtc8iWGnMUDXy8XZ9/3vNZscwUIaWYEhE2lt5BFNvqEAYtpEO8lhf84PbjrrwRUkkx+qK+AKuAKugCuwrBRwALysmsMPxhVwBVwBV2A5KnDtnc8euasmd+lk9lejKD6lSQa0KhV3uLCNypL/9iaX4wO6ok+hRgiY07ShG2RzRQEIWxE4hkOaVyugqGqXiTM+6hWWw981Z0vQDbMWo8N+U0BjioAYDNM7mtHo4rUGgKHLTQ81w22zO95UTca/kYblW6mAX0ZFuqgwnBbRQ2E3VJZvM4AJ5QPS90A8A3uLhACgA9xThzAv40ehP2A7vM8yobXoF+f98vP0D21E/6K6pCSK5q5osO73jhgNPnXRKa98bjn2cz+mvVPg2oce+fVgMvlAGacDxIxQ2nP7RvQHHr9a3JF6mo53mdDhDGCd4LEScRjH6G88EYHIEvqd+xz9luIagfzwothVpMOfeceJmz62d0fpW7kCB08BA8B51KQl5sU4poj6LhUsTGnyA45gKwbXB77POyIAYp4IkXGB6AgU0rQJEWSoh1IEcWcYxQ6AD16T+p5dAVfAFXAF1oACDoDXQCP7KboCroAr4ArsvwI33tcMnnxu18V1Pv9LWRicU4XxVJwOiSamHBFgS7/xSeYEZscvxwlIzIOBX36dSGLf1dvGBuiycYuFwL7FRCj7sZtpIEh5Qqun0803lRsLgslcMJrKvkK+wYsvPmPdE/t/5itvD8gE/pt7njyjrPJfJHUujZL0mIpEB2oIqEAcIC3aBlpiSTL+tvxWq15vRboSAhBwtQHKNXC0tQXl1NGpsB8g39qQY0GqvAkrSsYsxs/ShMHf11H2R/H3Hfv5q9y9ufI6VO+Ir9+2bSqfGV/X1NX5KP7WIGda2x6TCMgrbceyOhr749YiXBiWaeE39DVcD3j5O8a7ustp70FKGDit66YqynvzYXrppZs3P7SiBfSDXxUK3Pide8kBXN+Wp2GK1TDow7wahWCtfK9pMVP9zrLipv1ipl3mvX6VYVtdYWErZWK6XjdFSREQyU66VL/hLZtf4/1/VfQgPwlXwBVwBVyBpVDAAfBSqO6f6Qq4Aq6AK7AiFbj99ib9ZjRzSlmMf7Iu564YZtnmIBrEFA5AzI9gYpqJK7R1/RIHJLhoecEGgXHynCZAsJddT4BIXCgMfmJxnBpEovtpfh0AWJbYLgLK+k0OZyrthfIO5oLhcHBXGQ4uetfp09tXpNAH4KABga/+9u5X1mV+QT2Z/98otOOcZDgcVg2wGgF4aA7wi/YiyMuuTG4X0d+AMDIqoX2pS/YZGnPGbxfRgQJvvNwZbUjbUk2kpszn8qpuvt4kw78K02zrla965XYv3HUAGnaJd/HRhx56azwuPkbg9xVVHIc5xipFP2DiAH2InIoc8yDRLOhTHeiVPiLP86QOzRq0US6IcWFvOhWaLOEHJkcwbYP9JZT/m8fxH79ikP76mzdsmF9iCfzjXYEAAHhd0dw2H9VpnaDvY0UKHOy2AkYiimyyjTs+fZl1xUs1hkfHg0kKNzAgsK2UwbWZKiJicmRnGSfnvM0jILz3uQKugCvgCrgC+6yAA+B9ls7f6Aq4Aq6AK7BWFdh6b7NufrLzjWFRvyeJqrdWZXV8nA0HlA1MTqiQUh+QASsgWArakINJoxqQCsBwVzNjgXzhMG2hsTpKARgpbgL3zG22okBhZA6TH7UFkBJBgRvwEPmLBIBHU8O7wnh48WWnTm9bq21k541c4O1ff+bVYT2+Mizzd5KaJ0VpNhVRjjOttue2KhRaIMPVCrcB6NsDDjdrLxTpYrcmPUf8Twt18bJ92oRavagI0FWPkzv0s3EUfzQ4fP0dV20IHdqtgo54Y9MMZh985D828+OfDwaDqKa+E1GRQcDcGkX+1PErzkaBwDauAYIxkQOHJB7mAAb05UgRuh7gd84ABjiucM0Ig4zQV5Tn49ks/rHLNm/+xCqQ0U9hFShw41MEgOfC28ZxxREQ/B2kDmD5XSbIbCLXpF4AACAASURBVMIDkSiWCbw4EoInPJGXrd+X6P8NxhPtJ6H/ayhfmMbCjiKMz3UAvAo6j5+CK+AKuAKuwJIp4AB4yaT3D3YFXAFXwBVYyQoQtImuvmP3K8qwPquuincQYDyPoOApVHxsmGaDsKR7WjiCufBYm2tIsJcAcJySqwkpsuzmNRegOIIBimUJrRWDw7ZwEgtgCjl3GO9GHSgEjfYyaqtJkBB/HAzSu6N06iIHwF0P23rvU+vI6vvqIs8vacrJ+YM4PYOA3OGEbClmktKCtYhRo2G/WIlsbmuGePT/AMFwp6HIG2F9zmkmqxqx3wopv7OEhe8jt+/fhVF6fRwM7r3y9MOfpTbbQ5m/ldzz1+6xX/P4468azBWfLqpqS5ClNBRR9E0dvZr9DXc4A7A2KsT00gkh7Q0GgLk/8ZiXum4JLXmnPkqOYsAvAl80qUAvfm08SC+4bOPGNT+hs3Z73/I6cwDg6dmAATAcwLzShRztEgEhv/M4oL9lQlRidyxr3Va42FnhKonrLY8FrMAgAIxinXFD33cAwGGws0jSc8/feOYDy0sJPxpXwBVwBVwBV2DlKOAAeOW0lR+pK+AKuAKuwDJV4EN3N9Nxs/OMqmjeHNSTN5Nv9wwy6B4zGk2tq2oKCY4zeEaJBVPBKLqZxQNMUSId5KQsgkDcUUSP1VVVV4C+5BIkdy9vp0WlAIDhBubyOOw8JCAJJ3E+E0xNDe8J0+GFDoCf32FQJO7JmZ1bwiD//qoo/hG11euJ5B1HYh5BBfUyQrzE4GMyd0s7cS0jdWxLO1BL5RNgPyIUwW7aZHuUJvcQ3vgC0bsvEQ351lVnHD2zTLuqH9Z+KHDNw9vel43n/ywPw1EDwEWTBYb3LfO0y4juxvVixyPc/YgY4fcgOqad9JEicTUKCcIBjCJwZVkVSfxnl5x04i/RfoQS+8MVWGIF+gC4wkoIfJdhpYROZGjvt+h6GioSX5TFyFSXyU8unMqxELIihuMfEIHCr9N3GV2CMSES0WxqVAc760HzxvM2fP/9S3zq/vGugCvgCrgCrsCKVcAB8IptOj9wV8AVcAVcgeWkADJn77gjSL4d7D6CQjuPqarwteTuOzuoi9fEcXQmFR97ZR0l9BTWhSNH1o7eIhwkR7ZzDuoSWnL88hJZLfqmK8j5ZhvbU6atZI/SHbIB4CEB4DIbXXTVq6e+s5w0Wk7HspWcv+nDuw6bjMujm7I8pSnr02kh/sl1nh9PsOJI4r9TBHnThqr9RVFIHL6uojCaJ/47E8XR000YPURV6b9K8Phr0aDenpTrn7vqjDBfTufox3LgFEB/CR985GqaGXhXnaQRXP2c243MX3bmy8QNjPnseATQQkQEPWuTOziaUvO9hRzTNuTgb+NfeNE7TOUKvyh3OinKZ8aD0T9954mbrj9wZ+N7cgX2T4HPbPv666fy4ItzYcEOYIG4knmPaBxZPUHfUZyPQr8j3gGTnlbkjV6VqBSZaGsBMI0HjJeK+j7GVkLfb8jBDopqR5Vlb3QH8P61m7/bFXAFXAFXYG0r4AB4bbe/n70r4Aq4Aq7AQVLAgPB9g2eOLYvoyqjK/48mzI4Mk4RCgpO2QA4+3gqP4XdwIbuZ7h+aFcXh9FlkhsILjAI59Kjqgn9GZEqNyvlgajj4ajGYutAB8N41Ltrqowh5eJwiV8dPrAuqkP41o6qIB1VSgdrXlOdbFlU0TqJobrgu2j0oj5y/8OSAzKAe8bB3Kq/srbbe98jpcTF3YxFmG8PBQLlWB4Dt7ODoZRekJLUwAMaDt2SnPnn3kXFKP7m4o0aPYDsDyRjrKdGytCzILNzcHU4PL3378cc/trIV9KNfTQoAAA/z5ot5XKdwAGM1CiCuTHbIshb075qC1jEerDgqIlLYAayFM5F7LQNEJjQ5/5f/STG5hL7jENaeNuHTzVR47luOfc1Dq0lHPxdXwBVwBVwBV+BQKuAA+FCq7Z/lCrgCroArsCYV+NAdO05rJvOfTLKpk8hQSsZRWtaKDIg9PfRG2By+2IRvnumGGe5hWTqbUJSErgbXYjucH0wrxONqHIxG2b1VNrrgXadMPb4mBfeTdgUOoAI0/uKP3v/gv6RibB8o4iyNsgFPwBi4wnjksm4Yp8jkBghjllWJi5EgFudHKwDW1BcpEkfjnRzmvBTeoiAw1lMaz2lNHuM4+0/15hN+46IwnBzAU/JduQL7pYAB4ElUpYgzqWnCgkeEFjc1gAsAzFEPBoFpE/lbYlAQ88AToFSIkydEFADzqheMFxokMQ0YAOA8jt7oReD2q9n8za6AK+AKuAJrXAEHwGu8A/jpuwKugCvgChx8BT78xZ0nlM38/xgMRqfWTULuwZgLwdnScI59UNcUirrx83RzzPfT6ghugRMhpUozFPE630SDJTMAppttcgCPRokD4IPfrP4Ja0SBjz/88PpkUl2X19XZeUhJpSju2MY+wOVLUSw6IQOgRSnSmodKTkYtgiUTPgS1ALg06gVjHAAYxkcBxBTlwkveqTAcufoHTTOexPF7Lt6y5bo1IrWf5gpRAAB4NGm+iCJwBoBx6F2xUsu6lyKl4urF+hVxBtvf9HVHZnmKUNH5FFjr2SEsafe8fQIIXIVPB9OBO4BXSP/ww3QFXAFXwBVYngo4AF6e7eJH5Qq4Aq6AK7CKFAAArqq5z6TDEeXMpi0AlpxEeRgA5iI4DInkeQNI7d8aAcGvIStRnYUhqqwDMBVzwWg6+1qTjS50B/Aq6kR+KkumwMcffPQfZ5PJjXmcTM8DVHE9R814wNjVLFPO4iYnJPKBxQFMG7PDF/EP4gBmAMwRLlYEElUGZcIHHkqaGiLYRc7hYtIkcXRXkyQXEQB+YslO3j/YFdiDAn0AzP2dCiL24x/Y/c5OXyW7+n1FETrddx6Nh4LiTjBm8ADwxcCQDGCJV+Hti4ocwPHTNDTOfctmj4DwDukKuAKugCvgCuyrAg6A91U5f58r4Aq4Aq6AK7CXCvzV7U+vr8fjz6Wj0ek11ZIiekRV0VN5txbBsQJw3S61OJx+U4d0Q8wuYDiDyTYlxXZQII53AlIcxGQ/TMq5YDBIv5oTAPYM4L1sIN/MFXgRBT72wCO/RcXYfiunATfGUnVyAINLAVBRMUB1Nlp2qS15F/AVE9wVx68Wi0M+MD2QA2zZ32EirkcKh6EV9FUwjCn/d5KXkyj8w0tPOunX6drQzRR5S7kCy0ABA8CThJJKwG3xPYV8XyreJhMi0s/F9y4PKq4ZULFNLZgoYwCZwHjgB692QZYwJkg0AgLFUkN6TxrEO8ZReM7bHQAvg9b3Q3AFXAFXwBVYqQo4AF6pLefH7Qq4Aq6AK7BiFNj6paeOnSsnf5sNRqfBI9hwRXSJgAD0seWwBoE75xQok4CjqsjFJYi8RALBDd1x43kusA7nFLKAg0IAcJZ9NR8MHQCvmB7iB7pcFbixaQbj+x/8dNzEbx3TQGMATJM3SUJjkyZveKl6L8OU41w4u1QdvgrECir2xu+xh655Ly37l+MhaLk77S+j55KmeSpP4/dctnnzTctVGz+utavAjU/d+7rp2eC2+ahOm1RXrQD29gBwP+fexgnGTN8VbCMCmcAYNzHFIyEP2IrGwRUf0diJ63BHmcTnegbw2u1zfuaugCvgCrgC+6+AA+D919D34Aq4Aq6AK+AKvKgCcAA3ef53yWDw6jrKkNTbuv9kebi4nvb0MOeggSXbhh3AUYqaOfJeKgAHABwXs5QBPCQHsANg75auwP4q8LGHHjs3G48/VaXZK3Py8gIAY7ym6YALW0kWcM/Ni1BTfojvMWRrJD00MYLHsW5SkksSE0C4BpRlGaS0jD6oymBIlIwWwH+xXDf1ziuOPfap/T0Hf78rcKAVAACemgtuy+MgLdGhYVLnSIeCP6o/12Gfbd9l+JvHAb62EJFC3b6mscDAGJMqGo3EEymAwlwELthRhA6AD3Q7+v5cAVfAFXAF1pYCDoDXVnv72boCroAr4AosgQJXf+Xp46rJ5O/jwejkgiIg4P41l6+BXV4223sAKokzWJaP49HfxhxSTYll6HiRbqDDkgHwcAAHsEdALEFT+0euIgVuappk5wOP/4esLP55k2XxPMFfZG4j9sEKWSGaBbAXY5BzgQ34qg6cCYwiWOzkp2xT5PvCMdzC427yB+5fLHenz2smo+nf3rTp+A+cHYZC1PzhCiwjBRABMcybLxZJmJaYhCTLO6Yw4QCW7yb5vuomN2XWw/62CU/AXSTZi1tYoLBFQHCmNo0pFIEjR/zOcpice/4xZz6wjGTwQ3EFXAFXwBVwBVaUAg6AV1Rz+cG6Aq6AK+AKrEQFtt614/hikv+vMMlO7ANgA7pyUyxfyVZIB/fDUizKskM1ExiAidxW5pJqasAoLJQtgkFCN+HjGY6ACAfDCy47dXrbStTLj9kVWA4KXL9t28ZsXP/PvCxOJgdwCNCFf3hYfm+M8o1UyKpGBAvGMRy9iGTBNq0b2Lgw+XrN6E/bIwPVHgDJNIyDpKCU8LqcJQf/5e86adP/XA46+DG4AosV4AzgIvhiHtRpRUG9/LUEJ3tFUUXk4mX3Lr7DeCgA7MpERxhL9BEmTRgQU9wJfpacgY2ibzG74REDYatjEhpP5AB+pozic87f6ADYe6Mr4Aq4Aq6AK7CvCjgA3lfl/H2ugCvgCrgCrsBeKvDhu3ee0MzN/UOUDjdzzXPKELV8RHEAy/pwA8L9aurITqRFsIqUcC8ty20BnZD+G4VyQw0AnJJ9KiwcAO9ls/hmrsCLKvDxh7dffHg+vnYuCNM6ScinqBM15OCH0xEwF7CXXY8t0JVIB0zo2KjluJYs5UkbvIejI+gX/F1hOwJomMJpShrDFT2TZv8rSaMrLtm06VlvIldgOSpww7Zvnj2cz79QJ1FiAJinM6hv26oW7ueY1cB3m0UVEeDlTPuq4LHDoJheBwBOEIdkDmDNAYarHgA4JgdwHZED2AHwcuwOfkyugCvgCrgCK0QBB8ArpKH8MF0BV8AVcAVWrgJXf2nnhqqa/4c4GW0qQsK05BJMCCjhwVAIS8L1J26i2RmFe2l1CNrPfgRESVmLyACOCQDzEnMso63zIKnngwwO4GzgDuCV22X8yJdYARpz8fUPbfu9eDz3z+psEJZwN3JhNyl4xZBX3Yv4u7LiVxi3FPdgD7iAZWzLM/idxzcBYEAvKXwlECyi/N+4LMZ5lv3mu07c/Af02p6DwZdYG/94V+DT27/1huGkuDWnrzIAYHRUxKMg0xcTIgC3torFYh/4+4uswlb01GJUoGZokSjqmgcgxgOQWBzAMWUAN14EzrueK+AKuAKugCuwHwo4AN4P8fytroAr4Aq4Aq7A3iiw9fZnNubF3OfDdLShbBIGwLj5xQ0x1b4R568uIUchHbnxFdDED3rNbprNOQwADI8htuMb7B4ARgRE4AB4b5rGt3EF9qjAjTt3Hl49+cznBoPhOWMaaSX94/xfXcqOCRwekwSByYZP+5AxysMVDkfaliExUWMZs1IUDg+8ZtvjPSlnB1P2L7sgg/smYXbJFSed8G1vGldguSpw/fZ7z1k3aW4xAFxjLGAcYDxgDNAEh0x6aHQRAV5+XgFvv/Ap/w5HML3BJjTLMtfJEXqOhgsD4BEB4GPOenC5auLH5Qq4Aq6AK+AKLHcFHAAv9xby43MFXAFXwBVY8Qp86O5dW+LxzD8E8ej4ioMayNMkqQ9dtAN+V/jLP+1GGcV12qxQOH2xvBzrZHFDLTfMkhVcULgEHIRjzgB2ALziu42fwBIqcO19D/5INin/hioqHlknaTCmJek2OSN13sibCCcvOR55HCN+hX5W6uotKdNXclBlvFrMC6JbBH7JUnk8sPSdHcD5uEmz0cem1w1+6ryjj55ZwtP3j3YFXlSBxQAY30t4oF/jgXKJ6PtqfG9jIczTrpH3HPkg72s4MiViGIxoFB0/eK6iSZIw2lE6APZe6Qq4Aq6AK+AK7JcCDoD3Sz5/syvgCrgCroAr8NIKfOTLu06sy93/EKSj4+pmQNSInLuJFsWht1u19HZ5OAMiKaTTPcRZ1d5oM0iiW2YFxX0APBwM7iGSdKEXgXvptvEtXIHFCtzbNNkD37r/T9Iwfn+dZhGVtSIghbGHInAS2RJRDrC58inVO2g4k1sAMF6Hyxcuf+T/stOfhi/yUDkzmLZFZASKZWWIgkGECz2XUuWrcDD1M5dt3vAXHv/g/XI5K9CPgChBeXVG0yY2Gpq45O81/R6z77MXAsD83UbbZloEzrbHeBEAHD5TRaEXgVvOncKPzRVwBVwBV2DZK+AAeNk3kR+gK+AKuAKuwEpXAAA4qHZ/Pkim1pdNRvfA5NwlACxEV5yEiHmwm+B+NqKdO4pMceV0Bb4wWkkxHVtiTuXl6PWonnMH8ErvMH78S6rApx7edlo4P/d3NEiPIfdvWBD5BdC1CAjO7UX8Cmd3k+ueALCNXXb10lL40jKBYYjkQliIiJCiV7IteSRp2XuqUDgsJ00WR9uLIHv7FSdv/NqSCuAf7gq8hAKfpAzgw+cnt+ZpnOTUtxEBESYxZ1zjESvpXRz1EKqzFzFInKVtUUeojkgTIikBYEya4B/cwAaAaarz2TyJz7lgwxn3e+O4Aq6AK+AKuAKuwL4p4AB433Tzd7kCroAr4Aq4AnutgADgWQLAQwLARH7DNKD7XHkA6Gr+rzgFZekrABFchnYDvScAjLdLUSq4DHEzTe8pZ2nVenZPkA3dAbzXLeQbugI6HInSXnffY/80rfI/I/dv3JCLt4D9l0At3L+YcAGkEve9RD8Y9DInP/ZEW6pDWP9Tm8a7OIY7ABwQPI4IFke037jM63g0+ot006ZfuCgMJ94ersByVgAREIfNV7dMkiih4mwcj4IMYBsLNDWyMNJITwYAmB80htjl265goe8uuH3htEdRRQLAsVZOjClHmwolPlMkybkOgJdzr/BjcwVcAVfAFVjuCjgAXu4t5MfnCrgCroArsOIVMAAcZVPri5q8UeR+4mxQBsBd1ANgkhXBQdqvwd+FRaTEMVyWgEf0O99A0802AaaoyYOomA+GWXpP4wB4xfcbP4FDr8CtjzWjJ2Ye/G/DKPgnZZJRqrbEP2CASWYvwJYUX5Th243TOCYIhjgHndABxOL3YLwC8hJMRs4pZ3aTQxivJwTCBjSEo7L47jgb/OSVWzZed+jP2j/RFXh5Cnxy+9fIARzcOo7ChCMgEPlADmAr3oa9Wf51F+eAInA0Zujuk9aqSO4vniDnrznjMT4AkRGJIt979B1XUnHEINpZJPEbHQC/vHbyrV0BV8AVcAVcgb4CDoC9P7gCroAr4Aq4AgdZgWtu33VSWc18vomHx9ZNSjYnOAjlK7i/JNyALruoyE3FS2TVBSW/8201v4+XyHKRHSy7JUxFN+BWBC5LEyoCN7zAM4APcsP67ledAp965MkTi927rk8Ho9NLGoMV0SouvIiUFs3mhlNRxiOFrqhj38YyO/eJDZsTEs/z7zre8TtHRxAAxj4IbAUxRUEkWfrl+VF28VXr1z+96kT1E1p1ClgRuAlh34omPvD9g+KI6P/Wxxdm2IsE5OTln8R09e+FABgOYJ7gLCaaoU2Oe4yRJtxJbz73/I1nPrDqxPQTcgVcAVfAFXAFDpECDoAPkdD+Ma6AK+AKuAJrVwEA4Kqc/Qcq8LS+AFUiQgSYK47CLj+UHVO4i6aHLSfHX9gWjuD+o6JlsQyM6UmJi8Ce6Cc5gLMs/mo4cAC8dnucn/m+KEDjMfz4fd/5uWw88/8Gw6npAoXeeHzRkOW8X6FWcOq3rkbaBg7G/viEE5jBsB4EHMEc/0A/yTDJr1HKKRfISgG88nFTj6b/uNpywq9dFYaoOecPV2BZK4AM4MMmlAFMsyAl+rtF2pdS9DDUInB2EsjE5glLWrEiOdkyDiwqworD4ZsOj0aLJ2KCM6HxFzfVjmoYnfu2Y856cFkL4wfnCrgCroAr4AosYwUcAC/jxvFDcwVcAVfAFVgdClgERJMO18MBjAgIKxxVaVGc9ky1KJwtn8UXNTsPtUicuargAEYpKkRICEym5eTAUPksAPA9zWDqgnedPr19dSjoZ+EKHHwFtj7wzBHx5NmPDOPowiJKo5omakp22hPk7T0YXFkRRyJflt3NUBgF32otYKXQmHOCGSUTFFbwVdQFFWysyd3YBFlZlJOp6SvfvWXjfz/4Z+mf4ArsvwI3bPvm2VN5+YU8CtgBXOkdZUiTIeyO14x7myip9fvLAHCDzCJ6AADjYQAY32X4biM6zOMKADiiDBb6bttRDEfnvP3YUx/a/6P3PbgCroAr4Aq4AmtTAQfAa7Pd/axdAVfAFXAFDqECH7p715ZwfvbmKJ1eX1EROCwpZ/cuuaTEBUwAV48HGaLm/u3HP/QjIwCguOo6nFa4ecZPZIwGBJWqcZAmyV1VOrzIAfAhbGT/qBWvwN/c/50fSGd3X5uORt9b0JACAOZJFoxPXt4u4xVZvu3DrI+6TV0W/Lr8B7YVdOwcwhj7gGF1mVMxOboOFJMmS5L7i0F64eUbN/ry9hXfi9bGCXyaHMCj+eKWPGrSOqECiYDAKPBGABgPTHpYcVOeMCHnOx5Y7yIOYHHUWySEqdZU6gCmCU08EnofoHJWBU9PRtk5F64/7eG1obCfpSvgCrgCroArcOAVcAB84DX1PboCroAr4Aq4AgsUAABu5mZuDtKp9WGQodQbQSK5AWaXE/GkysCv3SD39rA4LxgvVbSk1hxSvCm5DpOYXMH5XJCl6V15MrjwqjPWPeFN4Qq4Ai+twO1Nk3776w/+i6m6/EAwHCUFwSwu1kgAqoW/lN4CtGtZwCgGB+CFiRqGXzoOeVzC9dubzGn3wQgMfmDKSh1PyD5ZVtHU1AeLEzf+hsc/vHQ7+RbLQwGOgJgrbymTJoUDOEcsCiZJFOCywRfFEDXT16KNAHy5CCJeZoevPCzv3t6PXHueSIHDnsZYWodP5cP0XAfAy6P9/ShcAVfAFXAFVqYCDoBXZrv5UbsCroAr4AqsIAWuvvPZzfl4FgD4uABF4AgqRQSTOpCEClOaE9oWeSvkBpn+4UYYEQ+81BxFqeCgUgdwgMgIVM6hW2rKSeQM4GQQ31klw4scAK+gTuKHuqQKbL1v+1GT3RT/kMRviwajsACiIorFY5AjIATwoihcH1wZ4GKoizFJ4xFjGUWx2DFMAMvc/kK65PWmogkcKnRF1a6erKam33flSZv+dkkF8A93BV6GAp/c/rU3rJutb5nEETuAi6hSACyZ9ewApkeb7duLgODvMf0sAGBsgykRiz1iQKxOeniGUxpzSRU9NRlEDoBfRhv5pq6AK+AKuAKuwGIFHAB7n3AFXAFXwBVwBQ6yAgDAJQBwMnVcE2YhTFJJQktbtSI6OwUZ4sIJjBtocQnyEllEReh2nCUKLqUuKmwPhyLnAdP744aWn5fjIBtmXyni9GIHwAe5YX33K16BrU0Tr7v/meld+XcvCPL8P6aDwQlNTImjvEwdoEriWmIt/AYgxeNTQS7gleScamE4zfBGmTcGwfQ3bw83JMAXnkY0BE/WjOm56O9H6Sve+cMnveK7K15MP4E1o8B1lAF82Li4tYjjdIIJDZojgQMY1eDEvSsTJRYJYROcyAA2AGwTKShlujgLHwBY4lbSIKFhlNYUATFIPQJizfQwP1FXwBVwBVyBg6GAA+CDoarv0xVwBVwBV8AV6Cnwoduf2RiVc7eE6brjLQOYXb2ARIseyAhlwEs30XIDDQchGQUR8UDQGI7CfnYwiuRIjjCgUh7E1VwwGIzuCMPk4svOXPekN4QrsNYVoPERfpQY0tSjj05P8ni6qaN1RZ2/ImyajcRtT6WCjCfRmDqbCNbJUZImNPKel/lrxaygZUKZLZicwaODvwK8bHIGjn15AABjdEphOGxPawCCpqC87iKvg2zwgUtO3vjv6X1milzrzeXnvwIU+NS2b3z/9KT6QpGE6QSTlQR8udAhxTXI95asWLHJSzslGor6nHT3NgMYEyp42EQJAWB+HaErtE+CwDvzqejci44503OyV0D/8EN0BVwBV8AVWJ4KOABenu3iR+UKuAKugCuwihS4+ks7NxT1+JYwHp0ABzBiHOKkuzm2QnA4ZQBg/onIB/oJxyBcwI3eGAP4sjuYtsTNdUwOYIFR5LoCdCpngtFo6nbCVJc4AF5FnchP5WUrQOMquuHRR4+YzCenl1XxpjAoz47rZhPt6Miqag6j8TMdRtGQIHASZEmMom80/ogLi/sXzt0FOb4c8SAO/T4QtvG7uFCjxEZgWxqX5NDngo30friJk7Kkgo3Fc9VgcPE7Ttp088s+OX+DK7CECly/7euvPyxvvjCOmgwZwCVWp+A7SauZoijpggkRu+PEBCavaOkAsEx4ygaY3MSY44gUfL8ZAG6qnfkodQC8hG3uH+0KuAKugCuw8hVwALzy29DPwBVwBVwBV2CZK/Dhu3eeUM+Pb42SqRNq8v8B8kYEgLnwjboC9b6ZgREeVhTHltCaW9gchpwrykV04EYsCRATUKLCcEk1DobD4ZfLYXLJFScf9tQyl8YPzxU4oArA7fup7dtHxUywqWqqH2jy/EIKFH0DRS0cTfMuaYyBF9Ooo1zfgmZXEKFikylYho6/efyRYxcufURAcJYvlqMD4Wr2tmWcAhSzKx/wChEPBK84wUXHsGV32/4wnmMUjJuM6zhJrg+G0fsv2bTp2QMqgu/MFTjICtzw1L2vnZ4Nb5uLq6wkAIz4B3EAi/Ndcuu7bzWOh8AY4cUqXAZV/tbvv3byxLK2K8rAp3EU47uShktc1zuDUXLO244568GDfGq+e1fAFXAFXAFXYNUq4AB41Tatn5gr4Aq4Aq7AclGAAfDc+JY4UqsQvQAAIABJREFUm96ACAh2AKdw7hK0xY0wMhTpYMVxuDDjt3VUqTOKoRRtxPnA9LtEQFR021wEKRXiCSZzwXBqeFs9zC51ALxceoAfx6FQ4KaHmuGO8bbXB015aVNM3h5F8RYqtriuItxL7l6eeGlBkwLgPqjCmEo13sHci1TaqnX84hwQ1S2wF/mkcVBWAocxkWNAS1zD4tBfkA8MFzC9PyMCFk3Gs8Vw+POXbjnhI7RdR8oOhVD+Ga7AfipwLQHgw2eD2yZxnRWIxCYIjEeDEHv6NkJcETt5bcIkVjc9xg9c9Bb5wGNJC5vidx0jlQLgCN+VKALXNDvKQXTO2499zUP7eej+dlfAFXAFXAFXYM0q4AB4zTa9n7gr4Aq4Aq7AoVIAADgYT24Jk6kOABM84htmBkeS4csAqZ+FaC4p3k5uppEJjBvmity+fQCM12NA4HoSpIP0i5MsvfSqUw57+lCdo3+OK7BUCtzeNOnD92/7vmqS/3hQ5RcnYXRiRYMjSQc0KiIuMIVJFykqJRMoBIfJ4yuQtsLfmleqtRipdpuMS9mW4BWiGxD9QNENeEUKNXaPBRCr52q05e4Yn0THghRTNmXRUMb3vfX04W+/bONR25ZKN/9cV2BfFWAAvDu4LafwlDKl8UGDoqL/o/wUnvxAYTdetdL7PuOJEnp+QeRDKE5hG3dWDLUscx5jmOCMAYzL5qlqmJ174frTHt7XY/b3uQKugCvgCrgCa10BB8BrvQf4+bsCroAr4AocdAWQAVzV+S1BMjwBDuCAbnoJT8nScv4mVhchbprVMWVV0wGE2R6oNaL4xrp9H/JEk7bIVEIxEHE5HyRp+oV8mF7mAPigN61/wBIrcO1DDx1ZjON3VvNzv0izI2em2TCjARAUiNylcSYAlqIZOL1BQBMgsMFfO/zWqUikF+CpJGgsS9g7Jy8XcCNwDBC8sAhc5/7lobp4WTvyUcntDwCc0T4yCo2YD6OPvPPkE95P2z6/EuQSa+of7wq8lALXP/mt10zP1bcVSTDIaS4TEyYYMxS3It9h9Dty7vsAmMcGHMC9zN+AxhMedUmRK5hawYIYRKkQAGYXPn3/pZQFERfNk80gPueHjzvj0Zc6Nn/dFXAFXAFXwBVwBfasgANg7xmugCvgCrgCrsBBVuBDtz+zMSjGN0fpiDOAOzC1aPmrLiNnwEuIqsaNNB2b5f32MxVxyOxo7AFgOIDDfDYYjEa3ZoPknRe5A/ggt6zvfqkUQNbvJ+7/zvF1Uf0SFVT72SJojmyIOMHxSwEMMnYQIgropOPKjlWKuImzl+GTwmGblGFopY574KkGy9I53zdoIyLwOoMswrf8U3fOLmEGx+Lox5J4AGdsn1CYaQLAnE/m5gdT77/8xPVbl0o//1xXYH8UAACemq1uy+NwgCJwFfVtOOnJ2S79nfo/T7QACvceNIpkPFYaGWFjVLdDNARcwHmVB+TkFwdwTf9bVU8Gg8QB8P40mr/XFXAFXAFXYM0r4AB4zXcBF8AVcAVcAVfgYCuwGABjOToyEvsPq5fTZ1Uc86CQqg0J1YJU5jIEAObyOxoBERVzBICHt+SD9HJ3AB/slvX9L4UCgL8f/9bjZ1KY9m/SxMpFQTJYVxH8pThe+HUlI5v+C5eXkBNQgvvWILDFQJizV3K3bXuKh1Cga4A3Ukc+HMP8IKBrEzLsyqcPsrHJQFm3Z8cvPdql8DRGM3o5q0s6+viOcZxeefmW9Q8vhX7+ma7A/ipwwxPfOHM033wpD8NhSU7fmnIaAIB5RoQfAoAl3V4ePAaRpYJpmkaLxJEDWKKNZJKFXcA8zGgyE38TBA5pzCVV8ESdUQbw8Wc+tr/H7u93BVwBV8AVcAXWqgIOgNdqy/t5uwKugCvgChwyBfbkAMaydIZPeoPcFnsDxFpQQKr7qrZiU8hY7ArsyDJ3AOCozskpNRfQMvhbyqnEAfAha2H/oEOlAI2B6OPfeuz1TV7+dpqE59dNGlcEiYBbEafSd/XimAwoMVQClCIk23/YRAqAMUMq2oJzf2Vlegt8sby9y/0VWGX7Z8c+IBYVugIg5tcYhMl7kC9c09gcUR26MB/nRTr498dt2fC7Z4dhcah0889xBQ6kAp964uvfNz0OCQA3IwBgREBg/JUEbiXrV8ZIl42NcbfQDYzjkSKmtC3AMP5WBz0AMMNf2kdEr8V1s50+55yLTnjN4wfyPHxfroAr4Aq4Aq7AWlLAAfBaam0/V1fAFXAFXIElUQAZwGUzuTmiInCIgIADGMvN8QAAbp1R9DdnJMJI+AJHCpiER0OAKdQCOnLnTDfdCoCp+NXN5dSRV1x1SuhF4Jakxf1DD4YC7Py978lz6vmZ30/i8OwmztImSIKaJ1IkG9tqs/UzfwXWEqQlSKVR2jqGOuhk2yP+QSIdxMmIzGCOfwA41lgI7A7Aqh8twfsG8FKHY1OJAxjP0bESzKIjLUvabXl/mGXvvvDEDfccDI18n67AoVDgxu33nZ5Nxl8uo3iqTiQzm2Y6uDgpfz9R/zcAvDiCxcaFZAVLZAq+y6QQnEDiuhIHME+gAABX9TYqNneuA+BD0br+Ga6AK+AKuAKrVQEHwKu1Zf28XAFXwBVwBZaNAgaAw3jEABj+KCyPbQu+4YYZUAmw6QWOGvfG4izUPFIrFofn6c4ZS84JhZEFa3eQZIPP16PsXR4BsWy6gB/IAVDg2vuePCkfz/ynQRxdQLEPlDoK1yGNIzgPNZqBIxmw0lwzegGVLDvb3Ig27ti5S9AKD0Q9yEP+BhBmAKVPtw5hLHPXrbjOnG4HYGz7l1gJAmD0XvxOqd/sCI6LMTDZZ9YNTrrivC3h+ABI4rtwBZZEgU9t+/ZpU8XkS0UUrQMALgjS8rjTuBVk//L44THSTWdWVUXxRxkIrx73Qkc+j61eETi8HwA4qYPvlGn4RgfAS9Lc/qGugCvgCrgCq0QBB8CrpCH9NFwBV8AVcAWWrwJ9AFw1CQNgywDulsgafrJlsupEVDDVx1NWdAqxDwKE5dWQXFNRPdekBICrUfpuB8DLt0/4kb08BT7xjcdfWZST306q+ieiqeGoiTJ2/QIoRQqBAXQTym7gTF/28NJIUwfvC30anIuYjAkR+8D2YckQNjBsTl8DwvSBCyZpeGJGi8TBvWiufOyDxyXBq0GW0LhkAFyGg+F/vmDTcb9CY/j56+FfniS+tSuwZAp8+ulvvjqdLb7UpMnhOfX7mpatYMzJyhRx49sjRpE4zfRtanL60jgLtegbmfp5M/3Bkyb8tzmAEdpCYyeqgsejw4bn/shRp25bspP2D3YFXAFXwBVwBVa4Ag6AV3gD+uG7Aq6AK+AKLH8FAIDravL5IBltrEJxACdcKR03vsqBsPQcMKl1Sy12RglcApACnKqx3J12YaCJl783eRCSyzAZDG6OppJ3X3HyYU8tf3X8CF2BF1fgpoceGu6YC39xUOQfKJN41KQUoxKl9CZaPk7Dx5aKm7O3JgiF8cFL0DHGAKP61RX14/B8rc/bMnUDVw07GGUMIhfYHL4ChBe5ioGaJRciSKgoI/YBMM3xD+SObMgVmdGYTcqqjLL0v7x947G/RK+ZBdKb3xVYcQpc/9QDp0zNz99WRuH3VAR4G/oyKtnVSxhYJyX7IBjfczwWCQAj2xdRERIRYWHbMqbYMUxjjDOA9TuS3L8UAdE8Wk2nb7zgqNO3rzix/IBdAVfAFXAFXIFlooAD4GXSEH4YroAr4Aq4AqtXgQ9/cecJYT25OcymGABzBrCFleoac2QhMmx6EQCM1yPazpaj46baHFdccAqF4EoCwNnwViqM9e6rzlj3xOpV1c9srSiw9RuPvynJZ/88HmSvKoi01gSbYlpGjnHUVAJ62ziVtpqi/CeuTKrAgdgZbnmJuTp+wYbbvGAtQCUQGHnCiHJYmMaNonL2OoAvw2EAL8uK0HFsAAvjuaF4Cs4BroqmLsrbg6npqy7fsv7htdJ+fp6rT4Ebnv7Gq4az9c1lHBwFANx3AHOOr2VhLyq6GEUJu/RRLE4e8r1nEy8GgBdEqtAYT5vm0Xp64AB49XUlPyNXwBVwBVyBQ6iAA+BDKLZ/lCvgCrgCrsDaVKAPgCmpVzKAFQAD4MrSc6uALl/N8BzigWXs9hDQ1f/qxlJ3eT/2AztkWI2DbDC4NwiTH3/l6VNfpSpwL1RPblU0xlEvHJu8T+d3qPS6cnm2y173FeqLe73tPjWEvmnrY4+9Ityd/1Fa1ldWWZbkDJZijlABTILTlwGsbt85eTuDbd/di7GH8ZJTkarEHL4KkM0RLMXcJMPU4HKXASxAWRzC+CkfbK5g7BvuX/xfrO7iNNZCV3XehGWJAfqncTb83Us3fO+T9NY96fhi2h6o/3Y/UPvZn+Zd/N5D0qcO5AGvsX21SUQ37Pjm69K5+gYaTseUKFpKUJfHD7ndJQoFq1RKmpQkR7yOM5lQkcgV2Y631IkWlFnULklj3F5P6D0xO4DrR+rp7E3uAF5jPc5P1xVwBVwBV+CAKrAc/+PvgJ6g78wVcAVcAVfAFVhqBTgCoqQIiLSLgEgJYOHB4JYBkn0lKwwmwISoh3ZZe5tRKjDJ3hsSXLLK6QFuuJGXGBYzYTz471SI52a6C8/b2nJY8U7/UBeLlsnHEa1xL0vaXdw0ZGDUI+nU0hX0C+STkj5yAATBmqirniXb0emABfA50Y55O90enBqvE93WB/JUydFJFIBOdUHmBYrDd4uDsQ/ZF97PSRj0HnJA00fBEc0L+Z/33zTYB8xo+FwC5fQ6OUehFt5Lz9FO6Dn6BdvZzvl4SRA6aIL0VV2RlzrGZ3dAkVzYDT6Tzw3RsbQt/RXiPcwOESwQRTCP0oLn7vxrOlQ7J+aWkL5VoicLjjGKZVviJHVYkZRy/vIcRKZUTGzH5y3HZhrZvvEcjk3am86HTgs/TX35KSAG20TUXsxoMM1QY1O8hz4XmQqys6puEtYmCcTBV4EEk0RhXEmHLquc3rbtPa/d/Mj+QuKbmiZ54huP/+R0PfmDMM2mJ6TumM4dAIlzewFgtdtgQoWzezX6wSZFugJwAqjs5DGxAjcvgyrkCDOU4pbj04DOsg8BzK1LmCZgBAyba1G2r+m4eHvl4gaA8V4seQfQylL6xKokbcvdTTb4NIGxm6n/PNdUZHEUNUnisIzDkp6JqNFhrGyrZdE+MExovEiyBWmAWlpogQRG5O5B54MzIN8zbyd9hK8x7TjBPuDbpI4rwcfoA5p5gbGEsUWonM5W+zmfLv2tY+3F8ivAA/GwA8LfvH+xVbfHieeheF3TOdB4wSaE+/BmGiqyD3meIj3o0An2L8hN5uPEYevx9j9PDoD6M/ZD1yj+7N7DxiUNLRqv0JDkoCexKQ3pmnq9DCN9SItjLKIN0DQ0mPjSKddP1hf70tdF6l6T4OTowdcffo16IK66eB+uQ9yW/CFyLDS+0Yf4b24fnDpfqEhDEow+C+0l3lsamNKI/F7oZJqj7eWaV9L4pHEThehsGNOxvJ+uvaijqNpie253ukLSQdHH1PQNE9LFhke5XHPCiOY0wnOzsnl/GZRDHCEmJmWyUprIVqbgVEqOTekmU9oiiXgffZpJxa58c9izGPKlkGDFjAPgfnfy310BV8AVcAVcgX1SwAHwPsnmb3IFXAFXwBVwBfZegQ/fTREQsxIBQYtZCRIQ5qBls3gg0kEecuNsTsMFewf2wV07c4aF2+M5MBUU4CEYQK5GAK2iieucIFKZ010+6EYLx5iVxMTssHxejZO83wh12wFTFu6f0or5UBqCy/Kzi1MlOCVwjJ+z/6TATvlmn2AHuAVDHOKCVP6OcS3TB9lejovfCMRDQHrhaQOtAh7oMvv2RZYD1LiFHqKNwreIXgDqq6ANvQlcC67MGE5MrE6mz4wTW7PffWQvJEBQBpCXciMcmbk7cT78bjk9bGGATTUSaMhoGJspSeL4Zm5CfBL4DXYAzELHCqAou5SGNi24kZCxyacEYkKAn6uL7bm/MNnGmWN/BFGIVYHmYOf8qQAxCyAwwCVxQOa9ctLM+EMBzqBJ1DB4nc8HCIi2x4Z4ktgm1KAeFdYJvO1lUY6fm5m7JVl35K/++Nmb9yuv8/oHtm0s5uaumRoM3pjTgMlJJC40pQ56g7MGakV8Oj+hh/InxS+QYPI8skqN6SG+AQBKB5w9bcXezOGbUp9F3+l45kIATK0okFjoG/2uxeQ4nkWKYlmTAgTjDDD6CMoRdKtLak1gQ96MEBo1VUyHwJyedkDPS+IL9xtqSmGB/M/YJH++8EYme10kBn8+upt1caHWMu54roIaTzZAN+GtMP4xM2TnK/1cdMeDmx7zA7pPux7YTzzPYJ07qxymLFqA15NxI5HFMChw6rYP3pZPjc4T+bA4I0TaYJKGfaF09SGZVAfsi5sNFztGhlyAjI6Z+jIgKdpAm5rGPu0DPV5mami+i2GlRHnQDtmRigkhmS2KhIxjaosmP+hzizKkvPaGigVSR6fPwcnQRvhMngBjpIt2E2mhFnNrHb8sK/od9k7olUZM23ZoZTQpvgsKTELwm1QWXNOxI+KufP1Ge+EnPcPNw3oy8IUq0iP4msOfz5+BazDewJcZnDR/j4ieNKej6FUmUkJMHqKAIl+ucW7c6pgBoEPkVteTQ9AQLmR1EmJ2SLcvy7wtnAiJ5Bj0Os+/ab9EP8fnYR0MTwbIxE23rUy61KVMMKWY7KE+ENfVw/VU+mZ3AFtL+E9XwBVwBVwBV+DlK9B+ob/8t/o7XAFXwBVwBVwBV2BvFNh6147ji7n8lhcDwKiKjhvn5wFgJRm2PFYiIBbmmQqA0iXruOlmsIB7/5IhLAMs9g4qFQF07u7p5YYbt/UgCgAE2A77o98BgIRH4kUwKfkp++r2Cx0YRrcwWI9HATcDAHqNamLxA8QES4TxMIhhv0thO0ATOCLVIaY/BYIQxtHjYTKKzwVRs+NklCMQtq0qj20YOPTyYhVqGcCTz+8caQyNAZN1ub+1NbZnXfUzGKzguFgaA3OytS17xuvYHrEDVrhPwIsKAjhFn2MZs9ZWYEICt+Uz8CF8XmDjACcKmvBZ4mqFg1LaBf0E+vH56TGi6BLcqDYpAHRmDztW1gnkEe1ALwJQYXqAnzdOrJm6tpwbMQewMDZUhHAyN76TKhFe/t5zTn5sb8bHC23ziXsf/qmsrn4vGk0dQbZigncLC0bZpIP9ZAew1VTU8xJmqhryWJLzsMxe+Gvl/fKfxJ3rXvqTtUcHgOVo27GkRegsmcWao59hyjxdXwCQ5v7Kz9kERbcMniZJQArb8WWfI9AMIFDbRecvDH5be9rn8LkY1e4dL84H/dT6jvQv8pqqLm1/tcJ33D8xmjDbgmuCnD9fq2ycGvnk45M+j+sPrmnsWu2tLeD9Mwy093fjjccLjg/tKHSTP0+uR9T+BAVRPBNzFOjrdu5WLEz6tfR/RAfwOdr1wdrAyLD2Y7kmdJ+H/m0xBXL94EUEClfF6doHm3K9VFH610fTj4GyHK+1DU2GtccO0ipguXvd+iFDXH69iwLipQbal/gagOQf9FPtH5j64f6F6ASeedLroF6f8H681l9uwf0EK0d67mx0Ges/bVvoOGKfLi8tsGOGSVtWrFjf6MaITp7o9WfhF5wUNrXPkY+n/kL7qqpCjpP0TQl6x039UDWV/CMHwC90tfTnXQFXwBVwBVyBl1bAAfBLa+RbuAKugCvgCrgC+6XA1V95+rhyUtwcp1Ob4QBGXiIzNgVMdrOMnwYK7Oa6u8nuACu2azNJW7ilN+PwDgIAAGowmFFjJwAAlthyJmMHbwwwdQCrA6QCQAzQCFkTxGNG0UX/GQHIwh/Xz0/toAA+S5b4CuACYEWWqwEL/M2OaAXM2NNi8GYNsRj+wSLZjwAwYNYHIHgvAClAkTk9u88wEAqXMNyi1BYAwBoDgL9FV+RPiJVXjk08wu3x6DH3I3Jb91sPSBvEb6FLD0zxvrR/ANUIEAPUYati65hrj90ANABsC+AtwqCLRRDtujZjsK3HztCYwRE5vq1P6dbWB/twEdowYDZoRJpSOEQQluNyvqw/nh47eP9VGzbM7+vAuemhZ4/cNbvzmiRKfriM0whhHzhauCjRJn0wKp8h7cGokt2cOiGgHbubVDAAbAhM+jvFELQOb4ba6mLEhADr0gNre+qT/XEqMpNLVZe094+1G9cyBnhT6kttfyX41Qdx8lk69nj7zqEv7vZuvEo/0fZV4InidwL0F05MWN+RY+glK1g/ZMs5IggAXCXL1QAwHxPCB6BLbwKiPTfTns6LGk4mJBToWn9gTXlZAxzr2jMV+Eo7CrjHS3g/u6cZMJu73q5zvWsQ7w/HJdrin8RvCOBlrXvjozsW2t5ymg04oy/3IScHKeBY2PvL2uDYrT24ICeNAVw7AF5tooW31yaza3b/2m7tYBM8di2k2Jc9DB1xDPN7RJ626ez85HylL1ufb6/xCoalT8l+ZEUGnT+Ne7ne63Wu9/5WJ13x0b/24lpqE0P9yBT5TLQDxq1ao7X/Wu69XJsVqKNL6bWW3e68YoPgMLUdRUA4AN5Db/CnXAFXwBVwBVyBl6uAA+CXq5hv7wq4Aq6AK+AKvEwFtn5p5thJ9dytiwEwA9EecMBuO/DUW67e+zwLLoBjV27EhS6gGBweLfBQ4MMQgOAGu4Bp8zhKEfLK7zAwgL/MvYXfO9CnUQf6Cfya/m7Agd/bOsEEh/YBmUFec8kaYLAYCLvRt1M0wIFTWwza7O8+gLDnbFE6AGYfmgEwLDy+bsm+0BMBS5JsLOCGwQSfLLxu4jg0RycaiMEeyc6AQsFgHzBZxmVfGwOT5nDEvu11BigGXVXLFtct/htwWoGhFEqS9kcQgwA6BV4qKJ+Tbo+neAKAKbFOEBDMFvBix9O5Hbl/EJDsn6f1j4qKqNnv4mAkfy659pp8fraMBv/n+1634ffo/c+njtbQL/KTji+8/luPXRpX+YfqZHhYFachir9xqAADts41DUCEc8dPNqnqxAIHU/Dxd4fAzk6yoHP/aSE3I8bnHY0VX0SQM86Po1XU9by4z+/pVPr9Ba+zwxNAFBMgLVzGPkk3yzPuTRBYH7e+a/3HHNj8uoJOA218HEiopbFu72cAjGxbHacYwfJaN04NvPFx9mCd9e0++O8cuQalDYwasJS24fxajCt12iIsl9sDDlTmj90KARyjxoXL9ZDGHPQXg7usKpCxiFUBGhHAMxey2qFzrnfXIumTiIQw57S0cUL9nyeayNUu41j2Bwe0OLIVjCq1NdiNmGYOzYDEPA0m51eXurIA4JzGBGulmbemn42Txdra9cdWfuB4EDnC7+OTluuTPPqTAN21UfzL3PD8v4DPeNiqBeu/5nyX/qTfGezg7iYR7Dixiw7m2mShji2Mc+2vvL1NHrTnbLeWuL6gT9hY1ckOW5Gg7S9tDKe39Ad2qNOTBq8xwUDpRADAVATOIyC0M/gPV8AVcAVcAVdgnxRwALxPsvmbXAFXwBVwBVyBvVfgr786c0y9+7lbo2xqizmAsay+DyD6kGUheCEIy5BioSPMXLSyxLrLGm2hroIEhgHmRqT9lLZknaiDFcHCNhwBQfux57j8EICCRiYscAnixh+gDUhOb/zxfnYkGtDW/8Iw4GmAFQCOHwaG1JVmoZ0cRKxgYrET0s7NnIB9zVowpk6+xS47hoRc/gh0o3Mwm4MRgA4PcRwiUkKyX+MYwBSiWbaAAlcFiO0xmVtQWaIBOwPe5jAEUOVoTsRbAFJqBIRFeJhTU3ZjTlde561wSWE169sDRELMGZCy4xHvBvhb5ATk/gCHpe6PQwUUAFtMB7teWQjBYdzWBH5Yd0Qm0LkaAE7TTH8nuFpTbmcxv32Srfuxnzjj2L/b+xGycMsb79t5+Pxk139Og/C9dTykqmgJZ6+KWVDOX+SRiADOi2UU1TkNa4JxcJdDIgBGMC9zrPJ5WHsz/JdYBOSYpjRB0p94MAcwYmQNTrH0LUBe6MK1M+kmHdAeFsmh+bhM3agHcHsJYJeWlIgFm4hY0L91eb057AVm62RGbwJGXKmLJk8YtkGbDvqi8B277/WA+xMYdl3i09RxQBndHF/C44zHkAJKdca2S/nxusaPcA/VmIhK4fziKQGLmHn+iga5gJgrlfPEWXaNOOmdM7txuRgmPajdDV4yWGwdw3pBsssojQ3Wt+XW2LKb7LB2xPGagx/thagFAcainP0tUTF7nu/oF0Rj4Kl9Vs5H+rVNONiEIAC69G+5LpuD2vRor/N6oDhGnqjBhA3ts9TJCouGsL8XfM9g7KP9WmjcXf9lt9DPJsSkQh3DbUxk8HXFJqDwmeY4jmkcoQ1UX7uG4fpJ75WIGi2qiGGg3xe4HmIfEllTUUZ0EWTon2hazO1U9cP1usQzgK1j+k9XwBVwBVwBV2AfFHAAvA+i+VtcAVfAFXAFXIGXowAAcLX7uVvibOrEuiEvYUJoS5do992p2GcfIhgIElBgzi510qn7b08AGJAE8KCgG3F7iKvM8mMTxikGVbCNOfY6ICNAxRzHfeAMJGLAxl5vl0trJqZlihrQwnsM6LIBDc49gBAsJe8v0SZgIEvWNWpCXXoLoJRCk75eVSFLhlHoyx4Gn3g7do/KknU2FCqAb7ell6VonQLSFgYx62uXgxtgW9z+dv4Gog1om6NQHIY9dyCgJXiaOggNCHcAWHRgtyLgpgJYfD7Abufg1ggDADGcF17XCATeSnOWuS170Qly/OqqZMDUwSsumsckXo6eX+GMaDg6xYEMbRkCI84EmgO8VRNqzuYbTTJ1+XtOO+rbizXa278/ed/2M8q5meuiOD2pTkdBwfTLnKYal2AZyOjH1O7Pm6AAWGLbq0JS9FnVSNyhCzNX+dgAqTTyxNy+BoABQGWxCpsBAAAgAElEQVRypHNL98+n3z/7YxpMUMae6G8QmdVnx7aCRHWTWxarLI03iIbGk75j7dZCeX2GJ29oH3xummvcnQP6PIpqcc8XkKefuxhZ8uSHThowUOSNxVEqXUb7GRzzPGmEtjGXPSJKZLOuTByBdfT9XsRCf1LCrh8GQA2ILugrOskkk02WA92LraCNS/o/cZB2cRrd2JGIBw6g0fbgOGm23vJUSXuhQ1+2a7A4U03xhUrh01lzTB4AxpsrfcGBd+3HKzTYrYxJiS6z3RzGrBGPLzn+EuMdx9w68wUC28PAqbRN9xofL7vhNbpE+xBnrkMbBa74hT+7R/7xue31nNtdHNs8QcHXEYv46V0P9YDs/DuXvEXPyHcRY3T6vIRS6fm6nKBvSX+S/oJrl67IoA6M84e2GDEAwPTvkWY6efOPHHXqtkUS+5+ugCvgCrgCroArsJcKOADeS6F8M1fAFXAFXAFXYF8V+NDdu48OZ3ffagCYrHtcWMtu3sWVZQBAnl+cBcwuRXV1iQOWoAYb8cQlWmpmJG6Y2WEF2MPvkaNuAYM6HhcXG+uKzxlY6QBwf0kyZ/TSg49ZXcOtq6xXAE1AEhBC98B2SZqyQ6zhvNoO1ggAhdNTYizwOh4GqVuHHLJg+aQ6cGDARhy1natOnLByBAZihTkI8Oy74UxvM/rye3R/XAZKyYj4nMWt2X/gcAVc2/L7zrXdwXNzMMJBKEupbbl4H1YzCNICT32tpY8AcaEBVD+mKJ3rs39ODAk1S9MAMx8n9wEjWx3YMqcjdt/CJl2y3Tqg9aSL/7+9d421/Drv886+nTMzHIq6UjQl2ZJFW7SFwAUaNKjpxGAAW4idRK4MK7bTJk3QD0F6QRP0Q5L2SwIHKBCgaNILWjdp0kqtUlZ2a6t2mjSFilp2W5cxYjuypEiWbEm2rhQlajhzztm3vL/3stbae4bW7BEocJPPtqlz2f/L+j/rcmY/613vUkqRFGAzyT3lAjUBbLl6/9HJtQf+9I9/6/XP7QA64If3fvizf3ZxeeM/3SzOLP3DmWei9VyxOVmgNhGi06Sm5z+uSREJOUVsR7qTYuePav/jqRFayox4XzmF5e6c+dDH/JSSYGovKehKkHqbS2HsvPyYvjFZ7xMpt1pHCKVex1cZJfXH6NhqM5UuolIZVJ/xZ8k2WdGWUR/Wh25LbRC8fDMyPa/Lv4po72Vuoj83GlT0u14xmVObELpBbf3B82VnOSKyOsV19o/Y5i5kt14lGHtz6Jsilhj2iapKEWATJLfVjUTisFmjlzHHP08JoV4/rASoyNhiPQresVneaUVGuPIYS+vV6lZiM9tF9d8u/+N56+c+RkUKlsqDW2P6GOHrEz8VmqwVAxlxu9Qmdy3VQytN1JHGBntPm9+tlpH2Y+femdJiZQNARSv7ig3/W6JvciKiNplMEV4TIHp8b985noawjTLU9Xyru2FMF/eVRfIWr8a9xpRhA89iFVfUxEiM/wjgsYXyPQQgAAEIQODrI4AA/vr4cTYEIAABCEDgaxJQBPDqxjO/OF9EBLAEcH4ejyXA/qE5Pk3HEthcIpsfpu8sLHaFsQRwRJhGFKAEY16xfSiX5JXw0if33UgvCZp6jNsFsKcs8PeVczNF0GBKQzzlJk0tT2rmGM4l7iGHuswpcVLPVvJR5XNZVUuaVyEV2g7zGcEnIeXcUvRU6SPFghU2hZUEcBN7tUGe89ndKKnKMSprF7qee/Z2AVyZLHTfqkP/PstXS9XjvciF2e8REZJNMGc05k5DSr61CV8JsUhnII4ppry6Kk1Il7klI7tgSi4ZQVyxvZUjtyRNpVFoQiqF0Cj7Ve6LpeX7tXL7Mm2PFrb2d3lzsz6772898PLX/Id/7OHJza/ZMe5wwBOW7vPkg5/622fb1b+xXlyZrXwTKdVnibNou85VLDIa2il4mg8Pfmx5dls6AM8pq3KWGU7xqZXpmSJCwqry5+4L4PJ/3ofseNV/XK9vSDc+Tt1X7SnEYn6VwItZCj888rGmVE1pWhNC1bZaz8y+FRHelbugIusjt+t6qdQXp95XfRzZmYIpKZgjgwvM4FJR49VGw3mO0rMLxVGUtvav8rhEjwkob19KPdNmEroQvTOnbM/5po83vrFa5km3iNGltbnKR63D2kSAJno0HmiqICNo/fkrxYH3y5ok6fmRx3KMknL8ftzkrvXznCwIMRwsxzFAP7fN0fK9LoiLafbHoRBjROzGcib7dT3iWuNP3aNOyAmwVk+SyvGej8eK2h0mAmpU74JaRR/GiwqCrnmBNkFW5a2/JvFzCeD4m5NlybzIY7vV3yFvWzsCuTZWrGjuqOs6z/tVpvLQ3YgAHlsq30MAAhCAAATunQAC+N7ZcSYEIAABCEDgrghoE7jz1Zd/cXZ2/U22zY9ZElvWmkt09/fJqhQMJTwr4ranXKj0C13URhSXxYDpA/9J5DAtYejf75RyzGEbMmSUAptcyjyxSLFRANUlWqqDigTOyOX68F5Lv1s0Y0rfccm9onv7xleuE1qeTbnEiFBN0WxCVy/lYI1X/tNFkk8CY09Y1CZyEiY6Y4yCG3ODjr8fn7+es+fkjIhN34Qql9dHMerGprrahk2DaNqLmFOdu7QblvHfqfH0Zd62rFz3swhIL18t6c7cpTv1m8It6jL4uEL3dpCCM12LFsnHZnHBfeQ3lqeW/rcl8yXcs700UWo/K5h9YpF+0/XNi+X8ZX9h8R2v+sl3TjIk8656SD/ofR955tXn51/8B4vZ/F9e2eZvG4lfe5peH739eiSroiKz/XubKSGmzdAkAAuoR7FWvuwe/b22pNguFSvlh5yu95mcYEkJOuYM3on2zKK3SHOxEKOh7Y3Hl1B0/KoHbTKYeXK9v+VkUBeIEUkeEm036txFa9Zru0br7LtiuoS2t+YWpa4l/dFebFTJ/h6bHloqjxD79v+aZFFbqRQubSVCtCB/6TI+X6Jn8WergqUczAmkkKa6W9RjzzFefbWn86iofG/PWa8SzPp95UTXhJTuW+2jR6FGlHDJaJVKfPsmlRERHb0gVgpE24k0Fm0ca/WYD+rRyYMcH1IY1ERYSPSxrqLu/Pq6tt7PnM4+HlR+55SpIUsjB3ATo20yUDBiMqHJ1+ybnqIlpa73X93MI75rLOhjfRvzhpUQzirLV3Xdxtu9vyKtn+21yd6Tc5PJ/EX9LfFNNfNa9Tv/uq6JmZy4sOdb6Ln0VaVar357ct/ZY6SA6IT5DgIQgAAEIHAoAQTwocQ4HgIQgAAEIHAggff8yhceXl0uPzBdXHtjCeAuOXeXjo+bIrlQ8GSVd4rQrYi6EBuVjzMEQyyL39l13q4RH7h7JFw9xiiBa/O3aS4RH98reaPzanOg2gW+f5jf1c0htLoQk9SUchkjDUNupYzJCGC/R4qL+D7kUkUm6viIoM2cnSWfdBmPBsyI0BQiLglbdHJImB0hXEIlhV8JJYun7uVNYVfRsC3fqkfkRvn7pm4ptCryMJ9HYi3KsbtEXOeOUlrOw2VdRly36OFcGh/Rll0QRX5RLaePWt2X900eZoS56m2M3ptaSKvKFWJJCS6qPlKclthMnhLAek0tAli5O00Am6S5+PLm9OU//uOPPvC/H9hF2uHv+dBT333l/OmfmZxefdVyPp+sLSC4JkO8bJmTNHjZRmYetWvy2SJEfVOq4pARsFMzpC6G9wSW54fNaFW9P0b/ZkW2MpUMWymdhhhLEFf7SeCqLa+/FKUljNWO/PycyKh/eMuPhiwdoiC9X8UrBKcqM3Ni+yaDOcmTIjvK2UV1TIhkv8hnaw+RfSkEdMm5FMAuEKPeY+yIqHWPsq8UGd62etRqOE5F4Ff/q+fPiZIUy2NE/ihG93OI9/bSNz50ET+k/Yh2bfWcslnpDJRTNhhnqoo2UST5n/3cI8gjMtnb6jBR4pMIKYArH7BfotJaDH1J2trbiefjDlHc0lbk+BS5cHWPGgdDQrtEl+zNCOUmkXNVwli+msBzJhkJXJtp1phVKyaKb2SC8UEwVoBIsdtXTYD0sTY2r3MRXm2oxt1s096nm2zXRUdp3CdR9Bw9N3CvvT6uZgqfym1dh2hFQU4G+MZ1lrLEX4MA9h+1SaGqTX3TCj3dbD4xvzZ77PEH3/rZfje+gwAEIAABCEDgEAII4ENocSwEIAABCEDgHgi4AF6uPjA7vfLG9cY2gZM80GZA/vE6ZJ3n9M0IRhcA+UF9/3aVWqBHmIXQ1atJwvw+rhsf1JU6oF47cnAQtHGN+qeBQv8yak3XKTHUlp7H1RTRFa9+/Vr+PZa9pFl4ip6zti+VT4HaNlPqDILHrtQsvbL7D5lQObWcPQRnbBKmlA/OZxC/UQH9CsGvhEcJZJ0Sz6Zoy5ZSwYSeP0aKpUqB0WRLw7grxIt9RTBWeSN620P/oi4zsi4kS0njaC/FL76GtK0owhLGPcp3rIWosRBhUWcRualcwSXGgp/kWhy9J/gktI3Z2iJ+BaCiKmcby/+7Wn16e/ayd/zYoy9/cv+ud/OzlWvyP374qT999eIr//V6cXq6nV+xrb1C4BYviaGF5ZGWUG1RitlOS4BKrqoZhZDN581usrSUInOT1rU8vrffkK6KOHSplwLN6yL7SAlzMav+1FpPCtb9n0sQPtfzS3Bqmb822Yo8v7nZXYn+dmJGwlv5atO7nchh1ebQxz1o15v3fv+MNhPv6ZyKEK0JiWpfPXJ0nIjxSSlLYbNa9XQMuxM1QWDMJ50lsXtF5H/V5TheRXlKPu/mSC6Gre+0iFcrqwnqmiCI9trbRU20xLiaqXWqfls6jV4z+2Oup/rwDQZzjPZBqPpzyfAaf/eis1sKlyhVpEyQoI1x3jeFs+eonO1toi2ltaeI8RThfXyqvw9jRLnGi5m1Z9s2zeXuvNhUVHFGKI+TXT7Rk1MNPr3l7du+SrZnxLAipYN7H78qrUQQi/ZxWzoQH0I1rmQbyxQp+xOJPQe531gn+TUrt/rSxpeFNpiUrF5tttP1+mObq/d9z9seeuTzvcb4DgIQgAAEIACBQwgggA+hxbEQgAAEIACBeyDwxD/94usuzy0C+OzKt6zWpgpN/o4C2C/pEX7DJjspAks+1G13N1mKCMF67USQ6uN0iivJmCZMB+Hpt01x1T/mpyAaBEZcR7u29zyNTYr5B/x+dn2rpdgeiZaRok20ZkSr5Ea9F+KnBG8XsC6I2lLpPfD5HJ4Htj1THO+Rwno2RbllRHGI1i5Ym7RKiRHX6NFywd3/VySjinJjJRcwFUlYKTMyGrBJrUqZkEJntx67LNIGW1V+X1Zdj5kRiH49tzM9r2c7PqM5dcqYs9cvsSOg4qJj5OOOHCt56SyyHrQJnT9nnFupJEqYKgrSW58xnitaeXWxXS0vPjq77zU/9KPffv+H9mrrrn58/3Y7/93f+MJfvbK+8Ze2i6vTlTb8O7GJknz+cZLBxfPANlIWpNj2/M8R2Smh5elGMiVIEY5jI6p1NltE9LD3hxLwXYD67z3aPPqU6qzac9XX/oTErvbvj78vwsZI2DYZVO03+0ifMOlpWeT+a6JobFvVNjzg1CVn9M/6fY8QjxKuMgWGw3Q5GhsTlgBv7bnak+UYD1C7E063SdrhE8YoervkjQkZ3/jR+3BfFTCK4CI3XsP7d44Llcu8IoWVm1ki3etI7TY3E1Ndex1mW+81kpM7GeG831C996utZMRsbRjokwVZ/jhnL6I/+09J/cjvKxEd/V39x8e2bAAlVzWR5OlVfBJje7JKIVuitfpjPUeT1hYp7NG9XiaP73dZHdW2yzZKG2PdrPEIkS4l7X2ixr62gqFyTrcaGcbdkMfeDq09edmyvYw5lMd22v5+bHpu9JhMivNXq0v/qgjhuXzydvOx5enpYz/wTd/2hf064mcIQAACEIAABO6OAAL47jhxFAQgAAEIQOCeCbz7V596/ebWxS/MFte+ZW2bwEn+ltTZ/0NcQmPTcit2wesRVyWGU2yUAG7CSdFXeUzlaXQdqqhjfTCvSM8hQis+ubfcAf5j32QqhWDbXCmkSkUWlliq1AbjkvYSuFGeKldf4u0ypS05z+XVbRO3wF0pHpTywe+VglJRuXHdTIVQKQvsd74QP4VyRdjFz5HXtGRVRcWFyIkl4v7sirit81365TJ7l2S7YrBHU0ZNjlGE/n22Gi/pnnz3+2RE4rgkfJSEdc2K6JTAc7ktDydx3iKv9+VWSebefqIoXVQ535oA2BN2tflc1VsFIlYkpdIuSAIqmvZkuzyZrJeGaftr28X1H/qx73jFb91LZ/mHn/3sfZ/73PlPXptsf2xzenViV7Vnjc3fXA5J0il1Q0Y+j6JQUbTxfkSmutB1EazoZkWedj6mAoP7kH4h2oDSO0RO4TaBkBHWYwRl9I+o65pA8b6ZkxFVXm9PHmIdkwitXvN8v06JRW9X9nNdQzVlPytHbqUcac81tLN2Ta2X1+8twjlyGkvY9XZd9RYpSiLyu57DOXq7SOmf7bTaawjQKP/EBLA/ZzWrloKlT9z4hYec0SGUd3OKV7+sdlLtf5PljzQLPXJ37BMxvZOiMVck1Lhzm7Bufa4iUvOOKbq9KWnMyP/aM+dhO312mOjyMdA75a7AHHN87/f3eJ64cEvPk5MKtZmlhvW5WWwXxCqaz/3EeOTtPjc59DdzzPb367H0a7VFL5f1FUU+Z1so1s6y6mcIXNa3Va8tdUTlek+OvtGejxklsnMMyfrQhm3eXoyNR1BrEsfbS06iKaVL/Q0bGEef65v4qR/rd3MTwFPBWq1/88rVs+/+Qwjgqka+QgACEIAABA4mgAA+GBknQAACEIAABA4jIAG8vXXxfysH8L4AlnwouaGr1qZI2zLBexG+PdIwBGiJ2Fqp6xKppIgL0/wwbuIgliHnB/bnEMA7onKQyZ6ewF8VBdw/yJdAcvGg+wzPFJJEwYW2mN/FXEUumpxQmJkEsL0f57iLaSkcdJ7ecz4VmSkB7FesPKxRjkrToHddzqXA9ag7FyK6ftzDz84ylkTsS52DcMW7RX0ka0mwEjZ5ocxmsSM1RllVQq82wXMplLmEayM1f05/RoHKGt5bwl2bgnl9p4xzSZkCt1pkl3bxBD2na5dm/vvkoE3mXG4OMsnL08RPyrE8PsSw+ZiVBJWdK/Eo0WQXMtHz5On86tt/+Dtf85kqzyFfn/jgV165XH75Paezzfet51cmlx5mGuK2GKn5RXnVkHuKEgngnXaYNTgKeUfvEi7Eol47y+n13BmJ73Jd/1WkbdZRtUflA9b7FeE4pl8YnzmChdX+Qpi5ePbrZmoKRXyKY04GRI7sSDHRUlz4w5ep2001oLc80r5SyNQERUbgezTn1CKcVV4J7xTdEoyeSkJR0PZ9TOpEVH5t0BjtJ9pj9RPvq3omRRirDxnLnu6hxz2PgtMvkONZ8W7yvYn3PrJ5f9tLIbDfjiLneYhpr0dr7tXvKjdtSf04N1Ol2HeK+I52kRM6+xePB9559k1unNekbraTSMmTbS/HhvFyY6S2t5chpUoUq+dq9/r2HLmq48zHneOn9S6vZwldlTs2yNsV9h7Na+fX5JU/f41Xzmmon+zPJXqbQM6czrV5oq5Xry5/h3E0jXFtmlj5g1u/y/GsTyDsTki1v30VMZx/nzQRoGjg+fzUwtTtIgjgO7VSfgcBCEAAAhA4iAAC+CBcHAwBCEAAAhA4nMB/ZykgpueXvyABvNrYIt/ZqUmZcXOdLll2ogclK1IYDJ/D0xvUsu68Tn62L1EaDqNHD+6XWgJqfNU/CJSEQvJhzF0a73Xx5FKolmD3pAV3jOyqiNnxXpJDvnGXSzBFdsa7IUi0XN/eb9GUfVMq2Vdt3FXi1GWSGLlYLiGUYq8iXXMJtUR0SKwutfyeVbCUc/3HnitXotrLk+J1TJ9QwnaUTSOfEsb1nO54/VpRThdq/k3yrSXXJVxtcySXXC5wYkn/TgRzi5iOPLkth2w+SKvXFGYl8iulgyIOY2l8NKBdYRz1HpKmJGwIYS2xl6iTn5LHn1iujeXl8v+/cv0Vf+wdj9x/T3k6f/pjn33w/MbNn7Lcn9+zXJzZvlAmNk1QK+dsbabWBZMsZAhgLfvXKyKAi2VFOkc6iHq1yPviXJuzea7cEI9ef3ZOtauegkER3dm+BiFYKUec0xDB622iJnBSJDeBqEkLb/NqZ/Es3gzK/2dKgopMrTJU3ddGWlFnERUd99vtP5HiItM2uLBNoZ5SvYm6ytuawq7ac6QoUR3n9YdUCTWh1NKP+PWHtuyF2x1n9o/t406rohTmNQWT/aRXYdTPsEmb/5z3UXln6q+T3IRsGD/rmWpM9XHOJ4w0jlhNDUzaOJrdsiZw5NDHCTuvM51X4r2GyaHNxQRAz/Hen3T8LvNx2w08otcmzCI/d0TAV/v28cTqaum5hGO09raR9ep90yfHIkXFwuS/r/pIYd0mfvLWOj/aZBfw/lbmTO4TD3HCGGk8Tq60x7ZrSUTXBJ3ajY+Xymk8pFEZJ3Z03VnyUtlVPz4RYeeqfDNVxmr1sfnZ4rsff/gtX7wzP34LAQhAAAIQgMDXIoAA/lqEeB8CEIAABCDwdRJ415PPftPJ6isfMAH8JkUAn2hZa+ajrci6+pB/N7caXEh8VndBMH6I71dpEY32q5JEetclxnCzUcSMkqoOqRydTVC3iNDdEvcI1B4VNx5Rz6kIxBCPIW9LNCp8LTZtiyXgtcS6JLEEzygS/KlTpu3cJ3OK1nJ/33DJJVnfyb5SCrh41ns7LOO6sWmVK+t2+ZBwsUR7PydnHVSiRYIpoh4zUrAUSsomRWT6dWqvrj1h5hHMyifqEZ2Sx11467yKKJzOQ2A6ykFkRYSwaRWvr4jYrDqqHLEhxqLk+wK4RzDWhEXUa2wSZ3zsPOU1PbEIYJOfT55ee/kf/XoE8OWN85+2h3psPT+zba0UYbvw+0XEo0JUS2ia5LI60O8kj6ofSRhH5G5IsJaqpHLCulSLSMvi19q7/ULPVcK453sd0zeECK1F9yVmmyD0aPQh53ZLkdDFoeSWNhfz5/LUFUrtomcJQRv10CeFRolbvy8BHGUfJ2eqJ/fc0k0gqi2k8FcbccHoAtTDZ7MB5GaJ1ZAzjUbL+JDP13Jz53ElRXtKknwj8yxH1HbvoW2CqSK3XZJmhL0fVxHTFbXdz430EtEfq/9PbUytvL8tfc4Q1R6TYbnpWqYaUDMIYa221MfHNhaHbe39ReXb9dntvbYyoFJCaAJhYfmNLZI18o/nqoOMcC2x79zapJQmNIKTl21n4iUjkiXoKz93Tkh5O1ZqBTtPkcL+s48VNtZJDOueyiecG9CFkI5X5QAWnvo7EhMZOW7VaoNM+VC5gwuDX0uTb9V+2nXjmxofKyd8iXJFo7dJM8nh/GM09nO9rxQSMyU3Xq0/ZikgHiMFxNAP+BYCEIAABCBwIAEE8IHAOBwCEIAABCBwKIEnfvnGQ+fbr35gNr/6rREBvGjLu9Pz2CV7BNYYWRX3ynQHWrFdocCK2NMH7CzMuFTXpd+QviGuUOkCTEj48nLL3ZqvJm/yQ3z7eYy629sAzj/cp7zwy9RSX8k3twmZgiDLW5F/pR5KmEmGVSRwyNa66f5S925eXPClwqjriEZsXpQRg/ksJYxbpK57oB6h5vI3JYaLZRM4tTHbZozis+epiFC/f6WFSHPbhE5uFDecGjU4CD1nN7D39xXNqnJJvOSxLsKXIZ9LCJUwnyqqcy9tQ9VzydCSyyUII01GSPWQjSGJYuM8r1AVtEstF4YhzCWPIpI06mVtPDzHp8J/7b2p7ba2Xi1/bXbt+g++8y2v/p3WuA745qc/9OlXXa5W77XifO9qdjpZm9SzLKDuatvEg6SQRxVaeVKqlUzUc+s9F0sphZWqIuRjTRzcLlj9eYaI9CaAXcCliC1BXoHakoaqFyujl20vQr4mL7QJnb+GKPdoENHunbtTzZQSLS/xbsR9iexoS7K4mbPYcxn3CNN2I69O1WtOVGQbV4qJkKG7ExJqc0qL29qEt5GQy9He+zPE5E0fP7z8+SAVKdyqPVc6xBPGRWJ8KAHfBxnPc6s26X00uesHG1uq/mpCSJK3BGmVs9JLjE2uy9zbc38rU3JNoGwrlYHXd0ZjZ/27qM/xucZGn0xxLtlfBrvt7cHqW95SgnUcySrSdZxoqWeN51dDyRQQnn8kx7Oc0Kj27W08o5u9ni3iOcbjmkmSTLZn0QoClX/YbFKSuMYIpVmI/pxRxpkColKXqIHWeBnPXnT3pyH7R8o4bmg3arP7KT2y/po4z/Hac17by8uoPl6bwK1X/3x+dvo9RACPrZvvIQABCEAAAocRQAAfxoujIQABCEAAAgcTkAC+WD/7C5PF6ZslgCVfFLEZwi9FjYsWhW3FB+tRGMau7ilUM9elTIlLx/yA3lIKVG7TjLCtwrrgKaEjLzBEoumY+JDfI8f0wbukpucY9TyhPdJyX2hWmSOqN8Rh5bqtHKHj7yvaNkRESQv74G/CzsWnCTnfYCzLJmEy3rMiAP13mY6ipEg9SzxQ/lMnNwnzZxJ2SctcNh9COYW27UrvlWLnKXavXStFWpVH3jNelcu1cnfGb0tsjI2lrtWeo+7pJ0Tqgdocy+tLglARrbWBkgvPzGnskqlLmHqWMRK17l3R2yUldR9Pv5w2J9yVcsFKZPbftyfM8OBINaB2sTYhHO1BEnYuxqulpYC4+MjZ9Vf84A9/+8s/Pj733X7/8x996mXPnN/8H2xTuR/czM4mm+mZQhd35JuuZdsounwtxmOKhlEA13293VoTi2Xl0aZ2+1dsmBW/z9y/dnEdX23e81Xned6Os84qkrEmPOqYiG7M5ftqu3a9EpTR3sbF9H0CICJ0o+S7fay3M4/0rjzf1t9LcAty5c0AACAASURBVEdu2CynRZ5G38ocz1XXrQ9Hn5Mo9/u4FFYkd40/1d96ComYOIqI1ed87fWz1sayrUq0ejusgPoU9X3iJ58903uEEE3prfIa00px4H275fjOzQEli/MZ45rRn52Fxky3y5lfV7/LcUBjUFy3or2Tn643PHOf2AlOkXf3dhpjIP9OW7NDaxxo+adz7PU0CXZi5XP2JlYTAi5MrWz5fC7SvQgxbmxtp7RoV7nZp55Gz+LjWfPt8b1P+GSkcLIpAdyeJI+RZJ63/p9tJa6y89D621XCO+qrj527KyZqJiTe358wqM0clxvbzNGn42Yni0gB8VFLAfEYAvj36Hu8BQEIQAACEPgaBBDANBEIQAACEIDA80zgPb/y7MPLixu2CdyZRQDP/XP7/HQRd20RhXtLhP0vdERpRmRXfNCXwBp3VZcyDMGQH7hT9HhUWApFv88QERxyqpayx/WbAK2l1TrfI2pTYqVIVUShjm+bOOnaLgsqJcKYT1ayNe6jvJy1xDsEQUbOVe7MFJIb5QT2QNMQMBXRWBGSHrA6CImqOpeTLbq1S6rGL3O2Vq7gihqtDa/kGJyjCZPYLE5RcypDpo3wyF5ZqxAYjd++MBJLLXvPiM7Kndvqp0VKV7RzNIAS2SWY6h9oPeAuylQRkmoPJfUVhdpkUt7XhZ6qfSeaMaIp4wHyfY/Wi/bThVkXbhJjFfmre7jX17U9x6i1OTPAvk/V6ny7ubz85Mn9D/zRH33klf+s6uWQr+//xPbKp7/6qf/qymT9p5ZTRQCfmrQTJytjSfBqN5JlFQHpUizSeOzIPkVtZ/vr5ahI8oryzKXodi3vMy2Hb0XK98hzPa/acEWqj0J/TJEyRuFWPdT9W71W9PYQ0e/1lf299REPcza5ZkLM++kwHsQEUkbcS25KVJr41WtlEzZ6WT7laMs1gZT2VqJcr+hPUToXiTk2jCwqBYUmmxrfbF9OpEnlYZMz1Y33aXu/JmHyHiGmK6VItr9KtWD9zOXkXv9vIrnqf5icGdtt47wXgt/GGx8vrV/nBNo4lqg/xVgV0fV+juaXJJ0rVLtydeeNWk7tVq4cr3OFQMX6F9ck3ZrjyFl9Uv212GjWoj3G3ooO1YPnw27toSK+oz49E7D6tUUAj3mE/X5aLTFczyP8V5dtk04fG/P8/edrvScLVhG7Ls/VfjW05N8Wb88u+6Pd6NVSpvhkQl197J3RQzxNirVRpYCY5iZw22tXHnvbQ4/cU37xfge+gwAEIAABCLx0CSCAX7p1z5NDAAIQgMA3iMB//+SXvnmyvPy/Josrb1yuzYSaYJjlpmT+kdkEVi3R9U1zIhttfGBOyRV5LzNHZkqa+JBeuW1TAuczlTj0nJI6b4gWbR/MdZchWq5khGRtEzR7m5JVpGRFqhbCMYVB/C4+8Mc2bXqQep5d8Rm73ueRHlkZmwapvC2/rQuJyOlaS8hLvlXEsFIytAjXvGUI3UppEOXREnjJnBIRHhWq1BMuNHKpu75L01FSyKX0c7xKsEmGVA7XqEPdc084NmFTN8jIUwUmutALTu0faCnKQr4NAkXxyd4erCZqky8/cUgd0K7TcxDf6RGC264QLSGs2yoSO/Lp9voZBbCU0nRzuV1f3nxqevVVP/QnHn3lLz43red+54ntdnbjn33mr17fnv+V9fzKZKm2axGAnnojgXj0b4nKjNINmVmb/EVqhmi/1j9MPkX5e8TiKCDVf5zfXuS96tvTk2R9RQoARRJXaoToOxEVG+I5yrX7T2tvVYPsbO+2CP4UuC0FSI9CFanY5qvXa1NmilC3KHmB0WoCn4CxsvkEgXKy1iZpGZFbKRNaCpF8ruY1c9LDb+XCOCdEMgVIE8PteRSqXJGkna3K5/WlshuPnSj6rPouY4e2UBH+LSI4c/xWqoqq99ZPaoKorpETWjk2tpm1nXtm2ouc7Gl1rPFlnBRTW8mUIRpyYvy0J8s6a4LWW509ax4fE3TV39sI3Nre2O68LY0S3L+3ttRmgLKsNSFQKwSGaHwvV9avUia4UPWOYlreOVnrWccEwHivyNkbYr4mxPoqgVyZks/aU+dExLGPxHrejIjvEybZTHMysdqRt2E73jLf98mVgXW9r3G51+TkZLm0FSDGUjw9Ani9+vj82n3f8/iDb/rsvYwtnAMBCEAAAhCAwPD5AhgQgAAEIAABCDw/BP7ek19+8+zy1v+5nZ9989IigKcSUormtA+9WkLswsVkU7wqzUKK2/QI8kp9iW3P0xrSMgSyC4DheP8Qnj9X9K3LAPt924QtlxjHJlQ9wrDSNugaXXJlCfUBvivKFr1aH+b1VZ/na5Mxlw8toq4Eb+a21BO7hI7UDO54U4yUpA0qKXxK6P4eUYVRjlzCXaKrcnjmknkJM9+cqQnqqI8mNHJdt1ipbIpMdlFawrxEqwR5Ls92OhmR2Td2qsi8Lgp3WtleRG4Jdt3Hnz/Np6S13z9FYUXitojRKo+Eet0gj/XnSgEqYeyi3+p7Zu2wloJH08tJBEnEJqjyubNOI+XFkAJCUYrKhXuytOjTZ59dn77ix378O17zvnvtSX/3g5//s/ctb/zk5vTKbKXIZklgbeDn9RhFdF+dfDztQUYLluSS2Ft59LoeJOWXsZBMqpzAEdVqG8wlj8pRWqKzclOrQbbUBxK8KSD7BItSC0R7i3Zs4s7sZ0WUK4I8ypWRnZW6ISNoFd3r4tgeUEvtlfLDm1E+X6Rt6e05JnzUf3fzDox5i3W8yj+KfcnhmGCIyOB1imqftBhFZN73ch3jwRjd6+NDtVddpPK42u+Dd5Q17qso05iP0FjXvWiMVz2/dk48lOGPLpTXGFuRxGNviy45lYO6Ipm9beTkSbFVm7VfeWR01l20hziuomT9OtYXvJ/4+NOjmqN1Rw7imnSK+ujR0juTC9UwhvGpOHrbyvFGkdO6pzaJG4VyRSDHBFKfoKvI60ppERMwu/m6dXzlEJYQ1kTebLO3gsPuF2l6tI1h1FGUf4g8zvuOqxyqXivn8Zgyws+veYqakBwjw4f88FWjNT67hBeX7Ic1xm6WMfWh9DLaBG6yWX3i5PrpH/z+1zz6u2Or4HsIQAACEIAABO6ewG6Ywt2fx5EQgAAEIAABCNwlgb/75DOPzpc3/uHJ/Oob1ienbnBq1/Qe99Q+GscHf4mjFBr1zigKSqBMJUUkOVJqjEKzItJKfvghKQ0UPRwCWhLQpFBGgzWhWDkg99ItlCBrqQSycCWguzAqgRHype7XlqyrKBIWkpEmYCplgkcs2+/1rHJhIXiUemCZQjTFaNtcapQkvUJK8lQEcEQQhxB0vWlfQrCGRHEZPEShhWyMvMmxZDxkqcVY1rrrtFsqb2zS5ptVbTNUuCLo9trImI+3WI1f43AtgQ/ZVf9QUwSipJ7ErQyo5KWf10xk5fSMiMSS2RXJWJHMJTw9mtGbwxCJqPrwOwafKEqmRnAh3KXX0gShanCm5LqSTRMTwBc3lpvTl/87f+I7X/3fWNmbh77LbuKH/bcf/OIfvn75lfdt5mfX1ouzSDmhXNApNEMAi0tNlORt7MASdBHBakvI1c/y99W+ekS47hb1HxHgtwtEl+M5kRCtVQ0zemyJ4Lre2vpQaz/euOp6BbILvaqTuFBMOlSE7qySx5b4rZQUNaHRNh2MCNx65hLQ1T/715pYSrFa7d3lbK+i1q97te+kOfGmIMmbEb4VIVybiKlnhOCMetD45OlVDKHLwozs1c/1fky2RBkq12+TpYNAvVP7KWlZKQiyqUYVDQJYz+j3sxy5PomjsVJtfthErwSu/96esCabovzR5j1lgj9D1v8dZHMJ3iabh4LXWoB43L3o30Hktnq77RNainKJ0raaQxulZeoPldHrJ8YftX+VPw6tSYhcMZJtuSRzpYPYT2tTxR/5eJ/y8Xz3VYK/6lcRwppsUQqSmlTzJ8+xKc6OSOWI1g6utYrCJ2CsNhaS2NaAZuv1Jy7nZ9/7A6//tk/fqT3wOwhAAAIQgAAEvjYBBPDXZsQREIAABCAAga+LwN/75afeOt2c/4PJ7NrrN5OzCOHLD9L62CspoE21XGy1ULm4ZZe+PdrLBUOlhEihEs5DO7/vLRk3wesfptvm8F0+jLkaWxqG8lwt8nA3L2iBKKGq/JKjyPFFwk1a9TJX2oUI3uxlqKXaWlpfoqGiUpXbVqkPdnNS5iZHlZIgxZ2nzsj17MHxdv+o68+1wZwvgVY5cuMkP76iHYfI65JTgxj2wEstrfb6q43DQo7qVQLYpZPKI44ZPSjRLqlRwjlYdjkzNrIQtX3TpSbKPT1GpMSIiM5kmf+i60vQM4o3hanq39vNkHO2hFfLh6pNl1I0lxD1Zd9+v3jWyBcaG8Dp5Rv1ieP24uTk8uZmu7j/rz/41gf/2uOTSYSaHvh6z8eeesPmK0+/f3Z69q3rxRXzWyU5e4S2LjmTIEy5W4JOPEoINmnlkb59g76WUiXLJWw6z587o2+9TdcuZeJrFs1Rqy3O+uaI9Witj2YbGCdqdGKUL2t7EPbeTnPCQxLOnysjgv28IVpY5Y6o5JyISMFc9xonMKJ/Zb/1rLL7G8H1qNN6/oqArk3tqo96RHMJUI/UjDYgwejtaZCXO+03mbb3FXHqgrJHRI/8ahwoEdh59Y8qVQcleP16yvHcJOJutH20b6/gFula7nQ7i6jXPlblhEuOeyGOI6VHTSjsPJ+NVzEhFHzjNrv9sdpgnJf9NNvsKKn93ZLSOUflfdyvnwN3to+IlK2xJjZCrPRAuo6GHO+vGnY0TmX/97JIYlfO6HyYamO9vnuKlRhHK0d4nyBpz+r362No8Yn2Em2uFiY4mhgKnUVcw2Owd4S9C+zayM/Inlp/myzX2/l284nt4urj3/fwmz851gPfQwACEIAABCBw9wQQwHfPiiMhAAEIQAAC90Tg3U9+6fedrG/9/HZ69XXLtWUx9eXG8Sd49JQuVZVz03OW7kY0bnPptmLsStyOEY9NoKSYGz/Q6z4VGTxGc42S1D/oSzhlhJlEkKJN6zpT2xzNN3NSSKbkR24y5ZI2JZCLEH14d/ngO7n5nXvuXj1fIvTn34sjyx3OXEbtiYoOvguQHjlWEWT9a4+MHASDpIQLqJCjo4geo39dUTxHhF9nXjmJexSz14uVe0yf4dcaBVUKQJdne/8KCyEYTxriKcqo/yoSOYRxT0mhS7ScxpoUsPqZWcLNWsruSnQv//N+uyuZHdK6k+4MJEHz91loT6UgsWpl86Xm1h6my5tb27zt3Sevfd2ff+eDkxv30lnev93OP/2rn/qfF9PN2zcSwCfWvtRPhshLtWXduyJYXbRbc/PnyCXuVfbgJmvZBdz4vDsTEkqf4RGKJrU1maIN2Kw9u+TyiG5FokcFefoIl4UhEXeiJ5NVtS/Vj+fFdbh+xzJhfcImy+c5fVPutihj3XAvR3GJfh1z2/0HEe2nqvw5wdKjMZVvtrc38XHpP6RiGPvQzngy5pkeBLDSQChCtL7uRpTuRkQLkT+fInKH/tFyCWQfnPomgJE6YWONWm1bP0vWV59tY5fqw0VndKwmgIN4e7V0Mjn+xLOFaC2WbbNLF+4xl6Hxr0UU+6125WXdYOTmslyTVSlidYxP+mUZ9XOlU1C5KiVHF+DjeCdeFYGsgbR3VmdgZfKcxDtjW6z08JQRyds3gLTN4fyr/X5/9Uax09eKmG4rJqo91YRZgb0tYjvfqCJmn1hnTul6/Bhzhuj5WnGg8UQRwFb/cz3QcvnJ7dXF42976NFPDFXJtxCAAAQgAAEIHEAAAXwALA6FAAQgAAEI3AuBd/3K0991cn7j50wAP7zeTCYbLc3NqNIxIlEfspWSwfO9DtIuZFbkpZSc6tGq9We856ysJe/7EWZ3cIAeFTxK0PhQnoIqv7Z7uQEIYbQvT1sUokd42QGSTRnuNX71Z6oI5QFk27RLS6ztPkoIoa9emkGUhFIIk6DNkqq8EnMbj9gLUeibKQ1Ru3WriIiLnL2SLiPHkcP+ffOGefcemVl5LPVG1FFFN+5FRg7RnC1iV1FyiswcBLrKVXlqu0APselLvVPQeySfcu9K4GW03Coj7qI9KcJT4qw2zYt7+XONIioZRaTybsTeKMBD0uia9YwhRXXMYmEiVCJqYu9fPLudzk8/MLn2yh95+7de/9y99BWd864Pfu4vXlmf/4RFAF+1mG1zVeM/VyVlFdGekdQZOV+RmtXOFVFbQtjbUIrqElouv/SqaMMUpCUbVZch7yIyv1JBtIhRO9WlbubulmgfN+CrnKieD1j9NmV5Cf2W67lNmES9tfa9J5FbfQxQK0LTyyR1qHryiZndySOPEK3zcmKjXaZSJEjC2WZyFcEfixSiEBVZX+28Jq+60I5o+hofSjTuj0HR3/LOOt4FtMRlRVlblHNzmimo7bmU/kX9YhSr/XGGfuzCPlJjNDmr8ahyAN9B2O6OfyEjq//X/WqDTtWhd0E9RI6d4yqKO7V3r5Os1apDj1oeJpjGCaNqnzF/pvFwuKqPv6qYPvFQM2oaZ73+lLO6Jo00btj9faNLTY6o/+s//d6+1s86fpxEULterS+zf+Qmo1mMGAtU4p5j3X/Wn4e8X1yrNgiM80vBxzhd/TlHdC9brjCwFDpi4znKrRyL6eJkulptJ8vV70xfdv0Pf/+Db/7ovY4rnAcBCEAAAhB4qRNAAL/UWwDPDwEIQAACzzuBd/1/n/uu+eb85ywr6cPb6RUP8asP3E0ypEjSB3nfnT0/AI+FK2FZv9uVnCEd57lkOwRD35W+Prj78uAK81RqgsyBqmuOMmRcst4/sHdxMUomnVs5QZukaTlBIzJtXGrsz+gy2+NxQ2hkVGFx0TVH8VSitJVrP/ot5U4IztgUrwTZ+FyVKqKnV5DoC6LFyH/InBlNvqdEajlHs7zK0+xSTzJLYkORdS5od5uV3lNkZAXSNtm+l7LjziJa1r3n9d2ZAFibUDHx45GgKnapvh3RoihLK5NvppYpLlyghxj161X9D8UuHkrzIDnpdVOBfSlY1X5cjJl4O5uaLl1efmR17YEf/OFvf+3H77VjPfHPn/6XtudP/+xkdvaG9cRyHZsEWtn1e/kjP6i0dkmnSl2xXz6fc9AzZmH0vSKW6zVGOFYfcKmXkYpVj96uhrzOtame+Pk1rYz+taK2FXTp3riEl31taQN6VPEkNyXTpl1+fqbhkIhsaV5S9EuI1eZu1U66FM325xK5UpxkuZSwIfubh3hbG1AKB5172yaUenYd6/1BfVCyU+06vhbnGjdKZDrPfL7qS/U8LvR8cmbiOb1rw8vqnzF+hAD0iQtfARDcvD5zU7ZWZ2qvwwqBVoYhMtk9suLHPce5ppR2XyHlFRheqVZKwO9G9la5JynwfYLKx8/d6N/Wb/M51X5iHKkUCvnz3sqGEshjGolokxm5m2km2oRF9lO/dMszvVvmcWKg6mKsk2pDO+OjjSHVv2tyIlJsKBo+Jv3EIlJK9BRE1b+qrVYfEp9KAeHjSPYLKejxb5/Gq/ibVBljaoTM8dvq52xi+TpWy985uXr6fW97+C0f3qtKfoQABCAAAQhA4C4JIIDvEhSHQQACEIAABO6VwLt+6VOPrM+f+bnTK9e+bbU2xTOXLLI/wSZMpikqS6BWBKBLuUGE1If1WvbeItz04TyXmMcn9RBBkhsVpRmiOCOIPUI0o0Fr2bm961HHbnwyYsvei/P7RlN++VzuXsuPK8KslS+juxST2GVACA09b5S/PuTb79Po+m7w2kwthehuygoJrR4BGNcNgaVXCdF6LhcPLo7iOStq048rEzSE1vUovlCooxjx8yWnFF2oS0p4prR24Z6bHPlmZSpPiVE5W5caka+3hHcJRwnNShnhAqQiTVP0NnHkuRxCJlYEbnH1cmZEbxOVHmWp54769ByiHvGcvNxdKW9qytPKOZscK/LcNxXMtAMR+Jt5lZXiIiPUPbduRVXas6pVX16cf/jy+gPveOejr/uIF/weXk986iuv3HzpmXfNtus/sjm9OtnMTy0iMTaM8mhGE6El4uv5S3x3MZrRhZlD1WWslsG7rK0203Pq1nmtraQ4ni16zl8X/SlS63vFd3o9aPMwsajc1BlhPNU5Q0SqyqA0CevlpY5tVk0C2K+TuWfHNl31vDORYQyqHXj70RRLbpylbBle956SJNrOpnKvVH+u9j/kkG7jgothidqlC1nfwFGRuBlZX8IuxosuQtvKAJOJVU814dAinrM91PPpx+h/NsHgbTw41vjiwtE7nrEZV0XkJFIT4B5xunK2PiaJuyYIsmPsC2CPSY2E3k10V2BqTXyEuGwFjrpPKT3mro02sbcKoNp9jrV6Hh+HrTvHdaNEVf4SwC0FT2sPmYc3hX1ddmdyLCf1xvGgcli3iGLx8wcMwR85n2MLvxC9kXpkXKEgftrk0SOKh0+MxcXTFDWvXSI3/7b48X08Hf9ejZMGWkHg6WQUqD1MjNbzKXLZ9u+ziaWLX5ufXnnH295ICoh7GFI5BQIQgAAEIBD/7oADBCAAAQhAAALPL4H3Pfm71z7zla/8xNli+v0WyXpqOsVWtc8snaiEUUQ+WVoI+7y9Nv/jktT2ElNU1HprH8DNfcoihLFp6tTFSP9Y7iudp5PN1LbLcdGlQOL2Ebw/n/7wTyx/gkcwmt0NuSInmKGdimC1VwhDz7YaOwn54f3fDdIrk5l9Ml+HqpUYqTXF7g1duEkOxfLfKLzZDx2vZ5NccjmXojiOcscphxkhqSpr5HYQqSxhPIyL0jhZj2En7rw9LHr3W1j58n0JjUgq4M8QAsiKuhuzqwvqRMtBasF8q8l6urGV075k3aFtVjLlEnYqr2kmVVJEcU7slCiX6mwwT3U/P855yAR5fXQTLiJVKVk+iRQ/QyvlFQ2XZXe8RbAe2OshrFk8gwtA+5rJl22JtUuvbDttkbkYJUydK2U881mEFDpBPapE5dXvbT26HWI1PNXDW8k2t26sN//P/Vdf8R+//fe99p5TQOha7/mNz//J08tnfnJ7dt/VlUUBWyKGk1VNXKTc9JTRLq+sIXhmj4waTaHooipzxZYAdgkn+e0TIT3lQjz6kE5AFeOivKRkRaiG9G5CK8VqtGW1y0wZkRMGY9YTF1yrS2U13k7Wy7UJ1ac3y82X7Vor9Xx3tQZ+PpusFWhqd5H19or3LA65K5l326119cyTYhvTeZ+PJuK1rSZlPcIX5ld/z44WObCtvysRge/f5+1PbUxpPiKVRHREvTSzYUJXLcbet7dKPLuBzczM0Ztcp6qgdgsJe7WTqT1t3HAZUfU+4+Otzsn6PVx82xcLn1az0v+rCv0ATzfg9ZJdJgSxPW8rS4u3b7ujRYRunhfHSwUPG2xOs948DUtK4KXtOGgphr0Pq0xWI3aPntzWeJvL16yZR0ar8Bp4otq3S+d+YiO2urVaS4hhT3Jh79jILna+6V9Fu1pidU0cZN/yNuirItS37Bk8irh277T+6NSiPfSPcMbMp8eyf+ag4D184JbSVaSzH3tLiWEgrxlDaLSF9qrCxcP6YCL5nXfzwdfPKnuuH3x2xvuIXdmmAAQhVHM+v5W3RH8M3YEoxyxvaz6oe0uxLr784nK7/en7X/66//JtDz307ICLbyEAAQhAAAIQOIBA/CuAFwQgAAEIQAACzyuBd/+/T71su1k/eLJYzjabU9e0q/zU7AGrq+V0Y+7A5MHEHOzO32dTfik/4vdSH/o6lRUbXrZhusSuHzvPc05OTvee61Ifrss/xnUylezdAFjtla3OUbnr+7r+na7nqWyf454qx3hOHVu/E7P9axbD/d+PT71Z3H7edBnlvdN77X4tLO/kZFUhyc8BSRsV1THFYuQwvt+ZmTS64+v2OrvTYbrPyjy6AsrvxHyzXURb0PstZ4HVdz77cz2/2o6up//mpzYXsT41T2meab5ZzyyPxfrKyPOqF202PZ/M12eyPF99+6Ov+erdtKXf65j3feSZV9+6eOq9p6eLP3Q5OZusrJNcLE1Q2h0kUmeKJg9z3y7jkxDr2FBKEbX+7BU5PshdF1Hl9TwFgGRZCN6NAY1UC0oVkVG9ej/EoAusMFMRwV1R9uHQYq6kIiSnitJt0tqvbr3R4K4v16vNyQe288V/Yed93M66kF1146ubGGdrsnesU3+m5XS6nl5a5o3JxKpypw2pTfh/FmC8mVqLzNdmsdhOl8tJ9JeF22X1t6lfQQ7u9j5S52r82R+T6pwyoOP59TuNUws99XBtb7NpL6dWmrENbGxU9OcLwylNOjk9WRq1aMcbGwDq+HG8mWouSS+7mRTjfru6U9/Q+fH7pY2jxkQFzVddT6z2x7WdMug8e9Uxq5OVi/fdZ1ILmG/l6Meyb7aX2/G+q+yTdb7GcjEXe/3/TICTj8osJuPfkHx8a8XPNaZ0W11/P1T1M2topaOdsd1FKOoYJYDQ+3H/524jmvra5x7Xa3vnRXvzeQ6Nu1HXevkjWvufe4s/9em8es9Wpmy2Z8ubD1xe/8Ljb3rT+Z3uwe8gAAEIQAACELg7Agjgu+PEURCAAAQgAAEIQAAC30AC/9MHP/nnZqvl3zg5vXbddKcFRGYajowALh/VRLB5JMVT6mfJ2aUiWjOlhuRwHe/Rsp7SQiI3IoLrvcoRPV7bhZUiRX2df+bIzRzKlTIilqxH4pNI6RHl0M9RHkXDWoqC9XK7vrj84sWVa//2qx956H953H0oLwhAAAIQgAAEIAABCDy/BBDAzy9frg4BCEAAAhCAAAQgcA8Efuo3fvdbVrdu/v2z+678geX0dHJhS+IVU1p5qD2bg3KUev7qSMsQm3rFMvaQuJnT2depe76OyJXrwbkpaSVq96KJfeMw34BrFvldcwl8S52borlS67r8zchgPN3uYwAAGLtJREFUv1Ye2HMUr05OLVHGzHJA3Fxt3n399NpfedsjD33+HrBwCgQgAAEIQAACEIAABA4mgAA+GBknQAACEIAABCAAAQg83wTeb2veP/sbn/3Xr6xv/eebxdm1lSWJVRTwVomHzawq0raEb23wFqkb4p+3EryzWQjj2txqtVmezOfKS9ujfkcRvLNhoASxR/wqp/buJoktO0juEtbTzypxQaSMUJYJCeC5CeS5NlKzxA+X5+f/ZPqya//WH3/T639dmReeb4ZcHwIQgAAEIAABCEAAAiKAAKYdQAACEIAABCAAAQi8IAk88ZtfemB188bfOp1sfnR9YhsoWsTv4vRKSF17VTRwSdx6CI8GtijftW0C5/HAZmRdGJdztWS9fo4njdCGh/FP4tgczjfIcslcm8htcnM3RRxrzyrbq20natjv57suxuZyOn9j+Yjloq/YJmoL21TvZHn+1cuT2X/0Q9/5Jsv9q3BkXhCAAAQgAAEIQAACEPjGEEAAf2M4cxcIQAACEIAABCAAgXsg8N6PPvXWzc1n/o5F1P4rm9nZRLva2fZYLmpLANc/aG3TKI/wXVqkr14z5fiVl5WR1Ss3b7PT8+fcJ618rOUMjhQO6WdN6Hou30wx4d7ZCuKSOFNIxGZwkcpXEcgL26BubXtduQC2r9dO7X/Pn11dbKfvmS8Wf+mHv/ONn7kHDJwCAQhAAAIQgAAEIACBeyaAAL5ndJwIAQhAAAIQgAAEIPB8EzDROvupD3/uB2arW//Zdrr45vV8MZlMLamCyVVF8HoWBssPHCJWm7ApEDdy+EoA65j1duUit96vSGBF9OqliF69tAmcXhLAHtVr59b7dX7lC/bN5Ozlv68cwSaQW3Ty+vJkYddYTDbri9Xql9bza//en3zr6//p882L60MAAhCAAAQgAAEIQGCfAAKYNgEBCEAAAhCAAAQg8IIm8PMf3Z49u/qdf3Nyfv7XJouzB6dKA2E5HjwK2KJ7Q84qT6/yA9tGb/Z/vgmciWHlAa4cwUryoNd00lM4VPqHArAfAazfVw7gSP+gQOKlC+eKBD6xqN/YhE4C2hNJnGyX5yeT5YVO/fjm6n1/8Ufe8vD/RuqHF3Qzo3AQgAAEIAABCEDgRUsAAfyirVoeDAIQgAAEIAABCLx4CPzMh79w/+V6+ZdnFzf/3dP77r9vNZ1OZrPTk1vLS5OucxPBSssQ/7SNvdkiinduUb2K/JXYXSnFgzlg204uIoUljRUl7GkeIrXD+Co57L/P1A9+5cwJXPcbz1HeXynoyerWZr1c/vb07OpPbO6bvOedb3jDrRdPbfAkEIAABCAAAQhAAALHRAABfEy1RVkhAAEIQAACEIDAS5jAP/70M6965pmbf2G2Pv9z89OzV24m88nSpO/S0kEoL3BF+EoAS+WmDj7Z2mZws9lsRwA3jCaFK5q3JHCJ34osbu9bpK+k8SiKWy5gRf0q7YTSRyzPt6uL80+dXLn616cvm78L+fsSbrQ8OgQgAAEIQAACEHgBEEAAvwAqgSJAAAIQgAAEIAABCNwdgZ/5whfunzy1/fOz9a1/fzNbPHi5nUw3Cuf19A+W79dcsLIDK9J3YnJXr0oJMbOcvi5s5/ZPYB0oZZzRv3F3pZFQJHCklNDZlmnCEkdkdLBFAfvGc/Wz3lckseUDVuTvTEHIq4vVcnn+oe3s9D+ZTO77qXe+9cEbd/dkHAUBCEAAAhCAAAQgAIHnhwAC+PnhylUhAAEIQAACEIAABJ4nAkoHYTkW3rE+v/gPJtPJW09m88nWcv2ut9rwzSSuUkLYv3Ij/YNtCJebummvN98szn7W19kmcvd68l576R/GFfWrnz2KWELYUj7oeD/GooDN+HoaiJDH9svVhUlhy0a82pwvp9N/tJnN/ub9s9f90g982+TieULAZSEAAQhAAAIQgAAEIHDXBBDAd42KAyEAAQhAAAIQgAAEXigE3r/dzp/+0Ocf365v/WXTuL//ZHZ6fWuhvWuTvstM6xAbw9UGccrMa9G/Q8SvRez6SxvJVZqHiB82+esbzOXxJogr6lfnzy3cd7OxPL8W+bswPzxZL9d2r0+vJrO/vzib/p0//ubX/6Ydt5tQ+IUCjnJAAAIQgAAEIAABCLzkCCCAX3JVzgNDAAIQgAAEIACBFwcBk7Sz//Vjn3/j8nL9Z2YXz/6ZzWT22tnp6XRlmnerSN/cFE5P6wrXw3Ujqte/T8FbG8hF+gcTu3mMWV3lkXAZPFNOCZfDupLSQJgcXq/s8NXN5Xb7i7Mr1/72/Oy+/+Nfe9MrvvzioMtTQAACEIAABCAAAQi8WAgggF8sNclzQAACEIAABCAAgZcoAaWEuFxefO96detPLU5OHrMQ3VdP54vFZHambA2TpUXrzqaWImJtMcD2r99K56CoXmX61e/skJ4CQmI400Ioiljyd2oBvRNFFJ+szPleWnjw+tbJdv1b28WV905OrzzxI4889BETyHYVXhCAAAQgAAEIQAACEHhhEUAAv7Dqg9JAAAIQgAAEIAABCNwDAYvSnf7sJz7/movL1R/YXi7fPjvZPHY6nb9hM5lcsU3dJrOF5Qm2Hd0UzTvVZnGWK1gvyWClhlC0b/3D2I+x33t+YJPG0sSKJz5ZmULerJ6+XC0/djJb/MLsyuJn759d//U/8sgrv0rKh3uoNE6BAAQgAAEIQAACEPiGEEAAf0MwcxMIQAACEIAABCAAgW8EAZO2k3/88adf9szF5XdMt6vHNqvVv2ry9i2z2eTByWR6fTKbn1p479Q2j7OEDyGCtWGcXhNzvKaCfeM4SxKxta9rU8bny/XS0jpMPjGZL37FooV/ebNZ/OoDr5r89ve/9rU3Eb/fiFrlHhCAAAQgAAEIQAACXw8BBPDXQ49zIQABCEAAAhCAAAResAR+/qPbs/XmM/evp5MH18vtWzbb5XetV+tHF5PJN9k+bi/fbjf3bTfbK9vJdKaswRsL8LVvLzbbzU1TwV86mZ5+0vI//PrJZP5PZvP5b16dzL9445FXPvtOUj28YOucgkEAAhCAAAQgAAEI3E4AAUyrgAAEIAABCEAAAhB4SRB4crtdfOq3vnzfZnvrge3l7IHtdnXdMjtcNdm7mE5OphYArFwPt05OZjcW89mXF6dnX3romx+48fsnk+VLAhAPCQEIQAACEIAABCDwoiSAAH5RVisPBQEIQAACEIAABCBwNwSUMmL/ONI63A05joEABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAgjgY6kpygkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhA4EACCOADgXE4BCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAIFjIYAAPpaaopwQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABA4kgAA+EBiHQwACEIAABCAAAQhAAAIQgAAEIAABCEAAAhA4FgII4GOpKcoJAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQOBAAgjgA4FxOAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIACBYyGAAD6WmqKcEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQOJIAAPhAYh0MAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQOBYCCOBjqSnKCQEIQAACEIAABCAAAQhAAAIQgAAEIAABCEDgQAII4AOBcTgEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAgWMhgAA+lpqinBCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEDiSAAD4QGIdDAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEDgWAv8CAeM+TgPHg4gAAAAASUVORK5CYII=";
-He.hasResourceBundle("it", "login") || He.addResourceBundle("it", "login", nNe, !0, !1);
-He.hasResourceBundle("en", "login") || He.addResourceBundle("en", "login", ROe, !0, !1);
+Re.hasResourceBundle("it", "login") || Re.addResourceBundle("it", "login", nNe, !0, !1);
+Re.hasResourceBundle("en", "login") || Re.addResourceBundle("en", "login", ROe, !0, !1);
 async function au(n) {
   let e = Te(n);
   if (e) return e;
@@ -153080,7 +153080,7 @@ async function au(n) {
   return e = Te(n), e;
 }
 function Ifn({ dark: n, onLicenseActivated: e }) {
-  const { t: r } = ee("login"), [i, a] = O.useState("login"), [o, s] = O.useState(""), [c, d] = O.useState(""), [u, p] = O.useState(""), [h, f] = O.useState(""), [g, m] = O.useState(!1), [y, v] = O.useState(!1), [b, x] = O.useState(""), [A, k] = O.useState(!1), [S, C] = O.useState(""), [j, P] = O.useState(!1), [E, L] = O.useState(!1), [T, I] = O.useState(""), [z, M] = O.useState(""), [R, F] = O.useState(null), [H, N] = O.useState(!1), [$, _] = O.useState(""), [V, Q] = O.useState(null), [U, Z] = O.useState(""), [re, fe] = O.useState({
+  const { t: r } = Y("login"), [i, a] = O.useState("login"), [o, s] = O.useState(""), [c, d] = O.useState(""), [u, p] = O.useState(""), [h, f] = O.useState(""), [g, m] = O.useState(!1), [y, v] = O.useState(!1), [b, x] = O.useState(""), [A, k] = O.useState(!1), [S, C] = O.useState(""), [j, P] = O.useState(!1), [E, T] = O.useState(!1), [L, I] = O.useState(""), [z, M] = O.useState(""), [R, F] = O.useState(null), [H, N] = O.useState(!1), [$, _] = O.useState(""), [V, Q] = O.useState(null), [U, Z] = O.useState(""), [re, fe] = O.useState({
     trialDaysUser: 40,
     price: 9.99,
     currency: "EUR",
@@ -153091,16 +153091,16 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
     let he = !1;
     return (async () => {
       try {
-        const me = await au("/api/public/settings"), Pe = await au("/api/public/plans"), [Re, Ie] = await Promise.allSettled([
+        const me = await au("/api/public/settings"), Pe = await au("/api/public/plans"), [De, Ie] = await Promise.allSettled([
           me ? Le(me).then((Be) => Be.ok ? Be.json() : null) : null,
           Pe ? Le(Pe).then((Be) => Be.ok ? Be.json() : null) : null
         ]);
         if (he) return;
-        const De = Re.status === "fulfilled" ? Re.value : null, qe = Ie.status === "fulfilled" && Array.isArray(Ie.value) ? Ie.value : [], Ge = qe.find((Be) => Be.featured && (Be.audience === "USER" || Be.audience === "BOTH")) ?? qe.find((Be) => Be.audience === "USER" || Be.audience === "BOTH") ?? qe[0];
+        const He = De.status === "fulfilled" ? De.value : null, qe = Ie.status === "fulfilled" && Array.isArray(Ie.value) ? Ie.value : [], Ge = qe.find((Be) => Be.featured && (Be.audience === "USER" || Be.audience === "BOTH")) ?? qe.find((Be) => Be.audience === "USER" || Be.audience === "BOTH") ?? qe[0];
         let bn = 9.99, de = "EUR", Ae = "anno";
         Ge && typeof Ge.priceCents == "number" && (de = (Ge.currency || "eur").toUpperCase(), bn = Ge.priceCents / 100, Ae = Ge.durationDays >= 300 ? "anno" : "mese"), fe((Be) => ({
           ...Be,
-          trialDaysUser: (De == null ? void 0 : De.trialDaysUser) ?? Be.trialDaysUser,
+          trialDaysUser: (He == null ? void 0 : He.trialDaysUser) ?? Be.trialDaysUser,
           price: bn,
           currency: de,
           period: Ae
@@ -153133,7 +153133,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
       } catch {
       }
     }, 250);
-  }, te = n ? "#0d1117" : "#eef2f8", oe = n ? "rgba(255,255,255,.05)" : "#ffffff", ie = n ? "rgba(255,255,255,.10)" : "#dde4ef", ke = n ? "#f8fafc" : "#0f172a", B = n ? "rgba(255,255,255,.55)" : "#64748b", Y = n ? "#fbbf24" : "#f5a623", K = n ? "#131827" : "#ffffff";
+  }, te = n ? "#0d1117" : "#eef2f8", oe = n ? "rgba(255,255,255,.05)" : "#ffffff", ie = n ? "rgba(255,255,255,.10)" : "#dde4ef", ke = n ? "#f8fafc" : "#0f172a", B = n ? "rgba(255,255,255,.55)" : "#64748b", J = n ? "#fbbf24" : "#f5a623", K = n ? "#131827" : "#ffffff";
   async function D(he) {
     var me;
     he.preventDefault(), x(""), v(!0);
@@ -153141,24 +153141,24 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
       const Pe = await au("/api/auth/login");
       if (!Pe)
         throw new Error(r("addonUnavailable"));
-      const Re = await Le(Pe, {
+      const De = await Le(Pe, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: o, password: c })
-      }), Ie = await Re.text();
-      let De = null;
+      }), Ie = await De.text();
+      let He = null;
       try {
-        De = JSON.parse(Ie);
+        He = JSON.parse(Ie);
       } catch {
-        throw new Error(`Risposta non-JSON (${Re.status}) — ${Ie.slice(0, 80)}`);
+        throw new Error(`Risposta non-JSON (${De.status}) — ${Ie.slice(0, 80)}`);
       }
-      if (!Re.ok) throw new Error(De.error ?? `HTTP ${Re.status}`);
-      const qe = (De.licenses ?? []).filter((Ge) => Ge.status === "ACTIVE" || Ge.status === "TRIAL");
-      if (De.mustChangePassword) {
-        Q({ token: De.token, licenseKey: De.licenseKey || ((me = qe[0]) == null ? void 0 : me.key) || null });
+      if (!De.ok) throw new Error(He.error ?? `HTTP ${De.status}`);
+      const qe = (He.licenses ?? []).filter((Ge) => Ge.status === "ACTIVE" || Ge.status === "TRIAL");
+      if (He.mustChangePassword) {
+        Q({ token: He.token, licenseKey: He.licenseKey || ((me = qe[0]) == null ? void 0 : me.key) || null });
         return;
       }
-      qe.length > 1 ? F({ token: De.token, licenses: qe }) : De.licenseKey ? e(De.licenseKey, De.token) : x(r("noLicense"));
+      qe.length > 1 ? F({ token: He.token, licenses: qe }) : He.licenseKey ? e(He.licenseKey, He.token) : x(r("noLicense"));
     } catch (Pe) {
       x(Pe.message);
     } finally {
@@ -153192,8 +153192,8 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${V.token}` },
         body: JSON.stringify({ newPassword: U })
-      }), Re = await Pe.json().catch(() => ({}));
-      if (!Pe.ok) throw new Error(Re.error || `HTTP ${Pe.status}`);
+      }), De = await Pe.json().catch(() => ({}));
+      if (!Pe.ok) throw new Error(De.error || `HTTP ${Pe.status}`);
       e(V.licenseKey, V.token);
     } catch (me) {
       x(me.message);
@@ -153215,13 +153215,13 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: o, password: c, message: S })
       }), Pe = await me.text();
-      let Re = null;
+      let De = null;
       try {
-        Re = JSON.parse(Pe);
+        De = JSON.parse(Pe);
       } catch {
       }
-      if (!me.ok) throw new Error(Re && Re.error || `HTTP ${me.status}`);
-      L(!0);
+      if (!me.ok) throw new Error(De && De.error || `HTTP ${me.status}`);
+      T(!0);
     } catch (he) {
       I(he.message);
     } finally {
@@ -153235,26 +153235,26 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
       if (!me)
         throw new Error(r("addonUnavailable"));
       await RW();
-      const Pe = _it(), Re = await Le(me, {
+      const Pe = _it(), De = await Le(me, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: o, password: c, name: u, fingerprint: Pe })
-      }), Ie = await Re.text();
-      let De = null;
+      }), Ie = await De.text();
+      let He = null;
       try {
-        De = JSON.parse(Ie);
+        He = JSON.parse(Ie);
       } catch {
-        throw new Error(`Risposta non-JSON (${Re.status}) — ${Ie.slice(0, 80)}`);
+        throw new Error(`Risposta non-JSON (${De.status}) — ${Ie.slice(0, 80)}`);
       }
-      if (!Re.ok) throw new Error(De.error ?? `HTTP ${Re.status}`);
-      M(r("registrationOk", { email: o })), e(De.licenseKey, De.token);
+      if (!De.ok) throw new Error(He.error ?? `HTTP ${De.status}`);
+      M(r("registrationOk", { email: o })), e(He.licenseKey, He.token);
     } catch (me) {
       x(me.message);
     } finally {
       v(!1);
     }
   }
-  function J(he) {
+  function ee(he) {
     he.preventDefault();
     const me = h.trim().toUpperCase();
     if (!me.startsWith("SS-") || me.length < 14) {
@@ -153278,7 +153278,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
     width: "100%",
     padding: "12px",
     borderRadius: 10,
-    background: Y,
+    background: J,
     color: n ? "#0d1117" : "#fff",
     fontWeight: 700,
     fontSize: 15,
@@ -153297,7 +153297,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
     alignItems: "center",
     justifyContent: "center",
     gap: 5,
-    background: he ? Y : "transparent",
+    background: he ? J : "transparent",
     color: he ? n ? "#0d1117" : "#fff" : B,
     transition: "all .2s"
   });
@@ -153327,8 +153327,8 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
           caret-color: ${ke} !important;
         }
         .oikos-login-input:focus {
-          border-color: ${Y}88 !important;
-          box-shadow: 0 0 0 3px ${Y}22 !important;
+          border-color: ${J}88 !important;
+          box-shadow: 0 0 0 3px ${J}22 !important;
         }
       ` }),
     HF() && /* @__PURE__ */ l.jsx(
@@ -153449,7 +153449,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
             style: { ...ue, padding: "10px 12px", resize: "vertical", minHeight: 64 }
           }
         ),
-        T && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 12, color: n ? "#f87171" : "#dc2626" }, children: T }),
+        L && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 12, color: n ? "#f87171" : "#dc2626" }, children: L }),
         /* @__PURE__ */ l.jsx(
           "button",
           {
@@ -153510,9 +153510,9 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
                 width: "100%"
               },
               children: [
-                /* @__PURE__ */ l.jsx(Bf, { size: 18, color: Y }),
+                /* @__PURE__ */ l.jsx(Bf, { size: 18, color: J }),
                 /* @__PURE__ */ l.jsxs("div", { style: { flex: 1 }, children: [
-                  /* @__PURE__ */ l.jsx("div", { style: { fontFamily: "monospace", fontSize: 13, fontWeight: 700, color: Y, letterSpacing: 1 }, children: he.key }),
+                  /* @__PURE__ */ l.jsx("div", { style: { fontFamily: "monospace", fontSize: 13, fontWeight: 700, color: J, letterSpacing: 1 }, children: he.key }),
                   /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: B, marginTop: 2 }, children: Pe })
                 ] }),
                 /* @__PURE__ */ l.jsx("span", { style: {
@@ -153623,7 +153623,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
           $ && /* @__PURE__ */ l.jsx("div", { style: { color: n ? "#34d399" : "#16a34a" }, children: $ })
         ] }) : /* @__PURE__ */ l.jsx("button", { type: "button", onClick: () => {
           N(!0), _("");
-        }, style: { background: "none", border: "none", cursor: "pointer", color: Y, fontSize: 12, fontWeight: 600, alignSelf: "center" }, children: r("forgot.cta") })
+        }, style: { background: "none", border: "none", cursor: "pointer", color: J, fontSize: 12, fontWeight: 600, alignSelf: "center" }, children: r("forgot.cta") })
       ] }),
       !R && !V && i === "register" && /* @__PURE__ */ l.jsxs("form", { onSubmit: le, style: { display: "flex", flexDirection: "column", gap: 16 }, children: [
         /* @__PURE__ */ l.jsxs("div", { children: [
@@ -153721,7 +153721,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
         }, children: [
           "Riceverai una license key via email.",
           " ",
-          /* @__PURE__ */ l.jsxs("strong", { style: { color: Y }, children: [
+          /* @__PURE__ */ l.jsxs("strong", { style: { color: J }, children: [
             re.trialDaysUser,
             " giorni gratuiti"
           ] }),
@@ -153734,7 +153734,7 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
         ] }),
         /* @__PURE__ */ l.jsx("button", { type: "submit", style: ge, disabled: y, children: r(y ? "registerLoading" : "registerCta") })
       ] }),
-      !R && !V && i === "key" && /* @__PURE__ */ l.jsxs("form", { onSubmit: J, style: { display: "flex", flexDirection: "column", gap: 16 }, children: [
+      !R && !V && i === "key" && /* @__PURE__ */ l.jsxs("form", { onSubmit: ee, style: { display: "flex", flexDirection: "column", gap: 16 }, children: [
         /* @__PURE__ */ l.jsxs("div", { children: [
           /* @__PURE__ */ l.jsx("label", { style: ye, children: r("keyLabel") }),
           /* @__PURE__ */ l.jsxs("div", { style: { position: "relative" }, children: [
@@ -153759,23 +153759,23 @@ function Ifn({ dark: n, onLicenseActivated: e }) {
         /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 12, color: B }, children: [
           r("keyHint"),
           " ",
-          /* @__PURE__ */ l.jsx("button", { type: "button", onClick: () => a("register"), style: { color: Y, background: "none", border: "none", cursor: "pointer", fontWeight: 600 }, children: r("register") })
+          /* @__PURE__ */ l.jsx("button", { type: "button", onClick: () => a("register"), style: { color: J, background: "none", border: "none", cursor: "pointer", fontWeight: 600 }, children: r("register") })
         ] }),
         /* @__PURE__ */ l.jsx("button", { type: "submit", style: ge, children: r("activateLicense") })
       ] }),
       /* @__PURE__ */ l.jsxs("div", { style: { marginTop: 20, textAlign: "center", fontSize: 12, color: B }, children: [
         r("needHelp"),
         " ",
-        /* @__PURE__ */ l.jsx("a", { href: `mailto:${atob("c3VwcG9ydEBob21lb2lrb3MuY29t")}`, style: { color: Y }, children: atob("c3VwcG9ydEBob21lb2lrb3MuY29t") })
+        /* @__PURE__ */ l.jsx("a", { href: `mailto:${atob("c3VwcG9ydEBob21lb2lrb3MuY29t")}`, style: { color: J }, children: atob("c3VwcG9ydEBob21lb2lrb3MuY29t") })
       ] })
     ] }) })
   ] });
 }
-He.hasResourceBundle("it", "license") || He.addResourceBundle("it", "license", bFe, !0, !1);
-He.hasResourceBundle("en", "license") || He.addResourceBundle("en", "license", JSe, !0, !1);
+Re.hasResourceBundle("it", "license") || Re.addResourceBundle("it", "license", bFe, !0, !1);
+Re.hasResourceBundle("en", "license") || Re.addResourceBundle("en", "license", JSe, !0, !1);
 const q1e = "https://homeoikos.com";
 function Efn({ dark: n }) {
-  const { t: e } = ee("license"), [r, i] = O.useState(!1);
+  const { t: e } = Y("license"), [r, i] = O.useState(!1);
   return O.useEffect(() => {
     const a = setTimeout(() => i(!0), 100);
     return () => clearTimeout(a);
@@ -153801,7 +153801,7 @@ function Efn({ dark: n }) {
   ] });
 }
 function Tfn({ dark: n, onRetry: e, maintenance: r }) {
-  const { t: i } = ee("license"), [a, o] = O.useState(!1), [s, c] = O.useState(30), [d, u] = O.useState(!1);
+  const { t: i } = Y("license"), [a, o] = O.useState(!1), [s, c] = O.useState(30), [d, u] = O.useState(!1);
   if (O.useEffect(() => {
     const y = setTimeout(() => o(!0), 200);
     return () => clearTimeout(y);
@@ -153910,7 +153910,7 @@ function Tfn({ dark: n, onRetry: e, maintenance: r }) {
 }
 const U1e = 3;
 function Lfn({ dark: n, reason: e, licenseKey: r, userEmail: i, onRefresh: a, onGoToLogin: o }) {
-  const { t: s } = ee("license"), c = n ? "#f8fafc" : "#0f172a", d = n ? "rgba(255,255,255,.55)" : "#64748b", u = n ? "#fbbf24" : "#d97706", p = n ? "#f87171" : "#dc2626", [h, f] = O.useState(null), [g, m] = O.useState(0), y = e === "trial_expired" || e === "subscription_expired" || e === "expired" || e === "trial_device_already_used", v = e === "server_unreachable", b = v && g >= U1e;
+  const { t: s } = Y("license"), c = n ? "#f8fafc" : "#0f172a", d = n ? "rgba(255,255,255,.55)" : "#64748b", u = n ? "#fbbf24" : "#d97706", p = n ? "#f87171" : "#dc2626", [h, f] = O.useState(null), [g, m] = O.useState(0), y = e === "trial_expired" || e === "subscription_expired" || e === "expired" || e === "trial_device_already_used", v = e === "server_unreachable", b = v && g >= U1e;
   function x() {
     m((P) => P + 1), a();
   }
@@ -154221,7 +154221,7 @@ function Rfn({ name: n, size: e = 24 }) {
   return /* @__PURE__ */ l.jsx(r, { size: e, strokeWidth: 1.8 });
 }
 function Dfn({ dark: n }) {
-  const { t: e } = ee("layout"), [r, i] = O.useState(() => !Ma() && nr().length > 1), [a, o] = O.useState(nr);
+  const { t: e } = Y("layout"), [r, i] = O.useState(() => !Ma() && nr().length > 1), [a, o] = O.useState(nr);
   O.useEffect(() => {
     const c = () => {
       o(nr()), i(!Ma() && nr().length > 1);
@@ -154523,12 +154523,12 @@ async function G1e(n) {
 function Qfn(n = []) {
   if (typeof window < "u" && window.__OIKOS_PANEL_MODE__)
     return Nfn();
-  const [e, r] = O.useState({}), [i, a] = O.useState(!1), [o, s] = O.useState(null), c = O.useRef(null), d = O.useRef(null), u = O.useRef(1), p = O.useRef(/* @__PURE__ */ new Map()), h = O.useRef(0), f = O.useRef(null), g = O.useRef(!1), m = O.useRef(/* @__PURE__ */ new Map()), y = O.useRef([]), v = O.useCallback((T) => {
-    const I = {}, z = T.a ?? T.add ?? {};
+  const [e, r] = O.useState({}), [i, a] = O.useState(!1), [o, s] = O.useState(null), c = O.useRef(null), d = O.useRef(null), u = O.useRef(1), p = O.useRef(/* @__PURE__ */ new Map()), h = O.useRef(0), f = O.useRef(null), g = O.useRef(!1), m = O.useRef(/* @__PURE__ */ new Map()), y = O.useRef([]), v = O.useCallback((L) => {
+    const I = {}, z = L.a ?? L.add ?? {};
     Object.entries(z).forEach(([R, F]) => {
       I[R] = { state: F.s ?? F.state, attributes: F.a ?? F.attributes ?? {} };
     });
-    const M = T.c ?? {};
+    const M = L.c ?? {};
     Object.entries(M).forEach(([R, F]) => {
       let H = null;
       if (Array.isArray(F) && F.length === 2 && F[0] === "+" ? H = F[1] : F && typeof F == "object" && "+" in F ? H = F["+"] : Array.isArray(F) && (H = {}, F.forEach((N) => {
@@ -154552,10 +154552,10 @@ function Qfn(n = []) {
         };
       }), F;
     });
-  }, []), b = O.useCallback((T, I = 1e4) => g.current ? Le(Te("/api/ha-command"), {
+  }, []), b = O.useCallback((L, I = 1e4) => g.current ? Le(Te("/api/ha-command"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(T),
+    body: JSON.stringify(L),
     signal: AbortSignal.timeout ? AbortSignal.timeout(I) : void 0
   }).then((z) => z.json()).then((z) => {
     var M;
@@ -154567,7 +154567,7 @@ function Qfn(n = []) {
       return;
     }
     const R = u.current++;
-    p.current.set(R, { resolve: z, reject: M }), c.current.send(JSON.stringify({ ...T, id: R })), setTimeout(() => {
+    p.current.set(R, { resolve: z, reject: M }), c.current.send(JSON.stringify({ ...L, id: R })), setTimeout(() => {
       p.current.has(R) && (p.current.delete(R), M(new Error("Timeout richiesta WS")));
     }, I);
   }), []), x = O.useCallback(async () => {
@@ -154584,15 +154584,15 @@ function Qfn(n = []) {
       s("Caricamento stati HA fallito"), setTimeout(x, 5e3);
       return;
     }
-    const T = new EventSource(Te("/api/ha-sse"));
-    if (d.current = T, T.onmessage = (z) => {
+    const L = new EventSource(Te("/api/ha-sse"));
+    if (d.current = L, L.onmessage = (z) => {
       try {
         const M = JSON.parse(z.data);
         M.type === "event" && M.event && v(M.event);
       } catch {
       }
-    }, T.onerror = () => {
-      a(!1), T.close(), d.current = null, setTimeout(x, 5e3);
+    }, L.onerror = () => {
+      a(!1), L.close(), d.current = null, setTimeout(x, 5e3);
     }, yW.supervisorToken) {
       const z = (M) => b(M);
       setTimeout(() => G1e(z), 300);
@@ -154600,8 +154600,8 @@ function Qfn(n = []) {
   }, [v, b]), A = O.useCallback(() => {
     g.current = !1;
     try {
-      const T = X1e();
-      c.current = new WebSocket(T.wsUrl), clearTimeout(f.current), f.current = setTimeout(() => {
+      const L = X1e();
+      c.current = new WebSocket(L.wsUrl), clearTimeout(f.current), f.current = setTimeout(() => {
         i || s("Connessione HA non riuscita");
       }, 5e3), c.current.onopen = () => {
         clearTimeout(f.current), s(null);
@@ -154688,8 +154688,8 @@ function Qfn(n = []) {
         const I = Math.min(4e3 * Math.pow(1.5, h.current - 1), 6e4);
         setTimeout(A, I);
       }, c.current.onerror = () => a(!1);
-    } catch (T) {
-      s(T.message), setTimeout(A, 4e3);
+    } catch (L) {
+      s(L.message), setTimeout(A, 4e3);
     }
   }, [v]);
   O.useEffect(() => {
@@ -154702,23 +154702,23 @@ function Qfn(n = []) {
       return (z = c.current) == null ? void 0 : z.close();
     });
   }, [A, x]);
-  const k = O.useCallback((T, I, z) => {
+  const k = O.useCallback((L, I, z) => {
     const M = (R) => (R instanceof Date ? R : new Date(R)).toISOString();
     return b({
       type: "history/history_during_period",
       start_time: M(I),
       end_time: M(z),
-      entity_ids: T,
+      entity_ids: L,
       minimal_response: !0,
       no_attributes: !0
     });
-  }, [b]), S = O.useCallback((T, I, z, M = {}) => {
+  }, [b]), S = O.useCallback((L, I, z, M = {}) => {
     var R;
     if (z != null && z !== "") {
       const H = (Array.isArray(z) ? z : [z]).find((N) => typeof N != "string" || !/^[a-z][a-z0-9_]*\.[a-z0-9_-]+$/.test(N));
       if (H !== void 0)
         return console.error(
-          `[callService] entity_id non valido: "${H}" (domain=${T}, service=${I})`,
+          `[callService] entity_id non valido: "${H}" (domain=${L}, service=${I})`,
           `
 Stack:`,
           (R = new Error().stack) == null ? void 0 : R.split(`
@@ -154726,31 +154726,31 @@ Stack:`,
 `)
         ), Promise.reject({ code: "invalid_format", message: `entity_id non valido: "${H}"` });
     }
-    return console.debug("[useHA] callService →", T, I, z), b({
+    return console.debug("[useHA] callService →", L, I, z), b({
       type: "call_service",
-      domain: T,
+      domain: L,
       service: I,
       target: { entity_id: z },
       service_data: M
     });
-  }, [b]), C = O.useCallback((T, I = "daily") => b({
+  }, [b]), C = O.useCallback((L, I = "daily") => b({
     type: "call_service",
     domain: "weather",
     service: "get_forecasts",
     service_data: { type: I },
-    target: { entity_id: T },
+    target: { entity_id: L },
     return_response: !0
-  }), [b]), j = O.useCallback((T) => {
+  }), [b]), j = O.useCallback((L) => {
     var I;
-    return ((I = e[T]) == null ? void 0 : I.state) ?? null;
-  }, [e]), P = O.useCallback((T, I) => {
+    return ((I = e[L]) == null ? void 0 : I.state) ?? null;
+  }, [e]), P = O.useCallback((L, I) => {
     var z, M;
-    return ((M = (z = e[T]) == null ? void 0 : z.attributes) == null ? void 0 : M[I]) ?? null;
-  }, [e]), E = O.useCallback((T, I = 0) => {
+    return ((M = (z = e[L]) == null ? void 0 : z.attributes) == null ? void 0 : M[I]) ?? null;
+  }, [e]), E = O.useCallback((L, I = 0) => {
     var M;
-    const z = parseFloat((M = e[T]) == null ? void 0 : M.state);
+    const z = parseFloat((M = e[L]) == null ? void 0 : M.state);
     return isNaN(z) ? I : z;
-  }, [e]), L = O.useCallback((T, I, z = {}) => {
+  }, [e]), T = O.useCallback((L, I, z = {}) => {
     if (g.current) {
       let F = !1, H = null;
       const N = async () => {
@@ -154759,7 +154759,7 @@ Stack:`,
             const $ = await Le(Te("/api/ha-template"), {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ template: T, variables: z })
+              body: JSON.stringify({ template: L, variables: z })
             });
             if (!$.ok) throw new Error("ha-template " + $.status);
             const { result: _ } = await $.json();
@@ -154774,7 +154774,7 @@ Stack:`,
       };
     }
     if (!c.current || c.current.readyState !== WebSocket.OPEN) {
-      const F = { template: T, variables: z, onResult: I, cancelled: !1, subId: null };
+      const F = { template: L, variables: z, onResult: I, cancelled: !1, subId: null };
       return y.current.push(F), () => {
         var N;
         F.cancelled = !0;
@@ -154793,10 +154793,10 @@ Stack:`,
       const F = JSON.stringify({
         id: M,
         type: "render_template",
-        template: T,
+        template: L,
         variables: z
       });
-      console.info("[useHA] send render_template id=" + M + " tplLen=" + T.length + " varsBytes=" + JSON.stringify(z).length + " payloadBytes=" + F.length), c.current.send(F);
+      console.info("[useHA] send render_template id=" + M + " tplLen=" + L.length + " varsBytes=" + JSON.stringify(z).length + " payloadBytes=" + F.length), c.current.send(F);
     } catch (F) {
       return console.warn("[useHA] render_template send failed id=" + M, F == null ? void 0 : F.message), () => {
       };
@@ -154817,10 +154817,10 @@ Stack:`,
         }
     };
   }, []);
-  return { states: e, connected: i, error: o, getState: j, getAttr: P, getFloat: E, fetchHistory: k, callService: S, fetchWeatherForecast: C, sendCommand: b, subscribeTemplate: L };
+  return { states: e, connected: i, error: o, getState: j, getAttr: P, getFloat: E, fetchHistory: k, callService: S, fetchWeatherForecast: C, sendCommand: b, subscribeTemplate: T };
 }
 function Wfn({ dark: n, pageId: e, currentBadges: r, onClose: i, onCreateNew: a }) {
-  const [, o] = O.useState(0), { t: s } = ee("layout"), { t: c } = ee("cards"), d = N0("fv"), u = Kln(), p = Object.values(Wl).filter(
+  const [, o] = O.useState(0), { t: s } = Y("layout"), { t: c } = Y("cards"), d = N0("fv"), u = Kln(), p = Object.values(Wl).filter(
     (f) => {
       var g;
       return !r.some((m) => m.id === f.id && m.enabled) && !((g = f.requires) != null && g.includes("fv") && !d) && (!u || u.includes(f.id));
@@ -154887,7 +154887,7 @@ function Wfn({ dark: n, pageId: e, currentBadges: r, onClose: i, onCreateNew: a 
   ] }) });
 }
 function Z1e({ b: n, dark: e, editMode: r, onRemove: i, onMove: a }) {
-  const o = Wl[n.id], { t: s } = ee("layout"), c = [
+  const o = Wl[n.id], { t: s } = Y("layout"), c = [
     { value: "left", icon: uv, label: s("badges.positions.left") },
     { value: "center", icon: cv, label: s("badges.positions.center") },
     { value: "right", icon: pv, label: s("badges.positions.right") }
@@ -154943,7 +154943,7 @@ function Z1e({ b: n, dark: e, editMode: r, onRemove: i, onMove: a }) {
   ] });
 }
 function $fn({ pageId: n, dark: e }) {
-  const { editMode: r } = Oe(), { t: i } = ee("layout"), a = N0("fv"), [o, s] = O.useState(() => av(n)), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(() => typeof window < "u" && window.innerWidth < 768);
+  const { editMode: r } = Oe(), { t: i } = Y("layout"), a = N0("fv"), [o, s] = O.useState(() => av(n)), [c, d] = O.useState(!1), [u, p] = O.useState(!1), [h, f] = O.useState(() => typeof window < "u" && window.innerWidth < 768);
   O.useEffect(() => {
     const k = () => f(window.innerWidth < 768);
     return window.addEventListener("resize", k), () => window.removeEventListener("resize", k);
@@ -155256,25 +155256,25 @@ function Jfn({ points: n, color: e, dark: r }) {
   );
 }
 function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a }) {
-  const [o, s] = O.useState(null), [c, d] = O.useState(!1), u = O.useRef(null), p = e == null ? void 0 : e[n], h = (p == null ? void 0 : p.attributes) ?? {}, f = h.unit_of_measurement ?? "", g = h.friendly_name ?? n, m = hd(n, e), y = p == null ? void 0 : p.state, v = r ? "#f59e0b" : "#d97706";
+  const { t: o } = Y("common"), [s, c] = O.useState(null), [d, u] = O.useState(!1), p = O.useRef(null), h = e == null ? void 0 : e[n], f = (h == null ? void 0 : h.attributes) ?? {}, g = f.unit_of_measurement ?? "", m = f.friendly_name ?? n, y = hd(n, e), v = h == null ? void 0 : h.state, b = r ? "#f59e0b" : "#d97706";
   O.useEffect(() => {
     if (!n || !i) return;
-    d(!0);
-    const I = /* @__PURE__ */ new Date(), z = new Date(I.getTime() - 24 * 3600 * 1e3);
-    i([n], z, I).then((M) => {
-      const F = ((M == null ? void 0 : M[n]) ?? []).map((H) => {
-        const N = typeof H.lu == "number" ? H.lu * 1e3 : Date.parse(H.last_updated ?? H.last_changed ?? ""), $ = parseFloat(H.s ?? H.state);
-        return { ts: N, v: $ };
-      }).filter((H) => isFinite(H.v) && !isNaN(H.ts)).sort((H, N) => H.ts - N.ts);
-      s(F);
-    }).catch(() => s(null)).finally(() => d(!1));
+    u(!0);
+    const z = /* @__PURE__ */ new Date(), M = new Date(z.getTime() - 24 * 3600 * 1e3);
+    i([n], M, z).then((R) => {
+      const H = ((R == null ? void 0 : R[n]) ?? []).map((N) => {
+        const $ = typeof N.lu == "number" ? N.lu * 1e3 : Date.parse(N.last_updated ?? N.last_changed ?? ""), _ = parseFloat(N.s ?? N.state);
+        return { ts: $, v: _ };
+      }).filter((N) => isFinite(N.v) && !isNaN(N.ts)).sort((N, $) => N.ts - $.ts);
+      c(H);
+    }).catch(() => c(null)).finally(() => u(!1));
   }, [n]), O.useEffect(() => {
-    const I = (z) => {
-      z.key === "Escape" && (a == null || a());
+    const z = (M) => {
+      M.key === "Escape" && (a == null || a());
     };
-    return window.addEventListener("keydown", I), () => window.removeEventListener("keydown", I);
+    return window.addEventListener("keydown", z), () => window.removeEventListener("keydown", z);
   }, [a]);
-  const b = o ?? [], x = b.length >= 2, A = x ? Math.min(...b.map((I) => I.v)) : null, k = x ? Math.max(...b.map((I) => I.v)) : null, S = /* @__PURE__ */ new Set([
+  const x = s ?? [], A = x.length >= 2, k = A ? Math.min(...x.map((z) => z.v)) : null, S = A ? Math.max(...x.map((z) => z.v)) : null, C = /* @__PURE__ */ new Set([
     "friendly_name",
     "icon",
     "unit_of_measurement",
@@ -155282,13 +155282,13 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
     "state_class",
     "entity_picture",
     "supported_features"
-  ]), C = Object.entries(h).filter(([I]) => !S.has(I)), j = r ? "#0d1117" : "#ffffff", P = r ? "#161b22" : "#f8fafc", E = r ? "rgba(255,255,255,.08)" : "#edf0f7", L = r ? "rgba(255,255,255,.92)" : "#1e293b", T = r ? "rgba(255,255,255,.45)" : "#64748b";
+  ]), j = Object.entries(f).filter(([z]) => !C.has(z)), P = r ? "#0d1117" : "#ffffff", E = r ? "#161b22" : "#f8fafc", T = r ? "rgba(255,255,255,.08)" : "#edf0f7", L = r ? "rgba(255,255,255,.92)" : "#1e293b", I = r ? "rgba(255,255,255,.45)" : "#64748b";
   return n ? /* @__PURE__ */ l.jsxs(
     "div",
     {
-      ref: u,
-      onClick: (I) => {
-        I.target === u.current && (a == null || a());
+      ref: p,
+      onClick: (z) => {
+        z.target === p.current && (a == null || a());
       },
       style: {
         position: "fixed",
@@ -155310,7 +155310,7 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
         /* @__PURE__ */ l.jsxs("div", { style: {
           width: "100%",
           maxWidth: 480,
-          background: j,
+          background: P,
           borderRadius: "20px 20px 0 0",
           overflow: "hidden",
           boxShadow: "0 -8px 40px rgba(0,0,0,.4)",
@@ -155323,7 +155323,7 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
             width: 36,
             height: 4,
             borderRadius: 2,
-            background: T,
+            background: I,
             margin: "10px auto 0",
             opacity: 0.4
           } }),
@@ -155337,13 +155337,13 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
               width: 40,
               height: 40,
               borderRadius: 12,
-              background: `${v}18`,
-              border: `1px solid ${v}30`,
+              background: `${b}18`,
+              border: `1px solid ${b}30`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               flexShrink: 0
-            }, children: /* @__PURE__ */ l.jsx(Ft, { name: m, size: 20, color: v }) }),
+            }, children: /* @__PURE__ */ l.jsx(Ft, { name: y, size: 20, color: b }) }),
             /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, minWidth: 0 }, children: [
               /* @__PURE__ */ l.jsx("div", { style: {
                 fontSize: 15,
@@ -155352,26 +155352,26 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis"
-              }, children: g }),
-              /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: T, marginTop: 1, fontFamily: "monospace" }, children: n })
+              }, children: m }),
+              /* @__PURE__ */ l.jsx("div", { style: { fontSize: 11, color: I, marginTop: 1, fontFamily: "monospace" }, children: n })
             ] }),
             /* @__PURE__ */ l.jsxs("div", { style: { textAlign: "right", flexShrink: 0 }, children: [
               /* @__PURE__ */ l.jsx("div", { style: {
                 fontSize: 22,
                 fontWeight: 800,
-                color: v,
+                color: b,
                 fontVariantNumeric: "tabular-nums",
                 lineHeight: 1
-              }, children: Yfn(y, f) }),
-              (p == null ? void 0 : p.last_changed) && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: T, marginTop: 2 }, children: new Date(p.last_changed).toLocaleTimeString(Zl(), { hour: "2-digit", minute: "2-digit" }) })
+              }, children: Yfn(v, g) }),
+              (h == null ? void 0 : h.last_changed) && /* @__PURE__ */ l.jsx("div", { style: { fontSize: 10, color: I, marginTop: 2 }, children: new Date(h.last_changed).toLocaleTimeString(Zl(), { hour: "2-digit", minute: "2-digit" }) })
             ] }),
             /* @__PURE__ */ l.jsx("button", { onClick: a, style: {
               width: 30,
               height: 30,
               borderRadius: 8,
-              background: P,
-              border: `1px solid ${E}`,
-              color: T,
+              background: E,
+              border: `1px solid ${T}`,
+              color: I,
               cursor: "pointer",
               flexShrink: 0,
               display: "flex",
@@ -155382,8 +155382,8 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
           /* @__PURE__ */ l.jsxs("div", { style: { flex: 1, overflowY: "auto", padding: "0 16px 24px" }, children: [
             /* @__PURE__ */ l.jsxs("div", { style: {
               borderRadius: 12,
-              background: P,
-              border: `1px solid ${E}`,
+              background: E,
+              border: `1px solid ${T}`,
               padding: "12px 14px",
               marginBottom: 12
             }, children: [
@@ -155396,7 +155396,7 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
                 /* @__PURE__ */ l.jsxs("div", { style: {
                   fontSize: 10,
                   fontWeight: 700,
-                  color: T,
+                  color: I,
                   textTransform: "uppercase",
                   letterSpacing: ".06em",
                   display: "flex",
@@ -155405,46 +155405,46 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
                 }, children: [
                   /* @__PURE__ */ l.jsx(Ms, { size: 11 }),
                   " ",
-                  t("ui.last24h")
+                  o("ui.last24h")
                 ] }),
-                x && /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 10, color: T }, children: [
+                A && /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 10, color: I }, children: [
                   "min ",
-                  /* @__PURE__ */ l.jsx("span", { style: { color: L }, children: A == null ? void 0 : A.toFixed(1) }),
+                  /* @__PURE__ */ l.jsx("span", { style: { color: L }, children: k == null ? void 0 : k.toFixed(1) }),
                   " · ",
                   "max ",
-                  /* @__PURE__ */ l.jsx("span", { style: { color: L }, children: k == null ? void 0 : k.toFixed(1) }),
-                  f && ` ${f}`
+                  /* @__PURE__ */ l.jsx("span", { style: { color: L }, children: S == null ? void 0 : S.toFixed(1) }),
+                  g && ` ${g}`
                 ] })
               ] }),
-              c && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "16px 0", color: T, fontSize: 12 }, children: t("ui.loadingHistory") }),
-              !c && !x && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "14px 0", color: T, fontSize: 12 }, children: t("ui.historyUnavailable") }),
-              !c && x && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-                /* @__PURE__ */ l.jsx(Jfn, { points: b, color: v, dark: r }),
+              d && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "16px 0", color: I, fontSize: 12 }, children: o("ui.loadingHistory") }),
+              !d && !A && /* @__PURE__ */ l.jsx("div", { style: { textAlign: "center", padding: "14px 0", color: I, fontSize: 12 }, children: o("ui.historyUnavailable") }),
+              !d && A && /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+                /* @__PURE__ */ l.jsx(Jfn, { points: x, color: b, dark: r }),
                 /* @__PURE__ */ l.jsxs("div", { style: {
                   display: "flex",
                   justifyContent: "space-between",
                   marginTop: 4,
                   fontSize: 9,
-                  color: T
+                  color: I
                 }, children: [
-                  /* @__PURE__ */ l.jsx("span", { children: K1e(b[0].ts) }),
-                  /* @__PURE__ */ l.jsx("span", { children: K1e(b[b.length - 1].ts) })
+                  /* @__PURE__ */ l.jsx("span", { children: K1e(x[0].ts) }),
+                  /* @__PURE__ */ l.jsx("span", { children: K1e(x[x.length - 1].ts) })
                 ] })
               ] })
             ] }),
-            C.length > 0 && /* @__PURE__ */ l.jsx("div", { style: {
+            j.length > 0 && /* @__PURE__ */ l.jsx("div", { style: {
               borderRadius: 12,
-              background: P,
-              border: `1px solid ${E}`,
+              background: E,
+              border: `1px solid ${T}`,
               overflow: "hidden"
-            }, children: C.map(([I, z], M) => /* @__PURE__ */ l.jsxs("div", { style: {
+            }, children: j.map(([z, M], R) => /* @__PURE__ */ l.jsxs("div", { style: {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               padding: "8px 14px",
-              borderBottom: M < C.length - 1 ? `1px solid ${E}` : "none"
+              borderBottom: R < j.length - 1 ? `1px solid ${T}` : "none"
             }, children: [
-              /* @__PURE__ */ l.jsx("span", { style: { fontSize: 12, color: T }, children: I.replace(/_/g, " ") }),
+              /* @__PURE__ */ l.jsx("span", { style: { fontSize: 12, color: I }, children: z.replace(/_/g, " ") }),
               /* @__PURE__ */ l.jsx("span", { style: {
                 fontSize: 12,
                 color: L,
@@ -155454,9 +155454,9 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
-                fontFamily: typeof z == "number" ? "monospace" : "inherit"
-              }, children: Array.isArray(z) ? z.join(", ") : String(z) })
-            ] }, I)) }),
+                fontFamily: typeof M == "number" ? "monospace" : "inherit"
+              }, children: Array.isArray(M) ? M.join(", ") : String(M) })
+            ] }, z)) }),
             /* @__PURE__ */ l.jsx(
               "button",
               {
@@ -155468,9 +155468,9 @@ function egn({ entityId: n, haStates: e, dark: r, fetchHistory: i, onClose: a })
                   marginTop: 12,
                   padding: "10px",
                   borderRadius: 10,
-                  border: `1px solid ${E}`,
+                  border: `1px solid ${T}`,
                   background: "transparent",
-                  color: T,
+                  color: I,
                   fontSize: 12,
                   cursor: "pointer"
                 },
@@ -155513,28 +155513,28 @@ function ngn({ color: n = "#f59e0b" }) {
 }
 const rgn = "linear-gradient(135deg, #0d1117 0%, #1a1f35 50%, #0d1117 100%)", ign = "linear-gradient(135deg, #e8f4f8 0%, #dbeafe 50%, #ede9fe 100%)";
 function agn({ visible: n, onDismiss: e }) {
-  const { t: r } = ee("screensaver"), { t: i } = ee("common"), { getFloat: a, getState: o, dark: s } = Oe(), c = tgn(), [d, u] = O.useState(Z1);
+  const { t: r } = Y("screensaver"), { t: i } = Y("common"), { getFloat: a, getState: o, dark: s } = Oe(), c = tgn(), [d, u] = O.useState(Z1);
   O.useEffect(() => {
-    const T = () => u(Z1());
-    return window.addEventListener("oikos-screensaver-cfg", T), () => window.removeEventListener("oikos-screensaver-cfg", T);
+    const L = () => u(Z1());
+    return window.addEventListener("oikos-screensaver-cfg", L), () => window.removeEventListener("oikos-screensaver-cfg", L);
   }, []);
   const p = (() => {
     if (d.bgType === "image") {
-      const T = s && d.bgImageNight ? d.bgImageNight : d.bgImage;
-      if (T) return {
+      const L = s && d.bgImageNight ? d.bgImageNight : d.bgImage;
+      if (L) return {
         background: "#000",
-        backgroundImage: `url(${T})`,
+        backgroundImage: `url(${L})`,
         backgroundSize: "cover",
         backgroundPosition: "center"
       };
     }
     return d.bgType === "gradient" ? { background: s ? rgn : ign } : { background: "#000" };
-  })(), h = d.bgType === "image" && (s && d.bgImageNight || d.bgImage), f = d.bgType === "gradient" && !s, g = h ? 0.92 : 0.88, m = h ? 0.65 : f ? 0.45 : 0.32, y = f ? "rgba(15,23,42,.88)" : `rgba(255,255,255,${g})`, v = f ? "rgba(15,23,42,.45)" : `rgba(255,255,255,${m})`, b = nX(c.getHours()), x = nX(c.getMinutes()), A = nX(c.getSeconds()), k = c.getSeconds() % 2 === 0, S = r("days", { returnObjects: !0 })[c.getDay()], C = `${c.getDate()} ${i("months", { returnObjects: !0 })[c.getMonth()]} ${c.getFullYear()}`, j = Tt(), P = j.outdoorTemp ? a(j.outdoorTemp) : null, E = j.solarPower ? a(j.solarPower) : null, L = j.batterySoc ? a(j.batterySoc) : null;
+  })(), h = d.bgType === "image" && (s && d.bgImageNight || d.bgImage), f = d.bgType === "gradient" && !s, g = h ? 0.92 : 0.88, m = h ? 0.65 : f ? 0.45 : 0.32, y = f ? "rgba(15,23,42,.88)" : `rgba(255,255,255,${g})`, v = f ? "rgba(15,23,42,.45)" : `rgba(255,255,255,${m})`, b = nX(c.getHours()), x = nX(c.getMinutes()), A = nX(c.getSeconds()), k = c.getSeconds() % 2 === 0, S = r("days", { returnObjects: !0 })[c.getDay()], C = `${c.getDate()} ${i("months", { returnObjects: !0 })[c.getMonth()]} ${c.getFullYear()}`, j = Tt(), P = j.outdoorTemp ? a(j.outdoorTemp) : null, E = j.solarPower ? a(j.solarPower) : null, T = j.batterySoc ? a(j.batterySoc) : null;
   return O.useEffect(() => {
     if (!n) return;
-    const T = () => e == null ? void 0 : e();
-    return window.addEventListener("keydown", T, { once: !0 }), window.addEventListener("pointerdown", T, { once: !0 }), () => {
-      window.removeEventListener("keydown", T), window.removeEventListener("pointerdown", T);
+    const L = () => e == null ? void 0 : e();
+    return window.addEventListener("keydown", L, { once: !0 }), window.addEventListener("pointerdown", L, { once: !0 }), () => {
+      window.removeEventListener("keydown", L), window.removeEventListener("pointerdown", L);
     };
   }, [n, e]), d.style === "home" ? /* @__PURE__ */ l.jsx(ut, { children: n && /* @__PURE__ */ l.jsx(Oln, { onDismiss: e, cfg: d }, "ss-home") }) : /* @__PURE__ */ l.jsx(ut, { children: n && /* @__PURE__ */ l.jsx(
     se.div,
@@ -155675,7 +155675,7 @@ function agn({ visible: n, onDismiss: e }) {
                     transition: { duration: 0.5, ease: "linear" }
                   }
                 ) }),
-                (P !== null || E !== null || L !== null) && /* @__PURE__ */ l.jsxs(
+                (P !== null || E !== null || T !== null) && /* @__PURE__ */ l.jsxs(
                   se.div,
                   {
                     initial: { opacity: 0, y: 8 },
@@ -155691,7 +155691,7 @@ function agn({ visible: n, onDismiss: e }) {
                     children: [
                       P !== null && /* @__PURE__ */ l.jsx(rX, { icon: "🌡️", value: `${P.toFixed(1)}°C` }),
                       E !== null && E > 0 && /* @__PURE__ */ l.jsx(rX, { icon: "☀️", value: E >= 1e3 ? `${(E / 1e3).toFixed(1)} kW` : `${Math.round(E)} W` }),
-                      L !== null && /* @__PURE__ */ l.jsx(rX, { icon: "🔋", value: `${Math.round(L)}%` })
+                      T !== null && /* @__PURE__ */ l.jsx(rX, { icon: "🔋", value: `${Math.round(T)}%` })
                     ]
                   }
                 ),
@@ -155766,7 +155766,7 @@ const jr = "#ef4444", J1e = {
   "exit-edit": { titleKey: "exitEdit.title", descKey: "exitEdit.desc", target: "edit-item", spotlight: !1, detectBy: "editMode-off", canSkip: !1, forceTop: !0 }
 };
 function sgn({ dark: n, onDone: e }) {
-  const { t: r } = ee("tutorial");
+  const { t: r } = Y("tutorial");
   return /* @__PURE__ */ l.jsxs("div", { children: [
     /* @__PURE__ */ l.jsx("div", { style: { fontSize: 16, fontWeight: 700, color: "var(--text-primary)", marginBottom: 12 }, children: r("sideBySide.title") }),
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: 6, height: 56, marginBottom: 12 }, children: [
@@ -155853,7 +155853,7 @@ function sgn({ dark: n, onDone: e }) {
   ] });
 }
 function lgn({ dark: n, task: e, taskIndex: r, totalTasks: i, onDone: a, onSkip: o }) {
-  const { editMode: s } = Oe(), { t: c } = ee("tutorial"), d = O.useId().replace(/:/g, ""), [u, p] = O.useState(null), [h, f] = O.useState(!1), [g, m] = O.useState(!0), y = O.useRef(s), v = O.useRef(!1), b = O.useRef(null), x = J1e[e] ?? J1e["open-menu"];
+  const { editMode: s } = Oe(), { t: c } = Y("tutorial"), d = O.useId().replace(/:/g, ""), [u, p] = O.useState(null), [h, f] = O.useState(!1), [g, m] = O.useState(!0), y = O.useRef(s), v = O.useRef(!1), b = O.useRef(null), x = J1e[e] ?? J1e["open-menu"];
   O.useEffect(() => {
     f(!1), v.current = !1, y.current = s, p(null), m(!0);
   }, [e]), O.useEffect(() => {
@@ -155883,10 +155883,10 @@ function lgn({ dark: n, task: e, taskIndex: r, totalTasks: i, onDone: a, onSkip:
           };
         }
       }
-      const L = E.left + E.width / 2, T = E.top + E.height / 2, I = window.innerHeight || 800;
-      m(x.forceTop || T >= I * 0.5), p({
-        cx: L,
-        cy: T,
+      const T = E.left + E.width / 2, L = E.top + E.height / 2, I = window.innerHeight || 800;
+      m(x.forceTop || L >= I * 0.5), p({
+        cx: T,
+        cy: L,
         r: Math.min(Math.max(E.width, E.height) / 2 + 12, 40)
       });
     };
@@ -156162,7 +156162,7 @@ const cgn = [
   { code: "de", flag: "🇩🇪", label: "Deutsch" }
 ];
 function dgn({ dark: n }) {
-  const { t: e, i18n: r } = ee("wizard"), i = (r.language || "en").split("-")[0], a = (o) => {
+  const { t: e, i18n: r } = Y("wizard"), i = (r.language || "en").split("-")[0], a = (o) => {
     try {
       localStorage.setItem("oikos-language", o);
     } catch {
@@ -156197,7 +156197,7 @@ function dgn({ dark: n }) {
   ] });
 }
 function ugn({ dark: n }) {
-  const e = "#f59e0b", { t: r } = ee("wizard");
+  const e = "#f59e0b", { t: r } = Y("wizard");
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 0 }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { position: "relative", width: 110, height: 110, marginBottom: 8 }, children: [
       /* @__PURE__ */ l.jsx(
@@ -156478,7 +156478,7 @@ function eye({ isYes: n, selected: e, dark: r, yesLabel: i, noLabel: a, onChange
   );
 }
 function fgn({ featureKey: n = "fv", value: e, onChange: r, dark: i }) {
-  const { t: a } = ee("wizard"), o = pgn(a)[n];
+  const { t: a } = Y("wizard"), o = pgn(a)[n];
   if (!o) return null;
   const {
     icon: s,
@@ -156774,7 +156774,7 @@ function bgn({ dark: n }) {
   ] });
 }
 function xgn({ values: n, onChange: e, dark: r }) {
-  const { t: i } = ee("wizard"), a = mgn(i);
+  const { t: i } = Y("wizard"), a = mgn(i);
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 14 }, children: [
     /* @__PURE__ */ l.jsxs(
       se.div,
@@ -157098,7 +157098,7 @@ function Ogn({ level: n, selected: e, recommended: r, dark: i, onClick: a, t: o 
   );
 }
 function Cgn({ value: n, onChange: e, dark: r }) {
-  const { t: i } = ee("wizard"), a = O.useMemo(() => Mie(), []);
+  const { t: i } = Y("wizard"), a = O.useMemo(() => Mie(), []);
   O.useEffect(() => {
     n == null && e(a.quality);
   }, []);
@@ -157138,7 +157138,7 @@ function Cgn({ value: n, onChange: e, dark: r }) {
 }
 const jgn = () => typeof window < "u" && !!window.__OIKOS_PANEL_MODE__;
 function Pgn({ dark: n, haConfig: e, onChange: r }) {
-  const [i, a] = O.useState(!1), [o, s] = O.useState(!1), [c, d] = O.useState(null), { t: u } = ee("wizard"), p = jgn(), h = "#f59e0b", f = async () => {
+  const [i, a] = O.useState(!1), [o, s] = O.useState(!1), [c, d] = O.useState(null), { t: u } = Y("wizard"), p = jgn(), h = "#f59e0b", f = async () => {
     if (e.host) {
       s(!0), d(null);
       try {
@@ -157392,7 +157392,7 @@ function Pgn({ dark: n, haConfig: e, onChange: r }) {
 }
 const Mgn = [Al, h1, mc], Ign = ["#f59e0b", "#3b82f6", "#22c55e"];
 function Egn({ dark: n }) {
-  const e = "#f59e0b", { t: r } = ee("wizard"), a = r("done.tips", { returnObjects: !0 }).map((o, s) => ({
+  const e = "#f59e0b", { t: r } = Y("wizard"), a = r("done.tips", { returnObjects: !0 }).map((o, s) => ({
     icon: Mgn[s] || Al,
     color: Ign[s] || "#f59e0b",
     text: o
@@ -157556,7 +157556,7 @@ function Dgn({ Icon: n, color: e, dark: r }) {
   ] });
 }
 function Hgn({ dark: n }) {
-  const { t: e } = ee("wizard"), r = e("store.intro.points", { returnObjects: !0 }), i = ["🧩", "🌍", "✨"];
+  const { t: e } = Y("wizard"), r = e("store.intro.points", { returnObjects: !0 }), i = ["🧩", "🌍", "✨"];
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 0 }, children: [
     /* @__PURE__ */ l.jsx(Dgn, { Icon: Fv, color: ga, dark: n }),
     /* @__PURE__ */ l.jsxs(rg, { delay: 0.1, children: [
@@ -157585,7 +157585,7 @@ function Hgn({ dark: n }) {
   ] });
 }
 function Fgn({ dark: n }) {
-  const { t: e } = ee("wizard"), r = e("store.sections.items", { returnObjects: !0 });
+  const { t: e } = Y("wizard"), r = e("store.sections.items", { returnObjects: !0 });
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", gap: 0 }, children: [
     /* @__PURE__ */ l.jsx(rg, { delay: 0.05, children: /* @__PURE__ */ l.jsxs("div", { style: { marginBottom: 16, textAlign: "center" }, children: [
       /* @__PURE__ */ l.jsxs("div", { style: { fontSize: 20, fontWeight: 900, letterSpacing: "-0.3px", color: "var(--text-primary)", marginBottom: 5 }, children: [
@@ -157626,7 +157626,7 @@ function Fgn({ dark: n }) {
   ] });
 }
 function Ngn({ dark: n }) {
-  const { t: e } = ee("wizard"), r = e("store.premium.community.points", { returnObjects: !0 }), i = e("store.premium.premium.items", { returnObjects: !0 }), a = [/* @__PURE__ */ l.jsx(Fc, { size: 12 }, 0), /* @__PURE__ */ l.jsx(Lo, { size: 12 }, 1), "🔄"];
+  const { t: e } = Y("wizard"), r = e("store.premium.community.points", { returnObjects: !0 }), i = e("store.premium.premium.items", { returnObjects: !0 }), a = [/* @__PURE__ */ l.jsx(Fc, { size: 12 }, 0), /* @__PURE__ */ l.jsx(Lo, { size: 12 }, 1), "🔄"];
   return /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 0 }, children: [
     /* @__PURE__ */ l.jsxs("div", { style: { display: "flex", gap: 16, justifyContent: "center", marginBottom: 14 }, children: [
       /* @__PURE__ */ l.jsx(
@@ -157781,7 +157781,7 @@ function Vgn() {
   }
 }
 function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPrefsChange: a }) {
-  const { t: o } = ee("wizard"), [s, c] = O.useState(0), [d, u] = O.useState(1), [p, h] = O.useState(() => {
+  const { t: o } = Y("wizard"), [s, c] = O.useState(0), [d, u] = O.useState(1), [p, h] = O.useState(() => {
     const H = DA();
     return { host: H.host || "", wsUrl: H.wsUrl || "", token: H.token || "" };
   }), [f, g] = O.useState(() => {
@@ -157820,13 +157820,13 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
     o("stepLabels.graphics"),
     o("stepLabels.ha"),
     o("stepLabels.done")
-  ], A = "#ef4444", k = Kg[s], S = s === 0, C = s === Kg.length - 1, j = k.id === "tutorial", P = k.id === "store", E = j ? Kg.slice(0, s).filter((H) => H.id === "tutorial").length : 0, L = () => {
+  ], A = "#ef4444", k = Kg[s], S = s === 0, C = s === Kg.length - 1, j = k.id === "tutorial", P = k.id === "store", E = j ? Kg.slice(0, s).filter((H) => H.id === "tutorial").length : 0, T = () => {
     if (C) {
       M();
       return;
     }
     u(1), c((H) => H + 1);
-  }, T = () => {
+  }, L = () => {
     S || (u(-1), c((H) => H - 1));
   }, I = O.useRef(!1);
   O.useEffect(() => {
@@ -158023,7 +158023,7 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
                 !S && !C ? /* @__PURE__ */ l.jsxs(
                   "button",
                   {
-                    onClick: T,
+                    onClick: L,
                     style: {
                       display: "flex",
                       alignItems: "center",
@@ -158048,7 +158048,7 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
                 F && /* @__PURE__ */ l.jsx(
                   "button",
                   {
-                    onClick: L,
+                    onClick: T,
                     style: {
                       padding: "9px 12px",
                       borderRadius: 10,
@@ -158069,7 +158069,7 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
                   {
                     whileHover: { scale: 1.02 },
                     whileTap: { scale: 0.97 },
-                    onClick: L,
+                    onClick: T,
                     style: {
                       display: "flex",
                       alignItems: "center",
@@ -158102,8 +158102,8 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
         task: Wgn(k.variant),
         taskIndex: E,
         totalTasks: $gn,
-        onDone: L,
-        onSkip: L
+        onDone: T,
+        onSkip: T
       },
       `tutorial-task-${s}`
     ) })
@@ -158111,7 +158111,7 @@ function _gn({ dark: n, onComplete: e, canClose: r = !1, onPageChange: i, onPref
 }
 const tye = /* @__PURE__ */ new Set(["home", "dashboard", "statistics", "devices", "settings", "store", "billing", "support"]);
 function qgn() {
-  const { t: n, i18n: e } = ee("common"), [r, i] = O.useState(!1);
+  const { t: n, i18n: e } = Y("common"), [r, i] = O.useState(!1);
   O.useEffect(() => {
     if (!cg() || jee() !== "/api/oikos/") return;
     let Se = !0;
@@ -158196,17 +158196,17 @@ function qgn() {
     b(!1), S();
   }, [S]), [j, P] = O.useState(QF), E = O.useCallback((Se) => {
     P(Se);
-  }, []), [L, T] = O.useState(() => {
+  }, []), [T, L] = O.useState(() => {
     const Se = O1(), st = k_(Se);
     if (st) return st === "dark";
     const yt = localStorage.getItem("oikos-theme");
     return yt ? yt === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
   }), [I, z] = O.useState(() => wut());
   O.useEffect(() => {
-    document.documentElement.classList.toggle("dark", L);
+    document.documentElement.classList.toggle("dark", T);
     const Se = window.__OIKOS_PANEL_EL__;
-    Se && Se.classList.toggle("dark", L), localStorage.setItem("oikos-theme", L ? "dark" : "light");
-  }, [L]), O.useEffect(() => {
+    Se && Se.classList.toggle("dark", T), localStorage.setItem("oikos-theme", T ? "dark" : "light");
+  }, [T]), O.useEffect(() => {
     const Se = () => {
       var pi;
       const st = Yb();
@@ -158222,7 +158222,7 @@ function qgn() {
   O.useEffect(() => {
     const Se = () => {
       const yt = O1(), Kt = k_(yt);
-      Kt && T(Kt === "dark");
+      Kt && L(Kt === "dark");
     };
     Se();
     const st = setInterval(Se, 60 * 1e3);
@@ -158315,7 +158315,7 @@ function qgn() {
       await Due(), await Promise.all([Ujt(), Gjt(), Tpn()]), te(!0), ie((st) => st + 1);
     }), () => window.removeEventListener("oikos-remote-config-refreshed", Se);
   }, []);
-  const { connected: B, error: Y, getFloat: K, getState: D, getAttr: W, fetchHistory: X, callService: ne, fetchWeatherForecast: le, states: J, sendCommand: ue, subscribeTemplate: ye } = Qfn([]), { licenseStatus: ge, trialDaysLeft: we, trialEndsAt: he } = HV(), me = ge === "TRIAL" && we !== null && we <= 7, Pe = he ? new Date(he).getTime() : null, Re = Pe && !isNaN(Pe) ? Pe - Date.now() : null, Ie = Re != null ? Math.max(0, Math.floor(Re / (24 * 60 * 60 * 1e3))) : we, De = Ie === 0, qe = (() => {
+  const { connected: B, error: J, getFloat: K, getState: D, getAttr: W, fetchHistory: X, callService: ne, fetchWeatherForecast: le, states: ee, sendCommand: ue, subscribeTemplate: ye } = Qfn([]), { licenseStatus: ge, trialDaysLeft: we, trialEndsAt: he } = HV(), me = ge === "TRIAL" && we !== null && we <= 7, Pe = he ? new Date(he).getTime() : null, De = Pe && !isNaN(Pe) ? Pe - Date.now() : null, Ie = De != null ? Math.max(0, Math.floor(De / (24 * 60 * 60 * 1e3))) : we, He = Ie === 0, qe = (() => {
     if (!he) return null;
     const Se = new Date(he);
     if (isNaN(Se)) return null;
@@ -158327,7 +158327,7 @@ function qgn() {
     const Gd = Se.toLocaleDateString(yt, { day: "numeric", month: "long" });
     return n("trial.expiryDate", { date: Gd, time: Gn });
   })(), Ge = Tt(), bn = K(Ge.solarPower), de = K(Ge.gridPower), Ae = K(Ge.batterySoc), Be = K(Ge.batteryKwh), at = K(Ge.housePower), et = K(Ge.batteryPower), Bt = K(Ge.selfConsumption), _e = K(Ge.prodToday), dt = K(Ge.consToday), Qt = K(Ge.gridFromToday), Wt = K(Ge.gridToToday), Rt = K(Ge.forecastKwh), Gt = D(Ge.forecastFascia) || "bassa", Zt = D(Ge.forecastIcon) || "🌤️", Zr = D(Ge.forecastCond) || "", sn = K(Ge.forecastUV), ui = K(Ge.forecastTemp), ur = K(Ge.forecastRain), Kr = K(Ge.forecastCoeff), Us = K(Ge.forecastOre), co = K(Ge.forecastWind), ia = D(Ge.zigbeeOffline) ?? D("sensor.zigbee_offline_count") ?? "0", Xs = {
-    dark: L,
+    dark: T,
     connected: B,
     editMode: Z,
     setEditMode: re,
@@ -158368,7 +158368,7 @@ function qgn() {
     pluginsVersion: oe,
     reloadInstalledCards: ke,
     // Esposto per HaCard / useHass
-    haStates: J,
+    haStates: ee,
     sendWsCommand: ue,
     subscribeTemplate: ye,
     // More-info: apre il modal storico per qualsiasi entità
@@ -158383,7 +158383,7 @@ function qgn() {
     {
       reducedMotion: M ? "always" : "never",
       transition: R ? { duration: 0.1, ease: "easeOut" } : void 0,
-      children: /* @__PURE__ */ l.jsx(Bfn, { dark: L, children: /* @__PURE__ */ l.jsxs(Eee.Provider, { value: Xs, children: [
+      children: /* @__PURE__ */ l.jsx(Bfn, { dark: T, children: /* @__PURE__ */ l.jsxs(Eee.Provider, { value: Xs, children: [
         /* @__PURE__ */ l.jsxs("div", { className: "oikos-app-root", style: {
           display: "flex",
           flexDirection: U ? "row" : "column",
@@ -158399,14 +158399,14 @@ function qgn() {
             vfn,
             {
               cond: D(Ge.weatherEntity) || Zr,
-              dark: L,
+              dark: T,
               enabled: I
             }
           ),
           U && /* @__PURE__ */ l.jsx(
             Yme,
             {
-              dark: L,
+              dark: T,
               activePage: F,
               onPageChange: N,
               side: !0
@@ -158424,16 +158424,16 @@ function qgn() {
               alignItems: "center",
               gap: 8,
               flexShrink: 0,
-              background: L ? "rgba(20,16,0,.92)" : "rgba(255,251,235,.97)",
-              borderBottom: `1px solid ${L ? "rgba(245,158,11,.30)" : "#fde68a"}`,
+              background: T ? "rgba(20,16,0,.92)" : "rgba(255,251,235,.97)",
+              borderBottom: `1px solid ${T ? "rgba(245,158,11,.30)" : "#fde68a"}`,
               padding: "5px 14px",
               fontSize: 12,
               fontWeight: 600,
-              color: L ? "#fbbf24" : "#d97706"
+              color: T ? "#fbbf24" : "#d97706"
             }, children: [
               /* @__PURE__ */ l.jsx("span", { style: { flexShrink: 0 }, children: "⏱" }),
               /* @__PURE__ */ l.jsx("span", { children: (() => {
-                const Se = De ? n("trial.lastHours") : n("trial.daysLeft", { count: Ie });
+                const Se = He ? n("trial.lastHours") : n("trial.daysLeft", { count: Ie });
                 return qe ? `${Se} · ${qe}` : Se;
               })() }),
               /* @__PURE__ */ l.jsx("span", { style: { marginLeft: "auto", fontWeight: 400, opacity: 0.75, fontSize: 11 }, children: n("trial.settingsHint") })
@@ -158441,42 +158441,42 @@ function qgn() {
             /* @__PURE__ */ l.jsx(
               acn,
               {
-                dark: L,
-                onToggle: () => T((Se) => !Se),
+                dark: T,
+                onToggle: () => L((Se) => !Se),
                 connected: B,
-                haError: Y,
+                haError: J,
                 onScreensaver: () => b(!0),
                 onOpenSettings: () => H("settings")
               }
             ),
-            /* @__PURE__ */ l.jsx(Dfn, { dark: L }),
-            Y && /* @__PURE__ */ l.jsxs("div", { style: {
-              background: L ? "rgba(239,68,68,.12)" : "#fef2f2",
-              border: `1px solid ${L ? "rgba(239,68,68,.25)" : "#fecaca"}`,
+            /* @__PURE__ */ l.jsx(Dfn, { dark: T }),
+            J && /* @__PURE__ */ l.jsxs("div", { style: {
+              background: T ? "rgba(239,68,68,.12)" : "#fef2f2",
+              border: `1px solid ${T ? "rgba(239,68,68,.25)" : "#fecaca"}`,
               margin: "0 14px",
               borderRadius: 10,
               padding: "8px 14px",
               fontSize: 12,
               fontWeight: 600,
-              color: L ? "#f87171" : "#dc2626",
+              color: T ? "#f87171" : "#dc2626",
               display: "flex",
               alignItems: "center",
               gap: 8,
               flexShrink: 0
             }, children: [
               "⚠️ ",
-              Y,
+              J,
               " — Controlla IP e token in src/config.js"
             ] }),
             r && /* @__PURE__ */ l.jsxs("div", { style: {
-              background: L ? "rgba(245,158,11,.12)" : "#fffbeb",
-              border: `1px solid ${L ? "rgba(245,158,11,.3)" : "#fde68a"}`,
+              background: T ? "rgba(245,158,11,.12)" : "#fffbeb",
+              border: `1px solid ${T ? "rgba(245,158,11,.3)" : "#fde68a"}`,
               margin: "0 14px",
               borderRadius: 10,
               padding: "8px 14px",
               fontSize: 12,
               fontWeight: 600,
-              color: L ? "#fbbf24" : "#b45309",
+              color: T ? "#fbbf24" : "#b45309",
               display: "flex",
               alignItems: "center",
               gap: 8,
@@ -158505,14 +158505,14 @@ function qgn() {
               )
             ] }),
             a && /* @__PURE__ */ l.jsxs("div", { style: {
-              background: L ? "rgba(16,185,129,.12)" : "#f0fdf4",
-              border: `1px solid ${L ? "rgba(16,185,129,.3)" : "#bbf7d0"}`,
+              background: T ? "rgba(16,185,129,.12)" : "#f0fdf4",
+              border: `1px solid ${T ? "rgba(16,185,129,.3)" : "#bbf7d0"}`,
               margin: "0 14px",
               borderRadius: 10,
               padding: "8px 14px",
               fontSize: 12,
               fontWeight: 600,
-              color: L ? "#34d399" : "#15803d",
+              color: T ? "#34d399" : "#15803d",
               display: "flex",
               alignItems: "center",
               gap: 8,
@@ -158556,30 +158556,30 @@ function qgn() {
               WebkitOverflowScrolling: "touch",
               scrollBehavior: "smooth"
             }, children: [
-              F !== "store" && F !== "settings" && /* @__PURE__ */ l.jsx($fn, { pageId: F, dark: L }),
-              F === "home" && /* @__PURE__ */ l.jsx(cun, { dark: L }),
-              F === "dashboard" && /* @__PURE__ */ l.jsx(dun, { dark: L }),
-              F === "statistics" && /* @__PURE__ */ l.jsx(pun, { dark: L }),
-              F === "devices" && /* @__PURE__ */ l.jsx(fun, { dark: L }),
+              F !== "store" && F !== "settings" && /* @__PURE__ */ l.jsx($fn, { pageId: F, dark: T }),
+              F === "home" && /* @__PURE__ */ l.jsx(cun, { dark: T }),
+              F === "dashboard" && /* @__PURE__ */ l.jsx(dun, { dark: T }),
+              F === "statistics" && /* @__PURE__ */ l.jsx(pun, { dark: T }),
+              F === "devices" && /* @__PURE__ */ l.jsx(fun, { dark: T }),
               F === "store" && /* @__PURE__ */ l.jsx(ofn, {}),
-              F === "billing" && /* @__PURE__ */ l.jsx(cfn, { dark: L }),
-              F === "support" && /* @__PURE__ */ l.jsx(dfn, { dark: L }),
+              F === "billing" && /* @__PURE__ */ l.jsx(cfn, { dark: T }),
+              F === "support" && /* @__PURE__ */ l.jsx(dfn, { dark: T }),
               F === "settings" && /* @__PURE__ */ l.jsx(
                 Apn,
                 {
-                  dark: L,
-                  onToggleTheme: (Se) => T(Se === "dark"),
+                  dark: T,
+                  onToggleTheme: (Se) => L(Se === "dark"),
                   weatherBgEnabled: I,
                   onWeatherBgChange: (Se) => z(Se),
                   weatherCond: D(Ge.weatherEntity) || Zr || ""
                 }
               ),
-              !tye.has(F) && /* @__PURE__ */ l.jsx(bk, { pageId: F, dark: L }, F)
+              !tye.has(F) && /* @__PURE__ */ l.jsx(bk, { pageId: F, dark: T }, F)
             ] }),
             !U && /* @__PURE__ */ l.jsx(
               Yme,
               {
-                dark: L,
+                dark: T,
                 activePage: F,
                 onPageChange: N
               }
@@ -158594,8 +158594,8 @@ function qgn() {
           egn,
           {
             entityId: fe,
-            haStates: J,
-            dark: L,
+            haStates: ee,
+            dark: T,
             fetchHistory: X,
             onClose: () => ae(null)
           }
@@ -158603,14 +158603,14 @@ function qgn() {
         u && /* @__PURE__ */ l.jsx(
           _gn,
           {
-            dark: L,
+            dark: T,
             onComplete: g,
             canClose: h,
             onPageChange: N,
             onPrefsChange: ({ weatherBg: Se, autoTheme: st }) => {
               if (Se !== void 0 && z(Se), st) {
                 const yt = k_(O1());
-                yt && T(yt === "dark");
+                yt && L(yt === "dark");
               }
             }
           }
@@ -158898,7 +158898,7 @@ const amn = "1.3.0", omn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.
   getOverlayRoot: Ur,
   getPlants: Kb,
   getThemeSchedule: O1,
-  i18n: He,
+  i18n: Re,
   icons: W1,
   jsxRuntime: Eat,
   makeStyles: oat,
@@ -158924,14 +158924,14 @@ const amn = "1.3.0", omn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.
   usePlants: tYe,
   useSafeHass: Kgn,
   useStyles: rmn,
-  useT: ee
+  useT: Y
 }, Symbol.toStringTag, { value: "Module" }));
 yun();
 window.__OIKOS_React = hye;
 window.__OIKOS_Lucide = W1;
 window.__OIKOS_SDK__ = omn;
 window.__OIKOS_PANEL_MODE__ = !0;
-window.__OIKOS_BUILD__ = "2.6.58+202607311735";
+window.__OIKOS_BUILD__ = "2.6.59+202608020553";
 if (typeof window < "u" && !window.__OIKOS_REJECTION_GUARD__) {
   window.__OIKOS_REJECTION_GUARD__ = !0;
   const n = /* @__PURE__ */ new Set([
@@ -159011,7 +159011,7 @@ class smn extends HTMLElement {
     this._hass = e, window.__OIKOS_HASS__ = e;
     try {
       const r = localStorage.getItem("oikos-language"), i = String((e == null ? void 0 : e.language) || "").slice(0, 2);
-      !r && i && ["it", "en", "fr", "es", "de"].includes(i) && He.language !== i && He.changeLanguage(i);
+      !r && i && ["it", "en", "fr", "es", "de"].includes(i) && Re.language !== i && Re.changeLanguage(i);
     } catch {
     }
     window.dispatchEvent(new CustomEvent("oikos-hass-update", { detail: e })), this._hassReady || (this._hassReady = !0, NF().catch(() => {

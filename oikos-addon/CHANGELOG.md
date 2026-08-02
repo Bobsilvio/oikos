@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.59] - 2026-08-02
+
+### Fixed
+- Fixed a crash introduced by the previous translation work: some parts of the interface (room card, chip panel, entity history, store previews, screensaver energy widget and the forecast/yesterday settings) could fail to open with a blank screen or an error. Sorry about that.
+
 ## [2.6.58] - 2026-07-31
 
 ### Changed
