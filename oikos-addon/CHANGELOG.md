@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.63] - 2026-08-03
+
+### Fixed
+- The dashboard could get stuck on a licence error with no way out when the connection to Home Assistant was unhealthy: it waited indefinitely for an internal handshake that never completed, so it never even tried to check the licence. It now gives up after a few seconds and uses the alternative route.
+
 ## [2.6.62] - 2026-08-03
 
 ### Fixed
