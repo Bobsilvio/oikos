@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.61] - 2026-08-03
+
+### Fixed
+- The dashboard could report "Unable to reach the license server" even when the server was perfectly reachable — typically while Home Assistant was restarting. It now falls back to a direct check instead of giving up.
+
 ## [2.6.60] - 2026-08-03
 
 ### Changed
