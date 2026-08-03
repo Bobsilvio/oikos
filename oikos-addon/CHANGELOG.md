@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.62] - 2026-08-03
+
+### Fixed
+- A temporary problem (server restart, connection drop) could leave the dashboard stuck on a licence error for hours: the failed result was reused at every page load without ever contacting the server again, so reloading did not help. The check is now repeated whenever the last result was negative.
+
 ## [2.6.61] - 2026-08-03
 
 ### Fixed
