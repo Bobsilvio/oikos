@@ -1,6 +1,6 @@
 name: "Oikos"
 description: "Dashboard Home Assistant completamente personalizzabile \u2014 card, chip, distintivi e popup componibili"
-version: "2.6.59"
+version: "2.6.60"
 slug: oikos_dashboard
 url: https://github.com/Bobsilvio/oikos
 
@@ -36,6 +36,13 @@ map:
 # Permessi API Home Assistant
 # Necessario per accedere a ws://supervisor/core/websocket e http://supervisor/core/api/
 homeassistant_api: true
+
+# API Supervisor — usata SOLO per leggere due dati hardware (MAC dell'interfaccia
+# primaria e serial del disco) che distinguono due Home Assistant clonate dalla
+# stessa immagine: senza, un cliente con HA ripristinata da backup viene scambiato
+# per chi si rifà la prova gratuita. Escono dall'impianto solo come hash.
+hassio_api: true
+hassio_role: default
 
 # Logs
 init: false

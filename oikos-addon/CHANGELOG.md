@@ -6,6 +6,12 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.60] - 2026-08-03
+
+### Fixed
+- Home Assistant installations restored from a backup or cloned from another machine share the same internal identifier, and were mistakenly treated as the same system: a legitimate customer could be told their free trial had already been used, when in fact it had been used by somebody else's installation. The dashboard now also reports two hardware details (network adapter and system disk) so that two genuinely different machines are recognised as such.
+- These details never leave your system in readable form: they are sent as a one-way fingerprint and are used only to tell two installations apart. This requires a new Supervisor permission, which Home Assistant will ask you to confirm when updating the add-on.
+
 ## [2.6.59] - 2026-08-02
 
 ### Fixed
