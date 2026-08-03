@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.65] - 2026-08-03
+
+### Changed
+- Security fix.
+
 ## [2.6.64] - 2026-08-03
 
 ### Fixed
