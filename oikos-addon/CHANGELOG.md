@@ -8,9 +8,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [2.6.60] - 2026-08-03
 
-### Fixed
-- Home Assistant installations restored from a backup or cloned from another machine share the same internal identifier, and were mistakenly treated as the same system: a legitimate customer could be told their free trial had already been used, when in fact it had been used by somebody else's installation. The dashboard now also reports two hardware details (network adapter and system disk) so that two genuinely different machines are recognised as such.
-- These details never leave your system in readable form: they are sent as a one-way fingerprint and are used only to tell two installations apart. This requires a new Supervisor permission, which Home Assistant will ask you to confirm when updating the add-on.
+### Changed
+- Security fix. Updating the add-on requires confirming a new permission in Home Assistant.
 
 ## [2.6.59] - 2026-08-02
 
@@ -20,7 +19,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [2.6.58] - 2026-07-31
 
 ### Changed
-- When a Home Assistant has already used its free trial, the dashboard now explains it instead of showing a generic "licence not valid" error. The screen states that the trial is tied to the system rather than to the account — so signing up with another email address does not reset it — and that the same applies to installations restored from a backup or cloned from another machine. A purchase button is offered right there.
+- Clearer message when a licence cannot be activated, with a direct link to purchase.
 
 ## [2.6.57] - 2026-07-30
 
