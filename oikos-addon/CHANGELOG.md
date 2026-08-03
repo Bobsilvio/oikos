@@ -6,6 +6,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.64] - 2026-08-03
+
+### Fixed
+- Fixed a fault introduced earlier today that could block the dashboard with a "cannot reach the license server" message even though the server was perfectly reachable. Apologies for the disruption.
+
 ## [2.6.63] - 2026-08-03
 
 ### Fixed
