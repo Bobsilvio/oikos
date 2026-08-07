@@ -6,6 +6,44 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.69] - 2026-08-05
+
+### Added
+- Disinstallazione raggiungibile anche dalla schermata di blocco licenza: chi
+  non rinnova può rimuovere Oikos da Home Assistant senza modificare i file a
+  mano. La licenza non viene toccata e resta riutilizzabile.
+- Lingua rumena (traduzione in corso; le parti non ancora tradotte restano in
+  inglese).
+
+## [2.6.68] - 2026-08-05
+
+### Fixed
+- Oikos silenziava la console del browser per l'intera pagina, comprese le
+  altre integrazioni di Home Assistant. Stessa cosa per i log dell'add-on.
+- La diagnostica scaricabile risultava vuota anche in presenza di errori: ora
+  gli errori vengono registrati direttamente, senza dipendere dalla console.
+
+## [2.6.67] - 2026-08-05
+
+### Added
+- Schermata di recupero al posto della pagina nera: quando qualcosa va storto
+  Oikos resta usabile e propone Riprova, Ricarica e Modo sicuro.
+- Modo sicuro: riavvia senza le card aggiuntive, per rientrare quando è una
+  card a impedire l'avvio. Si disattiva da sé chiudendo la scheda.
+
+### Fixed
+- Le impostazioni di una card che andava in errore facevano cadere l'intera
+  pagina Impostazioni: ora l'errore resta confinato al suo riquadro.
+- Un errore in una singola card poteva zittire le notifiche di tutte le altre.
+
+## [2.6.66] - 2026-08-05
+
+### Fixed
+- Una card che andava in errore poteva bloccare l'intera dashboard invece di
+  essere isolata: ora resta confinata al suo riquadro, con il tasto Riprova.
+- Notifiche di irrigazione e cassetta postale: non venivano più inviate.
+- Testi di errore e notifiche ora tradotti in tutte le lingue.
+
 ## [2.6.65] - 2026-08-03
 
 ### Changed
