@@ -1,6 +1,6 @@
 name: "Oikos"
 description: "Dashboard Home Assistant completamente personalizzabile \u2014 card, chip, distintivi e popup componibili"
-version: "2.6.69"
+version: "2.6.70"
 slug: oikos_dashboard
 url: https://github.com/Bobsilvio/oikos
 

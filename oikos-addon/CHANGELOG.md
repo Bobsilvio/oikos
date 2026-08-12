@@ -6,43 +6,142 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.70] - 2026-08-12
+
+### Added
+- Screensaver: a solid colour or gradient background **underneath** the widgets.
+  Previously the two were alternatives — either a coloured background or cards —
+  and could not be combined.
+- Screensaver: interactive cards. Controls stay live without dismissing the
+  screensaver, which is what a wall-mounted tablet needs. You choose how to
+  leave: tapping the background, swiping up from the bottom, or both.
+- Screensaver: climate widget, with entity selection.
+- Screensaver: adjustable size for the background card, which used to run past
+  the edge of the screen on tablets.
+- Screensaver: arrows to decide which card sits on top when they overlap.
+- Screensaver: widgets are elastic — the content stretches to the exact box you
+  drew, like a distorted photo, instead of keeping its own proportions and
+  leaving air around it. Turn it off per widget to keep the proportions.
+- Screensaver: the gear now opens the settings of every widget, not only cards.
+  A card's own settings are one step further in.
+- Screensaver: optional glow behind the clock, in the colour of your choice.
+- Screensaver: opacity can now be set per widget. The general value remains the
+  starting point; a heavily coloured card and a pale clock on the same
+  background need different transparencies.
+- Device preview. Compose from your computer the layout you will see on the
+  tablet, in both orientations, with a line marking where the simulated screen
+  ends. The list holds only devices you actually use: each one registers itself
+  the first time you open Oikos on it. The simulation stays on when you leave
+  edit mode, so you see the finished result rather than one crowded with
+  toolbars and labels that do not exist on the device.
+- Solid colour, gradient or image background behind the dashboard pages, in
+  Settings → Appearance. It is set **per device** — a wall tablet and a computer
+  rarely want the same backdrop — and you pick which device you are configuring
+  from a list, so the tablet can be prepared from your computer and left alone
+  as a display. The image comes with a fit mode and an adjustable dark
+  veil, since Oikos cards are drawn for a dark background and their text would
+  otherwise disappear over a light photo.
+- Romanian translation completed.
+
+### Changed
+- Screensaver: a single style. The "classic" one was a subset of the widget
+  editor; existing configurations are converted automatically, glow included.
+- Screensaver: a card's settings open from the usual gear icon instead of a
+  separate panel.
+- Screensaver editor is far more responsive: dragging a colour picker used to
+  leave it working for minutes after the mouse had stopped.
+
+### Fixed
+- The chips panel and the popup settings threw an error when opened.
+- Store: after updating a card by some route other than the Update button, the
+  entry stayed in "updates available" with the version it had at the last check
+  — offering, for example, "Update to v1.1.2" with v1.1.3 already installed, an
+  invitation to go backwards. The list is now recomputed against the version
+  actually installed, and the navbar's update count follows the same result
+  instead of holding its own.
+- Store: a card that is installed but fails to load appeared as not installed —
+  no Uninstall, no Update, and an "Install" button on something already there,
+  precisely when you need to repair it. The Store now asks the add-on what is
+  actually on disk: such a card is marked "not loaded" and offers Reinstall and
+  Uninstall.
+- Checking for updates on a community card could fail with an error instead of
+  showing the available version.
+- Screensaver editor: the climate widget was squeezed into the left half of its
+  box with the right half empty. Alongside it the editor also drew the empty
+  placeholder meant for widgets that have no preview of their own — the list of
+  types was written by hand and climate had never been added to it.
+- Screensaver: opening a card's settings drew the selected widget's frame on top
+  of the settings window.
+- Screensaver: the arrows that move a widget up or down the stack did nothing.
+  The list is now the stack itself — first means in front — so a click is
+  visible straight away even when nothing on the canvas overlaps.
+- Screensaver: the climate widget only scaled with the width of its box, so in
+  a short wide box the large temperature grew taller than the box and was cut
+  off at the top. Its controls no longer wrap onto a second line either.
+- Screensaver: the climate widget's buttons were each a different size, and the
+  temperature could still be clipped. All the controls now share one geometry,
+  the icons are vector rather than emoji, and the mode label has moved to the
+  status line where it no longer stretches its own button.
+- Screensaver: the clock only scaled with the width of its box, so a tall box
+  was left half empty and a short wide one pushed the digits past the edge.
+- Screensaver: the whole screen — every card on it included — was being redrawn
+  once a second just to blink the clock's colon. Only the clock redraws now.
+- Screensaver editor: dragging a card was jerky. Every mouse movement rewrote
+  the whole configuration; it is now written once, when you let go.
+- Settings: dragging a colour or a slider for the page background rewrote the
+  configuration on every mouse movement — one localStorage write, one POST and
+  one full redraw each time. The same accumulation was in the shared card
+  settings (`Slider`, colour wheel), so every card panel had it. Writing now
+  happens once you stop moving.
+- The navbar clock redrew the entire bar, chips included, once a second. It is
+  now isolated and ticks by the minute — which is all it displays.
+- Device preview: the same device was listed several times — four iPads and
+  four iPhones, all genuine and all the same tablet. Devices were identified by
+  window size, which changes with the Home Assistant sidebar, the browser bars
+  and the on-screen keyboard. Identification now uses the physical screen, and
+  the entries already saved are merged.
+- Device preview: the screen-edge line was drawn at the device's full height,
+  ignoring the navbar and the navigation bar that eat into it. It sat lower
+  than the real edge and promised cards as visible that are in fact below the
+  fold. The chrome is now measured and subtracted.
+
 ## [2.6.69] - 2026-08-05
 
 ### Added
-- Disinstallazione raggiungibile anche dalla schermata di blocco licenza: chi
-  non rinnova può rimuovere Oikos da Home Assistant senza modificare i file a
-  mano. La licenza non viene toccata e resta riutilizzabile.
-- Lingua rumena (traduzione in corso; le parti non ancora tradotte restano in
-  inglese).
+- Uninstall is now reachable from the licence block screen too: anyone who does
+  not renew can remove Oikos from Home Assistant without editing files by hand.
+  The licence itself is left untouched and stays reusable.
+- Romanian language (translation in progress; anything not yet translated falls
+  back to English).
 
 ## [2.6.68] - 2026-08-05
 
 ### Fixed
-- Oikos silenziava la console del browser per l'intera pagina, comprese le
-  altre integrazioni di Home Assistant. Stessa cosa per i log dell'add-on.
-- La diagnostica scaricabile risultava vuota anche in presenza di errori: ora
-  gli errori vengono registrati direttamente, senza dipendere dalla console.
+- Oikos silenced the browser console for the whole page, including other Home
+  Assistant integrations. The same applied to the add-on logs.
+- The downloadable diagnostics came out empty even when errors had occurred:
+  errors are now recorded directly, without relying on the console.
 
 ## [2.6.67] - 2026-08-05
 
 ### Added
-- Schermata di recupero al posto della pagina nera: quando qualcosa va storto
-  Oikos resta usabile e propone Riprova, Ricarica e Modo sicuro.
-- Modo sicuro: riavvia senza le card aggiuntive, per rientrare quando è una
-  card a impedire l'avvio. Si disattiva da sé chiudendo la scheda.
+- A recovery screen in place of the black page: when something goes wrong Oikos
+  stays usable and offers Retry, Reload and Safe mode.
+- Safe mode: restarts without the additional cards, so you can get back in when
+  it is a card that prevents startup. It turns itself off when you close the tab.
 
 ### Fixed
-- Le impostazioni di una card che andava in errore facevano cadere l'intera
-  pagina Impostazioni: ora l'errore resta confinato al suo riquadro.
-- Un errore in una singola card poteva zittire le notifiche di tutte le altre.
+- A card whose settings failed took down the whole Settings page: the error now
+  stays confined to its own panel.
+- An error in a single card could silence the notifications of all the others.
 
 ## [2.6.66] - 2026-08-05
 
 ### Fixed
-- Una card che andava in errore poteva bloccare l'intera dashboard invece di
-  essere isolata: ora resta confinata al suo riquadro, con il tasto Riprova.
-- Notifiche di irrigazione e cassetta postale: non venivano più inviate.
-- Testi di errore e notifiche ora tradotti in tutte le lingue.
+- A card that threw an error could bring down the entire dashboard instead of
+  being isolated: it now stays confined to its own panel, with a Retry button.
+- Irrigation and mailbox notifications were no longer being sent.
+- Error messages and notifications are now translated into every language.
 
 ## [2.6.65] - 2026-08-03
 
