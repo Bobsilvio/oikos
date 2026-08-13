@@ -6,6 +6,23 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.71] - 2026-08-13
+
+### Added
+- Page background: an option to extend it behind the top bar and the navigation
+  bar, which used to stay white or black and cut the background into three bands.
+- Screensaver: cards can be drawn in the light theme. They were locked to dark,
+  which is unreadable over a light background. The per-widget solid plate now
+  follows the same choice, so the four Live Energy boxes no longer show a dark
+  band between them.
+
+### Fixed
+- Popup Panel: the card picker was a dropdown clipped by the settings panel,
+  showing barely one entry out of twenty. It is now a proper window with the
+  cards in a grid, grouped by category.
+- iPhone: the bottom navigation bar sat against its top edge, with the safe area
+  left empty below it.
+
 ## [2.6.70] - 2026-08-12
 
 ### Added
@@ -41,6 +58,11 @@ Versioning follows [Semantic Versioning](https://semver.org/).
   as a display. The image comes with a fit mode and an adjustable dark
   veil, since Oikos cards are drawn for a dark background and their text would
   otherwise disappear over a light photo.
+- Page background: an option to give cards a solid background. Cards are
+  semi-transparent, so over a coloured background they take on its tint and a
+  dashboard turns uniformly green or blue. It overrides the card colour
+  variable, so it fixes every card at once — third-party ones included.
+- Screensaver: the same option per widget, for the same reason.
 - Romanian translation completed.
 
 ### Changed
@@ -52,6 +74,12 @@ Versioning follows [Semantic Versioning](https://semver.org/).
   leave it working for minutes after the mouse had stopped.
 
 ### Fixed
+- Entity states now follow the Home Assistant vocabulary. A binary sensor is
+  always `on`/`off` internally, but those words are never shown as such: HA
+  translates them by device class — a door is Open/Closed, a motion sensor
+  Detected. Oikos said On/Off everywhere, so the same entity read differently
+  depending on where you looked at it. On a lock the two words mean opposite
+  things. The vocabulary is now shared and exposed to cards through the SDK.
 - The chips panel and the popup settings threw an error when opened.
 - Store: after updating a card by some route other than the Update button, the
   entry stayed in "updates available" with the version it had at the last check
