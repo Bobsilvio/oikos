@@ -17,6 +17,9 @@ Versioning follows [Semantic Versioning](https://semver.org/).
   band between them.
 
 ### Fixed
+- Layout editor: a card could not be dragged into a column of another row. The
+  drop target was picked by comparing centres, which never chose a wide, short
+  column; it now follows the pointer, and targets are re-measured while dragging.
 - Popup Panel: the card picker was a dropdown clipped by the settings panel,
   showing barely one entry out of twenty. It is now a proper window with the
   cards in a grid, grouped by category.
