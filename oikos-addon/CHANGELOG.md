@@ -6,6 +6,36 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.73] - 2026-08-14
+
+### Fixed
+- Light theme had no design tokens at all inside the panel. Oikos runs in a
+  shadow DOM, where `:root` matches nothing, so the stylesheet is rewritten to
+  `:host` at mount — but the rewrite required a brace right after `:root`, and
+  the light block had gained a second selector. The whole block went inert:
+  borders vanished, text fell back to plain black, accents went flat. The dark
+  theme was unaffected, which is why it looked like a colour problem.
+- Borders were missing on cards, chips and settings rows: `--border-color` was
+  used in 26 places and never defined anywhere. An undefined custom property
+  makes the declaration invalid, so the border was not drawn at all — invisible
+  on a dark background, fatal on a white one.
+- Light theme: tinted backgrounds and borders derived from a palette kept the
+  intensity chosen for a dark background, where a 10% veil is enough. On white
+  it is indistinguishable from white, so banners and buttons had no fill and no
+  outline. They are now recomputed for the light side.
+- Light theme: a palette accent too pale to be seen on white is darkened until
+  it meets a 3:1 contrast ratio, keeping its hue.
+- Light theme: secondary text went from a 2.4:1 contrast ratio to 4.8:1.
+- The navigation bars and edit-mode chrome no longer take their colours from the
+  palette: they have their own background, and an incomplete palette could make
+  the active item lose its icon entirely.
+- Licence checks: a definitive refusal is now cached, instead of asking the
+  server again on every mount.
+
+### Added
+- Custom palettes: the light side is completed from the dark one when left
+  unfilled.
+
 ## [2.6.72] - 2026-08-14
 
 ### Fixed
