@@ -6,6 +6,40 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.72] - 2026-08-14
+
+### Fixed
+- Edit mode: the row-type, card-picker and card-settings dialogs did not
+  respond to taps — neither the buttons, nor the ✕, nor the backdrop. Their
+  overlay container disables pointer events so clicks fall through to the
+  dashboard when it is empty, and these dialogs never re-enabled them.
+- Light theme: the active navigation item lost its icon and its indicator when
+  the active palette left a colour empty. An empty custom property is not the
+  same as a missing one — it makes the property that reads it invalid, so an
+  icon disappears instead of changing colour. The navigation bar no longer
+  depends on the palette, and empty entries are no longer written at all.
+- Light theme: text in the top and bottom bars was too faint to read. The bars
+  have their own background, so their text now contrasts with that rather than
+  with the dashboard's.
+- Light theme: white cards on a white page had no visible outline.
+- The dashboard followed the Home Assistant theme for text colour and font.
+  Oikos runs in a shadow DOM, where those two properties are inherited from
+  outside unless declared; they are now declared.
+- Settings stored as plain values (navigation style, animated weather
+  background) reverted after a reload: the copy coming back from the add-on is
+  JSON-encoded and no longer matched what had been saved locally.
+- iPhone: the bottom bar reserved the whole safe area below itself, leaving a
+  strip taller than the bar.
+
+### Added
+- Navigation bar with a bubble: the active item rises into a circle that pops
+  out of the bar, which curves under it. Settings → Mobile, per device.
+- Custom palettes: the light side is now completed from the dark one when left
+  unfilled, instead of falling back to the default colours.
+
+### Changed
+- Popup panels moved from Theme to the Popup section.
+
 ## [2.6.71] - 2026-08-13
 
 ### Added
