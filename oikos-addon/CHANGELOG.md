@@ -6,6 +6,28 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.74] - 2026-08-15
+
+### Changed
+- The bubble navigation bar is now the default on phones and tablets. The
+  classic row is still there in Settings → Mobile, and a device that has already
+  been switched keeps what it was given.
+- Bubble navigation bar: the row of pages scrolls when they no longer fit,
+  instead of squeezing every label until words break mid-word. The notch keeps
+  up with the scrolling, and the current page is brought into view.
+- Bubble navigation bar: the ball now sits half in and half out of the bar, and
+  the notch has the ball's own curvature instead of a wider curve of its own —
+  it used to look like it was resting on a dip rather than seated in one.
+- Bubble navigation bar: more contrast in the dark theme. The bar was almost the
+  same colour as the page behind it, with its outline left to the shadow alone.
+
+### Fixed
+- Bubble navigation bar: the outline crossed over itself when the notch reached
+  either end, because the limit accounted for the fillet but not for the rounded
+  corner. A self-intersecting shape is filled patchily, or not at all.
+- Store: long lines in a card's changelog ran past the edge of the panel instead
+  of wrapping, and Markdown markers showed up as literal asterisks.
+
 ## [2.6.73] - 2026-08-14
 
 ### Fixed
