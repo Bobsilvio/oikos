@@ -6,6 +6,29 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.75] - 2026-08-19
+
+### Added
+- Built-in chips (Temperature, Solar, Battery, House load, Grid, Self-use, Rain)
+  can now be configured from the gear button in the chip editor: pick which
+  sensor they read, and change colour, icon, value format, unit and label. It
+  starts pre-filled with the chip's own sensor, so it's ready to tweak. "Reset
+  to default" puts the chip back to its native behaviour.
+- Any chip can open a popup panel on tap — chosen from the same gear button.
+
+### Fixed
+- Popup panel picker: selecting an entry now works. It used to close the moment
+  you touched an option, leaving the field empty. The list also opens upward
+  when there isn't room below, so nothing is cut off by the dialog footer.
+- The ball on the bubble navigation bar is now tappable, and the ⋮ menu closes
+  again when tapped a second time. From the Store you can go straight back to
+  Settings.
+- Graphics quality score now reflects the real device. Phones were badly
+  under-scored (an iPhone 15 read 32/100); the score is now a measured one.
+- Security fix.
+
+---
+
 ## [2.6.74] - 2026-08-15
 
 ### Changed
