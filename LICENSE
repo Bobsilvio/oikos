@@ -1,0 +1,108 @@
+Oikos — Licenza d'uso / Software License
+Copyright (c) 2026 Silvio Vaira. Tutti i diritti riservati. All rights reserved.
+
+════════════════════════════════════════════════════════════════════════════════
+ITALIANO
+════════════════════════════════════════════════════════════════════════════════
+
+Oikos è software proprietario. Il codice contenuto in questo repository — incluso
+il pannello, il server dell'add-on, l'integrazione per Home Assistant, le immagini
+e la documentazione — è protetto dal diritto d'autore e resta di proprietà
+esclusiva dell'autore.
+
+1. COSA PUOI FARE
+   a) Installare e usare Oikos sulle TUE installazioni di Home Assistant, secondo
+      i termini dell'abbonamento (licenza nominale, legata all'indirizzo email,
+      valida per una installazione; 40 giorni di prova al primo avvio).
+   b) Consultare il codice di questo repository a scopo di studio, verifica di
+      sicurezza e segnalazione di problemi.
+   c) Creare e distribuire CARD PERSONALIZZATE per Oikos: sono opere tue, e per
+      svilupparle esiste l'SDK "oikos-card-starter", pubblicato con licenza MIT.
+
+2. COSA NON PUOI FARE, senza autorizzazione scritta dell'autore
+   a) Copiare, ripubblicare, ridistribuire o rivendere Oikos o parti di esso,
+      in forma originale o modificata, gratuitamente o a pagamento.
+   b) Creare opere derivate del pannello, del server o dell'integrazione, né
+      pubblicarne fork destinati all'uso da parte di terzi.
+   c) Decompilare, disassemblare o ricostruire il codice sorgente delle parti
+      distribuite in forma compilata, salvo nei limiti inderogabili di legge.
+   d) Rimuovere, aggirare o disabilitare il controllo della licenza, i limiti
+      dell'abbonamento o le indicazioni di paternità e copyright.
+   e) Usare il nome "Oikos", il logo o i segni distintivi per prodotti, servizi
+      o distribuzioni non autorizzati.
+
+3. CONTRIBUTI
+   Inviando codice, testi o traduzioni (pull request, issue, discussioni)
+   concedi all'autore una licenza perpetua, mondiale, irrevocabile e gratuita
+   di usare, modificare e distribuire il tuo contributo come parte di Oikos.
+   Resti titolare del diritto d'autore su quanto hai scritto.
+
+4. COMPONENTI DI TERZI
+   Oikos include componenti di terze parti distribuiti con le proprie licenze,
+   che restano valide per quelle parti. Home Assistant è un marchio dei
+   rispettivi titolari; questo progetto non è affiliato né approvato da loro.
+
+5. NESSUNA GARANZIA
+   Il software è fornito "così com'è", senza garanzie di alcun tipo, esplicite o
+   implicite, incluse quelle di commerciabilità, idoneità a uno scopo particolare
+   e assenza di violazioni. L'autore non risponde di danni derivanti dall'uso o
+   dall'impossibilità d'uso del software, nei limiti consentiti dalla legge.
+
+6. VIOLAZIONI
+   L'inosservanza di questi termini fa cessare immediatamente il diritto d'uso e
+   può essere perseguita nelle sedi competenti.
+
+Per permessi diversi da quelli qui concessi: https://homeoikos.com
+
+════════════════════════════════════════════════════════════════════════════════
+ENGLISH
+════════════════════════════════════════════════════════════════════════════════
+
+Oikos is proprietary software. The code in this repository — including the panel,
+the add-on server, the Home Assistant integration, images and documentation — is
+protected by copyright and remains the exclusive property of the author.
+
+1. WHAT YOU MAY DO
+   a) Install and use Oikos on YOUR OWN Home Assistant instances, under the terms
+      of the subscription (named licence, tied to your email address, valid for a
+      single instance; 40-day trial on first run).
+   b) Read the code in this repository for study, security review and bug reports.
+   c) Create and distribute your own CUSTOM CARDS for Oikos: they are your work,
+      and the "oikos-card-starter" SDK is published under the MIT licence for that
+      purpose.
+
+2. WHAT YOU MAY NOT DO, without the author's written permission
+   a) Copy, republish, redistribute or resell Oikos or any part of it, whether
+      original or modified, free of charge or for a fee.
+   b) Create derivative works of the panel, the server or the integration, or
+      publish forks intended for use by third parties.
+   c) Decompile, disassemble or reverse engineer the parts distributed in compiled
+      form, except to the extent such restriction is prohibited by law.
+   d) Remove, circumvent or disable the licence check, the subscription limits, or
+      any authorship and copyright notice.
+   e) Use the "Oikos" name, logo or distinctive signs for unauthorised products,
+      services or distributions.
+
+3. CONTRIBUTIONS
+   By submitting code, text or translations (pull requests, issues, discussions)
+   you grant the author a perpetual, worldwide, irrevocable, royalty-free licence
+   to use, modify and distribute your contribution as part of Oikos. You retain
+   copyright in what you wrote.
+
+4. THIRD-PARTY COMPONENTS
+   Oikos includes third-party components distributed under their own licences,
+   which continue to apply to those parts. Home Assistant is a trademark of its
+   respective owners; this project is not affiliated with or endorsed by them.
+
+5. NO WARRANTY
+   The software is provided "as is", without warranty of any kind, express or
+   implied, including merchantability, fitness for a particular purpose and
+   non-infringement. To the extent permitted by law, the author shall not be
+   liable for any damages arising from the use of, or inability to use, the
+   software.
+
+6. TERMINATION
+   Failure to comply with these terms immediately terminates the right to use the
+   software and may be pursued through the competent courts.
+
+For permissions beyond those granted here: https://homeoikos.com

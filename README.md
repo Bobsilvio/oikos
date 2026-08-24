@@ -8,7 +8,7 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.5-orange?style=flat-square)](https://github.com/Bobsilvio/oikos/releases)
 [![HA Compatible](https://img.shields.io/badge/Home%20Assistant-2024.1%2B-41BDF5?style=flat-square&logo=home-assistant)](https://www.home-assistant.io)
-[![License](https://img.shields.io/badge/license-proprietary-red?style=flat-square)](#-license--licenza)
+[![License](https://img.shields.io/badge/license-proprietary-red?style=flat-square)](LICENSE)
 [![Discussions](https://img.shields.io/github/discussions/Bobsilvio/oikos?style=flat-square&color=6366f1)](https://github.com/Bobsilvio/oikos/discussions)
 
 [![Website](https://img.shields.io/badge/🌐%20homeoikos.com-Visit%20site-orange?style=for-the-badge)](https://homeoikos.com/)
@@ -187,6 +187,11 @@ services:
 **40 giorni di prova gratuita** al primo avvio, senza carta di credito.
 Dopo il trial è richiesto un abbonamento. Licenza nominale (legata all'email), copre **1 installazione HA**. Gestione dal portale integrato nell'app (Stripe o PayPal).
 
+Oikos è **software proprietario**: il codice di questo repository non è libero né open source.
+Puoi usarlo sulle tue installazioni e scrivere card tue; non puoi ripubblicarlo, ridistribuirlo
+o farne versioni derivate. I termini completi sono nel file [LICENSE](LICENSE).
+Per creare card c'è l'SDK [oikos-card-starter](https://github.com/Bobsilvio/oikos-card-starter), con licenza MIT.
+
 ---
 
 ### 💬 Community e supporto
@@ -351,6 +356,11 @@ services:
 
 **40-day free trial** on first run, no credit card required.
 A subscription is required after the trial. License is tied to your email and covers **1 HA instance**. Managed from the in-app portal (Stripe or PayPal).
+
+Oikos is **proprietary software**: the code in this repository is neither free nor open source.
+You may use it on your own instances and write your own cards; you may not republish,
+redistribute or create derivative versions of it. Full terms in [LICENSE](LICENSE).
+To build cards, use the [oikos-card-starter](https://github.com/Bobsilvio/oikos-card-starter) SDK, MIT licensed.
 
 ---
 
