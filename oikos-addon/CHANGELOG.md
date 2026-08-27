@@ -6,6 +6,35 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.76] - 2026-08-27
+
+### Added
+- Person card: two compact layouts for when the card sits side by side with
+  another on a phone — "Row" (avatar left, name and place right) and "Portrait"
+  (the ring around the avatar *is* the battery level). Pick one under "On narrow
+  screens" in the card settings, or keep the previous wide layout. The card
+  measures its own width, so a wide column and a narrow one on the same page
+  each behave correctly. On a narrow card the map becomes a corner button
+  instead of a background — at that size it was unreadable and pushed the name
+  and numbers off the card.
+- Community links (TikTok, Discord) in Account and at the bottom of Settings.
+
+### Changed
+- Free trial is now 15 days for new accounts. Anyone already on a trial keeps
+  the days they were given.
+- Removing a column now moves its cards into the neighbouring column instead of
+  deleting them. Only the last remaining column removes the row.
+- The add-on now follows the recheck interval the licence server asks for
+  instead of checking every hour regardless — far fewer pointless requests from
+  installations whose licence has lapsed, while a renewal is still picked up
+  within a day (and immediately on restart).
+
+### Fixed
+- Popup panel picker: opens upward when there is no room below.
+- Security fix.
+
+---
+
 ## [2.6.75] - 2026-08-19
 
 ### Added
