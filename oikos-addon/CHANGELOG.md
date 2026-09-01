@@ -6,6 +6,27 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.78] - 2026-08-31
+
+### Fixed
+- The "restart Home Assistant" notice vanished the moment you installed a
+  package. PackageSection auto-collapses once `installed` turns true, and the
+  notice lived inside that section: it was hidden at the exact moment it needed
+  reading. What stayed visible were the fields below, with entity pickers
+  drawing from a list where the package entities do not exist yet. This affects
+  every card that ships a package, not just one.
+- The notice now sits outside the collapsible section, the section stays open
+  while a restart is pending, and there is a button that validates the
+  configuration before restarting. A "Already restarted" escape hatch clears the
+  flag by hand: it lives in sessionStorage and survives a reload, so without it
+  the notice hung around until the tab was closed.
+- First install and update are told apart, with different wording: on a first
+  install the entities do not exist yet, so there is nothing to configure.
+- An `input_text` that was never set reads `unknown`, and that string landed in
+  the field as if it were the chosen value, hiding the placeholder.
+
+---
+
 ## [2.6.77] - 2026-08-27
 
 ### Fixed
