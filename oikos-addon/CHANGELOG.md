@@ -6,6 +6,58 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.79] - 2026-09-07
+
+### Added
+- Card development mode (add-on + Store): install cards from outside, e.g.
+  Claude through MCP or plain curl, without going through the Store by hand.
+  It is a code-execution channel, so: off by default, its own token (neither
+  the licence nor the HA token), mandatory expiry capped at 8 hours, valid on
+  five endpoints only, constant-time token comparison. The panel can reload
+  itself over the existing SSE channel. Install reuses upload-zip, so its
+  validations and the premium block stay in force.
+- Photo attachments in support tickets opened from the panel.
+- Car reading in Live Energy and Today's Summary. When five boxes do not fit
+  the row (four or two columns) the car becomes a full-width bar under the
+  other four instead of an orphan box a quarter wide.
+- Person card: two compact layouts (row / portrait) to sit side by side,
+  selectable from the card settings.
+- Removing a column moves its cards to the remaining ones instead of deleting
+  them.
+
+### Changed
+- Cards load in parallel. The three loaders (store, remote plugins, plugins
+  folder) awaited each card in turn, translations included, so one slow card
+  held back every card after it. Registration order still follows the
+  manifest.
+- "Add card" picker on phones: below 620px it becomes a two-step flow with a
+  way back to the list, so the preview no longer runs off the screen.
+- Bubble bar: item widths now derive from the notch geometry. The item could be
+  narrower than the notch, the bubble landed on the neighbouring icon and the
+  block pushed it to the right.
+- Graphics quality score is measured instead of inferred from APIs that Safari
+  does not expose.
+
+### Fixed
+- Inside Home Assistant the panel could come out cut in half, with the HA page
+  showing white underneath: Energy, Store, any long page, with the bar at the
+  side or at the bottom. The shell asked for 100% of a parent chain that has
+  no height in HA, so it collapsed to its content. The shadow host now takes
+  the viewport minus the safe-area insets HA pads the panel with, and fills
+  the window without overflowing it.
+- Copying a card lost its configuration. Cards with `version >= 2` save under
+  a `:v2` key that copy page, duplicate card, copy to another page and
+  duplicate-id repair did not look at: the copy was born without settings and
+  the appliances card claimed its package was not installed. Fixed at the root
+  in copyCardConfig.
+- A corrupt configuration file no longer restarts the panel empty with the
+  wizard, silently overwriting the broken file on the first save: the
+  unreadable file is set aside and writes are atomic (tmp + rename).
+- The version reported to the licence server was "dev": it was read from
+  window before main-panel assigned it.
+
+---
+
 ## [2.6.78] - 2026-08-31
 
 ### Fixed
