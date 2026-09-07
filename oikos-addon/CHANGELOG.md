@@ -6,6 +6,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.80] - 2026-09-07
+
+### Fixed
+- Configuration saves silently rejected by the add-on. The JSON body limit was
+  256 kB for every route, and the panel saves whole keys: a dashboard, a card
+  configuration, or on first boot every key the server does not have yet. One
+  customer collected 565 `request entity too large` errors in 28 hours: every
+  save refused, the PC carrying on with its localStorage while the phone read
+  a stale configuration from the server, with empty tiles and no error on
+  screen. The limit is now 8 MB.
+- A rejected save is no longer silent. The `.catch` on the config POST was
+  meant for being offline, and a 413 is not a network error, so it never went
+  through it. A non-ok response now lands in the diagnostic buffer (so it
+  shows in the support report) and raises one notification every ten minutes,
+  not one per attempt. Offline stays quiet.
+
+---
+
 ## [2.6.79] - 2026-09-07
 
 ### Added
