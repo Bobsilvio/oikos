@@ -6,6 +6,25 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.83] - 2026-09-08
+
+### Fixed
+- Phone inside the Home Assistant app: the page still moved by the height of
+  the status bar, the top bar sliding under it and a light strip showing
+  above. On narrow screens (under 870px, where HA's sidebar is an overlay and
+  takes no room) the panel root is now pinned to the window with
+  `position: fixed`. Whether it is the webview scrolling or a padding above
+  the panel, the content stays put and only the empty page underneath moves.
+  The safe-area padding is also removed from the panel's grandparent, in case
+  a HA version puts it there.
+- The diagnostic report now always carries two lines with the layout
+  measurements at boot: window and viewport heights, scroll position,
+  document height, HA's and `env()` safe-area insets, padding of the panel's
+  parents and the chain of ancestors. Enough to tell what moves without a
+  screen recording.
+
+---
+
 ## [2.6.82] - 2026-09-08
 
 ### Fixed
