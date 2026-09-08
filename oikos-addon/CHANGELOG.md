@@ -6,6 +6,39 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.84] - 2026-09-08
+
+### Added
+- Card development channel over a dedicated port, so an external program (the
+  `oikos-mcp` server that connects Claude) can install cards without going
+  through the panel by hand. The add-on publishes no port of its own: the panel
+  talks through Home Assistant's ingress, which authenticates it, and that
+  channel is unusable from outside. Port `3565` is declared as `null`, so HA
+  does not publish it until you map it yourself under Settings → Add-ons →
+  Network. Even then the add-on only listens while development mode is on, dies
+  at expiry, and accepts only the five development endpoints with the token.
+  The check comes before the normal one on purpose: that one lets requests
+  through based on the LICENCE, which on a raw port is not authentication — it
+  is valid for the installation, not for whoever knocks.
+- The Store now shows the MCP configuration block already filled in with
+  address and token, ready to paste, plus the reminder to map the port first.
+
+### Fixed
+- Panel as tall as its content instead of the window, inside Home Assistant:
+  short pages left the rest of the window empty and the bottom bar drifted up
+  with them. The panel loader set `height:100%` as an inline style, which beats
+  any stylesheet; that percentage resolved against `oikos-panel`, which HA
+  leaves `display:inline` with no height, so it fell back to `auto`. The height
+  is now declared in one place only, `:host`, with the window as its reference.
+  The rule carries `!important` because the loader lives outside the bundle and
+  browsers cache it for a long time: a stale copy would silently bring the
+  defect back.
+- Card development mode was mounted inside the JavaScript sub-tab, invisible to
+  anyone on HTML or JSON. It installs cards of any format, so it now sits at the
+  Community level.
+
+---
+
 ## [2.6.83] - 2026-09-08
 
 ### Fixed

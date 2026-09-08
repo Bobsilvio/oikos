@@ -1,6 +1,6 @@
 name: "Oikos"
 description: "Dashboard Home Assistant completamente personalizzabile \u2014 card, chip, distintivi e popup componibili"
-version: "2.6.83"
+version: "2.6.84"
 slug: oikos_dashboard
 url: https://github.com/Bobsilvio/oikos
 
@@ -12,9 +12,19 @@ arch:
   - armv7
   - i386
 
-# Nessuna porta host pubblicata: il panel comunica SOLO via HA ingress
+# La 3564 NON e' pubblicata: il panel comunica SOLO via HA ingress
 # (discovery.json → /api/hassio_ingress/...). Esporre 3564 sulla LAN darebbe
 # accesso senza autenticazione alle API e al proxy WebSocket del Supervisor.
+#
+# La 3565 e' un'altra cosa: serve solo al server MCP (Claude che scrive card),
+# che dall'esterno l'ingress non puo' usarlo. Vale `null` = HA NON la pubblica
+# finche' l'utente non la mappa a mano da Impostazioni → Add-on → Rete. Anche
+# mappata, l'addon ci mette in ascolto qualcosa solo mentre la modalita'
+# sviluppo card e' accesa, e accetta solo i suoi cinque endpoint col token.
+ports:
+  3565/tcp: null
+ports_description:
+  3565/tcp: "Sviluppo card / MCP — lasciare vuoto se non si usa Claude per creare card"
 
 # Nessuna opzione configurabile \u2014 license server fisso, key gestita dal pannello in-app
 

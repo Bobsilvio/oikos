@@ -105,7 +105,13 @@ class OikosPanel extends HTMLElement {
       await loadBundle()
       // Il bundle ha registrato `oikos-panel-impl`
       this._impl = document.createElement('oikos-panel-impl')
-      this._impl.style.cssText = 'display:block;width:100%;height:100%'
+      // NIENTE height qui. Uno stile inline batte il foglio dello shadow DOM:
+      // un `height:100%` si misurava su `oikos-panel`, che HA lascia
+      // `display:inline` senza altezza, quindi la percentuale ricadeva su
+      // `auto` e il pannello diventava alto quanto il suo contenuto — pagine
+      // corte con la finestra vuota sotto, barre che scorrevano via. L'altezza
+      // la decide `:host` in globals.css, che ha il viewport come riferimento.
+      this._impl.style.cssText = 'display:block;width:100%'
       this.appendChild(this._impl)
       this._forward()
     } catch (e) {
