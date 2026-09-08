@@ -6,6 +6,27 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.82] - 2026-09-08
+
+### Fixed
+- iPhone inside the Home Assistant app, again: with 2.6.81 the whole page
+  still scrolled by the height of the home indicator, pushing the top bar
+  under the status bar and leaving a light band under the bubble bar. The
+  negative margins did not cancel HA's bottom padding. The panel now removes
+  the safe-area padding HA puts on its container outright, the same effect as
+  HA's own `handle_safe_area` opt-out but without touching anybody's
+  configuration.yaml, and the shell is back to the full window height.
+- Safe-area insets come from one place. Home Assistant exposes them as
+  `--safe-area-inset-*`, and the companion app may pass them through that
+  variable rather than through `env()`. Every top bar, bubble bar, modal and
+  sheet now reads `--oikos-inset-*`, which takes HA's value when present and
+  falls back to `env()` otherwise, instead of forty separate `env()` calls.
+- If the HA page still ends up taller than the window, the panel writes one
+  line with the measurements into the diagnostic buffer, so the support report
+  says what happened instead of a screenshot.
+
+---
+
 ## [2.6.81] - 2026-09-08
 
 ### Fixed
