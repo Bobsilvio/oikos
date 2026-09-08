@@ -6,6 +6,22 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.81] - 2026-09-08
+
+### Fixed
+- iPhone inside the Home Assistant app: a light strip above the panel, a
+  second dark band under it, and the bubble bar pushed off the bottom of the
+  screen. Recent HA pads the custom panel with the safe-area insets (notch,
+  home indicator); Oikos already handles those itself with `env()` in the top
+  bar, the bubble bar and the modals, so every inset was counted twice.
+  Subtracting the insets from the height (2.6.79) was not enough: the double
+  band at the top stayed, and at the bottom HA's padding showed through in
+  the colour of HA's own theme. The shadow host now cancels HA's padding with
+  equal and opposite margins and covers the whole window again, so each inset
+  is counted once. On older HA the variables do not exist and nothing changes.
+
+---
+
 ## [2.6.80] - 2026-09-07
 
 ### Fixed
