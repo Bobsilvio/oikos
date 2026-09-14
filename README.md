@@ -2,7 +2,8 @@
 
 <img src="oikos-addon/icon.png" alt="Oikos" width="246"/>
 
-# Oikos
+# Oikos 
+# https://homeoikos.com
 
 **The composable Home Assistant dashboard — build anything, no YAML, no code.**
 
