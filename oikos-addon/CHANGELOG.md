@@ -6,6 +6,38 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.85] - 2026-09-20
+
+### Added
+- **Live previews in the Store and the card picker.** A card that is already
+  installed is rendered for real, with sample data, instead of a screenshot:
+  a preview context overrides `useHass`, `useCardConfig` and the package
+  installer, so configuration stays in memory, service calls do nothing and
+  package operations are disabled. Cards with no component keep their images.
+  It is isolation, not a sandbox for arbitrary third-party code. Built-in
+  cards now have sample data too: appliance list, entity list, room and Card
+  Panel — the last one gives each nested card its own configuration.
+
+- **«See in page» in card settings.** Any redrawn preview is a copy, and a
+  copy can be wrong: width, a simulated screen, the cards next to it. The real
+  card in the page already updates while you edit — the settings window was
+  simply on top of it. This button turns the window into a side panel with no
+  veil, opened on the side away from the card, and scrolls the card into view
+  with a highlight.
+
+### Fixed
+- **The settings preview showed a card that did not exist.** It always drew at
+  520 px, so with two cards side by side on a phone the name and the value
+  looked whole here and came out truncated once saved — a decent card took
+  several rounds of save and check. The preview now uses the width measured in
+  the page, and a card given a fixed height is cut where the page cuts it.
+- Store, card detail: the header now wraps when there is no room. The
+  desktop/phone choice looks at the window, but that panel sits next to the
+  list: on a wide, short screen such as a car's, the three buttons took the
+  row and the name and badges ended up stacked in a few pixels.
+
+---
+
 ## [2.6.84] - 2026-09-08
 
 ### Added

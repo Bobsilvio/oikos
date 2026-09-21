@@ -1,0 +1,141 @@
+{
+  "source": "oikos-cards/cards/person/src/Card.jsx",
+  "mode": "Original component with demo SDK; not full-dashboard validation; map with coordinates not captured.",
+  "cases": [
+    {
+      "id": "01-non-configurata",
+      "config": {
+        "personEntity": "",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "",
+        "driveEntity": "",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "Configura",
+      "errors": []
+    },
+    {
+      "id": "02-persona",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "",
+        "driveEntity": "",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "Giulia",
+      "errors": []
+    },
+    {
+      "id": "03-nome",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "",
+        "driveEntity": "",
+        "label": "Giulia · telefono",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "Giulia · telefono",
+      "errors": []
+    },
+    {
+      "id": "04-batteria",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "sensor.battery",
+        "walkEntity": "",
+        "driveEntity": "",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "76%",
+      "errors": []
+    },
+    {
+      "id": "05-piedi",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "sensor.walk",
+        "driveEntity": "",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "18 min",
+      "errors": []
+    },
+    {
+      "id": "06-auto",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "",
+        "driveEntity": "sensor.drive",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "7 min",
+      "errors": []
+    },
+    {
+      "id": "07-mappa-senza-coordinate",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "",
+        "walkEntity": "",
+        "driveEntity": "",
+        "label": "",
+        "showMap": true
+      },
+      "dark": false,
+      "expected": "Giulia",
+      "errors": []
+    },
+    {
+      "id": "08-completa",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "sensor.battery",
+        "walkEntity": "sensor.walk",
+        "driveEntity": "sensor.drive",
+        "label": "",
+        "showMap": false
+      },
+      "dark": false,
+      "expected": "76%",
+      "errors": []
+    },
+    {
+      "id": "09-scuro",
+      "config": {
+        "personEntity": "person.demo",
+        "gpsEntity": "",
+        "batteryEntity": "sensor.battery",
+        "walkEntity": "sensor.walk",
+        "driveEntity": "sensor.drive",
+        "label": "",
+        "showMap": false
+      },
+      "dark": true,
+      "expected": "76%",
+      "errors": []
+    }
+  ]
+}
