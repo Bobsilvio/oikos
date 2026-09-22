@@ -6,6 +6,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.86] - 2026-09-22
+
+### Fixed
+- **The login button on the licence screen wiped the key from the add-on.**
+  Going back to the login from the expired/unreachable licence screen pushed an
+  EMPTY key to the add-on: a moment without network (a customer's DNS failing
+  intermittently) and one tap on "login" removed the licence from every device,
+  and every feature answered "License not valid or not activated" — even right
+  after paying. The login now shows only in that browser; the key on the add-on
+  changes only when a new one is saved, or when it is removed on purpose from
+  the subscription page.
+- The add-on now tells "no licence key saved" apart from "key rejected by the
+  server". They used to be the same message.
+- The manual ZIP upload shows the error in the user's language instead of the
+  raw English text from the add-on.
+
+---
+
 ## [2.6.85] - 2026-09-20
 
 ### Added
