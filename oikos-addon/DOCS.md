@@ -19,7 +19,7 @@ Dashboard completamente personalizzabile per Home Assistant: card, chip, distint
 
 ### 💳 Licenza
 
-- **40 giorni di prova gratuita**, senza carta di credito
+- **15 giorni di prova gratuita**, senza carta di credito
 - Abbonamento **mensile o annuale** disponibile dopo il trial
 - La licenza è nominale (legata alla tua email) e copre **1 installazione HA**
 - Registrati su **[homeoikos.com](https://homeoikos.com)** o gestiscila dal portale integrato (Stripe o PayPal)

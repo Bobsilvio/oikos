@@ -185,7 +185,7 @@ services:
 
 ### 🔑 Licenza e abbonamento
 
-**40 giorni di prova gratuita** al primo avvio, senza carta di credito.
+**15 giorni di prova gratuita** al primo avvio, senza carta di credito.
 Dopo il trial è richiesto un abbonamento. Licenza nominale (legata all'email), copre **1 installazione HA**. Gestione dal portale integrato nell'app (Stripe o PayPal).
 
 Oikos è **software proprietario**: il codice di questo repository non è libero né open source.
