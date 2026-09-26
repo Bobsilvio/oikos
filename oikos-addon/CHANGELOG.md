@@ -6,6 +6,18 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.87] - 2026-09-26
+
+### Fixed
+- **A revoked licence left no way out.** That screen was the only one without a
+  "Retry" button: only "Contact support" and "Uninstall". A negative answer is
+  cached for six hours, so when support fixed the licence — or the revocation
+  was wrong in the first place — the customer stayed locked out and restarting
+  changed nothing. Retry is now there, and the first check after the panel
+  starts always asks the server instead of trusting a cached NO.
+
+---
+
 ## [2.6.86] - 2026-09-22
 
 ### Fixed
