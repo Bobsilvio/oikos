@@ -6,6 +6,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.89] - 2026-09-27
+
+### Changed
+- **Oikos goes to sleep when the licence has ended.** Once the trial or the
+  subscription is over, the add-on stops everything it did in the background:
+  no more licence checks every hour, no Store requests, and no live connection
+  to Home Assistant receiving every state change. This also holds after a
+  restart. The panel still opens and shows the renewal screen. After buying,
+  tap "I paid, update status" (or "Retry"): Oikos wakes up at once. Saving a
+  different key wakes it up too.
+- With a valid licence, the add-on now checks it at the pace set by the server
+  (once a day) instead of every hour while the panel is open.
+
+---
+
 ## [2.6.88] - 2026-09-27
 
 ### Fixed
