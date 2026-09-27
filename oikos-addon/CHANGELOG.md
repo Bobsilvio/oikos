@@ -6,6 +6,19 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.88] - 2026-09-27
+
+### Fixed
+- **Premium cards are recognised by their content, not only by their id.**
+  The Store now marks every premium bundle. Without an active subscription,
+  the add-on refuses a premium card even when its id was changed in the
+  manifest, or when it was copied in while the Store could not be reached. It
+  also refuses a ZIP upload that contains one.
+- Downloads from the premium Store now tell the licence server which add-on
+  installation made them, to spot a key shared across several homes.
+
+---
+
 ## [2.6.87] - 2026-09-26
 
 ### Fixed
