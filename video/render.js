@@ -5,6 +5,7 @@
 //   node render.js --fps 60             -> frame rate diverso
 //   node render.js --from 40 --to 50    -> solo un intervallo (anteprima veloce)
 //   node render.js --stills 3,15,42     -> salva solo PNG di quegli istanti in frames/
+//   node render.js --page social.html   -> versione verticale 9:16 (-> oikos-social.mp4)
 //
 // Requisiti: Playwright con Chromium e ffmpeg (nel PATH, oppure nella variabile FFMPEG,
 // oppure `pip install imageio-ffmpeg`).
@@ -18,8 +19,9 @@ const args = Object.fromEntries(
   process.argv.slice(2).reduce((acc, a, i, all) => (a.startsWith("--") ? [...acc, [a.slice(2), all[i + 1]]] : acc), [])
 );
 const FPS = Number(args.fps || 30);
-const OUT = path.resolve(__dirname, args.out || "oikos-presentazione.mp4");
-const PAGE = "file://" + path.resolve(__dirname, "presentazione.html") + "?render";
+const PAGE_FILE = args.page || "presentazione.html";
+const OUT = path.resolve(__dirname, args.out || (PAGE_FILE === "social.html" ? "oikos-social.mp4" : "oikos-presentazione.mp4"));
+const PAGE = "file://" + path.resolve(__dirname, PAGE_FILE) + "?render";
 
 function findFfmpeg() {
   if (process.env.FFMPEG) return process.env.FFMPEG;
@@ -32,6 +34,8 @@ function findFfmpeg() {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   await page.goto(PAGE);
+  const size = await page.evaluate(() => ({ width: window.WIDTH || 1920, height: window.HEIGHT || 1080 }));
+  await page.setViewportSize(size);
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all([...document.images].map((i) => i.decode().catch(() => {})));

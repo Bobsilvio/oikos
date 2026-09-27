@@ -1,6 +1,32 @@
 # Video presentazione Oikos
 
-Video di circa 91 secondi, 1920×1080, 30 fps, **senza audio** (voce e musica si aggiungono dopo).
+Due versioni, entrambe a 30 fps e **senza audio** (voce e musica si aggiungono dopo):
+
+- **Social verticale 9:16** — `social.html`, 1080×1920, 43 secondi, ritmo veloce per Reels, TikTok e Shorts.
+- **Orizzontale 16:9** — `presentazione.html`, 1920×1080, 91 secondi, più descrittiva.
+
+## Versione social (9:16)
+
+```bash
+node render.js --page social.html      # → oikos-social.mp4
+```
+
+Testi e contenuti importanti stanno lontani dal bordo alto e basso, dove le app social mettono nome utente, didascalia e pulsanti.
+
+| Tempo | Scena |
+|---|---|
+| 0:00 | "La tua casa. Finalmente bellissima." |
+| 0:03 | Logo con esplosione di luce, "Oikos" |
+| 0:06 | Telefono in 3D con la dashboard che si popola: "Tutta la casa. In tasca." |
+| 0:10 | Casa con impianto FV in panoramica, valori kW che salgono: "Il sole, in tempo reale." |
+| 0:15 | Card Bolletta che si ribalta in 3D: "Sai quanto spendi. Prima." |
+| 0:19 | Muro di card in prospettiva: "Decine di card. Pronte." |
+| 0:23 | I widget volano nella card: "Crea la tua. Drag & drop." |
+| 0:28 | Prompt a Claude Code, la card appare: "Descrivila. Claude la crea." |
+| 0:34 | Raffica: Screen saver, Meteo dinamico, Popup smart, Dark mode, Card HACS |
+| 0:38 | Logo, homeoikos.com, 15 giorni gratis |
+
+## Versione orizzontale (16:9)
 
 - `presentazione.html` — tutte le scene, animate in HTML/CSS. Aperta nel browser si riproduce in loop; `presentazione.html?t=40` salta al secondo 40.
 - `render.js` — la trasforma in `oikos-presentazione.mp4` fotogramma per fotogramma.
