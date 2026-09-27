@@ -60,7 +60,7 @@ function findFfmpeg() {
   const ff = spawn(findFfmpeg(), [
     "-y", "-loglevel", "error",
     "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
-    "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p",
+    "-c:v", "libx264", "-preset", "slow", "-crf", String(args.crf || 17), "-pix_fmt", "yuv420p",
     "-movflags", "+faststart", OUT,
   ], { stdio: ["pipe", "inherit", "inherit"] });
 
