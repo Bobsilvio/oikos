@@ -6,6 +6,7 @@
 //   node render.js --from 40 --to 50    -> solo un intervallo (anteprima veloce)
 //   node render.js --stills 3,15,42     -> salva solo PNG di quegli istanti in frames/
 //   node render.js --page social.html   -> versione verticale 9:16 (-> oikos-social.mp4)
+//   Una pagina può chiedere una densità diversa con window.DPR (es. 360x640 a 3x = 1080x1920).
 //
 // Requisiti: Playwright con Chromium e ffmpeg (nel PATH, oppure nella variabile FFMPEG,
 // oppure `pip install imageio-ffmpeg`).
@@ -32,10 +33,18 @@ function findFfmpeg() {
 
 (async () => {
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
+  let page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   await page.goto(PAGE);
-  const size = await page.evaluate(() => ({ width: window.WIDTH || 1920, height: window.HEIGHT || 1080 }));
-  await page.setViewportSize(size);
+  const size = await page.evaluate(() => ({ width: window.WIDTH || 1920, height: window.HEIGHT || 1080, dpr: window.DPR || 1 }));
+  if (size.dpr !== 1) {
+    // Pagine disegnate a misura di telefono (es. 360x640 a 3x): serve una pagina nuova con quella densità.
+    await page.close();
+    page = await browser.newPage({ viewport: { width: size.width, height: size.height }, deviceScaleFactor: size.dpr });
+    page.on("pageerror", (e) => console.error("errore nella pagina:", e.message));
+    await page.goto(PAGE);
+  } else {
+    await page.setViewportSize({ width: size.width, height: size.height });
+  }
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all([...document.images].map((i) => i.decode().catch(() => {})));
