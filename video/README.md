@@ -28,11 +28,7 @@ Testi e contenuti importanti stanno lontani dal bordo alto e basso, dove le app 
 
 ## Elettrodomestici in modalità Pulse (9:16)
 
-```bash
-node render.js --page elettrodomestici.html --out oikos-elettrodomestici.mp4
-```
-
-40 secondi che imitano la dashboard sul telefono: gli otto elettrodomestici si accendono uno dopo l'altro nel riepilogo, la pagina scorre tra le card in modalità Pulse (anello e bordo pulsano più veloci quanto più l'apparecchio assorbe), zoom su lavatrice e wallbox, poi arriva la notifica "Lavatrice: ciclo terminato". Le card sono ricostruite in HTML sull'aspetto di `card-previews/appliance.png`; i consumi sono inventati ma plausibili (circa 7,3 kW coperti da un FV da 6,8 kW). Dati e orari sono nell'array `AP` in fondo al file.
+Questo video usa la card Elettrodomestico vera, che è premium: lo strumento sta nel repository privato `oikos-cards-premium`, in `tools/video-pulse/` (branch `video/elettrodomestici-pulse`). Qui resta solo `render.js`, che registra anche pagine a densità di telefono (`window.DPR`).
 
 ## Versione orizzontale (16:9)
 
