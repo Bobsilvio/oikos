@@ -26,6 +26,14 @@ Testi e contenuti importanti stanno lontani dal bordo alto e basso, dove le app 
 | 0:34 | Raffica: Screen saver, Meteo dinamico, Popup smart, Dark mode, Card HACS |
 | 0:38 | Logo, homeoikos.com, 15 giorni gratis |
 
+## Elettrodomestici in modalità Pulse (9:16)
+
+```bash
+node render.js --page elettrodomestici.html --out oikos-elettrodomestici.mp4
+```
+
+40 secondi che imitano la dashboard sul telefono: gli otto elettrodomestici si accendono uno dopo l'altro nel riepilogo, la pagina scorre tra le card in modalità Pulse (anello e bordo pulsano più veloci quanto più l'apparecchio assorbe), zoom su lavatrice e wallbox, poi arriva la notifica "Lavatrice: ciclo terminato". Le card sono ricostruite in HTML sull'aspetto di `card-previews/appliance.png`; i consumi sono inventati ma plausibili (circa 7,3 kW coperti da un FV da 6,8 kW). Dati e orari sono nell'array `AP` in fondo al file.
+
 ## Versione orizzontale (16:9)
 
 - `presentazione.html` — tutte le scene, animate in HTML/CSS. Aperta nel browser si riproduce in loop; `presentazione.html?t=40` salta al secondo 40.
