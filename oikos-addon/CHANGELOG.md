@@ -6,6 +6,35 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.90] - 2026-10-03
+
+### Added
+- **Find the right entity without leaving Oikos.** The entity picker in every
+  card's settings has a new "Integrations" view: browse integration → device →
+  entity, the same path as in Home Assistant, with logos and counts. Every row
+  now shows which integration and device the entity belongs to, and search
+  matches those too ("zigbee washing machine").
+- **Entity details before you choose.** The ⓘ button on each row opens a sheet
+  with the current state, the states the entity can take, and its history over
+  24 hours or 7 days: which states it actually had, how often, for how long and
+  when last. For a washing machine sensor you see at a glance whether it goes
+  through "Rinse" and "Spin". Numeric sensors show the trend with min, average
+  and max.
+- Diagnostic, configuration and hidden entities are left out of the picker by
+  default; a counter at the bottom shows how many and brings them back.
+- **Room card: badges for several devices.** A badge can now group more
+  entities. Tapping it opens a panel with every device: switch and brightness
+  for lights, position and up/stop/down for covers, state for sensors, plus
+  "all off" / "all up". The panel slides in from the side or drops down below
+  the card; choose in the settings, or leave it on automatic. Covers open this
+  panel instead of the old pop-up.
+
+### Fixed
+- The Zigbee chip in the top bar showed the number of offline devices but not
+  their names when the counter sensor had a different entity_id.
+
+---
+
 ## [2.6.89] - 2026-09-27
 
 ### Changed
