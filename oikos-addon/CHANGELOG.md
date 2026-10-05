@@ -6,6 +6,39 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.91] - 2026-10-05
+
+### Added
+- **Oikos Assistant.** A chat (✨ in the top bar, turn it on in Settings →
+  Assistant) that answers about your home and controls it, **locally, without
+  AI and without internet**: "how much did I use yesterday?", "when did I use
+  the most?", "this month vs last month", "how much am I using now?", solar
+  production, grid import/export, with a small chart under each answer.
+  Commands: lights (also brightness), covers (also position), thermostat,
+  plugs, scenes; "are there windows open?", "what's the temperature in the
+  living room?". Locks, alarms and gates always ask for confirmation.
+  Understands Italian, English, French, Spanish, German and Romanian.
+- It only knows the entities in your dashboard cards (plus the energy sensors
+  set in Oikos and any extra entity you add): it never browses the rest of
+  Home Assistant.
+- **Scenes for the assistant** ("I'm leaving", "Good night"…): several actions
+  under one name, saved as Home Assistant scripts in `packages/oikos_scenarios`,
+  so they also work with the panel closed (automations, NFC, Assist).
+- **Optional AI** (Claude, Gemini or Ollama at home) for questions the local
+  assistant doesn't know. Uses your own key, which stays in the add-on and is
+  never sent back to the browser; the AI only sees your card entities and
+  cannot operate locks, alarms or gates. Monthly usage (local vs AI answers,
+  tokens) in the assistant settings.
+- Chat history per device, and actions done by the assistant in the bell.
+- **Keep screen on** (Settings → Mobile): while Oikos is open this device won't
+  go to sleep — for wall tablets and the kitchen iPad. Per device.
+- **New cards in the Store**: cards published in the last 30 days get a "New"
+  section and a dot on the Store; the bell announces them once per device.
+- Card SDK 1.4.0: `registerCardAI` lets a card describe its entities and
+  ready-made answers for the assistant (optional).
+
+---
+
 ## [2.6.90] - 2026-10-03
 
 ### Added

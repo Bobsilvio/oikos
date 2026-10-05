@@ -1,6 +1,6 @@
 {
   "name": "oikos-addon",
-  "version": "2.6.90",
+  "version": "2.6.91",
   "private": true,
   "type": "module",
   "engines": {
@@ -13,6 +13,7 @@
     "express": "5.2.1",
     "busboy": "1.6.0",
     "fflate": "0.8.2",
-    "ws": "8.20.0"
+    "ws": "8.20.0",
+    "@anthropic-ai/sdk": "0.131.0"
   }
 }
