@@ -6,6 +6,25 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.92] - 2026-10-06
+
+### Added
+- **Room card: tap action.** In the card settings choose what a tap on the
+  card does: open the temperature details (as before), open one of your
+  Popup Panel popups, or nothing. Badges keep opening their own group.
+- **Bottom bar attached to the edge** (Settings → Navigation bar, bubble
+  style): the bar reaches the bottom of the screen with rounded corners only
+  at the top, so it looks part of the phone. Per device; on by default in the
+  Oikos app, off elsewhere.
+
+### Fixed
+- Oikos app: after the Home Assistant login the Oikos license screen could
+  appear even with a valid license.
+- License screen: the card no longer slides under the status bar on phones
+  and is centered again.
+
+---
+
 ## [2.6.91] - 2026-10-05
 
 ### Added
