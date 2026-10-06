@@ -6,6 +6,17 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.93] - 2026-10-06
+
+### Changed
+- **Assistant has its own page** in the ⋮ menu (under Support): turn it on,
+  see what it knows, add extra entities, scenes and the optional AI, each in
+  its own section. It is no longer inside Settings.
+- With the side bar, the ⋮ stays highlighted on every page it opens (License,
+  Support, Assistant too).
+
+---
+
 ## [2.6.92] - 2026-10-06
 
 ### Added
