@@ -6,6 +6,22 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.94] - 2026-10-08
+
+### Added
+- **Assistant bubble.** In ⋮ → Assistant → "How it opens" choose between the ✨
+  in the top bar and a floating bubble. Drag the bubble where it suits you: it
+  snaps to the nearest edge and each device remembers its position. On tablets
+  and computers the bubble opens a compact chat window next to it; on phones the
+  chat slides up from the bottom.
+
+### Fixed
+- Assistant chat on tablets and computers: the panel was stuck to the top bar,
+  showing only its header while suggestions and the text field floated over the
+  page without a background.
+
+---
+
 ## [2.6.93] - 2026-10-06
 
 ### Changed
