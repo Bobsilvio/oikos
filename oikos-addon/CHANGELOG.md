@@ -6,6 +6,32 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.95] - 2026-10-09
+
+### Added
+- **MCP page** in the ⋮ menu: the development channel that connects an AI
+  assistant to Oikos now has its own page (it was at the bottom of the Store),
+  with ready-to-paste settings for **Claude Desktop**, **Claude Code**,
+  **Codex** and **Gemini CLI**, and a copy button.
+- **MCP token without expiry.** Next to 30m–8h you can now choose **No expiry**:
+  the token survives Oikos and Home Assistant restarts until you press
+  **Revoke**, and the page shows when it was last used. Only a hash of the
+  token is stored (`/config/oikos-mcp.json`).
+- **Administrator functions for the AI assistant (MCP).** Before turning the channel on
+  you can tick optional Home Assistant administrator functions:
+  **Statistics** (find, read, fix a jump in the sum, or delete long-term
+  statistics), **Logs** (read Home Assistant warnings and errors, as in
+  Settings → System → Logs) and **Restart** (restart Home Assistant after
+  checking the configuration). All are off by default and last for that session only.
+  Changes that modify something ask for your explicit confirmation, and every
+  use is listed in the Store and in `/config/oikos-admin-audit.log`.
+
+### Fixed
+- Card development: the channel on port 3565 refused every request coming from
+  the local network ("Direct access forbidden"), so Claude could not connect.
+
+---
+
 ## [2.6.94] - 2026-10-08
 
 ### Added
