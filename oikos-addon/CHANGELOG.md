@@ -6,6 +6,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.96] - 2026-10-12
+
+### Fixed
+- **Layout changes could disappear.** If saving a change to the server failed
+  or was still in progress (for example while Home Assistant was reconnecting),
+  the next background refresh brought back the old layout, and the following
+  edit — such as adding a new row — saved on top of it, losing the previous
+  work. Unconfirmed changes are now kept on the device and sent again until
+  the server accepts them; they are never overwritten by an older server copy.
+
 ## [2.6.95] - 2026-10-09
 
 ### Added
