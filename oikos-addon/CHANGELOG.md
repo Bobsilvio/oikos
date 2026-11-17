@@ -6,6 +6,65 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.99] - 2026-11-17
+
+### Added
+- **Next hours on the screensaver weather.** The Weather widget can show the
+  forecast for the next 4, 6 or 8 hours under the current temperature (widget
+  options → Next hours).
+- **Screensaver layout from Oikos MCP.** With the MCP channel on, an AI
+  assistant can read and write the screensaver layout
+  (`oikos_screensaver_get` / `oikos_screensaver_set`, needs oikos-mcp 0.2.0).
+- **Screensaver on some devices only.** In the Screensaver menu each registered
+  device has its own switch: keep it on the wall tablet and off on the PC.
+  New devices follow the main switch.
+- **18 more cards with their own screensaver look.** Appliance, Bill, Calendar,
+  Mailbox, Irrigation, WallBox, Media Player, Alarm, Doors & Windows, Smoke/Gas/
+  Leak detectors, Yesterday, Vacuum, Air Quality, Room Sensor, Person,
+  Thermostat, Air Conditioner and Tile now show only what matters, large and
+  readable from across the room, when placed on the screensaver. Update the
+  cards from the Store.
+
+## [2.6.98] - 2026-11-17
+
+### Added
+- **"Home story" screensaver.** A new widget and ready-made layout that writes
+  the state of your home as a short magazine-style paragraph — the time, the
+  weather outside, the temperature inside, appliances at work, open doors and
+  windows, lights on, solar power — with the values highlighted. It fills its
+  box on any screen and you can switch off the topics you don't want.
+- **Photos as screensaver background.** Choose photos straight from the
+  tablet's gallery (on iPad: Albums → Favorites) and the screensaver cycles
+  through them with a slow cross-fade and zoom; portrait photos are shown
+  whole. Photos stay on the device and are never uploaded to Home Assistant,
+  so each tablet has its own album.
+- **Preview on a real device.** In the screensaver editor, pick one of your
+  registered screens and Preview shows the real screensaver at that screen's
+  exact size.
+- **Cards can have their own screensaver look.** Cards now know when they are
+  shown on the screensaver (SDK 1.5.0, `useCardSurface`); cards that declare
+  it draw a version made to be read from across the room, without the glass
+  panel around them. Raccolta Differenziata is the first.
+
+## [2.6.97] - 2026-11-17
+
+### Added
+- **Home monitor card.** A report of what happened at home over the chosen
+  period (today, 7 or 30 days): lights, room climate, heating, openings,
+  presence and devices, with tips on where energy is wasted. It sets itself up
+  from your Home Assistant history. It is a regular card: add it from the
+  Store to any page or dashboard; each copy remembers its own period.
+- **New screensaver widgets**, plus two ready-made layouts ("Rooms" and
+  "Live home"):
+  - **Washer**: an animated porthole with the remaining time, the current
+    phase and the end time; it shows "Done" when the cycle ends and hides
+    itself when the machine is off. Works for dryers and dishwashers too.
+  - **Doors & windows**: how many are open and for how long, or a calm
+    "All closed".
+  - **Rooms**: temperature and humidity of up to six rooms, with a comfort
+    dot.
+  Entities are detected automatically and can be changed in the editor.
+
 ## [2.6.96] - 2026-10-12
 
 ### Fixed
