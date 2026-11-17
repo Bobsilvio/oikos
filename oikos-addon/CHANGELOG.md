@@ -6,6 +6,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.103] - 2026-11-17
+
+### Added
+- **Several screensavers that take turns.** In the screensaver editor you can
+  now keep more than one screensaver (for example "Photos", "Living home",
+  "Story"), each with its own widgets, background and time on screen: photos
+  for 5 minutes, then the home for 2, and round again. Create, duplicate,
+  rename and remove them from the bar at the top of the editor; switch one off
+  the rotation without deleting it. Your current screensaver becomes the first.
+- **Rooms and lights straight from Oikos.** The Rooms widget now shows the
+  rooms of your Room cards by default (name and temperature/humidity sensors):
+  add a room in Oikos and it appears on the screensaver too. The "Home story"
+  tells about the lights you set in Oikos. Choose "I'll choose" to pick a
+  different set just for the screensaver.
+
 ## [2.6.102] - 2026-11-17
 
 ### Changed
