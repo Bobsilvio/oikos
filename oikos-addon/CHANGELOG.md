@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.101] - 2026-11-17
+
+### Fixed
+- **New devices no longer get an old page background.** A browser or tablet
+  opened for the first time used to show the background set long ago, before
+  backgrounds became per-device (e.g. a purple gradient), even after it had
+  been removed from every device. A new device now starts with no background.
+
 ## [2.6.100] - 2026-11-17
 
 ### Added
