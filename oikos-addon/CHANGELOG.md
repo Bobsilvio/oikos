@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.102] - 2026-11-17
+
+### Changed
+- **More colour on the screensaver.** Cards on the screensaver now show their
+  icon in a coloured tile with a soft glow of the same colour behind them, and
+  the weather icons take the colour of the weather (yellow sun, blue rain).
+  Colours carry meaning: blue for water, amber for money, green for energy,
+  red for alarms. Update the cards from the Store to see it.
+
 ## [2.6.101] - 2026-11-17
 
 ### Fixed
