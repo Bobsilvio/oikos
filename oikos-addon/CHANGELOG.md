@@ -6,6 +6,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.106] - 2026-11-17
+
+### Added
+- **Remote support.** In ⋮ → MCP → Remote support, switch it on and read the
+  code that appears to Oikos support: they can work on your Oikos from outside
+  your home, with no ports to open and no VPN (the encrypted link starts from
+  your Home Assistant). Only card and screensaver operations go through; tick
+  "Also allow configuration" to let them set up dashboards, cards, lights and
+  entities for you. License and secrets never leave, and admin functions are
+  never available remotely. It switches itself off when the time is up, and you
+  can see everything support did.
+- **"Configuration" for the AI assistant.** A new admin function on the MCP
+  channel lets your assistant read and change Oikos dashboards, cards, lights
+  and entities (license and secrets excluded).
+
 ## [2.6.105] - 2026-11-17
 
 ### Added
