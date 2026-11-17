@@ -6,6 +6,32 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.105] - 2026-11-17
+
+### Added
+- **Smart tablet charging.** A wall tablet always on the charger sits at 100%
+  for months, which wears the battery. In Settings → Mobile → Smart tablet
+  charging, pick the tablet's battery sensor (from the Home Assistant app) and
+  the smart plug of its charger, and set when to power off (e.g. above 80%)
+  and back on (e.g. below 30%). It runs as a Home Assistant package, so it keeps
+  working with Oikos closed; if the battery sensor stops responding for 30
+  minutes the plug is switched back on.
+
+## [2.6.104] - 2026-11-17
+
+### Fixed
+- **"Keep screen on" now works on iPad.** iPadOS could accept the request to
+  keep the screen awake and then ignore it (notably inside the Home Assistant
+  app), so the tablet still went to sleep after a few minutes. On iPad and
+  iPhone Oikos now always uses a silent looping video as well, which iOS
+  respects, and asks again whenever the system drops the lock.
+
+### Changed
+- **"Keep screen on" is saved per device in Oikos.** It is still set device by
+  device (on for the wall tablet, off for the phone), but it is now stored with
+  your configuration, so it can be switched on for the tablet from another
+  device and survives clearing the browser data.
+
 ## [2.6.103] - 2026-11-17
 
 ### Added
