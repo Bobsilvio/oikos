@@ -6,6 +6,101 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.115] - 2026-11-17
+
+### Added
+- **Christmas mode.** Settings → Christmas mode: snow falls over the whole
+  dashboard, every few minutes Santa flies across with his sleigh and
+  reindeer, and the elves show up — chasing each other along the bottom with
+  a present, or popping up to hammer a toy train together. Each part can be
+  switched off; optional "only during the holidays" (Dec 1 – Jan 6) and "on
+  the screensaver too". Shared by all devices, never intercepts touches,
+  compositor-only animations, off with reduced motion and during the
+  screensaver's night clock. "Try now" buttons play a scene on demand.
+
+## [2.6.114] - 2026-11-17
+
+### Added
+- **Screensaver night mode.** Pick a time range (e.g. 22:00–07:00): during it
+  the screensaver shows only a dim clock on black instead of the rotating
+  layouts, with adjustable clock brightness. The clock moves every 10 minutes
+  to avoid marking the screen; any touch wakes it. Switches on and off by
+  itself at the set times, for all devices. Editor → Options → At night.
+
+## [2.6.113] - 2026-11-17
+
+### Added
+- **Screensaver dynamic sky: two optional switches.** "Real sunrise and
+  sunset" takes the sky phase from Home Assistant's `sun.sun` (sunrise and
+  sunset follow the seasons instead of fixed hours). "Follow the weather"
+  greys the sky with clouds and fog, darkens it with rain and storms, hides
+  the stars when overcast and lets rain or snow fall (compositor-only
+  animation). Both off by default; in the editor under Background → Dynamic sky.
+
+## [2.6.112] - 2026-11-17
+
+### Changed
+- **Screensaver: coloured text instead of the glow behind cards.** The big
+  numbers of each card (and the weather temperature) now fade into the card's
+  colour; the coloured halos behind cards are gone. Applies to all Store cards
+  with a screensaver version, without updating them. Icon tiles stay.
+
+## [2.6.111] - 2026-11-17
+
+### Changed
+- **Screensaver rooms widget shows up to 8 rooms** (was 6): homes with
+  bathrooms and kids' rooms no longer lose the last ones.
+
+## [2.6.110] - 2026-11-17
+
+### Added
+- **Integrity signature of the configuration file.** Oikos signs (SHA-256)
+  what it saves; if oikos-config.json is later changed by hand (File editor,
+  Samba, a manual restore), even without breaking it, Oikos notices when it
+  opens and asks: keep the change ("That's fine", it becomes the new good
+  version) or go back to the last version Oikos saved.
+
+## [2.6.109] - 2026-11-17
+
+### Added
+- **Oikos checks its own configuration when it opens.** If oikos-config.json
+  (in /config/oikos) was edited by hand and broken — a missing comma, an extra
+  bracket — a banner says so straight away, with the line, the column, the lines
+  around the error and what's probably wrong, and offers to restore the last
+  good version. Parts with an invalid structure (a dashboard, a page, the
+  screensaver) are reported too.
+- **Last good version and daily copies.** Every time Oikos saves its
+  configuration it keeps the last good version, plus one copy a day for 14 days
+  (in /config/oikos/config-history).
+
+### Fixed
+- **A broken configuration file no longer leaves Oikos empty.** On start-up,
+  if the file can't be read, Oikos now starts again from the last good version
+  (the broken file is kept aside) instead of from an empty configuration that
+  couldn't even be saved.
+
+## [2.6.108] - 2026-11-17
+
+### Added
+- **Check configuration.** Settings → Home Assistant panel → Check runs Home
+  Assistant's own configuration check (configuration.yaml and packages) and
+  verifies Oikos' configuration file, without restarting or changing anything.
+  If someone edited a file by hand and broke it, you see what and where before
+  restarting Home Assistant. Also available to the AI assistant and over remote
+  support (`oikos_check_config`).
+
+## [2.6.107] - 2026-11-17
+
+### Fixed
+- **iPhone status bar readable again.** In the Home Assistant app with a light
+  HA theme, the time, battery and signal at the top were dark on Oikos' dark
+  background and could not be seen. While Oikos is open it now tells the app
+  its own background colour, so the status bar text is light on dark (and dark
+  on light); leaving Oikos restores the HA colours.
+- **Top bar fits on phones.** On narrow screens the dashboard name now shortens
+  (down to its icon) instead of pushing the last buttons off the right edge,
+  and the clock no longer wraps.
+
 ## [2.6.106] - 2026-11-17
 
 ### Added
