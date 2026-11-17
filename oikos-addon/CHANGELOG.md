@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.100] - 2026-11-17
+
+### Added
+- **Update all cards at once.** When several cards have an update, the Store
+  shows an "Update all" button above the list: the cards are updated one after
+  another, with progress, and any that fail are listed at the end.
+
 ## [2.6.99] - 2026-11-17
 
 ### Added
