@@ -6,6 +6,74 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.120] - 2026-11-19
+
+### Changed
+- **Dashboards are always downloaded, uploaded only when you decide.** Changes
+  made in edit mode stay on the device and are sent all together when you tap
+  «Done editing». Outside edit mode only explicit actions are sent right away
+  (create, rename, duplicate or delete a dashboard, manage pages, add a card,
+  badge or chip from the Store, copy a card or page, restore a backup) plus the
+  «Sync» button. Everything the panel saves on its own (startup, migrations,
+  wizard, automatic clean-ups) stays on the device and is replaced by the
+  server version at the next download. Card settings still save immediately.
+
+### Added
+- **Conflict warning.** If another device saved the same pages while you were
+  editing, «Done editing» no longer overwrites them silently: you choose
+  whether to keep your changes or use the server version.
+- **«Unsaved changes» pill** while there are layout changes not yet on the
+  server, with a button to finish editing (or save).
+
+### Fixed
+- A dashboard deleted on one device no longer comes back because another
+  device still had a local copy of it.
+
+## [2.6.119] - 2026-11-18
+
+### Fixed
+- **A newly opened device can no longer wipe the dashboard.** When the first
+  read of the configuration failed (Home Assistant app with cleared cache, new
+  browser, add-on restarting), the panel used to recreate the dashboard list
+  with only «Main», and the setup wizard saved an empty Home and the default
+  pages — and all of it was sent to the server, so every device showed an empty
+  dashboard. Layout, pages and the dashboard list are now sent only after the
+  configuration has been read from the server at least once.
+- **The setup wizard opens only when Oikos is really not configured**, i.e.
+  after reading the server (or after 15 seconds without an answer, without
+  being able to overwrite anything), and it no longer replaces pages a
+  dashboard already has.
+- **A new device opens a dashboard that has cards.** It used to open «Main»
+  even when everything was in another dashboard, and the choice stayed saved.
+
+### Added
+- **Safety copy before emptying.** When a page with cards becomes empty or the
+  list of pages or dashboards gets shorter, the add-on first saves the whole
+  configuration in `config-history/prima-di-svuotare-<date>.json` (last 20).
+
+## [2.6.118] - 2026-11-18
+
+### Fixed
+- **Cards pick up settings changed on another device.** A card already on
+  screen read its settings only once; on a wall tablet that never reloads it
+  kept the old ones (e.g. the Christmas card still asking to choose the tree
+  plug after it was chosen from the phone). Cards now re-read their settings
+  when the periodic sync brings changes from the server, within 30 seconds,
+  without overwriting an edit in progress on that device.
+
+## [2.6.117] - 2026-11-17
+
+### Fixed
+- **iPhone status bar no longer flashes when switching day/night.** In the
+  Home Assistant app the bar briefly went back to the HA theme colour (lighter
+  or darker) before taking Oikos' new background. It now goes straight from
+  the old colour to the new one.
+- **iPad status bar keeps Oikos' colour.** On wide screens the Home Assistant
+  app draws the bar itself and caches its colour separately for iOS light and
+  dark appearance; on a wall tablet that never reloads it fell back to the HA
+  theme colour. Oikos now re-announces its colour when iOS changes appearance,
+  when the page comes back to the foreground and shortly after start.
+
 ## [2.6.115] - 2026-11-17
 
 ### Added
