@@ -1,6 +1,6 @@
 {
   "name": "oikos-addon",
-  "version": "2.6.122",
+  "version": "2.6.123",
   "private": true,
   "type": "module",
   "engines": {

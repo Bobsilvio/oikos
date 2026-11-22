@@ -6,6 +6,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.123] - 2026-11-22
+
+### Fixed
+- **The screensaver editor is smooth again with Christmas mode on.** Snow and
+  the little scenes were drawn over the editor too, with layers up to eight
+  times the screen size while the editor renders its live preview. They now
+  pause while the screensaver editor is open and come back when you close it.
+- Lighter snow on the dashboard: shorter tiles (still wider than the screen,
+  so no visible grid), about a third less work for the graphics card.
+
 ## [2.6.122] - 2026-11-22
 
 ### Fixed
