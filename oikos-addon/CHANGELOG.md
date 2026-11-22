@@ -6,6 +6,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.121] - 2026-11-22
+
+### Added
+- **Card previews in the screensaver editor.** «Add card…» opens the same
+  picker as the dashboard, with a live preview of each card, instead of a
+  plain list of names. Only cards the screensaver can show are listed.
+- **Copy a widget to another screensaver layout.** In the widget properties,
+  «Copy to another layout» puts the same widget, same position and size, on top
+  of the chosen layout. Example: the washer over the photos layout — it only
+  shows while the machine is running.
+- **Christmas mode only on the dashboard.** The «Also on the screensaver»
+  switch is now in the screensaver editor Options too (same setting as
+  Settings → Appearance).
+
+### Fixed
+- Screensaver washer widget: the total duration now honours the sensor unit
+  (seconds or hours no longer give an always-full or always-empty ring).
+
 ## [2.6.120] - 2026-11-19
 
 ### Changed
