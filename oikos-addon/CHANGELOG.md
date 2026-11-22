@@ -6,6 +6,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.6.122] - 2026-11-22
+
+### Fixed
+- **Christmas snow no longer shows a repeating grid.** The flakes were drawn on
+  small 220–380 px tiles repeated across the screen, so on a wide tablet the
+  same pattern was visible 5–9 times in a row. The three layers are now larger
+  than the screen and sized differently from each other, so the repeats never
+  line up; density and speed are unchanged. The sideways drift, which jumped
+  back at every loop, is now a continuous gentle sway.
+
 ## [2.6.121] - 2026-11-22
 
 ### Added
